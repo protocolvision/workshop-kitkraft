@@ -13,7 +13,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 ## How to participate
 
 1. Install a harness (Claude Code or Codex). Accept the collaborator invite for this repo.
-2. Clone it and **open your harness inside the clone**:
+2. Clone it, **open your harness inside the clone**, then paste `instructions/orient.md` into it and say "do this":
    ```
    git clone https://github.com/protocolvision/workshop-kitkraft.git && cd workshop-kitkraft && claude   # or codex
    ```
@@ -31,6 +31,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 README.md          this file
 AGENTS.md          agent entry: conventions + autolog instruction
 CLAUDE.md          points Claude Code at AGENTS.md
+instructions/      blocks to paste into your harness (orient, async-1, S2-critique, async-2, S3-bridge)
 KIT_TEMPLATE/      README.md, SKILL.md, LOG.md, examples/
 inventory/         one file per participant (S1)
 kits/<name>/       one folder per participant (S2)
