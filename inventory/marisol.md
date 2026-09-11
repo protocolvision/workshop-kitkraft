@@ -9,3 +9,5 @@
 ## Log
 
 2026-09-20T18:14:00Z | async | marisol | progress | pre-work stub written by harness
+2026-09-20T18:27:00Z | async | marisol | decision | kit will be private (city archive). This public file names the tasks, not the employer, parcels or item numbers. Rejected: posting nothing until Monday's clinic.
+2026-09-20T18:28:00Z | async | marisol | question | which branch am I in: main or simulation/dry-run-01? and: does Block A replace instructions/orient.md or come before it?
