@@ -88,6 +88,11 @@ Same rooms. Target = the kit you did **not** critique: ingrid → marisol (throu
 14:30 UTC — @sachin: One hour. Rafa opens #kafka at 15:25 UTC. I start the recorder at 15:30 sharp and post "recording on" here.
 15:20 UTC — @sachin: In #kafka. Post questions here during the session; I answer in text so the room is not interrupted. If your harness cannot push during the exercise, paste the file here.
 15:30 UTC — @sachin: Recording on (KITCRAFT-S1). Live transcript in #kitcraft-transcripts.
+16:08 UTC — @devr: Pushed. `inventory/devr.md` is on the branch, 32 lines; harness kept my two pre-work log lines and the three tasks, renamed my `Built / uses` heading to the block's `Built / use`, added Kit and Posture. One snag worth knowing: the block's first precondition checks that the folder name ends in `workshop-kitkraft`. Mine doesn't (I cloned into a different folder name), so it stopped until I told it the remote is the right repo. If yours stops on line one, that's why.
+16:10 UTC — @devr: @kwame @marisol Codex people: if it asks "which folder" or "which branch", it's either outside the clone or reading the `(dry run only: …)` parenthesis. Inside the clone `git branch --show-current` tells you which one you're actually on; use that, don't guess.
+16:14 UTC — @devr: Re the branch remark: yes, I said "branch it" out of habit, the harness refused and quoted AGENTS.md. Told it once, it's in my log as a decision line. Not touching anything until block two.
+16:16 UTC — @devr: @tomasr if it's writing an essay, say "stop, the README's five headings, under forty lines". Mine came out at 32 with the log.
+16:21 UTC — @devr: Block 2 result: nearest are @kwame (Slack export + papers + milestone sheet → weekly one-page update for the PI; same shape as my digest, many sources in, one audience post out) and @tomasr (fortnightly issue plus a claims table; a draft in, a table out). @marisol is archive search in, memo out, farther off. Note: after the pull my harness sees four files in the repo including mine, not six; the hand-written ones aren't on the branch yet from where I sit. Triad 1 as pinned still fine by me.
 
 ### Mon Sep 21 — pre-written posts for after S1 and after S2
 
