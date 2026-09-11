@@ -90,9 +90,33 @@ Same rooms. Target = the kit you did **not** critique: ingrid → marisol (throu
 15:30 UTC — @sachin: Recording on (KITCRAFT-S1). Live transcript in #kitcraft-transcripts.
 16:08 UTC — @devr: Pushed. `inventory/devr.md` is on the branch, 32 lines; harness kept my two pre-work log lines and the three tasks, renamed my `Built / uses` heading to the block's `Built / use`, added Kit and Posture. One snag worth knowing: the block's first precondition checks that the folder name ends in `workshop-kitkraft`. Mine doesn't (I cloned into a different folder name), so it stopped until I told it the remote is the right repo. If yours stops on line one, that's why.
 16:10 UTC — @devr: @kwame @marisol Codex people: if it asks "which folder" or "which branch", it's either outside the clone or reading the `(dry run only: …)` parenthesis. Inside the clone `git branch --show-current` tells you which one you're actually on; use that, don't guess.
+16:10 UTC — @aiko: @sachin here is my inventory, written by hand from the section list in step 2 of the block (I cannot run it: Claude Code still stops at the login screen). Please commit it under my name as you offered on Sunday. I used the block's headings, not the README's, since they differ slightly; tell me if that is wrong.
+
+    # aiko
+
+    ## Recurring tasks
+    1. Proposal from a client brief: brief + two past proposals from our Notion database → a first proposal in the studio's format, with the fee table. Recurring: yes (2–3 per month). Depends on something I know that a stranger would not: yes (what the partners will and will not take on; our fee norms; neither is written anywhere).
+    2. Weekly studio schedule from the partners' calendars and the project deadlines. Recurring: yes (weekly). Depends on something I know: yes (which deadlines actually move and which partner cannot be booked on which day).
+    3. Client update emails in the studio's voice. Recurring: yes (weekly). Depends on something I know: partly (the voice is learnable from past emails; what to leave out of an update is not).
+
+    ## Built / use
+    - A Notion database of past proposals (studio-internal).
+    - A Canva brand kit (studio-internal).
+    - ChatGPT and Gemini in the browser; nothing AI-native built yet.
+
+    ## Kit
+    Task 1, proposal from brief. Inputs: the brief and two past proposals. Output: a proposal draft in the studio format plus a list of open questions for the partners. Public, with synthetic examples (no client names, no real fees).
+
+    ## Posture
+    Partnership
+
+    ## Log
+    2026-09-21T16:08:00Z | S1 | aiko | progress | inventory written by hand, no harness; pasted to #kitcraft for Sachin to commit
 16:14 UTC — @devr: Re the branch remark: yes, I said "branch it" out of habit, the harness refused and quoted AGENTS.md. Told it once, it's in my log as a decision line. Not touching anything until block two.
 16:16 UTC — @devr: @tomasr if it's writing an essay, say "stop, the README's five headings, under forty lines". Mine came out at 32 with the log.
+16:18 UTC — @aiko: I cannot run block two either. Could someone whose agent has already run it tell me the two inventories it says are nearest to aiko? I am not opening the inventories on GitHub, per the rule; I only want the two names and the one-line why. @tomasr @kwame if it is easy.
 16:21 UTC — @devr: Block 2 result: nearest are @kwame (Slack export + papers + milestone sheet → weekly one-page update for the PI; same shape as my digest, many sources in, one audience post out) and @tomasr (fortnightly issue plus a claims table; a draft in, a table out). @marisol is archive search in, memo out, farther off. Note: after the pull my harness sees four files in the repo including mine, not six; the hand-written ones aren't on the branch yet from where I sit. Triad 1 as pinned still fine by me.
+16:22 UTC — @aiko: On the log line: mine is hand-written and says "no harness", so if the scan is looking for a harness line it will not find one. If that sends me to 1A: it starts at 01:30 here. Could my part be async — written steps in this channel that I follow in my morning (JST), and a line saying what "done" looks like? I will stay in voice for a few minutes but I may not last the half hour.
 
 ### Mon Sep 21 — pre-written posts for after S1 and after S2
 
