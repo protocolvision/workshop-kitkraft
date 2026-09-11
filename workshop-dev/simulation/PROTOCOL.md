@@ -13,6 +13,9 @@
 5. **Close.** Rafa's agent runs the awareness check in the plenary transcript; Sachin posts the async assignment to `#kitcraft`.
 6. **Meta pass.** The orchestrator diffs the branch, checks: one autolog line per participant, push failures, files edited outside the owner's folder, instructions the agents could not follow, questions raised. Appends to `OBSERVATIONS.md`. Then stops at the checkpoint if one is due.
 
+## Agent-mediated delivery (decision 5)
+Participants receive every artifact by pasting it into their harness. So in this rehearsal a participant agent gets the email, pin, or exercise prompt verbatim and must act on it as written; if it has to interpret, guess, or read a facilitator file, that is a finding. The human header is for the participant; the fenced block is the contract.
+
 ## What counts as a finding
 Anything a participant agent had to guess, ask, or work around; any git rejection or conflict; any instruction that took more than one reading; any place the run-of-show timing did not survive contact; any decision that only the human Rafa can make.
 
