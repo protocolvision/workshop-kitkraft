@@ -8,9 +8,9 @@ Two versions. The short one is read aloud at the top of S1 (by the facilitator o
 
 ## Full notice (pinned)
 
-**What is recorded.** Plenary voice in **#kafka** during the four sessions and the 1A clinic. Recorded by OpenRecapper, a self-hosted bot run by the Protocol Institute. Per-speaker audio; transcript diarized with Discord display names (Deepgram). An automated summary may be generated from the transcript.
+**What is recorded.** Plenary voice in **#kafka** during the four sessions. The 1A clinic is not recorded. Recorded by OpenRecapper, a self-hosted bot run by the Protocol Institute. Per-speaker audio; transcript diarized with Discord display names (Deepgram). An automated summary may be generated from the transcript.
 
-**What is not recorded.** breakout-1 and breakout-2. Direct messages. This text channel is public to the server but is not copied into the repo.
+**What is not recorded.** The 1A clinic, breakout-1 and breakout-2. Direct messages. This text channel is public to the server but is not copied into the repo.
 
 **Where it goes.**
 - Live: #kitcraft-transcripts, visible to members of this Discord server.

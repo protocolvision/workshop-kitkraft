@@ -20,7 +20,7 @@ Every start is confirmed in #kitcraft with `Recording on (KITCRAFT-S<n>)` and ev
 | Session | Record | Stop | Record again | Stop | Notes |
 |---|---|---|---|---|---|
 | S1 Kits | 15:30 | 16:30 | — | — | No breakouts. Exercise is silent work in #kafka; 25 min of near-silence is over the 20-min timeout: **someone speaks every 15 min** (Rafa's time calls do this). |
-| 1A Clinic | 16:31 | 17:00 | — | — | Recorded as `KITCRAFT-S1` continued (segment 2). Say so in the consent line. |
+| 1A Clinic | — | — | — | — | **Not recorded** (setup clinic; aligned with Rafa's 1A checklist). The consent notice says so. |
 | S2 Factories | 20:00 | 20:35 (rooms open) | 20:48 (reconvene) | 21:00 | Breakout 13 min. Two segments. |
 | S3 Bridges | 15:30 | 15:45 (rooms open) | 16:25 (reconvene) | 16:30 | Breakout 40 min. Two segments; second is 5 min. |
 | S4 Recap | 20:00 | 21:00 | — | — | No breakouts. The synthesis reads the live channel text, not the final transcript (below). |
