@@ -26,7 +26,7 @@ Registration for AI Kitcraft runs through a Google Form owned by the facilitator
 |---|---|---|---|---|
 | 1 | Name | short text | yes | `inventory/<name>.md`, `kits/<name>/` folder name |
 | 2 | Email | short text | yes | pre-work email (Sep 15) |
-| 3 | Github Account (Please set-up at http://github.com/) | short text | yes | collaborator invite to `kitcraft-2026` and `workshop-kitkraft-private` (Sep 15); push check (Sep 19) |
+| 3 | Github Account (Please set-up at http://github.com/) | short text | yes | collaborator invite to `workshop-kitkraft` (Sep 15); push check (Sep 19) |
 | 4 | Discord Handle (Please visit the Discord) | short text | no | #kitcraft access, breakout pairing |
 | 5 | Organization and role | short text | yes | S1 ice-breaker, adjacency pairing |
 | 6 | A recurring task you would build a Kit around | paragraph | yes | seed for `inventory/<name>.md` (the Discover → Encode gate) |
@@ -39,7 +39,7 @@ Options for question 7:
 
 ## How responses are used
 
-1. **Sep 15** — every registrant with a GitHub account (Q3) gets a collaborator invite with write access to the public repo, and to the private repo if they want a private kit. Registrants without a GitHub account are told in the pre-work email to create one, or they go through the facilitator-push fallback.
+1. **Sep 15** — every registrant with a GitHub account (Q3) gets a collaborator invite with write access to the repo. Private kits stay on the participant's machine with a stub in the repo; there is no private repo. Registrants without a GitHub account are told in the pre-work email to create one, or they go through the facilitator-push fallback.
 2. **Sep 19** — push check: one commit from each registrant. Anyone without a push, or who did not tick "installed Claude Code or Codex" in Q7, is invited to Session 1A.
 3. **Sep 21, overnight** — Q5 and Q6 are the first input to adjacency pairs for S2; the S1 inventories replace them once written.
 

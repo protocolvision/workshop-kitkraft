@@ -21,9 +21,9 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 3. Work only in your own files:
    - `inventory/<your-name>.md` (Session 1)
    - `kits/<your-name>/` (Session 2) — copy `KIT_TEMPLATE/` to start
-   - `bridges/<a>-<b>.md` (Session 3) — files you are a party to
+   - `bridges/<you>-<target>.md` (Session 3) — one log per bridge, written by you
 4. Push to `main`. No branches, no PRs. Your harness pulls with rebase first.
-5. Private kit? Put the content in `workshop-kitkraft-private` (same layout) and leave a stub `kits/<your-name>/README.md` here with job, inputs, outputs, no content.
+5. Private kit? Keep the content on your own machine. Put only a stub `kits/<your-name>/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `bridges/README.md`). There is no private repo.
 
 ## Layout
 
@@ -34,7 +34,7 @@ CLAUDE.md          points Claude Code at AGENTS.md
 KIT_TEMPLATE/      README.md, SKILL.md, LOG.md, examples/
 inventory/         one file per participant (S1)
 kits/<name>/       one folder per participant (S2)
-bridges/           one log per pair (S3); SYNTHESIS.md (S4)
+bridges/           one log per bridge (S3); SYNTHESIS.md (S4)
 facilitator/       facilitator factories usable as bridge targets
 transcripts/       OpenRecapper output per session
 workshop-dev/      facilitator material: outline, resources, checklists
@@ -57,12 +57,12 @@ Plenary audio in #kafka is recorded and transcribed with speaker names; transcri
 
 Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, live transcript **#kitcraft-transcripts**.
 
-| Session | When | Length | Artifact |
+| Session | When (UTC) | Length | Artifact |
 |---|---|---|---|
-| S1 Kits | Mon Sep 21 | 90 min | `inventory/<name>.md` |
-| S1A clinic | Mon Sep 21 | 30 min | a first push |
-| S2 Factories | Tue Sep 22 | 60 min | `kits/<name>/` |
-| S3 Bridges | Tue Sep 22 | 60 min | `bridges/<a>-<b>.md` |
-| S4 Recap | Tue Sep 22 | 60 min | `bridges/SYNTHESIS.md` |
+| S1 Kits | Mon Sep 21, 15:30 | 60 min | `inventory/<name>.md` |
+| 1A clinic (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
+| S2 Factories | Mon Sep 21, 20:00 | 60 min | `kits/<name>/` |
+| S3 Bridges | Tue Sep 22, 15:30 | 60 min | `bridges/<you>-<target>.md` |
+| S4 Recap | Tue Sep 22, 20:00 | 60 min | `bridges/SYNTHESIS.md` |
 
 Times in UTC / Berlin / Pacific are pinned in #kitcraft.
