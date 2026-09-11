@@ -9,7 +9,7 @@ Pins first, then the log. Facilitators `@rafa`, `@sachin`. Triad 1 = @ingrid @de
 **AI Kitcraft 2026 — Kit → Factory → Bridge**
 
 **Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, open your harness *inside* the clone, work only in your own files (`inventory/<you>.md`, `kits/<you>/`, bridges you are party to), push to `main`. No branches, no PRs.
-Private kit? The private repo (`workshop-kitkraft-private`) does not exist yet. Until it does, keep private content on your machine and put only a stub `kits/<you>/README.md` (job, inputs, outputs, no content) in the public repo.
+Private kit? There is no private repo. Keep the content on your own machine and put only a stub `kits/<you>/README.md` (job, inputs, outputs, no content) in the repo; others bridge to it through your agent.
 
 **Rooms:** voice **#kafka** (plenary) · text **#kitcraft** (this channel: links, instructions, triads) · **#kitcraft-transcripts** (live transcript, read-only) · voice **breakout-1**, **breakout-2** (triad rooms).
 
@@ -26,7 +26,7 @@ Private kit? The private repo (`workshop-kitkraft-private`) does not exist yet. 
 
 **Triads:** posted and pinned here before S2 (Mon evening) and before S3 (Tue, rotated).
 
-**Help:** setup or git → 1A, or ping @sachin here · theory → @C3PO · during a session → post here; I watch this channel while Rafa runs the room.
+**Help:** setup or git → 1A, or ping @sachin here · theory → @C3PO · during a session → post here; whichever of us is not presenting answers in text.
 
 ## PINNED 2 — consent notice (full text)
 
@@ -52,13 +52,13 @@ Same rooms. Target = the kit you did **not** critique: ingrid → marisol (throu
 10:02 UTC — @sachin: Second pin is the full consent notice. Rafa reads the short version aloud at the top of S1. If any of it is a problem, DM me before Monday and we set up a muted or text-only option; you lose nothing.
 10:05 UTC — @sachin: Before Monday: (1) clone the repo and open your harness inside the clone; (2) one push, anything — `inventory/<your-name>.md` with just your name is enough; (3) note your survey posture.
 10:08 UTC — @sachin: Push check as of now: I see a first commit from @devr, @tomasr, @kwame. @ingrid, @aiko (no harness yet) and @marisol (harness, git untested) — do not fight it: paste or DM me the file and I commit it under your name, and 1A at 16:30 UTC Monday is for exactly this.
-10:10 UTC — @sachin: @marisol — you replied "private". The private repo is not created yet; keep your content local, put the stub README in `kits/marisol/`, and we bridge to it through your agent on Tuesday. That is a legitimate bridge form, not a workaround.
+10:10 UTC — @sachin: @marisol — you replied "private". Decision: there is no private repo. Keep your content on your machine, put the stub README in `kits/marisol/`, and on Tuesday your triad bridges to it through your agent (request in, result out, both in the bridge log). That is a bridge form in its own right, not a workaround.
 10:12 UTC — @sachin: @aiko — S2 (05:00 JST) and S4: everything you need will be in this channel as written instructions; your triad knows you are async. S1 and S3 are 00:30 JST; join if you can.
 18:30 UTC — @sachin: @marisol pushed (Codex, first push, no drama). @ingrid @aiko outstanding; 1A is yours.
 
 ### Mon Sep 21
 
-08:00 UTC — @sachin: S1 today, 15:30 UTC (17:30 Berlin · 08:30 Pacific · 00:30 Tokyo · 12:30 Buenos Aires · 15:30 Accra · 16:30 Lisbon), voice #kafka. Have open: your harness inside the clone, your three recurring tasks, your posture. Rafa runs the room; I run this channel, the pins and the repo.
+08:00 UTC — @sachin: S1 today, 15:30 UTC (17:30 Berlin · 08:30 Pacific · 00:30 Tokyo · 12:30 Buenos Aires · 15:30 Accra · 16:30 Lisbon), voice #kafka. Have open: your harness inside the clone, your three recurring tasks, your posture. Rafa and I split the presenting; I open each session and run this channel, the pins, the recorder and the repo.
 08:05 UTC — @sachin: Provisional triads for tonight, drawn from your registration answers (role + the task you named). Triad 1: @ingrid @devr @marisol. Triad 2: @tomasr @aiko @kwame. Confirmed or reshuffled at the end of S1 once inventories exist.
 08:10 UTC — @sachin: S2 is *tonight*, 20:00 UTC, not tomorrow — the repo README's session table still says Tuesday; the pin is right. Between S1 and S2 you have about 3 hours; the only task is to pick one inventory item and draft `kits/<you>/README.md` in two paragraphs (copy `KIT_TEMPLATE/`).
 09:00 UTC — @sachin: @kwame, @marisol — Codex users: your harness reads `AGENTS.md`, not `CLAUDE.md`; same instructions, nothing to do. Just make sure Codex is opened *inside* the clone, or the log will not fire.

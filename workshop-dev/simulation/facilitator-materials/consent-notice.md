@@ -16,7 +16,7 @@ Two versions. The short one is read aloud at the top of S1 (by the facilitator o
 - Live: #kitcraft-transcripts, visible to members of this Discord server.
 - After each session: `transcripts/S<n>/` in https://github.com/protocolvision/workshop-kitkraft — a public repo, readable by anyone, indexable by search engines and by AI crawlers.
 - Your harness's log lines: `LOG.md` files and the `## Log` section of your inventory, in the same public repo. Bridge logs in `bridges/` name the people involved.
-- After the workshop: the repo stays public. The synthesis (`bridges/SYNTHESIS.md`) and the room's awareness profile are posted in #kitcraft within 48 hours. The Institute may later ingest the repo into C3PO, its searchable corpus; if that happens it is announced in #kitcraft first.
+- After the workshop: two things and nothing else. The repo stays public, and the synthesis (`bridges/SYNTHESIS.md`, with the room's awareness profile) is posted in Discord within 48 hours. No further use of the material is planned; any new use would need a new notice.
 
 **Retention.** Raw audio is pruned by the recorder after 7 days. Transcripts, summaries and log lines are kept indefinitely in the repo unless you ask for removal.
 
@@ -26,4 +26,4 @@ Two versions. The short one is read aloud at the top of S1 (by the facilitator o
 
 **Private data.** Never put credentials, client names, or anything under NDA into a kit, an example, or a log line. The kit template's `examples/` says "redact"; that is your responsibility, not the bot's. Sanitizing is yours; publishing is ours; deleting is on request.
 
-**Who to ask.** @sachin owns the repo and the pins; @rafa runs the sessions. Either can act on a removal request.
+**Who to ask.** @sachin owns the repo, the pins and the recorder; the two facilitators split the presenting. Either can act on a removal request.
