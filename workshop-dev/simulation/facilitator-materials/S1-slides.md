@@ -14,8 +14,8 @@ Lead: Rafa. Co-facilitator: Sachin (chat, recorder, repo). Cohort: 6, two triads
 - Breakout rooms are not recorded
 - Your harness writes log lines into public `LOG.md` files; ask either of us to remove any line
 - Put nothing in a public kit you would not put on a public website
-- After Tuesday the repo stays public; nothing else is decided yet (assumed: no C3PO ingest unless the room agrees in S4)
-> Note: read it, do not paraphrase. Ask "anyone want to be off-transcript?" and wait two seconds.
+- After Tuesday: repo stays public; synthesis and awareness profile posted in #kitcraft within 48 h; a later C3PO ingest is possible and would be announced in #kitcraft first
+> Note: read Sachin's `consent-notice.md` script verbatim; it ends with "Recording starts now". Ask "anyone want to be off-transcript?" and wait two seconds.
 
 ## Slide 3 — Ice-breaker (00:03)
 - Name, organisation, one line

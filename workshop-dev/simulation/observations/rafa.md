@@ -34,10 +34,13 @@ Severity as in `../OBSERVATIONS.md`: **S1** breaks the session · **S2** costs >
 | 28 | S2 timing | S2 | S2 and S4 are 22:00–23:00 Berlin. Fine for the rehearsal; for the real cohort this will lose Europeans. Not mine to fix. | Note for the organiser. |
 | 29 | 1A | S2 | The outline gives 1A no content beyond "install and first push". Three of six need it. The 30 min holds only if `gh auth setup-git` is done in pre-work. | `1A-clinic.md`; email item 2. |
 | 30 | facilitator/README | S3 | `AGENTS.md` forbids harnesses from editing `facilitator/`; my own harness had to edit it to add the kit row. Facilitator agents need an explicit exemption on the simulation branch. | One line in `simulation/README.md`: facilitator agents may edit `facilitator/` and `workshop-dev/simulation/`. |
+| 31 | S3 reconcile | S2 | Lead and co-facilitator wrote S3 timings independently and got different breakout windows (mine 15:48–16:24, Sachin's 15:45–16:25). Nothing in the scaffold fixes the breakout clock before both write. Same risk in S2. | Sachin's window wins (he moves the rooms); I retimed. Put the breakout clock for all sessions in one shared table before anyone writes slides. |
+| 32 | S3 reconcile | S3 | My slide-2 consent assumption ("nothing decided after Tuesday") was superseded by Sachin's `consent-notice.md` (48-h post, possible C3PO ingest announced first). Two versions of the same fact existed for an hour. | Consent text has one owner (Sachin); slides point at his file. Done. |
+| 33 | S3 reconcile | S3 | The triad rotation I derived from the personas matched Sachin's `breakout-instructions-triads.md` exactly, without coordination. Good sign, but it was luck: the outline's pair rule had to be reinterpreted twice. | Put the triad rule (A reads B, B reads C, C reads A; bridges reversed) into `outline.md` §4. |
 
 Assumptions I made (all marked in the files)
 - Awareness-grid axes: External/Internal × Archive/Live.
-- S2 critique ring is the forward ring within each triad; S3 bridges reverse it.
+- S2 critique ring is the forward ring within each triad; S3 bridges reverse it (confirmed by Sachin's file).
 - After-Tuesday disposition in the consent slide: repo stays public, nothing else.
 - Registry row schema for `rafa-kit` (15 columns, long format).
 - Recorder is Sachin's to run in every session; 1A is not recorded.
