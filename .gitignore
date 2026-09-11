@@ -1,0 +1,17 @@
+# here.now publish state (per-user slug cache)
+.herenow/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Scratch
+*.bak
+*.orig
+*.tmp
