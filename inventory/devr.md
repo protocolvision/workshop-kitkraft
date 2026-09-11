@@ -12,6 +12,11 @@
    - Recurring? Yes — weekly.
    - Depends on something a stranger would not know? Some.
 
+## Built / uses
+
+- Public repo of governance-proposal templates (link to follow); a private Claude Code skill for the digest, undocumented.
+
 ## Log
 
 2026-09-16T09:14:00Z | async | devr | progress | pre-work stub written by harness
+2026-09-17T21:40:00Z | async | devr | progress | added built/uses by hand on a branch
