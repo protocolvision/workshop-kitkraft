@@ -25,7 +25,7 @@ Where: Discord https://discord.gg/s2WbZBDqM. Voice channel **#kafka**. Links and
 
 1. **Install a harness and run one command.** Claude Code or Codex, your choice. Open it, type `hello`, get an answer. That is the whole test. If this fails, come to the 1A clinic on Monday at 16:30 UTC and we fix it together in 30 minutes.
 
-2. **Get into the repo and push once.** You will get a GitHub collaborator invite for https://github.com/protocolvision/workshop-kitkraft today from the username you gave on the form. Accept it, then:
+2. **Get into the repo and push once.** You will get a GitHub collaborator invite for https://github.com/protocolvision/workshop-kitkraft today, sent to the username you gave on the form (this is the only repo). Accept it, then:
    ```
    git clone https://github.com/protocolvision/workshop-kitkraft.git
    cd workshop-kitkraft
@@ -38,7 +38,7 @@ Where: Discord https://discord.gg/s2WbZBDqM. Voice channel **#kafka**. Links and
 
 **No GitHub account?** Create one at https://github.com/signup (free, five minutes), reply to this email with the username, and we send the invite. If you would rather not, that is fine: bring your files to the 1A clinic or send them to Sachin in #kitcraft and we push under your name.
 
-**Public or private kit — decide now.** Public: your kit lives in the repo above, readable by anyone. Private: the content goes into a collaborators-only repo (`workshop-kitkraft-private`) and only a one-paragraph stub (job, inputs, outputs) goes into the public one. The private repo is not created yet; reply "private" to this email and you get its invite before Monday. Either way, sanitizing is your job: put nothing in a public kit you would not put on a public website.
+**Public or private kit — decide now.** Public: your kit lives in the repo above, readable by anyone. Private: the content stays on your own machine; only a stub `kits/<your-name>/README.md` (job, inputs, outputs, no content) goes into the public repo, and on Tuesday other people's agents reach your kit through you and your agent. There is no private repo. Either way, sanitizing is your job: put nothing in a public kit you would not put on a public website.
 
 **Also**
 - Take the AI postures survey (5 min): https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843 — note your posture; we use it in the first round on Monday.

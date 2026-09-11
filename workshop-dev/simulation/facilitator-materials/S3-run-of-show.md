@@ -1,29 +1,29 @@
 # S3 — Bridges. Run of show (Tue Sep 22, 15:30–16:30 UTC)
 
-Lead: Rafa. Co-facilitator: Sachin. Voice #kafka, breakouts breakout-1 (triad 1: Ingrid, Dev, Marisol) and breakout-2 (triad 2: Tomás, Aiko, Kwame), text #kitcraft. Slides: `S3-slides.md`.
+Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the checkpoint-1 split. Voice #kafka, breakouts breakout-1 (triad 1: Ingrid, Dev, Marisol) and breakout-2 (triad 2: Tomás, Aiko, Kwame), text #kitcraft. Slides: `S3-slides.md`.
 
-| Clock (UTC) | Min | Lead (Rafa) | Co-facilitator (Sachin) | Participants | Artifact expected | Recorder |
-|---|---|---|---|---|---|---|
-| 15:15 | −15 | Pulls the branch; picks two blocker lines from `kits/*/LOG.md` for slide 2 | Posts the S3 rotation table and the bridge instructions in #kitcraft; confirms the rotation against the real S2 critique assignment; pins the hypothesis text | — | Pinned rotation + instructions | — |
-| 15:28 | −2 | "Recording starts now" | `/record channel:#kafka name:KITCRAFT-S3` | — | — | `/record channel:#kafka name:KITCRAFT-S3` |
-| 15:30 | 00 | Slide 1 | Posts session order | Listen | — | on |
-| 15:31 | 01 | Slide 2: shows two anonymised blocker lines | — | Listen | — | on |
-| 15:32 | 02 | Slide 3: F2F | Posts the F2F essay link | Listen | — | on |
-| 15:35 | 05 | Slide 4: ladder; answers Kwame's S2 question | Posts standards table link (resources §4) | Listen | — | on |
-| 15:38 | 08 | Slide 5: rafa-kit on screen, `examples/output.csv` | Posts `facilitator/rafa-kit/` path | Listen | — | on |
-| 15:40 | 10 | Slide 6: Prime Radiant, example only | — | Listen | — | on |
-| 15:41 | 11 | Slide 7: trust, two minutes, timed | Posts the CSA note link for later reading | Listen | — | on |
-| 15:43 | 13 | Slide 8: says the hypothesis twice | Pins the hypothesis (already prepared) | Write it down | Hypothesis pinned | on |
-| 15:44 | 14 | Slide 9: one minute; points at the pinned table; no questions taken | Posts "Rooms open — breakout-1: … breakout-2: … Back at 16:25" | Note target; copy `bridges/TEMPLATE.md` | — | on |
-| 15:45 | 15 | Moves to breakout-1 | `/stop` (channel empties; avoids a dangling auto-stop); moves people to rooms; moves to breakout-2 | Move; start agents | `bridges/<you>-<target>.md` created, header filled | `/stop` |
-| 15:55 | 25 | Swaps to breakout-2 | Swaps to breakout-1; watches #kitcraft for stuck rooms | Working; unblocks logged | First `unblock` lines | off |
-| 16:05 | 35 | Back in #kafka; reads pushed bridge logs and unblock lines | Floats between rooms | Working | Progress lines in bridge logs | off |
-| 16:15 | 45 | — | Posts "minute 30: stop building, write the two paragraphs" in both rooms and #kitcraft | Write "Did it work" and "What a bridge turned out to be" | Paragraphs in every log | off |
-| 16:23 | 53 | — | Posts "push now, reconvene 16:25" | Push | Six logs pushed | off |
-| 16:25 | 55 | Slide 10: reconvene; one line each, 25 s | Moves everyone back to #kafka; re-runs `/record channel:#kafka name:KITCRAFT-S3` (or `KITCRAFT-S3B`, see runbook); waits for the first live line; posts speaking order | 25 s each | Six one-liners in transcript | `/record channel:#kafka name:KITCRAFT-S3` |
-| 16:28 | 58 | Slide 11: awareness check; Async 3; S4 time | His agent tallies quadrants; posts Async 3 and the hard-mode option | One quadrant each | Tally in #kitcraft | on |
-| 16:29 | 59 | Closes | `/stop`; copies both transcript parts into `transcripts/S3/`; commits `S3: sachin: transcript` | Leave | `transcripts/S3/` (two parts) | `/stop` |
-| 16:35 | 65 | Reads all six bridge logs; drafts the S4 comparison of definitions vs. hypothesis (Sachin's agent does the synthesis; this is the lead's read) | Checks every `bridges/*.md` has a paragraph and at least one log line; pings anyone missing | Async 3 | Six complete bridge logs by 20:00 | — |
+| Clock (UTC) | Min | Presenter | Lead (Rafa) | Co-facilitator (Sachin) | Participants | Artifact expected | Recorder |
+|---||---|---|---|---|---|---|
+| 15:15 | −15 | — | Pulls the branch; picks two blocker lines from `kits/*/LOG.md` for slide 2 | Posts the S3 rotation table and the bridge instructions in #kitcraft; confirms the rotation against the real S2 critique assignment; pins the hypothesis text | — | Pinned rotation + instructions | — |
+| 15:28 | −2 | — | "Recording starts now" | `/record channel:#kafka name:KITCRAFT-S3` | — | — | `/record channel:#kafka name:KITCRAFT-S3` |
+| 15:30 | 00 | Sachin | Listens | Presents slide 1 (opener); posts session order | Listen | — | on |
+| 15:31 | 01 | Rafa | Slide 2: shows two anonymised blocker lines | — | Listen | — | on |
+| 15:32 | 02 | Rafa | Slide 3: F2F | Posts the F2F essay link | Listen | — | on |
+| 15:35 | 05 | Rafa | Slide 4: ladder; answers Kwame's S2 question | Posts standards table link (resources §4) | Listen | — | on |
+| 15:38 | 08 | Rafa | Slide 5: rafa-kit on screen, `examples/output.csv` | Posts `facilitator/rafa-kit/` path | Listen | — | on |
+| 15:40 | 10 | Rafa | Slide 6: Prime Radiant, example only | — | Listen | — | on |
+| 15:41 | 11 | Sachin | Listens; times it | Presents slide 7 (trust, two minutes); posts the CSA note link for later reading | Listen | — | on |
+| 15:43 | 13 | Rafa | Slide 8: says the hypothesis twice | Pins the hypothesis (already prepared) | Write it down | Hypothesis pinned | on |
+| 15:44 | 14 | Sachin (rooms) | Listens | Presents slide 9, one minute, points at the pinned table; posts "Rooms open — breakout-1: … breakout-2: … Back at 16:25" | Note target; copy `bridges/TEMPLATE.md` | — | on |
+| 15:45 | 15 | Sachin (rooms) | Moves to breakout-1 | `/stop` (channel empties; avoids a dangling auto-stop); moves people to rooms; moves to breakout-2 | Move; start agents | `bridges/<you>-<target>.md` created, header filled | `/stop` |
+| 15:55 | 25 | Sachin (rooms) | Swaps to breakout-2 | Swaps to breakout-1; watches #kitcraft for stuck rooms | Working; unblocks logged | First `unblock` lines | off |
+| 16:05 | 35 | Sachin (rooms) | Back in #kafka; reads pushed bridge logs and unblock lines | Floats between rooms | Working | Progress lines in bridge logs | off |
+| 16:15 | 45 | Sachin (rooms) | — | Posts "minute 30: stop building, write the two paragraphs" in both rooms and #kitcraft | Write "Did it work" and "What a bridge turned out to be" | Paragraphs in every log | off |
+| 16:23 | 53 | Sachin (rooms) | — | Posts "push now, reconvene 16:25" | Push | Six logs pushed | off |
+| 16:25 | 55 | Rafa | Slide 10: reconvene; one line each, 25 s | Moves everyone back to #kafka; re-runs `/record channel:#kafka name:KITCRAFT-S3` (or `KITCRAFT-S3B`, see runbook); waits for the first live line; posts speaking order | 25 s each | Six one-liners in transcript | `/record channel:#kafka name:KITCRAFT-S3` |
+| 16:28 | 58 | Rafa / Sachin | Slide 11: awareness check; Async 3; S4 time | His agent tallies quadrants; posts Async 3 and the hard-mode option | One quadrant each | Tally in #kitcraft | on |
+| 16:29 | 59 | Sachin | Closes | `/stop`; copies both transcript parts into `transcripts/S3/`; commits `S3: sachin: transcript` | Leave | `transcripts/S3/` (two parts) | `/stop` |
+| 16:35 | 65 | Sachin | Reads all six bridge logs; drafts the S4 comparison of definitions vs. hypothesis (Sachin's agent does the synthesis; this is the lead's read) | Checks every `bridges/*.md` has a paragraph and at least one log line; pings anyone missing | Async 3 | Six complete bridge logs by 20:00 | — |
 
 Contingencies
 - Recorder: two segments. Whether a second `/record` with the same name appends or overwrites is open (Sachin's `recorder-runbook.md`); if it overwrites, the second segment is `KITCRAFT-S3B`, added to `RECORD_MEETING_NAMES` on Sep 17.
