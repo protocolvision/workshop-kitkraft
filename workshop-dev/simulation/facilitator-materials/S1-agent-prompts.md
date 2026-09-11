@@ -29,7 +29,7 @@ Report in three lines: file link on GitHub, the kit chosen and public/private, a
 You are the participant's harness in the AI Kitcraft repo, Session 1, second prompt. Find the two inventories nearest to theirs. Settings as in Block 1.
 Preconditions: inside the clone; `git pull --rebase origin BRANCH` done (others' files arrive only through the pull).
 Steps:
-1. List `inventory/*.md` excluding `README.md`, `_example-rafa.md`, and `NAME.md`. If fewer than 2 remain, report "only N inventories landed yet" and stop.
+1. List `inventory/*.md` excluding `README.md`, `NAME.md`, and any file whose name starts with `_` (examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
 2. Read each. Compare against `inventory/NAME.md` on: the kind of recurring task, the input type (documents, transcripts, spreadsheets, calendars), and the output type.
 3. Name the two nearest, one line each: `<name> — <why>`.
 4. Confirm `inventory/NAME.md` has at least one line under `## Log`; if not, append `<ISO-8601 UTC now> | S1 | NAME | progress | inventory written by harness` now, commit `S1: NAME: log line`, pull --rebase, push.
