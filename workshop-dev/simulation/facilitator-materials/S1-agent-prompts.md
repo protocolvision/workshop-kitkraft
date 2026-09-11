@@ -5,10 +5,12 @@ Two blocks. Participants paste each into their harness (open inside the clone) a
 ## Block 1 — inventory (slide 12, 16:05 UTC)
 
 ```
-You are the participant's harness in the AI Kitcraft repo, Session 1. Write their inventory file and push it. Settings: BRANCH=main (dry run only: simulation/dry-run-01), NAME=<Discord handle without @, lowercase; ask if unknown>.
+You are the participant's harness in the AI Kitcraft repo, Session 1. Write their inventory file and push it. Settings: BRANCH=<from `git branch --show-current`>, NAME=<Discord handle without @, lowercase; ask if unknown>.
 
 Preconditions:
-- You are inside the clone: `git rev-parse --show-toplevel` ends in `workshop-kitkraft`. If not: stop; tell the participant "cd into workshop-kitkraft and open me there, then paste again".
+- You are inside the clone: `git remote get-url origin` contains `protocolvision/workshop-kitkraft` (the folder name does not matter). If the command fails: stop; tell the participant the absolute path of their clone if you can find one (`find ~ -maxdepth 3 -type d -name 'workshop-kitkraft*'`), and to open you there and paste again. If two clones exist, the one whose `git status -sb` is not behind and has their commits is the real one; do not clone again.
+- Set BRANCH to the output of `git branch --show-current`; do not guess it from these instructions.
+- `gh auth status` shows an account that can push: `gh api repos/protocolvision/workshop-kitkraft --jq .permissions.push` prints `true`. If `false` or 403: the active account is wrong; tell the participant to run `gh auth switch` to the account they registered, then `gh auth setup-git` (it writes one line, `credential.helper=!gh auth git-credential`, to `~/.gitconfig`). Stop and report if it still fails.
 - `git pull --rebase origin BRANCH` succeeds. If it says "unstaged changes", `git stash`, pull, `git stash pop`.
 
 Steps:

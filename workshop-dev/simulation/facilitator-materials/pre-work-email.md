@@ -13,17 +13,17 @@ You are in AI Kitcraft (Sep 21–22, online). This email is written for your AI 
 
 ```
 You are the participant's harness for the AI Kitcraft workshop (Sep 21–22, 2026). Do the pre-work below for them. Ask them for anything you cannot find; never guess a name or a credential.
-Settings: REPO=https://github.com/protocolvision/workshop-kitkraft  BRANCH=main (dry run only: simulation/dry-run-01)  NAME=<participant's Discord handle without @, lowercase, no spaces; ask if unknown>
+Settings: REPO=https://github.com/protocolvision/workshop-kitkraft  BRANCH=<after cloning, the output of `git branch --show-current`>  NAME=<participant's Discord handle without @, lowercase, no spaces; ask if unknown>
 
 Preconditions (check each; if one fails, do the fix and re-check before going on):
 - `git --version` works. Fix: macOS `xcode-select --install`; Windows https://git-scm.com/download/win; Debian/Ubuntu `sudo apt install git`.
-- `gh --version` works. Fix: macOS `brew install gh`; Windows `winget install GitHub.cli`; Linux https://cli.github.com/.
-- `gh auth status` shows a logged-in github.com account. Fix: tell the participant to run `gh auth login` (GitHub.com, HTTPS, login with browser) in a separate terminal; you cannot complete the browser step. Then run `gh auth setup-git`.
+- `gh --version` works. Fix: macOS `brew install gh` (if `brew` is missing, install Homebrew first from https://brew.sh — it asks for the Mac login password and takes 5–8 minutes, then follow its two "Next steps" lines); Windows `winget install GitHub.cli`; Linux https://cli.github.com/.
+- `gh auth status` shows a logged-in github.com account, and `gh api repos/protocolvision/workshop-kitkraft --jq .permissions.push` prints `true`. Fix: tell the participant to run `gh auth login` (GitHub.com, HTTPS, login with browser) in a separate terminal; you cannot complete the browser step. If the account is logged in but cannot push (403), `gh auth switch` to the registered account. Then run `gh auth setup-git` (it writes one line, `credential.helper=!gh auth git-credential`, to `~/.gitconfig`).
 - `gh repo view protocolvision/workshop-kitkraft` succeeds. Fix on "not found"/404: the collaborator invite is not accepted; tell the participant to open https://github.com/notifications (or the invite email), accept, then rerun. Stop here if it still fails.
 
 Steps:
-1. Clone, unless the current folder already is the clone (`git rev-parse --show-toplevel` ends in `workshop-kitkraft` and `AGENTS.md` mentions "AI Kitcraft"). Command: `gh repo clone protocolvision/workshop-kitkraft` in the participant's home or projects folder. Artifact: folder `workshop-kitkraft/`.
-2. If you are not running inside that folder, stop and tell the participant: "cd workshop-kitkraft, then open me again from there, then paste this block again." Everything after this requires being inside the clone.
+1. Find any existing clone first: `find ~ -maxdepth 3 -type d -name 'workshop-kitkraft*'`, and check `git -C <path> remote get-url origin`. Clone only if none exists: `gh repo clone protocolvision/workshop-kitkraft` in the participant's home folder. Artifact: exactly one clone; print its absolute path.
+2. If you are not running inside that clone (`git remote get-url origin` does not contain `protocolvision/workshop-kitkraft`), stop and tell the participant: "Quit me, run `cd <absolute path>`, open me again there, paste this block again." Say the path. Everything after this requires being inside the clone.
 3. `git checkout BRANCH` and `git pull --rebase origin BRANCH`. Artifact: up-to-date clone.
 4. Ask the participant for three recurring tasks from their work that they have done, or tried, with AI. For each, ask two yes/no questions: is it recurring? does doing it well depend on something they know that a stranger would not? Record the answers.
 5. Write `inventory/NAME.md` containing: line 1 `# NAME`; a section `## Recurring tasks` with the three tasks and both answers each; a section `## Log` with one line `<ISO-8601 UTC now> | async | NAME | progress | pre-work stub written by harness`. Do not create any other file. Artifact: that file.
