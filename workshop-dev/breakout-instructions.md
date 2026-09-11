@@ -1,15 +1,32 @@
-# Breakout instructions (pre-written; post in #kitcraft before each breakout)
+# Breakout instructions — what Sachin posts in #kitcraft before each breakout
 
-## S2 — pair critique (10 min)
-1. Swap kit folder paths.
-2. Ask your agent: "Read `kits/<partner>/README.md` and `SKILL.md` cold. Run the example in `examples/` and report where you were uncertain or failed."
-3. Read the report to your partner. Partner appends each failure as a `blocker` line in their own LOG.md.
-4. One sentence each for the plenary: what the partner's agent got wrong.
+Triads are the group unit (two for 6; for 10–15, as many triads as possible and the remainder in pairs, never a four or a one). Critique ring inside a triad: A reads B, B reads C, C reads A; S3 reverses it, so you bridge to the kit you did not critique. A pair reads each other in S2 and both bridge to a facilitator kit in S3. Rooms: breakout-1 … breakout-5, one per group.
 
-## S3 — bridge (40 min)
-1. Choose a target: partner's kit or a facilitator factory (`facilitator/README.md`).
-2. Copy `bridges/TEMPLATE.md` to `bridges/<a>-<b>.md`.
-3. Ask your agent: "Using `kits/<target>/`, do <one thing my kit cannot do alone>. Log every step. If you need something you cannot find in the repo, stop and say so."
-4. When it stops, supply the missing thing, and log it as an `unblock` line. Continue.
-5. At minute 35, fill "What a bridge turned out to be" in one paragraph. Push.
-Rule: agent → repo → agent. Human chat only to unblock, and every unblock is logged.
+Discord's 2000-character limit means each post carries a 5-line human header and a file path; the canonical blocks are `instructions/S2-critique.md` and `instructions/S3-bridge.md` (with the STUB and ABSENT variants inside them) and, for the stub bridge, the two role blocks in `bridges/README.md`. The posts below are the human text.
+
+## Post at 20:35 UTC Mon — S2 critique (13 min)
+
+> **Rooms open — 13 minutes. Back in #kafka at 20:48.**
+> <one line per room: breakout-1: a reads b · b reads c · c reads a. Stub: "(stub)". Absent: "@x async (see the block's ABSENT variant)".>
+> Paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your kit, reads the target cold, gives you a 5-line report to read aloud, then logs the blockers about your own kit when you say "log mine".
+> Nobody explains their kit out loud until the reports are read. A facilitator visits each room once.
+
+Rules the facilitators apply: a stub kit goes to the strongest reader in the triad (their agent reports what it would need). A triad that has lost a member becomes a pair for the night: the two present read each other; the absent kit is read asynchronously when it lands and the report posted in #kitcraft.
+
+Facilitator sequence: `/stop` → post → move people → Rafa floats the odd rooms, Sachin the even rooms → swap at 20:41 → "Reconvene" at 20:47 → `/record`.
+
+## Post at 15:45 UTC Tue — S3 bridge (40 min)
+
+> **Rooms open — 40 minutes. Back in #kafka at 16:25.**
+> Targets (the kit you did not critique): <one line per room: a → c · b → a · c → b; pairs: both → a facilitator kit>. Anyone may switch to `facilitator/rafa-kit/` or `facilitator/sachin-kit/`; say so in your log.
+> Paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". It creates `bridges/<you>-<target>.md`, asks you for the one thing, works, and stops whenever it needs something not in the repo — get that from the owner next to you, hand it over, it logs the unblock.
+> Stub targets: requester and owner also use the blocks in `bridges/README.md` (request pushed → owner runs locally → response pushed).
+> At 16:15 say "minute 30" to your harness: it stops building and writes the paragraph in your words. Push by 16:23.
+
+Rules the facilitators apply: a triad that is a pair today bridges to each other's kits only if neither critiqued the other's in S2; otherwise both use facilitator kits. A room stuck for 5 minutes gets a facilitator, who supplies the missing thing; the participant logs it as `unblock`. Facilitators do not touch participants' files.
+
+Facilitator sequence: `/stop` → post → move people → Rafa odd rooms, Sachin even rooms → swap at 15:55 → "minute 30" post at 16:15 → "Reconvene" at 16:24 → `/record`.
+
+## Hard mode (optional, before S4)
+
+> Rerun your bridge with no human chat. When the harness stops, the answer must go into the repo (target kit or your own), never be said aloud. Log it as a second section in the same file.
