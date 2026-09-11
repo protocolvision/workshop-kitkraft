@@ -13,3 +13,15 @@ Append-only. One line per gap, guess, rule break or surprise. Severity: **S1** w
 | 7 | setup | meta | S2 | One `bridges/<a>-<b>.md` per pair, edited by two harnesses at once, appending to the same end-of-file section = rebase conflict. | One log per person: `bridges/<pair>/<name>.md`, or a named sole writer. |
 | 8 | setup | meta | S2 | Fallback "portal upload form" is referenced in the outline and README; no portal exists. | Replace with "paste in #kitcraft, facilitator commits" or build the form. |
 | 9 | setup | meta | S1 | The simulation branch was created locally and the facilitator agents were told to clone it before it had been pushed; both clones failed. The same mistake on the real day (repo private, invite not accepted, branch missing) blocks everyone at minute 0. | Keep the Sep 17 dry-run item: a facilitator clones from a FRESH machine/account before sending the pre-work email. |
+
+## Checkpoint 1 — after prep (2026-09-11)
+
+Facilitator observations: 33 rows in `observations/rafa.md`, 29 in `observations/sachin.md`. Counting the 9 above, **71 findings before a single participant has done anything.** Grouped:
+
+**Would break a session (S1):** no `git push` authentication path for beginners (rafa 5); `workshop-kitkraft-private` promised in the sent email and pinned, does not exist (rafa 6, sachin 23); README/outline say S1 = 90 min and S2 = Tuesday (rafa 10–11, sachin 3); `AGENTS.md` forbids the co-facilitator's own work in `facilitator/`, `transcripts/`, `bridges/SYNTHESIS.md` (sachin 2, rafa 30); recorder: no `/stop` before breakouts, same-name re-record unknown, 25 silent minutes in S1 (sachin 12, rafa 22); no facilitator kit folders existed as bridge targets (rafa 14, sachin 19); briefing agents before the branch existed (rafa 1–3, sachin 1).
+
+**Decisions only Rafa can make (asked at this checkpoint):** lead per session (rafa 12, sachin 28); private repo: create or drop (rafa 6, sachin 23); after-Tuesday disposition for the consent notice (rafa 19, sachin 16); awareness-grid axes (rafa 18); registry schema for `rafa-kit` (rafa 25).
+
+**Decided by the facilitator agents, recorded as assumptions:** 1A not recorded (sachin 29); Async 1 = the 3-hour gap, README only (sachin 21); explicit `/stop` before every breakout and a facilitator speaks every ≤15 min (sachin 12); provisional triads from the form, confirmed at S1 close (sachin 7); stub kit goes to the strongest reader, transmittal procedure for bridging to a stub (sachin 8–9); triad absence rule (sachin 10); one bridge log per bridger, single writer (sachin 11, rafa 16); hypothesis decision rule (sachin 26); synthesis in two versions (sachin 13); `Interface:` line added to kit READMEs (sachin 25).
+
+**Rehearsal-only rule (meta):** participant agents treat `simulation/dry-run-01` as `main`; every reference to `main` in `AGENTS.md`/pins means this branch for the dry run (rafa 20). Both facilitator agents push as one GitHub account; authorship lives in the commit author field (sachin 27).
