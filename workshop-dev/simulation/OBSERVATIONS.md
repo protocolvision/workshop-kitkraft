@@ -25,3 +25,9 @@ Facilitator observations: 33 rows in `observations/rafa.md`, 29 in `observations
 **Decided by the facilitator agents, recorded as assumptions:** 1A not recorded (sachin 29); Async 1 = the 3-hour gap, README only (sachin 21); explicit `/stop` before every breakout and a facilitator speaks every ≤15 min (sachin 12); provisional triads from the form, confirmed at S1 close (sachin 7); stub kit goes to the strongest reader, transmittal procedure for bridging to a stub (sachin 8–9); triad absence rule (sachin 10); one bridge log per bridger, single writer (sachin 11, rafa 16); hypothesis decision rule (sachin 26); synthesis in two versions (sachin 13); `Interface:` line added to kit READMEs (sachin 25).
 
 **Rehearsal-only rule (meta):** participant agents treat `simulation/dry-run-01` as `main`; every reference to `main` in `AGENTS.md`/pins means this branch for the dry run (rafa 20). Both facilitator agents push as one GitHub account; authorship lives in the commit author field (sachin 27).
+
+### Decisions from Rafa at checkpoint 1 (2026-09-11)
+1. **Lead roles:** Sachin does the opener; sections are split by expertise (Sachin: kit-phase thesis, precommodification, protocol fiction / Jamverse, historical analogies; Rafa: CMM mapping, kit standard, traces, logistics, water registry). A per-slide presenter column goes into every run-of-show.
+2. **Private repo: dropped.** No `workshop-kitkraft-private`. Private content stays on the participant's machine; a stub README goes public; bridges to a stub run through the owner's agent. Every reference to the private repo is removed from participant-facing text.
+3. **After Tuesday:** repo stays public; synthesis posted in Discord within 48 h; nothing else. Consent notice says exactly that.
+4. **Awareness-grid axes confirmed:** External/Internal × Archive/Live. Remove the "assumed" flag.
