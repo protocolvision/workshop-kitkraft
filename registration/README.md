@@ -26,9 +26,9 @@ Registration for AI Kitcraft runs through a Google Form owned by the facilitator
 |---|---|---|---|---|
 | 1 | Name | short text | yes | `inventory/<name>.md`, `kits/<name>/` folder name |
 | 2 | Email | short text | yes | pre-work email (Sep 15) |
-| 3 | Github Account (Please set-up at http://github.com/) | short text | yes | collaborator invite to `kitcraft-2026` and `workshop-kitkraft-private` (Sep 15); push check (Sep 19) |
-| 4 | Discord Handle (Please visit the Discord) | short text | no | #kitcraft access, breakout pairing |
-| 5 | Organization and role | short text | yes | S1 ice-breaker, adjacency pairing |
+| 3 | Github Account (Please set-up at http://github.com/) | short text | yes | collaborator invite to `workshop-kitkraft`, sent as registrations arrive (from Sep 15); `<name>` for every file; push check (Sep 19) |
+| 4 | Discord Handle (Please visit the Discord) | short text | no | #kitcraft access, triad posts |
+| 5 | Organization and role | short text | yes | S1 ice-breaker, provisional triads |
 | 6 | A recurring task you would build a Kit around | paragraph | yes | seed for `inventory/<name>.md` (the Discover → Encode gate) |
 | 7 | Tooling readiness | checkboxes | yes | who goes to Session 1A |
 
@@ -39,9 +39,9 @@ Options for question 7:
 
 ## How responses are used
 
-1. **Sep 15** — every registrant with a GitHub account (Q3) gets a collaborator invite with write access to the public repo, and to the private repo if they want a private kit. Registrants without a GitHub account are told in the pre-work email to create one, or they go through the facilitator-push fallback.
-2. **Sep 19** — push check: one commit from each registrant. Anyone without a push, or who did not tick "installed Claude Code or Codex" in Q7, is invited to Session 1A.
-3. **Sep 21, overnight** — Q5 and Q6 are the first input to adjacency pairs for S2; the S1 inventories replace them once written.
+1. **From Sep 15, as registrations arrive** — every registrant with a GitHub account (Q3) gets a collaborator invite with write access to `workshop-kitkraft`; the pre-work email goes out the same day. Private kits stay on the participant's machine with a stub in the repo; there is no private repo and no second invite. Registrants without a GitHub account are told in the pre-work email to create one, or they go through the by-hand path (`instructions/no-harness.md`: paste in #kitcraft, a facilitator commits).
+2. **Sep 19** — push check: one commit from each registrant. Anyone without a push, or who did not tick "installed Claude Code or Codex" in Q7, is invited to Session 1A. Provisional triads are drafted from Q5 and Q6 the same day.
+3. **Sep 21, S1 close** — the S1 inventories confirm or reshuffle the provisional triads; the S2 triads are pinned in #kitcraft by 16:45 UTC (S2 is at 20:00 the same day, so there is no overnight).
 
 ## Changing the form
 
