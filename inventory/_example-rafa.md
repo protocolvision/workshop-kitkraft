@@ -1,9 +1,9 @@
-# Rafa
+# rafa
 
 ## Recurring tasks
-1. Turn a construction solicitation PDF into a takeoff table — recurring; depends on knowing which line items matter.
-2. Extract water-rate schedules from utility PDFs into a registry — recurring; depends on rate-structure vocabulary.
-3. Write ZKsync governance call notes from a recording — recurring; depends on proposal context.
+1. Turn a construction solicitation PDF into a takeoff table. Recurring: yes. Depends on something I know that a stranger would not: yes — which line items matter for the bid.
+2. Extract water-rate schedules from utility PDFs into a registry. Recurring: yes. Depends on something I know: yes — rate-structure vocabulary (tiers, meter sizes, CCF vs kgal).
+3. Write ZKsync governance call notes from a recording. Recurring: yes. Depends on something I know: yes — which proposals each speaker is referring to.
 
 ## Built / use
 - Water Data Strategy: https://npc.here.now/waterdatastrategy/
@@ -13,7 +13,7 @@
 Water-rate PDF → registry row. Public.
 
 ## Posture
-(from survey)
+Partnership
 
 ## Log
 2026-09-21T15:10:00Z | S1 | rafa | progress | inventory written by harness from pre-work notes

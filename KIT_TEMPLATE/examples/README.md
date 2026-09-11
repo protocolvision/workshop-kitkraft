@@ -1,1 +1,1 @@
-Put one real input here (`input.*`) and the output the kit produced from it (`output.*`). Redact anything private.
+Put one input here (`input.*`) and the output the kit produced from it (`output.*`). A text extract or a synthetic input is fine; a real file is not required. Redact anything private and say in the kit README if the example is synthetic.

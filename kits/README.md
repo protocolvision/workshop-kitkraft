@@ -1,5 +1,23 @@
 # Kits (Session 2)
 
-One folder per participant: `kits/<your-name>/`. Copy `KIT_TEMPLATE/` and fill it. Ship by the end of Session 2; fix the failure your partner's agent found in Async 2 and push v2.
+One folder per participant: `kits/<name>/` (`<name>` = your GitHub username, lowercase), copied from `KIT_TEMPLATE/`. Ship by the end of Session 2; fix what your triad's agent found overnight (`instructions/async-2.md`) and push v2. Private kits: the content stays on your machine; the README here is a stub with job, inputs and outputs and no content, and other people's agents reach the kit through you and your agent (`bridges/README.md`). There is no private repo.
 
-Private kits: content in `workshop-kitkraft-private/kits/<your-name>/`; leave `README.md` here as a stub.
+Paste into your harness during the S2 build (20 minutes):
+
+```
+You are the participant's harness in the AI Kitcraft repo, Session 2 build. Read `AGENTS.md` first.
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
+
+Preconditions: inside the clone (`git remote get-url origin` contains `workshop-kitkraft`); `git pull --rebase origin BRANCH` succeeds; `kits/NAME/README.md` exists from Async 1 (if not, copy `KIT_TEMPLATE/` to `kits/NAME/` and fill README from `inventory/NAME.md` first).
+
+Steps:
+1. `SKILL.md`: fill the frontmatter `name` (the folder name) and `description` (one line: what the kit does AND when an agent should use it — this line decides whether it triggers). Fill When to use, Steps (numbered, exact), Constraints (formats, sources, checks, who signs off), Do not (what a stranger's agent would get wrong). Everything from the participant's answers; ask, do not invent.
+2. `examples/`: one input as `input.*` and the output the kit should produce as `output.*`. A text extract or a synthetic input is fine; if the participant has a real one, redact names and numbers first; if synthetic, say so in README.
+3. Private kit: do steps 1–2 on the participant's machine outside the repo; in the repo leave only README (stub) and LOG.md.
+4. When the participant says "comms": in README.md and SKILL.md cut every sentence that adds nothing, remove AI tells (hedges, "leverage", triple adjectives, summaries of what was just said), and hand the README back for the participant to rewrite the Job line by hand.
+5. Append `<ISO-8601 UTC now> | S2 | NAME | progress | kit v1: SKILL, example` to `kits/NAME/LOG.md`. Commit `S2: NAME: kit v1`, `git pull --rebase origin BRANCH`, push at the facilitator's "push now"; rejected → pull --rebase and push again, up to 3 times. Verify with `git log origin/BRANCH --oneline -1 -- kits/NAME/SKILL.md`.
+
+Do not: touch other folders; write steps the participant has not confirmed; put private data in examples.
+
+Report: the description line verbatim, the example input name, and the push result.
+```
