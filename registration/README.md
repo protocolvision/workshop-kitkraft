@@ -26,7 +26,7 @@ Registration for AI Kitcraft runs through a Google Form owned by the facilitator
 |---|---|---|---|---|
 | 1 | Name | short text | yes | `inventory/<name>.md`, `kits/<name>/` folder name |
 | 2 | Email | short text | yes | pre-work email (Sep 15) |
-| 3 | Github Account (Please set-up at http://github.com/) | short text | yes | collaborator invite to `kitcraft-2026` and `kitcraft-2026-private` (Sep 15); push check (Sep 19) |
+| 3 | Github Account (Please set-up at http://github.com/) | short text | yes | collaborator invite to `kitcraft-2026` and `workshop-kitkraft-private` (Sep 15); push check (Sep 19) |
 | 4 | Discord Handle (Please visit the Discord) | short text | no | #kitcraft access, breakout pairing |
 | 5 | Organization and role | short text | yes | S1 ice-breaker, adjacency pairing |
 | 6 | A recurring task you would build a Kit around | paragraph | yes | seed for `inventory/<name>.md` (the Discover → Encode gate) |

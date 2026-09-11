@@ -7,7 +7,7 @@ A shared public record for a two-day workshop. Each participant owns one invento
 
 ## Repo hygiene
 - Before any push: `git pull --rebase origin main`.
-- Edit only inside `inventory/<participant>.md`, `kits/<participant>/`, and `bridges/` files naming this participant. Never edit other participants' files, `KIT_TEMPLATE/`, `facilitator/`, `transcripts/`, `workshop-dev/`, `site/`, `registration/`, or `brandkit/`.
+- Edit only inside `inventory/<participant>.md`, `kits/<participant>/`, and `bridges/` files naming this participant. Never edit other participants' files, `KIT_TEMPLATE/`, `facilitator/`, `transcripts/`, `workshop-dev/`, `site/`, or `registration/`.
 - Never delete files. Never force-push.
 - Commit messages: `S1|S2|S3|S4|async: <participant>: <one line>`.
 

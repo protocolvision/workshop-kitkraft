@@ -2,7 +2,7 @@
 
 | Date | Task | Owner | Done |
 |---|---|---|---|
-| Sep 12 | Create `protocolvision/kitcraft-2026` (public) and `protocolvision/kitcraft-2026-private`; push scaffold; portal skeleton | Rafa | |
+| Sep 12 | Create `protocolvision/workshop-kitkraft` (public) and `protocolvision/workshop-kitkraft-private`; push scaffold; portal skeleton | Rafa | |
 | Sep 13 | Sachin's kit decided and in `facilitator/sachin-kit/`; test C3PO MCP from a fresh harness | Sachin | |
 | Sep 14 | Discord: #kitcraft, #kitcraft-transcripts, breakout rooms kitcraft-1…7; OpenRecapper owner confirmed; `RECORD_MEETING_NAMES` += KITCRAFT-S1..S4; `/record-access grant` both facilitators | Rafa | |
 | Sep 15 | Pre-work email; collaborator invites to both repos | Rafa | |

@@ -2,7 +2,7 @@
 
 **AI Kitcraft 2026** — Kit → Factory → Bridge
 
-Repo: https://github.com/protocolvision/kitcraft-2026 · Private repo: https://github.com/protocolvision/kitcraft-2026-private · Portal: <url>
+Repo: https://github.com/protocolvision/workshop-kitkraft · Private repo: https://github.com/protocolvision/workshop-kitkraft-private · Portal: <url>
 Voice: #kafka · Live transcript: #kitcraft-transcripts
 Times: S1 Mon <hh:mm UTC / Berlin / Pacific> · S2 / S3 / S4 Tue <…>
 

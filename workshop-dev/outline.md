@@ -10,7 +10,7 @@ Frame: **Expanded Awareness** — the workshop's stance is awareness of protocol
 Design constraints fixed by the symposium contract and registration:
 - Audience: non-technical operators who have used Claude Code or Codex. GitHub fluency not assumed.
 - Public promise: "develop your own kit of AI workflows for your organization"; no special expertise needed.
-- Substrate: one public GitHub repo (`kitcraft-2026`) plus a static portal that renders it. Every kit and bridge log lands there.
+- Substrate: one public GitHub repo (`workshop-kitkraft`) plus a static portal that renders it. Every kit and bridge log lands there.
 - Artifact cadence: something shipped to the repo every 30–45 minutes of live time.
 
 ---
@@ -137,13 +137,13 @@ Each pair writes `bridges/<a>-<b>.md`: target, what the agent needed, what it fo
 
 ### 1. Repository — yes, one
 
-Decision: one public GitHub repo, `kitcraft-2026`, under the Protocol Institute org. It is the workshop's public record, the substrate agents read from and write to, and the raw material for the S4 synthesis. The static portal is a render of the repo, not a second system.
+Decision: one public GitHub repo, `workshop-kitkraft`, under the Protocol Institute org. It is the workshop's public record, the substrate agents read from and write to, and the raw material for the S4 synthesis. The static portal is a render of the repo, not a second system.
 
 Why one repo rather than per-team repos or a shared folder: 10–15 people produce 10–15 kits and 5–7 bridge logs; that is one repo's worth. Per-team repos fragment what agents need to find each other. A shared Drive folder has no history and no agent-native access. The Rao–Jenna case used a shared folder plus a transmittal server; the repo is both in one.
 
 Layout:
 ```
-kitcraft-2026/
+workshop-kitkraft/
   README.md            human entry: what this is, how to add your kit
   AGENTS.md            agent entry: repo conventions + autologging instruction (below)
   CLAUDE.md            first line: @AGENTS.md
@@ -155,7 +155,7 @@ kitcraft-2026/
   transcripts/         OpenRecapper output, per session
 ```
 
-Public/private: each participant chooses. Public kits live in `kitcraft-2026`. Private kits live in a second repo, `kitcraft-2026-private`, same layout, collaborators only (registrants + facilitators), and leave a stub in the public repo — `kits/<name>/README.md` with the job, inputs, and outputs but no content — so the kit is still discoverable and bridgeable. A bridge to a private kit runs through its owner's agent (the Rao–Jenna transmittal pattern), which is itself one of the bridge forms S3 should surface. Sanitizing is the participant's responsibility; the pre-work email says so.
+Public/private: each participant chooses. Public kits live in `workshop-kitkraft`. Private kits live in a second repo, `workshop-kitkraft-private`, same layout, collaborators only (registrants + facilitators), and leave a stub in the public repo — `kits/<name>/README.md` with the job, inputs, and outputs but no content — so the kit is still discoverable and bridgeable. A bridge to a private kit runs through its owner's agent (the Rao–Jenna transmittal pattern), which is itself one of the bridge forms S3 should surface. Sanitizing is the participant's responsibility; the pre-work email says so.
 
 Working mode: every participant opens their harness *inside* the cloned repo, works only in their own `inventory/<name>.md` and `kits/<name>/`, and pushes to `main`. `AGENTS.md` instructs the harness: pull with rebase before every push; never edit outside your own folder; never delete. This keeps 15 people on one branch without conflicts and is what makes the autolog fire.
 

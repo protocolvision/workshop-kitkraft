@@ -3,6 +3,7 @@
 Reusable blurbs for the **AI Kitcraft** workshop at the 2026 Protocol Symposium (*New Nature*, Sep 21–25, online). Paste as needed.
 
 **Live page:** https://ai.protocolized.dev/kitcraft/ (custom-domain mount; also reachable at `bold-steeple-73wb.here.now`).
+**Sign-up form (registration open since Sep 2026):** https://docs.google.com/forms/d/e/1FAIpQLScwbiUGZuQ8FBuxgXAd13IBKTPVkVXVd8_FDmEjCb5o01s-Og/viewform
 
 ---
 

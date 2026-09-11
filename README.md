@@ -15,7 +15,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 1. Install a harness (Claude Code or Codex). Accept the collaborator invite for this repo.
 2. Clone it and **open your harness inside the clone**:
    ```
-   git clone https://github.com/protocolvision/kitcraft-2026.git && cd kitcraft-2026 && claude   # or codex
+   git clone https://github.com/protocolvision/workshop-kitkraft.git && cd workshop-kitkraft && claude   # or codex
    ```
    Your harness reads `AGENTS.md` / `CLAUDE.md` on open. That is what makes the autolog work.
 3. Work only in your own files:
@@ -23,7 +23,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
    - `kits/<your-name>/` (Session 2) — copy `KIT_TEMPLATE/` to start
    - `bridges/<a>-<b>.md` (Session 3) — files you are a party to
 4. Push to `main`. No branches, no PRs. Your harness pulls with rebase first.
-5. Private kit? Put the content in `kitcraft-2026-private` (same layout) and leave a stub `kits/<your-name>/README.md` here with job, inputs, outputs, no content.
+5. Private kit? Put the content in `workshop-kitkraft-private` (same layout) and leave a stub `kits/<your-name>/README.md` here with job, inputs, outputs, no content.
 
 ## Layout
 
@@ -40,12 +40,18 @@ transcripts/       OpenRecapper output per session
 workshop-dev/      facilitator material: outline, resources, checklists
 site/              the landing page at https://ai.protocolized.dev/kitcraft/ (source + deploy notes)
 registration/      the sign-up form: link, questions, how answers feed the prep checklist
-brandkit/          Protocol Institute brand kit (S2 example, bridge target)
 ```
 
 ## Consent
 
 Plenary audio in #kafka is recorded and transcribed with speaker names; transcripts go into `transcripts/`. Breakouts are not recorded. Your harness appends log lines to `LOG.md` files in this public repo. Ask a facilitator to remove any of your lines at any time. Put nothing in a public kit you would not put on a public website.
+
+## Related repos
+
+- Landing page source: [`site/`](site/) → https://ai.protocolized.dev/kitcraft/
+- Brand kit (S2 example, bridge target): https://github.com/protocolvision/project-aimarketing
+- AI Capability Maturity Model / Durable AI Adoption: https://github.com/protocolvision/project-aicapabilitymaturitymodel → https://ai.protocolized.dev/
+- Water rate data strategy: https://github.com/protocolvision/project-water → https://npc.here.now/waterdatastrategy/
 
 ## Sessions
 
