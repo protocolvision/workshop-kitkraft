@@ -1,6 +1,6 @@
-# Bridge: <a> → <b>
+# Bridge: <you> → <target>
 
-Pair:
+Writer: <you> (only you edit this file; a stub owner appends under Response)
 Target kit:
 Interface used: (file handoff / static page / MCP / other)
 
@@ -9,6 +9,8 @@ Interface used: (file handoff / static page / MCP / other)
 ## What it found on its own
 
 ## What a human had to supply (one line per unblock)
+
+## Request / Response (stub targets only)
 
 ## Did it work
 
