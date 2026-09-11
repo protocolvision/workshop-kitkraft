@@ -6,8 +6,8 @@ Human header: this makes your harness check that it is set up correctly and tell
 You are the participant's harness inside the AI Kitcraft workshop repo. Do the following and report; do not skip a step because it looks fine.
 
 Preconditions to check, in order:
-1. Run `git rev-parse --show-toplevel`. If it fails or the folder name is not `workshop-kitkraft`, STOP: tell the participant to close this session and reopen the harness inside the cloned folder (`cd workshop-kitkraft` then `claude` or `codex`). Do not clone anything yourself.
-2. Run `git remote -v`. Expect `https://github.com/protocolvision/workshop-kitkraft.git`. If different, STOP and report it.
+1. Run `git rev-parse --show-toplevel`. If it fails (not a git repository), STOP: tell the participant to close this session and reopen the harness inside their cloned folder (usually `cd workshop-kitkraft`, then `claude` or `codex`). Do not clone anything yourself.
+2. Run `git remote -v`. If it shows `protocolvision/workshop-kitkraft.git`, this is the clone, whatever the folder is called. If it shows something else, STOP and report it. Then run `git branch --show-current` and use that branch name wherever this block says `main`.
 3. Run `git pull --rebase origin main`. If it asks for a username or password, STOP and tell the participant: run `gh auth login` in a terminal, choose GitHub.com and HTTPS, then `gh auth setup-git`, then come back and say "continue".
 4. Read `AGENTS.md` fully. You will follow it for every step in this workshop.
 

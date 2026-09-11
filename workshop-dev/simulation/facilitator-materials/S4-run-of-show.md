@@ -15,11 +15,11 @@ Presenting split (checkpoint 1): Sachin — opener, debrief round, synthesis rea
 |---|---|---|---|---|---|---|---|
 | 20:00 | 00 | Sachin | listens | Slide 1; consent one-liner; "Recording on (KITCRAFT-S4)" | listen | — | `/record channel:#kafka name:KITCRAFT-S4` |
 | 20:02 | 02 | Rafa | Slide 2: recap in three files | drives the screen; posts the three paths | follow in own clone | — | on |
-| 20:10 | 10 | Sachin | timer at 90 s | Slide 3: triad 1 debrief; captures each report into SYNTHESIS §2 | ingrid, devr, marisol speak; questions | — | on |
-| 20:16 | 16 | Sachin | timer | triad 2 debrief; reads aiko's #kitcraft note if kwame does not | tomasr, kwame; kwame reads aiko's paragraph; questions | — | on |
+| 20:10 | 10 | Sachin | timer at 90 s | Slide 3: triad 1 debrief; captures each report into SYNTHESIS §2 | ingrid, devr, kwame speak; questions | — | on |
+| 20:16 | 16 | Sachin | timer | triad 2 debrief; reads aiko's #kitcraft note if marisol does not | tomasr, marisol; marisol reads aiko's paragraph; questions | — | on |
 | 20:22 | 22 | — | questions | buffer | — | — | on |
 | 20:24 | 24 | Rafa | Slide 4: showcase 1 (worked) | selects #kitcraft-transcripts since 20:00 → scratch file → agent merges into SYNTHESIS v1 | bridge owner talks to their log on screen | — | on |
-| 20:28 | 28 | Rafa | showcase 2 (transmittal, ingrid ↔ marisol) | agent finishes v1; reads it once | — | — | on |
+| 20:28 | 28 | Rafa | showcase 2 (transmittal, aiko ↔ marisol) | agent finishes v1; reads it once | — | — | on |
 | 20:32 | 32 | Rafa | showcase 3 (did not work) | pushes `bridges/SYNTHESIS.md` v1; posts link | — | SYNTHESIS v1 | on |
 | 20:38 | 38 | Sachin | listens | Slide 5: read-back — numbers, six paragraphs verbatim; corrections typed live under §6 | correct out loud | SYNTHESIS §1, §2, §6 | on |
 | 20:43 | 43 | Rafa → Sachin | states the hypothesis (60 s) | Slide 6: verdict rule, table, verdict | contest the classification | SYNTHESIS §3 | on |

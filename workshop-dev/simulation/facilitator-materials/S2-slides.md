@@ -4,7 +4,7 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 
 ## Slide 1 — Where we are (00:00) (presenter: Sachin)
 - Recording on; consent as pinned; breakouts off the record
-- S1 awareness check: N of 6 said *precommodification* (from `transcripts/S1/awareness-check.md`)
+- S1 awareness check: anchored 3, traces 2, precommodification 1 — not the expected winner (`transcripts/S1/awareness-check.md`)
 - Five README drafts pushed since S1; one stub (marisol, content on her machine)
 - Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at
 - A kit is what stays after the agent has failed at it once
@@ -44,8 +44,8 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 > Speaker note: Rafa calls 5, 10 min; Sachin takes over at 15 for the comms rules, calls "push" at 18. Private kit (marisol): content local, stub only.
 
 ## Slide 6 — Triad critique (35:00 → 48:00, breakouts) (presenter: Sachin)
-- breakout-1: ingrid reads devr · devr reads marisol (stub) · marisol reads ingrid
-- breakout-2: tomasr reads kwame · kwame reads tomasr · aiko's kit read async when it lands
+- breakout-1: ingrid reads devr · devr reads kwame · kwame reads ingrid
+- breakout-2: tomasr reads marisol (stub) · marisol reads tomasr · aiko's kit read async when it lands
 - Your agent reads the target cold and runs the example; report in ≤5 lines
 - Owner logs every failure as a `blocker` line; no explaining out loud until it is in the kit
 - Instructions pinned in #kitcraft; the text is the facilitator
@@ -65,7 +65,7 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 
 ## Slide 9 — Async 2, overnight (56:00) (presenter: Sachin)
 - Fix the failure your triad's agent found. Push v2 with a `progress` line saying what changed
-- aiko: push your kit; tomasr's agent reads it and posts the report in #kitcraft; log the blockers, fix
+- aiko: push your kit; marisol's agent reads it and posts the report in #kitcraft; log the blockers, fix
 - S3 triads (rotated) posted in #kitcraft at 09:00 UTC; alternative targets in `facilitator/README.md`
 - Tomorrow 15:30 UTC: bridges. Bring the kit you did *not* critique in mind
 > Speaker note: posted verbatim to #kitcraft at 20:58; `/stop` at 21:00.
