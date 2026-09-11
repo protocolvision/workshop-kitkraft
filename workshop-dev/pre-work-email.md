@@ -1,13 +1,104 @@
-Subject: AI Kitcraft — three things before Monday
+# Pre-work email — send as registrations arrive, from Tue Sep 15, 2026
 
-Before Session 1 (Mon Sep 21, <time>):
+To: each registrant (form Q2) · From: Rafa · Cc: Sachin
+Subject: AI Kitcraft — one thing to do yourself, then paste this into your harness
 
-1. Install a harness — Claude Code or Codex — and run one command in it. If this fails, come to Session 1A (Mon, 30 min) and we fix it together.
-2. Accept the GitHub invite to https://github.com/protocolvision/workshop-kitkraft (and `workshop-kitkraft-private` if you want a private kit). Clone it. Open your harness inside the clone.
-3. Bring three recurring tasks from your own work that you have done, or tried, with AI. For each ask: is it recurring? does doing it well depend on something you know that a stranger would not? One of these becomes your kit on Tuesday.
+---
 
-Also: take the symposium AI postures survey (link) and note your posture; read Durable AI Adoption chapters 1–3 (https://ai.protocolized.dev/).
+Hi,
 
-Decide now whether your kit will be public (in the repo everyone can read) or private (in the collaborators-only repo, with a one-paragraph stub in the public one). Either works for the workshop.
+You are in AI Kitcraft (Sep 21–22, online). Two things before Monday. **Item 0** you do yourself; it needs your computer password and no AI harness can do it. Then you open your harness, paste **Block A**, and say "do this": it sets you up, writes your first file, pushes it and reports. No harness or no GitHub account? Do **Block B** by hand. Times, the one decision we need from you, and the links are at the end.
 
-Discord: https://discord.gg/s2WbZBDqM — we meet in voice channel #kafka; everything else is pinned in #kitcraft.
+**Item 0 — before Friday Sep 18, by hand (needs your computer password; a harness cannot do this)**
+
+1. Install `git` and `gh` (the GitHub command-line tool).
+   - macOS: open Terminal, run `xcode-select --install` (installs git; a window appears, accept it, wait) and then `brew install gh` — or, if you have no Homebrew, the gh installer at https://cli.github.com/.
+   - Windows: Git for Windows https://git-scm.com/download/win, then the gh installer at https://cli.github.com/.
+2. In a terminal run `gh auth login` — choose GitHub.com, HTTPS, log in with the browser — then `gh auth setup-git`. Log in as the GitHub account you gave on the form.
+3. Install a harness. Claude Code needs a Claude Pro or Max subscription: https://docs.claude.com/en/docs/claude-code. Codex needs a ChatGPT plan: https://developers.openai.com/codex/cli. One is enough.
+4. Accept the GitHub invite to https://github.com/protocolvision/workshop-kitkraft (in the invite email or at https://github.com/notifications).
+
+**For you, not your harness:** everything goes straight to `main`. No branches, no pull requests. Your harness knows this; please do not branch by hand either.
+
+**Block A — paste into your harness, then say "do this"**
+
+```
+You are the participant's harness for the AI Kitcraft workshop (Sep 21–22, 2026). Do the pre-work below for them. Ask them for anything you cannot find; never guess a name, a task, or a credential.
+Settings: REPO=https://github.com/protocolvision/workshop-kitkraft  BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
+
+Preconditions (check each; if one fails, do the fix and re-check before going on):
+- `git --version` and `gh --version` print versions. If either fails: STOP; the participant must do Item 0 of the email by hand (it needs their computer password). Do not try to install them.
+- `gh api user --jq .login` prints NAME (compare case-insensitively). If it prints another name or fails: STOP; tell the participant "run `gh auth login` as NAME in a terminal, then say continue". When it matches, run `gh auth setup-git` yourself (it asks for nothing).
+- `gh repo view protocolvision/workshop-kitkraft --json name` succeeds. On 404: the invite is not accepted; tell the participant to accept it at https://github.com/notifications, then retry.
+
+Steps:
+1. Are you inside the clone? Yes when `git rev-parse --show-toplevel` succeeds AND `git remote get-url origin` contains `workshop-kitkraft`. Never test the folder name. If yes, go to step 3.
+2. If not: if a folder `workshop-kitkraft` exists in the current folder and its remote matches, `cd` into it; otherwise `gh repo clone protocolvision/workshop-kitkraft` here, then `cd workshop-kitkraft`. Continue in this same run; do not ask the participant to paste again. In the report, tell them to open the harness inside that folder from now on.
+3. `git checkout BRANCH && git pull --rebase origin BRANCH`. Read `AGENTS.md`; follow it for everything below. Artifact: an up-to-date clone.
+4. If `inventory/NAME.md` already exists on BRANCH with three tasks in it: report "already done" with its GitHub link and stop.
+5. The three recurring tasks. Ask the participant for three recurring tasks from their work that they have done, or tried, with AI. If they have not given them to you in this conversation: STOP and ask, one at a time. Never draft, invent, or complete a task yourself. For each, ask two yes/no questions and record the answers in their words: is it recurring? does doing it well depend on something they know that a stranger would not? (one line why).
+6. Ask: will the kit be public or private? Public = the kit content goes into the public repo, readable by anyone; private = the content stays on this machine and only a stub README goes into the repo. If they do not know yet, record `undecided`; do not choose for them.
+7. Write `inventory/NAME.md` with exactly the sections of `inventory/README.md`: line 1 `# NAME`; `## Recurring tasks` (the three, numbered, both answers each); `## Built / use` (leave empty or `none`); `## Kit` (`Public`, `Private` or `undecided`; the task is chosen in S1); `## Posture` (empty); `## Log` with one line `<ISO-8601 UTC now> | async | NAME | progress | pre-work inventory written by harness`. Do not create any other file. Artifact: that file, 10–25 lines.
+8. `git add inventory/NAME.md && git commit -m "async: NAME: pre-work inventory"`.
+9. `git pull --rebase origin BRANCH && git push origin BRANCH`. Verify: `git fetch origin && git log origin/BRANCH --oneline -1 -- inventory/NAME.md` shows your commit. Artifact: the file on GitHub.
+10. Append further autolog lines as AGENTS.md says if you do anything else in the repo; one extra commit is fine.
+
+Failures:
+- Push asks for a username/password: type nothing. Tell the participant to run `gh auth setup-git` in a terminal, then retry step 9.
+- Push rejected ("fetch first", "non-fast-forward"): `git pull --rebase origin BRANCH`, then push again; up to 3 tries. If a CONFLICT appears, it can only be in `inventory/NAME.md`: keep both versions' lines, `git add` it, `git rebase --continue`, push.
+- "Permission denied" / 403: invite not accepted, or the wrong account (`gh api user --jq .login`). STOP and report which.
+- Anything else you cannot fix in two attempts: STOP, report the exact error text, and say "bring this to the 1A clinic, Mon Sep 21, 16:30 UTC, #kafka".
+
+Do not: create branches, force-push, edit any file other than `inventory/NAME.md`, edit `README.md`/`AGENTS.md`/other people's files, store or print tokens, or put anything private into the file.
+
+Report to the participant in five lines or fewer: the GitHub link of the file, the three tasks as recorded, public/private as recorded, the folder to open the harness in from now on, and anything still needed from them.
+```
+
+**Block B — if you have no working harness, or no GitHub account (by hand)**
+
+Write `inventory/<name>.md` in exactly this shape and paste it into #kitcraft in one message, first line `inventory/<name>.md`; a facilitator commits it under your name and replies "committed". `<name>` is your GitHub username, lowercase; if you have none yet, the name you registered with, lowercase, no spaces — and create the account at https://github.com/signup when you can (five minutes; a harness cannot do it), then reply to this email with the username so the invite reaches you.
+
+```
+# <name>
+
+## Recurring tasks
+1. <task, one line>. Recurring: yes/no. Depends on something I know that a stranger would not: yes/no — <why, one line>.
+2. <task>. Recurring: … Depends on something I know: … — <why>.
+3. <task>. Recurring: … Depends on something I know: … — <why>.
+
+## Built / use
+<anything AI-native you built or use that others could use; or "none">
+
+## Kit
+Public / Private (the task is chosen on Monday).
+
+## Posture
+<from the survey, or "not taken">
+
+## Log
+<ISO-8601 UTC now> | async | <name> | progress | pre-work inventory written by hand, no harness; pasted in #kitcraft
+```
+
+The full by-hand path for the two days is `instructions/no-harness.md` in the repo. Come to 1A (Mon 16:30 UTC) if you want the harness working for Monday evening; bring the exact error text.
+
+**When (UTC · Berlin · Pacific)**
+
+| Session | Day | UTC | Berlin | Pacific |
+|---|---|---|---|---|
+| S1 Kits | Mon Sep 21 | 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
+| 1A Beginner clinic (optional) | Mon Sep 21 | 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
+| S2 Factories | Mon Sep 21 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
+| S3 Bridges | Tue Sep 22 | 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
+| S4 Recap | Tue Sep 22 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
+
+Your local time: S1 = 15:30 UTC on Monday Sep 21; convert it here: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530 (east of UTC+8 it is already Tuesday).
+
+Discord https://discord.gg/s2WbZBDqM: voice **#kafka**, links and instructions pinned in **#kitcraft**, breakouts in **breakout-1 … breakout-5**. No harness by Monday? Come to 1A at 16:30 UTC; 30 minutes, we fix it together.
+
+**One decision: public or private kit.** Public: your kit lives in the repo above, readable by anyone. Private: the content stays on your own machine; only a stub `kits/<name>/README.md` (job, inputs, outputs, no content) goes into the public repo, and on Tuesday other people's agents reach your kit through you and your agent. There is no private repo. Either way, your inventory file is public: "public" there means task names and one-line descriptions, never client names, numbers or data. Put nothing in a public file you would not put on a public website.
+
+**Also:** take the AI postures survey (5 min) https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843 and note your posture; read Durable AI Adoption ch. 1–3 https://ai.protocolized.dev/. Optional: https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory
+
+**Recording.** Plenary audio in #kafka is recorded and transcribed with speaker names; transcripts go into the public repo. Breakouts and 1A are not recorded. Your harness writes short log lines into public files. Ask either of us to remove any line at any time. After the workshop the repo stays public and the synthesis is posted in Discord within 48 hours; nothing else is planned.
+
+See you Monday. Rafa and Sachin
