@@ -3,7 +3,7 @@
 Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the checkpoint-1 split. Voice #kafka, breakouts breakout-1 (triad 1: Ingrid, Dev, Marisol) and breakout-2 (triad 2: Tomás, Aiko, Kwame), text #kitcraft. Slides: `S3-slides.md`.
 
 | Clock (UTC) | Min | Presenter | Lead (Rafa) | Co-facilitator (Sachin) | Participants | Artifact expected | Recorder |
-|---||---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | 15:15 | −15 | — | Pulls the branch; picks two blocker lines from `kits/*/LOG.md` for slide 2 | Posts the S3 rotation table and the bridge instructions in #kitcraft; confirms the rotation against the real S2 critique assignment; pins the hypothesis text | — | Pinned rotation + instructions | — |
 | 15:28 | −2 | — | "Recording starts now" | `/record channel:#kafka name:KITCRAFT-S3` | — | — | `/record channel:#kafka name:KITCRAFT-S3` |
 | 15:30 | 00 | Sachin | Listens | Presents slide 1 (opener); posts session order | Listen | — | on |

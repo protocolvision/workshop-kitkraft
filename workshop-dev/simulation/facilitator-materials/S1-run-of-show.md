@@ -3,14 +3,14 @@
 Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the checkpoint-1 split; the Lead/Co-facilitator columns still say who does what off-mic. Voice #kafka, text #kitcraft. Recorder commands are typed by Sachin in Discord. Slides: `S1-slides.md`.
 
 | Clock (UTC) | Min | Presenter | Lead (Rafa) | Co-facilitator (Sachin) | Participants | Artifact expected | Recorder |
-|---||---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | 15:20 | −10 | — | Joins #kafka, screen share test, slides open | Re-pins in #kitcraft: repo link, times, consent, session order, breakout rooms; checks who is in voice | Trickle in | Pinned message current | — |
 | 15:28 | −2 | — | Says "recording starts now" | Runs `/record channel:#kafka name:KITCRAFT-S1`; confirms live text appears in #kitcraft-transcripts | — | — | `/record channel:#kafka name:KITCRAFT-S1` |
 | 15:30 | 00 | Sachin | Listens | Presents slide 1 (welcome); posts session order + slide link in #kitcraft | Listen | — | on |
 | 15:31 | 01 | Sachin | Listens; watches for objections in voice | Reads `consent-notice.md` verbatim; consent text already pinned | Say if off-transcript | Consent in transcript | on |
 | 15:33 | 03 | Sachin | Second seed (water-rate rule); then listens | Presents slide 3, seeds first; posts speaking order (Ingrid, Dev, Marisol, Tomás, Aiko, Kwame); times each at 75 s; nudges Tomás at 90 s | 75 s each: name, posture, surprise or protocol | Six postures noted in #kitcraft | on |
 | 15:42 | 12 | Sachin | Listens | Presents slide 4 (what this is not, the tractor) | Listen | — | on |
-| 15:44 | 14 | Rafa | Slide 5: Expanded Awareness 2×2; flags axes as assumed | Posts grid image or table in #kitcraft | Listen; may ask | — | on |
+| 15:44 | 14 | Rafa | Slide 5: Expanded Awareness 2×2 (axes confirmed) | Posts grid image or table in #kitcraft | Listen; may ask | — | on |
 | 15:48 | 18 | Rafa | Slide 6: movement 2×2 | — | Listen | — | on |
 | 15:51 | 21 | Rafa | Slide 7: CMM ↔ Kit/Factory/Bridge | Posts CMM link | Listen | — | on |
 | 15:54 | 24 | Rafa | Slide 8: what a kit is; shows `KIT_TEMPLATE/` on screen | Posts `KIT_TEMPLATE/` link and the Agent Skills spec link | Listen | — | on |

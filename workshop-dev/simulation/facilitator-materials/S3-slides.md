@@ -56,7 +56,7 @@ Presenters split by expertise (checkpoint-1 decision): Sachin opens, does the tr
 > Note: one minute. Say it twice. Sachin pins it.
 
 ## Slide 9 — Exercise: build a bridge (00:14) (presenter: Sachin)
-- Triads, in breakout-1 and breakout-2. Rotation: you bridge to the kit you did **not** critique in S2. Assumed S2 critique ring X→Y→Z→X, so S3 bridges go X→Z, Y→X, Z→Y (Sachin confirms against the actual S2 assignment before posting)
+- Triads, in breakout-1 and breakout-2. Rotation: you bridge to the kit you did **not** critique in S2. S2 critique ring X→Y→Z→X (Sachin's `breakout-instructions-triads.md`), so S3 bridges go X→Z, Y→X, Z→Y
 - Triad 1: Ingrid → Marisol's kit (stub, content on her machine: through Marisol's agent, transmittal pattern) · Dev → Ingrid's · Marisol → Dev's
 - Triad 2: Tomás → Sachin's kit (`facilitator/sachin-kit/`, his choice) · Kwame → Aiko's · Aiko → Kwame's
 - Anyone may swap their target for `facilitator/rafa-kit/` or `facilitator/sachin-kit/`; nobody critiqued those
