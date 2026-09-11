@@ -60,7 +60,7 @@ Presenters split by expertise (checkpoint-1 decision): Sachin opens, does the tr
 - Triad 1: Ingrid → Marisol's kit (stub, content on her machine: through Marisol's agent, transmittal pattern) · Dev → Ingrid's · Marisol → Dev's
 - Triad 2: Tomás → Sachin's kit (`facilitator/sachin-kit/`, his choice) · Kwame → Aiko's · Aiko → Kwame's
 - Anyone may swap their target for `facilitator/rafa-kit/` or `facilitator/sachin-kit/`; nobody critiqued those
-- Task: make your agent use the target kit to do one thing your own kit cannot do alone. Copy `bridges/TEMPLATE.md` to `bridges/<you>-<target>.md`; you are its only writer
+- Task: make your agent use the target kit to do one thing your own kit cannot do alone. Fill TARGET and TASK in the block in `S3-agent-prompts.md` (pinned), paste it, say "do this". It opens `bridges/<you>-<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log
 - At minute 30 of the breakout, stop building; write "Did it work" and "What a bridge turned out to be", one paragraph each. Push by minute 38
 > Note: Sachin briefs, one minute; the table is already pinned. He opens the rooms at 00:15 sharp. Aiko is live for this session.

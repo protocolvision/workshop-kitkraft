@@ -14,7 +14,7 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the checkpoint-1 sp
 | 15:40 | 10 | Rafa | Slide 6: Prime Radiant, example only | — | Listen | — | on |
 | 15:41 | 11 | Sachin | Listens; times it | Presents slide 7 (trust, two minutes); posts the CSA note link for later reading | Listen | — | on |
 | 15:43 | 13 | Rafa | Slide 8: says the hypothesis twice | Pins the hypothesis (already prepared) | Write it down | Hypothesis pinned | on |
-| 15:44 | 14 | Sachin (rooms) | Listens | Presents slide 9, one minute, points at the pinned table; posts "Rooms open — breakout-1: … breakout-2: … Back at 16:25" | Note target; copy `bridges/TEMPLATE.md` | — | on |
+| 15:44 | 14 | Sachin (rooms) | Listens | Presents slide 9, one minute, points at the pinned table and block; posts "Rooms open — breakout-1: … breakout-2: … Back at 16:25" | Note target; copy `bridges/TEMPLATE.md` | — | on |
 | 15:45 | 15 | Sachin (rooms) | Moves to breakout-1 | `/stop` (channel empties; avoids a dangling auto-stop); moves people to rooms; moves to breakout-2 | Move; start agents | `bridges/<you>-<target>.md` created, header filled | `/stop` |
 | 15:55 | 25 | Sachin (rooms) | Swaps to breakout-2 | Swaps to breakout-1; watches #kitcraft for stuck rooms | Working; unblocks logged | First `unblock` lines | off |
 | 16:05 | 35 | Sachin (rooms) | Back in #kafka; reads pushed bridge logs and unblock lines | Floats between rooms | Working | Progress lines in bridge logs | off |

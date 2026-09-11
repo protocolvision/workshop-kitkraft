@@ -86,17 +86,17 @@ Presenters split by expertise (checkpoint-1 decision): Sachin opens (slides 1–
 > Note: Sachin's section (precommodification and farmsteading are his essays). End on "public records and interfaces"; hand back to Rafa for the exercise.
 
 ## Slide 12 — Exercise: your inventory (00:35) (presenter: Rafa)
-- In your harness, inside the clone: "Write `inventory/<my-name>.md` from `inventory/README.md`: my three recurring tasks, what I have built or use, which one becomes my kit and whether public or private, my posture. Then commit and push."
+- Paste **Block 1** from `S1-agent-prompts.md` (Sachin pins it now) into your harness, inside the clone, and say "do this". It writes `inventory/<name>.md`, commits, pushes, and reports
 - Private means: content stays on your machine; only a stub README goes in the repo. There is no private repo
-- 12 minutes. Sachin is in #kitcraft for anyone whose push fails; he commits it under your name
+- 12 minutes. Push failed after three tries? Post the error the harness printed in #kitcraft; Sachin commits under your name
 - Rule: you read other people's inventories only through your agent, never in the browser
 - At 00:48 I will give the second prompt
 > Note: Ingrid and Aiko have no harness: they write the file by hand from `inventory/README.md` and send it to Sachin; they get the autolog at 1A. Marisol asks Sachin to push.
 
 ## Slide 13 — Second prompt: the two nearest (00:48) (presenter: Rafa)
-- "Pull the latest repo, read every file in `inventory/`, and tell me the two entries closest to mine and why"
+- Paste **Block 2** from `S1-agent-prompts.md` and say "do this". It pulls, reads every inventory, names the two nearest, and checks your `## Log` line
 - Note the two names; that is the seed for the triads' work tomorrow
-- Confirm your file has at least one line under `## Log`. If not, say so in #kitcraft
+- If it reports no log line on GitHub, say so in #kitcraft
 > Note: Sachin's agent checks every inventory for a Log line at 00:52 and posts the list; missing lines go to 1A (expect Ingrid, Kwame).
 
 ## Slide 14 — Awareness check (00:53) (presenter: Rafa)
