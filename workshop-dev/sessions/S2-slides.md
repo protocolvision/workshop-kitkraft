@@ -41,7 +41,7 @@ A kit is your own practice written down; a factory is where that practice lives 
 - Recording on; consent as pinned; breakouts may be recorded
 - S1 awareness check: `<tally from workshop-dev/transcripts/S1/awareness-check.md>`, read as counted
 - `<n>` sources chosen since S1 (`<o>` own kits, `<f>` facilitator kits)
-- Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at
+- Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things someone else's assistant can fail at
 - A kit is what stays after the agent has failed at it once
 > Speaker note: one sentence per bullet; the room has had three hours, not a night. Rafa confirms "Recording on" in #workshop-kitkraft first and does the first three bullets; Sachin takes the last two and continues straight into slide 2.
 
@@ -80,7 +80,7 @@ A kit is your own practice written down; a factory is where that practice lives 
 **Say.** "Now the definition, and it is Rao's phrase: a factory is a flexible job shop. A folder hierarchy on your own machine where separate sessions of your assistant work at specialised stations and hand the half-made thing on to the next station — varied output, a flexibly configured set of tools. A kit is one adaptation for one job; the factory is the infrastructure that runs kits, and what it sends out is an intermediate, work in progress another factory can carry further, rather than anything finished. How you expose that intermediate is a ladder of four rungs, and tonight everybody is on rung one — rung one done properly beats a rung you claimed and did not build."
 - A factory is a flexible job shop: a folder hierarchy on your own machine where agent sessions work at specialised workstations and hand artifacts to each other, making varied things with a flexibly configured set of tools (Rao)
 - A kit is one adaptation for one job; a factory is the infrastructure that runs kits and produces **intermediates** — work-in-progress and skills another factory can consume — not finished artifacts
-- The declared interface is the mechanism: how a factory exposes an intermediate to a stranger's agent
+- The way in is the mechanism: how a factory hands an intermediate to someone else's assistant
 - The ladder, ascending effort: README handed to an agent → static page → MCP → API / A2A
 - CMM: Discover → Encode = Kit · Prove = Factory · Harvest = Bridge
 - Tonight's deliverable is rung one done properly; the README's `Exports:` line names the intermediate and its `Interface:` line names the rung and how to call it. Rungs 2+ are stretch
@@ -110,7 +110,7 @@ A kit is your own practice written down; a factory is where that practice lives 
 **Say.** "Rooms now. Inside your group you read in a ring, and the pin says who reads whom. Your assistant gets two files — the README and the SKILL.md — and nothing else: no questions to the owner, no explaining, and it runs the example cold and writes you five lines on where it had to guess. You read those five lines aloud to the owner, and the owner types nothing back except `blocker` lines. Reconvene here at 48."
 - Ring inside each breakout group (2–4), from the pin: A reads B · B reads C · … · the last reads A; a pair swaps
 - Groups and rooms as pinned in #workshop-kitkraft (the S2 groups post is the only roster)
-- Your agent uses the target factory through its declared interface (README + SKILL.md only) and runs the example cold; report in ≤5 lines where the interface was insufficient
+- Your assistant uses the target factory only through the way in it declared (README + SKILL.md, nothing else) and runs the example cold; report in ≤5 lines where the interface was insufficient
 - Owner logs every failure as a `blocker` line; no explaining out loud until it is in the kit
 - Block: `instructions/S2-critique.md` (pinned as a link); the text is the facilitator
 > Speaker note: Rafa: `/stop`, post "rooms open", move people. Facilitators split the rooms between them and swap at minute 6. An absent member makes a pair.

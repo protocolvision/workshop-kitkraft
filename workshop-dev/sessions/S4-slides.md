@@ -12,7 +12,7 @@ This hour is the room reading its own record back to itself, in a deliberate ord
 
 ## The argument
 
-1. Everything on screen tonight is a file one of you wrote, so the artifacts can do the recapping (slide 1).
+1. Everything on screen tonight is a file one of you wrote, so your own work can do the recapping (slide 1).
 2. The three-day spine is legible in three of those files, which makes the recap a reading rather than a lecture (slide 2).
 3. Each bridge log then carries something only its writer can report — the target, the one thing, what a person had to supply (slide 3).
 4. Three are worth seeing in full, including one that did not work, because a failed bridge is the most specific list anyone has of what a kit still lacks (slide 4).
@@ -25,7 +25,7 @@ This hour is the room reading its own record back to itself, in a deliberate ord
 
 | # | Min | Presenter | On screen | Purpose |
 |---|---|---|---|---|
-| 1 | 00:00 | Rafa | Repo tree, live | Consent; the artifacts are the slides |
+| 1 | 00:00 | Rafa | Repo tree, live | Consent; your files are the slides |
 | 2 | 02:00 | Sachin | Three files picked at 19:45 | Recap the spine from the record |
 | 3 | 10:00 | Rafa | Each speaker's bridge log | One report per bridge, timed |
 | 4 | 24:00 | Rafa | Three bridge logs in full | Two that worked, one that did not |
@@ -34,7 +34,7 @@ This hour is the room reading its own record back to itself, in a deliberate ord
 | 7 | 50:00 | Rafa | `SYNTHESIS.md` §5 tally | The room's awareness profile |
 | 8 | 57:00 | Rafa | Take-home post, text only | What stays open after tonight |
 
-## Slide 1 — The room's own artifacts (00:00) (presenter: Rafa)
+## Slide 1 — The room's own files (00:00) (presenter: Rafa)
 **On screen.** Screen share, live: the repo root at the pulled commit, `participants/` expanded so the folders are visible, then a scroll past the bridge files. Headline "Your files are the slides", with the counts filled in live: `<n>` inventories · `<n>` kits · `<n>` bridge logs · 3 transcripts.
 **Say.** Recording is on and consent is as pinned — nothing tonight is off the record. Before we start, look at the tree: that is inventories, kits, bridge logs and three transcripts, all of it public. Two days ago every one of these was a task inside somebody's head, and tonight there are no slides of mine to show you, because your files are the slides.
 - Recording on; consent as pinned; nothing tonight is off the record
