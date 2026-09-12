@@ -32,6 +32,10 @@ Robert Peake. Four postures: Partnership, Hypervigilance, Overreliance, Complian
 https://ai.protocolized.dev/ · PDF: https://ai.protocolized.dev/durable-ai-adoption.pdf
 Five governed/cultivated pairs; Discover → Encode → Prove → Harvest gates; "A network of factories" with the 2002 Bezos API mandate; timeline slide labels 2026–28 "Factories." Appendix cases for S1: Kline & Pinch (rural Model T users, kit-phase pattern), Devine (electrification, 30-year lag).
 
+**Kline & Pinch, "Users as Agents of Technological Change"** (1996, in the bibliography) — the kit-phase source: rural Model T owners running corn shellers off the rear axle are the kit users; the tractor is the product consensus that came later. S1 "what a kit is".
+
+**Bijker, Wiebe E. *Of Bicycles, Bakelites, and Bulbs* (1995)** — closure and stabilization: how a technology's interpretive flexibility ends and one form becomes the product. The frame behind "a factory is a kit whose interface has closed for others". S1 theory.
+
 **How the Protocol Institute Is Adopting AI**
 https://protocolized.summerofprotocols.com/p/how-the-protocol-institute-is-adopting
 SIGBIZ L1 → L2 case; fortnightly show-and-tell. S4 continuation venue.
@@ -67,7 +71,7 @@ Alexander Technique as an awareness-based skill: "notice, expand and ultimately 
 
 **Have Your Factory Call My Factory** ✓ — Rao and Protocolized, Mar 2, 2026.
 https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory
-The bridge essay. Intermediates, not finished artifacts, flow between factories; F2F relationships; Rao's manuscript factory → Jenna Dixon's production factory via shared Dropbox + transmittal server; "domain knowledge > coding knowledge"; skills as industrial intermediates; high-trust links as the invisible 90%. Anchors S2 example and S3 theory. Companion: "From Destination AI to Intelligence Media" (Feb 2, 2026), linked from the essay.
+The bridge essay. Intermediates, not finished artifacts, flow between factories; F2F relationships; Rao's manuscript factory → Jenna Dixon's production factory via shared Dropbox + metadata server; "domain knowledge > coding knowledge"; skills as industrial intermediates; high-trust links as the invisible 90%. Two phrases used verbatim in S2: a factory is a "flexible job shop"; F2F is "individuals with significant mutual trust interacting with each other through their personal and bespoke Claude Code infrastructures, exchanging work-in-progress materials". Anchors S2 example and S3 theory. Companion: "From Destination AI to Intelligence Media" (Feb 2, 2026), linked from the essay.
 
 **Ido Salomon on reprotocolizing interface design for agents** (new) — Protocolized podcast, Jul 2026, listed at https://protocolized.io/. Not fetched; candidate S3 reference on interfaces.
 
@@ -99,7 +103,7 @@ Hu, Botao, and Helena Rong. "Inter-Agent Trust Models: A Comparative Study of Br
 
 ## 4a. Kit standard — primary sources (new in v3)
 
-- **Agent Skills specification** — https://agentskills.io/specification (spec repo: https://github.com/agentskills/agentskills). A skill is a folder with `SKILL.md` (frontmatter `name`, `description`; body instructions), optional `scripts/`, `references/`, `assets/`. Published Dec 18, 2025; adopted by 30+ tools within months. The workshop's `KIT_TEMPLATE/` follows this shape so a kit built Tuesday works in any harness Wednesday.
+- **Agent Skills specification** — https://agentskills.io/specification (spec repo: https://github.com/agentskills/agentskills). A skill is a folder with `SKILL.md` (frontmatter `name`, `description`; body instructions), optional `scripts/`, `references/`, `assets/`. Published Dec 18, 2025; adopted by 30+ tools within months. The workshop's `PARTICIPANT_TEMPLATE/` follows this shape so a kit built Tuesday works in any harness Wednesday.
 - **Anthropic, "The Complete Guide to Building Skills for Claude"** (PDF) — https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf. Practitioner guide; the recurring lesson "if it doesn't trigger, it's the description" belongs in S2.
 - **skills.sh** (Vercel registry) — the marketplace; evidence that skills circulate as Rao's "industrial intermediates."
 
@@ -136,7 +140,7 @@ RAG over the PI corpus; reproducible three-layer ingest; web/Discord/MCP. MCP: `
 
 **How to Turn Your AI Into a World-Class Designer** (new) — Anshu Chaudhary (anshuc), Lenny's Newsletter.
 https://lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world
-Eight techniques; the last three (cut what adds nothing, remove AI tells, rewrite copy by hand) are the S2 "comms" layer. Claim to pressure-test: "next-token prediction stifles creativity" is a rhetorical frame, not a mechanism.
+Eight techniques; the last three (cut what adds nothing, remove AI tells, rewrite copy yourself) are the S2 "comms" layer. Claim to pressure-test: "next-token prediction stifles creativity" is a rhetorical frame, not a mechanism.
 
 ---
 
@@ -164,6 +168,8 @@ Cloud Security Alliance. "Agent Context Poisoning: SKILL.md and the New AI Suppl
 Chaudhary, Anshu. "How to Turn Your AI Into a World-Class Designer." *Lenny's Newsletter*, 2026. https://lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world.
 
 Ashcroft, Michael. "What Is the Alexander Technique?" *Expanding Awareness*. https://expandingawareness.org/blog/what-is-the-alexander-technique/.
+
+Bijker, Wiebe E. *Of Bicycles, Bakelites, and Bulbs: Toward a Theory of Sociotechnical Change*. Cambridge, MA: MIT Press, 1995.
 
 Benny, Sachin. "LLMs Pre-Commodify Ideas." *Summer Lightning*, June 12, 2026. https://summerlightning.substack.com/p/llms-pre-commodify-ideas.
 

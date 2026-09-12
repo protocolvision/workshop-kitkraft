@@ -1,0 +1,1 @@
+Put one input here (`input.*`) and the output the kit produced from it (`output.*`). A text extract or a synthetic input is fine; a real file is not required. Redact anything you would not publish and say in the kit README if the example is synthetic.
