@@ -86,7 +86,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 > Note: Sachin's section (precommodification and farmsteading are his essays). End on "public records and interfaces"; hand back to Rafa for the exercise.
 
 ## Slide 12 — Exercise: your inventory (00:35) (presenter: Rafa)
-- Paste **Block 1** (`instructions/S1-inventory.md`; Sachin pins the link now) into your harness, inside your folder `participants/<name>/`, and say "do this". It writes `participants/<name>/inventory.md`, commits, pushes, and reports
+- Paste **Block 1** (`instructions/S1-inventory.md`; Sachin pins the link now) into your harness (open at the clone root) and say "do this". It writes `participants/<name>/inventory.md`, commits, pushes, and reports
 - Private means: content stays on your machine; only a stub README goes in the repo. There is no private repo
 - 12 minutes. Push failed after three tries? Post the error the harness printed in #kitcraft; Sachin commits under your name
 - Rule: you read other people's inventories only through your agent, never in the browser

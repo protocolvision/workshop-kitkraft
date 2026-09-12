@@ -9,7 +9,7 @@ A shared public record for a two-day workshop. Each participant owns one folder,
 NAME = the participant's GitHub username, lowercase. The folder is `participants/NAME/`. Ask if you do not know it; never guess it. Check it with `gh api user --jq .login`.
 
 ## Where you run
-Open your harness inside `participants/NAME/`; it reads this file from the parent folder and will ask before touching anything outside your folder. If the folder does not exist yet, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` from the clone root. All paths in the instruction files are from the clone root (`git rev-parse --show-toplevel`); since you sit two levels down, run git as `git -C <root>` or prefix pathspecs with `:/`.
+Open your harness at the clone root. You may read any file; you write only inside `participants/NAME/`. If the folder does not exist yet, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/`.
 
 ## Repo hygiene
 - Everything goes to `main`. No branches, no pull requests, no force-push.

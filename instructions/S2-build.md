@@ -4,10 +4,10 @@ Human header: your harness fills `participants/<name>/kit/` — `SKILL.md` and o
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 2 build. Read `AGENTS.md` first.
-Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>  ROOT=<the clone root: `git rev-parse --show-toplevel`>
-Paths below are from ROOT. You work inside `participants/NAME/`.
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
+You write only inside `participants/NAME/`; read anywhere.
 
-Preconditions: inside the clone (`git remote get-url origin` contains `protocolvision/workshop-kitkraft`) and `pwd` ends in `participants/NAME` (if not, `cd ROOT/participants/NAME`); `git pull --rebase origin BRANCH` succeeds; `participants/NAME/kit/README.md` is filled from Async 1 (if not, fill it from `participants/NAME/inventory.md` first, as `async-1.md` says).
+Preconditions: at the clone root (`git rev-parse --show-toplevel` equals `pwd`; `git remote get-url origin` contains `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root); `git pull --rebase origin BRANCH` succeeds; `participants/NAME/kit/README.md` is filled from Async 1 (if not, fill it from `participants/NAME/inventory.md` first, as `async-1.md` says).
 
 Steps:
 1. `kit/SKILL.md`: fill the frontmatter `name` (NAME) and `description` (one line: what the kit does AND when an agent should use it — this line decides whether it triggers). Fill When to use, Steps (numbered, exact), Constraints (formats, sources, checks, who signs off), Do not (what a stranger's agent would get wrong). Everything from the participant's answers; ask, do not invent.

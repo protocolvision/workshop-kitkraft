@@ -6,11 +6,11 @@ Agent-executable version of step 3 in `../breakout-instructions.md`. The partici
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 3 bridge. Use another kit to do one thing this participant's kit cannot do alone, and log everything. Read `AGENTS.md` and `bridges/README.md` first.
-Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>  TARGET=<the target's name from the pinned table: a participant `<name>` (kit at `participants/<name>/kit/`) or `rafa` / `sachin` (kit at `facilitator/<name>/kit/`); ask if unknown>  TASK=<the one thing their kit cannot do alone that the target can, in the participant's words; if they have not supplied it, STOP and ask — never invent it>  ROOT=<the clone root: `git rev-parse --show-toplevel`>
-Paths below are from ROOT. You work inside `participants/NAME/`. KIT = the target's kit folder.
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>  TARGET=<the target's name from the pinned table: a participant `<name>` (kit at `participants/<name>/kit/`) or `rafa` / `sachin` (kit at `facilitator/<name>/kit/`); ask if unknown>  TASK=<the one thing their kit cannot do alone that the target can, in the participant's words; if they have not supplied it, STOP and ask — never invent it>
+You write only inside `participants/NAME/`; read anywhere. KIT = the target's kit folder.
 
 Preconditions:
-0. Folder. `git remote get-url origin` contains `protocolvision/workshop-kitkraft` (never test the folder name; if it fails: `find ~ -maxdepth 4 -type d -name workshop-kitkraft`, tell the participant the path, "quit me, `cd <path>/participants/NAME`, start me again, paste again"; never make a second clone). `pwd` ends in `participants/NAME`; if not, `cd ROOT/participants/NAME`.
+0. Clone root. `git rev-parse --show-toplevel` equals `pwd` and `git remote get-url origin` contains `protocolvision/workshop-kitkraft` (never test the folder name; if the remote check fails: `find ~ -maxdepth 4 -type d -name workshop-kitkraft`, tell the participant the path, "quit me, `cd <path>`, start me again, paste again"; never make a second clone). If only `pwd` differs, `cd` to the clone root.
 - `git branch --show-current` prints BRANCH (else `git checkout BRANCH`).
 - `gh api user --jq .login` equals NAME and `gh api repos/protocolvision/workshop-kitkraft --jq .permissions.push` prints `true`; else STOP, see Failures.
 - `git pull --rebase origin BRANCH` succeeds; `participants/NAME/kit/` exists (v2 if there was one); `KIT/README.md` exists. If the target is missing, tell the participant to ask the owner to push, wait, pull again; still missing after two minutes → switch to `facilitator/sachin/kit/` or `facilitator/rafa/kit/` and log the switch as a `decision` line.

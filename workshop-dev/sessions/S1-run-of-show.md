@@ -17,7 +17,7 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the presenter split
 | 15:57 | 27 | Rafa | Slide 9: traces | — | Listen | — | on |
 | 16:00 | 30 | Rafa | Slide 10: C3PO, no demo | Posts c3po how-it-works link | Listen | — | on |
 | 16:02 | 32 | Sachin | Listens | Presents slide 11 (precommodification, farmsteading) | Listen | — | on |
-| 16:05 | 35 | Rafa | Slide 12: says "paste Block 1, say do this" | Pins the link to `instructions/S1-inventory.md`; opens a "push failed?" thread | Open harness inside clone; paste prompt | — | on |
+| 16:05 | 35 | Rafa | Slide 12: says "paste Block 1, say do this" | Pins the link to `instructions/S1-inventory.md`; opens a "push failed?" thread | Open harness at the clone root; paste prompt | — | on |
 | 16:07 | 37 | Rafa | Floats: answers theory questions in voice; stays off chat | Handles pushes: commits pasted or hand-written files under the sender's name (`S1: <name>: inventory`) after checking `main` for a copy already there | Agent writes `participants/<name>/inventory.md`, commits, pushes | One `participants/<name>/inventory.md` per participant on `main` | on |
 | 16:12 | 42 | Rafa | Checks in voice that pushes went through | Runs `git pull`; posts which inventories have landed and how many | Keep working; ask in #kitcraft if stuck | Most files landed | on |
 | 16:18 | 48 | Rafa | Slide 13: "paste Block 2" | Points at Block 2 in the same file | Agent pulls, reads `participants/*/inventory.md`, names two nearest | Each person has two names | on |

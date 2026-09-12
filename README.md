@@ -14,11 +14,11 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 
 1. Install a harness: Claude Code (needs a Claude Pro or Max subscription; https://docs.claude.com/en/docs/claude-code) or Codex (needs a ChatGPT plan; https://developers.openai.com/codex/cli). Accept the collaborator invite for this repo (GitHub notifications or the invite email).
 2. Install `git` and `gh` (the GitHub CLI), then run `gh auth login` (GitHub.com, HTTPS, browser) and `gh auth setup-git`. This is the step that lets a push work without a password prompt; a harness cannot do the browser login for you.
-3. Clone the repo, copy the template to your own folder, **open your harness inside `participants/<name>/`**, paste `instructions/orient.md` into it and say "do this":
+3. Clone the repo, copy the template to your own folder, **open your harness at the clone root** (the folder that contains `AGENTS.md`), paste `instructions/orient.md` into it and say "do this":
    ```
-   git clone https://github.com/protocolvision/workshop-kitkraft.git && cd workshop-kitkraft && cp -R PARTICIPANT_TEMPLATE participants/<name> && cd participants/<name> && claude   # or codex
+   git clone https://github.com/protocolvision/workshop-kitkraft.git && cd workshop-kitkraft && cp -R PARTICIPANT_TEMPLATE participants/<name> && claude   # or codex
    ```
-   Your harness reads `AGENTS.md` / `CLAUDE.md` from the clone root on open, and because it sits inside your folder it asks before touching anything outside it. That is what makes the autolog and the write boundary work. Every later instruction is a file in `instructions/` you paste the same way.
+   Your harness reads `AGENTS.md` / `CLAUDE.md` on open; they tell it to write only inside `participants/<name>/` and to read anywhere. That is what makes the autolog and the write boundary work. Every later instruction is a file in `instructions/` you paste the same way.
 4. Work only in your own folder, `participants/<name>/` (`<name>` = your GitHub username, lowercase), a copy of `PARTICIPANT_TEMPLATE/`:
    - `inventory.md` (Session 1)
    - `kit/` (Session 2)

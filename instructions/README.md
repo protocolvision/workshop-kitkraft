@@ -1,6 +1,6 @@
 # Instructions — paste into your harness
 
-Each file below is written for your harness, not for you. Open your harness inside your folder `participants/<name>/`, paste the whole file, and say "do this". The pins in #kitcraft point here whenever a block is too long for Discord. Every block starts with a settings line (`BRANCH=main`, `NAME=<your GitHub username, lowercase>`, `ROOT=<the clone root>`); fill NAME if your harness does not know it.
+Each file below is written for your harness, not for you. Open your harness at the clone root (the folder that contains `AGENTS.md`), paste the whole file, and say "do this". The pins in #kitcraft point here whenever a block is too long for Discord. Every block starts with a settings line (`BRANCH=main`, `NAME=<your GitHub username, lowercase>`); fill NAME if your harness does not know it.
 
 | When | File | What it does |
 |---|---|---|

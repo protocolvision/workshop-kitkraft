@@ -4,10 +4,10 @@ Human header: fix what the critique found, push v2, and let your harness tell yo
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Async 2. Read `AGENTS.md` first.
-Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>  ROOT=<the clone root: `git rev-parse --show-toplevel`>
-Paths below are from ROOT. You work inside `participants/NAME/`.
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
+You write only inside `participants/NAME/`; read anywhere.
 
-Preconditions: inside the clone (`git remote get-url origin` contains `protocolvision/workshop-kitkraft`) and `pwd` ends in `participants/NAME`; `git pull --rebase origin BRANCH` succeeds; `participants/NAME/LOG.md` has at least one `blocker` line from S2. If it has none, ask the participant for the failures the other agent reported, log them as `blocker` lines, then continue.
+Preconditions: at the clone root (`git rev-parse --show-toplevel` equals `pwd`; `git remote get-url origin` contains `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root); `git pull --rebase origin BRANCH` succeeds; `participants/NAME/LOG.md` has at least one `blocker` line from S2. If it has none, ask the participant for the failures the other agent reported, log them as `blocker` lines, then continue.
 
 Steps:
 1. Read every `blocker` line. For each, decide which file fixes it: a missing input or format → `kit/README.md` Inputs; a missing step, check or tacit rule → `kit/SKILL.md` Steps, Constraints or Do not; a wrong trigger → the `description` line in SKILL.md frontmatter; a missing example → `kit/examples/`. Say your plan in one line per blocker and wait for the participant to say "go" or change it.

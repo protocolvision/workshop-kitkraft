@@ -4,11 +4,11 @@ Human header: your harness reads one triad-mate's kit cold and tries the example
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 2 critique. Read `AGENTS.md` first.
-Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase>  TARGET=<the triad-mate whose kit they read, from the pinned table; ask if unknown>  ROOT=<the clone root: `git rev-parse --show-toplevel`>
-Paths below are from ROOT. You work inside `participants/NAME/`.
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase>  TARGET=<the triad-mate whose kit they read, from the pinned table; ask if unknown>
+You write only inside `participants/NAME/`; read anywhere.
 
 Preconditions:
-1. Inside the clone (`git remote get-url origin` contains `protocolvision/workshop-kitkraft`) and `pwd` ends in `participants/NAME`. Commit and push whatever is in `participants/NAME/kit/` right now, finished or not (`S2: NAME: kit v1`), then `git pull --rebase origin BRANCH` so the other folders are present. Rejected → pull --rebase and push again; rejected three times → continue with the pull and tell the participant to paste their kit into #kitcraft.
+1. At the clone root (`git rev-parse --show-toplevel` equals `pwd`; `git remote get-url origin` contains `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root). Commit and push whatever is in `participants/NAME/kit/` right now, finished or not (`S2: NAME: kit v1`), then `git pull --rebase origin BRANCH` so the other folders are present. Rejected → pull --rebase and push again; rejected three times → continue with the pull and tell the participant to paste their kit into #kitcraft.
 2. Check `participants/TARGET/kit/README.md` exists. If not, tell the participant; they ask the owner (in the room) to push, then you pull again. If it still does not exist after two minutes, run the ABSENT variant below.
 
 Steps:

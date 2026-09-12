@@ -1,16 +1,16 @@
 # S1 agent prompts — facilitator copy (pinned in #kitcraft by Sachin at 16:05 and 16:18 UTC as a link to `instructions/S1-inventory.md`)
 
-Two blocks. Participants paste each into their harness (open inside their folder `participants/<name>/`) and say "do this". Slide 12 = Block 1, slide 13 = Block 2. No interpretation needed from the participant. Pins never carry a block (2000-character cap); they link to the file. Keep this copy and `instructions/S1-inventory.md` identical.
+Two blocks. Participants paste each into their harness (open at the clone root) and say "do this". Slide 12 = Block 1, slide 13 = Block 2. No interpretation needed from the participant. Pins never carry a block (2000-character cap); they link to the file. Keep this copy and `instructions/S1-inventory.md` identical.
 
 ## Block 1 — inventory (slide 12)
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 1. Write their inventory file and push it.
-Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>  ROOT=<the clone root: `git rev-parse --show-toplevel`>
-Paths below are from ROOT. You work inside `participants/NAME/`; run git as `git -C ROOT` or prefix pathspecs with `:/`.
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
+You write only inside `participants/NAME/`; read anywhere.
 
 Preconditions:
-0. Folder. `git remote get-url origin` contains `protocolvision/workshop-kitkraft` (never test the folder name; if it fails: `find ~ -maxdepth 4 -type d -name workshop-kitkraft` — one result: tell the participant its path and "quit me, `cd <path>/participants/NAME`, start me again, paste again"; none: `gh repo clone protocolvision/workshop-kitkraft`, `cd workshop-kitkraft`, continue; two or more: STOP, bring it to 1A; never make a second clone). `pwd` ends in `participants/NAME`; if not, `cd ROOT/participants/NAME` (if the folder is missing, `cp -R ROOT/PARTICIPANT_TEMPLATE ROOT/participants/NAME` first) and tell the participant to open you there from now on.
+0. Clone root. `git rev-parse --show-toplevel` equals `pwd` and `git remote get-url origin` contains `protocolvision/workshop-kitkraft` (never test the folder name). If the remote check fails: `find ~ -maxdepth 4 -type d -name workshop-kitkraft` — one result: tell the participant its path and "quit me, `cd <path>`, start me again, paste again"; none: `gh repo clone protocolvision/workshop-kitkraft`, `cd workshop-kitkraft`, continue; two or more: STOP, bring it to 1A; never make a second clone. If only `pwd` differs, `cd` to the clone root. If `participants/NAME/` is missing, `cp -R PARTICIPANT_TEMPLATE participants/NAME`.
 - `git branch --show-current` prints BRANCH. If not: `git checkout BRANCH`.
 - `gh api user --jq .login` equals NAME (case-insensitively) and `gh api repos/protocolvision/workshop-kitkraft --jq .permissions.push` prints `true`. If either fails: STOP; see Failures.
 - `git pull --rebase origin BRANCH` succeeds. "Unstaged changes" → `git stash`, pull, `git stash pop`. Username/password prompt → type nothing; STOP, "run `gh auth setup-git`, then say continue".
@@ -38,10 +38,10 @@ Report in four lines: the absolute path of the folder you wrote in; the GitHub l
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 1, second prompt. Find the two inventories nearest to theirs.
-Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>  ROOT=<the clone root: `git rev-parse --show-toplevel`>
-Paths below are from ROOT.
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
+You write only inside `participants/NAME/`; read anywhere.
 
-Preconditions: inside the clone (`git remote get-url origin` contains `protocolvision/workshop-kitkraft`; never test the folder name) and inside `participants/NAME/`; `git branch --show-current` prints BRANCH; run `git pull --rebase origin BRANCH` now — other people's folders arrive only through the pull.
+Preconditions: at the clone root (`git rev-parse --show-toplevel` equals `pwd`; `git remote get-url origin` contains `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root); never test the folder name; `git branch --show-current` prints BRANCH; run `git pull --rebase origin BRANCH` now — other people's folders arrive only through the pull.
 
 Steps:
 1. List `participants/*/inventory.md` excluding `participants/NAME/` and every folder whose name starts with `_` (those are examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
