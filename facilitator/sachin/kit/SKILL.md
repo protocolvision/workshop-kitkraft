@@ -4,7 +4,7 @@ description: Turn a discovery-interview transcript or interview notes about an o
 ---
 
 ## When to use
-A user hands you a transcript or notes from a conversation with someone about how their team uses AI, and wants to know what stage they are at and what to do first. Also fits a workshop inventory file (`inventory/<name>.md`): treat it as the transcript.
+A user hands you a transcript or notes from a conversation with someone about how their team uses AI, and wants to know what stage they are at and what to do first. Also fits a workshop inventory file (`participants/<name>/inventory.md`): treat it as the transcript.
 
 ## Steps
 1. Read the whole transcript once before writing anything. Note every sentence that describes a task done with AI, how often, and what the speaker knows that the tool did not.

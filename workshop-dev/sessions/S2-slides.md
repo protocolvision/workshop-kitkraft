@@ -35,7 +35,7 @@ Timestamps are minutes from session start. Presenter on each heading (presenter 
 > Speaker note: answers the question that always comes: for a document kit, the README *is* the interface.
 
 ## Slide 5 — Build the kit (15:00 → 35:00) (presenter: Rafa; comms layer at 30:00: Sachin)
-- Your harness already has `kits/<you>/README.md` from Async 1; paste `kits/README.md`'s block to fill the rest
+- Your harness already has `participants/<you>/kit/README.md` from Async 1; paste `instructions/S2-build.md`'s block to fill the rest
 - `README.md` — job, for whom, inputs, outputs, interface, one example run, not-for
 - `SKILL.md` — `name`, `description` (the trigger line), when to use, steps, constraints, do-nots
 - `examples/` — one input, the output it produced; synthetic or redacted

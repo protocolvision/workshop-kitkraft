@@ -18,8 +18,8 @@ Facilitator sequence: `/stop` → post → move people → Rafa floats the odd r
 ## Post at 15:45 UTC Tue — S3 bridge (40 min)
 
 > **Rooms open — 40 minutes. Back in #kafka at 16:25.**
-> Targets (the kit you did not critique): <one line per room: a → c · b → a · c → b; pairs: both → a facilitator kit>. Anyone may switch to `facilitator/rafa-kit/` or `facilitator/sachin-kit/`; say so in your log.
-> Paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". It creates `bridges/<you>-<target>.md`, asks you for the one thing, works, and stops whenever it needs something not in the repo — get that from the owner next to you, hand it over, it logs the unblock.
+> Targets (the kit you did not critique): <one line per room: a → c · b → a · c → b; pairs: both → a facilitator kit>. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; say so in your log.
+> Paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". It creates `participants/<you>/bridges/<target>.md`, asks you for the one thing, works, and stops whenever it needs something not in the repo — get that from the owner next to you, hand it over, it logs the unblock.
 > Stub targets: requester and owner also use the blocks in `bridges/README.md` (request pushed → owner runs locally → response pushed).
 > At 16:15 say "minute 30" to your harness: it stops building and writes the paragraph in your words. Push by 16:23.
 

@@ -99,7 +99,7 @@ Hu, Botao, and Helena Rong. "Inter-Agent Trust Models: A Comparative Study of Br
 
 ## 4a. Kit standard — primary sources (new in v3)
 
-- **Agent Skills specification** — https://agentskills.io/specification (spec repo: https://github.com/agentskills/agentskills). A skill is a folder with `SKILL.md` (frontmatter `name`, `description`; body instructions), optional `scripts/`, `references/`, `assets/`. Published Dec 18, 2025; adopted by 30+ tools within months. The workshop's `KIT_TEMPLATE/` follows this shape so a kit built Tuesday works in any harness Wednesday.
+- **Agent Skills specification** — https://agentskills.io/specification (spec repo: https://github.com/agentskills/agentskills). A skill is a folder with `SKILL.md` (frontmatter `name`, `description`; body instructions), optional `scripts/`, `references/`, `assets/`. Published Dec 18, 2025; adopted by 30+ tools within months. The workshop's `PARTICIPANT_TEMPLATE/` follows this shape so a kit built Tuesday works in any harness Wednesday.
 - **Anthropic, "The Complete Guide to Building Skills for Claude"** (PDF) — https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf. Practitioner guide; the recurring lesson "if it doesn't trigger, it's the description" belongs in S2.
 - **skills.sh** (Vercel registry) — the marketplace; evidence that skills circulate as Rao's "industrial intermediates."
 

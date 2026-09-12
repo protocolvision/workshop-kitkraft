@@ -5,11 +5,11 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 ## Slide 1 — S3: Bridges (00:00) (presenter: Sachin)
 - Recorder is on; same consent as Monday; breakouts not recorded
 - Kit → Factory → **Bridge**: today your agent uses someone else's kit
-- Output: one file per person, `bridges/<you>-<target>.md`
+- Output: one file per person, `participants/<you>/bridges/<target>.md`
 > Note: one minute. Sachin has posted the rotation table already.
 
 ## Slide 2 — What S2 left in the repo (00:01) (presenter: Rafa)
-- One kit folder per participant in `kits/`; the stubs are reachable only through their owner's agent, by design
+- One `kit/` per participant folder in `participants/`; the stubs are reachable only through their owner's agent, by design
 - Every kit has a `LOG.md` with the failure the critique found; most are description problems
 - Those failures are traces: they tell the next agent where the tacit knowledge was
 - Kits that landed async overnight count; their bridger is the first cold reader
@@ -30,7 +30,7 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 > Note: the ladder is effort, not virtue. Today everyone is on rung one; that is the correct rung.
 
 ## Slide 5 — Example: water-rate PDF → registry row (00:08) (presenter: Rafa)
-- `facilitator/rafa-kit/`: a utility's rate schedule PDF in, one CSV row per tier out, appended to a registry
+- `facilitator/rafa/kit/`: a utility's rate schedule PDF in, one CSV row per tier out, appended to a registry
 - The interface is the row shape: fixed column order, units copied not converted, page reference required
 - Downstream, the registry feeds the water data strategy site; the site never reads a PDF
 - A bridge target today: your agent can ask it to produce a row from a PDF excerpt in your own domain
@@ -58,8 +58,8 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 ## Slide 9 — Exercise: build a bridge (00:14) (presenter: Sachin)
 - Triads, one per room. Rotation: you bridge to the kit you did **not** critique in S2. S2 critique ring A→B→C→A, so S3 bridges go A→C, B→A, C→B
 - `<triad 1>`: A → C's kit · B → A's · C → B's; `<triad 2>`: … (the pinned table). A stub target is bridged through its owner's agent: the transmittal pattern in `bridges/README.md`
-- Anyone may swap their target for `facilitator/rafa-kit/` or `facilitator/sachin-kit/`; nobody critiqued those
-- Task: make your agent use the target kit to do one thing your own kit cannot do alone. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `bridges/<you>-<target>.md`; you are its only writer
+- Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
+- Task: make your agent use the target kit to do one thing your own kit cannot do alone. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log
 - At minute 30 of the breakout, stop building; write "Did it work" and "What a bridge turned out to be", one paragraph each. Push by minute 38
 > Note: Sachin briefs, one minute; the table is already pinned. He opens the rooms at 00:15 sharp.

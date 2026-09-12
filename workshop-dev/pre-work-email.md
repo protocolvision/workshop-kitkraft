@@ -33,30 +33,30 @@ Preconditions (check each; if one fails, do the fix and re-check before going on
 
 Steps:
 1. Are you inside the clone? Yes when `git rev-parse --show-toplevel` succeeds AND `git remote get-url origin` contains `workshop-kitkraft`. Never test the folder name. If yes, go to step 3.
-2. If not: if a folder `workshop-kitkraft` exists in the current folder and its remote matches, `cd` into it; otherwise `gh repo clone protocolvision/workshop-kitkraft` here, then `cd workshop-kitkraft`. Continue in this same run; do not ask the participant to paste again. In the report, tell them to open the harness inside that folder from now on.
-3. `git checkout BRANCH && git pull --rebase origin BRANCH`. Read `AGENTS.md`; follow it for everything below. Artifact: an up-to-date clone.
-4. If `inventory/NAME.md` already exists on BRANCH with three tasks in it: report "already done" with its GitHub link and stop.
+2. If not: if a folder `workshop-kitkraft` exists in the current folder and its remote matches, `cd` into it; otherwise `gh repo clone protocolvision/workshop-kitkraft` here, then `cd workshop-kitkraft`. Continue in this same run; do not ask the participant to paste again.
+3. `git checkout BRANCH && git pull --rebase origin BRANCH`. Your folder: if `participants/NAME/` does not exist, `cp -R PARTICIPANT_TEMPLATE participants/NAME`. Then `cd participants/NAME`; the paths below are from the clone root, so run git as `git -C <root>` or prefix pathspecs with `:/`. Read `AGENTS.md` (in the root); follow it for everything below. In the report, tell the participant to open the harness inside `participants/NAME/` from now on. Artifact: an up-to-date clone and your folder.
+4. If `participants/NAME/inventory.md` already exists on BRANCH with three tasks in it: report "already done" with its GitHub link and stop.
 5. The three recurring tasks. Ask the participant for three recurring tasks from their work that they have done, or tried, with AI. If they have not given them to you in this conversation: STOP and ask, one at a time. Never draft, invent, or complete a task yourself. For each, ask two yes/no questions and record the answers in their words: is it recurring? does doing it well depend on something they know that a stranger would not? (one line why).
 6. Ask: will the kit be public or private? Public = the kit content goes into the public repo, readable by anyone; private = the content stays on this machine and only a stub README goes into the repo. If they do not know yet, record `undecided`; do not choose for them.
-7. Write `inventory/NAME.md` with exactly the sections of `inventory/README.md`: line 1 `# NAME`; `## Recurring tasks` (the three, numbered, both answers each); `## Built / use` (leave empty or `none`); `## Kit` (`Public`, `Private` or `undecided`; the task is chosen in S1); `## Posture` (empty); `## Log` with one line `<ISO-8601 UTC now> | async | NAME | progress | pre-work inventory written by harness`. Do not create any other file. Artifact: that file, 10–25 lines.
-8. `git add inventory/NAME.md && git commit -m "async: NAME: pre-work inventory"`.
-9. `git pull --rebase origin BRANCH && git push origin BRANCH`. Verify: `git fetch origin && git log origin/BRANCH --oneline -1 -- inventory/NAME.md` shows your commit. Artifact: the file on GitHub.
+7. Write `participants/NAME/inventory.md` with exactly the sections of `participants/README.md`: line 1 `# NAME`; `## Recurring tasks` (the three, numbered, both answers each); `## Built / use` (leave empty or `none`); `## Kit` (`Public`, `Private` or `undecided`; the task is chosen in S1); `## Posture` (empty). Then append to `participants/NAME/LOG.md`: `<ISO-8601 UTC now> | async | NAME | progress | pre-work inventory written by harness`. Do not create any other file. Artifact: that file, 10–25 lines, and the log line.
+8. `git add participants/NAME && git commit -m "async: NAME: pre-work inventory"` (the whole folder, the first time).
+9. `git pull --rebase origin BRANCH && git push origin HEAD:BRANCH`. Verify: `git fetch origin && git log origin/BRANCH --oneline -1 -- participants/NAME/inventory.md` shows your commit. Artifact: the file on GitHub.
 10. Append further autolog lines as AGENTS.md says if you do anything else in the repo; one extra commit is fine.
 
 Failures:
 - Push asks for a username/password: type nothing. Tell the participant to run `gh auth setup-git` in a terminal, then retry step 9.
-- Push rejected ("fetch first", "non-fast-forward"): `git pull --rebase origin BRANCH`, then push again; up to 3 tries. If a CONFLICT appears, it can only be in `inventory/NAME.md`: keep both versions' lines, `git add` it, `git rebase --continue`, push.
+- Push rejected ("fetch first", "non-fast-forward"): `git pull --rebase origin BRANCH`, then push again; up to 3 tries. If a CONFLICT appears, it can only be inside `participants/NAME/`: keep both versions' lines, `git add` it, `git rebase --continue`, push.
 - "Permission denied" / 403: invite not accepted, or the wrong account (`gh api user --jq .login`). STOP and report which.
 - Anything else you cannot fix in two attempts: STOP, report the exact error text, and say "bring this to the 1A clinic, Mon Sep 21, 16:30 UTC, #kafka".
 
-Do not: create branches, force-push, edit any file other than `inventory/NAME.md`, edit `README.md`/`AGENTS.md`/other people's files, store or print tokens, or put anything private into the file.
+Do not: create branches, force-push, edit anything outside `participants/NAME/` (`README.md`, `AGENTS.md`, other people's folders), store or print tokens, or put anything private into the file.
 
 Report to the participant in five lines or fewer: the GitHub link of the file, the three tasks as recorded, public/private as recorded, the folder to open the harness in from now on, and anything still needed from them.
 ```
 
 **Block B — if you have no working harness, or no GitHub account (by hand)**
 
-Write `inventory/<name>.md` in exactly this shape and paste it into #kitcraft in one message, first line `inventory/<name>.md`; a facilitator commits it under your name and replies "committed". `<name>` is your GitHub username, lowercase; if you have none yet, the name you registered with, lowercase, no spaces — and create the account at https://github.com/signup when you can (five minutes; a harness cannot do it), then reply to this email with the username so the invite reaches you.
+Write `participants/<name>/inventory.md` in exactly this shape and paste it into #kitcraft in one message, first line `participants/<name>/inventory.md`; a facilitator creates your folder `participants/<name>/` from the template, commits it with a log line under your name, and replies "committed". `<name>` is your GitHub username, lowercase; if you have none yet, the name you registered with, lowercase, no spaces — and create the account at https://github.com/signup when you can (five minutes; a harness cannot do it), then reply to this email with the username so the invite reaches you.
 
 ```
 # <name>
@@ -74,9 +74,6 @@ Public / Private (the task is chosen on Monday).
 
 ## Posture
 <from the survey, or "not taken">
-
-## Log
-<ISO-8601 UTC now> | async | <name> | progress | pre-work inventory written by hand, no harness; pasted in #kitcraft
 ```
 
 The full by-hand path for the two days is `instructions/no-harness.md` in the repo. Come to 1A (Mon 16:30 UTC) if you want the harness working for Monday evening; bring the exact error text.
@@ -95,7 +92,7 @@ Your local time: S1 = 15:30 UTC on Monday Sep 21; convert it here: https://www.t
 
 Discord https://discord.gg/s2WbZBDqM: voice **#kafka**, links and instructions pinned in **#kitcraft**, breakouts in **breakout-1 … breakout-5**. No harness by Monday? Come to 1A at 16:30 UTC; 30 minutes, we fix it together.
 
-**One decision: public or private kit.** Public: your kit lives in the repo above, readable by anyone. Private: the content stays on your own machine; only a stub `kits/<name>/README.md` (job, inputs, outputs, no content) goes into the public repo, and on Tuesday other people's agents reach your kit through you and your agent. There is no private repo. Either way, your inventory file is public: "public" there means task names and one-line descriptions, never client names, numbers or data. Put nothing in a public file you would not put on a public website.
+**One decision: public or private kit.** Public: your kit lives in the repo above, readable by anyone. Private: the content stays on your own machine; only a stub `participants/<name>/kit/README.md` (job, inputs, outputs, no content) goes into the public repo, and on Tuesday other people's agents reach your kit through you and your agent. There is no private repo. Either way, your inventory file is public: "public" there means task names and one-line descriptions, never client names, numbers or data. Put nothing in a public file you would not put on a public website.
 
 **Also:** take the AI postures survey (5 min) https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843 and note your posture; read Durable AI Adoption ch. 1–3 https://ai.protocolized.dev/. Optional: https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory
 

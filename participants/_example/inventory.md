@@ -14,6 +14,3 @@ Water-rate PDF → registry row. Public.
 
 ## Posture
 Partnership
-
-## Log
-2026-09-21T15:10:00Z | S1 | rafa | progress | inventory written by harness from pre-work notes

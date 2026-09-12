@@ -6,9 +6,9 @@ Four pins (Discord caps a message at 2000 characters): the main pin, the consent
 
 **AI Kitcraft 2026 — Kit → Factory → Bridge**
 
-**Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, open your harness *inside* the clone, paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push (or reports "already done" if the pre-work email did it). Every later instruction is a file in `instructions/` you paste the same way. Everything goes straight to `main`: no branches, no PRs.
+**Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, copy `PARTICIPANT_TEMPLATE/` to `participants/<you>/`, open your harness *inside* that folder, paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push (or reports "already done" if the pre-work email did it). Every later instruction is a file in `instructions/` you paste the same way. Everything goes straight to `main`: no branches, no PRs.
 No harness or no GitHub account? `instructions/no-harness.md`: write the file by hand, paste it here, a facilitator commits it under your name.
-Private kit? There is no private repo. Keep the content on your own machine and put only a stub `kits/<you>/README.md` (job, inputs, outputs, no content) in the repo; others bridge to it through your agent.
+Private kit? There is no private repo. Keep the content on your own machine and put only a stub `participants/<you>/kit/README.md` (job, inputs, outputs, no content) in the repo; others bridge to it through your agent.
 
 **Rooms:** voice **#kafka** (plenary) · text **#kitcraft** (this channel: links, instructions, triads) · **#kitcraft-transcripts** (live transcript, read-only) · voice **breakout-1 … breakout-5** (triad rooms).
 
@@ -44,12 +44,12 @@ At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> 
 
 Same rooms. Target = the kit you did **not** critique (the S2 ring reversed: A → C, B → A, C → B). Pairs: both bridge to a facilitator kit.
 <triads: one line per group — **Triad 1 → breakout-1:** a → c's kit · b → a's kit · c → b's kit. Stub targets: "(through <owner>'s agent; both of you also use the blocks in `bridges/README.md`)".>
-Anyone may swap to a facilitator target (`facilitator/rafa-kit/`, `facilitator/sachin-kit/`); say so in your log. One log per bridge, written by the person bridging: `bridges/<you>-<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". Hypothesis for tomorrow, stated at 15:43: *a bridge is a protocol between two factories — the smallest thing both sides agree not to change.*
+Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`); say so in your log. One log per bridge, written by the person bridging: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". Hypothesis for tomorrow, stated at 15:43: *a bridge is a protocol between two factories — the smallest thing both sides agree not to change.*
 
 ## Pre-written posts (not pinned)
 
-**Mon 16:32 UTC, after S1 — Async 1:** Recording off. **Async 1, before 20:00 UTC:** open your harness inside the clone, paste the whole of `instructions/async-1.md`, say "do this". It drafts `kits/<you>/README.md` from your inventory and pushes. Then read the Job line and the field it was least sure about, and rewrite those two by hand. That is all. S2 at 20:00 UTC; triads pinned above. 1A now in #kafka for anyone whose push did not work.
+**Mon 16:32 UTC, after S1 — Async 1:** Recording off. **Async 1, before 20:00 UTC:** open your harness inside `participants/<you>/`, paste the whole of `instructions/async-1.md`, say "do this". It drafts `participants/<you>/kit/README.md` from your inventory and pushes. Then read the Job line and the field it was least sure about, and rewrite those two by hand. That is all. S2 at 20:00 UTC; triads pinned above. 1A now in #kafka for anyone whose push did not work.
 
-**Mon 20:58 UTC, after S2 — Async 2:** Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your triad logged, proposes one fix per blocker, waits for your "go", pushes v2. Async readers: push your kit first (`kits/README.md` block); your reader's harness posts the report here; run async-2 when it appears. S3 triads pinned at 09:00 UTC.
+**Mon 20:58 UTC, after S2 — Async 2:** Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your triad logged, proposes one fix per blocker, waits for your "go", pushes v2. Async readers: push your kit first (`instructions/S2-build.md` block); your reader's harness posts the report here; run async-2 when it appears. S3 triads pinned at 09:00 UTC.
 
 **Tue 16:29 UTC, after S3 — Async 3:** Recording off. Finish your bridge log and push by 20:00 UTC. Optional hard mode: rerun the bridge with no human chat and log it as a second section in the same file. S4 at 20:00 UTC: 90 seconds per bridge, then the room's definition against the hypothesis.

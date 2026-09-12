@@ -1,13 +1,13 @@
 # No working harness, or no GitHub account — the by-hand path
 
-For anyone whose harness is not working by Monday, or who has no GitHub account. Nothing here needs a terminal. A facilitator commits your files under your name; the autolog line says "written by hand".
+For anyone whose harness is not working by Monday, or who has no GitHub account. Nothing here needs a terminal. A facilitator commits your files under your name into `participants/<name>/`; the log line says "written by hand".
 
 `<name>` is your GitHub username, lowercase. If you have no GitHub account, use the name you registered with, lowercase, no spaces, and create the account when you can (https://github.com/signup, five minutes; a harness cannot do it for you). Reply to the pre-work email with the username so the invite reaches you.
 
 ## Before S1 — your inventory
 
 1. Open a plain-text editor (TextEdit in plain-text mode, Notepad, any notes app). If you write it in Word, paste it into #kitcraft as text, not as an attachment.
-2. Write `inventory/<name>.md` in exactly this shape (the schema in `inventory/README.md`):
+2. Write `participants/<name>/inventory.md` in exactly this shape (the schema in `participants/README.md`):
 
 ```
 # <name>
@@ -25,12 +25,9 @@ For anyone whose harness is not working by Monday, or who has no GitHub account.
 
 ## Posture
 <Partnership / Hypervigilance / Overreliance / Compliance, or "not taken">
-
-## Log
-<ISO-8601 UTC now> | S1 | <name> | progress | inventory written by hand, no harness; pasted in #kitcraft
 ```
 
-3. Paste the whole thing into #kitcraft, in one message, with the first line `inventory/<name>.md`. A facilitator commits it and replies "committed". Task names and one-line descriptions are fine; no client names, numbers, credentials, or NDA material.
+3. Paste the whole thing into #kitcraft, in one message, with the first line `participants/<name>/inventory.md`. A facilitator creates your folder from the template, commits it, adds the line `<ISO-8601 UTC now> | S1 | <name> | progress | inventory written by hand, no harness; pasted in #kitcraft` to your `LOG.md`, and replies "committed". Task names and one-line descriptions are fine; no client names, numbers, credentials, or NDA material.
 
 ## S1, second prompt
 
@@ -38,11 +35,11 @@ Ask a triad-mate in voice which two inventories their agent found nearest to you
 
 ## S2 — your kit
 
-Same method. From `KIT_TEMPLATE/` (reading the template on GitHub is fine) write by hand: `kits/<name>/README.md` (every field), `kits/<name>/SKILL.md` (frontmatter `name` and `description`, then When to use, Steps, Constraints, Do not), and one example input and its output. Paste each into #kitcraft with the file path as the first line. Private kit: paste only the README stub. A facilitator commits them before the critique starts.
+Same method. From `PARTICIPANT_TEMPLATE/kit/` (reading the template on GitHub is fine) write by hand: `participants/<name>/kit/README.md` (every field), `participants/<name>/kit/SKILL.md` (frontmatter `name` and `description`, then When to use, Steps, Constraints, Do not), and one example input and its output. Paste each into #kitcraft with the file path as the first line. Private kit: paste only the README stub. A facilitator commits them before the critique starts.
 
 ## S2 critique and S3 bridge
 
-Your triad-mates' harnesses read your kit from the repo as usual. For your own turn, sit next to a triad-mate: they paste the block into their harness with your target and you take the report. Blocker lines (S2) and your bridge log (S3, in the shape of `bridges/TEMPLATE.md`) go into #kitcraft the same way; a facilitator commits them under your name.
+Your triad-mates' harnesses read your kit from the repo as usual. For your own turn, sit next to a triad-mate: they paste the block into their harness with your target and you take the report. Blocker lines (S2) and your bridge file (S3, in the shape of `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md`) go into #kitcraft the same way; a facilitator commits them under your name.
 
 ## 1A
 

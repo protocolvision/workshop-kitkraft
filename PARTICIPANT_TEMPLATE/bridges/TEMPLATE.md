@@ -16,5 +16,4 @@ Interface used: (file handoff / static page / MCP / other)
 
 ## What a bridge turned out to be (one paragraph)
 
-## Log
-<timestamp> | S3 | <participant> | <type> | <one line>
+Log lines for this bridge go to `../LOG.md` (session S3, type progress / unblock / blocker / decision).

@@ -61,7 +61,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 - Now an open standard: Agent Skills (Anthropic, Dec 2025) stewarded with AGENTS.md under the Linux Foundation's Agentic AI Foundation
 - A kit is encoded domain knowledge, not code. If it does not trigger, the fix is the description
 - Kits now: you work with archival selves of others through a model that changes. Paper fixes words; LLMs fix the archive, roughly, but not the reader
-> Note: show `KIT_TEMPLATE/` on screen for 20 seconds; that is the whole spec.
+> Note: show `PARTICIPANT_TEMPLATE/` on screen for 20 seconds; that is the whole spec.
 
 ## Slide 9 — Traces (00:27) (presenter: Rafa)
 - Heylighen: indirect coordination in which the trace an action leaves in a medium stimulates the next action; no plan, no message, no simultaneous presence
@@ -86,7 +86,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 > Note: Sachin's section (precommodification and farmsteading are his essays). End on "public records and interfaces"; hand back to Rafa for the exercise.
 
 ## Slide 12 — Exercise: your inventory (00:35) (presenter: Rafa)
-- Paste **Block 1** (`instructions/S1-inventory.md`; Sachin pins the link now) into your harness, inside the clone, and say "do this". It writes `inventory/<name>.md`, commits, pushes, and reports
+- Paste **Block 1** (`instructions/S1-inventory.md`; Sachin pins the link now) into your harness, inside your folder `participants/<name>/`, and say "do this". It writes `participants/<name>/inventory.md`, commits, pushes, and reports
 - Private means: content stays on your machine; only a stub README goes in the repo. There is no private repo
 - 12 minutes. Push failed after three tries? Post the error the harness printed in #kitcraft; Sachin commits under your name
 - Rule: you read other people's inventories only through your agent, never in the browser
@@ -94,7 +94,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 > Note: anyone without a harness writes the file by hand (`instructions/no-harness.md`), pastes it in #kitcraft, and Sachin commits it under their name; they get the autolog at 1A. Sachin checks `main` before committing any pasted file so a hand-made file and a web-editor commit do not collide.
 
 ## Slide 13 — Second prompt: the two nearest (00:48) (presenter: Rafa)
-- Paste **Block 2** (same file) and say "do this". It pulls, reads every inventory, names the two nearest, and checks your `## Log` line
+- Paste **Block 2** (same file) and say "do this". It pulls, reads every inventory, names the two nearest, and checks your `LOG.md` line
 - Note the two names; that is the seed for the triads' work tomorrow
 - If it reports no log line on GitHub, say so in #kitcraft
 > Note: before Block 2, Sachin posts how many inventories are on `main` so nobody re-pulls needlessly. At 00:52 his agent checks every inventory for a Log line and posts the list; missing lines go to 1A.
@@ -107,7 +107,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 > Note: do not correct anyone's quadrant.
 
 ## Slide 15 — Async 1 and what is next (00:56) (presenter: Sachin)
-- Async 1 is three hours (17:00–20:00 UTC), not an evening: paste `instructions/async-1.md`; your harness copies `KIT_TEMPLATE/` to `kits/<my-name>/` and fills `README.md` only — what job, for whom, what goes in, what comes out. Push. Nothing else
+- Async 1 is three hours (17:00–20:00 UTC), not an evening: paste `instructions/async-1.md`; your harness fills `participants/<my-name>/kit/README.md` only — what job, for whom, what goes in, what comes out. Push. Nothing else
 - If you are going to 1A, do this after 1A
 - 1A now, 16:30–17:00 UTC, here in #kafka: install, clone, one log line, one push
 - S2 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): you build the kit. Anyone async for S2: the async post in #kitcraft

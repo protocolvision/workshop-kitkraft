@@ -31,9 +31,9 @@ After (Sachin, by 21:30): `transcripts/S4/transcript.md`, `summary.md`, `awarene
 
 ## Synthesis procedure (what Sachin's agent reads, in order)
 
-1. `bridges/*.md` (every bridge log; `TEMPLATE.md`, `README.md` excluded): *What a human had to supply*, *Request / Response* (stub bridges), *Did it work*, *What a bridge turned out to be*; the `## Log` lines, counting `unblock`.
-2. `kits/*/LOG.md` and `facilitator/*/LOG.md`: all lines; S2 `blocker` lines matched against async `progress` lines (fixed / not fixed).
-3. `inventory/*.md` `## Log` sections (S1 lines; the autolog-fired check).
+1. `participants/*/bridges/*.md` (every bridge file): *What a human had to supply*, *Request / Response* (stub bridges), *Did it work*, *What a bridge turned out to be*.
+2. `participants/*/LOG.md` and `facilitator/*/LOG.md`: all lines — S1 lines (the autolog-fired check), S2 `blocker` lines matched against async `progress` lines (fixed / not fixed), S3 `unblock` lines counted per bridge.
+3. `participants/*/inventory.md`: the kit choice and public/private per person, for the numbers.
 4. `transcripts/S1/`, `S2/`, `S3/`: `awareness-check.md` (tallies), `summary.md`; `transcript.md` only for the S3 hypothesis statement and the S2 "got wrong" round.
 5. At 20:24: the S4 live-channel scratch file (uncommitted), for the debrief reports.
 6. The #kitcraft channel: async participants' reports and final-round answers.

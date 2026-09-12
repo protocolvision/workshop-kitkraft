@@ -4,18 +4,18 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the presenter split
 
 | Clock (UTC) | Min | Presenter | Lead (Rafa) | Co-facilitator (Sachin) | Participants | Artifact expected | Recorder |
 |---|---|---|---|---|---|---|---|
-| 15:15 | −15 | — | Pulls `main`; picks two blocker lines from `kits/*/LOG.md` for slide 2 | Posts the S3 rotation table and the bridge post (`../breakout-instructions.md`) in #kitcraft; confirms the rotation against the real S2 critique assignment; pins the hypothesis text | — | Pinned rotation + instructions | — |
+| 15:15 | −15 | — | Pulls `main`; picks two blocker lines from `participants/*/LOG.md` for slide 2 | Posts the S3 rotation table and the bridge post (`../breakout-instructions.md`) in #kitcraft; confirms the rotation against the real S2 critique assignment; pins the hypothesis text | — | Pinned rotation + instructions | — |
 | 15:28 | −2 | — | "Recording starts now" | `/record channel:#kafka name:KITCRAFT-S3` | — | — | `/record channel:#kafka name:KITCRAFT-S3` |
 | 15:30 | 00 | Sachin | Listens | Presents slide 1 (opener); posts session order | Listen | — | on |
 | 15:31 | 01 | Rafa | Slide 2: shows two anonymised blocker lines | — | Listen | — | on |
 | 15:32 | 02 | Rafa | Slide 3: F2F | Posts the F2F essay link | Listen | — | on |
 | 15:35 | 05 | Rafa | Slide 4: ladder; answers the S2 interface question | Posts standards table link (resources §4) | Listen | — | on |
-| 15:38 | 08 | Rafa | Slide 5: rafa-kit on screen, `examples/output.csv` | Posts `facilitator/rafa-kit/` path | Listen | — | on |
+| 15:38 | 08 | Rafa | Slide 5: Rafa's kit on screen, `examples/output.csv` | Posts `facilitator/rafa/kit/` path | Listen | — | on |
 | 15:40 | 10 | Rafa | Slide 6: Prime Radiant, example only | — | Listen | — | on |
 | 15:41 | 11 | Sachin | Listens; times it | Presents slide 7 (trust, two minutes); posts the CSA note link for later reading | Listen | — | on |
 | 15:43 | 13 | Rafa | Slide 8: says the hypothesis twice | Pins the hypothesis (already prepared) | Write it down | Hypothesis pinned | on |
-| 15:44 | 14 | Sachin (rooms) | Listens | Presents slide 9, one minute, points at the pinned table and block; posts "Rooms open — breakout-1: … breakout-2: … Back at 16:25" | Note target; copy `bridges/TEMPLATE.md` | — | on |
-| 15:45 | 15 | Sachin (rooms) | Moves to breakout-1 | `/stop` (channel empties; avoids a dangling auto-stop); moves people to rooms; goes to the highest-numbered room | Move; start agents | `bridges/<you>-<target>.md` created, header filled | `/stop` |
+| 15:44 | 14 | Sachin (rooms) | Listens | Presents slide 9, one minute, points at the pinned table and block; posts "Rooms open — breakout-1: … breakout-2: … Back at 16:25" | Note target; copy `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md` | — | on |
+| 15:45 | 15 | Sachin (rooms) | Moves to breakout-1 | `/stop` (channel empties; avoids a dangling auto-stop); moves people to rooms; goes to the highest-numbered room | Move; start agents | `participants/<you>/bridges/<target>.md` created, header filled | `/stop` |
 | 15:55 | 25 | Sachin (rooms) | Swaps rooms | Swaps rooms; watches #kitcraft for stuck rooms | Working; unblocks logged | First `unblock` lines | off |
 | 16:05 | 35 | Sachin (rooms) | Back in #kafka; reads pushed bridge logs and unblock lines | Floats between rooms | Working | Progress lines in bridge logs | off |
 | 16:15 | 45 | Sachin (rooms) | — | Posts "minute 30: stop building, write the two paragraphs" in every room and #kitcraft | Write "Did it work" and "What a bridge turned out to be" | Paragraphs in every log | off |
@@ -23,11 +23,11 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the presenter split
 | 16:25 | 55 | Rafa | Slide 10: reconvene; one line each, 25 s | Moves everyone back to #kafka; re-runs `/record channel:#kafka name:KITCRAFT-S3` (or `KITCRAFT-S3B`, see runbook); waits for the first live line; posts speaking order | 25 s each | One-liners in transcript | `/record channel:#kafka name:KITCRAFT-S3` |
 | 16:28 | 58 | Rafa / Sachin | Slide 11: awareness check; Async 3; S4 time | His agent tallies quadrants; posts Async 3 and the hard-mode option | One quadrant each | Tally in #kitcraft | on |
 | 16:29 | 59 | Sachin | Closes | `/stop`; copies both transcript parts into `transcripts/S3/`; commits `S3: sachin: transcript + summary` | Leave | `transcripts/S3/` (two parts) | `/stop` |
-| 16:35 | 65 | Sachin | Reads all bridge logs; drafts the S4 comparison of definitions vs. hypothesis (Sachin's agent does the synthesis; this is the lead's read) | Checks every `bridges/*.md` has a paragraph and at least one log line; pings anyone missing | Async 3 | Every bridge log complete by 20:00 | — |
+| 16:35 | 65 | Sachin | Reads all bridge logs; drafts the S4 comparison of definitions vs. hypothesis (Sachin's agent does the synthesis; this is the lead's read) | Checks every `participants/*/bridges/*.md` has a paragraph and at least one log line; pings anyone missing | Async 3 | Every bridge log complete by 20:00 | — |
 
 Contingencies
 - Recorder: two segments. Whether a second `/record` with the same name appends or overwrites is settled at the Sep 17 tech rehearsal (`recorder-runbook.md`); if it overwrites, the second segment is `KITCRAFT-S3B`, added to `RECORD_MEETING_NAMES` on Sep 17.
-- A stub target: its triad bridges through the owner's agent (transmittal blocks in `bridges/README.md`). If the owner is not in the room, the bridger swaps to `facilitator/rafa-kit/` and logs the swap as a `decision` line.
+- A stub target: its triad bridges through the owner's agent (transmittal blocks in `bridges/README.md`). If the owner is not in the room, the bridger swaps to `facilitator/rafa/kit/` and logs the swap as a `decision` line.
 - If a triad is a pair (a drop-out), the two bridge to each other's kits only if neither critiqued the other's in S2; otherwise both use facilitator kits.
 - A room stuck for 5 minutes gets a facilitator; the facilitator supplies the missing thing and the participant logs it as `unblock`. Facilitators do not touch the participant's files.
 - Two people editing the same bridge file is a rebase conflict; that is why each log has one writer. If a shared log appears anyway, Sachin splits it into two files after the session and notes it in the facilitator notes.
