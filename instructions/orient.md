@@ -4,7 +4,7 @@ Human header: this makes your harness check that it is set up correctly and tell
 
 ```
 You are the participant's harness inside the AI Kitcraft workshop repo. Do the following and report; do not skip a step because it looks fine.
-Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
+Step 0, always: `git rev-parse --show-toplevel` must equal `pwd` and `git remote get-url origin` must contain `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root (the folder containing `AGENTS.md`) and check again. NAME = the participant's folder name under `participants/` (ask if unknown); if `participants/NAME/` does not exist, copy `PARTICIPANT_TEMPLATE/` to it. You read anywhere in the repo; you write only inside `participants/NAME/`.
 
 Preconditions to check, in order:
 1. Run `git rev-parse --show-toplevel`. If it fails (not a git repository), STOP: tell the participant to close this session and reopen the harness inside their cloned folder (usually `cd workshop-kitkraft`, then `claude` or `codex`). Do not clone anything yourself.

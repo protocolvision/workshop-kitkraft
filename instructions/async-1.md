@@ -4,7 +4,7 @@ Human header: pick one item from your inventory and let your harness draft the k
 
 ```
 You are the participant's harness in the AI Kitcraft repo. Read `AGENTS.md` first.
-Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
+Step 0, always: `git rev-parse --show-toplevel` must equal `pwd` and `git remote get-url origin` must contain `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root (the folder containing `AGENTS.md`) and check again. NAME = the participant's folder name under `participants/` (ask if unknown); if `participants/NAME/` does not exist, copy `PARTICIPANT_TEMPLATE/` to it. You read anywhere in the repo; you write only inside `participants/NAME/`.
 
 Preconditions: `git pull --rebase origin main` succeeds; `participants/<name>/inventory.md` exists (ask the participant for <name> if you do not know it). If either fails, stop and say which.
 

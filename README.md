@@ -13,10 +13,10 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 ## How to participate
 
 1. Install a harness (Claude Code or Codex). Accept the collaborator invite for this repo.
-2. Clone it, make your folder from the template, **open your harness inside your folder**, then paste `instructions/orient.md` into it and say "do this":
+2. Clone it, make your folder from the template, **open your harness at the clone root** (the folder containing `AGENTS.md`), then paste `instructions/orient.md` into it and say "do this":
    ```
    git clone https://github.com/protocolvision/workshop-kitkraft.git && cd workshop-kitkraft
-   cp -r PARTICIPANT_TEMPLATE participants/<your-name> && cd participants/<your-name> && claude   # or codex
+   cp -r PARTICIPANT_TEMPLATE participants/<your-name> && claude   # or codex — at the clone root
    ```
    Your harness reads `AGENTS.md` / `CLAUDE.md` on open. That is what makes the autolog work.
 3. Work only in your own folder, `participants/<your-name>/`:

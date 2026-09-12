@@ -4,11 +4,11 @@ Human header: your harness reads one triad-mate's kit cold and tries the example
 
 ```
 You are the participant's harness in the AI Kitcraft repo, in the Session 2 critique. Read `AGENTS.md` first. The participant will tell you <name> (theirs) and <target> (the triad-mate whose kit they read).
-Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
+Step 0, always: `git rev-parse --show-toplevel` must equal `pwd` and `git remote get-url origin` must contain `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root (the folder containing `AGENTS.md`) and check again. NAME = the participant's folder name under `participants/` (ask if unknown); if `participants/NAME/` does not exist, copy `PARTICIPANT_TEMPLATE/` to it. You read anywhere in the repo; you write only inside `participants/NAME/`.
 
 Preconditions:
 1. Commit and push whatever is in `participants/<name>/kit/` right now, finished or not (`S2: <name>: kit v1`), then `git pull --rebase origin main` so the other kits are present. If the push is rejected, pull --rebase and push again; if it is rejected twice, continue with the pull and tell the participant to paste their kit into #kitcraft.
-2. Check `participants/<target>/kit/README.md` exists. If it does not, tell the participant; they ask the owner (in the room) to push, then you pull again. If it still does not exist after two minutes, run the ABSENT variant below.
+2. Check `participants/<target>/kit/README.md` exists and `participants/<target>/WITHDREW.md` does not (a withdrawn folder is never a target). If it does not, tell the participant; they ask the owner (in the room) to push, then you pull again. If it still does not exist after two minutes, run the ABSENT variant below.
 
 Steps:
 3. Read `participants/<target>/kit/README.md`, then `participants/<target>/kit/SKILL.md`, then list `participants/<target>/kit/examples/`. Read nothing else; ask the participant nothing about the kit.

@@ -7,4 +7,4 @@ participants/<name>/
   bridges/<target>.md Session 3 — one log per bridge you build; copy bridges/TEMPLATE.md
   LOG.md              one append-only log for everything you do here, written by your harness
 ```
-Open your harness inside `participants/<name>/`. It reads the repo's `AGENTS.md` and edits nothing outside your folder. Private kit: keep `kit/` content on your machine; leave `kit/README.md` as a stub.
+Open your harness at the clone root (the folder containing `AGENTS.md`), not in here. It reads `AGENTS.md`, writes only inside `participants/<name>/`, and reads anywhere. Private kit: keep `kit/` content on your machine; leave `kit/README.md` as a stub.

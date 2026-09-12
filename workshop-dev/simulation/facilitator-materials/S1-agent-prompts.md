@@ -6,7 +6,7 @@ Two blocks. Participants paste each into their harness (open inside the clone) a
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 1. Write their inventory file and push it. Settings: BRANCH=<from `git branch --show-current`>, NAME=<Discord handle without @, lowercase; ask if unknown>.
-Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
+Step 0, always: `git rev-parse --show-toplevel` must equal `pwd` and `git remote get-url origin` must contain `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root (the folder containing `AGENTS.md`) and check again. NAME = the participant's folder name under `participants/` (ask if unknown); if `participants/NAME/` does not exist, copy `PARTICIPANT_TEMPLATE/` to it. You read anywhere in the repo; you write only inside `participants/NAME/`.
 
 Preconditions:
 - You are inside the clone: `git remote get-url origin` contains `protocolvision/workshop-kitkraft` (the folder name does not matter). If the command fails: stop; tell the participant the absolute path of their clone if you can find one (`find ~ -maxdepth 3 -type d -name 'workshop-kitkraft*'`), and to open you there and paste again. If two clones exist, the one whose `git status -sb` is not behind and has their commits is the real one; do not clone again.
@@ -30,10 +30,10 @@ Report in three lines: file link on GitHub, the kit chosen and public/private, a
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 1, second prompt. Find the two inventories nearest to theirs. Settings as in Block 1.
-Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
+Step 0, always: `git rev-parse --show-toplevel` must equal `pwd` and `git remote get-url origin` must contain `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root (the folder containing `AGENTS.md`) and check again. NAME = the participant's folder name under `participants/` (ask if unknown); if `participants/NAME/` does not exist, copy `PARTICIPANT_TEMPLATE/` to it. You read anywhere in the repo; you write only inside `participants/NAME/`.
 Preconditions: inside the clone; `git pull --rebase origin BRANCH` done (others' files arrive only through the pull).
 Steps:
-1. List `participants/*/inventory.md` excluding `participants/NAME/` and any folder whose name starts with `_` (examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
+1. List `participants/*/inventory.md` excluding `participants/NAME/`, any folder whose name starts with `_`, and any folder containing `WITHDREW.md` (examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
 2. Read each. Compare against `participants/NAME/inventory.md` on: the kind of recurring task, the input type (documents, transcripts, spreadsheets, calendars), and the output type.
 3. Name the two nearest, one line each: `<name> — <why>`.
 4. Confirm `participants/NAME/LOG.md` has at least one line under its header; if not, append there `<ISO-8601 UTC now> | S1 | NAME | progress | inventory written by harness` now, commit `S1: NAME: log line`, pull --rebase, push.
