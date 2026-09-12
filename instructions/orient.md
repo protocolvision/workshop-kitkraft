@@ -8,7 +8,7 @@ Settings: REPO=https://github.com/protocolvision/workshop-kitkraft  BRANCH=main 
 You write only inside `participants/NAME/`; read anywhere.
 
 Preconditions:
-1. `git --version` and `gh --version` print versions. If either fails: STOP; tell the participant to do Item 0 of the pre-work email (install git and gh); a harness cannot install them.
+1. `git --version` and `gh --version` print versions. If either fails: STOP; tell the participant to do Item 0 of the pre-work email (install git and gh); a harness cannot install them. If any verify command here fails, see `workshop-dev/sessions/setup-checklist.md`.
 2. `gh api user --jq .login` prints NAME (compare case-insensitively) and `gh api repos/protocolvision/workshop-kitkraft --jq .permissions.push` prints `true`. If not: STOP; tell the participant "run `gh auth switch --user NAME` (or `gh auth login` as NAME) in a terminal, then say continue". When it matches, run `gh auth setup-git` (you may run this yourself; it asks for nothing).
 
 Steps:

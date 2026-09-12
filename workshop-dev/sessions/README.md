@@ -12,6 +12,7 @@ What the facilitators run from. Participants never need these; the blocks they p
 | `S3-agent-prompts.md` | facilitator copy of the S3 block (`instructions/S3-bridge.md`) |
 | `S4-slides.md` · `S4-run-of-show.md` | Recap and showcase, Tue 20:00–21:00 UTC: debrief, showcase, `SYNTHESIS.md` read-back, hypothesis verdict rule, awareness-profile tally |
 | `consent-notice.md` | the 45-second read-aloud (Sachin, top of S1) and the full pinned notice, with the block for the harness |
+| `setup-checklist.md` | what a participant's machine needs (git, gh, one harness), why, install per system, verify commands, and a "Verify only" harness block |
 | `recorder-runbook.md` | OpenRecapper: commands, per-session start/stop times, the sequence around a breakout, where transcripts go, what to confirm on Sep 17 |
 
 ## Presenter split

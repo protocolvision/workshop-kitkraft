@@ -13,7 +13,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 ## How to participate
 
 1. Install a harness: Claude Code (needs a Claude Pro or Max subscription; https://docs.claude.com/en/docs/claude-code) or Codex (needs a ChatGPT plan; https://developers.openai.com/codex/cli). Accept the collaborator invite for this repo (GitHub notifications or the invite email).
-2. Install `git` and `gh` (the GitHub CLI), then run `gh auth login` (GitHub.com, HTTPS, browser) and `gh auth setup-git`. This is the step that lets a push work without a password prompt; a harness cannot do the browser login for you.
+2. Install `git` and `gh` (the GitHub CLI), then run `gh auth login` (GitHub.com, HTTPS, browser) and `gh auth setup-git`. This is the step that lets a push work without a password prompt; a harness cannot do the browser login for you. What to install, why, and how to verify, per system: `workshop-dev/sessions/setup-checklist.md`.
 3. Clone the repo, copy the template to your own folder, **open your harness at the clone root** (the folder that contains `AGENTS.md`), paste `instructions/orient.md` into it and say "do this":
    ```
    git clone https://github.com/protocolvision/workshop-kitkraft.git && cd workshop-kitkraft && cp -R PARTICIPANT_TEMPLATE participants/<name> && claude   # or codex

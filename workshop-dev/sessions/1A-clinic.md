@@ -3,6 +3,7 @@
 Lead: Rafa. Sachin in #kitcraft for pushes. Expected: anyone without a push by the Sep 19 check, anyone whose harness opened outside the clone (no autolog), anyone without a harness, anyone who does not trust the push. Exit, per person: the harness reports all seven checks below as passed. Everything after "Before the harness exists" is one pasteable block; the participant pastes it and says "do this", Rafa reads the report.
 
 ## Before the harness exists (human, 00:00–00:08)
+Before the checks, the machine needs these: git, the GitHub CLI `gh`, and one harness — what to install, why, and how to verify each is in `setup-checklist.md` (its "Verify only" block is the quick test).
 - Say the failed step in one sentence; Sachin opens a #kitcraft thread per person for pasted errors.
 - No harness: Claude Code `curl -fsSL https://claude.ai/install.sh | bash`; Codex `npm i -g @openai/codex`. The vendor page wins if it disagrees. Org-managed laptop with no install rights: personal laptop, or the by-hand path (`instructions/no-harness.md`).
 - Open a terminal in the home folder and start the harness (`claude` or `codex`). Then paste the block. Rafa says commands; participants type. Nobody types on someone else's machine.

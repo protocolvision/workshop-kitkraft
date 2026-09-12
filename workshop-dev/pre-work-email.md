@@ -11,6 +11,8 @@ You are in AI Kitcraft (Sep 21–22, online). Two things before Monday. **Item 0
 
 **Item 0 — before Friday Sep 18, by hand (needs your computer password; a harness cannot do this)**
 
+Three must-haves: `git`, the GitHub CLI `gh`, and one harness (Claude Code or Codex). The full checklist — what each is for, the install command per system, and how to verify — is https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/setup-checklist.md. In short:
+
 1. Install `git` and `gh` (the GitHub command-line tool).
    - macOS: open Terminal, run `xcode-select --install` (installs git; a window appears, accept it, wait) and then `brew install gh` — or, if you have no Homebrew, the gh installer at https://cli.github.com/.
    - Windows: Git for Windows https://git-scm.com/download/win, then the gh installer at https://cli.github.com/.
