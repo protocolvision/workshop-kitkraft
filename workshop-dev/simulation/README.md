@@ -5,7 +5,7 @@ An agent-run rehearsal of the whole workshop. The kits, inventories and bridges 
 ## Setup
 
 - 6 fictional participants (composites from public research on the Symposium audience; no real people), in two triads.
-- 2 facilitator agents playing Rafa (lead) and Sachin (co-facilitator).
+- 2 facilitator agents playing Rafa (lead) and Sachin (co-facilitator). From S2 on: Rafa agent runs room/recorder/channel, Sachin agent presents theory.
 - Each participant agent works in its own clone and pushes to this branch, so git contention is tested for real.
 - Discord is simulated as files under `discord/`: `kitcraft.md` (text channel, pins first), `kafka/S<n>.md` (OpenRecapper transcripts, produced by simulated `/record` … `/stop`), `breakouts/breakout-<1|2>-S<n>.md`.
 - No live external services are called (C3PO, Discord, OpenRecapper are simulated).

@@ -11,4 +11,4 @@ Times: S1 Mon <hh:mm UTC / Berlin / Pacific> · S2 / S3 / S4 Tue <…>
 **Pairs for S2:** (posted Mon night)
 **Pairs for S3:** (rotated one step)
 
-Stuck on theory? @C3PO. Stuck on setup? Session 1A Mon, or ping a facilitator here.
+Rafa runs this channel, the rooms and the recorder. Stuck on setup? Session 1A Mon, or ping @rafa here. Theory → @sachin or @C3PO.

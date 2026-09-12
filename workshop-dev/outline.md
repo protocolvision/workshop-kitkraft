@@ -1,7 +1,7 @@
 # AI Kitcraft — Workshop Outline v7
 
 Protocol Symposium 2026 · New Nature · Sep 21–22 (workshop days) · online
-Facilitators: Rafa (lead), Sachin Benny (co-facilitator). Roles swap per session: the lead runs the activity; the co-facilitator owns chat, breakouts, and the shared repo.
+Facilitators: Rafa (lead: ops, coordination, exercises), Sachin Benny (co-facilitator: theory). From S2 on: Rafa opens every session with its first minute (welcome, consent, logistics) and owns #kitcraft, pins, breakouts, recorder and repo; Sachin opens the content right after and presents every conceptual segment (decision by Rafa, Sep 12).
 Format: S1 90 min, S2–S4 60 min, async work between sessions. Planned for 10–15 participants.
 Venue: Protocol Institute Discord (https://discord.gg/s2WbZBDqM), voice channel **#kafka** for plenary, breakout voice rooms for pair work, text channel **#kitcraft** for links and **#kitcraft-transcripts** for live transcript.
 Spine: **Kit → Factory → Bridge**
@@ -127,7 +127,7 @@ Each pair writes `bridges/<a>-<b>.md`: target, what the agent needed, what it fo
 
 **Recap (10)** Kit → Factory → Bridge, using the room's own artifacts as the slides.
 
-**Debrief round-robin (25)** Each pair: 90 seconds on their bridge log. OpenRecapper records #kafka; the co-facilitator's agent synthesizes the live transcript plus every `LOG.md` and bridge log in the repo into `SYNTHESIS.md`, read back in the last five minutes and corrected by the room.
+**Debrief round-robin (25)** Each pair: 90 seconds on their bridge log. OpenRecapper records #kafka; Sachin's agent synthesizes the live transcript plus every `LOG.md` and bridge log in the repo into `SYNTHESIS.md`, read back in the last five minutes and corrected by the room.
 
 **Showcase (15)** Two or three bridges that worked, one that did not.
 
@@ -222,7 +222,7 @@ Setup checklist (owner: whoever runs PI's OpenRecapper instance):
 - `/record-access grant` to both facilitators.
 - Live transcript text channel = **#kitcraft-transcripts**.
 - Either `/schedule add` for the four sessions (Mon/Tue, times TBD, timezone set) or manual `/record` at start; manual is safer given breakouts empty #kafka and would trigger auto-stop — **re-run `/record` when the room reconvenes after breakouts.**
-- Relay configured for the AI summary, `SUMMARY_GROUP_NAME=AI Kitcraft workshop`; if no relay, the co-facilitator's agent summarizes from the transcript.
+- Relay configured for the AI summary, `SUMMARY_GROUP_NAME=AI Kitcraft workshop`; if no relay, Rafa's agent summarizes from the transcript.
 - After each `/stop`, copy transcript + summary into `workshop-dev/transcripts/S<n>/` in the repo.
 - Retention: recordings pruned per default 7 days; transcripts kept; state this in the consent notice.
 

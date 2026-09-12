@@ -1,6 +1,6 @@
 # Recorder runbook — OpenRecapper, dry run 01
 
-Operator: Sachin (co-facilitator), from a laptop that is in #kafka for the whole session. Backup operator: Rafa. Both have `/record-access`. Recordings land in named folders because `RECORD_MEETING_NAMES` includes `KITCRAFT-S1,KITCRAFT-S2,KITCRAFT-S3,KITCRAFT-S4` (Rafa's Sep 14 item; **confirm**, see notes). Live transcript target: #kitcraft-transcripts.
+Operator: Rafa (from S2 on), from a laptop that is in #kafka for the whole session. Backup operator: Sachin. Both have `/record-access`. Recordings land in named folders because `RECORD_MEETING_NAMES` includes `KITCRAFT-S1,KITCRAFT-S2,KITCRAFT-S3,KITCRAFT-S4` (Rafa's Sep 14 item; **confirm**, see notes). Live transcript target: #kitcraft-transcripts.
 
 Two facts shape everything: **one bot = one voice connection**, so breakouts are never recorded; and the bot **auto-stops when #kafka empties and after 20 min of silence**, so every breakout longer than a few minutes gets an explicit `/stop` before and a fresh `/record` after.
 
@@ -25,20 +25,20 @@ Every start is confirmed in #kitcraft with `Recording on (KITCRAFT-S<n>)` and ev
 | S3 Bridges | 15:30 | 15:45 (rooms open) | 16:25 (reconvene) | 16:30 | Breakout 40 min. Two segments; second is 5 min. |
 | S4 Recap | 20:00 | 21:00 | — | — | No breakouts. The synthesis reads the live channel text, not the final transcript (below). |
 
-## Around a breakout, exact sequence (Sachin)
+## Around a breakout, exact sequence (Rafa)
 
 1. Post in #kitcraft: "Rooms open — breakout-1: … breakout-2: … Instructions above. Back at hh:mm."
 2. `/stop`. Post "Recording off".
 3. Move people (drag in the Discord member list, or they self-move; the pin names the rooms).
 4. Rafa floats breakout-1, Sachin breakout-2, then swap once.
 5. At reconvene time − 1 min: post "Reconvene in #kafka now". Move stragglers.
-6. `/record channel:#kafka name:KITCRAFT-S<n>`. Post "Recording on". Wait for the first live line before Rafa resumes.
+6. `/record channel:#kafka name:KITCRAFT-S<n>`. Post "Recording on". Wait for the first live line before the presenter resumes.
 
 ## Where transcripts go, who copies
 
-- After **each** `/stop`, the bot posts a transcript file and (if the relay is configured) a summary. Sachin downloads both and commits within 30 min of session end:
+- After **each** `/stop`, the bot posts a transcript file and (if the relay is configured) a summary. Rafa downloads both and commits within 30 min of session end:
   `workshop-dev/transcripts/S<n>/transcript.md` (segments concatenated, segment boundary marked `--- segment 2, hh:mm UTC ---`), `workshop-dev/transcripts/S<n>/summary.md`, `workshop-dev/transcripts/S<n>/awareness-check.md` (the close round's answers, tallied by quadrant — the S4 profile needs them).
-  Commit message: `S<n>: sachin: transcript + summary`.
+  Commit message: `S<n>: rafa: transcript + summary` (S1 was committed by Sachin).
 - In the rehearsal the same content lives at `workshop-dev/simulation/discord/kafka/S<n>.md`, written by the facilitator agents in OpenRecapper style (`[hh:mm:ss] Name: …`) and closed by `/stop` plus a summary block.
 - Raw audio: pruned by the bot after 7 days; nobody copies it.
 
