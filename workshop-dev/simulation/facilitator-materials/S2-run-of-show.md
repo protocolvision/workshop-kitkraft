@@ -17,11 +17,11 @@ Pre-session (Sachin): 19:30 pull; list existing `participants/<name>/kit/README.
 | 20:41 | 41 | — | swaps to breakout-2 | swaps to breakout-1 | reports read aloud; owners log `blocker` lines | `participants/<name>/LOG.md` | off |
 | 20:47 | 47 | — | back in #kafka | "Reconvene now"; moves stragglers | one sentence each ready; push | — | off |
 | 20:48 | 48 | Sachin | — | `/record` again; "Recording on"; waits for live line | in #kafka | — | `/record channel:#kafka name:KITCRAFT-S2` |
-| 20:49 | 49 | Sachin | listens | Slide 7: round, cycle order; captures sentences | speak (≈40 s each) | `transcripts/S2/awareness-check.md` | on |
+| 20:49 | 49 | Sachin | listens | Slide 7: round, cycle order; captures sentences | speak (≈40 s each) | `workshop-dev/transcripts/S2/awareness-check.md` | on |
 | 20:53 | 53 | Sachin | — | Slide 8: awareness check; tallies in #kitcraft | one word each | tally | on |
 | 20:56 | 56 | Sachin | — | Slide 9: Async 2; posts text + S3 timing in #kitcraft | — | — | on |
 | 20:58 | 58 | Sachin | — | "Recording off" | leave / stay in #kitcraft | — | `/stop` at 21:00 |
 
-Post-session (Sachin, by 21:30): both S2 segments + summaries → `transcripts/S2/transcript.md`, `summary.md`, `awareness-check.md`; commit `S2: sachin: transcript + summary`. Check one `blocker` line per present participant's `LOG.md`; ping anyone missing.
+Post-session (Sachin, by 21:30): both S2 segments + summaries → `workshop-dev/transcripts/S2/transcript.md`, `summary.md`, `awareness-check.md`; commit `S2: sachin: transcript + summary`. Check one `blocker` line per present participant's `LOG.md`; ping anyone missing.
 
 Fallbacks: harness cannot push → paste in #kitcraft, Sachin commits under their name. Recorder does not restart at 20:48 → Sachin retries once, then the close is reconstructed from #kitcraft posts. Kit not pushed by 20:35 → read anyway from whatever is on the branch.

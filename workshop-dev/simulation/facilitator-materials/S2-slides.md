@@ -4,7 +4,7 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 
 ## Slide 1 — Where we are (00:00) (presenter: Sachin)
 - Recording on; consent as pinned; breakouts off the record
-- S1 awareness check: anchored 3, traces 2, precommodification 1 — not the expected winner (`transcripts/S1/awareness-check.md`)
+- S1 awareness check: anchored 3, traces 2, precommodification 1 — not the expected winner (`workshop-dev/transcripts/S1/awareness-check.md`)
 - Four of us tonight (Kwame and Aiko withdrew; their inventories stay); three README drafts and one stub (marisol, content on her machine)
 - Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at
 - A kit is what stays after the agent has failed at it once
@@ -53,7 +53,7 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 
 ## Slide 7 — What the other agent got wrong (48:00) (presenter: Sachin)
 - Round, one sentence each (≈40 s × 4)
-- Captured into `transcripts/S2/awareness-check.md` alongside the check below
+- Captured into `workshop-dev/transcripts/S2/awareness-check.md` alongside the check below
 - Expected: it failed where your knowledge was tacit — that is the kit's next line, not a bug
 > Speaker note: recorder back on before the first speaker; wait for the live line.
 

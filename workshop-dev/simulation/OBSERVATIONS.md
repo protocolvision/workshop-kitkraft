@@ -105,3 +105,6 @@ Totals: 53 meta rows here + ~55 (rafa) + ~54 (sachin) facilitator rows. S1 as de
 
 **Paused here by Rafa's request.** Proposal for `main` and the outline delivered as a PR (`fixes/dry-run-01`) plus a written proposal in chat. The rest of the rehearsal (S2–S4) continues with 4 participants in two pairs, if and when Rafa says so.
 
+
+### Layout decision (Rafa, 2026-09-12, mirrored here)
+`registration/`, `site/`, `transcripts/` moved under `workshop-dev/`. Top level = AGENTS.md, CLAUDE.md, README.md, PARTICIPANT_TEMPLATE/, participants/, facilitator/, instructions/, workshop-dev/. In-character records (channel, kafka transcripts, observations) keep their old paths as written.

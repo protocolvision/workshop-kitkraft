@@ -10,7 +10,7 @@ Presenters split by expertise (checkpoint-1 decision): Sachin opens (slides 1–
 > Note: Sachin opens. Recorder is already on (started 15:28). One minute.
 
 ## Slide 2 — Consent (00:01) (presenter: Sachin)
-- Plenary audio in #kafka is recorded and transcribed with speaker names; transcript goes to `transcripts/` in the public repo
+- Plenary audio in #kafka is recorded and transcribed with speaker names; transcript goes to `workshop-dev/transcripts/` in the public repo
 - Breakout rooms are not recorded
 - Your harness writes log lines into public `LOG.md` files; ask either of us to remove any line
 - Put nothing in a public kit you would not put on a public website

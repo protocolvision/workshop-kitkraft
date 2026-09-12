@@ -9,12 +9,12 @@ A shared public record for a two-day workshop. Each participant owns one folder,
 
 ## Repo hygiene
 - Push rule: commit → `git pull --rebase origin main` → push. If the push is rejected, pull --rebase again and push again.
-- Edit only inside `participants/<NAME>/`. Never edit other participants' folders, `PARTICIPANT_TEMPLATE/`, `facilitator/`, `transcripts/`, `workshop-dev/`, `site/`, or `registration/`.
+- Edit only inside `participants/<NAME>/`. Never edit other participants' folders, `PARTICIPANT_TEMPLATE/`, `facilitator/`, `workshop-dev/transcripts/`, `workshop-dev/`, `workshop-dev/site/`, or `workshop-dev/registration/`.
 - Never delete files. Never force-push.
 - Commit messages: `S1|S2|S3|S4|async: <participant>: <one line>`.
 
 ## Facilitators
-The facilitators (`rafa`, `sachin`) may also edit `facilitator/`, `transcripts/` (including `transcripts/S4/SYNTHESIS.md`) and `workshop-dev/`. Their commit prefixes are `prep: <facilitator>:` before the workshop and `S<n>: <facilitator>:` during it.
+The facilitators (`rafa`, `sachin`) may also edit `facilitator/`, `workshop-dev/transcripts/` (including `workshop-dev/transcripts/S4/SYNTHESIS.md`) and `workshop-dev/`. Their commit prefixes are `prep: <facilitator>:` before the workshop and `S<n>: <facilitator>:` during it.
 
 ## Workshop autolog (append-only)
 After every substantive step in this repo, append one line to `participants/<NAME>/LOG.md` — one log per participant, for inventory, kit and bridge work alike. (During S3 a bridge file `participants/<NAME>/bridges/<target>.md` also has its own `## Log` for that bridge's step lines; `LOG.md` still gets one line per substantive step.)

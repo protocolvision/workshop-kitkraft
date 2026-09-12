@@ -152,7 +152,7 @@ workshop-kitkraft/
   kits/<name>/         one folder per participant, S2
   bridges/             one log per pair, S3; SYNTHESIS.md, S4
   facilitator/         C3PO, Prime Radiant, water-registry kits as targets
-  transcripts/         OpenRecapper output, per session
+  workshop-dev/transcripts/         OpenRecapper output, per session
 ```
 
 Public/private: each participant chooses. Public kits live in `workshop-kitkraft`. Private kits live in a second repo, `workshop-kitkraft-private`, same layout, collaborators only (registrants + facilitators), and leave a stub in the public repo — `kits/<name>/README.md` with the job, inputs, and outputs but no content — so the kit is still discoverable and bridgeable. A bridge to a private kit runs through its owner's agent (the Rao–Jenna transmittal pattern), which is itself one of the bridge forms S3 should surface. Sanitizing is the participant's responsibility; the pre-work email says so.
@@ -221,7 +221,7 @@ Setup checklist (owner: whoever runs PI's OpenRecapper instance):
 - Live transcript text channel = **#kitcraft-transcripts**.
 - Either `/schedule add` for the four sessions (Mon/Tue, times TBD, timezone set) or manual `/record` at start; manual is safer given breakouts empty #kafka and would trigger auto-stop — **re-run `/record` when the room reconvenes after breakouts.**
 - Relay configured for the AI summary, `SUMMARY_GROUP_NAME=AI Kitcraft workshop`; if no relay, the co-facilitator's agent summarizes from the transcript.
-- After each `/stop`, copy transcript + summary into `transcripts/S<n>/` in the repo.
+- After each `/stop`, copy transcript + summary into `workshop-dev/transcripts/S<n>/` in the repo.
 - Retention: recordings pruned per default 7 days; transcripts kept; state this in the consent notice.
 
 Consent (pinned in #kitcraft, read aloud at S1 start): plenary audio in #kafka is recorded and transcribed with speaker names; transcripts go into the public repo; breakouts are not recorded; harness autologs go into the public repo; anyone can ask for their lines to be removed.

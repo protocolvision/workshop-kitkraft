@@ -24,7 +24,7 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the checkpoint-1 sp
 | 16:22 | 52 | Rafa | Asks the room to confirm a `## Log` line exists | His agent scans every inventory for a Log line; posts the list; missing → 1A (expect Ingrid: web editor; Kwame: Codex outside clone) | Confirm or say "no line" | Log-line check posted in #kitcraft | on |
 | 16:23 | 53 | Rafa | Slide 14: awareness check, one word each | Posts order; his agent tallies six answers | One quadrant each | Tally in #kitcraft | on |
 | 16:26 | 56 | Sachin | Asks for the last question | Presents slide 15: Async 1 (3 h), 1A, S2 time; posts Async 1 instruction and the 1A link/time; pins take-home reading order | Note assignment | Async 1 text pinned | on |
-| 16:29 | 59 | Sachin | Closes; stays in #kafka for 1A | Runs `/stop`; waits for the transcript; copies transcript + summary to `transcripts/S1/`; commits `S1: sachin: transcript` | 1A people stay; others leave | `transcripts/S1/` | `/stop` |
+| 16:29 | 59 | Sachin | Closes; stays in #kafka for 1A | Runs `/stop`; waits for the transcript; copies transcript + summary to `workshop-dev/transcripts/S1/`; commits `S1: sachin: transcript` | 1A people stay; others leave | `workshop-dev/transcripts/S1/` | `/stop` |
 | 16:30 | 60 | — | 1A begins (see `1A-clinic.md`) | Posts "1A now in #kafka" | — | — | off (1A not recorded) |
 | 16:45 | 75 | — | — | Overnight-equivalent task moved forward: with the inventories in, confirms the two triads and posts S2 critique ring in #kitcraft before 19:30 UTC | — | Triad post in #kitcraft | — |
 
