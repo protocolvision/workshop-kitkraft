@@ -16,4 +16,4 @@ Water-rate PDF → registry row. Public.
 (from survey)
 
 ## Log
-2026-09-21T15:10:00Z | S1 | rafa | progress | inventory written by harness from pre-work notes
+moved to LOG.md (see `participants/_example/LOG.md`)

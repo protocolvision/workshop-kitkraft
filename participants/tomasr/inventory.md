@@ -24,7 +24,4 @@ Task 1, claim ledger — Public. (Asked in the room; participant: "the claims on
 Overreliance — the participant's own guess; survey not yet taken. (Asked; he said "I haven't done it, I said Overreliance in the round, put that.")
 
 ## Log
-2026-09-17T19:42:00Z | async | tomasr | progress | pre-work stub written by harness
-2026-09-21T16:08:30Z | S1 | tomasr | progress | inventory written by harness
-2026-09-21T16:08:35Z | S1 | tomasr | decision | kit = task 1 claim ledger, Public; posture recorded from a guess, survey pending
-2026-09-21T16:20:50Z | S1 | tomasr | memory | nearest: devr, marisol
+moved to LOG.md on 2026-09-21 by sachin (layout migration)

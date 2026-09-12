@@ -1,4 +1,4 @@
-# Bridge: <you> → <target>
+# Bridge: <you> → <target>  (file: `participants/<you>/bridges/<target>.md`)
 
 Writer: <you> (only you edit this file; a stub owner appends under Response)
 Target kit:

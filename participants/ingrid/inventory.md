@@ -15,5 +15,4 @@ Task 1, the funder report assembler: project update documents and a finance shee
 Compliance
 
 ## Log
-
-2026-09-21T16:47:30Z | S1 | ingrid | progress | harness opened inside clone at 1A
+moved to LOG.md on 2026-09-21 by sachin (layout migration)

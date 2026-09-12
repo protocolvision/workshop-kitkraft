@@ -17,5 +17,4 @@ Task 1, proposal from brief. Inputs: the brief and two past proposals. Output: a
 Partnership
 
 ## Log
-2026-09-21T16:08:00Z | S1 | aiko | progress | inventory written by hand, no harness; pasted to #kitcraft for Sachin to commit
-2026-09-21T16:40:00Z | S1 | aiko | progress | inventory pasted in #kitcraft, committed by sachin
+moved to LOG.md on 2026-09-21 by sachin (layout migration)
