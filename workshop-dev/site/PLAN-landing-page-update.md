@@ -6,9 +6,10 @@
 | **Issue** | protocolvision/workshop-kitkraft#2 · milestone *Workshop ready — Sep 21, 2026* |
 | **Owner / reviewer** | Rafa (decisions + sign-off) · Sachin (theory copy) |
 | **Source of truth** | `workshop-dev/outline.md` (v8) and `README.md` on `main`, merged 2026-09-12 (`b0430ea`) |
-| **Status** | Draft for review — no page changes made yet |
+| **Status** | **Approved and applied** 2026-09-12 — D1 drop the talk, D2 keep 10–15, D3 publish times, D4 link the repo; C11 skipped (a fifth card breaks the four-column grid) |
 | **Deploy** | here.now slug `bold-steeple-73wb` → mounted at `ai.protocolized.dev/kitcraft` |
 | **Rev 2** | Copy rewritten to put working together at the centre, in plain welcoming sentences (Rafa, 2026-09-12) |
+| **Rev 3** | Rafa's own edits applied: the lede is "Everyone is using AI their own way today. What happens when we need to work together?"; chip reads "No handmade code needed"; first two do-bullets are his wording; the Tech Support note moved into Who it's for |
 
 ---
 
