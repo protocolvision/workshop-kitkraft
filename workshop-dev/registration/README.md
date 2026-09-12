@@ -39,7 +39,7 @@ Options for question 7:
 
 ## How responses are used
 
-1. **From Sep 15, as registrations arrive** — every registrant with a GitHub account (Q3) gets a collaborator invite with write access to `workshop-kitkraft`; the pre-work email goes out the same day. Private kits stay on the participant's machine with a stub in the repo; there is no private repo and no second invite. Registrants without a GitHub account are told in the pre-work email to create one, or they go through the by-hand path (`instructions/no-harness.md`: paste in #kitcraft, a facilitator commits).
+1. **From Sep 15, as registrations arrive** — every registrant with a GitHub account (Q3) gets a collaborator invite with write access to `workshop-kitkraft`; the pre-work email goes out the same day. Private kits stay on the participant's machine with a stub in the repo; there is no private repo and no second invite. Registrants without a GitHub account create one as part of the pre-work email's Item 0; every participant has a harness and a GitHub account.
 2. **Sep 19** — push check: one commit from each registrant. Anyone without a push, or who did not tick "installed Claude Code or Codex" in Q7, is invited to Session 1A. Provisional breakout groups are drafted from Q5 and Q6 the same day.
 3. **Sep 21, S1 close** — the S1 inventories confirm or reshuffle the provisional breakout groups; the S2 breakout groups are pinned in #kitcraft by 16:45 UTC (S2 is at 20:00 the same day, so there is no overnight).
 

@@ -6,7 +6,7 @@ What the facilitators run from. Participants never need these; the blocks they p
 |---|---|
 | `S1-slides.md` · `S1-run-of-show.md` | Kits, Mon 15:30–16:30 UTC: slide outline with speaker notes; minute table with presenter, off-mic roles, artifacts, recorder |
 | `S1-agent-prompts.md` | facilitator copy of the two S1 blocks (`instructions/S1-inventory.md`) |
-| `1A-clinic.md` | Beginner clinic, Mon 16:30–17:00 UTC, not recorded: eight minutes by hand, then one block with seven checks and proofs |
+| `1A-clinic.md` | Clinic for a harness that is installed but not working (auth, wrong clone, wrong branch, push rejected), Mon 16:30–17:00 UTC, not recorded: eight minutes of naming the failed step, then one block with seven checks and proofs |
 | `S2-slides.md` · `S2-run-of-show.md` | Factories, Mon 20:00–21:00 UTC: build 20 / critique 13 / close 10 |
 | `S3-slides.md` · `S3-run-of-show.md` | Bridges, Tue 15:30–16:30 UTC: examples 14, breakout 40, close 5 |
 | `S3-agent-prompts.md` | facilitator copy of the S3 block (`instructions/S3-bridge.md`) |

@@ -136,7 +136,7 @@ RAG over the PI corpus; reproducible three-layer ingest; web/Discord/MCP. MCP: `
 
 **How to Turn Your AI Into a World-Class Designer** (new) — Anshu Chaudhary (anshuc), Lenny's Newsletter.
 https://lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world
-Eight techniques; the last three (cut what adds nothing, remove AI tells, rewrite copy by hand) are the S2 "comms" layer. Claim to pressure-test: "next-token prediction stifles creativity" is a rhetorical frame, not a mechanism.
+Eight techniques; the last three (cut what adds nothing, remove AI tells, rewrite copy yourself) are the S2 "comms" layer. Claim to pressure-test: "next-token prediction stifles creativity" is a rhetorical frame, not a mechanism.
 
 ---
 

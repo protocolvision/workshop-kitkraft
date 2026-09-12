@@ -18,7 +18,7 @@ Facilitation split: Rafa runs the session — first minute, ice-breaker timing, 
 | 16:00 | 30 | Sachin | Posts c3po how-it-works link | Slide 10: C3PO, no demo | Listen | — | on |
 | 16:02 | 32 | Sachin | Listens | Slide 11 (precommodification, farmsteading); hands to Rafa at 16:05 | Listen | — | on |
 | 16:05 | 35 | Rafa | Slide 12: says "paste Block 1, say do this"; pins the link to `instructions/S1-inventory.md`; opens a "push failed?" thread | Answers theory questions in voice; stays off chat | Open harness at the clone root; paste prompt | — | on |
-| 16:07 | 37 | Rafa | Handles pushes in the thread: commits pasted or hand-written files under the sender's name (`S1: <name>: inventory`) after checking `main` for a copy already there; speaks once so the recorder does not time out | Floats in voice | Agent writes `participants/<name>/inventory.md`, commits, pushes | One `participants/<name>/inventory.md` per participant on `main` | on |
+| 16:07 | 37 | Rafa | Handles the "push failed?" thread: reads each pasted error, points at the matching failure line of the block (account, invite, rebase); speaks once so the recorder does not time out | Floats in voice | Agent writes `participants/<name>/inventory.md`, commits, pushes | One `participants/<name>/inventory.md` per participant on `main` | on |
 | 16:12 | 42 | Rafa | Runs `git pull`; posts which inventories have landed and how many; checks in voice that pushes went through | — | Keep working; ask in #kitcraft if stuck | Most files landed | on |
 | 16:18 | 48 | Rafa | Slide 13: "paste Block 2"; points at Block 2 in the same file | — | Agent pulls, reads `participants/*/inventory.md`, names two nearest | Each person has two names | on |
 | 16:22 | 52 | Rafa | Asks the room to confirm a line in their `LOG.md` exists; his agent scans every `participants/*/LOG.md` for a line; posts the list; missing → 1A | — | Confirm or say "no line" | Log-line check posted in #kitcraft | on |
@@ -31,4 +31,4 @@ Facilitation split: Rafa runs the session — first minute, ice-breaker timing, 
 Contingencies
 - Recorder auto-stops if #kafka empties or is silent 20 min; there are no breakouts in S1, so no re-run is expected. If the live transcript stops appearing, Rafa re-runs `/record` with the same name and notes it in the transcript folder.
 - If fewer than two thirds of the inventories have landed by 16:18, skip slide 13 and give the second prompt as part of Async 1.
-- If the push path fails for everyone (rebase conflicts on `main`), Rafa collects files in #kitcraft and commits them in one batch; the log-line check then happens in 1A or at the S2 open.
+- If the push path fails for everyone (rebase conflicts on `main`), the exercise ends with files committed locally; the fix and the log-line check happen at 1A or at the S2 open.

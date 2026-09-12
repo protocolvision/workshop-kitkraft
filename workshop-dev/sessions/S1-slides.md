@@ -88,10 +88,10 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 ## Slide 12 — Exercise: your inventory (00:35) (presenter: Rafa)
 - Paste **Block 1** (`instructions/S1-inventory.md`; Rafa pins the link now) into your harness (open at the clone root) and say "do this". It writes `participants/<name>/inventory.md`, commits, pushes, and reports
 - Private means: content stays on your machine; only a stub README goes in the repo. There is no private repo
-- 12 minutes. Push failed after three tries? Post the error the harness printed in #kitcraft; Rafa commits under your name
+- 12 minutes. Push failed after three tries? Post the error the harness printed in #kitcraft; the fix comes back in that thread or at 1A
 - Rule: you read other people's inventories only through your agent, never in the browser
 - At 00:48 I will give the second prompt
-> Note: anyone without a harness writes the file by hand (`instructions/no-harness.md`), pastes it in #kitcraft, and Rafa commits it under their name; they get the autolog at 1A. Rafa checks `main` before committing any pasted file so a hand-made file and a web-editor commit do not collide.
+> Note: everyone has a harness; a push that fails is fixed in the #kitcraft thread or at 1A, never committed for them.
 
 ## Slide 13 — Second prompt: the two nearest (00:48) (presenter: Rafa)
 - Paste **Block 2** (same file) and say "do this". It pulls, reads every inventory, names the two nearest, and checks your `LOG.md` line
@@ -109,7 +109,7 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 ## Slide 15 — Async 1 and what is next (00:56) (presenter: Rafa)
 - Async 1 is three hours (17:00–20:00 UTC), not an evening: paste `instructions/async-1.md`; choose the kit you will convert into a factory tonight — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit — and your harness drafts the README's Job and Interface lines. Push. Nothing else
 - If you are going to 1A, do this after 1A
-- 1A now, 16:30–17:00 UTC, here in #kafka: install, clone, one log line, one push
+- 1A now, 16:30–17:00 UTC, here in #kafka: harness installed but something wrong — auth, clone, branch, one log line, one push
 - S2 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): you build the kit. Anyone async for S2: the async post in #kitcraft
 - Take-home reading order is pinned; nothing is required before S2
 > Note: Rafa presents and closes at 00:59, then `/stop`s the recorder after the last question; Sachin takes the last theory question if there is one. Rafa confirms the breakout groups from the inventories and pins them by 16:45.

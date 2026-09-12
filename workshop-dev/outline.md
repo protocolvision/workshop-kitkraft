@@ -39,9 +39,9 @@ By the end a participant can:
 
 ## Pre-work (email sent as registrations arrive, from Sep 15; text in `pre-work-email.md`)
 
-- Item 0, by hand, before Friday: install `git` and `gh`, `gh auth login`, `gh auth setup-git`, install a harness (Claude Code needs a Claude Pro/Max subscription; Codex a ChatGPT plan), accept the repo invite. These need the participant's computer password or a browser login; no harness can do them.
+- Item 0, done by the participant, before Friday: install `git` and `gh`, `gh auth login`, `gh auth setup-git`, install a harness (Claude Code needs a Claude Pro/Max subscription; Codex a ChatGPT plan), accept the repo invite. These need the participant's computer password or a browser login; no harness can do them.
 - Block A, pasted into the harness: checks the tools and the account, clones if needed, asks for three recurring tasks (never drafts them), asks public or private, writes `participants/<name>/inventory.md` in the one schema, pushes, verifies. This is the first push that the Sep 19 push check looks for and the milestone 1A backstops.
-- Block B, by hand, for anyone with no working harness or no GitHub account: the same file written by hand and pasted in #kitcraft; a facilitator commits it (`instructions/no-harness.md`).
+- The one fallback: if the harness is not working by Friday, come to 1A. Every participant has a harness and a GitHub account; there is no path around the harness.
 - Take the symposium AI postures survey (Robert Peake); bring your posture.
 - Decide public or private kit. Private: content stays on the participant's machine, stub README in the repo, bridges through the owner's agent.
 - Read: Durable AI Adoption, chapters 1–3. Optional: skim "Have Your Factory Call My Factory."
@@ -81,13 +81,13 @@ The workshop returns to this grid at the end of each session with one question: 
 
 **Exercise — Inventory, Wallfacer-lite (17)** Rafa.
 Each participant pastes Block 1 of `instructions/S1-inventory.md` into their harness. It writes `participants/<name>/inventory.md` in the one schema (three recurring tasks with the two tests, built/use, the kit and public/private, posture, log), commits, pushes with the retry rule, verifies. The harness asks for anything it does not have and never drafts a task. At minute 13 of the exercise, Block 2: pull, read every other inventory (skipping `_*.md`), name the two nearest, log them.
-Fallback for anyone whose harness cannot push: paste the file in #kitcraft; Rafa commits it under their name. Anyone without a harness follows `instructions/no-harness.md`.
+Anyone whose push fails posts the harness's error in #kitcraft and gets the fix there or at 1A; nobody's file is committed for them.
 Rule: you read other people's inventories only through your agent, never in the browser.
 This is the one-way version of the Wallfacer rule: no live coordination needed, but the public-record norm is set on day one. Rafa's agent checks at the close that every `participants/<name>/LOG.md` has a line; missing lines go to 1A.
 
 **Close (7)** Rafa: awareness check, one word each, tallied by his agent into `workshop-dev/transcripts/S1/awareness-check.md`. (Expected: precommodification — reading others' inventories through your agent shows how much overlaps.) Focus question: how will bridges emerge across the kit era? Async 1, 1A, S2 time.
 
-**Async 1 (Mon 16:30–20:00 UTC, three hours)** Paste `instructions/async-1.md`: choose the kit to convert in S2 — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`; copied into your folder with a `Source:` line) — and draft the README's Job and Interface lines. The participant rewrites the Job line by hand. Nothing else; the gap is short and 1A sits inside it.
+**Async 1 (Mon 16:30–20:00 UTC, three hours)** Paste `instructions/async-1.md`: choose the kit to convert in S2 — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`; copied into your folder with a `Source:` line) — and draft the README's Job and Interface lines. The participant rewrites the Job line in their own words. Nothing else; the gap is short and 1A sits inside it.
 
 **Breakout groups** are confirmed at S1 close from the inventories (provisional breakout groups come from the registration form on Sep 19) and pinned in #kitcraft by 16:45 UTC.
 
@@ -95,7 +95,7 @@ This is the one-way version of the Wallfacer rule: no live coordination needed, 
 
 ## Session 1A — Beginner clinic (optional, Mon 16:30–17:00 UTC, #kafka, not recorded)
 
-Content: `sessions/1A-clinic.md`. Rafa runs it, including the #kitcraft threads. For anyone whose pre-work push did not happen or whose harness opened outside the clone. Eight minutes by hand (say the failed step; install a harness if none), then one pasteable block that runs seven checks with a command and a proof each — tools, login as the right account, invite, clone by origin URL, harness at the clone root reading `AGENTS.md`, one log line, one push verified per file. Exit per person: seven PASS lines. A FAIL on the push means Rafa commits the file under that name and the participant retries at the start of S2. The two things no harness can do (installing git/gh, the browser login) are the pre-work's Item 0; 1A checks them, it does not absorb them.
+Content: `sessions/1A-clinic.md`. Rafa runs it, including the #kitcraft threads. For anyone whose harness is installed but something is wrong: no pre-work push, wrong account, wrong clone, wrong branch, push rejected, harness opened outside the clone. No installs beyond the setup checklist's verify block. Eight minutes of naming the failed step, then one pasteable block that runs seven checks with a command and a proof each — tools, login as the right account, invite, clone by origin URL, harness at the clone root reading `AGENTS.md`, one log line, one push verified per file. Exit per person: seven PASS lines. A FAIL on the push means the participant retries at the start of S2 with the fix from their thread. The two things no harness can do (installing git/gh, the browser login) are the pre-work's Item 0; 1A checks them, it does not absorb them.
 
 ---
 
@@ -111,7 +111,7 @@ Slides and minute table: `sessions/S2-slides.md`, `sessions/S2-run-of-show.md`.
 
 **Exercise — Convert a kit into a factory (20)** Rafa briefs; Sachin takes the last five minutes for the comms layer.
 Take one of the kits identified in your inventory — your own (the `## Kit` task, or something from `## Built / use`) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and convert it into a factory: a kit with a declared interface that a stranger's agent can use without talking to you. Paste the block in `instructions/S2-factory.md`. Deliverable: rung 1 done properly — README with an `Interface:` line stating the rung and how to call it, SKILL.md whose description triggers correctly, `examples/input.*` + `output.*` produced cold from SKILL.md; rungs 2+ (static page, MCP, API/A2A) are optional stretch. Converting a facilitator kit = copy it into `participants/<name>/kit/`, adapt inputs, constraints and do-nots to your own organisation and data, declare the interface, credit the source on the README's first line. The harness works from the participant's answers, never inventing. Private kit: content on the machine, stub and LOG.md in the repo. Artifact: `participants/<name>/kit/` as a factory; commit `S2: <name>: factory from <source>`.
-The comms layer, from the anshuc techniques (Sachin, at minute 15 of the build): cut what adds nothing, remove AI tells, rewrite the README by hand. "Push now" at minute 18; unfinished is fine, absent is not.
+The comms layer, from the anshuc techniques (Sachin, at minute 15 of the build): cut what adds nothing, remove AI tells, rewrite the README in your own words. "Push now" at minute 18; unfinished is fine, absent is not.
 
 **Group critique (13, breakout rooms)** Instructions: `instructions/S2-critique.md`, posted per `breakout-instructions.md`. A ring inside each breakout group (2–4): A reads B, B reads C, …, the last reads A; a pair swaps. The reader's harness pushes its own factory, pulls, uses the target through its declared interface (README and SKILL.md only), runs the example cold, reports in five lines where the interface was insufficient; the participant reads the report aloud; the owner's harness logs each failure as a `blocker` line. A stub kit goes to the strongest reader, whose agent reports what it would need. A breakout group missing a member becomes a pair for the night; the absent kit is read async and the report posted in #kitcraft. Room moves cost about two minutes each way; they are inside the 13.
 
@@ -189,7 +189,7 @@ workshop-kitkraft/
   README.md            human entry: what this is, how to add your kit
   AGENTS.md            agent entry: names, push rule, autolog, facilitator clause
   CLAUDE.md            first line: @AGENTS.md
-  instructions/        pasteable blocks: orient, S1-inventory, async-1, S2-factory, S2-critique, async-2, S3-bridge, no-harness
+  instructions/        pasteable blocks: orient, S1-inventory, async-1, S2-factory, S2-critique, async-2, S3-bridge
   PARTICIPANT_TEMPLATE/ the whole participant folder to copy: inventory.md, kit/ (README.md with Interface:, SKILL.md, examples/), bridges/TEMPLATE.md, LOG.md
   participants/<name>/ one folder per participant, the only place their harness writes: inventory.md (S1), kit/ (S2), bridges/<target>.md (S3), LOG.md; schema in participants/README.md
   facilitator/<name>/  rafa, sachin in the same shape (kit/, LOG.md) as bridge targets; the brand kit by link
@@ -203,7 +203,7 @@ Public/private: each participant chooses. Public kits live in the repo. Private 
 
 Working mode: every participant opens their harness at the clone root, writes only in `participants/<name>/`, the one folder they own (`AGENTS.md` says so; the boundary is enforced by instruction, not by the working folder), reads anywhere, and pushes to `main`. `AGENTS.md` instructs the harness: commit, `pull --rebase`, push; on rejection pull --rebase and push again; a conflict can only be in your own folder, keep both; never edit outside your folder; never delete. The rehearsal ran six concurrent writers on one branch with one rejection retried three times and no lost work; on the real day only per-person files change, so conflicts are rarer still.
 
-Access: every registrant invited as a collaborator with write access as registrations arrive, no PRs, no branches. A repository ruleset on `main` blocks force-pushes and branch deletion for everyone (facilitators included; a history rewrite for a removal request is done by an admin bypass and noted in `workshop-dev/transcripts/`). Fallback for anyone whose harness cannot push: paste the file in #kitcraft → Rafa commits under their name. Facilitator prep: create the ruleset, invite registrants as they arrive, confirm at least one push from each by Sep 19; anyone without a push goes to 1A.
+Access: every registrant invited as a collaborator with write access as registrations arrive, no PRs, no branches. A repository ruleset on `main` blocks force-pushes and branch deletion for everyone (facilitators included; a history rewrite for a removal request is done by an admin bypass and noted in `workshop-dev/transcripts/`). Anyone whose push fails brings the error to the #kitcraft thread or 1A; nobody's file is committed for them. Facilitator prep: create the ruleset, invite registrants as they arrive, confirm at least one push from each by Sep 19; anyone without a push goes to 1A.
 
 ### 2. Autologging
 
@@ -299,13 +299,14 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - Triads are the group unit, with the critique ring, the reversed S3 ring, the pair rule, the stub-to-strongest-reader rule and the absence rule; rooms are breakout-1…5. (OBS 3; rafa 13, 16, 27, 33; sachin 5, 7, 8, 10, 11)
 - Renamed: "triads" are now "breakout groups" of 2–4, sized from headcount; the ring, reversed-ring, pair and absence rules are stated for any size. (Rafa, Sep 12)
 - One log per bridge, one writer; transmittal procedure for stubs in `instructions/S3-bridge.md`. (OBS 7; sachin 9, 11, 39)
-- No private repo: content stays on the machine, stub public, bridge through the owner's agent. No portal: the fallback is paste in #kitcraft, facilitator commits. (OBS 8; rafa 6, 15; sachin 4, 23, 30)
+- No private repo: content stays on the machine, stub public, bridge through the owner's agent. No portal. (OBS 8; rafa 6, 15; sachin 4, 23, 30)
 - Ruleset on `main`: block force-push and deletion; invites sent as registrations arrive. (OBS 4, 5)
 - Push rule with retry and conflict recipe; NAME = GitHub username; facilitator clause; never-delete-a-line rule, in `AGENTS.md`. (OBS 6, 26; rafa 21, 37; sachin 2, 15, 38)
-- Agent-actionable everything: `instructions/` folder, blocks with settings first, clone recognised by origin URL, check-before-clone, account check, per-file verify, stop-and-ask for the three tasks, public/private step, one inventory schema. Pre-work email rewritten with Item 0 (human-only installs), subscription line, by-hand Block B, local-time line, human "main only" line. (OBS 10–21, 23–25; rafa 36–42; sachin 33–37, 40)
+- Agent-actionable everything: `instructions/` folder, blocks with settings first, clone recognised by origin URL, check-before-clone, account check, per-file verify, stop-and-ask for the three tasks, public/private step, one inventory schema. Pre-work email rewritten with Item 0 (human-only installs), subscription line, local-time line, human "main only" line. (OBS 10–21, 23–25; rafa 36–42; sachin 33–37, 40)
 - Recorder: explicit `/stop` before every breakout and re-`/record` at reconvene, a facilitator speaks every ≤15 min, awareness answers saved to `workshop-dev/transcripts/S<n>/awareness-check.md`, same-name re-record tested Sep 17, S4 synthesis from the live channel text with v2 in 48 h. (rafa 22, 23; sachin 12, 13, 14)
 - 1A has content: `sessions/1A-clinic.md`, seven checks with proofs; not recorded. (rafa 29; sachin 29)
 - Presenter split by expertise, Sachin opens; presenter column in every run-of-show; one screen-sharer. (rafa 12, 34; sachin 28, 32)
+- Every participant has a harness and a GitHub account: the paste-it-and-a-facilitator-pushes path (its instructions file, the email's Block B, the browser-editor mentions) is removed; 1A is for a harness that is installed but not working. (Rafa, Sep 12)
 - Facilitation split redone: Rafa = ops, coordination and exercises (first minute of each session, checks, rooms, recorder, #kitcraft, async, 1A, S4 debrief/showcase/close); Sachin = every conceptual segment, opening the content right after Rafa's first minute. (Rafa, Sep 12)
 - After Tuesday decided: public repo, synthesis in Discord within 48 h, nothing else; consent notice canonical in `sessions/consent-notice.md`. (rafa 19, 32; sachin 16, 17)
 - Awareness-grid axes confirmed: External/Internal × Archive/Live. (rafa 18)

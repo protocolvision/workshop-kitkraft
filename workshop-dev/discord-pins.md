@@ -7,7 +7,7 @@ Four pins (Discord caps a message at 2000 characters): the main pin, the consent
 **AI Kitcraft 2026 — Kit → Factory → Bridge**
 
 **Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, copy `PARTICIPANT_TEMPLATE/` to `participants/<you>/`, open your harness at the clone root (the folder with `AGENTS.md`), paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push (or reports "already done" if the pre-work email did it). Every later instruction is a file in `instructions/` you paste the same way. Everything goes straight to `main`: no branches, no PRs.
-No harness or no GitHub account? `instructions/no-harness.md`: write the file by hand, paste it here, a facilitator commits it under your name.
+Harness installed but something wrong (auth, wrong clone, wrong branch, push rejected)? Post the exact error here and come to 1A.
 Private kit? There is no private repo. Keep the content on your own machine and put only a stub `participants/<you>/kit/README.md` (job, inputs, outputs, no content) in the repo; others bridge to it through your agent.
 
 **Rooms:** voice **#kafka** (plenary) · text **#kitcraft** (this channel: links, instructions, breakout groups) · **#kitcraft-transcripts** (live transcript, read-only) · voice **breakout-1 … breakout-5** (breakout group rooms).
@@ -48,7 +48,7 @@ Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/s
 
 ## Pre-written posts (not pinned)
 
-**Mon 16:32 UTC, after S1 — Async 1:** Recording off. **Async 1, before 20:00 UTC:** open your harness at the clone root, paste the whole of `instructions/async-1.md`, say "do this". It asks which kit you will convert into a factory tonight — your own (`## Kit` task or `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and drafts the README's Job and Interface lines. Then rewrite the Job line by hand. That is all. S2 at 20:00 UTC; breakout groups pinned above. 1A now in #kafka for anyone whose push did not work.
+**Mon 16:32 UTC, after S1 — Async 1:** Recording off. **Async 1, before 20:00 UTC:** open your harness at the clone root, paste the whole of `instructions/async-1.md`, say "do this". It asks which kit you will convert into a factory tonight — your own (`## Kit` task or `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and drafts the README's Job and Interface lines. Then rewrite the Job line in your own words. That is all. S2 at 20:00 UTC; breakout groups pinned above. 1A now in #kafka for anyone whose push did not work.
 
 **Mon 20:58 UTC, after S2 — Async 2:** Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your breakout group logged, proposes one fix per blocker, waits for your "go", pushes v2. Async readers: push your factory first (`instructions/S2-factory.md` block); your reader's harness posts the report here; run async-2 when it appears. S3 breakout groups pinned at 09:00 UTC.
 

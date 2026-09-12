@@ -26,7 +26,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
    - `LOG.md` — the one autolog for everything in the folder
 5. **Everything goes straight to `main`. No branches, no PRs, no force-push.** Your harness commits, pulls with rebase, pushes, and retries if the push is rejected.
 6. Private kit? Keep the content on your own machine. Put only a stub `participants/<name>/kit/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `instructions/S3-bridge.md`). There is no private repo.
-7. No working harness, or no GitHub account? Follow `instructions/no-harness.md`: write the file by hand, paste it in #kitcraft, a facilitator commits it under your name.
+7. Everyone has a harness and a GitHub account. Harness installed but something wrong (auth, wrong clone, wrong branch, push rejected)? Post the exact error in #kitcraft and come to 1A.
 
 ## Layout
 
@@ -34,7 +34,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 README.md          this file
 AGENTS.md          agent entry: conventions + autolog instruction
 CLAUDE.md          points Claude Code at AGENTS.md
-instructions/      blocks to paste into your harness (orient, S1-inventory, async-1, S2-factory, S2-critique, async-2, S3-bridge, no-harness)
+instructions/      blocks to paste into your harness (orient, S1-inventory, async-1, S2-factory, S2-critique, async-2, S3-bridge)
 PARTICIPANT_TEMPLATE/  the whole participant folder to copy: inventory.md, kit/, bridges/TEMPLATE.md, LOG.md
 participants/<name>/   one folder per participant, the only place their harness writes (S1–S3)
 facilitator/<name>/    facilitator kits in the same shape, usable as bridge targets

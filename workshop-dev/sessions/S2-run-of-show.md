@@ -11,8 +11,8 @@ Pre-session (Rafa): 19:30 pull; list in #kitcraft who chose which source (own ki
 | 20:07 | 07 | Sachin | puts the brand kit page, then `llms.txt`, on screen | Slide 3: brand kit / Jamverse | — | — | on |
 | 20:11 | 11 | Sachin | links `facilitator/README.md`, Agent Skills spec | Slide 4: factory = kit + interface; ladder; CMM; the interface question, if asked | — | — | on |
 | 20:15 | 15 | Rafa | Slide 5: convert-to-factory briefing; starts the clock; time calls at 5, 10; pulls; helps anyone with a facilitator-kit copy or a stub, in #kitcraft | answers theory questions in voice; stays off chat | agent converts the chosen kit: README with `Interface:`, SKILL, cold example (`instructions/S2-factory.md`) | `participants/<name>/kit/` as a factory, rung 1 | on; a facilitator speaks every ≤15 min |
-| 20:30 | 30 | Sachin | posts the three rules in #kitcraft | **comms layer**: cut, de-tell, rewrite README by hand | edit README by hand | README v1 | on |
-| 20:33 | 33 | Rafa | "push now"; confirms pushes on `main`; commits pasted files under their names | — | commit `S2: <name>: factory from <source>`, push, pull --rebase | one factory or stub per participant | on |
+| 20:30 | 30 | Sachin | posts the three rules in #kitcraft | **comms layer**: cut, de-tell, rewrite the README in their own words | edit README in own words | README v1 | on |
+| 20:33 | 33 | Rafa | "push now"; confirms pushes on `main`; answers push errors in #kitcraft | — | commit `S2: <name>: factory from <source>`, push, pull --rebase | one factory or stub per participant | on |
 | 20:35 | 35 | Rafa | Slide 6 (60 s); `/stop`; "Recording off · rooms open"; posts the S2 breakout post (`../breakout-instructions.md`); moves people; goes to breakout-1 | goes to the highest-numbered room | move to rooms | — | `/stop` |
 | 20:41 | 41 | — | swaps rooms | swaps rooms | reports read aloud; owners log `blocker` lines | `participants/<name>/LOG.md` | off |
 | 20:47 | 47 | — | "Reconvene now"; moves stragglers; back in #kafka | back in #kafka | one sentence each ready; push | — | off |
@@ -24,4 +24,4 @@ Pre-session (Rafa): 19:30 pull; list in #kitcraft who chose which source (own ki
 
 Post-session (Rafa, by 21:30): both S2 segments + summaries → `workshop-dev/transcripts/S2/transcript.md`, `summary.md`, `awareness-check.md`; commit `S2: rafa: transcript + summary`. Check one `blocker` line per present participant's `LOG.md`; ping anyone missing. Overnight: watch for async pushes; ping their assigned readers.
 
-Fallbacks: harness cannot push → paste in #kitcraft, Rafa commits under their name. Recorder does not restart at 20:48 → Rafa retries once, then the close is reconstructed from #kitcraft posts. Kit not pushed by 20:35 → read anyway from whatever is on `main`.
+Fallbacks: harness cannot push → the error goes in #kitcraft, Rafa points at the fix in text, the participant retries at the reconvene. Recorder does not restart at 20:48 → Rafa retries once, then the close is reconstructed from #kitcraft posts. Kit not pushed by 20:35 → read anyway from whatever is on `main`.

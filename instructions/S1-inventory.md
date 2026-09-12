@@ -29,7 +29,7 @@ Failures:
 - username/password prompt → type nothing; the participant runs `gh auth setup-git`; retry.
 - `! [rejected]` / `fetch first` / `non-fast-forward` → `git pull --rebase origin BRANCH`, push again, up to 3 times.
 - `error: src refspec main does not match any` → you are not on BRANCH or nothing is committed: `git checkout BRANCH`, commit, push `HEAD:BRANCH` again.
-- still rejected after 3 tries → STOP, print the exact error, tell the participant to paste the file in #kitcraft; a facilitator commits it under their name.
+- still rejected after 3 tries → STOP, print the exact error; the participant posts it in #kitcraft, the fix comes back in that thread or at 1A, then they say "push again".
 Do not: create branches, force-push, touch anything outside `participants/NAME/`, read other inventories yet, log anything private.
 Report in four lines: the absolute path of the folder you wrote in; the GitHub link of `inventory.md`; the kit chosen and public/private; any error.
 ```

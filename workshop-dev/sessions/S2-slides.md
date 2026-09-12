@@ -39,7 +39,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - Paste `instructions/S2-factory.md`'s block. Rung 1, done properly: `README.md` with an `Interface:` line (the rung and how to call it) · `SKILL.md` whose `description` triggers · `examples/input.*` + `output.*` produced cold from SKILL.md
 - Facilitator kit: copied into your folder, adapted to your organisation and data (inputs, constraints, do-nots), `Source:` on the README's first line
 - Rungs 2+ (static page, MCP, API/A2A) only after rung 1 works; never claim a rung you did not build
-- **30:00, Sachin — comms layer:** cut what adds nothing · remove the AI tells · rewrite the README by hand
+- **30:00, Sachin — comms layer:** cut what adds nothing · remove the AI tells · rewrite the README in your own words
 - Push at 33:00; unfinished is fine, absent is not
 > Speaker note: Rafa briefs and calls 5, 10 min; Sachin takes over at 15 for the comms rules; Rafa calls "push" at 18. Private kits: content local, stub only. Commit is `S2: <name>: factory from <source>`.
 

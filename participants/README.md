@@ -10,7 +10,7 @@ participants/<name>/
   LOG.md              the one append-only autolog for everything in this folder
 ```
 
-Your harness creates the folder and writes `inventory.md`: paste Block 1 of `instructions/S1-inventory.md` (and later Block 2) and say "do this"; the pre-work email's Block A does the first push. No harness? `instructions/no-harness.md`. Rule for the exercise: read other people's inventories only through your agent, never in the browser.
+Your harness creates the folder and writes `inventory.md`: paste Block 1 of `instructions/S1-inventory.md` (and later Block 2) and say "do this"; the pre-work email's Block A does the first push. Rule for the exercise: read other people's inventories only through your agent, never in the browser.
 
 ## The one inventory schema
 
