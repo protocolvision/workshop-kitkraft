@@ -83,12 +83,12 @@ Each rung of the S2/S3 interface ladder has an open standard. Name them; do not 
 
 | Rung | Standard | Note |
 |---|---|---|
-| Kit | **SKILL.md / Agent Skills** — folder with `SKILL.md` (name, description, body); open standard from Anthropic, late 2025; stewarded with AGENTS.md under the Linux Foundation's Agentic AI Foundation; registry at skills.sh | The workshop's kit template is this shape |
-| Project context | **AGENTS.md** — plain markdown, no required fields; read by 30+ agents; Claude Code still reads CLAUDE.md (Aug 2026) | https://www.morphllm.com/agents-md-guide (secondary; cite the spec) |
-| Factory → tool | **MCP** (2026-07-28 spec: Streamable HTTP, OAuth 2.1) | C3PO exposes one |
-| Factory → factory | **A2A v1.0/1.0.1** — Agent Card at `/.well-known/agent-card.json`, eight-state task lifecycle, JSON-RPC; donated to Linux Foundation | "HTTP for agent collaboration" |
-| Payments | **x402** (Coinbase, HTTP 402 micropayments), **AP2** (Google, signed mandates) | Rao's robotics marketplace uses x402 |
-| Identity / trust | **ERC-8004** — onchain agent identity, reputation, validation registries | Rao's robotics marketplace uses 8004 |
+| Kit | **SKILL.md / Agent Skills** — folder with `SKILL.md` (name, description, body); open standard from Anthropic, late 2025; stewarded with AGENTS.md under the Linux Foundation's Agentic AI Foundation; registry at skills.sh · spec: https://agentskills.io/specification | The workshop's kit template is this shape |
+| Project context | **AGENTS.md** — plain markdown, no required fields; read by 30+ agents; Claude Code still reads CLAUDE.md (Aug 2026) · spec: https://agents.md/ | https://www.morphllm.com/agents-md-guide is secondary; cite the spec |
+| Factory → tool | **MCP** (2026-07-28 spec: Streamable HTTP, OAuth 2.1) · https://modelcontextprotocol.io/specification/2025-06-18 | C3PO exposes one |
+| Factory → factory | **A2A v1.0/1.0.1** — Agent Card at `/.well-known/agent-card.json`, eight-state task lifecycle, JSON-RPC; donated to Linux Foundation · https://a2a-protocol.org/latest/specification/ | "HTTP for agent collaboration" |
+| Payments | **x402** (Coinbase, HTTP 402 micropayments) https://www.x402.org/ · **AP2** (Google, signed mandates) | Rao's robotics marketplace uses x402 |
+| Identity / trust | **ERC-8004** — onchain agent identity, reputation, validation registries · https://eips.ethereum.org/EIPS/eip-8004 | Rao's robotics marketplace uses 8004 |
 
 Academic anchors:
 - Heylighen, Francis. "Stigmergy as a Universal Coordination Mechanism I: Definition and Components." *Cognitive Systems Research* 38 (2016): 4–13.
