@@ -18,7 +18,7 @@ Steps:
 7. When the participant says "comms": in README.md and SKILL.md cut every sentence that adds nothing, remove AI tells (hedges, "leverage", triple adjectives, summaries of what was just said), and hand the README back for the participant to rewrite the Job line in their own words.
 8. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. Append `| <ISO timestamp> | S2 | <name> | progress | factory from <source>: rung <n>; SKILL, example |` to `participants/<name>/LOG.md` (`<source>` = `inventory` or `facilitator/rafa` / `facilitator/sachin`). Commit `S2: <name>: factory from <source>`, pull --rebase, push at the facilitator's "push now"; if rejected, pull --rebase and push again.
 
-Failures: the example does not reproduce from SKILL.md alone → that is the finding: fix SKILL.md, not the output. Push rejected twice → report the error text; the participant posts it in #kitcraft and retries at the reconvene; nobody commits the files for them.
+Failures: the example does not reproduce from SKILL.md alone → that is the finding: fix SKILL.md, not the output. Push rejected twice → report the error text; the participant posts it in #workshop-kitkraft and retries at the reconvene; nobody commits the files for them.
 Do not: touch other folders; write steps the participant has not confirmed; put secrets or client data in examples; claim a rung you did not build; drop the Source line when converting a facilitator kit.
 
 Report: the Source line (if any), the `Exports:` and `Interface:` lines verbatim, the `description` line verbatim, the example input name, the push result.

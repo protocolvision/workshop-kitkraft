@@ -1,6 +1,6 @@
 # Instructions — paste into your harness
 
-Each file below is written for your harness, not for you. Open your harness at the clone root (the folder containing `AGENTS.md`), paste the whole file, and say "do this". The pins in #kitcraft point here whenever a block is too long for Discord.
+Each file below is written for your harness, not for you. Open your harness at the clone root (the folder containing `AGENTS.md`), paste the whole file, and say "do this". The pins in #workshop-kitkraft point here whenever a block is too long for Discord.
 
 `orient.md` (before S1) · `async-1.md` (after S1: choose the kit to convert, draft Job/Interface) · `S2-factory.md` (S2: convert it into a factory, rung 1) · `S2-critique.md` (S2 breakout) · `async-2.md` (after S2) · `S3-bridge.md` (S3 breakout). Also: `participants/README.md` (S1 inventory block).
 

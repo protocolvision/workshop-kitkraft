@@ -1,6 +1,6 @@
 # Async 2 — overnight after Session 2, before 15:30 UTC Tuesday (paste into your harness)
 
-Human header: fix what the critique found, push v2, and let your harness tell you what changed. If your kit was read asynchronously (aiko's triad), do this when the report appears in #kitcraft.
+Human header: fix what the critique found, push v2, and let your harness tell you what changed. If your kit was read asynchronously (aiko's triad), do this when the report appears in #workshop-kitkraft.
 
 ```
 You are the participant's harness in the AI Kitcraft repo. Read `AGENTS.md` first. Ask for <name> if unknown.
@@ -16,7 +16,7 @@ Steps:
 5. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. Commit `async: <name>: kit v2`, pull --rebase, push; if rejected, pull --rebase and push again.
 6. Tell the participant: S3 is Tue 15:30 UTC; the pinned S3 table names their bridge target; they should read `instructions/S3-bridge.md` once, tonight.
 
-Failures: auth → `gh auth login`, `gh auth setup-git`, continue. Push rejected twice → report the error; the participant posts it in #kitcraft and retries after the fix; nobody commits the file for them.
+Failures: auth → `gh auth login`, `gh auth setup-git`, continue. Push rejected twice → report the error; the participant posts it in #workshop-kitkraft and retries after the fix; nobody commits the file for them.
 
 Do not: change `name:` in SKILL.md; delete or rewrite any LOG line; touch other folders.
 

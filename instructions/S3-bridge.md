@@ -17,7 +17,7 @@ Steps:
 6. At minute 30 (the participant tells you): stop building. Write "Did it work" (yes / partly / no, with the evidence; kit-factory: whether the declared interface was enough; kit-kit: what had to be asked of a human) and "What a bridge turned out to be" — one paragraph, in the participant's words after they say it aloud; do not write it for them.
 7. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. Commit `S3: <name>: bridge to <target>`, pull --rebase, push; if rejected, pull --rebase and push again.
 
-Failures: auth → `gh auth login`, `gh auth setup-git`, continue. Push rejected twice → report the error, keep the file, tell the participant to say so in #kitcraft. Target kit's example does not run → that is a finding, log it as `blocker`, not a reason to stop. Triad-mate absent → switch to `facilitator/sachin/kit/` or `facilitator/rafa/kit/` and note the switch as a `decision` line.
+Failures: auth → `gh auth login`, `gh auth setup-git`, continue. Push rejected twice → report the error, keep the file, tell the participant to say so in #workshop-kitkraft. Target kit's example does not run → that is a finding, log it as `blocker`, not a reason to stop. Triad-mate absent → switch to `facilitator/sachin/kit/` or `facilitator/rafa/kit/` and note the switch as a `decision` line.
 
 Do not: edit `<target>/` or any other participant's file; paste the target kit's content into chat; invent a value the owner has not supplied; write in anyone else's bridge log.
 
