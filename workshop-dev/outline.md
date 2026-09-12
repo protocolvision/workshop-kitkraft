@@ -136,7 +136,7 @@ Slides and minute table: `sessions/S3-slides.md`, `sessions/S3-run-of-show.md`.
 
 **Exercise — Build a bridge (1 brief + 40, breakout rooms)** Sachin briefs; the rotation is pinned beforehand.
 Target: the kit you did **not** critique (the S2 ring reversed: A → C, B → A, C → B), or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`). Pairs bridge to each other only if neither critiqued the other; otherwise both use facilitator kits.
-Task: make your agent use the target kit to do one thing your own kit could not do alone. Paste `instructions/S3-bridge.md`: it copies `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md` to `participants/<you>/bridges/<target>.md`, asks for the one thing (and refuses to proceed without it), reads the target, works, and stops whenever it needs something not in the repo; the participant gets it from the owner in the room and the harness logs one `unblock` line. Stub target: the requester/owner blocks in `bridges/README.md` (request pushed → owner runs locally → response pushed; strict alternation).
+Task: make your agent use the target kit to do one thing your own kit could not do alone. Paste `instructions/S3-bridge.md`: it copies `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md` to `participants/<you>/bridges/<target>.md`, asks for the one thing (and refuses to proceed without it), reads the target, works, and stops whenever it needs something not in the repo; the participant gets it from the owner in the room and the harness logs one `unblock` line. Stub target: the requester/owner blocks in `instructions/S3-bridge.md` (request pushed → owner runs locally → response pushed; strict alternation).
 Soft Wallfacer rule: the exchange goes agent → repo → agent; human chat allowed to unblock, but every unblock is logged.
 One log per bridge, one writer. At minute 30 the harness stops building and writes "Did it work" and "What a bridge turned out to be" in the participant's words. Push by minute 38.
 
@@ -156,7 +156,7 @@ Slides, minute table, synthesis procedure, hypothesis rule and awareness tally: 
 
 **Showcase (14)** Rafa. Two bridges that worked, one that did not, the log on screen; chosen at 19:45 with Sachin (the cleanest file handoff, a transmittal bridge if there was one, the one with the most `unblock` lines).
 
-**Synthesis read-back (5)** Sachin. `bridges/SYNTHESIS.md` v1, built by Sachin's agent from the repo (`LOG.md` files, bridge logs, `transcripts/S1–S3/` including the `awareness-check.md` files) plus the live text of #kitcraft-transcripts pasted into a scratch file at 20:24, because the S4 transcript only exists after `/stop`. Numbers and the paragraphs verbatim; corrections from the room go in live. v2, with the S4 transcript folded in, within 48 h.
+**Synthesis read-back (5)** Sachin. `transcripts/S4/SYNTHESIS.md` v1, built by Sachin's agent from the repo (`LOG.md` files, bridge logs, `transcripts/S1–S3/` including the `awareness-check.md` files) plus the live text of #kitcraft-transcripts pasted into a scratch file at 20:24, because the S4 transcript only exists after `/stop`. Numbers and the paragraphs verbatim; corrections from the room go in live. v2, with the S4 transcript folded in, within 48 h.
 
 **Hypothesis (7)** Rafa states it; Sachin reads the verdict rule, then the table (supports / contradicts / silent per paragraph). Decision rule: retained if ≥⅔ support and none contradict; amended if supports ≥ contradicts and the contradictions name one missing element; rejected otherwise, and the room's definition wins and is recorded.
 
@@ -192,15 +192,14 @@ workshop-kitkraft/
   instructions/        pasteable blocks: orient, S1-inventory, async-1, S2-build, S2-critique, async-2, S3-bridge, no-harness
   PARTICIPANT_TEMPLATE/ the whole participant folder to copy: inventory.md, kit/ (README.md with Interface:, SKILL.md, examples/), bridges/TEMPLATE.md, LOG.md
   participants/<name>/ one folder per participant, the only place their harness writes: inventory.md (S1), kit/ (S2), bridges/<target>.md (S3), LOG.md; schema in participants/README.md
-  bridges/             README.md (S3 rules, transmittal procedure); SYNTHESIS.md, S4
   facilitator/<name>/  rafa, sachin in the same shape (kit/, LOG.md) as bridge targets; the brand kit by link
-  transcripts/         OpenRecapper output per session + awareness-check.md
+  transcripts/         per session: transcript, summary, awareness-check.md; S4 also SYNTHESIS.md
   workshop-dev/        this outline, checklists, pins, email, sessions/
 ```
 
 Names: `<name>` is the participant's GitHub username, lowercase, for the folder `participants/<name>/`.
 
-Public/private: each participant chooses. Public kits live in the repo. Private kits keep their content on the participant's machine and leave a stub in the repo — `participants/<name>/kit/README.md` with the job, inputs, outputs and interface but no content — so the kit is still discoverable and bridgeable. A bridge to a private kit runs through its owner's agent (the Rao–Jenna transmittal pattern, made executable in `bridges/README.md`), which is itself one of the bridge forms S3 surfaces. Sanitizing is the participant's responsibility; the pre-work email says what "public" means for the inventory (task names and one-line descriptions, no client names or data).
+Public/private: each participant chooses. Public kits live in the repo. Private kits keep their content on the participant's machine and leave a stub in the repo — `participants/<name>/kit/README.md` with the job, inputs, outputs and interface but no content — so the kit is still discoverable and bridgeable. A bridge to a private kit runs through its owner's agent (the Rao–Jenna transmittal pattern, made executable in `instructions/S3-bridge.md`), which is itself one of the bridge forms S3 surfaces. Sanitizing is the participant's responsibility; the pre-work email says what "public" means for the inventory (task names and one-line descriptions, no client names or data).
 
 Working mode: every participant opens their harness at the clone root, writes only in `participants/<name>/`, the one folder they own (`AGENTS.md` says so; the boundary is enforced by instruction, not by the working folder), reads anywhere, and pushes to `main`. `AGENTS.md` instructs the harness: commit, `pull --rebase`, push; on rejection pull --rebase and push again; a conflict can only be in your own folder, keep both; never edit outside your folder; never delete. The rehearsal ran six concurrent writers on one branch with one rejection retried three times and no lost work; on the real day only per-person files change, so conflicts are rarer still.
 
@@ -271,7 +270,7 @@ Detail and owners: `prep-checklist.md`.
 
 ### 7. After Tuesday (decided)
 
-Minimum, and the only thing planned: the repo stays public; `bridges/SYNTHESIS.md` v2 with the awareness profile is posted in Discord (#kitcraft and #symposium-2026) within 48 hours; both facilitators' kits stay as targets. The consent notice says exactly this. Any further use of the material (a C3PO corpus ingest, a CMM case-study page, a Protocolized post by a participant) would need a new notice and is not promised.
+Minimum, and the only thing planned: the repo stays public; `transcripts/S4/SYNTHESIS.md` v2 with the awareness profile is posted in Discord (#kitcraft and #symposium-2026) within 48 hours; both facilitators' kits stay as targets. The consent notice says exactly this. Any further use of the material (a C3PO corpus ingest, a CMM case-study page, a Protocolized post by a participant) would need a new notice and is not promised.
 
 ---
 
@@ -298,7 +297,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - Schedule: S1 is 60 min, not 90 (ice-breaker 9, situating 10, theory 14, exercise 17, close 7); S2 is Monday 20:00 UTC, so Async 1 is a three-hour gap with the README only and Async 2 is the overnight. Header table in UTC/Berlin/Pacific. (OBS 1, 2; rafa 10, 11; sachin 3, 21)
 - S2 timing compressed to build 20 / critique 13 with room moves inside / close 10. (sachin 20)
 - Triads are the group unit, with the critique ring, the reversed S3 ring, the pair rule, the stub-to-strongest-reader rule and the absence rule; rooms are breakout-1…5. (OBS 3; rafa 13, 16, 27, 33; sachin 5, 7, 8, 10, 11)
-- One log per bridge, one writer; transmittal procedure for stubs in `bridges/README.md`. (OBS 7; sachin 9, 11, 39)
+- One log per bridge, one writer; transmittal procedure for stubs in `instructions/S3-bridge.md`. (OBS 7; sachin 9, 11, 39)
 - No private repo: content stays on the machine, stub public, bridge through the owner's agent. No portal: the fallback is paste in #kitcraft, facilitator commits. (OBS 8; rafa 6, 15; sachin 4, 23, 30)
 - Ruleset on `main`: block force-push and deletion; invites sent as registrations arrive. (OBS 4, 5)
 - Push rule with retry and conflict recipe; NAME = GitHub username; facilitator clause; never-delete-a-line rule, in `AGENTS.md`. (OBS 6, 26; rafa 21, 37; sachin 2, 15, 38)

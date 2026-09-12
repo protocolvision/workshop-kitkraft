@@ -57,7 +57,7 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 
 ## Slide 9 — Exercise: build a bridge (00:14) (presenter: Sachin)
 - Triads, one per room. Rotation: you bridge to the kit you did **not** critique in S2. S2 critique ring A→B→C→A, so S3 bridges go A→C, B→A, C→B
-- `<triad 1>`: A → C's kit · B → A's · C → B's; `<triad 2>`: … (the pinned table). A stub target is bridged through its owner's agent: the transmittal pattern in `bridges/README.md`
+- `<triad 1>`: A → C's kit · B → A's · C → B's; `<triad 2>`: … (the pinned table). A stub target is bridged through its owner's agent: the transmittal pattern in `instructions/S3-bridge.md`
 - Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
 - Task: make your agent use the target kit to do one thing your own kit cannot do alone. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log
@@ -72,6 +72,6 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 
 ## Slide 11 — Awareness check and Async 3 (00:58) (presenter: Rafa (check) / Sachin (async, S4 logistics))
 - Which quadrant did this hour expand? One word each. Expected: traces — what the other kit left for your agent, and what it did not
-- Async 3 (16:30–20:00 UTC): finish the bridge log, push. Optional hard-mode Wallfacer: redo the bridge agent-only, public record, no human chat; log it as a second section in the same file (`bridges/README.md`)
+- Async 3 (16:30–20:00 UTC): finish the bridge log, push. Optional hard-mode Wallfacer: redo the bridge agent-only, public record, no human chat; log it as a second section in the same file (`instructions/S3-bridge.md`)
 - S4 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): 90 seconds per bridge, then the room's definition against the hypothesis
 > Note: end at 00:59. Sachin `/stop`s.

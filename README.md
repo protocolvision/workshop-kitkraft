@@ -25,7 +25,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
    - `bridges/<target>.md` (Session 3) — one file per bridge, written by you
    - `LOG.md` — the one autolog for everything in the folder
 5. **Everything goes straight to `main`. No branches, no PRs, no force-push.** Your harness commits, pulls with rebase, pushes, and retries if the push is rejected.
-6. Private kit? Keep the content on your own machine. Put only a stub `participants/<name>/kit/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `bridges/README.md`). There is no private repo.
+6. Private kit? Keep the content on your own machine. Put only a stub `participants/<name>/kit/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `instructions/S3-bridge.md`). There is no private repo.
 7. No working harness, or no GitHub account? Follow `instructions/no-harness.md`: write the file by hand, paste it in #kitcraft, a facilitator commits it under your name.
 
 ## Layout
@@ -37,9 +37,8 @@ CLAUDE.md          points Claude Code at AGENTS.md
 instructions/      blocks to paste into your harness (orient, S1-inventory, async-1, S2-build, S2-critique, async-2, S3-bridge, no-harness)
 PARTICIPANT_TEMPLATE/  the whole participant folder to copy: inventory.md, kit/, bridges/TEMPLATE.md, LOG.md
 participants/<name>/   one folder per participant, the only place their harness writes (S1–S3)
-bridges/           README.md: the S3 rules and the transmittal procedure; SYNTHESIS.md (S4)
 facilitator/<name>/    facilitator kits in the same shape, usable as bridge targets
-transcripts/       OpenRecapper output per session
+transcripts/       per session: transcript, summary, awareness-check; S4 also holds SYNTHESIS.md
 workshop-dev/      facilitator material: outline, resources, checklists, session materials
 site/              the landing page at https://ai.protocolized.dev/kitcraft/ (source + deploy notes)
 registration/      the sign-up form: link, questions, how answers feed the prep checklist
@@ -66,6 +65,6 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, 
 | 1A clinic (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
 | S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` |
 | S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<name>/bridges/<target>.md` |
-| S4 Recap | Tue Sep 22, 20:00 | 60 min | `bridges/SYNTHESIS.md` |
+| S4 Recap | Tue Sep 22, 20:00 | 60 min | `transcripts/S4/SYNTHESIS.md` |
 
 Berlin is UTC+2, Pacific is UTC−7. Times in all three zones are pinned in #kitcraft.

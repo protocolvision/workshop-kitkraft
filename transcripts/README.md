@@ -1,1 +1,3 @@
-OpenRecapper output per session: transcript + AI summary, copied here after each `/stop`. Plenary (#kafka) only; breakouts are not recorded. Recordings are pruned after 7 days; transcripts stay.
+# Transcripts — facilitator-only session records
+
+One folder per session, `S1/` … `S4/`, written by Sachin within 30 min of each `/stop`: `transcript.md` (OpenRecapper output, segments concatenated), `summary.md` (the AI summary, or Sachin's agent's if the relay is off), `awareness-check.md` (the close round's answers tallied by quadrant). `S4/` also holds `SYNTHESIS.md`, the read-back built from `participants/*/LOG.md`, `participants/*/bridges/*.md` and the live channel text (v1 at S4, v2 within 48 h). Plenary (#kafka) only; breakouts and 1A are not recorded. Recordings are pruned after 7 days; the text stays. Participants do not write here.

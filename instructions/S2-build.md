@@ -1,6 +1,6 @@
 # S2 build — 20 minutes in #kafka (paste into your harness)
 
-Human header: your harness fills `participants/<name>/kit/` — `SKILL.md` and one example — from your answers; it never invents a step. Ship by the end of Session 2; fix what your triad's agent found overnight (`async-2.md`) and push v2. Private kits: the content stays on your machine; the README in the repo is a stub with job, inputs and outputs and no content, and other people's agents reach the kit through you and your agent (`bridges/README.md`). There is no private repo.
+Human header: your harness fills `participants/<name>/kit/` — `SKILL.md` and one example — from your answers; it never invents a step. Ship by the end of Session 2; fix what your triad's agent found overnight (`async-2.md`) and push v2. Private kits: the content stays on your machine; the README in the repo is a stub with job, inputs and outputs and no content, and other people's agents reach the kit through you and your agent (`instructions/S3-bridge.md`). There is no private repo.
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 2 build. Read `AGENTS.md` first.

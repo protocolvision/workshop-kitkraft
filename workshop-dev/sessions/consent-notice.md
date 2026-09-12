@@ -16,7 +16,7 @@ Two versions. The short one is read aloud at the top of S1 by Sachin, who opens 
 - Live: #kitcraft-transcripts, visible to members of this Discord server.
 - After each session: `transcripts/S<n>/` in https://github.com/protocolvision/workshop-kitkraft — a public repo, readable by anyone, indexable by search engines and by AI crawlers.
 - Your harness's log lines: `participants/<name>/LOG.md`, in the same public repo. Bridge files in `participants/<name>/bridges/` name the people involved.
-- After the workshop: two things and nothing else. The repo stays public, and the synthesis (`bridges/SYNTHESIS.md`, with the room's awareness profile) is posted in Discord within 48 hours. No further use of the material is planned; any new use would need a new notice.
+- After the workshop: two things and nothing else. The repo stays public, and the synthesis (`transcripts/S4/SYNTHESIS.md`, with the room's awareness profile) is posted in Discord within 48 hours. No further use of the material is planned; any new use would need a new notice.
 
 **Retention.** Raw audio is pruned by the recorder after 7 days. Transcripts, summaries and log lines are kept indefinitely in the repo unless you ask for removal.
 

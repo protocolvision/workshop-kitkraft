@@ -43,7 +43,7 @@ At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> 
 ## PIN 4 — triads for S3 (Tue Sep 22, 09:00 UTC)
 
 Same rooms. Target = the kit you did **not** critique (the S2 ring reversed: A → C, B → A, C → B). Pairs: both bridge to a facilitator kit.
-<triads: one line per group — **Triad 1 → breakout-1:** a → c's kit · b → a's kit · c → b's kit. Stub targets: "(through <owner>'s agent; both of you also use the blocks in `bridges/README.md`)".>
+<triads: one line per group — **Triad 1 → breakout-1:** a → c's kit · b → a's kit · c → b's kit. Stub targets: "(through <owner>'s agent; both of you also use the blocks in `instructions/S3-bridge.md`)".>
 Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`); say so in your log. One log per bridge, written by the person bridging: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". Hypothesis for tomorrow, stated at 15:43: *a bridge is a protocol between two factories — the smallest thing both sides agree not to change.*
 
 ## Pre-written posts (not pinned)

@@ -11,5 +11,5 @@ Each file below is written for your harness, not for you. Open your harness at t
 | S2 breakout | `S2-critique.md` | reads a triad-mate's kit cold, reports, logs blockers |
 | overnight | `async-2.md` | fixes the blockers, pushes v2 |
 | S3 breakout | `S3-bridge.md` | uses the target kit, writes the bridge file |
-| S3, stub targets | `bridges/README.md` | requester and owner blocks |
+| S3, stub targets | `S3-bridge.md`, second section | requester and owner blocks |
 | no harness or no GitHub | `no-harness.md` | the by-hand path: write, paste in #kitcraft, a facilitator commits |

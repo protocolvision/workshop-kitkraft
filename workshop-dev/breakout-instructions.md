@@ -2,7 +2,7 @@
 
 Triads are the group unit (two for 6; for 10–15, as many triads as possible and the remainder in pairs, never a four or a one). Critique ring inside a triad: A reads B, B reads C, C reads A; S3 reverses it, so you bridge to the kit you did not critique. A pair reads each other in S2 and both bridge to a facilitator kit in S3. Rooms: breakout-1 … breakout-5, one per group.
 
-Discord's 2000-character limit means each post carries a 5-line human header and a file path; the canonical blocks are `instructions/S2-critique.md` and `instructions/S3-bridge.md` (with the STUB and ABSENT variants inside them) and, for the stub bridge, the two role blocks in `bridges/README.md`. The posts below are the human text.
+Discord's 2000-character limit means each post carries a 5-line human header and a file path; the canonical blocks are `instructions/S2-critique.md` and `instructions/S3-bridge.md` (with the STUB and ABSENT variants inside them) and, for the stub bridge, the two role blocks in `instructions/S3-bridge.md`. The posts below are the human text.
 
 ## Post at 20:35 UTC Mon — S2 critique (13 min)
 
@@ -20,7 +20,7 @@ Facilitator sequence: `/stop` → post → move people → Rafa floats the odd r
 > **Rooms open — 40 minutes. Back in #kafka at 16:25.**
 > Targets (the kit you did not critique): <one line per room: a → c · b → a · c → b; pairs: both → a facilitator kit>. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; say so in your log.
 > Paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". It creates `participants/<you>/bridges/<target>.md`, asks you for the one thing, works, and stops whenever it needs something not in the repo — get that from the owner next to you, hand it over, it logs the unblock.
-> Stub targets: requester and owner also use the blocks in `bridges/README.md` (request pushed → owner runs locally → response pushed).
+> Stub targets: requester and owner also use the blocks in `instructions/S3-bridge.md` (request pushed → owner runs locally → response pushed).
 > At 16:15 say "minute 30" to your harness: it stops building and writes the paragraph in your words. Push by 16:23.
 
 Rules the facilitators apply: a triad that is a pair today bridges to each other's kits only if neither critiqued the other's in S2; otherwise both use facilitator kits. A room stuck for 5 minutes gets a facilitator, who supplies the missing thing; the participant logs it as `unblock`. Facilitators do not touch participants' files.

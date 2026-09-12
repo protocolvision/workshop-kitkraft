@@ -5,7 +5,7 @@ Presenter split: Sachin — opener, debrief round, synthesis read-back, verdict,
 ## Before the session (Sachin, 19:30–19:55)
 
 1. `git pull --rebase`; note the commit hash. Confirm one bridge log per participant exists; list any missing in #kitcraft with a 19:50 push deadline.
-2. Start the synthesis agent (procedure below) → `bridges/SYNTHESIS.md` v0, not yet pushed.
+2. Start the synthesis agent (procedure below) → `transcripts/S4/SYNTHESIS.md` v0, not yet pushed.
 3. With Rafa at 19:45: pick the three recap files (slide 2) and the three showcase bridges (slide 4); post the paths in #kitcraft.
 4. 19:55: screen-share check.
 
@@ -20,7 +20,7 @@ Presenter split: Sachin — opener, debrief round, synthesis read-back, verdict,
 | 20:22 | 22 | — | questions | buffer | — | — | on |
 | 20:24 | 24 | Rafa | Slide 4: showcase 1 (worked) | selects #kitcraft-transcripts since 20:00 → scratch file → agent merges into SYNTHESIS v1 | bridge owner talks to their log on screen | — | on |
 | 20:28 | 28 | Rafa | showcase 2 (transmittal, a stub target) | agent finishes v1; reads it once | — | — | on |
-| 20:32 | 32 | Rafa | showcase 3 (did not work) | pushes `bridges/SYNTHESIS.md` v1; posts link | — | SYNTHESIS v1 | on |
+| 20:32 | 32 | Rafa | showcase 3 (did not work) | pushes `transcripts/S4/SYNTHESIS.md` v1; posts link | — | SYNTHESIS v1 | on |
 | 20:38 | 38 | Sachin | listens | Slide 5: read-back — numbers, the paragraphs verbatim; corrections typed live under §6 | correct out loud | SYNTHESIS §1, §2, §6 | on |
 | 20:43 | 43 | Rafa → Sachin | states the hypothesis (60 s) | Slide 6: verdict rule, table, verdict | contest the classification | SYNTHESIS §3 | on |
 | 20:50 | 50 | Sachin | keeps time | Slide 7: final round; tallies live in SYNTHESIS §5; adds async answers from #kitcraft | one word + one clause each | SYNTHESIS §5 profile | on |
@@ -38,7 +38,7 @@ After (Sachin, by 21:30): `transcripts/S4/transcript.md`, `summary.md`, `awarene
 5. At 20:24: the S4 live-channel scratch file (uncommitted), for the debrief reports.
 6. The #kitcraft channel: async participants' reports and final-round answers.
 
-Output `bridges/SYNTHESIS.md`, ≤120 lines: §1 numbers (participants per session by `LOG.md` line, kits, stubs, bridges attempted / worked, unblocks by kind, blockers fixed in v2) · §2 the paragraphs verbatim, then five lines of synthesis · §3 hypothesis table and verdict · §4 what the critique caught and what v2 changed · §5 awareness profile (quadrant × S1 / S2 / S3 / S4-final, expected vs actual) · §6 corrections from the room · §7 sources (paths + commit hash). Nothing in it that is not traceable to a file or a spoken line.
+Output `transcripts/S4/SYNTHESIS.md`, ≤120 lines: §1 numbers (participants per session by `LOG.md` line, kits, stubs, bridges attempted / worked, unblocks by kind, blockers fixed in v2) · §2 the paragraphs verbatim, then five lines of synthesis · §3 hypothesis table and verdict · §4 what the critique caught and what v2 changed · §5 awareness profile (quadrant × S1 / S2 / S3 / S4-final, expected vs actual) · §6 corrections from the room · §7 sources (paths + commit hash). Nothing in it that is not traceable to a file or a spoken line.
 
 ## Bridge hypothesis test (rule, read before the table)
 
