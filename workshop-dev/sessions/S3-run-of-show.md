@@ -1,6 +1,6 @@
 # S3 — Bridges. Run of show (Tue Sep 22, 15:30–16:30 UTC)
 
-Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the presenter split. Voice #kafka, breakouts breakout-1 … breakout-5 (one triad each, per the S3 pin), text #kitcraft. Slides: `S3-slides.md`.
+Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the presenter split. Voice #kafka, breakouts breakout-1 … breakout-5 (one breakout group each, per the S3 pin), text #kitcraft. Slides: `S3-slides.md`.
 
 | Clock (UTC) | Min | Presenter | Lead (Rafa) | Co-facilitator (Sachin) | Participants | Artifact expected | Recorder |
 |---|---|---|---|---|---|---|---|
@@ -27,7 +27,7 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the presenter split
 
 Contingencies
 - Recorder: two segments. Whether a second `/record` with the same name appends or overwrites is settled at the Sep 17 tech rehearsal (`recorder-runbook.md`); if it overwrites, the second segment is `KITCRAFT-S3B`, added to `RECORD_MEETING_NAMES` on Sep 17.
-- A stub target: its triad bridges through the owner's agent (transmittal blocks in `instructions/S3-bridge.md`). If the owner is not in the room, the bridger swaps to `facilitator/rafa/kit/` and logs the swap as a `decision` line.
-- If a triad is a pair (a drop-out), the two bridge to each other's kits only if neither critiqued the other's in S2; otherwise both use facilitator kits.
+- A stub target: its breakout group bridges through the owner's agent (transmittal blocks in `instructions/S3-bridge.md`). If the owner is not in the room, the bridger swaps to `facilitator/rafa/kit/` and logs the swap as a `decision` line.
+- If a breakout group is a pair (a drop-out), the two bridge to each other's kits only if neither critiqued the other's in S2; otherwise both use facilitator kits.
 - A room stuck for 5 minutes gets a facilitator; the facilitator supplies the missing thing and the participant logs it as `unblock`. Facilitators do not touch the participant's files.
 - Two people editing the same bridge file is a rebase conflict; that is why each log has one writer. If a shared log appears anyway, Sachin splits it into two files after the session and notes it in the facilitator notes.

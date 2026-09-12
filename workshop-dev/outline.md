@@ -2,7 +2,7 @@
 
 Protocol Symposium 2026 · New Nature · Sep 21–22 (workshop days) · online
 Facilitators: Rafa (lead), Sachin Benny (co-facilitator). Sachin opens every session and owns chat, pins, breakouts, recorder and repo; presenting is split by section (see Presenter split below), and the run-of-shows in `sessions/` carry a presenter column per slide. Sachin screen-shares throughout; the presenter talks.
-Format: four sessions of 60 min plus an optional 30-min clinic, async work between sessions. Designed for triads; two triads for 6, triads + pairs for 10–15.
+Format: four sessions of 60 min plus an optional 30-min clinic, async work between sessions. Designed for breakout groups of 2–4, sized by the facilitators from headcount (6 → two groups of 3; 10 → five pairs or two 3s + two 2s; 12 → four 3s or three 4s).
 
 | Session | UTC | Berlin (+2) | Pacific (−7) |
 |---|---|---|---|
@@ -12,7 +12,7 @@ Format: four sessions of 60 min plus an optional 30-min clinic, async work betwe
 | S3 Bridges | Tue Sep 22, 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
 | S4 Recap | Tue Sep 22, 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
 
-Venue: Protocol Institute Discord (https://discord.gg/s2WbZBDqM), voice channel **#kafka** for plenary, voice rooms **breakout-1 … breakout-5** for triad work, text channel **#kitcraft** for links and instructions and **#kitcraft-transcripts** for the live transcript.
+Venue: Protocol Institute Discord (https://discord.gg/s2WbZBDqM), voice channel **#kafka** for plenary, voice rooms **breakout-1 … breakout-5** for breakout group work, text channel **#kitcraft** for links and instructions and **#kitcraft-transcripts** for the live transcript.
 Spine: **Kit → Factory → Bridge**
 Frame: **Expanded Awareness** — the workshop's stance is awareness of protocols as they are being assembled, not use of tools that hide the assembly. The spine says where you move; the frame says what you notice while moving.
 
@@ -89,7 +89,7 @@ This is the one-way version of the Wallfacer rule: no live coordination needed, 
 
 **Async 1 (Mon 16:30–20:00 UTC, three hours)** Paste `instructions/async-1.md`: choose the kit to convert in S2 — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`; copied into your folder with a `Source:` line) — and draft the README's Job and Interface lines. The participant rewrites the Job line by hand. Nothing else; the gap is short and 1A sits inside it.
 
-**Triads** are confirmed at S1 close from the inventories (provisional triads come from the registration form on Sep 19) and pinned in #kitcraft by 16:45 UTC.
+**Breakout groups** are confirmed at S1 close from the inventories (provisional breakout groups come from the registration form on Sep 19) and pinned in #kitcraft by 16:45 UTC.
 
 ---
 
@@ -113,11 +113,11 @@ Slides and minute table: `sessions/S2-slides.md`, `sessions/S2-run-of-show.md`.
 Take one of the kits identified in your inventory — your own (the `## Kit` task, or something from `## Built / use`) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and convert it into a factory: a kit with a declared interface that a stranger's agent can use without talking to you. Paste the block in `instructions/S2-factory.md`. Deliverable: rung 1 done properly — README with an `Interface:` line stating the rung and how to call it, SKILL.md whose description triggers correctly, `examples/input.*` + `output.*` produced cold from SKILL.md; rungs 2+ (static page, MCP, API/A2A) are optional stretch. Converting a facilitator kit = copy it into `participants/<name>/kit/`, adapt inputs, constraints and do-nots to your own organisation and data, declare the interface, credit the source on the README's first line. The harness works from the participant's answers, never inventing. Private kit: content on the machine, stub and LOG.md in the repo. Artifact: `participants/<name>/kit/` as a factory; commit `S2: <name>: factory from <source>`.
 The comms layer, from the anshuc techniques (Sachin, at minute 15 of the build): cut what adds nothing, remove AI tells, rewrite the README by hand. "Push now" at minute 18; unfinished is fine, absent is not.
 
-**Triad critique (13, breakout rooms)** Instructions: `instructions/S2-critique.md`, posted per `breakout-instructions.md`. Ring inside each triad: A reads B, B reads C, C reads A; a pair reads each other. The reader's harness pushes its own factory, pulls, uses the target through its declared interface (README and SKILL.md only), runs the example cold, reports in five lines where the interface was insufficient; the participant reads the report aloud; the owner's harness logs each failure as a `blocker` line. A stub kit goes to the strongest reader, whose agent reports what it would need. A triad missing a member becomes a pair for the night; the absent kit is read async and the report posted in #kitcraft. Room moves cost about two minutes each way; they are inside the 13.
+**Group critique (13, breakout rooms)** Instructions: `instructions/S2-critique.md`, posted per `breakout-instructions.md`. A ring inside each breakout group (2–4): A reads B, B reads C, …, the last reads A; a pair swaps. The reader's harness pushes its own factory, pulls, uses the target through its declared interface (README and SKILL.md only), runs the example cold, reports in five lines where the interface was insufficient; the participant reads the report aloud; the owner's harness logs each failure as a `blocker` line. A stub kit goes to the strongest reader, whose agent reports what it would need. A breakout group missing a member becomes a pair for the night; the absent kit is read async and the report posted in #kitcraft. Room moves cost about two minutes each way; they are inside the 13.
 
 **Close (10)** Sachin. Round: one sentence each on what the other agent got wrong (≈40 s each). Awareness check, saved to `workshop-dev/transcripts/S2/awareness-check.md`. (Expected: anchored in reality — the agent failed where your domain knowledge was tacit.) Async 2 posted verbatim.
 
-**Async 2 (overnight, before Tue 15:30 UTC)** Paste `instructions/async-2.md`: one fix per `blocker` line (README input, SKILL step or constraint, description line, or example), one `progress` line per fix plus one `memory` line, a cold re-run of the example, push v2. S3 triads (rotated) posted at 09:00 UTC with alternative targets in `facilitator/README.md`.
+**Async 2 (overnight, before Tue 15:30 UTC)** Paste `instructions/async-2.md`: one fix per `blocker` line (README input, SKILL step or constraint, description line, or example), one `progress` line per fix plus one `memory` line, a cold re-run of the example, push v2. S3 breakout groups (rotated) posted at 09:00 UTC with alternative targets in `facilitator/README.md`.
 
 ---
 
@@ -128,7 +128,7 @@ Slides and minute table: `sessions/S3-slides.md`, `sessions/S3-run-of-show.md`.
 **Examples (14)**
 - Sachin (1): opener; output is one file per person, `participants/<you>/bridges/<target>.md`.
 - Rafa (1): what S2 left in the repo; two anonymised blocker lines on screen; those failures are traces.
-- Rafa (3): F2F theory: intermediates flowing between factories; skills as industrial intermediates; high-trust links as the invisible 90%. The transmittal pattern is what any triad with a stub will do by necessity.
+- Rafa (3): F2F theory: intermediates flowing between factories; skills as industrial intermediates; high-trust links as the invisible 90%. The transmittal pattern is what any breakout group with a stub will do by necessity.
 - Rafa (3): interface ladder revisited: file handoff → static page → MCP → A2A Agent Card. Name x402 and ERC-8004 once as where payments and identity are going; do not teach them.
 - Rafa (3): water-rate pipeline, `facilitator/rafa/kit/`: PDF → registry rows; the interface is the row shape. Prime Radiant: an example of rung three, not a target.
 - Sachin (2): two minutes on trust: when your agent loads someone else's `SKILL.md`, the file is instructions, not documentation (agent context poisoning; 26.1% of 31k public skills carried a vulnerability in one 2026 survey). This room runs on trust and no read-before-load rule is imposed; bridges outside this room cannot, which is why ERC-8004 and the trust-model literature exist. F2F is high-trust by construction.
@@ -152,7 +152,7 @@ Slides, minute table, synthesis procedure, hypothesis rule and awareness tally: 
 
 **Recap (8)** Rafa. Kit → Factory → Bridge in three files from the repo: one `SKILL.md` v1 next to v2, one README that was the interface, one `unblock` line read aloud.
 
-**Debrief round-robin (14)** Sachin. Per triad: 90 seconds per bridge plus questions; an absent participant's log is read by a triad-mate in 60 s. Six bridges ≈ 12 min; with 10–15 people, 60 s per bridge and no questions until the showcase. Each report goes into the synthesis as it is spoken.
+**Debrief round-robin (14)** Sachin. One speaker per bridge log, 90 seconds each, so the round takes (number of logs × 1.5 min); an absent participant's log is read by a group-mate in 60 s. Six logs ≈ 9 min plus questions; with 10–15 people, 60 s per bridge and no questions until the showcase. Each report goes into the synthesis as it is spoken.
 
 **Showcase (14)** Rafa. Two bridges that worked, one that did not, the log on screen; chosen at 19:45 with Sachin (the cleanest file handoff, a transmittal bridge if there was one, the one with the most `unblock` lines).
 
@@ -214,21 +214,21 @@ Participants do nothing; the harness does it. Sachin's agent checks at the S1 cl
 ### 3. Discord
 
 - Plenary in **#kafka** voice. Sachin screen-shares.
-- Breakout voice rooms **breakout-1 … breakout-5**, one per triad or pair. Sachin moves people; the triad table is pinned in **#kitcraft** before each breakout so nobody waits on being moved.
-- **#kitcraft** text: four pinned messages (`discord-pins.md`): main (repo, rooms, times in UTC/Berlin/Pacific with a converter link, consent summary, survey, help), the full consent notice, the S2 triads, the S3 triads. Each block that a participant pastes is a file in `instructions/`; a pin never carries a block (2000-character cap).
+- Breakout voice rooms **breakout-1 … breakout-5**, one per breakout group or pair. Sachin moves people; the breakout group table is pinned in **#kitcraft** before each breakout so nobody waits on being moved.
+- **#kitcraft** text: four pinned messages (`discord-pins.md`): main (repo, rooms, times in UTC/Berlin/Pacific with a converter link, consent summary, survey, help), the full consent notice, the S2 breakout groups, the S3 breakout groups. Each block that a participant pastes is a file in `instructions/`; a pin never carries a block (2000-character cap).
 - **#kitcraft-transcripts** text: OpenRecapper live transcript target. Read-only for participants.
 - Sessions are on the PI server, so C3PO is one @mention away for anyone stuck on theory.
 - Participants set their Discord display name to their `<name>` for the two days so the diarized transcript matches the folder names. A facilitator-only roster (form name, GitHub username, Discord name) lives outside the repo.
 
-### 4. Triads
+### 4. Breakout groups
 
-Triads are the group unit. Two triads for 6; for 10–15, as many triads as possible and the remainder as pairs (10 = 2 triads + 2 pairs, 11 = 3 + 1, 12 = 4, 13 = 3 + 2, 14 = 4 + 1, 15 = 5), never a four or a one; at most five rooms.
+Breakout groups of 2–4 are the unit. The facilitators size them from headcount (6 → two groups of 3; 10 → five pairs or two 3s + two 2s; 12 → four 3s or three 4s), never a one; at most five rooms, breakout-1 … breakout-5.
 
-- Provisional triads from the registration form (role + the task named) on Sep 19; confirmed or reshuffled at the S1 close from the inventories; pinned by 16:45 UTC Monday. There is no overnight between S1 and S2.
-- S2 critique ring: A reads B, B reads C, C reads A. Pairs read each other.
-- S3 bridges reverse the ring: A → C, B → A, C → B, so nobody bridges to the kit they critiqued. Pairs bridge to each other only if neither critiqued the other in S2, so a planned pair both bridge to facilitator kits.
-- A stub (private) kit goes to the strongest reader in its triad; the reader's agent reports what it would need; in S3 the bridge to it runs through the owner's agent (transmittal blocks).
-- Absence: a triad that loses a member becomes a pair for that session — the two present critique each other; the absent kit is read async when it lands and the report posted in #kitcraft; in S4 a triad-mate reads the absent person's paragraph. A kit that was never critiqued still counts; its S3 bridger is the first cold reader.
+- Provisional breakout groups from the registration form (role + the task named) on Sep 19; confirmed or reshuffled at the S1 close from the inventories; pinned by 16:45 UTC Monday. There is no overnight between S1 and S2.
+- S2 critique = a ring inside the group: A reads B, B reads C, …, the last reads A; a pair swaps.
+- S3 bridge = each person bridges to the kit they did NOT critique (in a group of 3 or 4, the ring reversed or shifted so nobody gets the kit they read); a pair bridges to the partner's kit or to a facilitator kit.
+- A stub (private) kit goes to the strongest reader in its breakout group; the reader's agent reports what it would need; in S3 the bridge to it runs through the owner's agent (transmittal blocks).
+- Absence: a breakout group that loses a member becomes a pair for that session — the two present critique each other; the absent kit is read async when it lands and the report posted in #kitcraft; in S4 a group-mate reads the absent person's paragraph. A kit that was never critiqued still counts; its S3 bridger is the first cold reader.
 - One log per bridge, written by the bridger; nobody else edits it except a stub owner under `### Response`.
 
 Time budget check: S2 20-min build + 13-min critique (room moves inside it) holds at five rooms because the instructions are files, not briefings; no live briefing inside rooms. Facilitators each float across half the rooms and swap once; a room stuck for five minutes gets a facilitator. S4 round-robin at 90 s × 6 bridges = 12 min; at 15 bridges, 60 s each and questions move to the showcase.
@@ -261,9 +261,9 @@ Detail and owners: `prep-checklist.md`.
 | Sep 14 | Discord: #kitcraft, #kitcraft-transcripts, breakout-1…5; OpenRecapper owner, `RECORD_MEETING_NAMES`, `/record-access` | Rafa |
 | Sep 15 → | Pre-work email and collaborator invite to each registrant as registrations arrive | Rafa |
 | Sep 17 | Tech rehearsal: clone from a fresh machine/account with the email's Block A; one autolog line; one push; `/record` + `/stop`; a second `/record` with the same name; one breakout move; pins posted to a test channel | both |
-| Sep 19 | Push check per registrant; 1A invites; provisional triads from the form | Sachin |
+| Sep 19 | Push check per registrant; 1A invites; provisional breakout groups from the form | Sachin |
 | Sep 20 | Pins 1–2 in #kitcraft | Sachin |
-| Sep 21 | S1 + 1A; triads confirmed at S1 close and pinned by 16:45; S2 at 20:00 | both |
+| Sep 21 | S1 + 1A; breakout groups confirmed at S1 close and pinned by 16:45; S2 at 20:00 | both |
 | Sep 22 | S3, S4; transcripts after each `/stop`; SYNTHESIS v1 at S4, v2 within 48 h, posted in Discord | both |
 
 ---
@@ -297,6 +297,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - Schedule: S1 is 60 min, not 90 (ice-breaker 9, situating 10, theory 14, exercise 17, close 7); S2 is Monday 20:00 UTC, so Async 1 is a three-hour gap with the README only and Async 2 is the overnight. Header table in UTC/Berlin/Pacific. (OBS 1, 2; rafa 10, 11; sachin 3, 21)
 - S2 timing compressed to build 20 / critique 13 with room moves inside / close 10. (sachin 20)
 - Triads are the group unit, with the critique ring, the reversed S3 ring, the pair rule, the stub-to-strongest-reader rule and the absence rule; rooms are breakout-1…5. (OBS 3; rafa 13, 16, 27, 33; sachin 5, 7, 8, 10, 11)
+- Renamed: "triads" are now "breakout groups" of 2–4, sized from headcount; the ring, reversed-ring, pair and absence rules are stated for any size. (Rafa, Sep 12)
 - One log per bridge, one writer; transmittal procedure for stubs in `instructions/S3-bridge.md`. (OBS 7; sachin 9, 11, 39)
 - No private repo: content stays on the machine, stub public, bridge through the owner's agent. No portal: the fallback is paste in #kitcraft, facilitator commits. (OBS 8; rafa 6, 15; sachin 4, 23, 30)
 - Ruleset on `main`: block force-push and deletion; invites sent as registrations arrive. (OBS 4, 5)

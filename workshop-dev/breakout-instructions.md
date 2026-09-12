@@ -1,6 +1,6 @@
 # Breakout instructions — what Sachin posts in #kitcraft before each breakout
 
-Triads are the group unit (two for 6; for 10–15, as many triads as possible and the remainder in pairs, never a four or a one). Critique ring inside a triad: A reads B, B reads C, C reads A; S3 reverses it, so you bridge to the kit you did not critique. A pair reads each other in S2 and both bridge to a facilitator kit in S3. Rooms: breakout-1 … breakout-5, one per group.
+Breakout groups of 2–4 are the unit, sized by the facilitators from headcount (6 → two groups of 3; 10 → five pairs or two 3s + two 2s; 12 → four 3s or three 4s). S2 critique = a ring inside the group: A reads B, B reads C, …, the last reads A; a pair swaps. S3 bridge = each person bridges to the kit they did NOT critique; a pair bridges to the partner's kit or to a facilitator kit. Rooms: breakout-1 … breakout-5, one per group.
 
 Discord's 2000-character limit means each post carries a 5-line human header and a file path; the canonical blocks are `instructions/S2-critique.md` and `instructions/S3-bridge.md` (with the STUB and ABSENT variants inside them) and, for the stub bridge, the two role blocks in `instructions/S3-bridge.md`. The posts below are the human text.
 
@@ -11,7 +11,7 @@ Discord's 2000-character limit means each post carries a 5-line human header and
 > Paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your factory, uses the target through its declared interface (README + SKILL.md, example run cold), gives you a 5-line report on where the interface was insufficient to read aloud, then logs the blockers about your own kit when you say "log mine".
 > Nobody explains their kit out loud until the reports are read. A facilitator visits each room once.
 
-Rules the facilitators apply: a stub kit goes to the strongest reader in the triad (their agent reports what it would need). A triad that has lost a member becomes a pair for the night: the two present read each other; the absent kit is read asynchronously when it lands and the report posted in #kitcraft.
+Rules the facilitators apply: a stub kit goes to the strongest reader in the breakout group (their agent reports what it would need). A breakout group that has lost a member becomes a pair for the night: the two present read each other; the absent kit is read asynchronously when it lands and the report posted in #kitcraft.
 
 Facilitator sequence: `/stop` → post → move people → Rafa floats the odd rooms, Sachin the even rooms → swap at 20:41 → "Reconvene" at 20:47 → `/record`.
 
@@ -23,7 +23,7 @@ Facilitator sequence: `/stop` → post → move people → Rafa floats the odd r
 > Stub targets: requester and owner also use the blocks in `instructions/S3-bridge.md` (request pushed → owner runs locally → response pushed).
 > At 16:15 say "minute 30" to your harness: it stops building and writes the paragraph in your words. Push by 16:23.
 
-Rules the facilitators apply: a triad that is a pair today bridges to each other's kits only if neither critiqued the other's in S2; otherwise both use facilitator kits. A room stuck for 5 minutes gets a facilitator, who supplies the missing thing; the participant logs it as `unblock`. Facilitators do not touch participants' files.
+Rules the facilitators apply: a pair bridges to the partner's kit or to a facilitator kit; in a group of 3 or 4 nobody gets the kit they critiqued. A room stuck for 5 minutes gets a facilitator, who supplies the missing thing; the participant logs it as `unblock`. Facilitators do not touch participants' files.
 
 Facilitator sequence: `/stop` → post → move people → Rafa odd rooms, Sachin even rooms → swap at 15:55 → "minute 30" post at 16:15 → "Reconvene" at 16:24 → `/record`.
 

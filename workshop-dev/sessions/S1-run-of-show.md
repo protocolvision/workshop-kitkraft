@@ -26,7 +26,7 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the presenter split
 | 16:26 | 56 | Sachin | Asks for the last question | Presents slide 15: Async 1 (3 h), 1A, S2 time; posts the Async 1 instruction and the 1A link/time; pins take-home reading order | Note assignment | Async 1 text pinned | on |
 | 16:29 | 59 | Sachin | Closes; stays in #kafka for 1A | Runs `/stop`; waits for the transcript; copies transcript + summary to `workshop-dev/transcripts/S1/`; commits `S1: sachin: transcript + summary` | 1A people stay; others leave | `workshop-dev/transcripts/S1/` | `/stop` |
 | 16:30 | 60 | — | 1A begins (see `1A-clinic.md`) | Posts "1A now in #kafka" | — | — | off (1A not recorded) |
-| 16:45 | 75 | — | — | With the inventories in, confirms the triads (from the provisional ones of Sep 19) and pins the S2 critique ring in #kitcraft | — | Triad pin in #kitcraft | — |
+| 16:45 | 75 | — | — | With the inventories in, confirms the breakout groups (from the provisional ones of Sep 19) and pins the S2 critique ring in #kitcraft | — | Breakout group pin in #kitcraft | — |
 
 Contingencies
 - Recorder auto-stops if #kafka empties or is silent 20 min; there are no breakouts in S1, so no re-run is expected. If the live transcript stops appearing, Sachin re-runs `/record` with the same name and notes it in the transcript folder.

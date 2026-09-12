@@ -31,7 +31,7 @@ For anyone whose harness is not working by Monday, or who has no GitHub account.
 
 ## S1, second prompt
 
-Ask a triad-mate in voice which two inventories their agent found nearest to yours. Do not open the inventory files on GitHub.
+Ask a group-mate in voice which two inventories their agent found nearest to yours. Do not open the inventory files on GitHub.
 
 ## S2 — your kit
 
@@ -39,7 +39,7 @@ Same method. From `PARTICIPANT_TEMPLATE/kit/` (reading the template on GitHub is
 
 ## S2 critique and S3 bridge
 
-Your triad-mates' harnesses read your kit from the repo as usual. For your own turn, sit next to a triad-mate: they paste the block into their harness with your target and you take the report. Blocker lines (S2) and your bridge file (S3, in the shape of `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md`) go into #kitcraft the same way; a facilitator commits them under your name.
+Your group-mates' harnesses read your kit from the repo as usual. For your own turn, sit next to a group-mate: they paste the block into their harness with your target and you take the report. Blocker lines (S2) and your bridge file (S3, in the shape of `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md`) go into #kitcraft the same way; a facilitator commits them under your name.
 
 ## 1A
 

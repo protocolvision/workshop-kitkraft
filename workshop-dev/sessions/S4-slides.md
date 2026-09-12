@@ -1,6 +1,6 @@
 # S4 — Recap and showcase · slides (60 min, Tue Sep 22, 20:00–21:00 UTC)
 
-Timestamps are minutes from session start. Presenter on each heading (presenter split: Sachin opens, runs the debrief, reads the synthesis, tallies, closes; Rafa recaps Kit → Factory → Bridge, runs the showcase, states the hypothesis; Sachin reads the logs' verdict). Sachin screen-shares throughout. Anyone async: bridge log and final-round answer read from the repo / #kitcraft by a triad-mate.
+Timestamps are minutes from session start. Presenter on each heading (presenter split: Sachin opens, runs the debrief, reads the synthesis, tallies, closes; Rafa recaps Kit → Factory → Bridge, runs the showcase, states the hypothesis; Sachin reads the logs' verdict). Sachin screen-shares throughout. Anyone async: bridge log and final-round answer read from the repo / #kitcraft by a group-mate.
 
 ## Slide 1 — The room's own artifacts (00:00) (presenter: Sachin)
 - Recording on; consent as pinned; nothing tonight is off the record
@@ -14,12 +14,12 @@ Timestamps are minutes from session start. Presenter on each heading (presenter 
 - Bridge: one `unblock` line, read aloud — the thing that was not in the repo
 > Speaker note: pick the three files at 19:45; paths in #kitcraft so people follow in their own clone.
 
-## Slide 3 — Debrief: the triads, one bridge each (10:00) (presenter: Sachin)
-- Per triad (6 min): `<triad 1>`: A → C's kit · B → A's · C → B's — 90 s each, 90 s questions; an absent member's log is read by a triad-mate in 60 s
+## Slide 3 — Debrief: one speaker per bridge log (10:00) (presenter: Sachin)
+- Group by group, in the pinned order: one speaker per bridge log, 90 s each, so the round takes (number of logs × 1.5 min); an absent member's log is read by a group-mate in 60 s
 - With ten or more people: 60 s per bridge, no questions until the showcase
 - Say: target, the one thing, what a human supplied, did it work
 - Each report goes into the synthesis as you speak
-> Speaker note: six bridges ≈ 12 min. Hold the timer.
+> Speaker note: six logs ≈ 9 min plus questions. Hold the timer.
 
 ## Slide 4 — Showcase (24:00) (presenter: Rafa)
 - Two that worked, one that did not; 4 min each, the bridge log on screen

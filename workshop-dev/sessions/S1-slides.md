@@ -1,6 +1,6 @@
 # S1 — Kits. Slide outline, 60 min (Mon Sep 21, 15:30–16:30 UTC)
 
-Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (15); Rafa does grids, CMM, kit, traces, C3PO (5–10) and runs the exercise and check (12–14). Sachin keeps chat, recorder, repo. Triads per the pinned table (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Cut from the 90-min outline: ice-breaker 15→9, situating 15→7, theory 20→14, exercise 30→17, close 5→7. Minute marks are from session start.
+Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (15); Rafa does grids, CMM, kit, traces, C3PO (5–10) and runs the exercise and check (12–14). Sachin keeps chat, recorder, repo. Breakout groups per the pinned table (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Cut from the 90-min outline: ice-breaker 15→9, situating 15→7, theory 20→14, exercise 30→17, close 5→7. Minute marks are from session start.
 
 ## Slide 1 — AI Kitcraft: Kit → Factory → Bridge (00:00) (presenter: Sachin)
 - Two days, four sessions, one public repo
@@ -95,7 +95,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 
 ## Slide 13 — Second prompt: the two nearest (00:48) (presenter: Rafa)
 - Paste **Block 2** (same file) and say "do this". It pulls, reads every inventory, names the two nearest, and checks your `LOG.md` line
-- Note the two names; that is the seed for the triads' work tomorrow
+- Note the two names; that is the seed for the breakout groups' work tomorrow
 - If it reports no log line on GitHub, say so in #kitcraft
 > Note: before Block 2, Sachin posts how many inventories are on `main` so nobody re-pulls needlessly. At 00:52 his agent checks every inventory for a Log line and posts the list; missing lines go to 1A.
 
@@ -112,4 +112,4 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 - 1A now, 16:30–17:00 UTC, here in #kafka: install, clone, one log line, one push
 - S2 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): you build the kit. Anyone async for S2: the async post in #kitcraft
 - Take-home reading order is pinned; nothing is required before S2
-> Note: Sachin presents and closes at 00:59, then `/stop`s the recorder after the last question. Triads confirmed from the inventories and pinned by 16:45.
+> Note: Sachin presents and closes at 00:59, then `/stop`s the recorder after the last question. Breakout groups confirmed from the inventories and pinned by 16:45.

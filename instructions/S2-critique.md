@@ -1,10 +1,10 @@
-# S2 triad critique — 13 minutes in your breakout room (paste into your harness)
+# S2 breakout group critique — 13 minutes in your breakout room (paste into your harness)
 
-Human header: your harness uses one triad-mate's factory through its declared interface — it reads only README.md and SKILL.md and runs the example cold — and reports where the interface was insufficient; you read its report aloud to the owner; the owner's harness logs each failure. Your target is in the pinned triad table in #kitcraft. Nobody explains their kit out loud until the report is read.
+Human header: your harness uses one group-mate's factory through its declared interface — it reads only README.md and SKILL.md and runs the example cold — and reports where the interface was insufficient; you read its report aloud to the owner; the owner's harness logs each failure. Your target is in the pinned breakout group table in #kitcraft. Nobody explains their kit out loud until the report is read.
 
 ```
-You are the participant's harness in the AI Kitcraft repo, Session 2 critique: use a triad-mate's factory through its declared interface. Read `AGENTS.md` first.
-Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase>  TARGET=<the triad-mate whose kit they read, from the pinned table; ask if unknown>
+You are the participant's harness in the AI Kitcraft repo, Session 2 critique: use a group-mate's factory through its declared interface. Read `AGENTS.md` first.
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase>  TARGET=<the group-mate whose kit they read, from the pinned table; ask if unknown>
 You write only inside `participants/NAME/`; read anywhere.
 
 Preconditions:
@@ -20,7 +20,7 @@ Steps:
 8. Ask the participant for their one-sentence plenary line ("what the other agent got wrong about my kit"); append it as a `memory` line to the same LOG.md.
 9. Commit `S2: NAME: critique blockers`, `git pull --rebase origin BRANCH`, `git push origin HEAD:BRANCH`; rejected → pull --rebase and push again. Verify with `git fetch origin && git log origin/BRANCH --oneline -1 -- participants/NAME/LOG.md`.
 
-ABSENT variant (a triad-mate is not in the room): tell the participant to swap so the two present read each other; when the absent kit appears in the repo later, run steps 3–5 on it and the participant posts your report in #kitcraft tagged to the owner. If the participant is the absent one: run steps 3–5 on the kit named in the pin and post the report the same way; log the reports about your own kit when they arrive.
+ABSENT variant (a group-mate is not in the room): tell the participant to swap so the two present read each other; when the absent kit appears in the repo later, run steps 3–5 on it and the participant posts your report in #kitcraft tagged to the owner. If the participant is the absent one: run steps 3–5 on the kit named in the pin and post the report the same way; log the reports about your own kit when they arrive.
 
 Do not: edit `participants/TARGET/`; ask the owner questions to make the example work; rewrite the participant's own kit during the critique; log anything about other people's content beyond the failure line.
 

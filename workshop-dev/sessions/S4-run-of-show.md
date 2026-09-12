@@ -15,8 +15,8 @@ Presenter split: Sachin — opener, debrief round, synthesis read-back, verdict,
 |---|---|---|---|---|---|---|---|
 | 20:00 | 00 | Sachin | listens | Slide 1; consent one-liner; "Recording on (KITCRAFT-S4)" | listen | — | `/record channel:#kafka name:KITCRAFT-S4` |
 | 20:02 | 02 | Rafa | Slide 2: recap in three files | drives the screen; posts the three paths | follow in own clone | — | on |
-| 20:10 | 10 | Sachin | timer at 90 s | Slide 3: `<triad 1>` debrief; captures each report into SYNTHESIS §2 | three speak; questions | — | on |
-| 20:16 | 16 | Sachin | timer | `<triad 2>` debrief (then the rest, 60 s each if more than two triads); reads an async member's #kitcraft note if no triad-mate does | speak; a triad-mate reads any absent member's paragraph; questions | — | on |
+| 20:10 | 10 | Sachin | timer at 90 s | Slide 3: `<group 1>` debrief, 90 s per bridge log; captures each report into SYNTHESIS §2 | one speaker per log; questions | — | on |
+| 20:16 | 16 | Sachin | timer | `<group 2>` debrief (then the rest; 60 s each when there are more than six logs); reads an async member's #kitcraft note if no group-mate does | speak; a group-mate reads any absent member's paragraph; questions | — | on |
 | 20:22 | 22 | — | questions | buffer | — | — | on |
 | 20:24 | 24 | Rafa | Slide 4: showcase 1 (worked) | selects #kitcraft-transcripts since 20:00 → scratch file → agent merges into SYNTHESIS v1 | bridge owner talks to their log on screen | — | on |
 | 20:28 | 28 | Rafa | showcase 2 (transmittal, a stub target) | agent finishes v1; reads it once | — | — | on |

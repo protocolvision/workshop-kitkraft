@@ -8,7 +8,7 @@ Each file below is written for your harness, not for you. Open your harness at t
 | S1 exercise | `S1-inventory.md` | Block 1 writes `participants/<name>/inventory.md`; Block 2 finds the two nearest |
 | after S1, before 20:00 UTC | `async-1.md` | chooses the kit to convert (own or facilitator) and drafts the README's Job and Interface lines |
 | S2 build | `S2-factory.md` | converts the chosen kit into a factory: README with `Interface:`, SKILL.md, one worked example (rung 1) |
-| S2 breakout | `S2-critique.md` | uses a triad-mate's factory through its interface, reports where it was insufficient, logs blockers |
+| S2 breakout | `S2-critique.md` | uses a group-mate's factory through its interface, reports where it was insufficient, logs blockers |
 | overnight | `async-2.md` | fixes the blockers, pushes v2 |
 | S3 breakout | `S3-bridge.md` | uses the target kit, writes the bridge file |
 | S3, stub targets | `S3-bridge.md`, second section | requester and owner blocks |

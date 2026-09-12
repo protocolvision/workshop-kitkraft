@@ -1,6 +1,6 @@
 # S3 — Bridges. Slide outline, 60 min (Tue Sep 22, 15:30–16:30 UTC)
 
-Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; Rafa does F2F, ladder, water pipeline, Prime Radiant, states the hypothesis, runs the reconvene and the check. Sachin keeps chat, breakouts, recorder, repo. Triads per the S3 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Examples 14, exercise brief 1 (rotation is pinned beforehand), breakout 40 (15:45–16:25, Sachin's window), close 5. Rotation and posts: `../breakout-instructions.md`; the block participants paste: `instructions/S3-bridge.md`; these slides repeat them, they do not replace them.
+Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; Rafa does F2F, ladder, water pipeline, Prime Radiant, states the hypothesis, runs the reconvene and the check. Sachin keeps chat, breakouts, recorder, repo. Breakout groups per the S3 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Examples 14, exercise brief 1 (rotation is pinned beforehand), breakout 40 (15:45–16:25, Sachin's window), close 5. Rotation and posts: `../breakout-instructions.md`; the block participants paste: `instructions/S3-bridge.md`; these slides repeat them, they do not replace them.
 
 ## Slide 1 — S3: Bridges (00:00) (presenter: Sachin)
 - Recorder is on; same consent as Monday; breakouts not recorded
@@ -20,7 +20,7 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 - Skills are industrial intermediates; the kit you wrote is one
 - The Rao → Jenna book factory: shared folder + transmittal server, two non-coders, domain knowledge > coding knowledge
 - The invisible 90%: high-trust links. F2F works because both sides already trust each other
-> Note: three minutes. The transmittal pattern is what any triad with a stub will do by necessity.
+> Note: three minutes. The transmittal pattern is what any breakout group with a stub will do by necessity.
 
 ## Slide 4 — The interface ladder, revisited (00:05) (presenter: Rafa)
 - File handoff (a README a person hands to their agent) → static page → MCP → A2A Agent Card
@@ -56,8 +56,8 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 > Note: one minute. Say it twice. Sachin pins it.
 
 ## Slide 9 — Exercise: build a bridge (00:14) (presenter: Sachin)
-- Triads, one per room. Rotation: you bridge to the kit you did **not** critique in S2. S2 critique ring A→B→C→A, so S3 bridges go A→C, B→A, C→B
-- `<triad 1>`: A → C's kit · B → A's · C → B's; `<triad 2>`: … (the pinned table). A stub target is bridged through its owner's agent: the transmittal pattern in `instructions/S3-bridge.md`
+- Breakout groups of 2–4, one per room. Rotation: you bridge to the kit you did **not** critique in S2; a pair bridges to the partner's kit or a facilitator kit
+- `<group 1>`: A → C's kit · B → A's · C → B's; `<group 2>`: … (the pinned table). A stub target is bridged through its owner's agent: the transmittal pattern in `instructions/S3-bridge.md`
 - Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
 - Task: make your agent use the target kit to do one thing your own kit cannot do alone. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log

@@ -2,7 +2,7 @@
 
 Presenter split: Sachin — opener, brand kit, comms layer, rooms, close, recorder, chat, repo. Rafa — F2F case, factory = kit + interface, build briefing; floats the low-numbered rooms. Sachin screen-shares all session.
 
-Pre-session (Sachin): 19:30 pull; list in #kitcraft who chose which source (own kit / facilitator kit, from the Async 1 `decision` lines); 19:50 re-post the S2 triads pin; 19:55 screen-share check.
+Pre-session (Sachin): 19:30 pull; list in #kitcraft who chose which source (own kit / facilitator kit, from the Async 1 `decision` lines); 19:50 re-post the S2 breakout groups pin; 19:55 screen-share check.
 
 | UTC | min | Presenter | Rafa | Sachin | Participants | Artifact | Recorder |
 |---|---|---|---|---|---|---|---|

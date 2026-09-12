@@ -32,7 +32,7 @@ Failures:
 - `error: src refspec main does not match any` → not on BRANCH or nothing committed: `git checkout BRANCH`, commit, push `HEAD:BRANCH` again.
 - push still rejected after 3 tries → print the error, keep the file, tell the participant to say so in #kitcraft.
 - target kit's example does not run → that is a finding: log it as `blocker`, not a reason to stop.
-- triad-mate absent → switch to a facilitator kit and log a `decision` line.
+- group-mate absent → switch to a facilitator kit and log a `decision` line.
 Do not: edit KIT or anything outside `participants/NAME/`; paste the participant's own kit into the target; invent a value the owner has not supplied; create branches; force-push; log anything private from either kit.
 Report in four lines: did TASK work; number of unblock lines; link to the bridge file; the participant's one-sentence definition of a bridge.
 ```
