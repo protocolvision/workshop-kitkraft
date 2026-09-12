@@ -6,7 +6,7 @@
 - `discord-pins.md` — text to pin in #kitcraft
 - `breakout-instructions.md` — pre-written S2 critique and S3 bridge instructions
 - `pre-work-email.md` — draft
-- `sessions/` — per-session slides, run-of-shows, agent prompts, 1A checklist, consent notice, recorder runbook
+- `sessions/` — per-session slides, run-of-shows, agent prompts, 1A checklist, consent notice, recorder runbook, `setup-checklist.md` (what to install, why, how to verify)
 - `transcripts/` — OpenRecapper output per session; `transcripts/S4/SYNTHESIS.md`
 - `registration/` — the sign-up form record
 - `site/` — source of https://ai.protocolized.dev/kitcraft/ (deploy notes in `site/CLAUDE.md`)
