@@ -12,7 +12,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 
 ## How to participate
 
-1. Install a harness: Claude Code (needs a Claude Pro or Max subscription; https://docs.claude.com/en/docs/claude-code) or Codex (needs a ChatGPT plan; https://developers.openai.com/codex/cli). Accept the collaborator invite for this repo (GitHub notifications or the invite email).
+1. Install an AI assistant (a.k.a. harness): Claude Code (needs a Claude Pro or Max subscription; https://docs.claude.com/en/docs/claude-code) or Codex (needs a ChatGPT plan; https://developers.openai.com/codex/cli). Accept the collaborator invite for this repo (GitHub notifications or the invite email).
 2. Install `git` and `gh` (the GitHub CLI), then run `gh auth login` (GitHub.com, HTTPS, browser) and `gh auth setup-git`. This is the step that lets a push work without a password prompt; a harness cannot do the browser login for you. What to install, why, and how to verify, per system: `workshop-dev/sessions/setup-checklist.md`.
 3. Clone the repo, copy the template to your own folder, **open your harness at the clone root** (the folder that contains `AGENTS.md`), paste `instructions/orient.md` into it and say "do this":
    ```
@@ -46,7 +46,7 @@ workshop-dev/registration/      the sign-up form: link, questions, how answers f
 
 ## Consent
 
-Plenary audio in #kafka is recorded and transcribed with speaker names; transcripts go into `workshop-dev/transcripts/`. Breakouts and the 1A clinic are not recorded. Your harness appends log lines to `LOG.md` files in this public repo. Ask a facilitator to remove any of your lines at any time. Put nothing in a public kit you would not put on a public website. After the workshop: the repo stays public and the synthesis is posted in Discord within 48 hours; nothing else is planned. Full notice: `workshop-dev/sessions/consent-notice.md`, pinned in #workshop-kitkraft.
+Plenary audio in #kafka and all text in #workshop-kitkraft are recorded and transcribed with speaker names; transcripts go into `workshop-dev/transcripts/`. Breakouts may be recorded; 1A Tech Support is not. Your harness appends log lines to `LOG.md` files in this public repo. Ask Rafa or Sachin to remove any of your lines at any time, no reason needed. Put nothing in a public kit you would not put on a public website. After the workshop: the repo stays public, the synthesis is posted in #workshop-kitkraft, and the recordings may be used for broader synthesis for Symposium write-ups and future research (tell the facilitators if you want to opt out). Full notice: `workshop-dev/sessions/consent-notice.md`, pinned in #workshop-kitkraft.
 
 ## Related repos
 
@@ -62,7 +62,7 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#workshop-kit
 | Session | When (UTC) | Length | Artifact |
 |---|---|---|---|
 | S1 Kits | Mon Sep 21, 15:30 | 60 min | `participants/<name>/inventory.md` |
-| 1A clinic (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
+| 1A Tech Support (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
 | S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` as a factory: job-shop structure, an exported intermediate, a declared interface |
 | S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<name>/bridges/<target>.md` — one of three configurations to try: across factories, across kits, or kit ↔ factory; the closing paragraph says what a bridge turned out to be |
 | S4 Recap | Tue Sep 22, 20:00 | 60 min | `workshop-dev/transcripts/S4/SYNTHESIS.md` |

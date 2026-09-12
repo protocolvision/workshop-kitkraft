@@ -3,7 +3,7 @@
 Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the repo), briefs the exercise, runs the rooms, the reconvene, the check and the close, and keeps #workshop-kitkraft, breakouts, recorder, repo and the screen share. Sachin presents the theory (slides 3–8: the hard problem again, the precedents as evidence, three configurations to try, the examples, trust, what we are looking for) starting right after Rafa's first two minutes, and states the hypothesis once at the close (slide 11). Breakout groups per the S3 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Evidence 14, exercise brief 1 (groups are posted beforehand), breakout 40 (15:45–16:25, Rafa's window), close 5. Rotation and posts: `../breakout-instructions.md`; the block participants paste: `instructions/S3-bridge.md`; these slides repeat them, they do not replace them. Tone: we do not know yet; the logs will tell us. Nothing before the close defines a bridge.
 
 ## Slide 1 — S3: how do two private practices reach each other? (00:00) (presenter: Rafa)
-- Recorder is on; same consent as Monday; breakouts not recorded
+- Recorder is on; same consent as Monday; breakouts may be recorded
 - Monday's hard problem left one question open: how do two private practices reach each other without a shared app? Today we try it: your agent uses someone else's kit or factory
 - Output: one file per person, `participants/<you>/bridges/<target>.md`, ending in a paragraph on what a bridge turned out to be. We do not know yet what those paragraphs will say
 > Note: one minute. Rafa has posted the groups already.

@@ -3,7 +3,7 @@
 Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa — first minute, build briefing, push check, rooms, the round, awareness check, Async 2, close; Sachin — kit-phase thesis, the Rao–Dixon case, brand kit, factory as a flexible job shop and the ladder, the comms layer). Rafa screen-shares throughout and keeps #workshop-kitkraft, recorder and repo; the presenter talks. Breakout groups per the S2 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5.
 
 ## Slide 1 — Where we are (00:00) (presenter: Rafa; Sachin from the fourth bullet)
-- Recording on; consent as pinned; breakouts off the record
+- Recording on; consent as pinned; breakouts may be recorded
 - S1 awareness check: `<tally from workshop-dev/transcripts/S1/awareness-check.md>`, read as counted
 - `<n>` sources chosen since S1 (`<o>` own kits, `<f>` facilitator kits)
 - Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at

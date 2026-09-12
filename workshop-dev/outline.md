@@ -2,12 +2,12 @@
 
 Protocol Symposium 2026 · New Nature · Sep 21–22 (workshop days) · online
 Facilitators: Rafa (lead: ops, coordination, exercises), Sachin Benny (co-facilitator: theory). Rafa opens every session with its first minute (welcome, consent, logistics) and owns #workshop-kitkraft, pins, breakouts, recorder and repo; Sachin opens the content right after and presents every conceptual segment (see Facilitation split below); the run-of-shows in `sessions/` carry a presenter column per slide. Rafa screen-shares throughout; the presenter talks.
-Format: four sessions of 60 min plus an optional 30-min clinic, async work between sessions. Designed for breakout groups of 2–4, sized by the facilitators from headcount (6 → two groups of 3; 10 → five pairs or two 3s + two 2s; 12 → four 3s or three 4s).
+Format: four sessions of 60 min plus an optional 30-min tech-support slot (1A), async work between sessions. Designed for breakout groups of 2–4, sized by the facilitators from headcount (6 → two groups of 3; 10 → five pairs or two 3s + two 2s; 12 → four 3s or three 4s).
 
 | Session | UTC | Berlin (+2) | Pacific (−7) |
 |---|---|---|---|
 | S1 Kits | Mon Sep 21, 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
-| 1A Beginner clinic (optional) | Mon Sep 21, 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
+| 1A Tech Support (optional) | Mon Sep 21, 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
 | S2 Factories | Mon Sep 21, 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
 | S3 Bridges | Tue Sep 22, 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
 | S4 Recap | Tue Sep 22, 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
@@ -93,7 +93,7 @@ This is the one-way version of the Wallfacer rule: no live coordination needed, 
 
 ---
 
-## Session 1A — Beginner clinic (optional, Mon 16:30–17:00 UTC, #kafka, not recorded)
+## Session 1A — Tech Support (optional, Mon 16:30–17:00 UTC, #kafka, not recorded)
 
 Content: `sessions/1A-clinic.md`. Rafa runs it, including the #workshop-kitkraft threads. For anyone whose harness is installed but something is wrong: no pre-work push, wrong account, wrong clone, wrong branch, push rejected, harness opened outside the clone. No installs beyond the setup checklist's verify block. Eight minutes of naming the failed step, then one pasteable block that runs seven checks with a command and a proof each — tools, login as the right account, invite, clone by origin URL, harness at the clone root reading `AGENTS.md`, one log line, one push verified per file. Exit per person: seven PASS lines. A FAIL on the push means the participant retries at the start of S2 with the fix from their thread. The two things no harness can do (installing git/gh, the browser login) are the pre-work's Item 0; 1A checks them, it does not absorb them.
 
@@ -162,7 +162,7 @@ Slides, minute table, synthesis procedure, hypothesis rule and awareness tally: 
 
 **Final awareness round (7)** Rafa. Each participant names the quadrant their practice was blind to on Monday morning; tallied into `SYNTHESIS.md` §5 as the room's awareness profile (S1–S3 checks plus this round; actuals only).
 
-**Take-home (3)** Rafa. The repo stays public; `SYNTHESIS.md` v2 posted in Discord within 48 h; nothing else is planned. Hard-mode Wallfacer invitation; SIGBIZ show-and-tell as the continuation venue; removal requests any time.
+**Take-home (3)** Rafa. The repo stays public; `SYNTHESIS.md` v2 posted in #workshop-kitkraft within 48 h; the recordings may feed broader synthesis for Symposium write-ups and future research (opt out by telling us). Hard-mode Wallfacer invitation; SIGBIZ show-and-tell as the continuation venue; removal requests any time.
 
 ---
 
@@ -236,7 +236,7 @@ Time budget check: S2 20-min build + 13-min critique (room moves inside it) hold
 
 Runbook: `sessions/recorder-runbook.md` (operator Rafa, backup Sachin). What it is: self-hosted Discord bot; `/record channel:#kafka name:KITCRAFT-S<n>` and `/stop`; per-user tracks, Deepgram diarized transcript on stop, live transcript streamed to #meeting-notes; optional AI summary via a relay; auto-stop when the channel empties and after 20 min of silence.
 
-Constraint that shapes the plan: one bot identity = one voice connection per server. Decision: plenary only. Breakouts and 1A stay unrecorded by design (the IDEO U precedent: jam sessions are not recorded so people experiment); the autolog is the breakout record and is richer for the S4 synthesis than diarized chatter.
+Constraint that shapes the plan: one bot identity = one voice connection per server, so recording a breakout room needs one extra bot token per room (N+1 apps, Deepgram cost ×N). Default: plenary only, unless extra tokens exist; with one extra token, one sample room per session is recorded. The consent notice already says breakouts may be recorded; the autolog remains the breakout record for the S4 synthesis.
 
 Rules, because of the auto-stop:
 - An explicit `/stop` before every breakout and a fresh `/record channel:#kafka name:KITCRAFT-S<n>` at the reconvene, in that order; wait for the first live line before the presenter resumes. Every start and stop is announced in #workshop-kitkraft (`Recording on (KITCRAFT-S<n>)` / `Recording off`).
@@ -247,7 +247,7 @@ Rules, because of the auto-stop:
 
 Setup checklist (owner: whoever runs PI's OpenRecapper instance): `RECORD_MEETING_NAMES` includes `KITCRAFT-S1..S4` (and the `B` names if needed); `/record-access grant` to both facilitators; live transcript channel = #meeting-notes; manual `/record`, not `/schedule`; relay configured for the summary or the co-facilitator's agent writes `summary.md`; retention: audio pruned after 7 days, text kept.
 
-Consent: the canonical text is `sessions/consent-notice.md` — a 45-second read-aloud at the top of S1 (one sentence at the top of S2–S4) and a full pinned notice covering what is recorded (plenary only; not breakouts, not 1A), where it goes (live channel, public repo, log lines), retention, removal on request with the git-history caveat, opting out without leaving, personal data, and the after-Tuesday disposition.
+Consent: the canonical text is `sessions/consent-notice.md` — a 45-second read-aloud at the top of S1 (one sentence at the top of S2–S4) and a full notice covering what is recorded (plenary voice and all text in #workshop-kitkraft; breakouts may be recorded; not 1A), where it goes (live channel, public repo, log lines), retention, removal on request with the git-history caveat, opting out without leaving, personal data, and the after-Tuesday disposition.
 
 ### 6. Prep timeline
 
@@ -269,7 +269,7 @@ Detail and owners: `prep-checklist.md`.
 
 ### 7. After Tuesday (decided)
 
-Minimum, and the only thing planned: the repo stays public; `workshop-dev/transcripts/S4/SYNTHESIS.md` v2 with the awareness profile is posted in Discord (#workshop-kitkraft and #symposium-2026) within 48 hours; both facilitators' kits stay as targets. The consent notice says exactly this. Any further use of the material (a C3PO corpus ingest, a CMM case-study page, a Protocolized post by a participant) would need a new notice and is not promised.
+Minimum, and the only thing planned: the repo stays public; `workshop-dev/transcripts/S4/SYNTHESIS.md` v2 with the awareness profile is posted in Discord (#workshop-kitkraft and #symposium-2026) within 48 hours; both facilitators' kits stay as targets. The consent notice says this and one thing more: the workshop recordings may be used for broader synthesis for Symposium write-ups and future research, with opt-out by telling the facilitators. Any further use of the material (a C3PO corpus ingest, a CMM case-study page, a Protocolized post by a participant) would need a new notice and is not promised.
 
 ---
 
@@ -336,7 +336,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 ## Changes from v4
 
 - Added Logistics: single-repo decision, autologging instruction in `AGENTS.md`, Discord layout (#kafka, breakouts, #workshop-kitkraft, #meeting-notes), breakout method, OpenRecapper setup and its one-connection-per-bot constraint, consent, prep timeline.
-- Recording scoped to plenary; breakouts recorded through harness autologs instead.
+- Recording scoped to plenary by default; breakouts may be recorded when extra bot tokens exist, and are always recorded through harness autologs.
 - S4 synthesis now reads transcripts + autologs + bridge logs.
 
 ## Changes from v3 and why

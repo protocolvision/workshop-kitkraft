@@ -2,7 +2,7 @@
 
 Operator: Rafa, from a laptop that is in #kafka for the whole session. Backup operator: Sachin. Both have `/record-access`. Recordings land in named folders because `RECORD_MEETING_NAMES` includes `KITCRAFT-S1,KITCRAFT-S2,KITCRAFT-S3,KITCRAFT-S4` (Rafa's Sep 14 item; **confirm**, see notes). Live transcript target: #meeting-notes (https://discord.com/channels/1082444651946049567/1519549380791631903), an existing shared channel where other meetings' transcripts also land; the OpenRecapper meeting name `KITCRAFT-S<n>` is what distinguishes ours.
 
-Two facts shape everything: **one bot = one voice connection**, so breakouts are never recorded; and the bot **auto-stops when #kafka empties and after 20 min of silence**, so every breakout longer than a few minutes gets an explicit `/stop` before and a fresh `/record` after.
+Two facts shape everything. **One voice connection per bot identity**: recording a breakout room needs one extra bot token per room (N+1 Discord apps, Deepgram cost ×N); the default is plenary only unless extra tokens exist; if one extra token exists, record one sample room per session (`/record channel:breakout-1 name:KITCRAFT-S<n>-B1` from the second app) — the consent notice already covers breakouts. And the bot **auto-stops when #kafka empties and after 20 min of silence**, so every breakout longer than a few minutes gets an explicit `/stop` before and a fresh `/record` after.
 
 ## Commands
 
@@ -20,9 +20,9 @@ Every start is confirmed in #workshop-kitkraft with `Recording on (KITCRAFT-S<n>
 | Session | Record | Stop | Record again | Stop | Notes |
 |---|---|---|---|---|---|
 | S1 Kits | 15:30 | 16:30 | — | — | No breakouts. Exercise is silent work in #kafka; 17 min of near-silence is under the 20-min timeout but close: **someone speaks every 15 min** (Rafa's time calls do this). |
-| 1A Clinic | — | — | — | — | **Not recorded** (setup clinic; `1A-clinic.md`). The consent notice says so. |
-| S2 Factories | 20:00 | 20:35 (rooms open) | 20:48 (reconvene) | 21:00 | Breakout 13 min. Two segments. |
-| S3 Bridges | 15:30 | 15:45 (rooms open) | 16:25 (reconvene) | 16:30 | Breakout 40 min. Two segments; second is 5 min. |
+| 1A Tech Support | — | — | — | — | **Not recorded** (`1A-clinic.md`). The consent notice says so. |
+| S2 Factories | 20:00 | 20:35 (rooms open) | 20:48 (reconvene) | 21:00 | Breakout 13 min. Two segments. One sample room only if an extra token exists. |
+| S3 Bridges | 15:30 | 15:45 (rooms open) | 16:25 (reconvene) | 16:30 | Breakout 40 min. Two segments; second is 5 min. One sample room only if an extra token exists. |
 | S4 Recap | 20:00 | 21:00 | — | — | No breakouts. The synthesis reads the live channel text, not the final transcript (below). |
 
 ## Around a breakout, exact sequence (Rafa)

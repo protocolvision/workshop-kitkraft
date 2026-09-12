@@ -7,7 +7,7 @@ Subject: AI Kitcraft — your setup before Monday (10 minutes, plus one paste)
 
 Hi <first name>,
 
-Thanks for signing up for AI Kitcraft. We're looking forward to working with you on Monday and Tuesday. This email is your pre-work. It's short: one thing to do yourself, one thing to hand to your AI harness. If anything below doesn't work, the 1A clinic on Monday exists exactly for that, so please don't spend an evening fighting it.
+Thanks for signing up for AI Kitcraft. We're looking forward to working with you on Monday and Tuesday. This email is your pre-work. It's short: one thing to do yourself, one thing to hand to your AI assistant (a.k.a. harness). If anything below doesn't work, 1A Tech Support on Monday exists exactly for that, so please don't spend an evening fighting it.
 
 **1. Set up your machine (before Friday, Sep 18)**
 
@@ -23,7 +23,7 @@ The short version:
 
 One thing worth knowing for the whole workshop: everything goes straight to the `main` branch. No branches, no pull requests. Your harness has been told this; we'd ask you not to branch by hand either.
 
-**Say hello on Discord.** Join the server at https://discord.gg/s2WbZBDqM and post a quick hello in the workshop channel, #workshop-kitkraft: https://discord.com/channels/1082444651946049567/1548286831232032778. That's where the pins, the instructions for each session and the group lists will be. If anything in this email is unclear, or an install won't behave, ask there and tag @rafa_0x or @sachbenny; one of us will answer.
+**Say hello on Discord.** Join the server at https://discord.gg/s2WbZBDqM and post a quick hello in the workshop channel, #workshop-kitkraft: https://discord.com/channels/1082444651946049567/1548286831232032778. That's where the pins, the instructions for each session and the group lists will be. If anything in this email is unclear, or an install won't behave, ask there and tag Rafa (@rafa_0x) or Sachin (@sachbenny); one of us will answer.
 
 **2. Let your harness do the rest**
 
@@ -53,7 +53,7 @@ Failures:
 - Push asks for a username/password: type nothing. Tell the participant to run `gh auth setup-git` in a terminal, then retry step 8.
 - Push rejected ("fetch first", "non-fast-forward"): `git pull --rebase origin BRANCH`, then push again; up to 3 tries. If a CONFLICT appears, it can only be inside `participants/NAME/`: keep both versions' lines, `git add` it, `git rebase --continue`, push.
 - "Permission denied" / 403: invite not accepted, or the wrong account (`gh api user --jq .login`). STOP and report which.
-- Anything else you cannot fix in two attempts: STOP, report the exact error text, and say "bring this to the 1A clinic, Mon Sep 21, 16:30 UTC, #kafka".
+- Anything else you cannot fix in two attempts: STOP, report the exact error text, and say "bring this to 1A Tech Support, Mon Sep 21, 16:30 UTC, #kafka".
 
 Do not: create branches, force-push, edit anything outside `participants/NAME/` (`README.md`, `AGENTS.md`, other people's folders), store or print tokens, or put anything into the file the participant would not put on a public website.
 
@@ -67,14 +67,14 @@ Everything in the repo is public, including your inventory and, later, your kit.
 | Session | Day | UTC | Berlin | Pacific |
 |---|---|---|---|---|
 | S1 Kits | Mon Sep 21 | 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
-| 1A Setup clinic (optional) | Mon Sep 21 | 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
+| 1A Tech Support (optional) | Mon Sep 21 | 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
 | S2 Factories | Mon Sep 21 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
 | S3 Bridges | Tue Sep 22 | 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
 | S4 Recap | Tue Sep 22 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
 
 If you're outside those zones, S1 starts at 15:30 UTC on Monday Sep 21; this converts it for you: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530 (east of UTC+8 that's already Tuesday).
 
-On Discord: plenary in the voice channel **#kafka**, breakouts in **breakout-1** to **breakout-5**, everything written in **#workshop-kitkraft**. The 1A clinic is for anyone whose harness is installed but not behaving: 30 minutes, we fix it together.
+On Discord: plenary in the voice channel **#kafka**, breakouts in **breakout-1** to **breakout-5**, everything written in **#workshop-kitkraft**. 1A Tech Support is for anyone whose harness is installed but not behaving: 30 minutes, we fix it together.
 
 **Before Monday, if you can**
 
@@ -82,7 +82,7 @@ Take the AI postures survey (about five minutes) and note your result; we use it
 
 **A note on recording**
 
-Plenary audio in #kafka is recorded and transcribed with speaker names, and the transcripts go into the public repo. Breakouts and the clinic are not recorded. Your harness writes short log lines into public files as it works. If you ever want a line removed, ask either of us and it's done. After the workshop the repo stays public and we post the synthesis in Discord within 48 hours; nothing else is planned with the material.
+Plenary audio in #kafka, and everything written in #workshop-kitkraft, is recorded and transcribed with speaker names, and the transcripts go into the public repo. Breakouts may be recorded too; 1A Tech Support is not. Your harness writes short log lines into public files as it works, and everything in the repo is public. If you ever want a line removed, ask either of us and it's done, no reason needed. After the workshop the repo stays public and we post the synthesis in #workshop-kitkraft; the recordings may also be used for broader synthesis for Symposium write-ups and future research. If you'd rather opt out of that, just tell us.
 
 See you Monday.
 

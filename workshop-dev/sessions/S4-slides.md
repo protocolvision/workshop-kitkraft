@@ -50,7 +50,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 > Speaker note: Rafa posts the order and keeps time; Sachin's agent tallies on screen in `SYNTHESIS.md` §5 as people speak.
 
 ## Slide 8 — Take-home (57:00) (presenter: Rafa)
-- The repo stays public; `SYNTHESIS.md` v2 with the S4 transcript posted in Discord within 48 h. That is all that is planned
+- The repo stays public; `SYNTHESIS.md` v2 with the S4 transcript posted in #workshop-kitkraft within 48 h; recordings may feed broader synthesis for Symposium write-ups and future research (opt out by telling us)
 - Hard-mode Wallfacer stays open: rerun your bridge with no human chat, log it as a second section
 - Continuation venue: SIGBIZ fortnightly show-and-tell — bring the kit, not the slides
 - Removal requests: any line, any time, either facilitator

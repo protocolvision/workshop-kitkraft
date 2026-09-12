@@ -1,4 +1,4 @@
-# 1A — Clinic: harness installed but something is wrong, 30 min (Mon Sep 21, 16:30–17:00 UTC, #kafka, not recorded)
+# 1A — Tech Support: harness installed but something is wrong, 30 min (Mon Sep 21, 16:30–17:00 UTC, #kafka, not recorded)
 
 Rafa runs 1A and its #workshop-kitkraft threads; Sachin is not needed. Everyone has a harness and a GitHub account; 1A is for a harness that is installed but something is wrong. Expected: anyone without a push by the Sep 19 check, anyone whose harness opened outside the clone (no autolog), wrong account, wrong clone, wrong branch, push rejected, anyone who does not trust the push. Nothing is installed here beyond what the setup checklist's "Verify only" block checks. Exit, per person: the harness reports all seven checks below as passed. Everything after "Before the block" is one pasteable block; the participant pastes it and says "do this", Rafa reads the report.
 
@@ -10,7 +10,7 @@ git, `gh` and one harness are already installed (pre-work Item 0; `setup-checkli
 ## Block — paste into the harness (00:08–00:28)
 
 ```
-You are the participant's harness at the AI Kitcraft 1A clinic. Run these seven checks in order; each has a command and a proof. Fix what fails, then re-check.
+You are the participant's harness at AI Kitcraft 1A Tech Support. Run these seven checks in order; each has a command and a proof. Fix what fails, then re-check.
 Settings: REPO=https://github.com/protocolvision/workshop-kitkraft  BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
 You write only inside `participants/NAME/`; read anywhere.
 

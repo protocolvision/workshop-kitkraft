@@ -10,11 +10,11 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 > Note: Rafa opens. Recorder is already on (Rafa started it at 15:28). One minute.
 
 ## Slide 2 — Consent (00:01) (presenter: Rafa)
-- Plenary audio in #kafka is recorded and transcribed with speaker names; transcript goes to `workshop-dev/transcripts/` in the public repo
-- Breakout rooms are not recorded
-- Your harness writes log lines into public `LOG.md` files; ask either of us to remove any line
+- Plenary audio in #kafka and all text in #workshop-kitkraft are recorded and transcribed with speaker names; transcripts go to `workshop-dev/transcripts/` in the public repo
+- Breakout rooms may be recorded
+- Your harness writes log lines into public `LOG.md` files; ask either of us to remove any line, no reason needed
 - Put nothing in a public kit you would not put on a public website
-- After Tuesday: the repo stays public; the synthesis is posted in Discord within 48 h; nothing else
+- After Tuesday: the repo stays public; the synthesis is posted in #workshop-kitkraft; recordings may be used for broader synthesis for Symposium write-ups and future research — tell us if you want to opt out
 > Note: Rafa reads `consent-notice.md` verbatim; it ends with "Recording starts now". Ask "anyone want to be off-transcript?" and wait two seconds.
 
 ## Slide 3 — Ice-breaker (00:03) (presenter: Rafa)

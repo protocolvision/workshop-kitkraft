@@ -27,7 +27,7 @@ Facilitation split: Rafa — opener, debrief order and timer, showcase, final aw
 | 20:57 | 57 | Rafa | Slide 8: take-home; posts verbatim to #workshop-kitkraft | — | — | — | on |
 | 21:00 | 60 | Rafa | "Recording off"; `/stop` | pushes SYNTHESIS v1 with corrections | — | — | `/stop` |
 
-After (Rafa, by 21:30): `workshop-dev/transcripts/S4/transcript.md`, `summary.md`, `awareness-check.md`; commit `S4: rafa: transcript + summary`. Within 48 h (Sachin): SYNTHESIS v2 with the S4 transcript folded in and the profile final; Rafa posts it in Discord (#workshop-kitkraft, #symposium-2026). Nothing else is planned with the material.
+After (Rafa, by 21:30): `workshop-dev/transcripts/S4/transcript.md`, `summary.md`, `awareness-check.md`; commit `S4: rafa: transcript + summary`. Within 48 h (Sachin): SYNTHESIS v2 with the S4 transcript folded in and the profile final; Rafa posts it in Discord (#workshop-kitkraft, #symposium-2026). The recordings may also feed broader synthesis for Symposium write-ups and future research, as the consent notice says.
 
 ## Synthesis procedure (what Sachin's agent reads, in order)
 
