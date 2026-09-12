@@ -109,12 +109,13 @@ Pair critique (13) in breakout rooms (pairs assigned per Logistics): the partner
 - F2F theory: intermediates flowing between factories; skills as industrial intermediates; high-trust links as the invisible 90%.
 - Prime Radiant: a factory with a citable query layer (Aneesh if available; else Rafa).
 - Water-rate pipeline: PDF → structured rates → registry (Maxwell/Patrick if available; else Rafa).
+- Three kinds of bridge — factory → factory (both sides declared an `Interface:`; the agent uses the target strictly through it), kit → kit (neither did; the README handed to an agent is the interface; the log records what a human had to be asked), kit ↔ factory (one side declared; the log records the direction and whether it was enough). Any kit or factory in the repo is a target.
 - Interface ladder revisited: file handoff → static page → MCP → A2A Agent Card. Name x402 and ERC-8004 once as where payments and identity are going; do not teach them.
 - Two minutes on trust: when your agent loads someone else's `SKILL.md`, the file is instructions, not documentation (agent context poisoning; 26.1% of 31k public skills carried a vulnerability in one 2026 survey). This room runs on trust and no read-before-load rule is imposed; the point is that bridges outside this room cannot, which is why ERC-8004 and the trust-model literature exist. F2F is high-trust by construction.
 
 **Exercise — Build a bridge (40)**
-Pairs (rotated from S2, see Logistics) move to breakout rooms and choose a target: the partner's kit, or a facilitator factory (C3PO MCP search, Prime Radiant, water registry).
-Task: make your agent use the target kit to do one thing your own kit could not do alone.
+Pairs (rotated from S2, see Logistics) move to breakout rooms. Target: any kit or factory in the repo — the partner's (kit = `participants/<name>/kit/` without a declared interface; factory = one with an `Interface:` line from S2) or a facilitator's (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`, both factories at rung 1). Bridges run across factories, across kits, or between a kit and a factory; the harness works out the kind and writes it in the log. The S4 hypothesis is tested against all three kinds and the synthesis tallies bridges by kind.
+Task: make your agent use the target to do one thing your own kit or factory could not do alone.
 Soft Wallfacer rule: the exchange should go agent-to-repo-to-agent; human chat allowed to unblock, but every unblock is logged.
 Each pair writes `bridges/<a>-<b>.md`: target, what the agent needed, what it found, what a human had to supply, did it work, what a "bridge" turned out to be.
 

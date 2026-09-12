@@ -9,7 +9,7 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the checkpoint-1 sp
 | 15:30 | 00 | Sachin | Listens | Presents slide 1 (opener); posts session order | Listen | — | on |
 | 15:31 | 01 | Rafa | Slide 2: shows two anonymised blocker lines | — | Listen | — | on |
 | 15:32 | 02 | Rafa | Slide 3: F2F | Posts the F2F essay link | Listen | — | on |
-| 15:35 | 05 | Rafa | Slide 4: ladder; answers Kwame's S2 question | Posts standards table link (resources §4) | Listen | — | on |
+| 15:35 | 05 | Rafa | Slide 4: three kinds of bridge; the ladder; answers Kwame's S2 question | Posts standards table link (resources §4) | Listen | — | on |
 | 15:38 | 08 | Rafa | Slide 5: `facilitator/rafa/kit/` on screen, `examples/output.csv` | Posts `facilitator/rafa/kit/` path | Listen | — | on |
 | 15:40 | 10 | Rafa | Slide 6: Prime Radiant, example only | — | Listen | — | on |
 | 15:41 | 11 | Sachin | Listens; times it | Presents slide 7 (trust, two minutes); posts the CSA note link for later reading | Listen | — | on |

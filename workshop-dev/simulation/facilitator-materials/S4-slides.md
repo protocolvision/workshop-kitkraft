@@ -28,7 +28,7 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 > Speaker note: the failed one is the list of things the next version of the kit must contain.
 
 ## Slide 5 — SYNTHESIS.md read-back (38:00) (presenter: Sachin)
-- What the room built, in numbers (from the logs, not memory)
+- What the room built, in numbers (from the logs, not memory): bridges by kind — factory → factory, kit → kit, kit ↔ factory — attempted and worked
 - The four "what a bridge turned out to be" paragraphs, verbatim
 - Corrections from the room go in live, under "Corrections", with the speaker's handle
 - Sources: the files and the commit hash the agent read
@@ -36,7 +36,7 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 
 ## Slide 6 — The hypothesis (43:00) (presenter: Rafa states; Sachin reads the verdict)
 - Rafa: stated Tuesday 15:32, held since — *a bridge is a protocol between two factories: the smallest thing both sides agree not to change*
-- Sachin: for each of the four paragraphs, supports · contradicts · silent (table on screen)
+- Sachin: for each of the four paragraphs, supports · contradicts · silent (table on screen, grouped by bridge kind; the hypothesis says "two factories", so the kit → kit rows are where it is tested hardest)
 - Evidence rule: every `unblock` line is something **not yet agreed**; what stayed fixed after the unblocks is the candidate "smallest thing"
 - Verdict: retained, amended by the room, or rejected — the room's definition wins where the logs disagree
 > Speaker note: Sachin reads the verdict rule before the table so it does not look rigged.

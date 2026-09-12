@@ -1,8 +1,10 @@
 # Bridge: <you> → <target>  (file: `participants/<you>/bridges/<target>.md`)
 
 Writer: <you> (only you edit this file; a stub owner appends under Response)
-Target kit:
-Interface used: (file handoff / static page / MCP / other)
+Source: participants/<you>/kit/ (<kit|factory>)
+Target: <path> (<kit|factory>)
+Kind: <factory-factory | kit-kit | kit-factory>
+Interface used: (the target's declared `Interface:` line, or `README handed to an agent` for a kit)
 
 ## What my agent needed from the target
 
