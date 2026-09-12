@@ -244,7 +244,7 @@ Constraint that shapes the plan: one bot identity = one voice connection per ser
 Rules, because of the auto-stop:
 - An explicit `/stop` before every breakout and a fresh `/record channel:#kafka name:KITCRAFT-S<n>` at the reconvene, in that order; wait for the first live line before the presenter resumes. Every start and stop is announced in #kitcraft (`Recording on (KITCRAFT-S<n>)` / `Recording off`).
 - A facilitator speaks every ≤15 minutes during silent work (the S1 exercise is 17 near-silent minutes; time calls do this).
-- Whether a second `/record` with the same `name:` appends or overwrites is tested in the Sep 17 dry run; if it overwrites, `KITCRAFT-S2B` and `KITCRAFT-S3B` go into `RECORD_MEETING_NAMES`.
+- Whether a second `/record` with the same `name:` appends or overwrites is tested at the Sep 17 tech rehearsal; if it overwrites, `KITCRAFT-S2B` and `KITCRAFT-S3B` go into `RECORD_MEETING_NAMES`.
 - After each `/stop`, Sachin commits within 30 min: `transcripts/S<n>/transcript.md` (segments concatenated, boundary marked), `summary.md`, and `awareness-check.md` (the close round's answers tallied by quadrant; the S4 profile needs them). Commit `S<n>: sachin: transcript + summary`.
 - S4: the synthesis reads the live channel text pasted at 20:24, since the transcript only exists after `/stop`; v2 within 48 h.
 
@@ -262,7 +262,7 @@ Detail and owners: `prep-checklist.md`.
 | Sep 13 | Facilitator kits in `facilitator/` (rafa-kit, sachin-kit) as bridge targets | both |
 | Sep 14 | Discord: #kitcraft, #kitcraft-transcripts, breakout-1…5; OpenRecapper owner, `RECORD_MEETING_NAMES`, `/record-access` | Rafa |
 | Sep 15 → | Pre-work email and collaborator invite to each registrant as registrations arrive | Rafa |
-| Sep 17 | Dry run: clone from a fresh machine/account with the email's Block A; one autolog line; one push; `/record` + `/stop`; a second `/record` with the same name; one breakout move; pins posted to a test channel | both |
+| Sep 17 | Tech rehearsal: clone from a fresh machine/account with the email's Block A; one autolog line; one push; `/record` + `/stop`; a second `/record` with the same name; one breakout move; pins posted to a test channel | both |
 | Sep 19 | Push check per registrant; 1A invites; provisional triads from the form | Sachin |
 | Sep 20 | Pins 1–2 in #kitcraft | Sachin |
 | Sep 21 | S1 + 1A; triads confirmed at S1 close and pinned by 16:45; S2 at 20:00 | both |
@@ -290,9 +290,9 @@ The canonical files are `KIT_TEMPLATE/` and `bridges/TEMPLATE.md`; the shapes:
 
 ---
 
-## Changes from v7 (dry run 01, Sep 11–20)
+## Changes from v7 (agent-run rehearsal, Sep 2026)
 
-Observation numbers refer to `simulation/OBSERVATIONS.md` (OBS), `observations/rafa.md` (rafa) and `observations/sachin.md` (sachin) on the `simulation/dry-run-01` branch.
+Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observation files, linked from the pull request that introduced v8.
 
 - Schedule: S1 is 60 min, not 90 (ice-breaker 9, situating 10, theory 14, exercise 17, close 7); S2 is Monday 20:00 UTC, so Async 1 is a three-hour gap with the README only and Async 2 is the overnight. Header table in UTC/Berlin/Pacific. (OBS 1, 2; rafa 10, 11; sachin 3, 21)
 - S2 timing compressed to build 20 / critique 13 with room moves inside / close 10. (sachin 20)
