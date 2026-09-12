@@ -1,6 +1,6 @@
 # S2 — Factories · slides (60 min, Mon Sep 21, 20:00–21:00 UTC)
 
-Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa — first minute, build briefing, push check, rooms, the round, awareness check, Async 2, close; Sachin — kit-phase thesis, F2F case, brand kit, factory = kit + interface and the ladder, the comms layer). Rafa screen-shares throughout and keeps #kitcraft, recorder and repo; the presenter talks. Breakout groups per the S2 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5.
+Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa — first minute, build briefing, push check, rooms, the round, awareness check, Async 2, close; Sachin — kit-phase thesis, the Rao–Dixon case, brand kit, factory as a flexible job shop and the ladder, the comms layer). Rafa screen-shares throughout and keeps #kitcraft, recorder and repo; the presenter talks. Breakout groups per the S2 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5.
 
 ## Slide 1 — Where we are (00:00) (presenter: Rafa; Sachin from the fourth bullet)
 - Recording on; consent as pinned; breakouts off the record
@@ -10,13 +10,13 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - A kit is what stays after the agent has failed at it once
 > Speaker note: one sentence per bullet; the room has had three hours, not a night. Rafa confirms "Recording on" in #kitcraft first and does the first three bullets; Sachin takes the last two and continues straight into slide 2.
 
-## Slide 2 — Book factory, F2F (03:00) (presenter: Sachin)
-- Rao's manuscript factory → Jenna Dixon's production factory
-- Handoff = a shared Dropbox folder + a transmittal server; nothing else
+## Slide 2 — Book factory: Rao → Dixon (03:00) (presenter: Sachin)
+- Rao's manuscript factory produced **intermediates** — drafts + metadata — not a finished book
+- Jenna Dixon's production factory consumed them; the shared Dropbox folder + metadata server was the **interface**
 - Two non-coders; **domain knowledge > coding knowledge**
-- Intermediates flowed (manuscript states), not the finished book
-- Neither factory changed for the other; the folder layout was the agreement
-> Speaker note: this is the shape every bridge tomorrow will have; say "folder + transmittal" twice.
+- Neither factory changed for the other; the folder layout and the metadata were the agreement
+- Two people with significant mutual trust exchanging intermediates between bespoke infrastructures: one observed form of a bridge. Whether it is *the* form is what tomorrow finds out
+> Speaker note: say "intermediates" and "interface" twice each; do not call it the shape of every bridge.
 
 ## Slide 3 — Protocolized visual identity (07:00) (presenter: Sachin)
 - TITLES → two narrow models → PI brand kit → Monstrous Times; Jamverse as the fiction-side sibling
@@ -26,17 +26,18 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - The idea you had is already in the archive; provenance, not novelty, is what your kit adds
 > Speaker note: Rafa puts the brand kit page on screen 30 s, then `llms.txt`; do not explain the models.
 
-## Slide 4 — Factory = kit + interface (11:00) (presenter: Sachin)
-- Kit: folder, `SKILL.md`, `README.md`, `examples/` (Agent Skills, open standard)
-- Factory: the same kit with an interface someone else's agent can use without you
+## Slide 4 — Factory: a flexible job shop (11:00) (presenter: Sachin)
+- A factory is a flexible job shop: a folder hierarchy on your own machine where agent sessions work at specialised workstations and hand artifacts to each other, making varied things with a flexibly configured set of tools (Rao)
+- A kit is one adaptation for one job; a factory is the infrastructure that runs kits and produces **intermediates** — work-in-progress and skills another factory can consume — not finished artifacts
+- The declared interface is the mechanism: how a factory exposes an intermediate to a stranger's agent
 - The ladder, ascending effort: README handed to an agent → static page → MCP → API / A2A
 - CMM: Discover → Encode = Kit · Prove = Factory · Harvest = Bridge
-- Tonight's deliverable is rung one done properly; the README's `Interface:` line names the rung and how to call it. Rungs 2+ are stretch
-> Speaker note: answers the question that always comes: for a document kit, the README *is* the interface.
+- Tonight's deliverable is rung one done properly; the README's `Exports:` line names the intermediate and its `Interface:` line names the rung and how to call it. Rungs 2+ are stretch
+> Speaker note: answers the question that always comes: for a document kit, the document *is* the intermediate and the README *is* the interface.
 
 ## Slide 5 — Convert a kit into a factory (15:00 → 35:00) (presenter: Rafa; comms layer at 30:00: Sachin)
-- Take the kit you chose in Async 1 — your own (`## Kit` task or `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and make it a factory: a kit with a declared interface a stranger's agent can use without talking to you
-- Paste `instructions/S2-factory.md`'s block. Rung 1, done properly: `README.md` with an `Interface:` line (the rung and how to call it) · `SKILL.md` whose `description` triggers · `examples/input.*` + `output.*` produced cold from SKILL.md
+- Take the kit you chose in Async 1 — your own (`## Kit` task or `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and make it a factory: (1) put it in a job-shop structure — its steps as workstations, its outputs as handoff artifacts, inside `participants/<you>/kit/` — (2) name the intermediate it exports for someone else's factory, (3) declare the interface for that intermediate
+- Paste `instructions/S2-factory.md`'s block. Rung 1, done properly: `README.md` with an `Exports:` line (the intermediate) and an `Interface:` line (the rung and how to call it) · `SKILL.md` whose steps are the workstations and whose `description` triggers · `examples/input.*` + `output.*` (the intermediate) produced cold from SKILL.md
 - Facilitator kit: copied into your folder, adapted to your organisation and data (inputs, constraints, do-nots), `Source:` on the README's first line
 - Rungs 2+ (static page, MCP, API/A2A) only after rung 1 works; never claim a rung you did not build
 - **30:00, Sachin — comms layer:** cut what adds nothing · remove the AI tells · rewrite the README in your own words
