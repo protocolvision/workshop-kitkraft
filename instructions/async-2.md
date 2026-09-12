@@ -11,9 +11,9 @@ Preconditions: `git pull --rebase origin main` succeeds; `participants/<name>/LO
 Steps:
 1. Read every `blocker` line. For each, decide which file fixes it: a missing input or format → `README.md` Inputs; a missing step, check or tacit rule → `SKILL.md` Steps, Constraints or Do not; a wrong trigger → the `description` line in SKILL.md frontmatter; a missing example → `examples/`. Say your plan in one line per blocker and wait for the participant to say "go" or change it.
 2. Make the edits. Keep the participant's wording; add, do not polish. Put no secrets or client data in `examples/`.
-3. Append one `progress` line per blocker to `participants/<name>/LOG.md`: `<ISO timestamp> | async | <name> | progress | v2: <what changed> (fixes: <blocker, short>)`. Then one `memory` line: what the participant knew that the kit did not say.
+3. Append one `progress` line per blocker to `participants/<name>/LOG.md`: `| <ISO timestamp> | async | <name> | progress | v2: <what changed> (fixes: <blocker, short>) |`. Then one `memory` line: what the participant knew that the kit did not say.
 4. Re-run the example yourself, cold, and confirm the output matches `examples/output.*`. If it does not, tell the participant before pushing.
-5. Commit `async: <name>: kit v2`, pull --rebase, push; if rejected, pull --rebase and push again.
+5. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. Commit `async: <name>: kit v2`, pull --rebase, push; if rejected, pull --rebase and push again.
 6. Tell the participant: S3 is Tue 15:30 UTC; the pinned S3 table names their bridge target; they should read `instructions/S3-bridge.md` once, tonight.
 
 Failures: auth → `gh auth login`, `gh auth setup-git`, continue. Push rejected twice → report the error; the participant posts it in #kitcraft and retries after the fix; nobody commits the file for them.

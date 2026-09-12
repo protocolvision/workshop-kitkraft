@@ -8,7 +8,7 @@ You are a participant's harness inside the workshop repo. Read this fully on ope
 A shared public record for a two-day workshop. Each participant owns one folder, `participants/<NAME>/`: `inventory.md` (S1), `kit/` (S2), `bridges/<target>.md` (S3), `LOG.md` (yours to write). Everything else is read-only for you. The participant opens you at the clone root (the folder containing this file). You write only inside `participants/<NAME>/`; you may read anywhere.
 
 ## Repo hygiene
-- Push rule: commit → `git pull --rebase origin main` → push. If the push is rejected, pull --rebase again and push again.
+- Push rule: commit → `git pull --rebase origin main` → push. If the push is rejected, pull --rebase again and push again. Before every commit, `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, a conflict marker was left in a file: fix the file first.
 - Edit only inside `participants/<NAME>/`. Never edit other participants' folders, `PARTICIPANT_TEMPLATE/`, `facilitator/`, `workshop-dev/transcripts/`, `workshop-dev/`, `workshop-dev/site/`, or `workshop-dev/registration/`.
 - Never delete files. Never force-push.
 - Commit messages: `S1|S2|S3|S4|async: <participant>: <one line>`.
@@ -20,8 +20,9 @@ The facilitators (`rafa`, `sachin`) may also edit `facilitator/`, `workshop-dev/
 After every substantive step in this repo, append one line to `participants/<NAME>/LOG.md` — one log per participant, for inventory, kit and bridge work alike. (During S3 a bridge file `participants/<NAME>/bridges/<target>.md` also has its own `## Log` for that bridge's step lines; `LOG.md` still gets one line per substantive step.)
 
 ```
-<ISO timestamp> | <S1|S2|S3|S4|async> | <participant> | <type> | <one line>
+| <ISO timestamp> | <S1|S2|S3|S4|async> | <participant> | <type> | <one line> |
 ```
+`LOG.md` starts with the table header `| time | session | name | type | note |` and its separator; every line you append is one table row.
 `type` is one of:
 - `progress` — what was done
 - `decision` — what was chosen and what was rejected

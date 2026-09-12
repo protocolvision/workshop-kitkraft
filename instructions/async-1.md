@@ -12,8 +12,8 @@ Steps:
 1. Read `participants/<name>/inventory.md` and the Job lines of `facilitator/rafa/kit/README.md` and `facilitator/sachin/kit/README.md`. Ask the participant which kit they will convert into a factory in S2: their own (the `## Kit` task, or an item under `## Built / use`) or one of the two facilitator kits. If they have not decided, STOP and ask; do not choose for them.
 2. Facilitator kit chosen: copy its `README.md`, `SKILL.md` and `examples/` into `participants/<name>/kit/` (over the template files) and make the README's first line `Source: facilitator/<rafa|sachin>/kit/, adapted`. Own kit: keep the template; no Source line.
 3. In `participants/<name>/kit/README.md` write only two lines now: `Job:` (one sentence; for a facilitator kit re-said for the participant's own organisation) and `Interface: rung 1 — file handoff: hand this folder to your agent and run SKILL.md on examples/input.*`. Leave the other fields for S2. Do not write SKILL.md or examples yet.
-4. Append to `participants/<name>/LOG.md` one line: `<ISO timestamp> | async | <name> | decision | S2 source: <own: task n / built-use item> or <facilitator/rafa|sachin>`.
-5. Commit `async: <name>: S2 source chosen`; `git pull --rebase origin main`; push. If rejected, pull --rebase again and push again.
+4. Append to `participants/<name>/LOG.md` one line: `| <ISO timestamp> | async | <name> | decision | S2 source: <own: task n / built-use item> or <facilitator/rafa|sachin> |`.
+5. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. Commit `async: <name>: S2 source chosen`; `git pull --rebase origin main`; push. If rejected, pull --rebase again and push again.
 
 Failures: auth prompt → tell the participant to run `gh auth login` and `gh auth setup-git`, then continue. Push rejected twice → stop, report the error text; the participant posts it in #kitcraft and retries after the fix; nobody commits the file for them.
 
