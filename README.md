@@ -13,17 +13,19 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 ## How to participate
 
 1. Install a harness (Claude Code or Codex). Accept the collaborator invite for this repo.
-2. Clone it, **open your harness inside the clone**, then paste `instructions/orient.md` into it and say "do this":
+2. Clone it, make your folder from the template, **open your harness inside your folder**, then paste `instructions/orient.md` into it and say "do this":
    ```
-   git clone https://github.com/protocolvision/workshop-kitkraft.git && cd workshop-kitkraft && claude   # or codex
+   git clone https://github.com/protocolvision/workshop-kitkraft.git && cd workshop-kitkraft
+   cp -r PARTICIPANT_TEMPLATE participants/<your-name> && cd participants/<your-name> && claude   # or codex
    ```
    Your harness reads `AGENTS.md` / `CLAUDE.md` on open. That is what makes the autolog work.
-3. Work only in your own files:
-   - `inventory/<your-name>.md` (Session 1)
-   - `kits/<your-name>/` (Session 2) — copy `KIT_TEMPLATE/` to start
-   - `bridges/<you>-<target>.md` (Session 3) — one log per bridge, written by you
+3. Work only in your own folder, `participants/<your-name>/`:
+   - `inventory.md` (Session 1)
+   - `kit/` (Session 2)
+   - `bridges/<target>.md` (Session 3) — one log per bridge, written by you
+   - `LOG.md` — your harness writes it; you do not
 4. Push to `main`. No branches, no PRs. Your harness pulls with rebase first.
-5. Private kit? Keep the content on your own machine. Put only a stub `kits/<your-name>/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `bridges/README.md`). There is no private repo.
+5. Private kit? Keep the content on your own machine. Put only a stub `participants/<your-name>/kit/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `bridges/README.md`). There is no private repo.
 
 ## Layout
 
@@ -32,11 +34,10 @@ README.md          this file
 AGENTS.md          agent entry: conventions + autolog instruction
 CLAUDE.md          points Claude Code at AGENTS.md
 instructions/      blocks to paste into your harness (orient, async-1, S2-critique, async-2, S3-bridge)
-KIT_TEMPLATE/      README.md, SKILL.md, LOG.md, examples/
-inventory/         one file per participant (S1)
-kits/<name>/       one folder per participant (S2)
-bridges/           one log per bridge (S3); SYNTHESIS.md (S4)
-facilitator/       facilitator factories usable as bridge targets
+PARTICIPANT_TEMPLATE/  copy to participants/<name>/: inventory.md, kit/, bridges/TEMPLATE.md, LOG.md
+participants/<name>/   one folder per person: inventory.md (S1), kit/ (S2), bridges/<target>.md (S3), LOG.md
+bridges/           README.md (S3 rules, transmittal procedure); SYNTHESIS.md (S4)
+facilitator/<name>/  facilitator kits usable as bridge targets (same shape: kit/, LOG.md)
 transcripts/       OpenRecapper output per session
 workshop-dev/      facilitator material: outline, resources, checklists
 site/              the landing page at https://ai.protocolized.dev/kitcraft/ (source + deploy notes)
@@ -60,10 +61,10 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, 
 
 | Session | When (UTC) | Length | Artifact |
 |---|---|---|---|
-| S1 Kits | Mon Sep 21, 15:30 | 60 min | `inventory/<name>.md` |
+| S1 Kits | Mon Sep 21, 15:30 | 60 min | `participants/<name>/inventory.md` |
 | 1A clinic (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
-| S2 Factories | Mon Sep 21, 20:00 | 60 min | `kits/<name>/` |
-| S3 Bridges | Tue Sep 22, 15:30 | 60 min | `bridges/<you>-<target>.md` |
+| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` |
+| S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<you>/bridges/<target>.md` |
 | S4 Recap | Tue Sep 22, 20:00 | 60 min | `bridges/SYNTHESIS.md` |
 
 Times in UTC / Berlin / Pacific are pinned in #kitcraft.

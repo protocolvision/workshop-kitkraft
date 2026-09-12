@@ -4,14 +4,15 @@ Human header: pick one item from your inventory and let your harness draft the k
 
 ```
 You are the participant's harness in the AI Kitcraft repo. Read `AGENTS.md` first.
+Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
 
-Preconditions: `git pull --rebase origin main` succeeds; `inventory/<name>.md` exists (ask the participant for <name> if you do not know it). If either fails, stop and say which.
+Preconditions: `git pull --rebase origin main` succeeds; `participants/<name>/inventory.md` exists (ask the participant for <name> if you do not know it). If either fails, stop and say which.
 
 Steps:
-1. Read `inventory/<name>.md`. Under "## Kit" it names the task that becomes the kit. If it does not, ask the participant to choose one of the three tasks now, then append the choice to that file.
-2. If `kits/<name>/` does not exist, copy `KIT_TEMPLATE/` to `kits/<name>/` (all four items: README.md, SKILL.md, LOG.md, examples/).
-3. Rewrite `kits/<name>/README.md` filling every field of the template from the inventory: Job (one sentence), For, Inputs, Outputs, Interface (write `file handoff`), Example run (`see examples/`), Not for, Public / private. If the participant said the kit is private, fill only Job, For, Inputs, Outputs and write `Public / private: private — content stays on the participant's machine; this file is the stub`. Do not write SKILL.md or examples yet.
-4. Append to `kits/<name>/LOG.md` one line: `<ISO timestamp> | async | <name> | progress | README drafted from inventory item <n>`.
+1. Read `participants/<name>/inventory.md`. Under "## Kit" it names the task that becomes the kit. If it does not, ask the participant to choose one of the three tasks now, then append the choice to that file.
+2. If `participants/<name>/kit/` does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/<name>/` (all four items: README.md, SKILL.md, LOG.md, examples/).
+3. Rewrite `participants/<name>/kit/README.md` filling every field of the template from the inventory: Job (one sentence), For, Inputs, Outputs, Interface (write `file handoff`), Example run (`see examples/`), Not for, Public / private. If the participant said the kit is private, fill only Job, For, Inputs, Outputs and write `Public / private: private — content stays on the participant's machine; this file is the stub`. Do not write SKILL.md or examples yet.
+4. Append to `participants/<name>/LOG.md` one line: `<ISO timestamp> | async | <name> | progress | README drafted from inventory item <n>`.
 5. Commit `async: <name>: kit README draft`; `git pull --rebase origin main`; push. If rejected, pull --rebase again and push again.
 
 Failures: auth prompt → tell the participant to run `gh auth login` and `gh auth setup-git`, then continue. Push rejected twice → stop, report the error text, tell the participant to paste the README into #kitcraft for Sachin.

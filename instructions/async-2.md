@@ -4,13 +4,14 @@ Human header: fix what the critique found, push v2, and let your harness tell yo
 
 ```
 You are the participant's harness in the AI Kitcraft repo. Read `AGENTS.md` first. Ask for <name> if unknown.
+Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
 
-Preconditions: `git pull --rebase origin main` succeeds; `kits/<name>/LOG.md` has at least one `blocker` line from S2. If it has none, ask the participant for the failures the other agent reported, log them as `blocker` lines, then continue.
+Preconditions: `git pull --rebase origin main` succeeds; `participants/<name>/LOG.md` has at least one `blocker` line from S2. If it has none, ask the participant for the failures the other agent reported, log them as `blocker` lines, then continue.
 
 Steps:
 1. Read every `blocker` line. For each, decide which file fixes it: a missing input or format → `README.md` Inputs; a missing step, check or tacit rule → `SKILL.md` Steps, Constraints or Do not; a wrong trigger → the `description` line in SKILL.md frontmatter; a missing example → `examples/`. Say your plan in one line per blocker and wait for the participant to say "go" or change it.
 2. Make the edits. Keep the participant's wording; add, do not polish. Put nothing private in `examples/`.
-3. Append one `progress` line per blocker to `kits/<name>/LOG.md`: `<ISO timestamp> | async | <name> | progress | v2: <what changed> (fixes: <blocker, short>)`. Then one `memory` line: what the participant knew that the kit did not say.
+3. Append one `progress` line per blocker to `participants/<name>/LOG.md`: `<ISO timestamp> | async | <name> | progress | v2: <what changed> (fixes: <blocker, short>)`. Then one `memory` line: what the participant knew that the kit did not say.
 4. Re-run the example yourself, cold, and confirm the output matches `examples/output.*`. If it does not, tell the participant before pushing.
 5. Commit `async: <name>: kit v2`, pull --rebase, push; if rejected, pull --rebase and push again.
 6. Tell the participant: S3 is Tue 15:30 UTC; the pinned S3 table names their bridge target; they should read `instructions/S3-bridge.md` once, tonight.

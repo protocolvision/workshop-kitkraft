@@ -16,7 +16,7 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 
 ## Slide 3 — Debrief: two triads, six bridges (10:00) (presenter: Sachin)
 - Triad 1 (6 min): ingrid → kwame · devr → ingrid · kwame → devr — 90 s each, 90 s questions
-- Triad 2 (6 min): tomasr → aiko or sachin-kit · marisol → tomasr — 90 s each; marisol reads aiko → marisol (the transmittal) from the log, 60 s; questions
+- Triad 2 (6 min): tomasr → aiko or `facilitator/sachin/kit/` · marisol → tomasr — 90 s each; marisol reads aiko → marisol (the transmittal) from the log, 60 s; questions
 - Say: target, the one thing, what a human supplied, did it work
 - Each report goes into the synthesis as you speak
 > Speaker note: 5 speakers + 1 read-out = 12 min. Hold the timer; tomasr runs over.

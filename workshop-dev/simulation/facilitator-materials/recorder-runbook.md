@@ -44,7 +44,7 @@ Every start is confirmed in #kitcraft with `Recording on (KITCRAFT-S<n>)` and ev
 
 ## S4 special case
 
-The synthesis is read back at 20:50, but the S4 transcript only exists after `/stop` at 21:00. So the S4 synthesis is built from the repo (`LOG.md` files, `bridges/*.md`, `transcripts/S1–S3/`, `awareness-check.md` files) plus the **live text of #kitcraft-transcripts**, which Sachin selects and pastes into a scratch file on his machine at 20:24 (not committed). The final `SYNTHESIS.md` v2, with the S4 transcript folded in, is pushed within 48 h.
+The synthesis is read back at 20:50, but the S4 transcript only exists after `/stop` at 21:00. So the S4 synthesis is built from the repo (`LOG.md` files, `participants/*/bridges/*.md`, `transcripts/S1–S3/`, `awareness-check.md` files) plus the **live text of #kitcraft-transcripts**, which Sachin selects and pastes into a scratch file on his machine at 20:24 (not committed). The final `SYNTHESIS.md` v2, with the S4 transcript folded in, is pushed within 48 h.
 
 ## Confirm before Sep 17 dry run (unknowns)
 

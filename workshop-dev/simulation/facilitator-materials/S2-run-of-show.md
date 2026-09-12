@@ -2,7 +2,7 @@
 
 Presenting split by expertise (checkpoint 1). Sachin: opener, brand kit, comms layer, rooms, close, recorder, chat, repo. Rafa: F2F case, factory = kit + interface, build briefing; floats breakout-1. Sachin screen-shares all session. Present: ingrid, devr, marisol, tomasr, kwame. Async: aiko.
 
-Pre-session (Sachin): 19:30 pull; list existing `kits/<name>/README.md` in #kitcraft; 19:50 re-post the S2 triads pin; 19:55 screen-share check.
+Pre-session (Sachin): 19:30 pull; list existing `participants/<name>/kit/README.md` in #kitcraft; 19:50 re-post the S2 triads pin; 19:55 screen-share check.
 
 | UTC | min | Presenter | Rafa | Sachin | Participants | Artifact | Recorder |
 |---|---|---|---|---|---|---|---|
@@ -10,11 +10,11 @@ Pre-session (Sachin): 19:30 pull; list existing `kits/<name>/README.md` in #kitc
 | 20:03 | 03 | Rafa | Slide 2: book factory | drops the F2F link in #kitcraft | — | — | on |
 | 20:07 | 07 | Sachin | — | Slide 3: brand kit / Jamverse (screen) | — | — | on |
 | 20:11 | 11 | Rafa | Slide 4: factory = kit + interface; ladder; CMM | links `facilitator/README.md`, Agent Skills spec | kwame's interface question, if asked | — | on |
-| 20:15 | 15 | Rafa | Slide 5: build briefing; starts the clock; time calls at 5, 10 | pulls; helps ingrid (new harness) and marisol (stub) in text | agent copies template, fills README / SKILL / examples | `kits/<name>/` v1 | on; a facilitator speaks every ≤15 min |
+| 20:15 | 15 | Rafa | Slide 5: build briefing; starts the clock; time calls at 5, 10 | pulls; helps ingrid (new harness) and marisol (stub) in text | agent copies template, fills README / SKILL / examples | `participants/<name>/kit/` v1 | on; a facilitator speaks every ≤15 min |
 | 20:30 | 30 | Sachin | floats #kitcraft | **comms layer**: cut, de-tell, rewrite README by hand; posts the three rules | edit README by hand | README v1 | on |
 | 20:33 | 33 | Sachin | — | "push now"; confirms pushes on the branch; commits pasted files under their names | commit, push, pull --rebase | 5 kits + 1 stub | on |
 | 20:35 | 35 | Sachin | moves to breakout-1 | Slide 6 (60 s); `/stop`; "Recording off · rooms open"; pastes §S2 instructions; moves people; to breakout-2 | move to rooms | — | `/stop` |
-| 20:41 | 41 | — | swaps to breakout-2 | swaps to breakout-1 | reports read aloud; owners log `blocker` lines | `kits/<name>/LOG.md` | off |
+| 20:41 | 41 | — | swaps to breakout-2 | swaps to breakout-1 | reports read aloud; owners log `blocker` lines | `participants/<name>/LOG.md` | off |
 | 20:47 | 47 | — | back in #kafka | "Reconvene now"; moves stragglers | one sentence each ready; push | — | off |
 | 20:48 | 48 | Sachin | — | `/record` again; "Recording on"; waits for live line | in #kafka | — | `/record channel:#kafka name:KITCRAFT-S2` |
 | 20:49 | 49 | Sachin | listens | Slide 7: round, cycle order; captures sentences | speak (≈40 s each) | `transcripts/S2/awareness-check.md` | on |

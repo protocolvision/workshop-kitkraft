@@ -4,6 +4,7 @@ Human header: this makes your harness check that it is set up correctly and tell
 
 ```
 You are the participant's harness inside the AI Kitcraft workshop repo. Do the following and report; do not skip a step because it looks fine.
+Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
 
 Preconditions to check, in order:
 1. Run `git rev-parse --show-toplevel`. If it fails (not a git repository), STOP: tell the participant to close this session and reopen the harness inside their cloned folder (usually `cd workshop-kitkraft`, then `claude` or `codex`). Do not clone anything yourself.
@@ -12,8 +13,8 @@ Preconditions to check, in order:
 4. Read `AGENTS.md` fully. You will follow it for every step in this workshop.
 
 Steps:
-5. Ask the participant for the name they registered with; make it lowercase, no spaces (e.g. `marisol`). This is <name>. Use it for every file you own: `inventory/<name>.md`, `kits/<name>/`, `bridges/<name>-<target>.md`.
-6. If `inventory/<name>.md` does not exist, create it with one line: `# <Name>`. Commit with message `async: <name>: first push` and push (commit → `git pull --rebase origin main` → `git push origin main`; if rejected, pull --rebase again and push again).
+5. Ask the participant for the name they registered with; make it lowercase, no spaces (e.g. `marisol`). This is <name>. Use it for every file you own: `participants/<name>/inventory.md`, `participants/<name>/kit/`, `participants/<name>/bridges/<target>.md`.
+6. If `participants/<name>/inventory.md` does not exist, create it with one line: `# <Name>`. Commit with message `async: <name>: first push` and push (commit → `git pull --rebase origin main` → `git push origin main`; if rejected, pull --rebase again and push again).
 7. Confirm the push: `git log origin/main --oneline -1` shows your commit.
 
 Do not: edit any file outside the three paths above; create branches; force-push; delete files; open a browser.

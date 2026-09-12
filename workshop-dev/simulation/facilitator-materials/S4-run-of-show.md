@@ -31,9 +31,9 @@ After (Sachin, by 21:30): `transcripts/S4/transcript.md`, `summary.md`, `awarene
 
 ## Synthesis procedure (what Sachin's agent reads, in order)
 
-1. `bridges/*.md` (six logs; `TEMPLATE.md`, `README.md` excluded): *What a human had to supply*, *Request / Response* (stub bridges), *Did it work*, *What a bridge turned out to be*; the `## Log` lines, counting `unblock`.
-2. `kits/*/LOG.md` and `facilitator/*/LOG.md`: all lines; S2 `blocker` lines matched against async `progress` lines (fixed / not fixed).
-3. `inventory/*.md` `## Log` sections (S1 lines; the autolog-fired check).
+1. `participants/*/bridges/*.md` (six logs; `TEMPLATE.md`, `README.md` excluded): *What a human had to supply*, *Request / Response* (stub bridges), *Did it work*, *What a bridge turned out to be*; the `## Log` lines, counting `unblock`.
+2. `participants/*/LOG.md` and `facilitator/*/LOG.md`: all lines; S2 `blocker` lines matched against async `progress` lines (fixed / not fixed).
+3. `participants/*/inventory.md` `## Log` sections (S1 lines; the autolog-fired check).
 4. `transcripts/S1/`, `S2/`, `S3/`: `awareness-check.md` (tallies), `summary.md`; `transcript.md` only for the S3 hypothesis statement and the S2 "got wrong" round.
 5. At 20:24: the S4 live-channel scratch file (uncommitted), for the debrief reports.
 6. `workshop-dev/simulation/discord/kitcraft.md` (rehearsal) / the #kitcraft channel (real): aiko's async report and final-round answer.

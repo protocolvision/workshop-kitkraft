@@ -35,7 +35,7 @@ Timestamps are minutes from session start. Presenter on each heading (checkpoint
 > Speaker note: answers kwame's coming question: for a document kit, the README *is* the interface.
 
 ## Slide 5 — Build the kit (15:00 → 35:00) (presenter: Rafa; comms layer at 30:00: Sachin)
-- Copy `KIT_TEMPLATE/` to `kits/<you>/`; keep your README draft
+- copy `PARTICIPANT_TEMPLATE/` to `participants/<name>/`; keep your README draft
 - `README.md` — job, for whom, inputs, outputs, interface, one example run, not-for
 - `SKILL.md` — `name`, `description` (the trigger line), when to use, steps, constraints, do-nots
 - `examples/` — one input, the output it produced; synthetic or redacted
