@@ -34,8 +34,4 @@ Every `inventory.md` has exactly these sections, in this order. The pre-work pus
 <Partnership / Hypervigilance / Overreliance / Compliance, or "not taken">
 ```
 
-## Dropping out
-
-If you withdraw, add an empty file `WITHDREW.md` to your folder (or ask a facilitator to). Nothing is deleted. Other people's harnesses skip any `participants/*/` folder that contains `WITHDREW.md`: it is not counted in the S1 nearest-two, not assigned as a critique or bridge target, and a bridger whose target withdrew switches to a facilitator kit.
-
 Public means: task names and one-line descriptions, readable by anyone. No client names, numbers, credentials, or NDA material. `_example/` is a filled example; folders starting with `_` are not participants.
