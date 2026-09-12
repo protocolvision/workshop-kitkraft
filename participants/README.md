@@ -16,7 +16,7 @@ Steps:
    - `## Posture`: their survey posture (Partnership / Hypervigilance / Overreliance / Compliance).
    - Then append to `participants/<name>/LOG.md` (create it from `PARTICIPANT_TEMPLATE/LOG.md` if missing): `<ISO timestamp> | S1 | <name> | progress | inventory written by harness`. One line per line, blank line after the header (GitHub renders adjacent lines as one paragraph; the raw file is what counts). `inventory.md` keeps its `## Log` heading with nothing under it.
 2. Commit `S1: <name>: inventory`, `git pull --rebase origin main`, push; if rejected, pull --rebase and push again; if rejected twice, tell the participant to paste the file into #kitcraft for Sachin.
-3. Pull again. Read every other `participants/*/inventory.md` (not `_example-rafa.md`). Tell the participant the two entries closest to theirs and why, in three lines. Append `<ISO timestamp> | S1 | <name> | memory | closest: <a>, <b> — <why>` to `participants/<name>/LOG.md`; commit `S1: <name>: closest entries`, pull --rebase, push.
+3. Pull again. Read every other `participants/*/inventory.md` (skip folders starting with `_`). Tell the participant the two entries closest to theirs and why, in three lines. Append `<ISO timestamp> | S1 | <name> | memory | closest: <a>, <b> — <why>` to `participants/<name>/LOG.md`; commit `S1: <name>: closest entries`, pull --rebase, push.
 
 Do not: write the file in a browser or outside this folder; edit any other inventory; put client names, credentials or NDA material in the file; write more than the participant said.
 
