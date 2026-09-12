@@ -33,7 +33,7 @@ You are the participant's harness in the AI Kitcraft repo, Session 1, second pro
 Step 0, always: `git rev-parse --show-toplevel` must equal `pwd` and `git remote get-url origin` must contain `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root (the folder containing `AGENTS.md`) and check again. NAME = the participant's folder name under `participants/` (ask if unknown); if `participants/NAME/` does not exist, copy `PARTICIPANT_TEMPLATE/` to it. You read anywhere in the repo; you write only inside `participants/NAME/`.
 Preconditions: inside the clone; `git pull --rebase origin BRANCH` done (others' files arrive only through the pull).
 Steps:
-1. List `participants/*/inventory.md` excluding `participants/NAME/`, any folder whose name starts with `_`, and any folder containing `WITHDREW.md` (examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
+1. List `participants/*/inventory.md` excluding `participants/NAME/` and any folder whose name starts with `_`; report how many you found and work with those (examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
 2. Read each. Compare against `participants/NAME/inventory.md` on: the kind of recurring task, the input type (documents, transcripts, spreadsheets, calendars), and the output type.
 3. Name the two nearest, one line each: `<name> — <why>`.
 4. Confirm `participants/NAME/LOG.md` has at least one line under its header; if not, append there `<ISO-8601 UTC now> | S1 | NAME | progress | inventory written by harness` now, commit `S1: NAME: log line`, pull --rebase, push.

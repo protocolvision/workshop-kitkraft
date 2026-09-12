@@ -31,7 +31,7 @@ After (Sachin, by 21:30): `transcripts/S4/transcript.md`, `summary.md`, `awarene
 
 ## Synthesis procedure (what Sachin's agent reads, in order)
 
-1. `participants/*/bridges/*.md` (four logs; folders with `WITHDREW.md` have none and are listed in §1 as withdrawn): *What a human had to supply*, *Request / Response* (stub bridges), *Did it work*, *What a bridge turned out to be*; the `## Log` lines, counting `unblock`.
+1. `participants/*/bridges/*.md` (count = folders under `participants/` with a LOG.md line from S3; folders without one are listed in §1 as not present): *What a human had to supply*, *Request / Response* (stub bridges), *Did it work*, *What a bridge turned out to be*; the `## Log` lines, counting `unblock`.
 2. `participants/*/LOG.md` and `facilitator/*/LOG.md`: all lines; S2 `blocker` lines matched against async `progress` lines (fixed / not fixed).
 3. `participants/*/inventory.md` `## Log` sections (S1 lines; the autolog-fired check).
 4. `transcripts/S1/`, `S2/`, `S3/`: `awareness-check.md` (tallies), `summary.md`; `transcript.md` only for the S3 hypothesis statement and the S2 "got wrong" round.

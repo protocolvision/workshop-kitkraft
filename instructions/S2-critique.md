@@ -8,7 +8,7 @@ Step 0, always: `git rev-parse --show-toplevel` must equal `pwd` and `git remote
 
 Preconditions:
 1. Commit and push whatever is in `participants/<name>/kit/` right now, finished or not (`S2: <name>: kit v1`), then `git pull --rebase origin main` so the other kits are present. If the push is rejected, pull --rebase and push again; if it is rejected twice, continue with the pull and tell the participant to paste their kit into #kitcraft.
-2. Check `participants/<target>/kit/README.md` exists and `participants/<target>/WITHDREW.md` does not (a withdrawn folder is never a target). If it does not, tell the participant; they ask the owner (in the room) to push, then you pull again. If it still does not exist after two minutes, run the ABSENT variant below.
+2. Check `participants/<target>/kit/README.md` exists. If it does not after one pull, read `participants/<target>/inventory.md` instead and report what a kit built from it would need; append `<ISO timestamp> | S2 | <name> | decision | <target> has no kit in the repo; critiqued the inventory instead` to `participants/<name>/LOG.md`. If it does not, tell the participant; they ask the owner (in the room) to push, then you pull again. If it still does not exist after two minutes, run the ABSENT variant below.
 
 Steps:
 3. Read `participants/<target>/kit/README.md`, then `participants/<target>/kit/SKILL.md`, then list `participants/<target>/kit/examples/`. Read nothing else; ask the participant nothing about the kit.
