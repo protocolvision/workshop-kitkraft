@@ -15,7 +15,7 @@ AI Kitcraft: a hands-on workshop where AI-curious analysts and managers build th
 
 ## Short (social / one paragraph)
 
-Most teams "adopt AI" by buying software and waiting for a productivity jump that never shows up. That missing productivity is the signature of the stage we're actually in: the **Kit phase** — the tinkerer-driven stage every general-purpose technology passes through before firm-scale machinery turns play into output. **AI Kitcraft** is the hands-on answer. Across two workshop days at the 2026 Protocol Symposium, you'll move from ad-hoc AI use to building a reusable Kit your team can re-run, and leave with a working grasp of the five-level AI Capability Maturity Model. No AI-engineering background required. Seats are limited to 10–15. → https://ai.protocolized.dev/kitcraft/
+Most teams "adopt AI" by buying software and waiting for a productivity jump that never shows up. That missing productivity is the signature of the stage we're actually in: the **Kit phase** — the tinkerer-driven stage every general-purpose technology passes through before firm-scale machinery turns play into output. **AI Kitcraft** is the hands-on answer. Across two workshop days at the 2026 Protocol Symposium, you'll write down the way you already work with AI, make it something a colleague can pick up and run, and try to connect it to someone else's. You'll leave with a working grasp of the five-level AI Capability Maturity Model too. No engineering background required. Room for 10–15 people. → https://ai.protocolized.dev/kitcraft/
 
 ---
 
@@ -25,16 +25,16 @@ Most teams "adopt AI" by buying software and waiting for a productivity jump tha
 
 Farmers ran corn shellers off jacked-up Model Ts for years before Ford built the tractor. AI is in that same **Kit phase** right now — and the teams that pull ahead are the ones building a map to climb out of it.
 
-Across the symposium's two workshop days (one talk + four working sessions, plus async co-working here on Discord), you'll:
-- assemble a context hub and deploy a first disposable app
-- convert it into a reusable **Kit** — context, prompts, steps your team can re-run
-- trade kits with another pair, and demo what you built
+Across the symposium's two workshop days (four sessions of an hour, plus async co-working here on Discord), you'll:
+- write down one piece of work you already do with AI
+- tidy it into something a colleague, or their AI assistant, can actually run
+- try to use someone else's work to do something yours can't, and compare notes with the room
 
 You leave with **at least one working Kit** and a working grasp of the **five-level AI Capability Maturity Model**.
 
 **Who:** AI-curious analysts, PMs, ops and deployment leads. No AI-engineering background — just regular chatbot use and a willingness to tinker.
 **Bring:** Claude Code (Pro+) or Codex installed, a GitHub account, and one recurring task to build around.
-**When:** 2026 Protocol Symposium · New Nature · Sep 21–25 · online. Seats limited to 10–15.
+**When:** Mon–Tue Sep 21–22, four sessions of an hour · 2026 Protocol Symposium · New Nature · online. Room for 10–15 people.
 
 Facilitated by the Protocols for Business SIG (Protocol Institute). Express interest → https://ai.protocolized.dev/kitcraft/
 
@@ -48,7 +48,7 @@ Hi {{name}},
 
 If your team has "adopted AI" but the productivity gain never quite showed up in the numbers, you're not behind — you're in the **Kit phase**. It's the stage every general-purpose technology passes through (the steam engine, the Model T, the PC): loose components people master by doing, long before anyone builds the machinery that turns tinkering into measured output.
 
-**AI Kitcraft** is a hands-on workshop that meets you there. Over two workshop days at the 2026 Protocol Symposium (*New Nature*), you'll move from ad-hoc AI use to a reusable **Kit** — a bundle of workflows, disposable apps, and contexts your team can run repeatedly and reliably — and map a path to scale it into an organizational capability.
+**AI Kitcraft** is a hands-on workshop that meets you there. Over two workshop days at the 2026 Protocol Symposium (*New Nature*), you'll write down the way you have already worked out how to use AI, tidy it into something a colleague can pick up and run, and find out what it takes to connect it to someone else's.
 
 You'll leave with:
 1. at least one working Kit you built and can re-run, and
@@ -56,7 +56,7 @@ You'll leave with:
 
 It's built for AI-curious, non-technical analysts and managers. No AI-engineering background required — only regular chatbot use, Claude Code (Pro+) or Codex installed, a GitHub account, and one recurring task you'd like to build around.
 
-Seats are limited to 10–15. Symposium registration opens in July; express your interest now and we'll be in touch with the details:
+Room for 10–15 people. Registration is open now:
 
 → https://ai.protocolized.dev/kitcraft/
 
