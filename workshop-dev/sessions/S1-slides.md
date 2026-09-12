@@ -43,9 +43,11 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 
 ## Slide 6 — Positioning: the movement 2×2 (00:18) (presenter: Sachin)
 - One vs. many × interior vs. exterior
-- Journal (one, interior) · Novel (many, interior) · **Exposed kit** (one, exterior) · Stigmergy (many, exterior)
-- This workshop moves you from journal to exposed kit
-- Bridges are how exposed kits start behaving stigmergically; traces are what make that quadrant reachable
+- Journal (one, interior) · Novel (many, interior) · **Field notebook (Humboldt)** — exposed kit as the artifact form (one, exterior) · Stigmergy (many, exterior)
+- Field notebook: a single observer facing the world, recording observations in a form others can build on before any coordination exists. Your inventory is your field notebook
+- PI's own Humboldt agent is the live example (resources §0) and a bridge target later
+- This workshop moves you from journal to field notebook
+- Bridges are how field notebooks start behaving stigmergically; traces are what make that quadrant reachable
 > Note: point at the top-right of the previous grid when saying "traces".
 
 ## Slide 7 — CMM ↔ Kit / Factory / Bridge (00:21) (presenter: Sachin)
@@ -57,9 +59,10 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 > Note: this is the one slide with two vocabularies side by side; everything after uses Kit/Factory/Bridge only.
 
 ## Slide 8 — What a kit is (00:24) (presenter: Sachin)
-- A folder: `SKILL.md` for the agent (name, description, when, steps, constraints, do-nots), `README.md` for humans, `examples/`, `LOG.md`
-- Now an open standard: Agent Skills (Anthropic, Dec 2025) stewarded with AGENTS.md under the Linux Foundation's Agentic AI Foundation
-- A kit is encoded domain knowledge, not code. If it does not trigger, the fix is the description
+- A technology in use before there is a standard product: loose components a user assembles and adapts to do their own job, in their own context, while the form is still open (interpretive flexibility before closure — Kline & Pinch's rural Model T owners running corn shellers off the rear axle were kit users; the tractor was the consensus that came later)
+- In AI today: the prompts, contexts, files and steps you have adapted to one recurring task
+- The workshop's artifact — a folder with a README, a SKILL.md and an example — is that adaptation written down so another agent can run it. A factory is a kit whose interface has closed for others
+- The artifact's shape: `SKILL.md` for the agent (name, description, when, steps, constraints, do-nots), `README.md` for humans, `examples/`, `LOG.md` — now an open standard: Agent Skills (Anthropic, Dec 2025) stewarded with AGENTS.md under the Linux Foundation's Agentic AI Foundation. If it does not trigger, the fix is the description
 - Kits now: you work with archival selves of others through a model that changes. Paper fixes words; LLMs fix the archive, roughly, but not the reader
 > Note: Rafa puts `PARTICIPANT_TEMPLATE/` on screen for 20 seconds; that is the whole spec.
 
