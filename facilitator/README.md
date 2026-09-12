@@ -5,6 +5,7 @@
 | C3PO | MCP `search_corpus` at https://c3po.protocolized.io/mcp | no key; 100 calls/IP/day | PI |
 | C3PO | MCP `ask_c3po` | bearer token from team@protocol-institute.org | PI |
 | Prime Radiant | https://primeradiant.worldmachines.org/ | external interface TBC | Aneesh |
+| Humboldt (PI's field-notebook agent) | https://humboldt.protocol-institute.org/ | external interface TBC | PI |
 | Water registry | https://npc.here.now/waterdatastrategy/ | TBC | Rafa |
 | PI brand kit | https://github.com/protocolvision/project-aimarketing (`llms.txt` → `brand.json`) · live https://npc.here.now/protocolintstitutebrandkit/ | repo | Rafa |
 | Sachin's kit | `facilitator/sachin/kit/` | repo | Sachin |

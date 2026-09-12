@@ -32,6 +32,10 @@ Robert Peake. Four postures: Partnership, Hypervigilance, Overreliance, Complian
 https://ai.protocolized.dev/ · PDF: https://ai.protocolized.dev/durable-ai-adoption.pdf
 Five governed/cultivated pairs; Discover → Encode → Prove → Harvest gates; "A network of factories" with the 2002 Bezos API mandate; timeline slide labels 2026–28 "Factories." Appendix cases for S1: Kline & Pinch (rural Model T users, kit-phase pattern), Devine (electrification, 30-year lag).
 
+**Kline & Pinch, "Users as Agents of Technological Change"** (1996, in the bibliography) — the kit-phase source: rural Model T owners running corn shellers off the rear axle are the kit users; the tractor is the product consensus that came later. S1 "what a kit is".
+
+**Bijker, Wiebe E. *Of Bicycles, Bakelites, and Bulbs* (1995)** — closure and stabilization: how a technology's interpretive flexibility ends and one form becomes the product. The frame behind "a factory is a kit whose interface has closed for others". S1 theory.
+
 **How the Protocol Institute Is Adopting AI**
 https://protocolized.summerofprotocols.com/p/how-the-protocol-institute-is-adopting
 SIGBIZ L1 → L2 case; fortnightly show-and-tell. S4 continuation venue.
@@ -164,6 +168,8 @@ Cloud Security Alliance. "Agent Context Poisoning: SKILL.md and the New AI Suppl
 Chaudhary, Anshu. "How to Turn Your AI Into a World-Class Designer." *Lenny's Newsletter*, 2026. https://lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world.
 
 Ashcroft, Michael. "What Is the Alexander Technique?" *Expanding Awareness*. https://expandingawareness.org/blog/what-is-the-alexander-technique/.
+
+Bijker, Wiebe E. *Of Bicycles, Bakelites, and Bulbs: Toward a Theory of Sociotechnical Change*. Cambridge, MA: MIT Press, 1995.
 
 Benny, Sachin. "LLMs Pre-Commodify Ideas." *Summer Lightning*, June 12, 2026. https://summerlightning.substack.com/p/llms-pre-commodify-ideas.
 
