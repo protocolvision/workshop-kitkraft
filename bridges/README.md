@@ -2,7 +2,7 @@
 
 One file per bridge, one writer: `participants/<you>/bridges/<target>.md` (`<you>` = your GitHub username, lowercase; `<target>` = the target's name: a participant's `<name>` or `rafa` / `sachin` for a facilitator kit). Copy `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md`. Log lines (`progress`, `unblock`, `blocker`, `decision`) go to your `participants/<you>/LOG.md`, session `S3`. The full harness block for the exercise is `instructions/S3-bridge.md`. Rule: agent → repo → agent; humans talk only to unblock, and every unblock is one `unblock` line. Nobody else writes in your bridge file; the one exception is a stub owner appending under `### Response` (below). Hard mode (optional, before S4): agent-only, no human chat, logged as a second section in the same file.
 
-Targets: the kit named in the pinned S3 table (the one you did not critique), or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`).
+Targets: the kit named in the pinned S3 table (the one you did not critique), or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`). A target whose folder contains `WITHDREW.md` is treated as absent: use a facilitator kit.
 
 This folder holds only this file and, after S4, `SYNTHESIS.md`.
 

@@ -44,7 +44,7 @@ You write only inside `participants/NAME/`; read anywhere.
 Preconditions: at the clone root (`git rev-parse --show-toplevel` equals `pwd`; `git remote get-url origin` contains `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root); never test the folder name; `git branch --show-current` prints BRANCH; run `git pull --rebase origin BRANCH` now — other people's folders arrive only through the pull.
 
 Steps:
-1. List `participants/*/inventory.md` excluding `participants/NAME/` and every folder whose name starts with `_` (those are examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
+1. List `participants/*/inventory.md` excluding `participants/NAME/`, every folder whose name starts with `_` (those are examples, not participants), and every folder containing `WITHDREW.md`. If fewer than 2 remain, report "only N inventories landed yet" and stop.
 2. Read each. Compare against `participants/NAME/inventory.md` on: the kind of recurring task, the input type (documents, transcripts, spreadsheets, calendars), the output type.
 3. Name the two nearest, one line each: `<name> — <why>`.
 4. Confirm `participants/NAME/LOG.md` has at least one line below its header; if not, append `<ISO-8601 UTC now> | S1 | NAME | progress | inventory written by harness`.
