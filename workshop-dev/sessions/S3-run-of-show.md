@@ -4,7 +4,7 @@ Facilitation split: Rafa — first two minutes (opener, what S2 left in the repo
 
 | Clock (UTC) | Min | Presenter | Rafa (ops) | Sachin (theory) | Participants | Artifact expected | Recorder |
 |---|---|---|---|---|---|---|---|
-| 15:15 | −15 | — | Pulls `main`; picks two blocker lines from `participants/*/LOG.md` for slide 2; posts the S3 rotation table and the bridge post (`../breakout-instructions.md`) in #workshop-kitkraft; confirms the rotation against the real S2 critique assignment; has the hypothesis text ready to pin at 16:28, not before | Slides 3–8 ready | — | Pinned rotation + instructions | — |
+| 15:15 | −15 | — | Pulls `main`; picks two blocker lines from `participants/*/LOG.md` for slide 2; posts the S3 groups post (`../breakout-instructions.md`) in #workshop-kitkraft; confirms the rotation against the real S2 critique assignment; has the hypothesis text ready to pin at 16:28, not before | Slides 3–8 ready | — | Pinned rotation + instructions | — |
 | 15:28 | −2 | — | "Recording starts now"; `/record channel:#kafka name:KITCRAFT-S3` | — | — | — | `/record channel:#kafka name:KITCRAFT-S3` |
 | 15:30 | 00 | Rafa | Slide 1 (the question S1 left open); posts session order | Listens | Listen | — | on |
 | 15:31 | 01 | Rafa | Slide 2: shows two anonymised blocker lines; hands to Sachin | — | Listen | — | on |
@@ -14,7 +14,7 @@ Facilitation split: Rafa — first two minutes (opener, what S2 left in the repo
 | 15:40 | 10 | Sachin | — | Slide 6: Prime Radiant, example only | Listen | — | on |
 | 15:41 | 11 | Sachin | Times it; posts the CSA note link for later reading | Slide 7 (trust, two minutes) | Listen | — | on |
 | 15:43 | 13 | Sachin | — | Slide 8: what we are looking for — the paragraph is the data; no definition, no hypothesis yet; hands to Rafa | Listen | — | on |
-| 15:44 | 14 | Rafa | Slide 9, one minute: points at the pinned table and block; posts "Rooms open — breakout-1: … breakout-2: … Back at 16:25" | Listens | Note target; copy `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md` | — | on |
+| 15:44 | 14 | Rafa | Slide 9, one minute: points at the groups post and the block; posts "Rooms open — breakout-1: … breakout-2: … Back at 16:25" | Listens | Note target; copy `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md` | — | on |
 | 15:45 | 15 | Rafa (rooms) | `/stop` (channel empties; avoids a dangling auto-stop); moves people to rooms; goes to breakout-1 | Goes to the highest-numbered room | Move; start agents | `participants/<you>/bridges/<target>.md` created, header filled | `/stop` |
 | 15:55 | 25 | Rafa (rooms) | Swaps rooms; watches #workshop-kitkraft for stuck rooms | Swaps rooms | Working; unblocks logged | First `unblock` lines | off |
 | 16:05 | 35 | Rafa (rooms) | Floats between rooms; reads pushed bridge logs and unblock lines | Floats between rooms | Working | Progress lines in bridge logs | off |

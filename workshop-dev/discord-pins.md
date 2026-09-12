@@ -1,56 +1,104 @@
-# Pinned messages — #workshop-kitkraft
+# Discord — pins and session posts for #workshop-kitkraft
 
-Five pins, each under 2000 characters (Discord's cap): the main pin, the times, the consent summary, the S2 breakout groups, the S3 breakout groups. Rafa posts pins 1–2b on Sun Sep 20, pin 3 at S1 close (Mon 16:45 UTC), pin 4 on Tue at 09:00 UTC. Every block is a file in `instructions/`; pins carry the path, never the block. Rooms: breakout-1 … breakout-5 (one per breakout group or pair).
+Paste-ready. Each block below is one Discord message, under 1,900 characters (Discord's cap is 2,000); the count after each block is an HTML comment. Pins stay light on purpose: anything that can change lives in the repo, and the pins point there. Rafa posts the three pins on Sun Sep 20 and the session posts at the times given (they match the run-of-shows in `sessions/`). Rooms assumed: voice #kafka, voice breakout-1 … breakout-5, text #workshop-kitkraft (this channel, https://discord.com/channels/1082444651946049567/1548286831232032778), text #meeting-notes (existing, shared: https://discord.com/channels/1082444651946049567/1519549380791631903).
 
-## PIN 1 — main (Sun Sep 20, 10:00 UTC)
+---
 
-**AI Kitcraft 2026 — Kit → Factory → Bridge**
+## PIN 1 — Welcome (Sun Sep 20, 10:00 UTC)
 
-**Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, copy `PARTICIPANT_TEMPLATE/` to `participants/<you>/`, open your harness at the clone root (the folder with `AGENTS.md`), paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push. Every later instruction is a file in `instructions/` you paste the same way. Everything goes straight to `main`: no branches, no PRs. Harness installed but misbehaving? Post the exact error here and come to 1A.
+Welcome to AI Kitcraft, a two-day hands-on workshop where you turn one of your own recurring tasks into a kit another person's agent can use, and then try to bridge it to someone else's.
 
-**Rooms:** voice **#kafka** (plenary) · text **#workshop-kitkraft** (this channel, https://discord.com/channels/1082444651946049567/1548286831232032778: links, instructions, breakout groups) · **#meeting-notes** (live transcript, read-only) · voice **breakout-1 … breakout-5** (breakout group rooms). Times: next pin.
+Everything you need is in the repo: https://github.com/protocolvision/workshop-kitkraft. Start with the README; every instruction you'll need is a file in `instructions/` that you paste into your harness and follow with "do this".
 
-**Consent:** #kafka audio is recorded, transcribed with speaker names, streamed to #meeting-notes and kept in the public repo. Breakouts and 1A are not recorded. Your harness writes log lines to public files. Ask either facilitator to remove any line of yours, any time. Everything in the repo is public; keep private work in a private workspace on your machine and put here only what you are comfortable sharing. Full notice: `workshop-dev/sessions/consent-notice.md` (pin after the times).
-
-**Survey:** AI postures (Robert Peake) — https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843 — bring your posture to S1.
-
-**Breakout groups:** pinned here before S2 (Mon 16:45 UTC) and S3 (Tue 09:00 UTC, rotated), each with the file to paste.
-
-**Recorder:** every start and stop is announced here as `Recording on (KITCRAFT-S<n>)` / `Recording off`.
-
-**Help:** Rafa runs this channel, the rooms and the recorder — setup, git, pushes → 1A or @rafa_0x here · theory → @sachbenny or @C3PO · whichever of us is not presenting answers in text.
-
-## PIN 2 — times (Sun Sep 20, 10:01 UTC)
-
-**Times — UTC / Berlin / Pacific**
+Sessions (UTC / Berlin / Pacific):
 • S1 Kits — Mon Sep 21 · 15:30–16:30 / 17:30–18:30 / 08:30–09:30
-• 1A Clinic (optional, setup help) — Mon · 16:30–17:00 / 18:30–19:00 / 09:30–10:00
+• 1A Setup clinic (optional) — Mon · 16:30–17:00 / 18:30–19:00 / 09:30–10:00
 • S2 Factories — Mon · 20:00–21:00 / 22:00–23:00 / 13:00–14:00
 • S3 Bridges — Tue Sep 22 · 15:30–16:30 / 17:30–18:30 / 08:30–09:30
 • S4 Recap — Tue · 20:00–21:00 / 22:00–23:00 / 13:00–14:00
 Your local time: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530
 
-## PIN 2b — consent notice (Sun Sep 20, 10:02 UTC)
+Rooms: plenary in the voice channel #kafka; everything written here in #workshop-kitkraft; the live transcript in #meeting-notes (https://discord.com/channels/1082444651946049567/1519549380791631903, shared with other meetings); breakouts in breakout-1 to breakout-5.
 
-**Consent, in three lines.** Plenary audio in #kafka is recorded, transcribed with speaker names and kept in the public repo; breakouts and 1A are not recorded. Your harness writes log lines to public files; everything in the repo is public. Ask @rafa_0x or @sachbenny to remove any line of yours, any time, no reason needed.
-Full notice: https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/consent-notice.md
+Groups for each breakout are posted here before it starts. Questions, stuck installs, anything at all: ask here and tag @rafa_0x or @sachbenny.
 
-## PIN 3 — breakout groups for S2 (Mon Sep 21, 16:45 UTC)
+<!-- 1289 characters -->
 
-**Breakout groups for tonight (2–4 each), confirmed from the inventories.** Critique ring inside each group: A reads B, B reads C, …, the last reads A. A pair swaps.
-<groups: one line per group — **Group 1 → breakout-1:** @a, @b, @c. a reads b · b reads c · c reads a. Mark anyone absent: "@x async — see the block's ABSENT variant".>
-At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your factory, uses the target through its declared interface (README + SKILL.md, example run cold), gives you a 5-line report on where the interface was insufficient to read aloud, then logs the blockers about your own kit when you say "log mine".
+## PIN 2 — Consent (Sun Sep 20, 10:01 UTC)
 
-## PIN 4 — breakout groups for S3 (Tue Sep 22, 09:00 UTC)
+A few words on the record. Plenary audio in #kafka is recorded and transcribed with your Discord display name next to what you say; the transcripts go into the public repo. Breakouts and the 1A clinic are not recorded. Your harness writes short log lines into public files as it works, and everything in the repo is public. If you ever want a line removed, ask @rafa_0x or @sachbenny and it's done, no reason needed. After the workshop the repo stays public and we post the synthesis here within 48 hours; nothing else is planned with the material.
+Full text: https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/consent-notice.md
 
-Same rooms. Target = any kit or factory in the repo; the default below is the kit you did **not** critique. Pairs: the partner's kit or a facilitator kit. Three configurations to try: factory→factory (both declared an `Interface:`), kit→kit (neither did; the README is the interface), kit↔factory; your harness works out which and writes it in the log. Nobody has defined a bridge yet; your closing paragraph is the data.
-<groups: one line per group — **Group 1 → breakout-1:** a → c's kit · b → a's kit · c → b's kit.>
-Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`); say so in your log. One log per bridge, written by the person bridging: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". The question: can your agent use the target to do one thing yours cannot? Log everything; at minute 30 write what a bridge turned out to be, in one paragraph.
+<!-- 661 characters -->
 
-## Pre-written posts (not pinned)
+## PIN 3 — Before Monday (Sun Sep 20, 10:02 UTC)
 
-**Mon 16:32 UTC, after S1 — Async 1:** Recording off. **Async 1, before 20:00 UTC:** open your harness at the clone root, paste the whole of `instructions/async-1.md`, say "do this". It asks which kit you will convert into a factory tonight — your own (`## Kit` task or `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and drafts the README's Job and Interface lines. Then rewrite the Job line in your own words. That is all. S2 at 20:00 UTC; breakout groups pinned above. 1A now in #kafka for anyone whose push did not work.
+Three things need to be on your machine before Monday; each needs your password or a browser login, so it's you, not your harness:
+• git — your harness uses it to clone, commit and push.
+• the GitHub CLI `gh` — logs you in and hands git your credentials (`gh auth login`, then `gh auth setup-git`).
+• one harness — Claude Code (paid Claude plan) or Codex (paid ChatGPT plan).
+Commands per system and how to check each one: https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/setup-checklist.md
 
-**Mon 20:58 UTC, after S2 — Async 2:** Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your breakout group logged, proposes one fix per blocker, waits for your "go", pushes v2. Async readers: push your factory first (`instructions/S2-factory.md` block); your reader's harness posts the report here; run async-2 when it appears. S3 breakout groups pinned at 09:00 UTC.
+Then paste the block from the pre-work email into your harness and say "do this"; it makes your first push. If it doesn't behave, bring the exact error to the 1A clinic, Monday 16:30 UTC in #kafka.
 
-**Tue 16:29 UTC, after S3 — Async 3:** Recording off. Finish your bridge log and push by 20:00 UTC. Optional hard mode: rerun the bridge with no human chat and log it as a second section in the same file. S4 at 20:00 UTC: 90 seconds per bridge, your paragraphs read first, then the hypothesis Sachin stated at the close.
+<!-- 724 characters -->
+
+---
+
+## POSTS (not pinned)
+
+### Session open — template (at the start of S1–S4)
+
+`<Sn>` starts now in #kafka. Recording on (KITCRAFT-`<Sn>`); the live transcript is in #meeting-notes. Have your harness open at the clone root; today's instruction files are in `instructions/` and I'll name them as we go.
+
+<!-- 222 characters -->
+
+### S1 exercise (Mon Sep 21, 16:05 UTC)
+
+Your inventory. Open your harness at the clone root, paste `instructions/S1-inventory.md` (Block 1), say "do this". It asks you for what it needs and pushes. At 16:18 I'll say when to paste Block 2 from the same file. If a push fails, post the error here.
+
+<!-- 255 characters -->
+
+### Async 1 (Mon Sep 21, 16:32 UTC)
+
+Recording off. Before S2 at 20:00 UTC: open your harness at the clone root, paste `instructions/async-1.md`, say "do this". Ten minutes. The S2 groups will be posted here by 16:45. 1A is in #kafka now for anyone whose harness is misbehaving.
+
+<!-- 241 characters -->
+
+### S2 groups and critique (Mon Sep 21, 16:45 UTC groups; 20:35 UTC rooms open)
+
+Groups for tonight's breakout:
+• breakout-1: `<names>`
+• breakout-2: `<names>`
+• breakout-3: `<names>`
+At 20:35, rooms open for 13 minutes; back in #kafka at 20:48. In your room: open your harness at the clone root, paste `instructions/S2-critique.md`, say "do this". It tells you who you read and what to do.
+
+<!-- 309 characters -->
+
+### Async 2 (Mon Sep 21, 20:58 UTC)
+
+Recording off. Before S3 at 15:30 UTC tomorrow: open your harness at the clone root, paste `instructions/async-2.md`, say "do this". The S3 groups will be posted here by 09:00 UTC.
+
+<!-- 180 characters -->
+
+### S3 groups and bridge (Tue Sep 22, 09:00 UTC groups; 15:45 UTC rooms open)
+
+Groups for the S3 breakout, same rooms:
+• breakout-1: `<names>` — targets `<name → name>`
+• breakout-2: `<names>` — targets `<name → name>`
+• breakout-3: `<names>` — targets `<name → name>`
+At 15:45, rooms open for 40 minutes; back in #kafka at 16:25. In your room: open your harness at the clone root, paste `instructions/S3-bridge.md`, say "do this". It asks you for the one thing it needs from you.
+
+<!-- 401 characters -->
+
+### S3 close and Async 3 (Tue Sep 22, 16:29 UTC)
+
+Recording off. Finish your bridge file and push by 20:00 UTC; your harness knows how. S4 at 20:00 UTC in #kafka: 90 seconds per bridge, then what you wrote against one hypothesis.
+
+<!-- 179 characters -->
+
+### S4 close (Tue Sep 22, 21:00 UTC)
+
+Recording off, and that's the workshop. The synthesis is in the repo at `workshop-dev/transcripts/S4/SYNTHESIS.md`; a revised version with tonight's transcript folded in follows here within 48 hours. The repo stays public. Thank you all.
+
+<!-- 237 characters -->

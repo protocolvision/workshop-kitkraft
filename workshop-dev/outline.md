@@ -89,7 +89,7 @@ This is the one-way version of the Wallfacer rule: no live coordination needed, 
 
 **Async 1 (Mon 16:30–20:00 UTC, three hours)** Paste `instructions/async-1.md`: choose the kit to convert in S2 — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`; copied into your folder with a `Source:` line) — and draft the README's Job and Interface lines. The participant rewrites the Job line in their own words. Nothing else; the gap is short and 1A sits inside it.
 
-**Breakout groups** are confirmed at S1 close from the inventories (provisional breakout groups come from the registration form on Sep 19) and pinned in #workshop-kitkraft by 16:45 UTC.
+**Breakout groups** are confirmed at S1 close from the inventories (provisional breakout groups come from the registration form on Sep 19) and posted in #workshop-kitkraft by 16:45 UTC (the groups post is the only roster).
 
 ---
 
@@ -135,7 +135,7 @@ Slides and minute table: `sessions/S3-slides.md`, `sessions/S3-run-of-show.md`.
 - Sachin (1): what we are looking for — nobody states a definition; the paragraph each person writes at the end of the breakout ("what a bridge turned out to be") is the data. The logs will tell us.
 
 **Exercise — Build a bridge (1 brief + 40, breakout rooms)** Rafa briefs and runs the rooms; the rotation is pinned beforehand. The brief is a question: can your agent use the target to do one thing yours cannot? Log everything; at the end, write what a bridge turned out to be, in one paragraph.
-Target: any kit or factory in the repo — another participant's (kit = `participants/<name>/kit/` without a declared interface; factory = one with an `Interface:` line from S2) or a facilitator's (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`, both factories at rung 1). The pinned table gives the default: the kit you did **not** critique; a pair bridges to the partner's kit or a facilitator kit. Three configurations to try — across factories, across kits, or between a kit and a factory; the harness works out which and writes it in the log.
+Target: any kit or factory in the repo — another participant's (kit = `participants/<name>/kit/` without a declared interface; factory = one with an `Interface:` line from S2) or a facilitator's (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`, both factories at rung 1). The groups post gives the default: the kit you did **not** critique; a pair bridges to the partner's kit or a facilitator kit. Three configurations to try — across factories, across kits, or between a kit and a factory; the harness works out which and writes it in the log.
 Task: make your agent use the target to do one thing your own kit or factory could not do alone. Paste `instructions/S3-bridge.md`: it copies `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md` to `participants/<you>/bridges/<target>.md`, asks for the one thing (and refuses to proceed without it), reads the target, works, and stops whenever it needs something not in the repo; the participant gets it from the owner in the room and the harness logs one `unblock` line.
 Soft Wallfacer rule: the exchange goes agent → repo → agent; human chat allowed to unblock, but every unblock is logged.
 One log per bridge, one writer. At minute 30 the harness stops building and writes "Did it work" and "What a bridge turned out to be" in the participant's words. Push by minute 38.
@@ -215,7 +215,7 @@ Participants do nothing; the harness does it. Rafa's agent checks at the S1 clos
 
 - Plenary in **#kafka** voice. Rafa screen-shares.
 - Breakout voice rooms **breakout-1 … breakout-5**, one per breakout group or pair. Rafa moves people; the breakout group table is pinned in **#workshop-kitkraft** before each breakout so nobody waits on being moved.
-- **#workshop-kitkraft** text: four pinned messages (`discord-pins.md`): main (repo, rooms, times in UTC/Berlin/Pacific with a converter link, consent summary, survey, help), the full consent notice, the S2 breakout groups, the S3 breakout groups. Each block that a participant pastes is a file in `instructions/`; a pin never carries a block (2000-character cap).
+- **#workshop-kitkraft** text: three light pins (`discord-pins.md`: welcome with repo link, times and rooms; consent in five lines with a link to the full notice; the three setup must-haves) and one post per session moment (open, exercise, async, groups, close), each naming the `instructions/` file to paste. Anything that can change lives in the repo, not in a pin.
 - **#meeting-notes** text: OpenRecapper live transcript target. Read-only for participants.
 - Sessions are on the PI server, so C3PO is one @mention away for anyone stuck on theory.
 - Participants set their Discord display name to their `<name>` for the two days so the diarized transcript matches the folder names. A facilitator-only roster (form name, GitHub username, Discord name) lives outside the repo.
@@ -261,7 +261,7 @@ Detail and owners: `prep-checklist.md`.
 | Sep 15 → | Pre-work email and collaborator invite to each registrant as registrations arrive | Rafa |
 | Sep 17 | Tech rehearsal: clone from a fresh machine/account with the email's Block A; one autolog line; one push; `/record` + `/stop`; a second `/record` with the same name; one breakout move; pins posted to a test channel | both |
 | Sep 19 | Push check per registrant; 1A invites; provisional breakout groups from the form | Rafa |
-| Sep 20 | Pins 1–2 in #workshop-kitkraft | Rafa |
+| Sep 20 | Pins 1–3 (welcome, consent, before Monday) in #workshop-kitkraft | Rafa |
 | Sep 21 | S1 + 1A; breakout groups confirmed at S1 close and pinned by 16:45; S2 at 20:00 | both |
 | Sep 22 | S3, S4; transcripts after each `/stop`; SYNTHESIS v1 at S4, v2 within 48 h, posted in Discord | both |
 

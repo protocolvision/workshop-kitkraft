@@ -4,7 +4,7 @@ Human header: your harness uses one group-mate's factory through its declared in
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Session 2 critique: use a group-mate's factory through its declared interface. Read `AGENTS.md` first.
-Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase>  TARGET=<the group-mate whose kit they read, from the pinned table; ask if unknown>
+Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase>  TARGET=<the group-mate whose kit they read, from the groups post in #workshop-kitkraft; ask if unknown>
 You write only inside `participants/NAME/`; read anywhere.
 
 Preconditions:

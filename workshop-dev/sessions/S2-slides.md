@@ -46,7 +46,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 6 — Breakout group critique (35:00 → 48:00, breakouts) (presenter: Rafa)
 - Ring inside each breakout group (2–4), from the pin: A reads B · B reads C · … · the last reads A; a pair swaps
-- Groups and rooms as pinned in #workshop-kitkraft (PIN 3 is the only roster)
+- Groups and rooms as pinned in #workshop-kitkraft (the S2 groups post is the only roster)
 - Your agent uses the target factory through its declared interface (README + SKILL.md only) and runs the example cold; report in ≤5 lines where the interface was insufficient
 - Owner logs every failure as a `blocker` line; no explaining out loud until it is in the kit
 - Block: `instructions/S2-critique.md` (pinned as a link); the text is the facilitator
