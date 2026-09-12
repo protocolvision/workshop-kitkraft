@@ -15,7 +15,7 @@ Steps:
 4. Append to `participants/<name>/LOG.md` one line: `<ISO timestamp> | async | <name> | decision | S2 source: <own: task n / built-use item> or <facilitator/rafa|sachin>`.
 5. Commit `async: <name>: S2 source chosen`; `git pull --rebase origin main`; push. If rejected, pull --rebase again and push again.
 
-Failures: auth prompt → tell the participant to run `gh auth login` and `gh auth setup-git`, then continue. Push rejected twice → stop, report the error text, tell the participant to paste the README into #kitcraft for Sachin.
+Failures: auth prompt → tell the participant to run `gh auth login` and `gh auth setup-git`, then continue. Push rejected twice → stop, report the error text; the participant posts it in #kitcraft and retries after the fix; nobody commits the file for them.
 
 Do not: touch any other participant's folder; choose the source for the participant; fill more than the two lines.
 

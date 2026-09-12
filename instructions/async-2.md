@@ -16,7 +16,7 @@ Steps:
 5. Commit `async: <name>: kit v2`, pull --rebase, push; if rejected, pull --rebase and push again.
 6. Tell the participant: S3 is Tue 15:30 UTC; the pinned S3 table names their bridge target; they should read `instructions/S3-bridge.md` once, tonight.
 
-Failures: auth → `gh auth login`, `gh auth setup-git`, continue. Push rejected twice → report the error, paste the diff in #kitcraft for Sachin. Private kit → edit the content on the machine only; log the `progress` lines in the public LOG.md without content details.
+Failures: auth → `gh auth login`, `gh auth setup-git`, continue. Push rejected twice → report the error; the participant posts it in #kitcraft and retries after the fix; nobody commits the file for them. Private kit → edit the content on the machine only; log the `progress` lines in the public LOG.md without content details.
 
 Do not: change `name:` in SKILL.md; delete or rewrite any LOG line; touch other folders.
 
