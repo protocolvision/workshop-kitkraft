@@ -80,3 +80,28 @@ Outcome at 16:22 (log-line check): 4/6 inventories written by harness with a Log
 | 41 | all | all | S3 | Three harnesses hit the "ISO-8601 UTC now" instruction against the rehearsal's real clock; all wrote the in-character time. Sim artifact; on the real day the clock is right. | None. |
 | 42 | 16:07 | devr | S3 | The block's "no branches" now works on the harness; the human's habit surfaced only as a channel remark. Ruleset (obs 5) now blocks force-push and deletion on main; branch creation stays allowed by Rafa's choice. | None further. |
 
+## 1A clinic (Mon 16:30–17:00, Ingrid and Kwame live; Aiko async)
+
+Outcome at 17:00: five of six ready for S2 (harness inside one correct clone, a harness-written Log line, own push). Aiko blocked on a paid Claude plan. Ingrid used 22 of the 30 minutes.
+
+| # | when | who | sev | what | proposed fix |
+|---|---|---|---|---|---|
+| 43 | 16:31 | ingrid | S1 | Homebrew is not in the checklist and needs the Mac password; `gh auth setup-git` prints nothing, so there is no proof for the human step. Ingrid alone consumed 22 of 30 minutes; two beginners would not fit. | Item 0 in the email (obs 12); a proof line for setup-git (`git config --global credential.helper` shows `gh`); cap 1A at one beginner per facilitator or run it as two parallel rooms. |
+| 44 | 16:33 | kwame | S1 | The checklist's "if no `workshop-kitkraft` folder here, clone" ran inside the stray clone and created a THIRD clone nested in it; every check then passed, including "you are inside a clone". Nothing prints the current path or branch. | Check 0: print `pwd`, `git remote get-url origin`, `git branch --show-current`; never clone from a step that may already be inside a clone. |
+| 45 | 16:40 | kwame | S2 | Finding stray clones by folder name misses clones with other names; "the clone that pushed is the real one" is the wrong rule when the pushing clone is on the wrong branch. Three conflicting instructions were in play (delete / never delete / rename `-old`). | Rule: keep the clone whose branch is `main` and whose `git status` is clean after `pull`; rename the others `-old`; find them by `.git` + remote URL. |
+| 46 | 16:43 | kwame | S3 | `git status -sb` in the stray clone said "ahead 52" (against origin/main) — misleading; only `git log origin/<branch>..HEAD` answers "is anything unpushed?". | Put that exact command in the checklist. |
+| 47 | 16:47 | ingrid | S2 | The web-editor case in the checklist assumes no `## Log` section; her file already had an empty one. After 1A her Log has only the 1A line, not the "inventory written by harness" line Block 2 scans for. | Checklist: "append; if the section exists, append under it"; the scan should accept any harness-written line. |
+| 48 | 16:50 | ingrid | S3 | Her web-editor commit "Create ingrid.md" violates the commit-prefix rule; nobody can fix it (no force-push). Ruling recorded by Rafa: hand-made file counts as the inventory, not as the autolog; the first harness line is the proof of wiring. | Put the ruling in README §Consent/hygiene. |
+| 49 | 16:55 | kwame | S2 | A commit authored as the facilitator's global git identity landed from the nested clone (`b7bb27c`, author rafa): no check verifies `git config user.name` matches NAME. | Check: `git config user.name` = NAME; else set it. |
+| 50 | 17:00 | rafa, kwame | S3 | The facilitator notes and the participant record disagree on which clone Kwame kept. Two narrators, no single source; on the real day the participant's repo state is the truth. | Facilitator notes must be written after checking the branch, not from memory. |
+| 51 | S1 close | sachin | S1 | The rehearsal's first real conflict resolution ended with six conflict markers committed to the channel file, caught one commit later. A harness resolving conflicts can commit garbage; on the real day that would be someone's kit. | A pre-commit hook (or a line in AGENTS.md) that refuses commits containing `<<<<<<<`; and keep files per person so conflicts stay rare. |
+| 52 | S1 close | sachin | S2 | Awareness tally: anchored 3, traces 2, precommodification 1, playability 0. The outline's "expected: precommodification" did not happen; the expected answers in the outline are guesses and should not steer the debrief. | Drop the "expected" quadrant from the outline; let the tally speak. |
+| 53 | S1 close | sachin | S2 | Triads re-cut after S1 by adjacency and readiness (T1 ingrid/devr/kwame, T2 tomasr/aiko/marisol). It took the co-facilitator ~25 minutes of the 3-hour gap and touched five files (pins, breakout instructions, S2/S4 slides and run-of-shows). | One source for groups (the pin); slides and instructions reference "your group in the pin", never list names. |
+
+
+## Checkpoint 2 — after S1 + 1A (2026-09-12)
+
+Totals: 53 meta rows here + ~55 (rafa) + ~54 (sachin) facilitator rows. S1 as designed ran; the Symposium slot (60 min) held with the cut; the exercise produced 6/6 inventories by 17:00 by three different paths (harness, facilitator commit, web editor + clinic). Every path except the harness one bypasses the autolog.
+
+**Paused here by Rafa's request.** Proposal for `main` and the outline delivered as a PR (`fixes/dry-run-01`) plus a written proposal in chat. The rest of the rehearsal (S2–S4) continues with 4 participants in two pairs, if and when Rafa says so.
+
