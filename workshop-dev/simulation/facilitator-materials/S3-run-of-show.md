@@ -19,11 +19,11 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the checkpoint-1 sp
 | 15:55 | 25 | Sachin (rooms) | Swaps to breakout-2 | Swaps to breakout-1; watches #kitcraft for stuck rooms | Working; unblocks logged | First `unblock` lines | off |
 | 16:05 | 35 | Sachin (rooms) | Back in #kafka; reads pushed bridge logs and unblock lines | Floats between rooms | Working | Progress lines in bridge logs | off |
 | 16:15 | 45 | Sachin (rooms) | — | Posts "minute 30: stop building, write the two paragraphs" in both rooms and #kitcraft | Write "Did it work" and "What a bridge turned out to be" | Paragraphs in every log | off |
-| 16:23 | 53 | Sachin (rooms) | — | Posts "push now, reconvene 16:25" | Push | Six logs pushed | off |
+| 16:23 | 53 | Sachin (rooms) | — | Posts "push now, reconvene 16:25" | Push | Four logs pushed | off |
 | 16:25 | 55 | Rafa | Slide 10: reconvene; one line each, 25 s | Moves everyone back to #kafka; re-runs `/record channel:#kafka name:KITCRAFT-S3` (or `KITCRAFT-S3B`, see runbook); waits for the first live line; posts speaking order | 25 s each | Six one-liners in transcript | `/record channel:#kafka name:KITCRAFT-S3` |
 | 16:28 | 58 | Rafa / Sachin | Slide 11: awareness check; Async 3; S4 time | His agent tallies quadrants; posts Async 3 and the hard-mode option | One quadrant each | Tally in #kitcraft | on |
 | 16:29 | 59 | Sachin | Closes | `/stop`; copies both transcript parts into `transcripts/S3/`; commits `S3: sachin: transcript` | Leave | `transcripts/S3/` (two parts) | `/stop` |
-| 16:35 | 65 | Sachin | Reads all six bridge logs; drafts the S4 comparison of definitions vs. hypothesis (Sachin's agent does the synthesis; this is the lead's read) | Checks every `participants/*/bridges/*.md` has a paragraph and at least one log line; pings anyone missing | Async 3 | Six complete bridge logs by 20:00 | — |
+| 16:35 | 65 | Sachin | Reads all four bridge logs; drafts the S4 comparison of definitions vs. hypothesis (Sachin's agent does the synthesis; this is the lead's read) | Checks every `participants/*/bridges/*.md` has a paragraph and at least one log line; pings anyone missing | Async 3 | Six complete bridge logs by 20:00 | — |
 
 Contingencies
 - Recorder: two segments. Whether a second `/record` with the same name appends or overwrites is open (Sachin's `recorder-runbook.md`); if it overwrites, the second segment is `KITCRAFT-S3B`, added to `RECORD_MEETING_NAMES` on Sep 17.

@@ -8,8 +8,8 @@ Pins first, then the log. Facilitators `@rafa`, `@sachin`. Triad 1 = @ingrid @de
 
 **AI Kitcraft 2026 — Kit → Factory → Bridge**
 
-**Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, open your harness *inside* the clone, paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push. Every later instruction is a file in `instructions/` you paste the same way.
-Private kit? There is no private repo. Keep the content on your own machine and put only a stub `kits/<you>/README.md` (job, inputs, outputs, no content) in the repo; others bridge to it through your agent.
+**Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, copy `PARTICIPANT_TEMPLATE/` to `participants/<you>/`, open your harness *inside that folder*, paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push. Every later instruction is a file in `instructions/` you paste the same way.
+Private kit? There is no private repo. Keep the content on your own machine and put only a stub `participants/<you>/kit/README.md` (job, inputs, outputs, no content) in the repo; others bridge to it through your agent.
 
 **Rooms:** voice **#kafka** (plenary) · text **#kitcraft** (this channel: links, instructions, triads) · **#kitcraft-transcripts** (live transcript, read-only) · voice **breakout-1**, **breakout-2** (triad rooms).
 
@@ -32,7 +32,13 @@ Private kit? There is no private repo. Keep the content on your own machine and 
 
 Verbatim from `workshop-dev/simulation/facilitator-materials/consent-notice.md`, posted Sun Sep 20, 10:02 UTC.
 
-## PINNED 3 — Triads for S2 (posted Mon Sep 21, 16:45 UTC)
+## PINNED 3 — Pairs for S2 (re-pinned Mon Sep 21, 18:55 UTC; the 16:45 triads are kept below as superseded)
+
+**Pair 1 → breakout-1:** @ingrid, @devr. Critique: ingrid reads devr · devr reads ingrid.
+**Pair 2 → breakout-2:** @tomasr, @marisol. Critique: tomasr reads marisol (stub: report what your agent would need) · marisol reads tomasr.
+At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". Kwame and Aiko have withdrawn (see the log); their folders stay.
+
+*Superseded 16:45 triads:*
 
 Re-cut at 16:45 from the inventories (reason in the log).
 **Triad 1 → breakout-1:** @ingrid, @devr, @kwame. Critique cycle: ingrid reads devr · devr reads kwame · kwame reads ingrid.
@@ -43,7 +49,11 @@ At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> 
 
 Verbatim copy of the harness block in Rafa's `facilitator-materials/1A-clinic.md`, for Aiko's async clinic and anyone re-running it. Not duplicated here.
 
-## PINNED 4 — Triads for S3 (posted Tue Sep 22, 09:00 UTC)
+## PINNED 4 — Pairs for S3 (posted Tue Sep 22, 09:00 UTC; triad rotation kept below as superseded)
+
+Same rooms. Target = your partner's kit, or a facilitator kit: ingrid → devr · devr → ingrid · tomasr → marisol (stub, through Marisol's agent) · marisol → tomasr. Tomás: `facilitator/sachin/kit/` is yours as hard mode after the room, not instead of the stub. One log per bridge: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md`; tomasr and marisol also use the blocks in `bridges/README.md`.
+
+*Superseded triad rotation:*
 
 Same rooms. Target = the kit you did **not** critique: ingrid → kwame · devr → ingrid · kwame → devr · tomasr → aiko (or `facilitator/sachin-kit/`, his stated choice) · aiko → marisol (through Marisol's agent; her kit is a stub) · marisol → tomasr. Anyone may swap to a facilitator target (`facilitator/README.md`). One log per bridge, written by the person bridging: `bridges/<you>-<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>. Stub target (aiko → marisol): both of you also use the blocks in `bridges/README.md`.
 
@@ -167,4 +177,9 @@ Same as Sunday: git is on the other account again. The block says "auth prompt �
 16:50 UTC — @sachin: @aiko committed under your name: `inventory/aiko.md`, b20d34d, with one Log line saying I did it. @marisol both your commits are on the branch (e4bfee0, 79d2f21); the 403 is the account git is signed in as, and the clinic shows you what `gh auth setup-git` changes before you run it.
 17:00 UTC — @rafa: 1A done. Ready for S2 with harness inside the clone, own push, harness log line: @ingrid @devr @marisol @tomasr @kwame. @kwame's real clone is `~/workshop-kitkraft` (old one renamed `-old`); @marisol pushes on her own account now; @ingrid's web-made inventory stands, the harness added its Log line. Ruling for everyone: a hand-made file counts as your inventory, it does not count as the autolog; the first harness-written line is the proof.
 17:00 UTC — @rafa: @aiko async 1A, in your morning: (1) the only blocker is a Claude account/plan; when Claude Code logs in, install `gh` (`brew install gh`; Homebrew first if `brew` is missing), `gh auth login`, `gh auth setup-git`; (2) open the fenced block in `workshop-dev/simulation/facilitator-materials/1A-clinic.md` on GitHub, paste it into Claude Code with `BRANCH=simulation/dry-run-01`, say "do this". Done looks like: the harness reports seven PASS lines, and `inventory/aiko.md` on GitHub shows a commit authored by you with a Log line ending "harness opened inside clone at 1A". Then `instructions/async-1.md`. Post the harness report here; whichever of us is awake answers.
-20:58 UTC — @sachin: Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your triad logged, proposes one fix per blocker, waits for your "go", pushes v2. @aiko: push your kit first (`kits/README.md` block), then @tomasr's harness reads it and posts the report here; run async-2 when it appears. S3 triads pinned at 09:00 UTC.
+17:35 UTC — @sachin: **Layout change, decided by Rafa, applied now.** One folder per person: `participants/<you>/` with `inventory.md`, `kit/`, `bridges/<target>.md` and one `LOG.md`. I moved your inventories there (`git mv`, history intact) and moved every log line from the bottom of your inventory into `participants/<you>/LOG.md`, in order, verbatim; the inventory keeps an empty `## Log` heading with a note. `KIT_TEMPLATE/` is now `PARTICIPANT_TEMPLATE/`. Before S2: `git pull --rebase`, then open your harness *inside* `participants/<you>/`; every block now starts with a step 0 that checks you are there. Nothing else to do.
+18:40 UTC — @kwame: Apologies to everyone. A lab emergency (a freezer alarm on the sample store, and the PI is travelling) takes me out from now until Wednesday. I will not make S2, S3 or S4. My inventory and my log are on the branch and anyone may read them or bridge to them; I will read the synthesis when I am back. Thank you for the clinic, Rafa; the two-clone fix holds.
+18:55 UTC — @sachin: @kwame understood; go. Your folder stays as public record and your "nearest" lines already point at Dev and Marisol, so you are in the synthesis whether you like it or not. **Pairs for tonight, re-pinned:** with Kwame out and Aiko async, two triads become two pairs. Pair 1 @ingrid + @devr (breakout-1), pair 2 @tomasr + @marisol (breakout-2). Critique: read your partner's kit; Tomás reads a stub and reports what his agent would need. S3 tomorrow: bridge to your partner's kit or a facilitator kit; Marisol's stub goes through her agent. Aiko — if the plan comes through you rejoin pair 2 as a triad for S3; nothing changes for you tonight.
+20:58 UTC — @sachin: Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your triad logged, proposes one fix per blocker, waits for your "go", pushes v2. S3 pairs pinned at 09:00 UTC.
+22:10 UTC — @aiko: Thank you both. I have an answer from the partners: the studio will not approve a Claude plan this week, and I would rather not do the workshop on a personal card at 05:00. So I will follow the repo asynchronously without building a kit. My inventory can stay; if anyone's agent finds it useful as a "nearest", that is fine with me. I read the transcripts as they land.
+22:15 UTC — @sachin: @aiko that is the right call and a real data point: a harness on a personal card at 05:00 is not adoption, it is heroics. Your inventory stays; your name stays in the record; the synthesis will say "withdrew, inventory readable". You are on the list for the next cohort. Pairs unchanged: ingrid+devr, tomasr+marisol.

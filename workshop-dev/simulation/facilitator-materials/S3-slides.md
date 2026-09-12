@@ -9,10 +9,10 @@ Presenters split by expertise (checkpoint-1 decision): Sachin opens, does the tr
 > Note: one minute. Sachin has posted the rotation table already.
 
 ## Slide 2 — What S2 left in the repo (00:01) (presenter: Rafa)
-- Six kit folders in `participants/*/kit/`; one is a stub (Marisol's content stays on her machine by design; her kit is reachable only through her agent)
+- Four kit folders in `participants/*/kit/` (Kwame and Aiko withdrew after S1; their inventories stay); one is a stub (Marisol's content stays on her machine by design; her kit is reachable only through her agent)
 - Every kit has a `LOG.md` with the failure the critique found; most were description problems
 - Those failures are traces: they tell the next agent where the tacit knowledge was
-- Aiko's kit landed at 00:00 UTC, async; it counts
+- Two of six withdrew Monday; the record keeps their inventories, readable by any agent
 > Note: read two blocker lines from real LOG.md files on screen. Do not name whose.
 
 ## Slide 3 — Factory to factory (00:02) (presenter: Rafa)
@@ -57,7 +57,7 @@ Presenters split by expertise (checkpoint-1 decision): Sachin opens, does the tr
 
 ## Slide 9 — Exercise: build a bridge (00:14) (presenter: Sachin)
 - Triads, in breakout-1 and breakout-2. Rotation: you bridge to the kit you did **not** critique in S2. S2 critique ring X→Y→Z→X (Sachin's `breakout-instructions-triads.md`), so S3 bridges go X→Z, Y→X, Z→Y
-- Triad 1: Ingrid → Marisol's kit (stub, content on her machine: through Marisol's agent, transmittal pattern) · Dev → Ingrid's · Marisol → Dev's
+- Pair 1: Ingrid → Dev's kit · Dev → Ingrid's. Pair 2: Tomás → Marisol's kit (stub, content on her machine: through Marisol's agent, transmittal pattern) · Marisol → Tomás's. [pre-cut triad text follows] Triad 1: Ingrid → Marisol's kit · Dev → Ingrid's · Marisol → Dev's
 - Triad 2: Tomás → Sachin's kit (`facilitator/sachin/kit/`, his choice) · Kwame → Aiko's · Aiko → Kwame's
 - Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
 - Task: make your agent use the target kit to do one thing your own kit cannot do alone. Fill TARGET and TASK in the block in `S3-agent-prompts.md` (pinned), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
@@ -67,7 +67,7 @@ Presenters split by expertise (checkpoint-1 decision): Sachin opens, does the tr
 
 ## Slide 10 — Reconvene: one line each (00:55) (presenter: Rafa)
 - "My agent needed ___ from the target and found ___ on its own"
-- Six people, 25 seconds each; Sachin posts the order
+- Four people, 25 seconds each; Sachin posts the order
 - Marisol and Ingrid: say what the transmittal pattern cost you in unblock lines
 > Note: three minutes total. Cut at 25 s; the paragraph in the log is the long version.
 

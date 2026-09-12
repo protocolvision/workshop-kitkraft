@@ -1,6 +1,6 @@
 # Bridges (Session 3)
 
-One log per bridge, one writer: `participants/<you>/bridges/<target>.md`. Copy `TEMPLATE.md`. The full harness block for the exercise is `instructions/S3-bridge.md`. Rule: agent → repo → agent; humans talk only to unblock, and every unblock is one `unblock` line. Hard mode (optional, before S4): agent-only, no human chat, logged as a second section.
+One log per bridge, one writer: `participants/<you>/bridges/<target>.md`. Copy `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md`. The full harness block for the exercise is `instructions/S3-bridge.md`. Rule: agent → repo → agent; humans talk only to unblock, and every unblock is one `unblock` line. Hard mode (optional, before S4): agent-only, no human chat, logged as a second section.
 
 ## Bridging to a stub (private kit): the transmittal pattern
 

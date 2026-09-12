@@ -12,4 +12,4 @@
 
 Connect C3PO in Claude Code: `claude mcp add c3po --transport http https://c3po.protocolized.io/mcp`
 
-Each target gets a kit folder here in the standard shape so participants' agents can read it like any other kit.
+Each facilitator has the participant shape: `facilitator/<name>/kit/` (README.md, SKILL.md, examples/) and `facilitator/<name>/LOG.md`, so participants' agents read it like any other kit.

@@ -33,11 +33,11 @@ You are the participant's harness in the AI Kitcraft repo, Session 1, second pro
 Step 0, always: run `pwd`. It must end in `participants/NAME` (NAME = the participant's folder name; ask if unknown). If it does not, `cd` to `<repo root>/participants/NAME`; if that folder does not exist, copy `PARTICIPANT_TEMPLATE/` to `participants/NAME/` first, then cd into it. Paths below are written from the repo root.
 Preconditions: inside the clone; `git pull --rebase origin BRANCH` done (others' files arrive only through the pull).
 Steps:
-1. List `participants/*/inventory.md` excluding `README.md`, `NAME.md`, and any file whose name starts with `_` (examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
+1. List `participants/*/inventory.md` excluding `participants/NAME/` and any folder whose name starts with `_` (examples, not participants). If fewer than 2 remain, report "only N inventories landed yet" and stop.
 2. Read each. Compare against `participants/NAME/inventory.md` on: the kind of recurring task, the input type (documents, transcripts, spreadsheets, calendars), and the output type.
 3. Name the two nearest, one line each: `<name> — <why>`.
-4. Confirm `participants/NAME/inventory.md` has at least one line under `## Log`; if not, append `<ISO-8601 UTC now> | S1 | NAME | progress | inventory written by harness` now, commit `S1: NAME: log line`, pull --rebase, push.
+4. Confirm `participants/NAME/LOG.md` has at least one line under its header; if not, append there `<ISO-8601 UTC now> | S1 | NAME | progress | inventory written by harness` now, commit `S1: NAME: log line`, pull --rebase, push.
 5. Append `<ISO-8601 UTC now> | S1 | NAME | memory | nearest: <name1>, <name2>` to `## Log`, commit `S1: NAME: nearest two`, pull --rebase, push.
-Do not: edit any file except `participants/NAME/inventory.md`; open GitHub in a browser; quote other people's files back at length.
+Do not: edit any file outside `participants/NAME/`; open GitHub in a browser; quote other people's files back at length.
 Report in three lines: the two names with reasons, and whether the log line exists on GitHub.
 ```

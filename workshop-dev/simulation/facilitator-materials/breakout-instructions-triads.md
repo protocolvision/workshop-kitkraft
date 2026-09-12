@@ -1,12 +1,14 @@
-# Breakout instructions — triads (what Sachin posts in #kitcraft; the harness blocks live in `instructions/`)
+# Breakout instructions — pairs (what Sachin posts in #kitcraft; the harness blocks live in `instructions/`)
+
+Cohort cut Mon 18:55 UTC: Kwame and Aiko withdrew; four people in two pairs. Pair 1 = ingrid + devr (breakout-1), pair 2 = tomasr + marisol (breakout-2). The triad history stays in the file's intro; the pair rosters below replace it.
 
 Rewritten from `workshop-dev/breakout-instructions.md` (pairs) for two triads and 60-minute slots, then rewritten again to the agent-actionable standard (checkpoint 1): the participant pastes a file into their harness and says "do this". Discord's 2000-char limit means the posts below carry a 5-line human header and the file path; the canonical blocks are `instructions/S2-critique.md` and `instructions/S3-bridge.md` (with the stub and absence variants inside them) and, for the stub bridge, the two role blocks in `bridges/README.md`. Cycle: A reads B, B reads C, C reads A; S3 reversed, so you bridge to the kit you did not critique.
 
 ## Post at 20:35 UTC Mon — S2 critique (13 min)
 
 > **Rooms open — 13 minutes. Back in #kafka at 20:48.**
-> breakout-1: ingrid reads devr · devr reads kwame · kwame reads ingrid
-> breakout-2: tomasr reads marisol (stub) · marisol reads tomasr · aiko async (see the block's ABSENT variant)
+> breakout-1: ingrid reads devr · devr reads ingrid
+> breakout-2: tomasr reads marisol (stub: report what your agent would need) · marisol reads tomasr
 > Paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your kit, reads the target cold, gives you a 5-line report to read aloud, then logs the blockers about your own kit when you say "log mine".
 > Nobody explains their kit out loud until the reports are read. A facilitator visits each room once.
 
@@ -15,9 +17,9 @@ Facilitator sequence: `/stop` → post → move people → Rafa breakout-1, Sach
 ## Post at 15:45 UTC Tue — S3 bridge (40 min)
 
 > **Rooms open — 40 minutes. Back in #kafka at 16:25.**
-> Targets (the kit you did not critique): ingrid → kwame · devr → ingrid · kwame → devr · tomasr → aiko (or `facilitator/sachin/kit/`) · aiko → marisol (stub) · marisol → tomasr. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`/`; say so in your log.
+> Targets (pairs: your partner's kit, or a facilitator kit): ingrid → devr · devr → ingrid · tomasr → marisol (stub, through her agent; `facilitator/sachin/kit/` as hard mode after) · marisol → tomasr. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`/`; say so in your log.
 > Paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". It creates `participants/<you>/bridges/<target>.md`, asks you for the one thing, works, and stops whenever it needs something not in the repo — get that from the owner next to you, hand it over, it logs the unblock.
-> aiko and marisol: also use the requester / owner blocks in `bridges/README.md` (request pushed → owner runs locally → response pushed).
+> tomasr and marisol: also use the requester / owner blocks in `bridges/README.md` (request pushed → owner runs locally → response pushed).
 > At 16:15 say "minute 30" to your harness: it stops building and writes the paragraph in your words. Push by 16:23.
 
 Facilitator sequence: `/stop` → post → move people → Rafa breakout-1, Sachin breakout-2 → swap at 15:55 → "Reconvene" at 16:24 → `/record`.
