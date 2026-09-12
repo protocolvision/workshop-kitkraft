@@ -1,1 +1,1 @@
-OpenRecapper output per session: transcript + AI summary, copied here after each `/stop`. Plenary (#kafka) only; breakouts are not recorded. Recordings are pruned after 7 days; transcripts stay.
+OpenRecapper output per session (`S<n>/transcript.md`, `summary.md`, `awareness-check.md`; `S4/SYNTHESIS.md` is the workshop synthesis): transcript + AI summary, copied here after each `/stop`. Plenary (#kafka) only; breakouts are not recorded. Recordings are pruned after 7 days; transcripts stay.

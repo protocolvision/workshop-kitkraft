@@ -51,11 +51,11 @@ Verbatim copy of the harness block in Rafa's `facilitator-materials/1A-clinic.md
 
 ## PINNED 4 — Pairs for S3 (posted Tue Sep 22, 09:00 UTC; triad rotation kept below as superseded)
 
-Same rooms. Target = your partner's kit, or a facilitator kit: ingrid → devr · devr → ingrid · tomasr → marisol (stub, through Marisol's agent) · marisol → tomasr. Tomás: `facilitator/sachin/kit/` is yours as hard mode after the room, not instead of the stub. One log per bridge: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md`; tomasr and marisol also use the blocks in `bridges/README.md`.
+Same rooms. Target = your partner's kit, or a facilitator kit: ingrid → devr · devr → ingrid · tomasr → marisol (stub, through Marisol's agent) · marisol → tomasr. Tomás: `facilitator/sachin/kit/` is yours as hard mode after the room, not instead of the stub. One log per bridge: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md`; tomasr and marisol also use the transmittal blocks at the end of `instructions/S3-bridge.md`.
 
 *Superseded triad rotation:*
 
-Same rooms. Target = the kit you did **not** critique: ingrid → kwame · devr → ingrid · kwame → devr · tomasr → aiko (or `facilitator/sachin-kit/`, his stated choice) · aiko → marisol (through Marisol's agent; her kit is a stub) · marisol → tomasr. Anyone may swap to a facilitator target (`facilitator/README.md`). One log per bridge, written by the person bridging: `bridges/<you>-<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>. Stub target (aiko → marisol): both of you also use the blocks in `bridges/README.md`.
+Same rooms. Target = the kit you did **not** critique: ingrid → kwame · devr → ingrid · kwame → devr · tomasr → aiko (or `facilitator/sachin-kit/`, his stated choice) · aiko → marisol (through Marisol's agent; her kit is a stub) · marisol → tomasr. Anyone may swap to a facilitator target (`facilitator/README.md`). One log per bridge, written by the person bridging: `bridges/<you>-<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>. Stub target (aiko → marisol): both of you also use the transmittal blocks at the end of `instructions/S3-bridge.md`.
 
 ---
 

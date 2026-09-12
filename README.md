@@ -25,7 +25,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
    - `bridges/<target>.md` (Session 3) — one log per bridge, written by you
    - `LOG.md` — your harness writes it; you do not
 4. Push to `main`. No branches, no PRs. Your harness pulls with rebase first.
-5. Private kit? Keep the content on your own machine. Put only a stub `participants/<your-name>/kit/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `bridges/README.md`). There is no private repo.
+5. Private kit? Keep the content on your own machine. Put only a stub `participants/<your-name>/kit/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `instructions/S3-bridge.md`). There is no private repo.
 
 ## Layout
 
@@ -36,9 +36,8 @@ CLAUDE.md          points Claude Code at AGENTS.md
 instructions/      blocks to paste into your harness (orient, async-1, S2-critique, async-2, S3-bridge)
 PARTICIPANT_TEMPLATE/  copy to participants/<name>/: inventory.md, kit/, bridges/TEMPLATE.md, LOG.md
 participants/<name>/   one folder per person: inventory.md (S1), kit/ (S2), bridges/<target>.md (S3), LOG.md
-bridges/           README.md (S3 rules, transmittal procedure); SYNTHESIS.md (S4)
 facilitator/<name>/  facilitator kits usable as bridge targets (same shape: kit/, LOG.md)
-transcripts/       OpenRecapper output per session
+transcripts/       OpenRecapper output per session; S4/SYNTHESIS.md
 workshop-dev/      facilitator material: outline, resources, checklists
 site/              the landing page at https://ai.protocolized.dev/kitcraft/ (source + deploy notes)
 registration/      the sign-up form: link, questions, how answers feed the prep checklist
@@ -65,6 +64,6 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, 
 | 1A clinic (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
 | S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` |
 | S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<you>/bridges/<target>.md` |
-| S4 Recap | Tue Sep 22, 20:00 | 60 min | `bridges/SYNTHESIS.md` |
+| S4 Recap | Tue Sep 22, 20:00 | 60 min | `transcripts/S4/SYNTHESIS.md` |
 
 Times in UTC / Berlin / Pacific are pinned in #kitcraft.

@@ -19,7 +19,7 @@ Facilitator sequence: `/stop` → post → move people → Rafa breakout-1, Sach
 > **Rooms open — 40 minutes. Back in #kafka at 16:25.**
 > Targets (pairs: your partner's kit, or a facilitator kit): ingrid → devr · devr → ingrid · tomasr → marisol (stub, through her agent; `facilitator/sachin/kit/` as hard mode after) · marisol → tomasr. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`/`; say so in your log.
 > Paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". It creates `participants/<you>/bridges/<target>.md`, asks you for the one thing, works, and stops whenever it needs something not in the repo — get that from the owner next to you, hand it over, it logs the unblock.
-> tomasr and marisol: also use the requester / owner blocks in `bridges/README.md` (request pushed → owner runs locally → response pushed).
+> tomasr and marisol: also use the requester / owner blocks at the end of `instructions/S3-bridge.md` (request pushed → owner runs locally → response pushed).
 > At 16:15 say "minute 30" to your harness: it stops building and writes the paragraph in your words. Push by 16:23.
 
 Facilitator sequence: `/stop` → post → move people → Rafa breakout-1, Sachin breakout-2 → swap at 15:55 → "Reconvene" at 16:24 → `/record`.
