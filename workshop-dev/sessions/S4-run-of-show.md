@@ -1,33 +1,33 @@
 # S4 — Recap and showcase · run of show (Tue Sep 22, 20:00–21:00 UTC)
 
-Presenter split: Sachin — opener, debrief round, synthesis read-back, verdict, awareness tally, close, recorder, chat. Rafa — recap, showcase, states the hypothesis. Sachin screen-shares all session. Room: #kafka only; one recorder segment.
+Facilitation split: Rafa — opener, debrief order and timer, showcase, final awareness round, take-home and close; keeps #kitcraft, recorder and repo; screen-shares all session. Sachin — recap in three files, synthesis read-back, the hypothesis and its verdict; his agent builds `SYNTHESIS.md`. Room: #kafka only; one recorder segment.
 
-## Before the session (Sachin, 19:30–19:55)
+## Before the session (19:30–19:55)
 
-1. `git pull --rebase`; note the commit hash. Confirm one bridge log per participant exists; list any missing in #kitcraft with a 19:50 push deadline.
-2. Start the synthesis agent (procedure below) → `workshop-dev/transcripts/S4/SYNTHESIS.md` v0, not yet pushed.
-3. With Rafa at 19:45: pick the three recap files (slide 2) and the three showcase bridges (slide 4); post the paths in #kitcraft.
-4. 19:55: screen-share check.
+1. Rafa: `git pull --rebase`; note the commit hash. Confirm one bridge log per participant exists; list any missing in #kitcraft with a 19:50 push deadline.
+2. Sachin: start the synthesis agent (procedure below) → `workshop-dev/transcripts/S4/SYNTHESIS.md` v0, not yet pushed.
+3. Both, at 19:45: pick the three recap files (slide 2) and the three showcase bridges (slide 4); Rafa posts the paths in #kitcraft.
+4. Rafa, 19:55: screen-share check.
 
 ## Minute table
 
-| UTC | min | Presenter | Rafa | Sachin | Participants | Artifact | Recorder |
+| UTC | min | Presenter | Rafa (ops) | Sachin (theory) | Participants | Artifact | Recorder |
 |---|---|---|---|---|---|---|---|
-| 20:00 | 00 | Sachin | listens | Slide 1; consent one-liner; "Recording on (KITCRAFT-S4)" | listen | — | `/record channel:#kafka name:KITCRAFT-S4` |
-| 20:02 | 02 | Rafa | Slide 2: recap in three files | drives the screen; posts the three paths | follow in own clone | — | on |
-| 20:10 | 10 | Sachin | timer at 90 s | Slide 3: `<group 1>` debrief, 90 s per bridge log; captures each report into SYNTHESIS §2 | one speaker per log; questions | — | on |
-| 20:16 | 16 | Sachin | timer | `<group 2>` debrief (then the rest; 60 s each when there are more than six logs); reads an async member's #kitcraft note if no group-mate does | speak; a group-mate reads any absent member's paragraph; questions | — | on |
+| 20:00 | 00 | Rafa | Slide 1; consent one-liner; "Recording on (KITCRAFT-S4)" | listens | listen | — | `/record channel:#kafka name:KITCRAFT-S4` |
+| 20:02 | 02 | Sachin | drives the screen; posts the three paths | Slide 2: recap in three files | follow in own clone | — | on |
+| 20:10 | 10 | Rafa | Slide 3: `<group 1>` debrief, 90 s per bridge log; timer at 90 s | his agent captures each report into SYNTHESIS §2 | one speaker per log; questions | — | on |
+| 20:16 | 16 | Rafa | `<group 2>` debrief (then the rest; 60 s each when there are more than six logs); timer; reads an async member's #kitcraft note if no group-mate does | captures | speak; a group-mate reads any absent member's paragraph; questions | — | on |
 | 20:22 | 22 | — | questions | buffer | — | — | on |
 | 20:24 | 24 | Rafa | Slide 4: showcase 1 (worked) | selects #kitcraft-transcripts since 20:00 → scratch file → agent merges into SYNTHESIS v1 | bridge owner talks to their log on screen | — | on |
 | 20:28 | 28 | Rafa | showcase 2 (transmittal, a stub target) | agent finishes v1; reads it once | — | — | on |
 | 20:32 | 32 | Rafa | showcase 3 (did not work) | pushes `workshop-dev/transcripts/S4/SYNTHESIS.md` v1; posts link | — | SYNTHESIS v1 | on |
-| 20:38 | 38 | Sachin | listens | Slide 5: read-back — numbers, the paragraphs verbatim; corrections typed live under §6 | correct out loud | SYNTHESIS §1, §2, §6 | on |
-| 20:43 | 43 | Rafa → Sachin | states the hypothesis (60 s) | Slide 6: verdict rule, table, verdict | contest the classification | SYNTHESIS §3 | on |
-| 20:50 | 50 | Sachin | keeps time | Slide 7: final round; tallies live in SYNTHESIS §5; adds async answers from #kitcraft | one word + one clause each | SYNTHESIS §5 profile | on |
-| 20:57 | 57 | Sachin | — | Slide 8: take-home; posts verbatim to #kitcraft | — | — | on |
-| 21:00 | 60 | Sachin | — | "Recording off"; pushes SYNTHESIS v1 with corrections | — | — | `/stop` |
+| 20:38 | 38 | Sachin | listens; keeps time | Slide 5: read-back — numbers, the paragraphs verbatim; corrections typed live under §6 | correct out loud | SYNTHESIS §1, §2, §6 | on |
+| 20:43 | 43 | Sachin | keeps time | Slide 6: states the hypothesis (60 s), verdict rule, table, verdict | contest the classification | SYNTHESIS §3 | on |
+| 20:50 | 50 | Rafa | Slide 7: final round; posts the order; reads async answers from #kitcraft | his agent tallies live in SYNTHESIS §5 | one word + one clause each | SYNTHESIS §5 profile | on |
+| 20:57 | 57 | Rafa | Slide 8: take-home; posts verbatim to #kitcraft | — | — | — | on |
+| 21:00 | 60 | Rafa | "Recording off"; `/stop` | pushes SYNTHESIS v1 with corrections | — | — | `/stop` |
 
-After (Sachin, by 21:30): `workshop-dev/transcripts/S4/transcript.md`, `summary.md`, `awareness-check.md`; commit `S4: sachin: transcript + summary`. Within 48 h: SYNTHESIS v2 with the S4 transcript folded in and the profile final; posted in Discord (#kitcraft, #symposium-2026). Nothing else is planned with the material.
+After (Rafa, by 21:30): `workshop-dev/transcripts/S4/transcript.md`, `summary.md`, `awareness-check.md`; commit `S4: rafa: transcript + summary`. Within 48 h (Sachin): SYNTHESIS v2 with the S4 transcript folded in and the profile final; Rafa posts it in Discord (#kitcraft, #symposium-2026). Nothing else is planned with the material.
 
 ## Synthesis procedure (what Sachin's agent reads, in order)
 

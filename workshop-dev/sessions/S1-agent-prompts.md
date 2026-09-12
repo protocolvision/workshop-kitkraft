@@ -1,4 +1,4 @@
-# S1 agent prompts — facilitator copy (pinned in #kitcraft by Sachin at 16:05 and 16:18 UTC as a link to `instructions/S1-inventory.md`)
+# S1 agent prompts — facilitator copy (pinned in #kitcraft by Rafa at 16:05 and 16:18 UTC as a link to `instructions/S1-inventory.md`)
 
 Two blocks. Participants paste each into their harness (open at the clone root) and say "do this". Slide 12 = Block 1, slide 13 = Block 2. No interpretation needed from the participant. Pins never carry a block (2000-character cap); they link to the file. Keep this copy and `instructions/S1-inventory.md` identical.
 

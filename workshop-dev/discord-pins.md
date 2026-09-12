@@ -1,6 +1,6 @@
 # Pinned messages — #kitcraft
 
-Four pins (Discord caps a message at 2000 characters): the main pin, the consent notice, the S2 breakout groups, the S3 breakout groups. Sachin posts pins 1–2 on Sun Sep 20, pin 3 at S1 close (Mon 16:45 UTC), pin 4 on Tue at 09:00 UTC. Every block is a file in `instructions/`; pins carry the path, never the block. Rooms: breakout-1 … breakout-5 (one per breakout group or pair).
+Four pins (Discord caps a message at 2000 characters): the main pin, the consent notice, the S2 breakout groups, the S3 breakout groups. Rafa posts pins 1–2 on Sun Sep 20, pin 3 at S1 close (Mon 16:45 UTC), pin 4 on Tue at 09:00 UTC. Every block is a file in `instructions/`; pins carry the path, never the block. Rooms: breakout-1 … breakout-5 (one per breakout group or pair).
 
 ## PIN 1 — main (Sun Sep 20, 10:00 UTC)
 
@@ -28,7 +28,7 @@ Your local time: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260
 
 **Recorder:** every start and stop is announced here as `Recording on (KITCRAFT-S<n>)` / `Recording off`.
 
-**Help:** setup or git → 1A, or ping @sachin here · theory → @C3PO · during a session → post here; whichever of us is not presenting answers in text.
+**Help:** Rafa runs this channel, the rooms and the recorder — setup, git, pushes → 1A or @rafa here · theory → @sachin or @C3PO · during a session → post here; whichever of us is not presenting answers in text.
 
 ## PIN 2 — consent notice (Sun Sep 20, 10:02 UTC)
 

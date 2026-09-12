@@ -1,6 +1,6 @@
 # Consent notice — AI Kitcraft 2026
 
-Two versions. The short one is read aloud at the top of S1 by Sachin, who opens the room, and repeated in one sentence at the top of S2–S4. The full one is the second pin in #kitcraft (`../discord-pins.md`). Both are on the record; the read-aloud is itself in the S1 transcript.
+Two versions. The short one is read aloud at the top of S1 by Rafa, who opens the room, and repeated in one sentence at the top of S2–S4. The full one is the second pin in #kitcraft (`../discord-pins.md`). Both are on the record; the read-aloud is itself in the S1 transcript.
 
 ## Read aloud (about 45 seconds)
 

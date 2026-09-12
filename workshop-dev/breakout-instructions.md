@@ -1,4 +1,4 @@
-# Breakout instructions — what Sachin posts in #kitcraft before each breakout
+# Breakout instructions — what Rafa posts in #kitcraft before each breakout
 
 Breakout groups of 2–4 are the unit, sized by the facilitators from headcount (6 → two groups of 3; 10 → five pairs or two 3s + two 2s; 12 → four 3s or three 4s). S2 critique = a ring inside the group: A reads B, B reads C, …, the last reads A; a pair swaps. S3 bridge = each person bridges to the kit they did NOT critique; a pair bridges to the partner's kit or to a facilitator kit. Rooms: breakout-1 … breakout-5, one per group.
 

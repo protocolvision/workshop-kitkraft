@@ -11,15 +11,15 @@ What the facilitators run from. Participants never need these; the blocks they p
 | `S3-slides.md` · `S3-run-of-show.md` | Bridges, Tue 15:30–16:30 UTC: examples 14, breakout 40, close 5 |
 | `S3-agent-prompts.md` | facilitator copy of the S3 block (`instructions/S3-bridge.md`) |
 | `S4-slides.md` · `S4-run-of-show.md` | Recap and showcase, Tue 20:00–21:00 UTC: debrief, showcase, `SYNTHESIS.md` read-back, hypothesis verdict rule, awareness-profile tally |
-| `consent-notice.md` | the 45-second read-aloud (Sachin, top of S1) and the full pinned notice, with the block for the harness |
+| `consent-notice.md` | the 45-second read-aloud (Rafa, top of S1) and the full pinned notice, with the block for the harness |
 | `setup-checklist.md` | what a participant's machine needs (git, gh, one harness), why, install per system, verify commands, and a "Verify only" harness block |
 | `recorder-runbook.md` | OpenRecapper: commands, per-session start/stop times, the sequence around a breakout, where transcripts go, what to confirm on Sep 17 |
 
-## Presenter split
+## Facilitation split
 
-Sachin opens every session. Sections follow the `(presenter: …)` tag on each slide heading; the run-of-show's Presenter column repeats it.
+Rafa opens every session with its first minute (welcome, consent, logistics); Sachin opens the content right after. Sections follow the `(presenter: …)` tag on each slide heading; the run-of-show's Presenter column repeats it.
 
-- **Sachin:** openers and consent, ice-breaker, what this is not (the tractor), the hard problem (precommodification, farmsteading), brand kit / Jamverse, the comms layer, the trust two-minutes, room briefings and moves, the S4 debrief round, synthesis read-back and verdict, awareness tallies, closes. Off-mic: chat, pins, recorder, repo commits, screen share in S2–S4.
-- **Rafa:** the awareness and movement 2×2s, CMM ↔ Kit/Factory/Bridge, what a kit is, traces, C3PO, the S1 exercise and checks, the F2F case, factory = kit + interface and the ladder, build briefing, water-rate pipeline, Prime Radiant, the bridge hypothesis, S3 reconvene, S4 recap and showcase; leads 1A. Off-mic: floats the low-numbered breakout rooms.
+- **Rafa — ops, coordination, exercises:** the first minute of each session, ice-breaker timing, every exercise briefing, push and log-line checks, breakouts and rooms, the recorder, #kitcraft and the pins, awareness checks and their tally, async assignments, 1A, the S4 debrief order, showcase and close. Off-mic: screen share, repo commits (transcripts), floats the low-numbered breakout rooms.
+- **Sachin — theory:** every conceptual segment: the thesis and "what this is not" (the tractor), both 2×2s, the CMM mapping, what a kit is, traces, C3PO, the hard problem (precommodification, farmsteading), the S2 examples (F2F, brand kit) and the ladder, the comms layer, the S3 F2F theory, examples, the three kinds of bridge, trust and the hypothesis statement, the S4 recap and synthesis read-back with its verdict. Off-mic: theory questions in voice, floats the high-numbered breakout rooms; his agent builds `SYNTHESIS.md`.
 
 Keep the agent-prompt copies here identical to the files in `instructions/`; the `instructions/` file is the one participants paste.

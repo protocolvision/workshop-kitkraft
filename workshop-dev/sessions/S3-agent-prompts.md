@@ -1,4 +1,4 @@
-# S3 agent prompt — facilitator copy (pinned in #kitcraft by Sachin at 15:44 UTC as a link to `instructions/S3-bridge.md`)
+# S3 agent prompt — facilitator copy (pinned in #kitcraft by Rafa at 15:44 UTC as a link to `instructions/S3-bridge.md`)
 
 Agent-executable version of step 3 in `../breakout-instructions.md`. The participant fills two settings (TARGET, TASK) and pastes. Rotation table: the S3 pin. Keep this copy and `instructions/S3-bridge.md` identical.
 
