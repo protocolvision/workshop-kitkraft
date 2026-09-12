@@ -4,7 +4,7 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 
 ## Slide 1 — S3: Bridges (00:00) (presenter: Sachin)
 - Recorder is on; same consent as Monday; breakouts not recorded
-- Kit → Factory → **Bridge**: today your agent uses someone else's kit
+- Kit → Factory → **Bridge**: today your agent uses someone else's kit or factory — across factories, across kits, or kit ↔ factory
 - Output: one file per person, `participants/<you>/bridges/<target>.md`
 > Note: one minute. Sachin has posted the rotation table already.
 
@@ -22,8 +22,12 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 - The invisible 90%: high-trust links. F2F works because both sides already trust each other
 > Note: three minutes. The transmittal pattern is what any breakout group with a stub will do by necessity.
 
-## Slide 4 — The interface ladder, revisited (00:05) (presenter: Rafa)
-- File handoff (a README a person hands to their agent) → static page → MCP → A2A Agent Card
+## Slide 4 — Three kinds of bridge (00:05) (presenter: Rafa)
+- Any kit or factory in the repo is a target: a **kit** has no declared interface; a **factory** has an `Interface:` line (S2); both facilitator kits are factories at rung 1
+- **Factory → factory:** both sides declared; your agent uses the target strictly through its declared interface
+- **Kit → kit:** neither declared; the interface IS the README a person hands to their agent — your agent reads README + SKILL.md cold and the log records what it had to ask a human
+- **Kit ↔ factory:** one side declared; the log records which direction and whether the declared interface was enough
+- Underneath, the ladder revisited: file handoff (a README a person hands to their agent) → static page → MCP → A2A Agent Card
 - Every rung has an open standard: SKILL.md, AGENTS.md, MCP, A2A
 - Payments and identity are going to x402 and ERC-8004. Named once, not taught
 - The S2 question answered here: a kit that only produces a document has an interface too — the shape of the document is the interface
@@ -52,14 +56,14 @@ Presenter split: Sachin opens, does the trust two-minutes and briefs the rooms; 
 ## Slide 8 — The bridge hypothesis (00:13) (presenter: Rafa)
 - Stated now, tested in S4 against your logs:
 - **A bridge is a protocol between two factories — the smallest thing both sides agree not to change**
-- If your logs support it, S4 says so. If they do not, your definition wins and the hypothesis is recorded as rejected
+- Tested against all three kinds; the kit → kit bridges test it hardest. If your logs support it, S4 says so. If they do not, your definition wins and the hypothesis is recorded as rejected
 > Note: one minute. Say it twice. Sachin pins it.
 
 ## Slide 9 — Exercise: build a bridge (00:14) (presenter: Sachin)
-- Breakout groups of 2–4, one per room. Rotation: you bridge to the kit you did **not** critique in S2; a pair bridges to the partner's kit or a facilitator kit
+- Breakout groups of 2–4, one per room. Any kit or factory in the repo is a valid target; the pinned default is the kit you did **not** critique in S2; a pair bridges to the partner's kit or a facilitator kit. Your harness works out the kind (factory-factory / kit-kit / kit-factory) and writes it in the log
 - `<group 1>`: A → C's kit · B → A's · C → B's; `<group 2>`: … (the pinned table). A stub target is bridged through its owner's agent: the transmittal pattern in `instructions/S3-bridge.md`
 - Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
-- Task: make your agent use the target kit to do one thing your own kit cannot do alone. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
+- Task: make your agent use the target to do one thing your own kit or factory cannot do alone. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log
 - At minute 30 of the breakout, stop building; write "Did it work" and "What a bridge turned out to be", one paragraph each. Push by minute 38
 > Note: Sachin briefs, one minute; the table is already pinned. He opens the rooms at 00:15 sharp.

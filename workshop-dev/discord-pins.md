@@ -42,7 +42,7 @@ At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> 
 
 ## PIN 4 — breakout groups for S3 (Tue Sep 22, 09:00 UTC)
 
-Same rooms. Target = the kit you did **not** critique. Pairs: the partner's kit or a facilitator kit.
+Same rooms. Target = any kit or factory in the repo; the default below is the kit you did **not** critique. Pairs: the partner's kit or a facilitator kit. Three kinds: factory→factory (both declared an `Interface:`), kit→kit (neither did; the README is the interface), kit↔factory; your harness works out which and writes it in the log.
 <groups: one line per group — **Group 1 → breakout-1:** a → c's kit · b → a's kit · c → b's kit. Stub targets: "(through <owner>'s agent; both of you also use the blocks in `instructions/S3-bridge.md`)".>
 Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`); say so in your log. One log per bridge, written by the person bridging: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". Hypothesis for tomorrow, stated at 15:43: *a bridge is a protocol between two factories — the smallest thing both sides agree not to change.*
 

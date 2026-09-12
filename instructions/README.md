@@ -10,6 +10,6 @@ Each file below is written for your harness, not for you. Open your harness at t
 | S2 build | `S2-factory.md` | converts the chosen kit into a factory: README with `Interface:`, SKILL.md, one worked example (rung 1) |
 | S2 breakout | `S2-critique.md` | uses a group-mate's factory through its interface, reports where it was insufficient, logs blockers |
 | overnight | `async-2.md` | fixes the blockers, pushes v2 |
-| S3 breakout | `S3-bridge.md` | uses the target kit, writes the bridge file |
+| S3 breakout | `S3-bridge.md` | uses the target (any kit or factory in the repo; factory-factory, kit-kit or kit-factory), writes the bridge file |
 | S3, stub targets | `S3-bridge.md`, second section | requester and owner blocks |
 | no harness or no GitHub | `no-harness.md` | the by-hand path: write, paste in #kitcraft, a facilitator commits |
