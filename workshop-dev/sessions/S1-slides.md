@@ -104,7 +104,6 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 
 ## Slide 14 — Awareness check (00:53) (presenter: Rafa)
 - Which quadrant did this hour expand? One word each, in the order Rafa posts
-- Expected: precommodification — the two nearest inventories overlapped more than you thought
 - Rafa's agent tallies the answers into #kitcraft and `workshop-dev/transcripts/S1/awareness-check.md`
 - Focus question to carry to tomorrow: how will bridges emerge across the kit era?
 > Note: do not correct anyone's quadrant.

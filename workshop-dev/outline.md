@@ -85,7 +85,7 @@ Anyone whose push fails posts the harness's error in #kitcraft and gets the fix 
 Rule: you read other people's inventories only through your agent, never in the browser.
 This is the one-way version of the Wallfacer rule: no live coordination needed, but the public-record norm is set on day one. Rafa's agent checks at the close that every `participants/<name>/LOG.md` has a line; missing lines go to 1A.
 
-**Close (7)** Rafa: awareness check, one word each, tallied by his agent into `workshop-dev/transcripts/S1/awareness-check.md`. (Expected: precommodification — reading others' inventories through your agent shows how much overlaps.) Focus question: how will bridges emerge across the kit era? Async 1, 1A, S2 time.
+**Close (7)** Rafa: awareness check, one word each, tallied by his agent into `workshop-dev/transcripts/S1/awareness-check.md`. Focus question: how will bridges emerge across the kit era? Async 1, 1A, S2 time.
 
 **Async 1 (Mon 16:30–20:00 UTC, three hours)** Paste `instructions/async-1.md`: choose the kit to convert in S2 — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`; copied into your folder with a `Source:` line) — and draft the README's Job and Interface lines. The participant rewrites the Job line in their own words. Nothing else; the gap is short and 1A sits inside it.
 
@@ -115,7 +115,7 @@ The comms layer, from the anshuc techniques (Sachin, at minute 15 of the build):
 
 **Group critique (13, breakout rooms)** Instructions: `instructions/S2-critique.md`, posted per `breakout-instructions.md`. A ring inside each breakout group (2–4): A reads B, B reads C, …, the last reads A; a pair swaps. The reader's harness pushes its own factory, pulls, uses the target through its declared interface (README and SKILL.md only), runs the example cold, reports in five lines where the interface was insufficient; the participant reads the report aloud; the owner's harness logs each failure as a `blocker` line. A breakout group missing a member becomes a pair for the night; the absent kit is read async and the report posted in #kitcraft. Room moves cost about two minutes each way; they are inside the 13.
 
-**Close (10)** Rafa. Round: one sentence each on what the other agent got wrong (≈40 s each). Awareness check, saved to `workshop-dev/transcripts/S2/awareness-check.md`. (Expected: anchored in reality — the agent failed where your domain knowledge was tacit.) Async 2 posted verbatim.
+**Close (10)** Rafa. Round: one sentence each on what the other agent got wrong (≈40 s each). Awareness check, saved to `workshop-dev/transcripts/S2/awareness-check.md`. Async 2 posted verbatim.
 
 **Async 2 (overnight, before Tue 15:30 UTC)** Paste `instructions/async-2.md`: one fix per `blocker` line (README input, SKILL step or constraint, description line, or example), one `progress` line per fix plus one `memory` line, a cold re-run of the example, push v2. S3 breakout groups (rotated) posted at 09:00 UTC with alternative targets in `facilitator/README.md`.
 
@@ -140,7 +140,7 @@ Task: make your agent use the target to do one thing your own kit or factory cou
 Soft Wallfacer rule: the exchange goes agent → repo → agent; human chat allowed to unblock, but every unblock is logged.
 One log per bridge, one writer. At minute 30 the harness stops building and writes "Did it work" and "What a bridge turned out to be" in the participant's words. Push by minute 38.
 
-**Close (5)** Rafa. Reconvene: one line each, "my agent needed ___ from the target and found ___ on its own" (25 s). Awareness check, saved to `workshop-dev/transcripts/S3/awareness-check.md`. (Expected: traces — what the other kit left for your agent to find, and what it did not.) Then Sachin states the hypothesis, once, explicitly as a hypothesis to be tested against the logs tomorrow — *a protocol between two factories — the smallest thing both sides agree not to change* — and Rafa pins it. Async 3: finish the bridge log, push by 20:00; optional hard-mode Wallfacer (agent-only, public record, no human chat) as a second section in the same file.
+**Close (5)** Rafa. Reconvene: one line each, "my agent needed ___ from the target and found ___ on its own" (25 s). Awareness check, saved to `workshop-dev/transcripts/S3/awareness-check.md`. Then Sachin states the hypothesis, once, explicitly as a hypothesis to be tested against the logs tomorrow — *a protocol between two factories — the smallest thing both sides agree not to change* — and Rafa pins it. Async 3: finish the bridge log, push by 20:00; optional hard-mode Wallfacer (agent-only, public record, no human chat) as a second section in the same file.
 
 ---
 
@@ -160,7 +160,7 @@ Slides, minute table, synthesis procedure, hypothesis rule and awareness tally: 
 
 **Hypothesis (7)** After the room's paragraphs have been read, Sachin restates the hypothesis from the S3 close, reads the verdict rule, then the table (supports / contradicts / silent per paragraph); the room's definition is recorded next to the verdict. Decision rule: retained if ≥⅔ support and none contradict; amended if supports ≥ contradicts and the contradictions name one missing element; rejected otherwise, and the room's definition wins and is recorded.
 
-**Final awareness round (7)** Rafa. Each participant names the quadrant their practice was blind to on Monday morning; tallied into `SYNTHESIS.md` §5 as the room's awareness profile (S1–S3 checks plus this round; expected fourth quadrant: playability, surfaced by having built and bridged).
+**Final awareness round (7)** Rafa. Each participant names the quadrant their practice was blind to on Monday morning; tallied into `SYNTHESIS.md` §5 as the room's awareness profile (S1–S3 checks plus this round; actuals only).
 
 **Take-home (3)** Rafa. The repo stays public; `SYNTHESIS.md` v2 posted in Discord within 48 h; nothing else is planned. Hard-mode Wallfacer invitation; SIGBIZ show-and-tell as the continuation venue; removal requests any time.
 
@@ -207,7 +207,7 @@ Access: every registrant invited as a collaborator with write access as registra
 
 ### 2. Autologging
 
-The participant template ships a `LOG.md` and the repo-root `AGENTS.md` carries the autolog instruction every harness reads on open (the file is canonical; the outline no longer duplicates it): after every substantive step, one line `<ISO timestamp> | <session> | <name> | <type> | <one line>` to `participants/<name>/LOG.md` (one log per person, no other log files), with `type` ∈ progress | decision | memory | blocker | question | unblock. Never rewrite or delete earlier lines, even on request; removal is a facilitator's hand action. Never log secrets, credentials, client names or personal data.
+The participant template ships a `LOG.md` and the repo-root `AGENTS.md` carries the autolog instruction every harness reads on open (the file is canonical; the outline no longer duplicates it): after every substantive step, one table row `| <ISO timestamp> | <session> | <name> | <type> | <one line> |` to `participants/<name>/LOG.md` (one log per person, no other log files), with `type` ∈ progress | decision | memory | blocker | question | unblock. Never rewrite or delete earlier lines, even on request; removal is a facilitator's hand action. Never log secrets, credentials, client names or personal data.
 
 Participants do nothing; the harness does it. Rafa's agent checks at the S1 close that at least one line exists in each `participants/<name>/LOG.md`, which verifies the instruction fired. The S4 synthesis reads `participants/*/LOG.md`, `participants/*/bridges/*.md`, and the session transcripts.
 

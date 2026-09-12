@@ -47,7 +47,6 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - Monday morning, which quadrant was your practice blind to? Precommodification · Traces · Anchored in reality · Playability
 - One word and one clause each; an async participant's answer read from #kitcraft
 - Tallied into the room's awareness profile: S1–S4 checks in a row, plus this round
-- Expected fourth quadrant: playability — surfaced by having built and bridged, not by being told
 > Speaker note: Rafa posts the order and keeps time; Sachin's agent tallies on screen in `SYNTHESIS.md` §5 as people speak.
 
 ## Slide 8 — Take-home (57:00) (presenter: Rafa)

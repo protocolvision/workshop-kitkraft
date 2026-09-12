@@ -60,7 +60,7 @@ Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the 
 
 ## Slide 9 — Exercise: can your agent use theirs? (00:14) (presenter: Rafa)
 - Breakout groups of 2–4, one per room. Any kit or factory in the repo is a valid target; the pinned default is the kit you did **not** critique in S2; a pair bridges to the partner's kit or a facilitator kit. Your harness works out which configuration it is (factory-factory / kit-kit / kit-factory) and writes it in the log
-- `<group 1>`: A → C's kit · B → A's · C → B's; `<group 2>`: … (the pinned table).
+- Targets as pinned in #kitcraft (PIN 4 is the only roster).
 - Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
 - The question: make your agent use the target to do one thing yours cannot; log everything. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log
@@ -73,7 +73,7 @@ Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the 
 > Note: three minutes total for six; with ten or more, 15 s each. Cut on time; the paragraph in the log is the long version.
 
 ## Slide 11 — Awareness check, one hypothesis, Async 3 (00:58) (presenter: Rafa; hypothesis: Sachin)
-- Which quadrant did this hour expand? One word each. Expected: traces — what the other kit left for your agent, and what it did not
+- Which quadrant did this hour expand? One word each
 - Sachin, once, as a hypothesis to test against your logs tomorrow — not a definition: *a protocol between two factories — the smallest thing both sides agree not to change*. Rafa pins it. Tomorrow we read your paragraphs first, then this
 - Async 3 (16:30–20:00 UTC): finish the bridge log, push. Optional hard-mode Wallfacer: redo the bridge agent-only, public record, no human chat; log it as a second section in the same file (`instructions/S3-bridge.md`)
 - S4 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): 90 seconds per bridge, then your paragraphs against the hypothesis

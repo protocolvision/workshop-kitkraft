@@ -1,16 +1,13 @@
-# Facilitator factories — bridge targets
+# Facilitator kits — bridge targets
+
+Only what exists. Each facilitator has `facilitator/<name>/` in the participant shape (`kit/`, `LOG.md`) so participants' agents read it like any other kit.
 
 | Target | Interface | Access | Owner |
 |---|---|---|---|
-| C3PO | MCP `search_corpus` at https://c3po.protocolized.io/mcp | no key; 100 calls/IP/day | PI |
-| C3PO | MCP `ask_c3po` | bearer token from team@protocol-institute.org | PI |
-| Prime Radiant | https://primeradiant.worldmachines.org/ | external interface TBC | Aneesh |
-| Humboldt (PI's field-notebook agent) | https://humboldt.protocol-institute.org/ | external interface TBC | PI |
-| Water registry | https://npc.here.now/waterdatastrategy/ | TBC | Rafa |
-| PI brand kit | https://github.com/protocolvision/project-aimarketing (`llms.txt` → `brand.json`) · live https://npc.here.now/protocolintstitutebrandkit/ | repo | Rafa |
-| Sachin's kit | `facilitator/sachin/kit/` | repo | Sachin |
 | Rafa's kit (water-rate PDF → registry row) | `facilitator/rafa/kit/` (file handoff; row shape in `examples/output.csv`) | repo | Rafa |
+| Sachin's kit | `facilitator/sachin/kit/` | repo | Sachin |
+| PI brand kit | https://github.com/protocolvision/project-aimarketing (`llms.txt` → `brand.json`) | link, read-only | Rafa |
 
-Connect C3PO in Claude Code: `claude mcp add c3po --transport http https://c3po.protocolized.io/mcp`
-
-Each facilitator has `facilitator/<name>/` in the participant shape (`kit/`, `LOG.md`) so participants' agents can read it like any other kit.
+Theory help, not a target: **C3PO**, the Protocol Institute corpus, MCP `search_corpus` at https://c3po.protocolized.io/mcp (no key; 100 calls/IP/day).
+- Claude Code: `claude mcp add c3po --transport http https://c3po.protocolized.io/mcp`
+- Codex: `codex mcp add c3po --url https://c3po.protocolized.io/mcp` (if your Codex version differs, see the Codex MCP docs: https://developers.openai.com/codex/mcp)

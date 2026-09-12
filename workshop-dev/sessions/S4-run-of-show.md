@@ -15,8 +15,8 @@ Facilitation split: Rafa — opener, debrief order and timer, showcase, final aw
 |---|---|---|---|---|---|---|---|
 | 20:00 | 00 | Rafa | Slide 1; consent one-liner; "Recording on (KITCRAFT-S4)" | listens | listen | — | `/record channel:#kafka name:KITCRAFT-S4` |
 | 20:02 | 02 | Sachin | drives the screen; posts the three paths | Slide 2: recap in three files | follow in own clone | — | on |
-| 20:10 | 10 | Rafa | Slide 3: `<group 1>` debrief, 90 s per bridge log; timer at 90 s | his agent captures each report into SYNTHESIS §2 | one speaker per log; questions | — | on |
-| 20:16 | 16 | Rafa | `<group 2>` debrief (then the rest; 60 s each when there are more than six logs); timer; reads an async member's #kitcraft note if no group-mate does | captures | speak; a group-mate reads any absent member's paragraph; questions | — | on |
+| 20:10 | 10 | Rafa | Slide 3: first group's debrief (groups as pinned in #kitcraft), 90 s per bridge log; timer at 90 s | his agent captures each report into SYNTHESIS §2 | one speaker per log; questions | — | on |
+| 20:16 | 16 | Rafa | next groups' debrief (60 s each when there are more than six logs); timer; reads an async member's #kitcraft note if no group-mate does | captures | speak; a group-mate reads any absent member's paragraph; questions | — | on |
 | 20:22 | 22 | — | questions | buffer | — | — | on |
 | 20:24 | 24 | Rafa | Slide 4: showcase 1 (worked) | selects #kitcraft-transcripts since 20:00 → scratch file → agent merges into SYNTHESIS v1 | bridge owner talks to their log on screen | — | on |
 | 20:28 | 28 | Rafa | showcase 2 (a kit → kit bridge) | agent finishes v1; reads it once | — | — | on |
@@ -38,7 +38,7 @@ After (Rafa, by 21:30): `workshop-dev/transcripts/S4/transcript.md`, `summary.md
 5. At 20:24: the S4 live-channel scratch file (uncommitted), for the debrief reports.
 6. The #kitcraft channel: async participants' reports and final-round answers.
 
-Output `workshop-dev/transcripts/S4/SYNTHESIS.md`, ≤120 lines: §1 numbers (participants per session by `LOG.md` line, kits, factories with an `Interface:` line, bridges by kind — factory-factory / kit-kit / kit-factory — attempted / worked, unblocks by type, blockers fixed in v2) · §2 the paragraphs verbatim, then five lines of synthesis · §3 hypothesis table by bridge kind and verdict · §4 what the critique caught and what v2 changed · §5 awareness profile (quadrant × S1 / S2 / S3 / S4-final, expected vs actual) · §6 corrections from the room · §7 sources (paths + commit hash). Nothing in it that is not traceable to a file or a spoken line.
+Output `workshop-dev/transcripts/S4/SYNTHESIS.md`, ≤120 lines: §1 numbers (participants per session by `LOG.md` line, kits, factories with an `Interface:` line, bridges by kind — factory-factory / kit-kit / kit-factory — attempted / worked, unblocks by type, blockers fixed in v2) · §2 the paragraphs verbatim, then five lines of synthesis · §3 hypothesis table by bridge kind and verdict · §4 what the critique caught and what v2 changed · §5 awareness profile (quadrant × S1 / S2 / S3 / S4-final, actuals only) · §6 corrections from the room · §7 sources (paths + commit hash). Nothing in it that is not traceable to a file or a spoken line.
 
 ## Bridge hypothesis test (rule, read before the table)
 
@@ -48,4 +48,4 @@ For each bridge log's closing paragraph, grouped by its `Kind:` line: **supports
 
 ## Awareness profile (how it is tallied)
 
-Four quadrants (External/Internal × Archive/Live, Rafa's slide). Rows: S1 check (expected precommodification), S2 (anchored in reality), S3 (traces), S4 final round "blind on Monday" (expected playability). Cell = count naming that quadrant; present and async answers marked separately. Actual column next to expected, one-line reading per row. Any cell holding at least half the room is the room's answer; even splits are recorded as splits, not resolved.
+Four quadrants (External/Internal × Archive/Live, Rafa's slide). Rows: S1 check, S2, S3, S4 final round "blind on Monday". Cell = count naming that quadrant; present and async answers marked separately; actuals only, one-line reading per row. No expected column: the facilitators' private expectations live in one line of `sessions/README.md` and nowhere the room sees. Any cell holding at least half the room is the room's answer; even splits are recorded as splits, not resolved.

@@ -1,15 +1,26 @@
 # Pinned messages — #kitcraft
 
-Four pins (Discord caps a message at 2000 characters): the main pin, the consent notice, the S2 breakout groups, the S3 breakout groups. Rafa posts pins 1–2 on Sun Sep 20, pin 3 at S1 close (Mon 16:45 UTC), pin 4 on Tue at 09:00 UTC. Every block is a file in `instructions/`; pins carry the path, never the block. Rooms: breakout-1 … breakout-5 (one per breakout group or pair).
+Five pins, each under 2000 characters (Discord's cap): the main pin, the times, the consent summary, the S2 breakout groups, the S3 breakout groups. Rafa posts pins 1–2b on Sun Sep 20, pin 3 at S1 close (Mon 16:45 UTC), pin 4 on Tue at 09:00 UTC. Every block is a file in `instructions/`; pins carry the path, never the block. Rooms: breakout-1 … breakout-5 (one per breakout group or pair).
 
 ## PIN 1 — main (Sun Sep 20, 10:00 UTC)
 
 **AI Kitcraft 2026 — Kit → Factory → Bridge**
 
-**Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, copy `PARTICIPANT_TEMPLATE/` to `participants/<you>/`, open your harness at the clone root (the folder with `AGENTS.md`), paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push (or reports "already done" if the pre-work email did it). Every later instruction is a file in `instructions/` you paste the same way. Everything goes straight to `main`: no branches, no PRs.
-Harness installed but something wrong (auth, wrong clone, wrong branch, push rejected)? Post the exact error here and come to 1A.
+**Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, copy `PARTICIPANT_TEMPLATE/` to `participants/<you>/`, open your harness at the clone root (the folder with `AGENTS.md`), paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push. Every later instruction is a file in `instructions/` you paste the same way. Everything goes straight to `main`: no branches, no PRs. Harness installed but misbehaving? Post the exact error here and come to 1A.
 
-**Rooms:** voice **#kafka** (plenary) · text **#kitcraft** (this channel: links, instructions, breakout groups) · **#kitcraft-transcripts** (live transcript, read-only) · voice **breakout-1 … breakout-5** (breakout group rooms).
+**Rooms:** voice **#kafka** (plenary) · text **#kitcraft** (this channel: links, instructions, breakout groups) · **#kitcraft-transcripts** (live transcript, read-only) · voice **breakout-1 … breakout-5** (breakout group rooms). Times: next pin.
+
+**Consent:** #kafka audio is recorded, transcribed with speaker names, streamed to #kitcraft-transcripts and kept in the public repo. Breakouts and 1A are not recorded. Your harness writes log lines to public files. Ask either facilitator to remove any line of yours, any time. Everything in the repo is public; keep private work in a private workspace on your machine and put here only what you are comfortable sharing. Full notice: `workshop-dev/sessions/consent-notice.md` (pin after the times).
+
+**Survey:** AI postures (Robert Peake) — https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843 — bring your posture to S1.
+
+**Breakout groups:** pinned here before S2 (Mon 16:45 UTC) and S3 (Tue 09:00 UTC, rotated), each with the file to paste.
+
+**Recorder:** every start and stop is announced here as `Recording on (KITCRAFT-S<n>)` / `Recording off`.
+
+**Help:** Rafa runs this channel, the rooms and the recorder — setup, git, pushes → 1A or @rafa here · theory → @sachin or @C3PO · whichever of us is not presenting answers in text.
+
+## PIN 2 — times (Sun Sep 20, 10:01 UTC)
 
 **Times — UTC / Berlin / Pacific**
 • S1 Kits — Mon Sep 21 · 15:30–16:30 / 17:30–18:30 / 08:30–09:30
@@ -19,19 +30,10 @@ Harness installed but something wrong (auth, wrong clone, wrong branch, push rej
 • S4 Recap — Tue · 20:00–21:00 / 22:00–23:00 / 13:00–14:00
 Your local time: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530
 
-**Consent:** #kafka audio is recorded, transcribed with speaker names, streamed to #kitcraft-transcripts and kept in the public repo. Breakouts and 1A are not recorded. Your harness writes log lines to public files. Ask either facilitator to remove any line of yours, any time. Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. Full notice: next pin.
+## PIN 2b — consent notice (Sun Sep 20, 10:02 UTC)
 
-**Survey:** AI postures (Robert Peake) — https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843 — bring your posture to S1.
-
-**Breakout groups:** pinned here before S2 (Mon 16:45 UTC) and S3 (Tue 09:00 UTC, rotated), each with the file to paste.
-
-**Recorder:** every start and stop is announced here as `Recording on (KITCRAFT-S<n>)` / `Recording off`.
-
-**Help:** Rafa runs this channel, the rooms and the recorder — setup, git, pushes → 1A or @rafa here · theory → @sachin or @C3PO · during a session → post here; whichever of us is not presenting answers in text.
-
-## PIN 2 — consent notice (Sun Sep 20, 10:02 UTC)
-
-Verbatim: the "Full notice" section of `workshop-dev/sessions/consent-notice.md`.
+**Consent, in three lines.** Plenary audio in #kafka is recorded, transcribed with speaker names and kept in the public repo; breakouts and 1A are not recorded. Your harness writes log lines to public files; everything in the repo is public. Ask @rafa or @sachin to remove any line of yours, any time, no reason needed.
+Full notice: https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/consent-notice.md
 
 ## PIN 3 — breakout groups for S2 (Mon Sep 21, 16:45 UTC)
 

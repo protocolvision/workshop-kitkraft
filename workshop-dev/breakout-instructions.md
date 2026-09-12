@@ -7,7 +7,7 @@ Discord's 2000-character limit means each post carries a 5-line human header and
 ## Post at 20:35 UTC Mon — S2 critique (13 min)
 
 > **Rooms open — 13 minutes. Back in #kafka at 20:48.**
-> <one line per room: breakout-1: a reads b · b reads c · c reads a. Absent: "@x async (see the block's ABSENT variant)".>
+> Groups, rooms and reading order: the pinned table (PIN 3), the only roster. Absent: "@x async (see the block's ABSENT variant)".
 > Paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your factory, uses the target through its declared interface (README + SKILL.md, example run cold), gives you a 5-line report on where the interface was insufficient to read aloud, then logs the blockers about your own kit when you say "log mine".
 > Nobody explains their kit out loud until the reports are read. A facilitator visits each room once.
 
@@ -18,7 +18,7 @@ Facilitator sequence: `/stop` → post → move people → Rafa floats the odd r
 ## Post at 15:45 UTC Tue — S3 bridge (40 min)
 
 > **Rooms open — 40 minutes. Back in #kafka at 16:25.**
-> The question: can your agent use the target to do one thing yours cannot? Any kit or factory in the repo is a valid target (three configurations to try; your harness works out which: factory-factory, kit-kit, kit-factory). Default targets (the kit you did not critique): <one line per room: a → c · b → a · c → b; pairs: both → a facilitator kit>. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; say so in your log.
+> The question: can your agent use the target to do one thing yours cannot? Any kit or factory in the repo is a valid target (three configurations to try; your harness works out which: factory-factory, kit-kit, kit-factory). Default targets (the kit you did not critique): the pinned table (PIN 4), the only roster. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; say so in your log.
 > Paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". It creates `participants/<you>/bridges/<target>.md`, asks you for the one thing, works, and stops whenever it needs something not in the repo — get that from the owner next to you, hand it over, it logs the unblock.
 > At 16:15 say "minute 30" to your harness: it stops building and writes what a bridge turned out to be, one paragraph, in your words. Push by 16:23.
 

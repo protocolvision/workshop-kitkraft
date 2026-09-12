@@ -1,6 +1,6 @@
 # Participants — one folder per person
 
-`participants/<name>/`, where `<name>` is your GitHub username, lowercase. It is a copy of `PARTICIPANT_TEMPLATE/` and it is the only place your harness writes. Open your harness inside it.
+`participants/<name>/`, where `<name>` is your GitHub username, lowercase. It is a copy of `PARTICIPANT_TEMPLATE/` and it is the only place your harness writes. Open your harness at the clone root (the folder that contains `AGENTS.md`), not in here.
 
 ```
 participants/<name>/

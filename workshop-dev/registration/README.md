@@ -24,7 +24,7 @@ Registration for AI Kitcraft runs through a Google Form owned by the facilitator
 
 | # | Question | Type | Required | Feeds |
 |---|---|---|---|---|
-| 1 | Name | short text | yes | `participants/<name>/` folder name |
+| 1 | Name | short text | yes | display only (roster, ice-breaker order); the folder name is the GitHub username from Q3 |
 | 2 | Email | short text | yes | pre-work email (Sep 15) |
 | 3 | Github Account (Please set-up at http://github.com/) | short text | yes | collaborator invite to `workshop-kitkraft`, sent as registrations arrive (from Sep 15); `<name>` for every file; push check (Sep 19) |
 | 4 | Discord Handle (Please visit the Discord) | short text | no | #kitcraft access, breakout group posts |

@@ -26,15 +26,6 @@ Two versions. The short one is read aloud at the top of S1 by Rafa, who opens th
 
 **Private data.** Never put credentials, client names, or anything under NDA into a kit, an example, or a log line. The kit template's `examples/` says "redact"; that is your responsibility, not the bot's. Sanitizing is yours; publishing is ours; deleting is on request.
 
-**For your harness** (this block is also in `AGENTS.md`; paste it if your harness did not read that file):
+**For your harness.** Your harness follows `AGENTS.md`; the rules that matter for consent are its Repo hygiene and Workshop autolog sections. Nothing is duplicated here.
 
-```
-You are the participant's harness. Consent rules for everything you write in this repo:
-- You may log: what was done, decisions, learnings, blockers, questions, unblocks — one line each, in `LOG.md` files and bridge logs, per `AGENTS.md`.
-- Never log or commit: credentials, tokens, client or funder names, personal data about other people, NDA material. If the participant pastes such a thing, do not write it; say why.
-- Never delete or rewrite a log line or transcript passage, even when asked. Removal is a facilitator's action: tell the participant to ask @rafa or @sachin in #kitcraft, which they may do at any time without giving a reason.
-- Plenary voice is recorded and transcribed to `workshop-dev/transcripts/`; breakouts and 1A are not. Do not transcribe breakout audio yourself.
-Report to the participant anything you refused to write and why.
-```
-
-**Who to ask.** @sachin owns the repo, the pins and the recorder; the two facilitators split the presenting. Either can act on a removal request.
+**Who to ask.** @rafa runs the repo, the pins, the rooms and the recorder; @sachin presents the theory. Either can act on a removal request.

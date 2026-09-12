@@ -4,7 +4,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 1 — Where we are (00:00) (presenter: Rafa; Sachin from the fourth bullet)
 - Recording on; consent as pinned; breakouts off the record
-- S1 awareness check: `<tally from workshop-dev/transcripts/S1/awareness-check.md>` — say whether the expected winner (precommodification) held
+- S1 awareness check: `<tally from workshop-dev/transcripts/S1/awareness-check.md>`, read as counted
 - `<n>` sources chosen since S1 (`<o>` own kits, `<f>` facilitator kits)
 - Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at
 - A kit is what stays after the agent has failed at it once
@@ -46,7 +46,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 6 — Breakout group critique (35:00 → 48:00, breakouts) (presenter: Rafa)
 - Ring inside each breakout group (2–4), from the pin: A reads B · B reads C · … · the last reads A; a pair swaps
-- `<group 1>` in breakout-1, `<group 2>` in breakout-2, … (the pinned table)
+- Groups and rooms as pinned in #kitcraft (PIN 3 is the only roster)
 - Your agent uses the target factory through its declared interface (README + SKILL.md only) and runs the example cold; report in ≤5 lines where the interface was insufficient
 - Owner logs every failure as a `blocker` line; no explaining out loud until it is in the kit
 - Block: `instructions/S2-critique.md` (pinned as a link); the text is the facilitator
@@ -61,7 +61,6 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 ## Slide 8 — Awareness check (53:00) (presenter: Rafa)
 - Which quadrant did this hour expand? Precommodification · Traces · Anchored in reality · Playability
 - One word each; tallied in #kitcraft
-- Expected: *anchored in reality* — the agent failed exactly where your context was not in the file
 > Speaker note: do not lead the answer; the S4 profile only means something if this is honest.
 
 ## Slide 9 — Async 2, overnight (56:00) (presenter: Rafa)
