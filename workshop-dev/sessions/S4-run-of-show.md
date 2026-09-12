@@ -32,13 +32,13 @@ After (Sachin, by 21:30): `transcripts/S4/transcript.md`, `summary.md`, `awarene
 ## Synthesis procedure (what Sachin's agent reads, in order)
 
 1. `participants/*/bridges/*.md` (every bridge file): *What a human had to supply*, *Request / Response* (stub bridges), *Did it work*, *What a bridge turned out to be*.
-2. `participants/*/LOG.md` and `facilitator/*/LOG.md`: all lines — S1 lines (the autolog-fired check), S2 `blocker` lines matched against async `progress` lines (fixed / not fixed), S3 `unblock` lines counted per bridge.
+2. `participants/*/LOG.md` and `facilitator/*/LOG.md`: all lines — S1 lines (the autolog-fired check), S2 `blocker` lines matched against async `progress` lines (fixed / not fixed), S3 `unblock` lines counted per bridge. A folder counts for a session only if its `LOG.md` has a line from that session; a folder that is missing, empty, or unchanged is simply absent from that session's count, not a no-show to explain.
 3. `participants/*/inventory.md`: the kit choice and public/private per person, for the numbers.
 4. `transcripts/S1/`, `S2/`, `S3/`: `awareness-check.md` (tallies), `summary.md`; `transcript.md` only for the S3 hypothesis statement and the S2 "got wrong" round.
 5. At 20:24: the S4 live-channel scratch file (uncommitted), for the debrief reports.
 6. The #kitcraft channel: async participants' reports and final-round answers.
 
-Output `bridges/SYNTHESIS.md`, ≤120 lines: §1 numbers (kits, stubs, bridges attempted / worked, unblocks by kind, blockers fixed in v2) · §2 the paragraphs verbatim, then five lines of synthesis · §3 hypothesis table and verdict · §4 what the critique caught and what v2 changed · §5 awareness profile (quadrant × S1 / S2 / S3 / S4-final, expected vs actual) · §6 corrections from the room · §7 sources (paths + commit hash). Nothing in it that is not traceable to a file or a spoken line.
+Output `bridges/SYNTHESIS.md`, ≤120 lines: §1 numbers (participants per session by `LOG.md` line, kits, stubs, bridges attempted / worked, unblocks by kind, blockers fixed in v2) · §2 the paragraphs verbatim, then five lines of synthesis · §3 hypothesis table and verdict · §4 what the critique caught and what v2 changed · §5 awareness profile (quadrant × S1 / S2 / S3 / S4-final, expected vs actual) · §6 corrections from the room · §7 sources (paths + commit hash). Nothing in it that is not traceable to a file or a spoken line.
 
 ## Bridge hypothesis test (rule, read before the table)
 

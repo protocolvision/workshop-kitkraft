@@ -9,7 +9,7 @@ You write only inside `participants/NAME/`; read anywhere.
 
 Preconditions:
 1. At the clone root (`git rev-parse --show-toplevel` equals `pwd`; `git remote get-url origin` contains `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root). Commit and push whatever is in `participants/NAME/kit/` right now, finished or not (`S2: NAME: kit v1`), then `git pull --rebase origin BRANCH` so the other folders are present. Rejected → pull --rebase and push again; rejected three times → continue with the pull and tell the participant to paste their kit into #kitcraft.
-2. Check `participants/TARGET/kit/README.md` exists. If not, tell the participant; they ask the owner (in the room) to push, then you pull again. If it still does not exist after two minutes, run the ABSENT variant below.
+2. Check `participants/TARGET/kit/README.md` exists and is filled (not the template). If not, tell the participant; they ask the owner (in the room) to push, then you pull again. Still missing after two minutes: work with what is in the repo — read `participants/TARGET/inventory.md` instead and write, in five lines or fewer, what a kit for the task under its `## Kit` would need (inputs, formats, checks, decisions); append `<ISO-8601 UTC now> | S2 | NAME | decision | TARGET kit not pushed; report written from the inventory` to `participants/NAME/LOG.md`; go to step 6. If the whole folder is missing, run the ABSENT variant below.
 
 Steps:
 3. Read `participants/TARGET/kit/README.md`, then `participants/TARGET/kit/SKILL.md`, then list `participants/TARGET/kit/examples/`. Read nothing else; ask the participant nothing about the kit.
