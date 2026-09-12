@@ -3,7 +3,7 @@
 Hands-on AI tooling workshop, Protocol Symposium 2026 (New Nature), Sep 21–22, online.
 Facilitators: Rafa, Sachin Benny.
 
-This repo is the workshop's public record and working surface. Your agent reads from it and writes to it. Spine: **Kit → Factory → Bridge**. Frame: **Expanded Awareness**.
+This repo is the workshop's public record and working surface. Your agent reads from it and writes to it. Spine: **Kit → Factory → Bridge** — the third term is the open question the workshop ends on; the bridge logs decide what it means. Frame: **Expanded Awareness**.
 
 ## Register
 
@@ -63,7 +63,7 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, 
 | S1 Kits | Mon Sep 21, 15:30 | 60 min | `participants/<name>/inventory.md` |
 | 1A clinic (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
 | S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` as a factory: job-shop structure, an exported intermediate, a declared interface |
-| S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<you>/bridges/<target>.md` — a bridge across factories, across kits, or kit ↔ factory |
+| S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<you>/bridges/<target>.md` — one of three configurations to try: across factories, across kits, or kit ↔ factory; the closing paragraph says what a bridge turned out to be |
 | S4 Recap | Tue Sep 22, 20:00 | 60 min | `workshop-dev/transcripts/S4/SYNTHESIS.md` |
 
 Times in UTC / Berlin / Pacific are pinned in #kitcraft.

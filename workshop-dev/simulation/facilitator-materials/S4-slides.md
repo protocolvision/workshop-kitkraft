@@ -27,7 +27,8 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - For each: what the agent found on its own vs. what a person had to say
 > Speaker note: the failed one is the list of things the next version of the kit must contain.
 
-## Slide 5 — SYNTHESIS.md read-back (38:00) (presenter: Sachin)
+## Slide 5 — SYNTHESIS.md read-back: what did your paragraphs say? (38:00) (presenter: Sachin)
+- The room's paragraphs come first; nobody has defined a bridge yet — you have
 - What the room built, in numbers (from the logs, not memory): bridges by kind — factory → factory, kit → kit, kit ↔ factory — attempted and worked
 - The four "what a bridge turned out to be" paragraphs, verbatim
 - Corrections from the room go in live, under "Corrections", with the speaker's handle
@@ -35,10 +36,11 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 > Speaker note: read the numbers and the paragraphs; do not paraphrase. Five minutes.
 
 ## Slide 6 — The hypothesis (43:00) (presenter: Sachin)
-- Stated Tuesday 15:32, held since — *a bridge is a protocol between two factories: the smallest thing both sides agree not to change*
+- Stated once, Tuesday 16:28, as a hypothesis — *a bridge is a protocol between two factories: the smallest thing both sides agree not to change*
 - For each of the four paragraphs, supports · contradicts · silent (table on screen, grouped by bridge kind; the hypothesis says "two factories", so the kit → kit rows are where it is tested hardest)
 - Evidence rule: every `unblock` line is something **not yet agreed**; what stayed fixed after the unblocks is the candidate "smallest thing"
 - Verdict: retained, amended by the room, or rejected — the room's definition wins where the logs disagree
+- The room's definition — "a bridge is …", drafted from the paragraphs in the read-back — is recorded in `SYNTHESIS.md` §3 next to the verdict, whichever way it goes
 > Speaker note: Sachin reads the verdict rule before the table so it does not look rigged.
 
 ## Slide 7 — Final awareness round (50:00) (presenter: Rafa)
