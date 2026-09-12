@@ -1,28 +1,31 @@
 # Pre-work email — send as registrations arrive, from Tue Sep 15, 2026
 
 To: each registrant (form Q2) · From: Rafa · Cc: Sachin
-Subject: AI Kitcraft — one thing to do yourself, then paste this into your harness
+Subject: AI Kitcraft — your setup before Monday (10 minutes, plus one paste)
 
 ---
 
-Hi,
+Hi <first name>,
 
-You are in AI Kitcraft (Sep 21–22, online). Two things before Monday. **Item 0** you do yourself; it needs your computer password and no AI harness can do it. Then you open your harness, paste **Block A**, and say "do this": it sets you up, writes your first file, pushes it and reports. If the harness is not working by Friday, come to 1A (Mon Sep 21, 16:30 UTC, #kafka). Times, the one decision we need from you, and the links are at the end.
+Thanks for signing up for AI Kitcraft. We're looking forward to working with you on Monday and Tuesday. This email is your pre-work. It's short: one thing to do yourself, one thing to hand to your AI harness, and one decision to make. If anything below doesn't work, the 1A clinic on Monday exists exactly for that, so please don't spend an evening fighting it.
 
-**Item 0 — before Friday Sep 18, done by you (needs your computer password; a harness cannot do this)**
+**1. Set up your machine (before Friday, Sep 18)**
 
-Three must-haves: `git`, the GitHub CLI `gh`, and one harness (Claude Code or Codex). The full checklist — what each is for, the install command per system, and how to verify — is https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/setup-checklist.md. In short:
+The workshop runs through a coding harness, Claude Code or Codex, working inside a shared GitHub repository. For that to work, your computer needs three things installed: `git`, the GitHub command-line tool `gh`, and the harness itself. These installs need your computer password, which is why a harness can't do them for you. The full checklist, with the command for each system and how to check it worked, is here:
+https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/setup-checklist.md
 
-1. Install `git` and `gh` (the GitHub command-line tool).
-   - macOS: open Terminal, run `xcode-select --install` (installs git; a window appears, accept it, wait) and then `brew install gh` — or, if you have no Homebrew, the gh installer at https://cli.github.com/.
-   - Windows: Git for Windows https://git-scm.com/download/win, then the gh installer at https://cli.github.com/.
-2. In a terminal run `gh auth login` — choose GitHub.com, HTTPS, log in with the browser — then `gh auth setup-git`. Log in as the GitHub account you gave on the form.
-3. Install a harness. Claude Code needs a Claude Pro or Max subscription: https://docs.claude.com/en/docs/claude-code. Codex needs a ChatGPT plan: https://developers.openai.com/codex/cli. One is enough.
-4. Accept the GitHub invite to https://github.com/protocolvision/workshop-kitkraft (in the invite email or at https://github.com/notifications).
+The short version:
 
-**For you, not your harness:** everything goes straight to `main`. No branches, no pull requests. Your harness knows this; please do not branch yourself either.
+- Install `git` and `gh`. On a Mac, open Terminal and run `xcode-select --install` (a window pops up; accept it and wait), then `brew install gh`, or use the installer at https://cli.github.com/ if you don't have Homebrew. On Windows, install Git for Windows from https://git-scm.com/download/win and then `gh` from https://cli.github.com/.
+- Log in to GitHub from the terminal: `gh auth login` (choose GitHub.com, HTTPS, and log in through the browser), then `gh auth setup-git`. Use the GitHub account you gave us on the form.
+- Install one harness. Claude Code needs a Claude Pro or Max subscription: https://code.claude.com/docs/en/setup. Codex needs a paid ChatGPT plan: https://learn.chatgpt.com/docs/codex/cli. Either is fine; one is enough.
+- Accept the GitHub invitation to https://github.com/protocolvision/workshop-kitkraft. It's in the invite email, or at https://github.com/notifications.
 
-**Block A — paste into your harness, then say "do this"**
+One thing worth knowing for the whole workshop: everything goes straight to the `main` branch. No branches, no pull requests. Your harness has been told this; we'd ask you not to branch by hand either.
+
+**2. Let your harness do the rest**
+
+Once the installs are done, open your harness, paste the block below in full, and say "do this". It checks your setup, creates your folder in the repo, writes a first version of your inventory from three recurring tasks you'll give it, and pushes. It will ask you for the tasks; it shouldn't invent anything. It finishes with a short report and a GitHub link. If it stops with an error, copy the exact text and bring it to 1A.
 
 ```
 You are the participant's harness for the AI Kitcraft workshop (Sep 21–22, 2026). Do the pre-work below for them. Ask them for anything you cannot find; never guess a name, a task, or a credential.
@@ -56,26 +59,32 @@ Do not: create branches, force-push, edit anything outside `participants/NAME/` 
 Report to the participant in five lines or fewer: the GitHub link of the file, the three tasks as recorded, public/private as recorded, the folder to open the harness in from now on, and anything still needed from them.
 ```
 
-**If the harness is not working by Friday:** come to 1A (Mon Sep 21, 16:30 UTC, #kafka, 30 minutes) with the exact error text; that is the one fallback. Everyone in the workshop has a harness and a GitHub account.
+**3. One decision: will your kit be public or private?**
 
-**When (UTC · Berlin · Pacific)**
+On Monday evening you'll turn one of your recurring tasks into a kit. Public means the kit lives in the shared repo, readable by anyone. Private means the content stays on your own machine and only a stub README (job, inputs, outputs, no content) goes into the repo; on Tuesday, other people's agents reach your kit through you and your agent. There is no separate private repo. Your inventory file is public either way, so "public" there means task names and one-line descriptions, never client names, numbers or data. A good rule: put nothing in a public file you wouldn't put on a public website.
+
+**When**
 
 | Session | Day | UTC | Berlin | Pacific |
 |---|---|---|---|---|
 | S1 Kits | Mon Sep 21 | 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
-| 1A Beginner clinic (optional) | Mon Sep 21 | 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
+| 1A Setup clinic (optional) | Mon Sep 21 | 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
 | S2 Factories | Mon Sep 21 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
 | S3 Bridges | Tue Sep 22 | 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
 | S4 Recap | Tue Sep 22 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
 
-Your local time: S1 = 15:30 UTC on Monday Sep 21; convert it here: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530 (east of UTC+8 it is already Tuesday).
+If you're outside those zones, S1 starts at 15:30 UTC on Monday Sep 21; this converts it for you: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530 (east of UTC+8 that's already Tuesday).
 
-Discord https://discord.gg/s2WbZBDqM: voice **#kafka**, links and instructions pinned in **#kitcraft**, breakouts in **breakout-1 … breakout-5**. Harness installed but not working? Come to 1A at 16:30 UTC Monday; 30 minutes, we fix it together.
+We meet on Discord at https://discord.gg/s2WbZBDqM. Plenary is in the voice channel **#kafka**; links, instructions and the day's pins are in **#kitcraft**; breakouts happen in **breakout-1** to **breakout-5**. The 1A clinic is for anyone whose harness is installed but not behaving: 30 minutes, we fix it together.
 
-**One decision: public or private kit.** Public: your kit lives in the repo above, readable by anyone. Private: the content stays on your own machine; only a stub `participants/<name>/kit/README.md` (job, inputs, outputs, no content) goes into the public repo, and on Tuesday other people's agents reach your kit through you and your agent. There is no private repo. Either way, your inventory file is public: "public" there means task names and one-line descriptions, never client names, numbers or data. Put nothing in a public file you would not put on a public website.
+**Before Monday, if you can**
 
-**Also:** take the AI postures survey (5 min) https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843 and note your posture; read Durable AI Adoption ch. 1–3 https://ai.protocolized.dev/. Optional: https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory
+Take the AI postures survey (about five minutes) and note your result; we use it in the first round: https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843. Read chapters 1–3 of Durable AI Adoption: https://ai.protocolized.dev/. If you have time for one more piece, "Have Your Factory Call My Factory" sets up Tuesday: https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory
 
-**Recording.** Plenary audio in #kafka is recorded and transcribed with speaker names; transcripts go into the public repo. Breakouts and 1A are not recorded. Your harness writes short log lines into public files. Ask either of us to remove any line at any time. After the workshop the repo stays public and the synthesis is posted in Discord within 48 hours; nothing else is planned.
+**A note on recording**
 
-See you Monday. Rafa and Sachin
+Plenary audio in #kafka is recorded and transcribed with speaker names, and the transcripts go into the public repo. Breakouts and the clinic are not recorded. Your harness writes short log lines into public files as it works. If you ever want a line removed, ask either of us and it's done. After the workshop the repo stays public and we post the synthesis in Discord within 48 hours; nothing else is planned with the material.
+
+See you Monday.
+
+Rafa and Sachin
