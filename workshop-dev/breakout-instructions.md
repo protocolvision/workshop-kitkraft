@@ -18,10 +18,10 @@ Facilitator sequence: `/stop` → post → move people → Rafa floats the odd r
 ## Post at 15:45 UTC Tue — S3 bridge (40 min)
 
 > **Rooms open — 40 minutes. Back in #kafka at 16:25.**
-> Any kit or factory in the repo is a valid target (your harness works out the kind: factory-factory, kit-kit, kit-factory). Default targets (the kit you did not critique): <one line per room: a → c · b → a · c → b; pairs: both → a facilitator kit>. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; say so in your log.
+> The question: can your agent use the target to do one thing yours cannot? Any kit or factory in the repo is a valid target (three configurations to try; your harness works out which: factory-factory, kit-kit, kit-factory). Default targets (the kit you did not critique): <one line per room: a → c · b → a · c → b; pairs: both → a facilitator kit>. Anyone may switch to `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; say so in your log.
 > Paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". It creates `participants/<you>/bridges/<target>.md`, asks you for the one thing, works, and stops whenever it needs something not in the repo — get that from the owner next to you, hand it over, it logs the unblock.
 > Stub targets: requester and owner also use the blocks in `instructions/S3-bridge.md` (request pushed → owner runs locally → response pushed).
-> At 16:15 say "minute 30" to your harness: it stops building and writes the paragraph in your words. Push by 16:23.
+> At 16:15 say "minute 30" to your harness: it stops building and writes what a bridge turned out to be, one paragraph, in your words. Push by 16:23.
 
 Rules the facilitators apply: a pair bridges to the partner's kit or to a facilitator kit; in a group of 3 or 4 nobody gets the kit they critiqued. A room stuck for 5 minutes gets a facilitator, who supplies the missing thing; the participant logs it as `unblock`. Facilitators do not touch participants' files.
 

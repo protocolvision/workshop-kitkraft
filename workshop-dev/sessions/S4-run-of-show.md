@@ -42,6 +42,8 @@ Output `workshop-dev/transcripts/S4/SYNTHESIS.md`, ≤120 lines: §1 numbers (pa
 
 ## Bridge hypothesis test (rule, read before the table)
 
+Order: the room's paragraphs are read first (slide 5); only then the hypothesis, stated once at the S3 close, and the rule below.
+
 For each bridge log's closing paragraph, grouped by its `Kind:` line: **supports** if it names a specific thing both sides held fixed (a file, a field, a request layout, a folder); **contradicts** if it defines the bridge as something else (a person, a conversation, an unblock, trust); **silent** if it does neither. Verdict: retained if at least two thirds support and none contradict; amended if supports ≥ contradicts and the contradictions name one missing element (add it, record the amendment); rejected otherwise — the room's definition, drafted from the contradicting paragraphs in the read-back, is recorded in §3 and the hypothesis is marked rejected. Ties go to the room. Report the verdict overall and per kind; a kit-kit bridge that supports the hypothesis is the strongest evidence, since neither side declared anything.
 
 ## Awareness profile (how it is tallied)

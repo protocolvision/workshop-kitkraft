@@ -42,9 +42,9 @@ At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> 
 
 ## PIN 4 — breakout groups for S3 (Tue Sep 22, 09:00 UTC)
 
-Same rooms. Target = any kit or factory in the repo; the default below is the kit you did **not** critique. Pairs: the partner's kit or a facilitator kit. Three kinds: factory→factory (both declared an `Interface:`), kit→kit (neither did; the README is the interface), kit↔factory; your harness works out which and writes it in the log.
+Same rooms. Target = any kit or factory in the repo; the default below is the kit you did **not** critique. Pairs: the partner's kit or a facilitator kit. Three configurations to try: factory→factory (both declared an `Interface:`), kit→kit (neither did; the README is the interface), kit↔factory; your harness works out which and writes it in the log. Nobody has defined a bridge yet; your closing paragraph is the data.
 <groups: one line per group — **Group 1 → breakout-1:** a → c's kit · b → a's kit · c → b's kit. Stub targets: "(through <owner>'s agent; both of you also use the blocks in `instructions/S3-bridge.md`)".>
-Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`); say so in your log. One log per bridge, written by the person bridging: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". Hypothesis for tomorrow, stated at 15:43: *a bridge is a protocol between two factories — the smallest thing both sides agree not to change.*
+Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`); say so in your log. One log per bridge, written by the person bridging: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". The question: can your agent use the target to do one thing yours cannot? Log everything; at minute 30 write what a bridge turned out to be, in one paragraph.
 
 ## Pre-written posts (not pinned)
 
@@ -52,4 +52,4 @@ Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/s
 
 **Mon 20:58 UTC, after S2 — Async 2:** Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your breakout group logged, proposes one fix per blocker, waits for your "go", pushes v2. Async readers: push your factory first (`instructions/S2-factory.md` block); your reader's harness posts the report here; run async-2 when it appears. S3 breakout groups pinned at 09:00 UTC.
 
-**Tue 16:29 UTC, after S3 — Async 3:** Recording off. Finish your bridge log and push by 20:00 UTC. Optional hard mode: rerun the bridge with no human chat and log it as a second section in the same file. S4 at 20:00 UTC: 90 seconds per bridge, then the room's definition against the hypothesis.
+**Tue 16:29 UTC, after S3 — Async 3:** Recording off. Finish your bridge log and push by 20:00 UTC. Optional hard mode: rerun the bridge with no human chat and log it as a second section in the same file. S4 at 20:00 UTC: 90 seconds per bridge, your paragraphs read first, then the hypothesis Sachin stated at the close.
