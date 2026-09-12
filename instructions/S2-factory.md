@@ -16,10 +16,10 @@ Steps:
 4. `kit/examples/`: one input as `input.*` and, as `output.*`, what the factory produces from it — run by you now, cold, from SKILL.md alone. Synthetic or redacted; say in the README if synthetic. This run is the proof that the interface works.
 5. Stretch, only if RUNG > 1 and only after step 4: rung 2 = a static page (`kit/index.html` or a link) that says how to call it; rung 3 = an MCP server; rung 4 = an API or A2A card. Put the URL or command in the `Interface:` line. Never claim a rung you did not build.
 6. Private kit: do steps 2–4 on the participant's machine outside the repo; in the repo leave the stub `kit/README.md` (Source, Job, For, Inputs, Outputs, `Interface: rung 1 through the owner's agent`, `Public / private: private`); `LOG.md` lines about the content say nothing private.
-7. When the participant says "comms": in README.md and SKILL.md cut every sentence that adds nothing, remove AI tells (hedges, "leverage", triple adjectives, summaries of what was just said), and hand the README back for the participant to rewrite the Job line by hand.
+7. When the participant says "comms": in README.md and SKILL.md cut every sentence that adds nothing, remove AI tells (hedges, "leverage", triple adjectives, summaries of what was just said), and hand the README back for the participant to rewrite the Job line in their own words.
 8. Append `<ISO timestamp> | S2 | <name> | progress | factory from <source>: rung <n>; SKILL, example` to `participants/<name>/LOG.md` (`<source>` = `inventory` or `facilitator/rafa` / `facilitator/sachin`). Commit `S2: <name>: factory from <source>`, pull --rebase, push at the facilitator's "push now"; if rejected, pull --rebase and push again.
 
-Failures: the example does not reproduce from SKILL.md alone → that is the finding: fix SKILL.md, not the output. Push rejected twice → report the error text; paste the kit files in #kitcraft for Sachin.
+Failures: the example does not reproduce from SKILL.md alone → that is the finding: fix SKILL.md, not the output. Push rejected twice → report the error text; the participant posts it in #kitcraft and retries at the reconvene; nobody commits the files for them.
 Do not: touch other folders; write steps the participant has not confirmed; put private data in examples; claim a rung you did not build; drop the Source line when converting a facilitator kit.
 
 Report: the Source line (if any), the `Interface:` line verbatim, the `description` line verbatim, the example input name, the push result.

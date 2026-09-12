@@ -94,7 +94,7 @@ Take one of the kits identified in your inventory — your own (the `## Kit` tas
 - `SKILL.md` — name, description that triggers correctly, when to use, steps, constraints, do-nots (adapted to your own organisation and data)
 - `examples/` — one input and the output the factory produced from it, cold, from SKILL.md alone
 Rungs 2+ (static page, MCP, API/A2A) are optional stretch. Commit `S2: <name>: factory from <source>`.
-The comms layer, from the anshuc techniques: cut what adds nothing, remove AI tells, rewrite the README by hand.
+The comms layer, from the anshuc techniques: cut what adds nothing, remove AI tells, rewrite the README in your own words.
 Pair critique (13) in breakout rooms (pairs assigned per Logistics): the partner's agent uses your factory through its declared interface (README + SKILL.md only), runs the example cold, and reports where the interface was insufficient. Record it in your `LOG.md`. Close (10).
 
 **Close (10)** Round: one sentence each on what the partner's agent got wrong. Awareness check: which quadrant? (Expected: anchored in reality — the agent failed where your domain knowledge was tacit.) Async assignment.
@@ -161,7 +161,7 @@ Public/private: each participant chooses. Public kits live in `workshop-kitkraft
 
 Working mode: every participant opens their harness *inside* the cloned repo, works only in their own `inventory/<name>.md` and `kits/<name>/`, and pushes to `main`. `AGENTS.md` instructs the harness: pull with rebase before every push; never edit outside your own folder; never delete. This keeps 15 people on one branch without conflicts and is what makes the autolog fire.
 
-Access: every registrant invited as a collaborator with write access to both repos, no PRs, no branches. With 15 people this is administrable and removes the PR concept from the workshop. Fallback for anyone whose harness cannot push: portal upload form → co-facilitator commits under their name. Facilitator prep: create repo, invite registrants Sep 15, confirm at least one push from each by Sep 19; anyone without a push goes to 1A.
+Access: every registrant invited as a collaborator with write access to both repos, no PRs, no branches. With 15 people this is administrable and removes the PR concept from the workshop. Every participant has a harness and a GitHub account; anyone whose push fails brings the error to #kitcraft or 1A, and nobody's file is committed for them (decision by Rafa, Sep 12). Facilitator prep: create repo, invite registrants Sep 15, confirm at least one push from each by Sep 19; anyone without a push goes to 1A.
 
 ### 2. Autologging
 

@@ -1,6 +1,6 @@
 # Async 1 — after Session 1, before 20:00 UTC (paste into your harness)
 
-Human header: choose the kit you will convert into a factory tonight — your own (the `## Kit` task in your inventory, or something under `## Built / use`) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and let your harness draft the README's Job and Interface lines. Ten minutes. Read the two lines and fix them by hand before S2.
+Human header: choose the kit you will convert into a factory tonight — your own (the `## Kit` task in your inventory, or something under `## Built / use`) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and let your harness draft the README's Job and Interface lines. Ten minutes. Read the two lines and fix them yourself before S2.
 
 ```
 You are the participant's harness in the AI Kitcraft repo, Async 1. Read `AGENTS.md` first.
@@ -19,5 +19,5 @@ Failures: auth prompt → tell the participant to run `gh auth login` and `gh au
 
 Do not: touch any other participant's folder; choose the source for the participant; fill more than the two lines.
 
-Report: the source chosen, the Job line verbatim, the Interface line verbatim — the participant rewrites the Job line by hand before 20:00 UTC.
+Report: the source chosen, the Job line verbatim, the Interface line verbatim — the participant rewrites the Job line in their own words before 20:00 UTC.
 ```
