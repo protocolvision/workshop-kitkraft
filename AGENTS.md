@@ -20,7 +20,7 @@ Open your harness at the clone root. You may read any file; you write only insid
 - Commit messages: `S1|S2|S3|S4|async: NAME: <one line>`.
 
 ## Facilitators
-The facilitators (`rafa`, `sachin`) may also edit `facilitator/<name>/`, `transcripts/` (including `transcripts/S4/SYNTHESIS.md`) and `workshop-dev/`, and may commit a participant's file under that participant's name when the participant cannot push. Their commit prefixes are `prep: <facilitator>:` before the workshop and `S<n>: <facilitator>:` during it. Facilitators remove log lines by hand on request and note the removal in `transcripts/`.
+The facilitators (`rafa`, `sachin`) may also edit `facilitator/<name>/`, `workshop-dev/transcripts/` (including `workshop-dev/transcripts/S4/SYNTHESIS.md`) and `workshop-dev/`, and may commit a participant's file under that participant's name when the participant cannot push. Their commit prefixes are `prep: <facilitator>:` before the workshop and `S<n>: <facilitator>:` during it. Facilitators remove log lines by hand on request and note the removal in `workshop-dev/transcripts/`.
 
 ## Workshop autolog (append-only)
 After every substantive step in this repo, append one line to `participants/NAME/LOG.md`:

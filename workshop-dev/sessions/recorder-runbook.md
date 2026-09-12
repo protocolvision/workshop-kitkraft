@@ -37,13 +37,13 @@ Every start is confirmed in #kitcraft with `Recording on (KITCRAFT-S<n>)` and ev
 ## Where transcripts go, who copies
 
 - After **each** `/stop`, the bot posts a transcript file and (if the relay is configured) a summary. Sachin downloads both and commits within 30 min of session end:
-  `transcripts/S<n>/transcript.md` (segments concatenated, segment boundary marked `--- segment 2, hh:mm UTC ---`), `transcripts/S<n>/summary.md`, `transcripts/S<n>/awareness-check.md` (the close round's answers, tallied by quadrant — the S4 profile needs them).
+  `workshop-dev/transcripts/S<n>/transcript.md` (segments concatenated, segment boundary marked `--- segment 2, hh:mm UTC ---`), `workshop-dev/transcripts/S<n>/summary.md`, `workshop-dev/transcripts/S<n>/awareness-check.md` (the close round's answers, tallied by quadrant — the S4 profile needs them).
   Commit message: `S<n>: sachin: transcript + summary`.
 - Raw audio: pruned by the bot after 7 days; nobody copies it.
 
 ## S4 special case
 
-The synthesis is read back at 20:38, but the S4 transcript only exists after `/stop` at 21:00. So the S4 synthesis is built from the repo (`LOG.md` files, `participants/*/bridges/*.md`, `transcripts/S1–S3/`, `awareness-check.md` files) plus the **live text of #kitcraft-transcripts**, which Sachin selects and pastes into a scratch file on his machine at 20:24 (not committed). The final `SYNTHESIS.md` v2, with the S4 transcript folded in, is pushed within 48 h.
+The synthesis is read back at 20:38, but the S4 transcript only exists after `/stop` at 21:00. So the S4 synthesis is built from the repo (`LOG.md` files, `participants/*/bridges/*.md`, `workshop-dev/transcripts/S1–S3/`, `awareness-check.md` files) plus the **live text of #kitcraft-transcripts**, which Sachin selects and pastes into a scratch file on his machine at 20:24 (not committed). The final `SYNTHESIS.md` v2, with the S4 transcript folded in, is pushed within 48 h.
 
 ## Confirm at the Sep 17 tech rehearsal (unknowns)
 

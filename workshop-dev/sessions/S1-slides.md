@@ -10,7 +10,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 > Note: Sachin opens. Recorder is already on (started 15:28). One minute.
 
 ## Slide 2 — Consent (00:01) (presenter: Sachin)
-- Plenary audio in #kafka is recorded and transcribed with speaker names; transcript goes to `transcripts/` in the public repo
+- Plenary audio in #kafka is recorded and transcribed with speaker names; transcript goes to `workshop-dev/transcripts/` in the public repo
 - Breakout rooms are not recorded
 - Your harness writes log lines into public `LOG.md` files; ask either of us to remove any line
 - Put nothing in a public kit you would not put on a public website
@@ -102,7 +102,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 ## Slide 14 — Awareness check (00:53) (presenter: Rafa)
 - Which quadrant did this hour expand? One word each, in the order Sachin posts
 - Expected: precommodification — the two nearest inventories overlapped more than you thought
-- Sachin's agent tallies the answers into #kitcraft and `transcripts/S1/awareness-check.md`
+- Sachin's agent tallies the answers into #kitcraft and `workshop-dev/transcripts/S1/awareness-check.md`
 - Focus question to carry to tomorrow: how will bridges emerge across the kit era?
 > Note: do not correct anyone's quadrant.
 

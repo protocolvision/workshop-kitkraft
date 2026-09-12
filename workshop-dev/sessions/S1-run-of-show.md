@@ -22,9 +22,9 @@ Lead: Rafa. Co-facilitator: Sachin. Presenter column follows the presenter split
 | 16:12 | 42 | Rafa | Checks in voice that pushes went through | Runs `git pull`; posts which inventories have landed and how many | Keep working; ask in #kitcraft if stuck | Most files landed | on |
 | 16:18 | 48 | Rafa | Slide 13: "paste Block 2" | Points at Block 2 in the same file | Agent pulls, reads `participants/*/inventory.md`, names two nearest | Each person has two names | on |
 | 16:22 | 52 | Rafa | Asks the room to confirm a line in their `LOG.md` exists | His agent scans every `participants/*/LOG.md` for a line; posts the list; missing → 1A | Confirm or say "no line" | Log-line check posted in #kitcraft | on |
-| 16:23 | 53 | Rafa | Slide 14: awareness check, one word each | Posts order; his agent tallies the answers into #kitcraft and `transcripts/S1/awareness-check.md` | One quadrant each | Tally in #kitcraft | on |
+| 16:23 | 53 | Rafa | Slide 14: awareness check, one word each | Posts order; his agent tallies the answers into #kitcraft and `workshop-dev/transcripts/S1/awareness-check.md` | One quadrant each | Tally in #kitcraft | on |
 | 16:26 | 56 | Sachin | Asks for the last question | Presents slide 15: Async 1 (3 h), 1A, S2 time; posts the Async 1 instruction and the 1A link/time; pins take-home reading order | Note assignment | Async 1 text pinned | on |
-| 16:29 | 59 | Sachin | Closes; stays in #kafka for 1A | Runs `/stop`; waits for the transcript; copies transcript + summary to `transcripts/S1/`; commits `S1: sachin: transcript + summary` | 1A people stay; others leave | `transcripts/S1/` | `/stop` |
+| 16:29 | 59 | Sachin | Closes; stays in #kafka for 1A | Runs `/stop`; waits for the transcript; copies transcript + summary to `workshop-dev/transcripts/S1/`; commits `S1: sachin: transcript + summary` | 1A people stay; others leave | `workshop-dev/transcripts/S1/` | `/stop` |
 | 16:30 | 60 | — | 1A begins (see `1A-clinic.md`) | Posts "1A now in #kafka" | — | — | off (1A not recorded) |
 | 16:45 | 75 | — | — | With the inventories in, confirms the triads (from the provisional ones of Sep 19) and pins the S2 critique ring in #kitcraft | — | Triad pin in #kitcraft | — |
 

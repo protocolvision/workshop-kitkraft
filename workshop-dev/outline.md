@@ -85,7 +85,7 @@ Fallback for anyone whose harness cannot push: paste the file in #kitcraft; Sach
 Rule: you read other people's inventories only through your agent, never in the browser.
 This is the one-way version of the Wallfacer rule: no live coordination needed, but the public-record norm is set on day one. Sachin's agent checks at the close that every `participants/<name>/LOG.md` has a line; missing lines go to 1A.
 
-**Close (7)** Rafa: awareness check, one word each, saved by Sachin to `transcripts/S1/awareness-check.md`. (Expected: precommodification — reading others' inventories through your agent shows how much overlaps.) Focus question: how will bridges emerge across the kit era? Sachin: Async 1, 1A, S2 time.
+**Close (7)** Rafa: awareness check, one word each, saved by Sachin to `workshop-dev/transcripts/S1/awareness-check.md`. (Expected: precommodification — reading others' inventories through your agent shows how much overlaps.) Focus question: how will bridges emerge across the kit era? Sachin: Async 1, 1A, S2 time.
 
 **Async 1 (Mon 16:30–20:00 UTC, three hours, README only)** Paste `instructions/async-1.md`: the harness fills `participants/<name>/kit/README.md` (there since the folder was copied from the template) from the inventory (every template field; stub only if private). The participant rewrites the Job line and the least-sure field by hand. Nothing else; the gap is short and 1A sits inside it.
 
@@ -115,7 +115,7 @@ The comms layer, from the anshuc techniques (Sachin, at minute 15 of the build):
 
 **Triad critique (13, breakout rooms)** Instructions: `instructions/S2-critique.md`, posted per `breakout-instructions.md`. Ring inside each triad: A reads B, B reads C, C reads A; a pair reads each other. The reader's harness pushes its own kit, pulls, reads the target cold, runs the example, reports in five lines; the participant reads the report aloud; the owner's harness logs each failure as a `blocker` line. A stub kit goes to the strongest reader, whose agent reports what it would need. A triad missing a member becomes a pair for the night; the absent kit is read async and the report posted in #kitcraft. Room moves cost about two minutes each way; they are inside the 13.
 
-**Close (10)** Sachin. Round: one sentence each on what the other agent got wrong (≈40 s each). Awareness check, saved to `transcripts/S2/awareness-check.md`. (Expected: anchored in reality — the agent failed where your domain knowledge was tacit.) Async 2 posted verbatim.
+**Close (10)** Sachin. Round: one sentence each on what the other agent got wrong (≈40 s each). Awareness check, saved to `workshop-dev/transcripts/S2/awareness-check.md`. (Expected: anchored in reality — the agent failed where your domain knowledge was tacit.) Async 2 posted verbatim.
 
 **Async 2 (overnight, before Tue 15:30 UTC)** Paste `instructions/async-2.md`: one fix per `blocker` line (README input, SKILL step or constraint, description line, or example), one `progress` line per fix plus one `memory` line, a cold re-run of the example, push v2. S3 triads (rotated) posted at 09:00 UTC with alternative targets in `facilitator/README.md`.
 
@@ -140,7 +140,7 @@ Task: make your agent use the target kit to do one thing your own kit could not 
 Soft Wallfacer rule: the exchange goes agent → repo → agent; human chat allowed to unblock, but every unblock is logged.
 One log per bridge, one writer. At minute 30 the harness stops building and writes "Did it work" and "What a bridge turned out to be" in the participant's words. Push by minute 38.
 
-**Close (5)** Rafa. Reconvene: one line each, "my agent needed ___ from the target and found ___ on its own" (25 s). Awareness check, saved to `transcripts/S3/awareness-check.md`. (Expected: traces — what the other kit left for your agent to find, and what it did not.) Async 3: finish the bridge log, push by 20:00; optional hard-mode Wallfacer (agent-only, public record, no human chat) as a second section in the same file.
+**Close (5)** Rafa. Reconvene: one line each, "my agent needed ___ from the target and found ___ on its own" (25 s). Awareness check, saved to `workshop-dev/transcripts/S3/awareness-check.md`. (Expected: traces — what the other kit left for your agent to find, and what it did not.) Async 3: finish the bridge log, push by 20:00; optional hard-mode Wallfacer (agent-only, public record, no human chat) as a second section in the same file.
 
 ---
 
@@ -156,7 +156,7 @@ Slides, minute table, synthesis procedure, hypothesis rule and awareness tally: 
 
 **Showcase (14)** Rafa. Two bridges that worked, one that did not, the log on screen; chosen at 19:45 with Sachin (the cleanest file handoff, a transmittal bridge if there was one, the one with the most `unblock` lines).
 
-**Synthesis read-back (5)** Sachin. `transcripts/S4/SYNTHESIS.md` v1, built by Sachin's agent from the repo (`LOG.md` files, bridge logs, `transcripts/S1–S3/` including the `awareness-check.md` files) plus the live text of #kitcraft-transcripts pasted into a scratch file at 20:24, because the S4 transcript only exists after `/stop`. Numbers and the paragraphs verbatim; corrections from the room go in live. v2, with the S4 transcript folded in, within 48 h.
+**Synthesis read-back (5)** Sachin. `workshop-dev/transcripts/S4/SYNTHESIS.md` v1, built by Sachin's agent from the repo (`LOG.md` files, bridge logs, `workshop-dev/transcripts/S1–S3/` including the `awareness-check.md` files) plus the live text of #kitcraft-transcripts pasted into a scratch file at 20:24, because the S4 transcript only exists after `/stop`. Numbers and the paragraphs verbatim; corrections from the room go in live. v2, with the S4 transcript folded in, within 48 h.
 
 **Hypothesis (7)** Rafa states it; Sachin reads the verdict rule, then the table (supports / contradicts / silent per paragraph). Decision rule: retained if ≥⅔ support and none contradict; amended if supports ≥ contradicts and the contradictions name one missing element; rejected otherwise, and the room's definition wins and is recorded.
 
@@ -193,7 +193,7 @@ workshop-kitkraft/
   PARTICIPANT_TEMPLATE/ the whole participant folder to copy: inventory.md, kit/ (README.md with Interface:, SKILL.md, examples/), bridges/TEMPLATE.md, LOG.md
   participants/<name>/ one folder per participant, the only place their harness writes: inventory.md (S1), kit/ (S2), bridges/<target>.md (S3), LOG.md; schema in participants/README.md
   facilitator/<name>/  rafa, sachin in the same shape (kit/, LOG.md) as bridge targets; the brand kit by link
-  transcripts/         per session: transcript, summary, awareness-check.md; S4 also SYNTHESIS.md
+  workshop-dev/transcripts/         per session: transcript, summary, awareness-check.md; S4 also SYNTHESIS.md
   workshop-dev/        this outline, checklists, pins, email, sessions/
 ```
 
@@ -203,7 +203,7 @@ Public/private: each participant chooses. Public kits live in the repo. Private 
 
 Working mode: every participant opens their harness at the clone root, writes only in `participants/<name>/`, the one folder they own (`AGENTS.md` says so; the boundary is enforced by instruction, not by the working folder), reads anywhere, and pushes to `main`. `AGENTS.md` instructs the harness: commit, `pull --rebase`, push; on rejection pull --rebase and push again; a conflict can only be in your own folder, keep both; never edit outside your folder; never delete. The rehearsal ran six concurrent writers on one branch with one rejection retried three times and no lost work; on the real day only per-person files change, so conflicts are rarer still.
 
-Access: every registrant invited as a collaborator with write access as registrations arrive, no PRs, no branches. A repository ruleset on `main` blocks force-pushes and branch deletion for everyone (facilitators included; a history rewrite for a removal request is done by an admin bypass and noted in `transcripts/`). Fallback for anyone whose harness cannot push: paste the file in #kitcraft → Sachin commits under their name. Facilitator prep: create the ruleset, invite registrants as they arrive, confirm at least one push from each by Sep 19; anyone without a push goes to 1A.
+Access: every registrant invited as a collaborator with write access as registrations arrive, no PRs, no branches. A repository ruleset on `main` blocks force-pushes and branch deletion for everyone (facilitators included; a history rewrite for a removal request is done by an admin bypass and noted in `workshop-dev/transcripts/`). Fallback for anyone whose harness cannot push: paste the file in #kitcraft → Sachin commits under their name. Facilitator prep: create the ruleset, invite registrants as they arrive, confirm at least one push from each by Sep 19; anyone without a push goes to 1A.
 
 ### 2. Autologging
 
@@ -243,7 +243,7 @@ Rules, because of the auto-stop:
 - An explicit `/stop` before every breakout and a fresh `/record channel:#kafka name:KITCRAFT-S<n>` at the reconvene, in that order; wait for the first live line before the presenter resumes. Every start and stop is announced in #kitcraft (`Recording on (KITCRAFT-S<n>)` / `Recording off`).
 - A facilitator speaks every ≤15 minutes during silent work (the S1 exercise is 17 near-silent minutes; time calls do this).
 - Whether a second `/record` with the same `name:` appends or overwrites is tested at the Sep 17 tech rehearsal; if it overwrites, `KITCRAFT-S2B` and `KITCRAFT-S3B` go into `RECORD_MEETING_NAMES`.
-- After each `/stop`, Sachin commits within 30 min: `transcripts/S<n>/transcript.md` (segments concatenated, boundary marked), `summary.md`, and `awareness-check.md` (the close round's answers tallied by quadrant; the S4 profile needs them). Commit `S<n>: sachin: transcript + summary`.
+- After each `/stop`, Sachin commits within 30 min: `workshop-dev/transcripts/S<n>/transcript.md` (segments concatenated, boundary marked), `summary.md`, and `awareness-check.md` (the close round's answers tallied by quadrant; the S4 profile needs them). Commit `S<n>: sachin: transcript + summary`.
 - S4: the synthesis reads the live channel text pasted at 20:24, since the transcript only exists after `/stop`; v2 within 48 h.
 
 Setup checklist (owner: whoever runs PI's OpenRecapper instance): `RECORD_MEETING_NAMES` includes `KITCRAFT-S1..S4` (and the `B` names if needed); `/record-access grant` to both facilitators; live transcript channel = #kitcraft-transcripts; manual `/record`, not `/schedule`; relay configured for the summary or the co-facilitator's agent writes `summary.md`; retention: audio pruned after 7 days, text kept.
@@ -270,7 +270,7 @@ Detail and owners: `prep-checklist.md`.
 
 ### 7. After Tuesday (decided)
 
-Minimum, and the only thing planned: the repo stays public; `transcripts/S4/SYNTHESIS.md` v2 with the awareness profile is posted in Discord (#kitcraft and #symposium-2026) within 48 hours; both facilitators' kits stay as targets. The consent notice says exactly this. Any further use of the material (a C3PO corpus ingest, a CMM case-study page, a Protocolized post by a participant) would need a new notice and is not promised.
+Minimum, and the only thing planned: the repo stays public; `workshop-dev/transcripts/S4/SYNTHESIS.md` v2 with the awareness profile is posted in Discord (#kitcraft and #symposium-2026) within 48 hours; both facilitators' kits stay as targets. The consent notice says exactly this. Any further use of the material (a C3PO corpus ingest, a CMM case-study page, a Protocolized post by a participant) would need a new notice and is not promised.
 
 ---
 
@@ -302,7 +302,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - Ruleset on `main`: block force-push and deletion; invites sent as registrations arrive. (OBS 4, 5)
 - Push rule with retry and conflict recipe; NAME = GitHub username; facilitator clause; never-delete-a-line rule, in `AGENTS.md`. (OBS 6, 26; rafa 21, 37; sachin 2, 15, 38)
 - Agent-actionable everything: `instructions/` folder, blocks with settings first, clone recognised by origin URL, check-before-clone, account check, per-file verify, stop-and-ask for the three tasks, public/private step, one inventory schema. Pre-work email rewritten with Item 0 (human-only installs), subscription line, by-hand Block B, local-time line, human "main only" line. (OBS 10–21, 23–25; rafa 36–42; sachin 33–37, 40)
-- Recorder: explicit `/stop` before every breakout and re-`/record` at reconvene, a facilitator speaks every ≤15 min, awareness answers saved to `transcripts/S<n>/awareness-check.md`, same-name re-record tested Sep 17, S4 synthesis from the live channel text with v2 in 48 h. (rafa 22, 23; sachin 12, 13, 14)
+- Recorder: explicit `/stop` before every breakout and re-`/record` at reconvene, a facilitator speaks every ≤15 min, awareness answers saved to `workshop-dev/transcripts/S<n>/awareness-check.md`, same-name re-record tested Sep 17, S4 synthesis from the live channel text with v2 in 48 h. (rafa 22, 23; sachin 12, 13, 14)
 - 1A has content: `sessions/1A-clinic.md`, seven checks with proofs; not recorded. (rafa 29; sachin 29)
 - Presenter split by expertise, Sachin opens; presenter column in every run-of-show; one screen-sharer. (rafa 12, 34; sachin 28, 32)
 - After Tuesday decided: public repo, synthesis in Discord within 48 h, nothing else; consent notice canonical in `sessions/consent-notice.md`. (rafa 19, 32; sachin 16, 17)
