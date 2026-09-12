@@ -71,7 +71,7 @@ This is the one-way version of the Wallfacer rule: no live coordination needed, 
 
 **Close (5)** Awareness check: which quadrant did this session expand? (Expected: precommodification — reading others' inventories through your agent shows how much overlaps.) Focus question: how will bridges emerge across the kit era? Async assignment.
 
-**Async 1 (Mon evening)** Pick one inventory item. Draft `kits/<name>/README.md` in two paragraphs: what job, for whom, what goes in, what comes out.
+**Async 1 (Mon evening)** Choose the kit you will convert into a factory in S2 — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`, copied into your folder with a `Source:` line) — and draft the README's Job and Interface lines (`instructions/async-1.md`).
 
 ---
 
@@ -86,15 +86,16 @@ Harness install and first push for anyone who missed the milestone.
 **Examples (15)**
 - Book factory, F2F case: Rao's manuscript factory → Jenna's production factory; handoff = shared folder + transmittal server; two non-coders; domain knowledge > coding knowledge. (Jenna if available; else Rafa.)
 - Protocolized visual identity: TITLES, two narrow models, PI brand kit → Monstrous Times. (James if available; else Sachin.) This is the "different software outcomes" case: derivative worlds and standards that no longer need to be uniform.
-- Core concept: **factory** = kit with an interface. Interfaces in ascending order of effort: README a person hands to their agent → static page → MCP → API.
+- Core concept: **factory** = a kit with a declared interface that a stranger's agent can use without talking to you. Interfaces in ascending order of effort: rung 1 README + SKILL.md a person hands to their agent + one worked example → rung 2 static page → rung 3 MCP → rung 4 API / A2A. Rung 1 is the deliverable; the README's `Interface:` line names the rung and how to call it.
 
-**Exercise — Build the kit (35)**
-Copy `KIT_TEMPLATE/` to `kits/<name>/`. Fill:
-- `README.md` — human: job, scope, inputs, outputs, one example run
-- `SKILL.md` — agent: name, description, when to use, steps, constraints, what not to do
-- `examples/` — one real input and the output it produced
+**Exercise — Convert a kit into a factory (20)**
+Take one of the kits identified in your inventory — your own (the `## Kit` task, or something from `## Built / use`) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and convert it into a factory: a kit with a declared interface that a stranger's agent can use without talking to you. Paste `instructions/S2-factory.md`. Deliverable, rung 1 done properly:
+- `README.md` — `Interface:` line stating the rung and how to call it; job, for whom, inputs, outputs, not-for; `Source:` first line when converting a facilitator kit
+- `SKILL.md` — name, description that triggers correctly, when to use, steps, constraints, do-nots (adapted to your own organisation and data)
+- `examples/` — one input and the output the factory produced from it, cold, from SKILL.md alone
+Rungs 2+ (static page, MCP, API/A2A) are optional stretch. Commit `S2: <name>: factory from <source>`.
 The comms layer, from the anshuc techniques: cut what adds nothing, remove AI tells, rewrite the README by hand.
-Pair critique at minute 25 in breakout rooms (pairs assigned per Logistics): partner's agent reads your kit cold and attempts the example. Record where it fails in your `LOG.md`.
+Pair critique (13) in breakout rooms (pairs assigned per Logistics): the partner's agent uses your factory through its declared interface (README + SKILL.md only), runs the example cold, and reports where the interface was insufficient. Record it in your `LOG.md`. Close (10).
 
 **Close (10)** Round: one sentence each on what the partner's agent got wrong. Awareness check: which quadrant? (Expected: anchored in reality — the agent failed where your domain knowledge was tacit.) Async assignment.
 
