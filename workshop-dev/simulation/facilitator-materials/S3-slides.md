@@ -24,7 +24,7 @@ Facilitation split from S2 on: Rafa opens (slides 1–2), briefs the exercise, r
 
 ## Slide 4 — Three kinds of bridge (00:05) (presenter: Sachin)
 - Any kit or factory in the repo is a target: a **kit** has no declared interface; a **factory** has an `Interface:` line (S2); both facilitator kits are factories at rung 1
-- **Factory → factory:** both sides declared; your agent uses the target strictly through its declared interface
+- **Factory → factory:** both sides are job shops that declared an interface for an intermediate (Rao's sense); your agent uses the target strictly through its declared interface
 - **Kit → kit:** neither declared; the interface IS the README a person hands to their agent — your agent reads README + SKILL.md cold and the log records what it had to ask a human
 - **Kit ↔ factory:** one side declared; the log records which direction and whether the declared interface was enough
 - Underneath, the ladder revisited: file handoff (a README a person hands to their agent) → static page → MCP → A2A Agent Card

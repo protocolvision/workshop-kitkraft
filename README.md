@@ -62,7 +62,7 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, 
 |---|---|---|---|
 | S1 Kits | Mon Sep 21, 15:30 | 60 min | `participants/<name>/inventory.md` |
 | 1A clinic (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
-| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` as a factory (declared interface) |
+| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` as a factory: job-shop structure, an exported intermediate, a declared interface |
 | S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<you>/bridges/<target>.md` — a bridge across factories, across kits, or kit ↔ factory |
 | S4 Recap | Tue Sep 22, 20:00 | 60 min | `workshop-dev/transcripts/S4/SYNTHESIS.md` |
 
