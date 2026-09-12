@@ -23,6 +23,8 @@ The short version:
 
 One thing worth knowing for the whole workshop: everything goes straight to the `main` branch. No branches, no pull requests. Your harness has been told this; we'd ask you not to branch by hand either.
 
+**Say hello on Discord.** Join the server at https://discord.gg/s2WbZBDqM and post a quick hello in the workshop channel, #workshop-kitkraft: https://discord.com/channels/1082444651946049567/1548286831232032778. That's where the pins, the instructions for each session and the group lists will be. If anything in this email is unclear, or an install won't behave, ask there and tag @rafa_0x or @sachbenny; one of us will answer.
+
 **2. Let your harness do the rest**
 
 Once the installs are done, open your harness, paste the block below in full, and say "do this". It checks your setup, creates your folder in the repo, writes a first version of your inventory from three recurring tasks you'll give it, and pushes. It will ask you for the tasks; it shouldn't invent anything. It finishes with a short report and a GitHub link. If it stops with an error, copy the exact text and bring it to 1A. One habit for the whole workshop: read other people's inventories and kits only through your harness, never in the browser; that is what the exercises test.
@@ -72,7 +74,7 @@ Everything in the repo is public, including your inventory and, later, your kit.
 
 If you're outside those zones, S1 starts at 15:30 UTC on Monday Sep 21; this converts it for you: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530 (east of UTC+8 that's already Tuesday).
 
-We meet on Discord at https://discord.gg/s2WbZBDqM. Plenary is in the voice channel **#kafka**; links, instructions and the day's pins are in **#kitcraft**; breakouts happen in **breakout-1** to **breakout-5**. The 1A clinic is for anyone whose harness is installed but not behaving: 30 minutes, we fix it together.
+On Discord: plenary in the voice channel **#kafka**, breakouts in **breakout-1** to **breakout-5**, everything written in **#workshop-kitkraft**. The 1A clinic is for anyone whose harness is installed but not behaving: 30 minutes, we fix it together.
 
 **Before Monday, if you can**
 

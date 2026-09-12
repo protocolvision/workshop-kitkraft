@@ -1,6 +1,6 @@
 # S3 — Bridges: how do two private practices reach each other? Slide outline, 60 min (Tue Sep 22, 15:30–16:30 UTC)
 
-Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the repo), briefs the exercise, runs the rooms, the reconvene, the check and the close, and keeps #kitcraft, breakouts, recorder, repo and the screen share. Sachin presents the theory (slides 3–8: the hard problem again, the precedents as evidence, three configurations to try, the examples, trust, what we are looking for) starting right after Rafa's first two minutes, and states the hypothesis once at the close (slide 11). Breakout groups per the S3 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Evidence 14, exercise brief 1 (rotation is pinned beforehand), breakout 40 (15:45–16:25, Rafa's window), close 5. Rotation and posts: `../breakout-instructions.md`; the block participants paste: `instructions/S3-bridge.md`; these slides repeat them, they do not replace them. Tone: we do not know yet; the logs will tell us. Nothing before the close defines a bridge.
+Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the repo), briefs the exercise, runs the rooms, the reconvene, the check and the close, and keeps #workshop-kitkraft, breakouts, recorder, repo and the screen share. Sachin presents the theory (slides 3–8: the hard problem again, the precedents as evidence, three configurations to try, the examples, trust, what we are looking for) starting right after Rafa's first two minutes, and states the hypothesis once at the close (slide 11). Breakout groups per the S3 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Evidence 14, exercise brief 1 (rotation is pinned beforehand), breakout 40 (15:45–16:25, Rafa's window), close 5. Rotation and posts: `../breakout-instructions.md`; the block participants paste: `instructions/S3-bridge.md`; these slides repeat them, they do not replace them. Tone: we do not know yet; the logs will tell us. Nothing before the close defines a bridge.
 
 ## Slide 1 — S3: how do two private practices reach each other? (00:00) (presenter: Rafa)
 - Recorder is on; same consent as Monday; breakouts not recorded
@@ -60,7 +60,7 @@ Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the 
 
 ## Slide 9 — Exercise: can your agent use theirs? (00:14) (presenter: Rafa)
 - Breakout groups of 2–4, one per room. Any kit or factory in the repo is a valid target; the pinned default is the kit you did **not** critique in S2; a pair bridges to the partner's kit or a facilitator kit. Your harness works out which configuration it is (factory-factory / kit-kit / kit-factory) and writes it in the log
-- Targets as pinned in #kitcraft (PIN 4 is the only roster).
+- Targets as pinned in #workshop-kitkraft (PIN 4 is the only roster).
 - Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
 - The question: make your agent use the target to do one thing yours cannot; log everything. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log

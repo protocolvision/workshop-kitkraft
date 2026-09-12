@@ -1,4 +1,4 @@
-# Breakout instructions — what Rafa posts in #kitcraft before each breakout
+# Breakout instructions — what Rafa posts in #workshop-kitkraft before each breakout
 
 Breakout groups of 2–4 are the unit, sized by the facilitators from headcount (6 → two groups of 3; 10 → five pairs or two 3s + two 2s; 12 → four 3s or three 4s). S2 critique = a ring inside the group: A reads B, B reads C, …, the last reads A; a pair swaps. S3 bridge = each person bridges to the kit they did NOT critique; a pair bridges to the partner's kit or to a facilitator kit. Rooms: breakout-1 … breakout-5, one per group.
 
@@ -11,7 +11,7 @@ Discord's 2000-character limit means each post carries a 5-line human header and
 > Paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your factory, uses the target through its declared interface (README + SKILL.md, example run cold), gives you a 5-line report on where the interface was insufficient to read aloud, then logs the blockers about your own kit when you say "log mine".
 > Nobody explains their kit out loud until the reports are read. A facilitator visits each room once.
 
-Rules the facilitators apply: a breakout group that has lost a member becomes a pair for the night: the two present read each other; the absent kit is read asynchronously when it lands and the report posted in #kitcraft.
+Rules the facilitators apply: a breakout group that has lost a member becomes a pair for the night: the two present read each other; the absent kit is read asynchronously when it lands and the report posted in #workshop-kitkraft.
 
 Facilitator sequence: `/stop` → post → move people → Rafa floats the odd rooms, Sachin the even rooms → swap at 20:41 → "Reconvene" at 20:47 → `/record`.
 

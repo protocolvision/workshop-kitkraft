@@ -1,6 +1,6 @@
 # S1 — Kits. Slide outline, 60 min (Mon Sep 21, 15:30–16:30 UTC)
 
-Facilitation split: Rafa runs the first minute (welcome, consent), the ice-breaker timing, the exercise and both checks, Async 1 and the close (slides 1–3, 12–15); Sachin presents the theory (slides 4–11: what this is not, both grids, CMM, what a kit is, traces, C3PO, the hard problem) and opens the content right after Rafa's first minute. Rafa keeps #kitcraft, recorder, rooms and repo, and screen-shares; Sachin takes theory questions in voice. Breakout groups per the pinned table (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Cut from the 90-min outline: ice-breaker 15→9, situating 15→7, theory 20→14, exercise 30→17, close 5→7. Minute marks are from session start.
+Facilitation split: Rafa runs the first minute (welcome, consent), the ice-breaker timing, the exercise and both checks, Async 1 and the close (slides 1–3, 12–15); Sachin presents the theory (slides 4–11: what this is not, both grids, CMM, what a kit is, traces, C3PO, the hard problem) and opens the content right after Rafa's first minute. Rafa keeps #workshop-kitkraft, recorder, rooms and repo, and screen-shares; Sachin takes theory questions in voice. Breakout groups per the pinned table (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Cut from the 90-min outline: ice-breaker 15→9, situating 15→7, theory 20→14, exercise 30→17, close 5→7. Minute marks are from session start.
 
 ## Slide 1 — AI Kitcraft: Kit → Factory → Bridge (00:00) (presenter: Rafa)
 - Two days, four sessions, one public repo
@@ -21,7 +21,7 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 - Name, organisation, one line
 - Your posture from the survey: Partnership / Hypervigilance / Overreliance / Compliance
 - One recent surprise or one personal protocol you use with AI
-- 75 seconds each for six people, 45 seconds for ten or more; Rafa posts the order in #kitcraft and keeps the time
+- 75 seconds each for six people, 45 seconds for ten or more; Rafa posts the order in #workshop-kitkraft and keeps the time
 > Note: Rafa seeds with water-rate PDFs and the rule "the agent never converts units"; Sachin goes second with his own example. Anyone running long is cut at 90 s. Rafa hands to Sachin at 00:12.
 
 ## Slide 4 — What this is not (00:12) (presenter: Sachin)
@@ -91,20 +91,20 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 ## Slide 12 — Exercise: your inventory (00:35) (presenter: Rafa)
 - Paste **Block 1** (`instructions/S1-inventory.md`; Rafa pins the link now) into your harness (open at the clone root) and say "do this". It writes `participants/<name>/inventory.md`, commits, pushes, and reports
 - Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing.
-- 12 minutes. Push failed after three tries? Post the error the harness printed in #kitcraft; the fix comes back in that thread or at 1A
+- 12 minutes. Push failed after three tries? Post the error the harness printed in #workshop-kitkraft; the fix comes back in that thread or at 1A
 - Rule: you read other people's inventories only through your agent, never in the browser
 - At 00:48 I will give the second prompt
-> Note: everyone has a harness; a push that fails is fixed in the #kitcraft thread or at 1A, never committed for them.
+> Note: everyone has a harness; a push that fails is fixed in the #workshop-kitkraft thread or at 1A, never committed for them.
 
 ## Slide 13 — Second prompt: the two nearest (00:48) (presenter: Rafa)
 - Paste **Block 2** (same file) and say "do this". It pulls, reads every inventory, names the two nearest, and checks your `LOG.md` line
 - Note the two names; that is the seed for the breakout groups' work tomorrow
-- If it reports no log line on GitHub, say so in #kitcraft
+- If it reports no log line on GitHub, say so in #workshop-kitkraft
 > Note: before Block 2, Rafa posts how many inventories are on `main` so nobody re-pulls needlessly. At 00:52 his agent checks every inventory for a Log line and posts the list; missing lines go to 1A.
 
 ## Slide 14 — Awareness check (00:53) (presenter: Rafa)
 - Which quadrant did this hour expand? One word each, in the order Rafa posts
-- Rafa's agent tallies the answers into #kitcraft and `workshop-dev/transcripts/S1/awareness-check.md`
+- Rafa's agent tallies the answers into #workshop-kitkraft and `workshop-dev/transcripts/S1/awareness-check.md`
 - Focus question to carry to tomorrow: how will bridges emerge across the kit era?
 > Note: do not correct anyone's quadrant.
 
@@ -112,6 +112,6 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 - Async 1 is three hours (17:00–20:00 UTC), not an evening: paste `instructions/async-1.md`; choose the kit you will convert into a factory tonight — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit — and your harness drafts the README's Job and Interface lines. Push. Nothing else
 - If you are going to 1A, do this after 1A
 - 1A now, 16:30–17:00 UTC, here in #kafka: harness installed but something wrong — auth, clone, branch, one log line, one push
-- S2 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): you build the kit. Anyone async for S2: the async post in #kitcraft
+- S2 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): you build the kit. Anyone async for S2: the async post in #workshop-kitkraft
 - Take-home reading order is pinned; nothing is required before S2
 > Note: Rafa presents and closes at 00:59, then `/stop`s the recorder after the last question; Sachin takes the last theory question if there is one. Rafa confirms the breakout groups from the inventories and pins them by 16:45.

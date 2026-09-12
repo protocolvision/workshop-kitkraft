@@ -17,7 +17,7 @@ Open your harness at the clone root. You may read any file; you write only insid
 - Push rule, every time: commit first, then `git pull --rebase origin main`, then `git push origin HEAD:main`. If the push is rejected ("fetch first", "non-fast-forward"), run `git pull --rebase origin main` again and push again; up to three tries. A CONFLICT during the rebase can only be inside `participants/NAME/`: keep both versions' lines, `git add` the file, `git rebase --continue`, push. Before every commit, `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, a conflict marker was left in a file: fix the file first.
 - Verify a push per file, not per branch: `git fetch origin && git log origin/main --oneline -1 -- participants/NAME/<file>` shows your commit.
 - Edit only inside `participants/NAME/`. Everything else is read-only for you.
-- Never delete a file. Never delete or rewrite a line in `LOG.md` or in a bridge file, even when the participant asks; removal is a facilitator's action (tell the participant to ask in #kitcraft).
+- Never delete a file. Never delete or rewrite a line in `LOG.md` or in a bridge file, even when the participant asks; removal is a facilitator's action (tell the participant to ask in #workshop-kitkraft).
 - Commit messages: `S1|S2|S3|S4|async: NAME: <one line>`.
 
 ## Facilitators

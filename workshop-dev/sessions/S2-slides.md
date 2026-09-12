@@ -1,6 +1,6 @@
 # S2 — Factories · slides (60 min, Mon Sep 21, 20:00–21:00 UTC)
 
-Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa — first minute, build briefing, push check, rooms, the round, awareness check, Async 2, close; Sachin — kit-phase thesis, the Rao–Dixon case, brand kit, factory as a flexible job shop and the ladder, the comms layer). Rafa screen-shares throughout and keeps #kitcraft, recorder and repo; the presenter talks. Breakout groups per the S2 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5.
+Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa — first minute, build briefing, push check, rooms, the round, awareness check, Async 2, close; Sachin — kit-phase thesis, the Rao–Dixon case, brand kit, factory as a flexible job shop and the ladder, the comms layer). Rafa screen-shares throughout and keeps #workshop-kitkraft, recorder and repo; the presenter talks. Breakout groups per the S2 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5.
 
 ## Slide 1 — Where we are (00:00) (presenter: Rafa; Sachin from the fourth bullet)
 - Recording on; consent as pinned; breakouts off the record
@@ -8,7 +8,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - `<n>` sources chosen since S1 (`<o>` own kits, `<f>` facilitator kits)
 - Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at
 - A kit is what stays after the agent has failed at it once
-> Speaker note: one sentence per bullet; the room has had three hours, not a night. Rafa confirms "Recording on" in #kitcraft first and does the first three bullets; Sachin takes the last two and continues straight into slide 2.
+> Speaker note: one sentence per bullet; the room has had three hours, not a night. Rafa confirms "Recording on" in #workshop-kitkraft first and does the first three bullets; Sachin takes the last two and continues straight into slide 2.
 
 ## Slide 2 — Book factory: Rao → Dixon (03:00) (presenter: Sachin)
 - Rao's manuscript factory produced **intermediates** — drafts + metadata — not a finished book
@@ -46,7 +46,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 6 — Breakout group critique (35:00 → 48:00, breakouts) (presenter: Rafa)
 - Ring inside each breakout group (2–4), from the pin: A reads B · B reads C · … · the last reads A; a pair swaps
-- Groups and rooms as pinned in #kitcraft (PIN 3 is the only roster)
+- Groups and rooms as pinned in #workshop-kitkraft (PIN 3 is the only roster)
 - Your agent uses the target factory through its declared interface (README + SKILL.md only) and runs the example cold; report in ≤5 lines where the interface was insufficient
 - Owner logs every failure as a `blocker` line; no explaining out loud until it is in the kit
 - Block: `instructions/S2-critique.md` (pinned as a link); the text is the facilitator
@@ -60,12 +60,12 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 8 — Awareness check (53:00) (presenter: Rafa)
 - Which quadrant did this hour expand? Precommodification · Traces · Anchored in reality · Playability
-- One word each; tallied in #kitcraft
+- One word each; tallied in #workshop-kitkraft
 > Speaker note: do not lead the answer; the S4 profile only means something if this is honest.
 
 ## Slide 9 — Async 2, overnight (56:00) (presenter: Rafa)
 - Fix the failure your breakout group's agent found: paste `instructions/async-2.md`. Push v2 with a `progress` line saying what changed
-- Anyone async tonight: push your factory (`instructions/S2-factory.md`); your assigned reader's agent uses it and posts the report in #kitcraft; log the blockers, fix
-- S3 breakout groups (rotated) posted in #kitcraft at 09:00 UTC; alternative targets in `facilitator/README.md`
+- Anyone async tonight: push your factory (`instructions/S2-factory.md`); your assigned reader's agent uses it and posts the report in #workshop-kitkraft; log the blockers, fix
+- S3 breakout groups (rotated) posted in #workshop-kitkraft at 09:00 UTC; alternative targets in `facilitator/README.md`
 - Tomorrow 15:30 UTC: bridges. Bring the kit you did *not* critique in mind
-> Speaker note: Rafa posts it verbatim to #kitcraft at 20:58 (the async post in `../discord-pins.md`); `/stop` at 21:00.
+> Speaker note: Rafa posts it verbatim to #workshop-kitkraft at 20:58 (the async post in `../discord-pins.md`); `/stop` at 21:00.

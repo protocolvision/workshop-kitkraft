@@ -26,7 +26,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
    - `LOG.md` — the one autolog for everything in the folder
 5. **Everything goes straight to `main`. No branches, no PRs, no force-push.** Your harness commits, pulls with rebase, pushes, and retries if the push is rejected.
 6. Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. Once an exercise begins, do any work you would rather not share in that workspace and put here only what you are comfortable sharing.
-7. Everyone has a harness and a GitHub account. Harness installed but something wrong (auth, wrong clone, wrong branch, push rejected)? Post the exact error in #kitcraft and come to 1A.
+7. Everyone has a harness and a GitHub account. Harness installed but something wrong (auth, wrong clone, wrong branch, push rejected)? Post the exact error in #workshop-kitkraft and come to 1A.
 
 ## Layout
 
@@ -46,7 +46,7 @@ workshop-dev/registration/      the sign-up form: link, questions, how answers f
 
 ## Consent
 
-Plenary audio in #kafka is recorded and transcribed with speaker names; transcripts go into `workshop-dev/transcripts/`. Breakouts and the 1A clinic are not recorded. Your harness appends log lines to `LOG.md` files in this public repo. Ask a facilitator to remove any of your lines at any time. Put nothing in a public kit you would not put on a public website. After the workshop: the repo stays public and the synthesis is posted in Discord within 48 hours; nothing else is planned. Full notice: `workshop-dev/sessions/consent-notice.md`, pinned in #kitcraft.
+Plenary audio in #kafka is recorded and transcribed with speaker names; transcripts go into `workshop-dev/transcripts/`. Breakouts and the 1A clinic are not recorded. Your harness appends log lines to `LOG.md` files in this public repo. Ask a facilitator to remove any of your lines at any time. Put nothing in a public kit you would not put on a public website. After the workshop: the repo stays public and the synthesis is posted in Discord within 48 hours; nothing else is planned. Full notice: `workshop-dev/sessions/consent-notice.md`, pinned in #workshop-kitkraft.
 
 ## Related repos
 
@@ -57,7 +57,7 @@ Plenary audio in #kafka is recorded and transcribed with speaker names; transcri
 
 ## Sessions
 
-Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, live transcript **#kitcraft-transcripts**, breakout voice rooms **breakout-1 … breakout-5**.
+Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#workshop-kitkraft** (https://discord.com/channels/1082444651946049567/1548286831232032778), live transcript **#meeting-notes** (https://discord.com/channels/1082444651946049567/1519549380791631903, shared with other meetings), breakout voice rooms **breakout-1 … breakout-5**.
 
 | Session | When (UTC) | Length | Artifact |
 |---|---|---|---|
@@ -67,4 +67,4 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, 
 | S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<name>/bridges/<target>.md` — one of three configurations to try: across factories, across kits, or kit ↔ factory; the closing paragraph says what a bridge turned out to be |
 | S4 Recap | Tue Sep 22, 20:00 | 60 min | `workshop-dev/transcripts/S4/SYNTHESIS.md` |
 
-Berlin is UTC+2, Pacific is UTC−7. Times in all three zones are pinned in #kitcraft.
+Berlin is UTC+2, Pacific is UTC−7. Times in all three zones are pinned in #workshop-kitkraft.

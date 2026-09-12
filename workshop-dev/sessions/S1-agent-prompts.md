@@ -1,4 +1,4 @@
-# S1 agent prompts — facilitator copy (pinned in #kitcraft by Rafa at 16:05 and 16:18 UTC as a link to `instructions/S1-inventory.md`)
+# S1 agent prompts — facilitator copy (pinned in #workshop-kitkraft by Rafa at 16:05 and 16:18 UTC as a link to `instructions/S1-inventory.md`)
 
 Two blocks. Participants paste each into their harness (open at the clone root) and say "do this". Slide 12 = Block 1, slide 13 = Block 2. No interpretation needed from the participant. Pins never carry a block (2000-character cap); they link to the file. Keep this copy and `instructions/S1-inventory.md` identical.
 
@@ -29,7 +29,7 @@ Failures:
 - username/password prompt → type nothing; the participant runs `gh auth setup-git`; retry.
 - `! [rejected]` / `fetch first` / `non-fast-forward` → `git pull --rebase origin BRANCH`, push again, up to 3 times.
 - `error: src refspec main does not match any` → you are not on BRANCH or nothing is committed: `git checkout BRANCH`, commit, push `HEAD:BRANCH` again.
-- still rejected after 3 tries → STOP, print the exact error; the participant posts it in #kitcraft, the fix comes back in that thread or at 1A, then they say "push again".
+- still rejected after 3 tries → STOP, print the exact error; the participant posts it in #workshop-kitkraft, the fix comes back in that thread or at 1A, then they say "push again".
 Do not: create branches, force-push, touch anything outside `participants/NAME/`, read other inventories yet, log secrets, client names or data.
 Report in four lines: the absolute path of the folder you wrote in; the GitHub link of `inventory.md`; the kit chosen; any error.
 ```

@@ -16,7 +16,7 @@ Steps:
 4. Append to `participants/NAME/LOG.md`: `| <ISO-8601 UTC now> | async | NAME | decision | S2 source: <own: task n / built-use item> or <facilitator/rafa|sachin> |`.
 5. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. Commit `async: NAME: S2 source chosen`; `git pull --rebase origin BRANCH`; `git push origin HEAD:BRANCH`. Rejected → pull --rebase and push again, up to 3 times; a CONFLICT can only be inside `participants/NAME/`: keep both, `git add`, `git rebase --continue`, push. Verify: `git fetch origin && git log origin/BRANCH --oneline -1 -- participants/NAME/kit/README.md`.
 
-Failures: auth prompt → type nothing; tell the participant to run `gh auth setup-git`, then continue. 403 → `gh auth switch --user NAME` / `gh auth login`. Push rejected after 3 tries → stop, print the error text; the participant posts it in #kitcraft and retries after the fix; nobody commits the file for them.
+Failures: auth prompt → type nothing; tell the participant to run `gh auth setup-git`, then continue. 403 → `gh auth switch --user NAME` / `gh auth login`. Push rejected after 3 tries → stop, print the error text; the participant posts it in #workshop-kitkraft and retries after the fix; nobody commits the file for them.
 
 Do not: touch anything outside `participants/NAME/`; choose the source for the participant; fill more than the two lines.
 

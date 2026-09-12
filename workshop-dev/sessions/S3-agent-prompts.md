@@ -1,4 +1,4 @@
-# S3 agent prompt — facilitator copy (pinned in #kitcraft by Rafa at 15:44 UTC as a link to `instructions/S3-bridge.md`)
+# S3 agent prompt — facilitator copy (pinned in #workshop-kitkraft by Rafa at 15:44 UTC as a link to `instructions/S3-bridge.md`)
 
 Agent-executable version of step 3 in `../breakout-instructions.md`. The participant fills two settings (TARGET, TASK) and pastes. Rotation table: the S3 pin. Keep this copy and `instructions/S3-bridge.md` identical.
 
@@ -30,7 +30,7 @@ Failures:
 - username/password prompt → type nothing; the participant runs `gh auth setup-git`; retry.
 - `! [rejected]` / `fetch first` / `non-fast-forward` → `git pull --rebase origin BRANCH`, push again, up to 3 times.
 - `error: src refspec main does not match any` → not on BRANCH or nothing committed: `git checkout BRANCH`, commit, push `HEAD:BRANCH` again.
-- push still rejected after 3 tries → print the error, keep the file, tell the participant to say so in #kitcraft.
+- push still rejected after 3 tries → print the error, keep the file, tell the participant to say so in #workshop-kitkraft.
 - target kit's example does not run → that is a finding: log it as `blocker`, not a reason to stop.
 - group-mate absent → switch to a facilitator kit and log a `decision` line.
 Do not: edit KIT or anything outside `participants/NAME/`; paste the participant's own kit into the target; invent a value the owner has not supplied; create branches; force-push; log secrets or client data from either kit.

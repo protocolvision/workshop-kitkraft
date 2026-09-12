@@ -1,6 +1,6 @@
 # Recorder runbook — OpenRecapper
 
-Operator: Rafa, from a laptop that is in #kafka for the whole session. Backup operator: Sachin. Both have `/record-access`. Recordings land in named folders because `RECORD_MEETING_NAMES` includes `KITCRAFT-S1,KITCRAFT-S2,KITCRAFT-S3,KITCRAFT-S4` (Rafa's Sep 14 item; **confirm**, see notes). Live transcript target: #kitcraft-transcripts.
+Operator: Rafa, from a laptop that is in #kafka for the whole session. Backup operator: Sachin. Both have `/record-access`. Recordings land in named folders because `RECORD_MEETING_NAMES` includes `KITCRAFT-S1,KITCRAFT-S2,KITCRAFT-S3,KITCRAFT-S4` (Rafa's Sep 14 item; **confirm**, see notes). Live transcript target: #meeting-notes (https://discord.com/channels/1082444651946049567/1519549380791631903), an existing shared channel where other meetings' transcripts also land; the OpenRecapper meeting name `KITCRAFT-S<n>` is what distinguishes ours.
 
 Two facts shape everything: **one bot = one voice connection**, so breakouts are never recorded; and the bot **auto-stops when #kafka empties and after 20 min of silence**, so every breakout longer than a few minutes gets an explicit `/stop` before and a fresh `/record` after.
 
@@ -11,9 +11,9 @@ Two facts shape everything: **one bot = one voice connection**, so breakouts are
 | Start | `/record channel:#kafka name:KITCRAFT-S<n>` |
 | Stop | `/stop` |
 | Resume after a breakout | `/record channel:#kafka name:KITCRAFT-S<n>` again (second segment) |
-| Verify | live lines appearing in #kitcraft-transcripts within ~30 s of speech |
+| Verify | live lines appearing in #meeting-notes within ~30 s of speech |
 
-Every start is confirmed in #kitcraft with `Recording on (KITCRAFT-S<n>)` and every stop with `Recording off`; that line is what participants rely on.
+Every start is confirmed in #workshop-kitkraft with `Recording on (KITCRAFT-S<n>)` and every stop with `Recording off`; that line is what participants rely on.
 
 ## Per session (UTC)
 
@@ -27,7 +27,7 @@ Every start is confirmed in #kitcraft with `Recording on (KITCRAFT-S<n>)` and ev
 
 ## Around a breakout, exact sequence (Rafa)
 
-1. Post in #kitcraft: "Rooms open — breakout-1: … breakout-2: … Instructions above. Back at hh:mm."
+1. Post in #workshop-kitkraft: "Rooms open — breakout-1: … breakout-2: … Instructions above. Back at hh:mm."
 2. `/stop`. Post "Recording off".
 3. Move people (drag in the Discord member list, or they self-move; the pin names the rooms).
 4. Facilitators split the rooms between them (Rafa the low-numbered, Sachin the high-numbered), then swap once.
@@ -43,7 +43,7 @@ Every start is confirmed in #kitcraft with `Recording on (KITCRAFT-S<n>)` and ev
 
 ## S4 special case
 
-The synthesis is read back at 20:38, but the S4 transcript only exists after `/stop` at 21:00. So the S4 synthesis is built from the repo (`LOG.md` files, `participants/*/bridges/*.md`, `workshop-dev/transcripts/S1–S3/`, `awareness-check.md` files) plus the **live text of #kitcraft-transcripts**, which Sachin (whose agent builds the synthesis) selects and pastes into a scratch file on his machine at 20:24 (not committed). The final `SYNTHESIS.md` v2, with the S4 transcript folded in, is pushed within 48 h.
+The synthesis is read back at 20:38, but the S4 transcript only exists after `/stop` at 21:00. So the S4 synthesis is built from the repo (`LOG.md` files, `participants/*/bridges/*.md`, `workshop-dev/transcripts/S1–S3/`, `awareness-check.md` files) plus the **live text of #meeting-notes**, which Sachin (whose agent builds the synthesis) selects and pastes into a scratch file on his machine at 20:24 (not committed). The final `SYNTHESIS.md` v2, with the S4 transcript folded in, is pushed within 48 h.
 
 ## Confirm at the Sep 17 tech rehearsal (unknowns)
 

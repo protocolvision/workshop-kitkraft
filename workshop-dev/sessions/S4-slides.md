@@ -1,6 +1,6 @@
 # S4 — Recap and showcase · slides (60 min, Tue Sep 22, 20:00–21:00 UTC)
 
-Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa opens, runs the debrief order and timer, the showcase, the final awareness round and tally, the take-home and close; Sachin recaps Kit → Factory → Bridge, reads the synthesis, states the hypothesis and reads the logs' verdict). Rafa screen-shares throughout and keeps #kitcraft and the recorder. Anyone async: bridge log and final-round answer read from the repo / #kitcraft by a group-mate.
+Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa opens, runs the debrief order and timer, the showcase, the final awareness round and tally, the take-home and close; Sachin recaps Kit → Factory → Bridge, reads the synthesis, states the hypothesis and reads the logs' verdict). Rafa screen-shares throughout and keeps #workshop-kitkraft and the recorder. Anyone async: bridge log and final-round answer read from the repo / #workshop-kitkraft by a group-mate.
 
 ## Slide 1 — The room's own artifacts (00:00) (presenter: Rafa)
 - Recording on; consent as pinned; nothing tonight is off the record
@@ -12,7 +12,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - Kit: one `SKILL.md` from Monday, v1 next to v2 — what the critique changed (pick one whose `description` line changed)
 - Factory: the README *was* the interface; every bridge used rung one of the ladder
 - Bridge: one `unblock` line, read aloud — the thing that was not in the repo
-> Speaker note: the two of you pick the three files at 19:45; Rafa posts the paths in #kitcraft so people follow in their own clone.
+> Speaker note: the two of you pick the three files at 19:45; Rafa posts the paths in #workshop-kitkraft so people follow in their own clone.
 
 ## Slide 3 — Debrief: one speaker per bridge log (10:00) (presenter: Rafa)
 - Group by group, in the pinned order: one speaker per bridge log, 90 s each, so the round takes (number of logs × 1.5 min); an absent member's log is read by a group-mate in 60 s
@@ -45,7 +45,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 7 — Final awareness round (50:00) (presenter: Rafa)
 - Monday morning, which quadrant was your practice blind to? Precommodification · Traces · Anchored in reality · Playability
-- One word and one clause each; an async participant's answer read from #kitcraft
+- One word and one clause each; an async participant's answer read from #workshop-kitkraft
 - Tallied into the room's awareness profile: S1–S4 checks in a row, plus this round
 > Speaker note: Rafa posts the order and keeps time; Sachin's agent tallies on screen in `SYNTHESIS.md` §5 as people speak.
 
@@ -54,4 +54,4 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - Hard-mode Wallfacer stays open: rerun your bridge with no human chat, log it as a second section
 - Continuation venue: SIGBIZ fortnightly show-and-tell — bring the kit, not the slides
 - Removal requests: any line, any time, either facilitator
-> Speaker note: Rafa posts it verbatim to #kitcraft; `/stop` at 21:00.
+> Speaker note: Rafa posts it verbatim to #workshop-kitkraft; `/stop` at 21:00.
