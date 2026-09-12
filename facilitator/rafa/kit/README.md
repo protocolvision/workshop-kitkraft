@@ -7,5 +7,5 @@ Outputs: CSV rows in the shape of `examples/output.csv`, appended to the registr
 Interface: file handoff — a CSV row shape (`examples/output.csv` header); no service, no key.
 Example run: see `examples/` — `input.md` is a synthetic rate schedule; `output.csv` is what the kit produced from it.
 Not for: sewer, stormwater, or electricity rates; proposed (not adopted) schedules; comparing rates across utilities; converting units or currencies.
-Public / private: public. The example is synthetic; no real utility is named.
+The example is synthetic; no real utility is named.
 Bridge idea for S3: hand the kit a rate table from your own domain (a fee schedule, a grant budget, a tariff) and see whether the row shape survives. Where it does not is the bridge.

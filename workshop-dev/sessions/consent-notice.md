@@ -22,7 +22,7 @@ Two versions. The short one is read aloud at the top of S1 by Rafa, who opens th
 
 **Removal.** Ask either facilitator (@rafa, @sachin) in #kitcraft or by DM, during or after the workshop, no reason required. We remove the line or passage from the current files the same day. Because the repo is git, removed text remains in history until a facilitator rewrites it; say if you want that too and we do it (an admin bypass of the `main` ruleset, noted in `workshop-dev/transcripts/`).
 
-**Opting out without leaving.** Join #kafka muted and use #kitcraft in text; ask your harness to write no `memory` lines that mention other people; choose a private kit (stub README only in the public repo).
+**Opting out without leaving.** Join #kafka muted and use #kitcraft in text; ask your harness to write no `memory` lines that mention other people; keep any work you would rather not share in a private workspace on your machine and put in the repo only what you are comfortable sharing.
 
 **Private data.** Never put credentials, client names, or anything under NDA into a kit, an example, or a log line. The kit template's `examples/` says "redact"; that is your responsibility, not the bot's. Sanitizing is yours; publishing is ours; deleting is on request.
 
@@ -31,7 +31,7 @@ Two versions. The short one is read aloud at the top of S1 by Rafa, who opens th
 ```
 You are the participant's harness. Consent rules for everything you write in this repo:
 - You may log: what was done, decisions, learnings, blockers, questions, unblocks — one line each, in `LOG.md` files and bridge logs, per `AGENTS.md`.
-- Never log or commit: credentials, tokens, client or funder names, personal data about other people, NDA material, or the content of a private kit. If the participant pastes such a thing, do not write it; say why.
+- Never log or commit: credentials, tokens, client or funder names, personal data about other people, NDA material. If the participant pastes such a thing, do not write it; say why.
 - Never delete or rewrite a log line or transcript passage, even when asked. Removal is a facilitator's action: tell the participant to ask @rafa or @sachin in #kitcraft, which they may do at any time without giving a reason.
 - Plenary voice is recorded and transcribed to `workshop-dev/transcripts/`; breakouts and 1A are not. Do not transcribe breakout audio yourself.
 Report to the participant anything you refused to write and why.

@@ -7,4 +7,4 @@ Outputs: `<org>-diagnosis.md`, under 40 lines: level with quoted evidence, kit c
 Interface: file handoff (rung one). Hand this folder to your agent and give it a transcript.
 Example run: see `examples/` — `input.md` (a synthetic interview, 20 lines) → `output.md`.
 Not for: strategy decks, tool or vendor selection, anything without a transcript, scoring an organization above level 2 without an encoded artifact in evidence.
-Public / private: public. Owner: Sachin. Bridge target for S3 (`facilitator/README.md`).
+Owner: Sachin. Bridge target for S3 (`facilitator/README.md`).

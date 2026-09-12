@@ -4,7 +4,7 @@ Facilitation split: Rafa runs ops, coordination and the exercises — the first 
 
 | Date | Task | Owner | Done |
 |---|---|---|---|
-| Sep 12 | `protocolvision/workshop-kitkraft` public with the scaffold. No private repo, no portal. Repository ruleset on `main`: block force-pushes and branch deletion for everyone (admin bypass only, for a removal request); direct pushes stay allowed | Rafa | |
+| Sep 12 | `protocolvision/workshop-kitkraft` public with the scaffold. No second repo, no portal; everything in it is public. Repository ruleset on `main`: block force-pushes and branch deletion for everyone (admin bypass only, for a removal request); direct pushes stay allowed | Rafa | |
 | Sep 13 | Facilitator folders `facilitator/rafa/`, `facilitator/sachin/` (`kit/`, `LOG.md`) in the participant shape as bridge targets; `facilitator/README.md` lists only what exists | both | |
 | Sep 14 | Discord: #kitcraft, #kitcraft-transcripts, voice rooms breakout-1 … breakout-5; OpenRecapper owner confirmed; `RECORD_MEETING_NAMES` += KITCRAFT-S1..S4 (and S2B, S3B if the Sep 17 test says so); `/record-access grant` both facilitators | Rafa | |
 | Sep 15 → | Pre-work email (`pre-work-email.md`) and collaborator invite (Write) to each registrant as registrations arrive, not on one day | Rafa | |

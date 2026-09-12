@@ -9,7 +9,7 @@ Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the 
 > Note: one minute. Rafa has posted the rotation table already.
 
 ## Slide 2 — What did S2 leave in the repo? (00:01) (presenter: Rafa)
-- One `kit/` per participant folder in `participants/`; the stubs are reachable only through their owner's agent, by design
+- One `kit/` per participant folder in `participants/`
 - Every kit has a `LOG.md` with the failure the critique found; most are description problems
 - Those failures are traces: they tell the next agent where the tacit knowledge was
 - Kits that landed async overnight count; their bridger is the first cold reader
@@ -20,7 +20,7 @@ Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the 
 - First piece of evidence: Rao's manuscript factory → Jenna Dixon's production factory. What flowed was intermediates (drafts + metadata), not the finished book; the shared folder + metadata server was the interface; two non-coders, domain knowledge > coding knowledge
 - The invisible 90%: high-trust links. Two people with significant mutual trust exchanging intermediates between bespoke infrastructures — one observed form of what we are calling a bridge. Whether it is *the* form is what today finds out
 - Skills are industrial intermediates; the kit you wrote is one
-> Note: three minutes. Evidence, not an answer. The transmittal pattern is what any breakout group with a stub will do by necessity.
+> Note: three minutes. Evidence, not an answer.
 
 ## Slide 4 — Which configuration will you try? (00:05) (presenter: Sachin)
 - Any kit or factory in the repo is a target: a **kit** has no declared interface; a **factory** has an `Interface:` line (S2); both facilitator kits are factories at rung 1
@@ -28,7 +28,7 @@ Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the 
 - **Factory → factory:** both sides are job shops that declared an interface for an intermediate (Rao's sense); your agent uses the target strictly through its declared interface
 - **Kit → kit:** neither declared; the interface IS the README a person hands to their agent — your agent reads README + SKILL.md cold and the log records what it had to ask a human
 - **Kit ↔ factory:** one side declared; the log records which direction and whether the declared interface was enough
-- More evidence others have left: stigmergy — the trace an action leaves in a medium stimulates the next action (Heylighen), and the repo is the medium; the transmittal pattern — a stub answered by its owner; interface standards as what others have tried — file handoff → static page → MCP → A2A Agent Card, each with an open standard (SKILL.md, AGENTS.md, MCP, A2A). Payments and identity are going to x402 and ERC-8004; named once, not taught
+- More evidence others have left: stigmergy — the trace an action leaves in a medium stimulates the next action (Heylighen), and the repo is the medium; interface standards as what others have tried — file handoff → static page → MCP → A2A Agent Card, each with an open standard (SKILL.md, AGENTS.md, MCP, A2A). Payments and identity are going to x402 and ERC-8004; named once, not taught
 - The S2 question answered here: a kit that only produces a document has an interface too — the shape of the document is the interface
 > Note: the ladder is effort, not virtue. Today everyone is on rung one; that is the correct rung.
 
@@ -60,7 +60,7 @@ Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the 
 
 ## Slide 9 — Exercise: can your agent use theirs? (00:14) (presenter: Rafa)
 - Breakout groups of 2–4, one per room. Any kit or factory in the repo is a valid target; the pinned default is the kit you did **not** critique in S2; a pair bridges to the partner's kit or a facilitator kit. Your harness works out which configuration it is (factory-factory / kit-kit / kit-factory) and writes it in the log
-- `<group 1>`: A → C's kit · B → A's · C → B's; `<group 2>`: … (the pinned table). A stub target is bridged through its owner's agent: the transmittal pattern in `instructions/S3-bridge.md`
+- `<group 1>`: A → C's kit · B → A's · C → B's; `<group 2>`: … (the pinned table).
 - Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
 - The question: make your agent use the target to do one thing yours cannot; log everything. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log
@@ -70,7 +70,6 @@ Facilitation split: Rafa opens (slides 1–2: the question, what S2 left in the 
 ## Slide 10 — Reconvene: what did your agent need? (00:55) (presenter: Rafa)
 - "My agent needed ___ from the target and found ___ on its own"
 - 25 seconds each; Rafa posts the order
-- Stub bridges: say what the transmittal pattern cost you in unblock lines
 > Note: three minutes total for six; with ten or more, 15 s each. Cut on time; the paragraph in the log is the long version.
 
 ## Slide 11 — Awareness check, one hypothesis, Async 3 (00:58) (presenter: Rafa; hypothesis: Sachin)

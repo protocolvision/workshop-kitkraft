@@ -7,7 +7,7 @@ Subject: AI Kitcraft — your setup before Monday (10 minutes, plus one paste)
 
 Hi <first name>,
 
-Thanks for signing up for AI Kitcraft. We're looking forward to working with you on Monday and Tuesday. This email is your pre-work. It's short: one thing to do yourself, one thing to hand to your AI harness, and one decision to make. If anything below doesn't work, the 1A clinic on Monday exists exactly for that, so please don't spend an evening fighting it.
+Thanks for signing up for AI Kitcraft. We're looking forward to working with you on Monday and Tuesday. This email is your pre-work. It's short: one thing to do yourself, one thing to hand to your AI harness. If anything below doesn't work, the 1A clinic on Monday exists exactly for that, so please don't spend an evening fighting it.
 
 **1. Set up your machine (before Friday, Sep 18)**
 
@@ -42,26 +42,23 @@ Steps:
 3. `git checkout BRANCH && git pull --rebase origin BRANCH`. Your folder: if `participants/NAME/` does not exist, `cp -R PARTICIPANT_TEMPLATE participants/NAME`. Stay at the clone root. Read `AGENTS.md`; follow it for everything below: you write only inside `participants/NAME/`, read anywhere. In the report, tell the participant to open the harness at the clone root (the folder that contains `AGENTS.md`) from now on. Artifact: an up-to-date clone and your folder.
 4. If `participants/NAME/inventory.md` already exists on BRANCH with three tasks in it: report "already done" with its GitHub link and stop.
 5. The three recurring tasks. Ask the participant for three recurring tasks from their work that they have done, or tried, with AI. If they have not given them to you in this conversation: STOP and ask, one at a time. Never draft, invent, or complete a task yourself. For each, ask two yes/no questions and record the answers in their words: is it recurring? does doing it well depend on something they know that a stranger would not? (one line why).
-6. Ask: will the kit be public or private? Public = the kit content goes into the public repo, readable by anyone; private = the content stays on this machine and only a stub README goes into the repo. If they do not know yet, record `undecided`; do not choose for them.
-7. Write `participants/NAME/inventory.md` with exactly the sections of `participants/README.md`: line 1 `# NAME`; `## Recurring tasks` (the three, numbered, both answers each); `## Built / use` (leave empty or `none`); `## Kit` (`Public`, `Private` or `undecided`; the task is chosen in S1); `## Posture` (empty). Then append to `participants/NAME/LOG.md`: `<ISO-8601 UTC now> | async | NAME | progress | pre-work inventory written by harness`. Do not create any other file. Artifact: that file, 10–25 lines, and the log line.
-8. `git add participants/NAME && git commit -m "async: NAME: pre-work inventory"` (the whole folder, the first time).
-9. `git pull --rebase origin BRANCH && git push origin HEAD:BRANCH`. Verify: `git fetch origin && git log origin/BRANCH --oneline -1 -- participants/NAME/inventory.md` shows your commit. Artifact: the file on GitHub.
-10. Append further autolog lines as AGENTS.md says if you do anything else in the repo; one extra commit is fine.
+6. Write `participants/NAME/inventory.md` with exactly the sections of `participants/README.md`: line 1 `# NAME`; `## Recurring tasks` (the three, numbered, both answers each); `## Built / use` (leave empty or `none`); `## Kit` (the task is chosen in S1; leave empty); `## Posture` (empty). Then append to `participants/NAME/LOG.md`: `<ISO-8601 UTC now> | async | NAME | progress | pre-work inventory written by harness`. Do not create any other file. Artifact: that file, 10–25 lines, and the log line.
+7. `git add participants/NAME && git commit -m "async: NAME: pre-work inventory"` (the whole folder, the first time).
+8. `git pull --rebase origin BRANCH && git push origin HEAD:BRANCH`. Verify: `git fetch origin && git log origin/BRANCH --oneline -1 -- participants/NAME/inventory.md` shows your commit. Artifact: the file on GitHub.
+9. Append further autolog lines as AGENTS.md says if you do anything else in the repo; one extra commit is fine.
 
 Failures:
-- Push asks for a username/password: type nothing. Tell the participant to run `gh auth setup-git` in a terminal, then retry step 9.
+- Push asks for a username/password: type nothing. Tell the participant to run `gh auth setup-git` in a terminal, then retry step 8.
 - Push rejected ("fetch first", "non-fast-forward"): `git pull --rebase origin BRANCH`, then push again; up to 3 tries. If a CONFLICT appears, it can only be inside `participants/NAME/`: keep both versions' lines, `git add` it, `git rebase --continue`, push.
 - "Permission denied" / 403: invite not accepted, or the wrong account (`gh api user --jq .login`). STOP and report which.
 - Anything else you cannot fix in two attempts: STOP, report the exact error text, and say "bring this to the 1A clinic, Mon Sep 21, 16:30 UTC, #kafka".
 
-Do not: create branches, force-push, edit anything outside `participants/NAME/` (`README.md`, `AGENTS.md`, other people's folders), store or print tokens, or put anything private into the file.
+Do not: create branches, force-push, edit anything outside `participants/NAME/` (`README.md`, `AGENTS.md`, other people's folders), store or print tokens, or put anything into the file the participant would not put on a public website.
 
-Report to the participant in five lines or fewer: the GitHub link of the file, the three tasks as recorded, public/private as recorded, the folder to open the harness in from now on, and anything still needed from them.
+Report to the participant in five lines or fewer: the GitHub link of the file, the three tasks as recorded, the folder to open the harness in from now on, and anything still needed from them.
 ```
 
-**3. One decision: will your kit be public or private?**
-
-On Monday evening you'll turn one of your recurring tasks into a kit. Public means the kit lives in the shared repo, readable by anyone. Private means the content stays on your own machine and only a stub README (job, inputs, outputs, no content) goes into the repo; on Tuesday, other people's agents reach your kit through you and your agent. There is no separate private repo. Your inventory file is public either way, so "public" there means task names and one-line descriptions, never client names, numbers or data. A good rule: put nothing in a public file you wouldn't put on a public website.
+Everything in the repo is public, including your inventory and, later, your kit. If you'd rather keep some of your work private, that's fine: once an exercise starts, work in a private workspace on your own machine and put into the repo only what you're comfortable sharing. Whatever does go in, treat it like a public website.
 
 **When**
 

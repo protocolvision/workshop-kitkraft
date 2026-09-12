@@ -25,7 +25,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
    - `bridges/<target>.md` (Session 3) — one file per bridge, written by you
    - `LOG.md` — the one autolog for everything in the folder
 5. **Everything goes straight to `main`. No branches, no PRs, no force-push.** Your harness commits, pulls with rebase, pushes, and retries if the push is rejected.
-6. Private kit? Keep the content on your own machine. Put only a stub `participants/<name>/kit/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `instructions/S3-bridge.md`). There is no private repo.
+6. Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. Once an exercise begins, do any work you would rather not share in that workspace and put here only what you are comfortable sharing.
 7. Everyone has a harness and a GitHub account. Harness installed but something wrong (auth, wrong clone, wrong branch, push rejected)? Post the exact error in #kitcraft and come to 1A.
 
 ## Layout

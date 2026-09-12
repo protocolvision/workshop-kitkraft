@@ -4,7 +4,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 1 — The room's own artifacts (00:00) (presenter: Rafa)
 - Recording on; consent as pinned; nothing tonight is off the record
-- Screen: the repo tree. `<n>` inventories · `<n>` kits (`<k>` stubs) · `<n>` bridge logs · 3 transcripts
+- Screen: the repo tree. `<n>` inventories · `<n>` kits · `<n>` bridge logs · 3 transcripts
 - Two days ago these were tasks in your head; tonight the slides are your files
 > Speaker note: 90 seconds, then hand to Sachin. Sachin's synthesis agent has been running since 19:30.
 
@@ -23,7 +23,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 4 — Showcase (24:00) (presenter: Rafa)
 - Two that worked, one that did not; 4 min each, the bridge log on screen
-- Chosen at 19:45: the cleanest file handoff, a transmittal bridge (stub target), the one with the most `unblock` lines
+- Chosen at 19:45: the cleanest file handoff, a kit → kit bridge, the one with the most `unblock` lines
 - For each: what the agent found on its own vs. what a person had to say
 > Speaker note: the failed one is the list of things the next version of the kit must contain.
 

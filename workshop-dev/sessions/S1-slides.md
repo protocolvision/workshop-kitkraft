@@ -90,7 +90,7 @@ Facilitation split: Rafa runs the first minute (welcome, consent), the ice-break
 
 ## Slide 12 — Exercise: your inventory (00:35) (presenter: Rafa)
 - Paste **Block 1** (`instructions/S1-inventory.md`; Rafa pins the link now) into your harness (open at the clone root) and say "do this". It writes `participants/<name>/inventory.md`, commits, pushes, and reports
-- Private means: content stays on your machine; only a stub README goes in the repo. There is no private repo
+- Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing.
 - 12 minutes. Push failed after three tries? Post the error the harness printed in #kitcraft; the fix comes back in that thread or at 1A
 - Rule: you read other people's inventories only through your agent, never in the browser
 - At 00:48 I will give the second prompt

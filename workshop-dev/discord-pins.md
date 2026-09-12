@@ -8,7 +8,6 @@ Four pins (Discord caps a message at 2000 characters): the main pin, the consent
 
 **Repo:** https://github.com/protocolvision/workshop-kitkraft — clone it, copy `PARTICIPANT_TEMPLATE/` to `participants/<you>/`, open your harness at the clone root (the folder with `AGENTS.md`), paste `instructions/orient.md` into it and say "do this". It checks your setup and makes your first push (or reports "already done" if the pre-work email did it). Every later instruction is a file in `instructions/` you paste the same way. Everything goes straight to `main`: no branches, no PRs.
 Harness installed but something wrong (auth, wrong clone, wrong branch, push rejected)? Post the exact error here and come to 1A.
-Private kit? There is no private repo. Keep the content on your own machine and put only a stub `participants/<you>/kit/README.md` (job, inputs, outputs, no content) in the repo; others bridge to it through your agent.
 
 **Rooms:** voice **#kafka** (plenary) · text **#kitcraft** (this channel: links, instructions, breakout groups) · **#kitcraft-transcripts** (live transcript, read-only) · voice **breakout-1 … breakout-5** (breakout group rooms).
 
@@ -20,7 +19,7 @@ Private kit? There is no private repo. Keep the content on your own machine and 
 • S4 Recap — Tue · 20:00–21:00 / 22:00–23:00 / 13:00–14:00
 Your local time: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530
 
-**Consent:** #kafka audio is recorded, transcribed with speaker names, streamed to #kitcraft-transcripts and kept in the public repo. Breakouts and 1A are not recorded. Your harness writes log lines to public files. Ask either facilitator to remove any line of yours, any time. Full notice: next pin.
+**Consent:** #kafka audio is recorded, transcribed with speaker names, streamed to #kitcraft-transcripts and kept in the public repo. Breakouts and 1A are not recorded. Your harness writes log lines to public files. Ask either facilitator to remove any line of yours, any time. Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. Full notice: next pin.
 
 **Survey:** AI postures (Robert Peake) — https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843 — bring your posture to S1.
 
@@ -37,13 +36,13 @@ Verbatim: the "Full notice" section of `workshop-dev/sessions/consent-notice.md`
 ## PIN 3 — breakout groups for S2 (Mon Sep 21, 16:45 UTC)
 
 **Breakout groups for tonight (2–4 each), confirmed from the inventories.** Critique ring inside each group: A reads B, B reads C, …, the last reads A. A pair swaps.
-<groups: one line per group — **Group 1 → breakout-1:** @a, @b, @c. a reads b · b reads c · c reads a. Mark stubs: "(stub: report what your agent would need)". Mark anyone absent: "@x async — see the block's ABSENT variant".>
+<groups: one line per group — **Group 1 → breakout-1:** @a, @b, @c. a reads b · b reads c · c reads a. Mark anyone absent: "@x async — see the block's ABSENT variant".>
 At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your factory, uses the target through its declared interface (README + SKILL.md, example run cold), gives you a 5-line report on where the interface was insufficient to read aloud, then logs the blockers about your own kit when you say "log mine".
 
 ## PIN 4 — breakout groups for S3 (Tue Sep 22, 09:00 UTC)
 
 Same rooms. Target = any kit or factory in the repo; the default below is the kit you did **not** critique. Pairs: the partner's kit or a facilitator kit. Three configurations to try: factory→factory (both declared an `Interface:`), kit→kit (neither did; the README is the interface), kit↔factory; your harness works out which and writes it in the log. Nobody has defined a bridge yet; your closing paragraph is the data.
-<groups: one line per group — **Group 1 → breakout-1:** a → c's kit · b → a's kit · c → b's kit. Stub targets: "(through <owner>'s agent; both of you also use the blocks in `instructions/S3-bridge.md`)".>
+<groups: one line per group — **Group 1 → breakout-1:** a → c's kit · b → a's kit · c → b's kit.>
 Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`); say so in your log. One log per bridge, written by the person bridging: `participants/<you>/bridges/<target>.md`. At 15:45 paste `instructions/S3-bridge.md` into your harness with your <name> and <target>; say "do this". The question: can your agent use the target to do one thing yours cannot? Log everything; at minute 30 write what a bridge turned out to be, in one paragraph.
 
 ## Pre-written posts (not pinned)

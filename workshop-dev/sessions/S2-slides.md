@@ -5,7 +5,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 ## Slide 1 — Where we are (00:00) (presenter: Rafa; Sachin from the fourth bullet)
 - Recording on; consent as pinned; breakouts off the record
 - S1 awareness check: `<tally from workshop-dev/transcripts/S1/awareness-check.md>` — say whether the expected winner (precommodification) held
-- `<n>` sources chosen since S1 (`<o>` own kits, `<f>` facilitator kits); `<k>` stubs (content on the owner's machine)
+- `<n>` sources chosen since S1 (`<o>` own kits, `<f>` facilitator kits)
 - Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at
 - A kit is what stays after the agent has failed at it once
 > Speaker note: one sentence per bullet; the room has had three hours, not a night. Rafa confirms "Recording on" in #kitcraft first and does the first three bullets; Sachin takes the last two and continues straight into slide 2.
@@ -42,7 +42,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - Rungs 2+ (static page, MCP, API/A2A) only after rung 1 works; never claim a rung you did not build
 - **30:00, Sachin — comms layer:** cut what adds nothing · remove the AI tells · rewrite the README in your own words
 - Push at 33:00; unfinished is fine, absent is not
-> Speaker note: Rafa briefs and calls 5, 10 min; Sachin takes over at 15 for the comms rules; Rafa calls "push" at 18. Private kits: content local, stub only. Commit is `S2: <name>: factory from <source>`.
+> Speaker note: Rafa briefs and calls 5, 10 min; Sachin takes over at 15 for the comms rules; Rafa calls "push" at 18. Commit is `S2: <name>: factory from <source>`.
 
 ## Slide 6 — Breakout group critique (35:00 → 48:00, breakouts) (presenter: Rafa)
 - Ring inside each breakout group (2–4), from the pin: A reads B · B reads C · … · the last reads A; a pair swaps
@@ -50,7 +50,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - Your agent uses the target factory through its declared interface (README + SKILL.md only) and runs the example cold; report in ≤5 lines where the interface was insufficient
 - Owner logs every failure as a `blocker` line; no explaining out loud until it is in the kit
 - Block: `instructions/S2-critique.md` (pinned as a link); the text is the facilitator
-> Speaker note: Rafa: `/stop`, post "rooms open", move people. Facilitators split the rooms between them and swap at minute 6. A stub goes to the strongest reader in its breakout group; an absent member makes a pair.
+> Speaker note: Rafa: `/stop`, post "rooms open", move people. Facilitators split the rooms between them and swap at minute 6. An absent member makes a pair.
 
 ## Slide 7 — What the other agent got wrong (48:00) (presenter: Rafa)
 - Round, one sentence each, in the pinned order (≈40 s each)

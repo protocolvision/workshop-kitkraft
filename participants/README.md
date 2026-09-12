@@ -28,10 +28,10 @@ Every `inventory.md` has exactly these sections, in this order. The pre-work pus
 <anything AI-native you built or use that others could use, link or name; or "none">
 
 ## Kit
-<the task that becomes the kit>. Public / Private.
+<the task that becomes the kit>
 
 ## Posture
 <Partnership / Hypervigilance / Overreliance / Compliance, or "not taken">
 ```
 
-Public means: task names and one-line descriptions, readable by anyone. No client names, numbers, credentials, or NDA material. `_example/` is a filled example; folders starting with `_` are not participants.
+Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. In the inventory that means task names and one-line descriptions; no client names, numbers, credentials, or NDA material. `_example/` is a filled example; folders starting with `_` are not participants.

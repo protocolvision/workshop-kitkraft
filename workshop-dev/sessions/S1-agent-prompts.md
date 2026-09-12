@@ -18,7 +18,7 @@ Preconditions:
 Steps:
 1. Read `participants/README.md` (the file shape). If `participants/NAME/inventory.md` has tasks in it already, keep them; remove any draft note or "to be confirmed" preamble.
 2. The three recurring tasks. If the file already has three, read them back and confirm. If fewer than three, and the participant has not supplied the missing ones in this conversation: STOP and ask for them, one at a time. Never draft, invent, or complete a task yourself; wait for the participant's words. For each task record two answers in the participant's words: recurring? (yes/no) · depends on something they know that a stranger would not? (yes/no, one line why).
-3. Ask: which task becomes the kit, and will it be public or private? Public = the kit content goes into this public repo, readable by anyone. Private = the content stays on the participant's machine and only a stub README goes here. Record the task and `Public` or `Private` under `## Kit`. If they have not decided, STOP and ask; do not choose for them. If Private, make the stub now: in `participants/NAME/kit/README.md` fill the Job and For lines and `Public / private: private`; nothing about the content.
+3. Ask: which task becomes the kit? Record it under `## Kit`. If they have not decided, STOP and ask; do not choose for them. Everything in the repo is public; if the participant wants to keep some of the work private, they do that work in a private workspace on their machine later and put here only what they are comfortable sharing.
 4. Ask for their posture from the survey (Partnership / Hypervigilance / Overreliance / Compliance); if not taken, write `not taken`. Ask for `## Built / use`: anything AI-native they built or use that others could use (link or name), or `none`.
 5. Write `participants/NAME/inventory.md` with exactly the sections in `participants/README.md`: `# NAME` · `## Recurring tasks` (three, numbered, both answers each) · `## Built / use` · `## Kit` · `## Posture`. 12–35 lines; only what the participant said. Task names and one-line descriptions are fine; no client names, numbers, credentials, or NDA material. Append `<ISO-8601 UTC now> | S1 | NAME | progress | inventory written by harness` to `participants/NAME/LOG.md`.
 6. `git add participants/NAME && git commit -m "S1: NAME: inventory"`, then `git pull --rebase origin BRANCH && git push origin HEAD:BRANCH`. Rejected → pull --rebase and push again, up to 3 times. A CONFLICT can only be inside `participants/NAME/`: keep both, `git add`, `git rebase --continue`, push.
@@ -30,8 +30,8 @@ Failures:
 - `! [rejected]` / `fetch first` / `non-fast-forward` → `git pull --rebase origin BRANCH`, push again, up to 3 times.
 - `error: src refspec main does not match any` → you are not on BRANCH or nothing is committed: `git checkout BRANCH`, commit, push `HEAD:BRANCH` again.
 - still rejected after 3 tries → STOP, print the exact error; the participant posts it in #kitcraft, the fix comes back in that thread or at 1A, then they say "push again".
-Do not: create branches, force-push, touch anything outside `participants/NAME/`, read other inventories yet, log anything private.
-Report in four lines: the absolute path of the folder you wrote in; the GitHub link of `inventory.md`; the kit chosen and public/private; any error.
+Do not: create branches, force-push, touch anything outside `participants/NAME/`, read other inventories yet, log secrets, client names or data.
+Report in four lines: the absolute path of the folder you wrote in; the GitHub link of `inventory.md`; the kit chosen; any error.
 ```
 
 ## Block 2 — the two nearest (slide 13)

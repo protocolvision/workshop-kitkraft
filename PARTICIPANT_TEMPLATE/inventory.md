@@ -9,7 +9,7 @@
 <anything AI-native you built or use that others could use, link or name; or "none">
 
 ## Kit
-<the task that becomes the kit>. Public / Private.
+<the task that becomes the kit>
 
 ## Posture
 <Partnership / Hypervigilance / Overreliance / Compliance, or "not taken">
