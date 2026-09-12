@@ -9,5 +9,4 @@ Exports: (required) the intermediate this factory produces for someone else's fa
 Interface: (required) the rung and how to call it — rung 1: file handoff, hand this folder to an agent and run SKILL.md on examples/input.* · rung 2: static page <url> · rung 3: MCP <command> · rung 4: API / A2A <url>.
 Example run: see `examples/`.
 Not for: what is out of scope.
-Public / private: (if private, this file is the stub; the content stays on your machine and bridges run through your agent)
 Log: `../LOG.md` (one log per participant, not per kit)

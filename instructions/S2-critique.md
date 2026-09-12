@@ -12,7 +12,6 @@ Preconditions:
 
 Steps:
 3. Read `participants/<target>/kit/README.md` (note its `Interface:` line: the rung and how to call it), then `participants/<target>/kit/SKILL.md`, then list `participants/<target>/kit/examples/`. Read nothing else; ask the participant nothing about the kit. You are a stranger's agent using the factory through the interface it declares.
-4. STUB variant — if SKILL.md is missing or README says the kit is private: write, in five lines or fewer, what you would need from the owner to run this job (inputs, formats, checks, decisions). Skip to step 6.
 5. Run the example through the interface: take `examples/input.*`, follow SKILL.md exactly as written (call the declared interface if it is a rung above 1), produce your own output, compare it to `examples/output.*`. Write a report of five lines or fewer on where the interface was insufficient: what you had to guess, what you would have had to ask the owner, where you failed or diverged. Do not fix the kit.
 6. Show the report to the participant, who reads it aloud to the owner. Then wait.
 7. When the participant says "log mine", they are the owner now: they read you the reports about THEIR kit. Append each item as one line to `participants/<name>/LOG.md`: `<ISO timestamp> | S2 | <name> | blocker | <the failure, one line>`.

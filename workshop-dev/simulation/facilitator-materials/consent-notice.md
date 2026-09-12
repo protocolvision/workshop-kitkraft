@@ -22,7 +22,7 @@ Two versions. The short one is read aloud at the top of S1 (by the facilitator o
 
 **Removal.** Ask either facilitator (@rafa, @sachin) in #kitcraft or by DM, during or after the workshop, no reason required. We remove the line or passage from the current files the same day. Because the repo is git, removed text remains in history until a facilitator rewrites it; say if you want that too and we do it (facilitators only; it needs a force-push).
 
-**Opting out without leaving.** Join #kafka muted and use #kitcraft in text; ask your harness to write no `memory` lines that mention other people; choose a private kit (stub README only in the public repo).
+**Opting out without leaving.** Join #kafka muted and use #kitcraft in text; ask your harness to write no `memory` lines that mention other people; keep any work you would rather not share in a private workspace on your machine and put in the repo only what you are comfortable sharing.
 
 **Private data.** Never put credentials, client names, or anything under NDA into a kit, an example, or a log line. The kit template's `examples/` says "redact"; that is your responsibility, not the bot's. Sanitizing is yours; publishing is ours; deleting is on request.
 

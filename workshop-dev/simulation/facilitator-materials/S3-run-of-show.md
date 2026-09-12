@@ -9,7 +9,7 @@ Facilitation split: Rafa — first two minutes (opener, what S2 left in the repo
 | 15:30 | 00 | Rafa | Slide 1 (the question S1 left open); posts session order | Listens | Listen | — | on |
 | 15:31 | 01 | Rafa | Slide 2: shows two anonymised blocker lines; hands to Sachin | — | Listen | — | on |
 | 15:32 | 02 | Sachin | Posts the F2F essay link | Slide 3: the hard problem again; Rao–Dixon as evidence | Listen | — | on |
-| 15:35 | 05 | Sachin | Posts standards table link (resources §4) | Slide 4: three configurations to try; the evidence others left (traces, transmittal, standards ladder); answers Kwame's S2 question | Listen | — | on |
+| 15:35 | 05 | Sachin | Posts standards table link (resources §4) | Slide 4: three configurations to try; the evidence others left (traces, standards ladder); answers Kwame's S2 question | Listen | — | on |
 | 15:38 | 08 | Sachin | Puts `facilitator/rafa/kit/` on screen, `examples/output.csv`; posts the path; answers questions about the kit | Slide 5: water-rate pipeline | Listen | — | on |
 | 15:40 | 10 | Sachin | — | Slide 6: Prime Radiant, example only | Listen | — | on |
 | 15:41 | 11 | Sachin | Times it; posts the CSA note link for later reading | Slide 7 (trust, two minutes) | Listen | — | on |
@@ -27,7 +27,7 @@ Facilitation split: Rafa — first two minutes (opener, what S2 left in the repo
 
 Contingencies
 - Recorder: two segments. Whether a second `/record` with the same name appends or overwrites is settled at the Sep 17 tech rehearsal (`recorder-runbook.md`); if it overwrites, the second segment is `KITCRAFT-S3B`, added to `RECORD_MEETING_NAMES` on Sep 17.
-- A stub target: its breakout group bridges through the owner's agent (transmittal blocks in `instructions/S3-bridge.md`). If the owner is not in the room, the bridger swaps to `facilitator/rafa/kit/` and logs the swap as a `decision` line.
+- A target that has not pushed: the bridger swaps to `facilitator/rafa/kit/` or `facilitator/sachin/kit/` and logs the swap as a `decision` line.
 - If a breakout group is a pair (a drop-out), the two bridge to each other's kits only if neither critiqued the other's in S2; otherwise both use facilitator kits.
 - A room stuck for 5 minutes gets a facilitator; the facilitator supplies the missing thing and the participant logs it as `unblock`. Facilitators do not touch the participant's files.
 - Two people editing the same bridge file is a rebase conflict; that is why each log has one writer. If a shared log appears anyway, Rafa splits it into two files after the session and notes it in the facilitator notes.

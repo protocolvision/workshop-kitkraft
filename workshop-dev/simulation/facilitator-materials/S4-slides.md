@@ -4,7 +4,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 1 — The room's own artifacts (00:00) (presenter: Rafa)
 - Recording on; consent as pinned; nothing tonight is off the record
-- Screen: the repo tree. 6 inventories (two withdrew after S1) · 3 kits + 1 stub · 4 bridge logs · 3 transcripts
+- Screen: the repo tree. 6 inventories (two withdrew after S1) · 4 kits · 4 bridge logs · 3 transcripts
 - Two days ago these were tasks in your head; tonight the slides are your files
 > Speaker note: 90 seconds, then hand to Sachin. Sachin's synthesis agent has been running since 19:30.
 
@@ -16,14 +16,14 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Slide 3 — Debrief: two pairs, four bridges (10:00) (presenter: Rafa)
 - Pair 1 (5 min): ingrid → devr · devr → ingrid — 90 s each, 2 min questions
-- Pair 2 (5 min): tomasr → marisol (stub, transmittal; sachin's kit if he ran hard mode) · marisol → tomasr — 90 s each, 2 min questions
+- Pair 2 (5 min): tomasr → marisol (sachin's kit if he ran hard mode) · marisol → tomasr — 90 s each, 2 min questions
 - Say: target, the one thing, what a human supplied, did it work
 - Each report goes into the synthesis as you speak
 > Speaker note: 4 speakers = 10 min with questions; the 4 min saved go to the showcase. Hold the timer; tomasr runs over.
 
 ## Slide 4 — Showcase (24:00) (presenter: Rafa)
 - Two that worked, one that did not; 4 min each, the bridge log on screen
-- Chosen at 19:45: the cleanest file handoff, the transmittal bridge (tomasr ↔ marisol), the one with the most `unblock` lines
+- Chosen at 19:45: the cleanest file handoff, the kit → kit bridge (tomasr ↔ marisol), the one with the most `unblock` lines
 - For each: what the agent found on its own vs. what a person had to say
 > Speaker note: the failed one is the list of things the next version of the kit must contain.
 

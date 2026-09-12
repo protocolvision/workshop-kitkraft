@@ -25,7 +25,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
    - `bridges/<target>.md` (Session 3) — one log per bridge, written by you
    - `LOG.md` — your harness writes it; you do not
 4. Push to `main`. No branches, no PRs. Your harness pulls with rebase first.
-5. Private kit? Keep the content on your own machine. Put only a stub `participants/<your-name>/kit/README.md` here (job, inputs, outputs, no content). Others bridge to it through your agent (see `instructions/S3-bridge.md`). There is no private repo.
+5. Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. Once an exercise begins, do any work you would rather not share in that workspace and put here only what you are comfortable sharing.
 
 ## Layout
 

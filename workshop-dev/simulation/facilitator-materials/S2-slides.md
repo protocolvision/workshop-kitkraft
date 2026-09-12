@@ -5,7 +5,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 ## Slide 1 — Where we are (00:00) (presenter: Rafa; Sachin from the fourth bullet)
 - Recording on; consent as pinned; breakouts off the record
 - S1 awareness check: anchored 3, traces 2, precommodification 1 — not the expected winner (`workshop-dev/transcripts/S1/awareness-check.md`)
-- Four of us tonight (Kwame and Aiko withdrew; their inventories stay); three sources chosen and one stub (marisol, content on her machine)
+- Four of us tonight (Kwame and Aiko withdrew; their inventories stay); four sources chosen (marisol keeps part of her work in a private workspace on her machine and pushes what she is comfortable sharing)
 - Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at
 - A kit is what stays after the agent has failed at it once
 > Speaker note: one sentence per bullet; the room has had three hours, not a night. Confirm "Recording on" in #kitcraft first.
@@ -42,11 +42,11 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 - Rungs 2+ (static page, MCP, API/A2A) only after rung 1 works; never claim a rung you did not build
 - **30:00, Sachin — comms layer:** cut what adds nothing · remove the AI tells · rewrite the README in your own words
 - Push at 33:00; unfinished is fine, absent is not
-> Speaker note: Rafa briefs and calls 5, 10 min; Sachin takes over at 15 for the comms rules; Rafa calls "push" at 18. Private kit (marisol): content local, stub only.
+> Speaker note: Rafa briefs and calls 5, 10 min; Sachin takes over at 15 for the comms rules; Rafa calls "push" at 18.
 
 ## Slide 6 — Pair critique (35:00 → 48:00, breakouts) (presenter: Rafa)
 - breakout-1: ingrid reads devr · devr reads ingrid
-- breakout-2: tomasr reads marisol (stub) · marisol reads tomasr
+- breakout-2: tomasr reads marisol · marisol reads tomasr
 - Your agent uses your partner's factory through its declared interface (README + SKILL.md only) and runs the example cold; report in ≤5 lines where the interface was insufficient
 - Owner logs every failure as a `blocker` line; no explaining out loud until it is in the kit
 - Instructions pinned in #kitcraft; the text is the facilitator
