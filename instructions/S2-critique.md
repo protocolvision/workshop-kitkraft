@@ -1,9 +1,9 @@
 # S2 triad critique — 13 minutes in your breakout room (paste into your harness)
 
-Human header: your harness reads one triad-mate's kit cold and tries the example; you read its report aloud to the owner; the owner's harness logs each failure. Your target is in the pinned triad table in #kitcraft. Nobody explains their kit out loud until the report is read.
+Human header: your harness uses one triad-mate's factory through its declared interface — it reads only README.md and SKILL.md and runs the example cold — and reports where the interface was insufficient; you read its report aloud to the owner; the owner's harness logs each failure. Your target is in the pinned triad table in #kitcraft. Nobody explains their kit out loud until the report is read.
 
 ```
-You are the participant's harness in the AI Kitcraft repo, Session 2 critique. Read `AGENTS.md` first.
+You are the participant's harness in the AI Kitcraft repo, Session 2 critique: use a triad-mate's factory through its declared interface. Read `AGENTS.md` first.
 Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase>  TARGET=<the triad-mate whose kit they read, from the pinned table; ask if unknown>
 You write only inside `participants/NAME/`; read anywhere.
 
@@ -12,9 +12,9 @@ Preconditions:
 2. Check `participants/TARGET/kit/README.md` exists and is filled (not the template). If not, tell the participant; they ask the owner (in the room) to push, then you pull again. Still missing after two minutes: work with what is in the repo — read `participants/TARGET/inventory.md` instead and write, in five lines or fewer, what a kit for the task under its `## Kit` would need (inputs, formats, checks, decisions); append `<ISO-8601 UTC now> | S2 | NAME | decision | TARGET kit not pushed; report written from the inventory` to `participants/NAME/LOG.md`; go to step 6. If the whole folder is missing, run the ABSENT variant below.
 
 Steps:
-3. Read `participants/TARGET/kit/README.md`, then `participants/TARGET/kit/SKILL.md`, then list `participants/TARGET/kit/examples/`. Read nothing else; ask the participant nothing about the kit.
+3. Read `participants/TARGET/kit/README.md` (note its `Interface:` line: the rung and how to call it), then `participants/TARGET/kit/SKILL.md`, then list `participants/TARGET/kit/examples/`. Read nothing else; ask the participant nothing about the kit. You are a stranger's agent using the factory through the interface it declares.
 4. STUB variant — if SKILL.md is still the template or the README says the kit is private: write, in five lines or fewer, what you would need from the owner to run this job (inputs, formats, checks, decisions). Skip to step 6.
-5. Run the example: take `examples/input.*`, follow SKILL.md, produce your own output, compare it to `examples/output.*`. Write a report of five lines or fewer: where you were uncertain, what you assumed, where you failed or diverged. Do not fix the kit.
+5. Run the example through the interface: take `examples/input.*`, follow SKILL.md exactly as written (call the declared interface if it is a rung above 1), produce your own output, compare it to `examples/output.*`. Write a report of five lines or fewer on where the interface was insufficient: what you had to guess, what you would have had to ask the owner, where you failed or diverged. Do not fix the kit.
 6. Show the report to the participant, who reads it aloud to the owner. Then wait.
 7. When the participant says "log mine", they are the owner now: they read you the reports about THEIR kit. Append each item as one line to `participants/NAME/LOG.md`: `<ISO-8601 UTC now> | S2 | NAME | blocker | <the failure, one line>`.
 8. Ask the participant for their one-sentence plenary line ("what the other agent got wrong about my kit"); append it as a `memory` line to the same LOG.md.
@@ -24,5 +24,5 @@ ABSENT variant (a triad-mate is not in the room): tell the participant to swap s
 
 Do not: edit `participants/TARGET/`; ask the owner questions to make the example work; rewrite the participant's own kit during the critique; log anything about other people's content beyond the failure line.
 
-Report to the participant: the five-line report, ready to read aloud; then, after step 9, the number of blocker lines logged and the push result.
+Report to the participant: the five-line report on where the interface was insufficient, ready to read aloud; then, after step 9, the number of blocker lines logged and the push result.
 ```

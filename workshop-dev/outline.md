@@ -87,7 +87,7 @@ This is the one-way version of the Wallfacer rule: no live coordination needed, 
 
 **Close (7)** Rafa: awareness check, one word each, saved by Sachin to `workshop-dev/transcripts/S1/awareness-check.md`. (Expected: precommodification — reading others' inventories through your agent shows how much overlaps.) Focus question: how will bridges emerge across the kit era? Sachin: Async 1, 1A, S2 time.
 
-**Async 1 (Mon 16:30–20:00 UTC, three hours, README only)** Paste `instructions/async-1.md`: the harness fills `participants/<name>/kit/README.md` (there since the folder was copied from the template) from the inventory (every template field; stub only if private). The participant rewrites the Job line and the least-sure field by hand. Nothing else; the gap is short and 1A sits inside it.
+**Async 1 (Mon 16:30–20:00 UTC, three hours)** Paste `instructions/async-1.md`: choose the kit to convert in S2 — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`; copied into your folder with a `Source:` line) — and draft the README's Job and Interface lines. The participant rewrites the Job line by hand. Nothing else; the gap is short and 1A sits inside it.
 
 **Triads** are confirmed at S1 close from the inventories (provisional triads come from the registration form on Sep 19) and pinned in #kitcraft by 16:45 UTC.
 
@@ -107,13 +107,13 @@ Slides and minute table: `sessions/S2-slides.md`, `sessions/S2-run-of-show.md`.
 - Sachin (3): where we are; the S1 tally; a kit is what stays after the agent has failed at it once.
 - Rafa (4): book factory, F2F case: Rao's manuscript factory → Jenna's production factory; handoff = shared folder + transmittal server; two non-coders; domain knowledge > coding knowledge. This is the shape of every bridge tomorrow.
 - Sachin (4): Protocolized visual identity: TITLES, two narrow models, PI brand kit → Monstrous Times; Jamverse as the fiction-side sibling. The brand kit is already a factory (`llms.txt` → `brand.json`). Derivative worlds; standards that no longer need to be uniform.
-- Rafa (4): **factory** = kit with an interface. Interfaces in ascending order of effort: README a person hands to their agent → static page → MCP → API. Every kit in this repo is rung one; the template's `Interface:` line says `file handoff`. For a document kit, the shape of the document is the interface.
+- Rafa (4): **factory** = a kit with a declared interface that a stranger's agent can use without talking to you. Interfaces in ascending order of effort: rung 1 README + SKILL.md a person hands to their agent + one worked example → rung 2 static page → rung 3 MCP → rung 4 API / A2A. Tonight's deliverable is rung 1 done properly; the README's `Interface:` line names the rung and how to call it. For a document kit, the shape of the document is the interface.
 
-**Exercise — Build the kit (20)** Rafa briefs; Sachin takes the last five minutes for the comms layer.
-Paste the block in `instructions/S2-build.md`. The harness fills `SKILL.md` (name, description as the trigger line, when to use, steps, constraints, do-nots) and `examples/` (one input — a text extract or synthetic input is fine — and its output) from the participant's answers, never inventing. Private kit: content on the machine, stub and LOG.md in the repo.
+**Exercise — Convert a kit into a factory (20)** Rafa briefs; Sachin takes the last five minutes for the comms layer.
+Take one of the kits identified in your inventory — your own (the `## Kit` task, or something from `## Built / use`) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and convert it into a factory: a kit with a declared interface that a stranger's agent can use without talking to you. Paste the block in `instructions/S2-factory.md`. Deliverable: rung 1 done properly — README with an `Interface:` line stating the rung and how to call it, SKILL.md whose description triggers correctly, `examples/input.*` + `output.*` produced cold from SKILL.md; rungs 2+ (static page, MCP, API/A2A) are optional stretch. Converting a facilitator kit = copy it into `participants/<name>/kit/`, adapt inputs, constraints and do-nots to your own organisation and data, declare the interface, credit the source on the README's first line. The harness works from the participant's answers, never inventing. Private kit: content on the machine, stub and LOG.md in the repo. Artifact: `participants/<name>/kit/` as a factory; commit `S2: <name>: factory from <source>`.
 The comms layer, from the anshuc techniques (Sachin, at minute 15 of the build): cut what adds nothing, remove AI tells, rewrite the README by hand. "Push now" at minute 18; unfinished is fine, absent is not.
 
-**Triad critique (13, breakout rooms)** Instructions: `instructions/S2-critique.md`, posted per `breakout-instructions.md`. Ring inside each triad: A reads B, B reads C, C reads A; a pair reads each other. The reader's harness pushes its own kit, pulls, reads the target cold, runs the example, reports in five lines; the participant reads the report aloud; the owner's harness logs each failure as a `blocker` line. A stub kit goes to the strongest reader, whose agent reports what it would need. A triad missing a member becomes a pair for the night; the absent kit is read async and the report posted in #kitcraft. Room moves cost about two minutes each way; they are inside the 13.
+**Triad critique (13, breakout rooms)** Instructions: `instructions/S2-critique.md`, posted per `breakout-instructions.md`. Ring inside each triad: A reads B, B reads C, C reads A; a pair reads each other. The reader's harness pushes its own factory, pulls, uses the target through its declared interface (README and SKILL.md only), runs the example cold, reports in five lines where the interface was insufficient; the participant reads the report aloud; the owner's harness logs each failure as a `blocker` line. A stub kit goes to the strongest reader, whose agent reports what it would need. A triad missing a member becomes a pair for the night; the absent kit is read async and the report posted in #kitcraft. Room moves cost about two minutes each way; they are inside the 13.
 
 **Close (10)** Sachin. Round: one sentence each on what the other agent got wrong (≈40 s each). Awareness check, saved to `workshop-dev/transcripts/S2/awareness-check.md`. (Expected: anchored in reality — the agent failed where your domain knowledge was tacit.) Async 2 posted verbatim.
 
@@ -189,7 +189,7 @@ workshop-kitkraft/
   README.md            human entry: what this is, how to add your kit
   AGENTS.md            agent entry: names, push rule, autolog, facilitator clause
   CLAUDE.md            first line: @AGENTS.md
-  instructions/        pasteable blocks: orient, S1-inventory, async-1, S2-build, S2-critique, async-2, S3-bridge, no-harness
+  instructions/        pasteable blocks: orient, S1-inventory, async-1, S2-factory, S2-critique, async-2, S3-bridge, no-harness
   PARTICIPANT_TEMPLATE/ the whole participant folder to copy: inventory.md, kit/ (README.md with Interface:, SKILL.md, examples/), bridges/TEMPLATE.md, LOG.md
   participants/<name>/ one folder per participant, the only place their harness writes: inventory.md (S1), kit/ (S2), bridges/<target>.md (S3), LOG.md; schema in participants/README.md
   facilitator/<name>/  rafa, sachin in the same shape (kit/, LOG.md) as bridge targets; the brand kit by link
@@ -310,6 +310,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - Facilitator kits (`rafa`, `sachin`) are the real bridge targets; the S3 target list is trimmed to what exists. (rafa 14; sachin 19)
 - Hypothesis decision rule for S4; `Interface:` line in the kit template; synthetic example inputs allowed. (rafa 26; sachin 25, 26)
 - Session materials (slides, run-of-shows, 1A, consent, recorder runbook) live in `workshop-dev/sessions/`. (rafa 31, 39)
+- S2 exercise: convert an existing kit (own inventory kit or a facilitator kit) into a factory = kit + declared interface; rung 1 default, rungs 2+ stretch; Async 1 chooses the source and drafts Job/Interface. (Rafa, Sep 12)
 - One folder per participant: `participants/<name>/` (inventory.md, kit/, bridges/<target>.md, LOG.md), copied whole from `PARTICIPANT_TEMPLATE/`; a single write boundary enforced by `AGENTS.md`, and one log per person. (OBS 7, 22, 51, 53; rafa 16; sachin 11)
 
 ## Changes from v6 (multi-lens review)

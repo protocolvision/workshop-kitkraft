@@ -2,7 +2,7 @@
 
 Presenter split: Sachin — opener, brand kit, comms layer, rooms, close, recorder, chat, repo. Rafa — F2F case, factory = kit + interface, build briefing; floats the low-numbered rooms. Sachin screen-shares all session.
 
-Pre-session (Sachin): 19:30 pull; list existing `participants/<name>/kit/README.md` in #kitcraft; 19:50 re-post the S2 triads pin; 19:55 screen-share check.
+Pre-session (Sachin): 19:30 pull; list in #kitcraft who chose which source (own kit / facilitator kit, from the Async 1 `decision` lines); 19:50 re-post the S2 triads pin; 19:55 screen-share check.
 
 | UTC | min | Presenter | Rafa | Sachin | Participants | Artifact | Recorder |
 |---|---|---|---|---|---|---|---|
@@ -10,9 +10,9 @@ Pre-session (Sachin): 19:30 pull; list existing `participants/<name>/kit/README.
 | 20:03 | 03 | Rafa | Slide 2: book factory | drops the F2F link in #kitcraft | — | — | on |
 | 20:07 | 07 | Sachin | — | Slide 3: brand kit / Jamverse (screen) | — | — | on |
 | 20:11 | 11 | Rafa | Slide 4: factory = kit + interface; ladder; CMM | links `facilitator/README.md`, Agent Skills spec | the interface question, if asked | — | on |
-| 20:15 | 15 | Rafa | Slide 5: build briefing; starts the clock; time calls at 5, 10 | pulls; helps anyone with a new harness or a stub, in text | agent fills README / SKILL / examples from `instructions/S2-build.md` | `participants/<name>/kit/` v1 | on; a facilitator speaks every ≤15 min |
+| 20:15 | 15 | Rafa | Slide 5: convert-to-factory briefing; starts the clock; time calls at 5, 10 | pulls; helps anyone with a new harness, a facilitator-kit copy or a stub, in text | agent converts the chosen kit: README with `Interface:`, SKILL, cold example (`instructions/S2-factory.md`) | `participants/<name>/kit/` as a factory, rung 1 | on; a facilitator speaks every ≤15 min |
 | 20:30 | 30 | Sachin | floats #kitcraft | **comms layer**: cut, de-tell, rewrite README by hand; posts the three rules | edit README by hand | README v1 | on |
-| 20:33 | 33 | Sachin | — | "push now"; confirms pushes on `main`; commits pasted files under their names | commit, push, pull --rebase | one kit or stub per participant | on |
+| 20:33 | 33 | Sachin | — | "push now"; confirms pushes on `main`; commits pasted files under their names | commit `S2: <name>: factory from <source>`, push, pull --rebase | one factory or stub per participant | on |
 | 20:35 | 35 | Sachin | moves to breakout-1 | Slide 6 (60 s); `/stop`; "Recording off · rooms open"; posts the S2 breakout post (`../breakout-instructions.md`); moves people; goes to the highest-numbered room | move to rooms | — | `/stop` |
 | 20:41 | 41 | — | swaps rooms | swaps rooms | reports read aloud; owners log `blocker` lines | `participants/<name>/LOG.md` | off |
 | 20:47 | 47 | — | back in #kafka | "Reconvene now"; moves stragglers | one sentence each ready; push | — | off |

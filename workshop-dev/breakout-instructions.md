@@ -8,7 +8,7 @@ Discord's 2000-character limit means each post carries a 5-line human header and
 
 > **Rooms open — 13 minutes. Back in #kafka at 20:48.**
 > <one line per room: breakout-1: a reads b · b reads c · c reads a. Stub: "(stub)". Absent: "@x async (see the block's ABSENT variant)".>
-> Paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your kit, reads the target cold, gives you a 5-line report to read aloud, then logs the blockers about your own kit when you say "log mine".
+> Paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your factory, uses the target through its declared interface (README + SKILL.md, example run cold), gives you a 5-line report on where the interface was insufficient to read aloud, then logs the blockers about your own kit when you say "log mine".
 > Nobody explains their kit out loud until the reports are read. A facilitator visits each room once.
 
 Rules the facilitators apply: a stub kit goes to the strongest reader in the triad (their agent reports what it would need). A triad that has lost a member becomes a pair for the night: the two present read each other; the absent kit is read asynchronously when it lands and the report posted in #kitcraft.

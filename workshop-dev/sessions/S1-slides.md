@@ -107,7 +107,7 @@ Presenter split: Sachin opens (slides 1–4), hard problem (11) and logistics (1
 > Note: do not correct anyone's quadrant.
 
 ## Slide 15 — Async 1 and what is next (00:56) (presenter: Sachin)
-- Async 1 is three hours (17:00–20:00 UTC), not an evening: paste `instructions/async-1.md`; your harness fills `participants/<my-name>/kit/README.md` only — what job, for whom, what goes in, what comes out. Push. Nothing else
+- Async 1 is three hours (17:00–20:00 UTC), not an evening: paste `instructions/async-1.md`; choose the kit you will convert into a factory tonight — your own (the `## Kit` task or a `## Built / use` item) or a facilitator kit — and your harness drafts the README's Job and Interface lines. Push. Nothing else
 - If you are going to 1A, do this after 1A
 - 1A now, 16:30–17:00 UTC, here in #kafka: install, clone, one log line, one push
 - S2 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): you build the kit. Anyone async for S2: the async post in #kitcraft

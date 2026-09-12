@@ -34,7 +34,7 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 README.md          this file
 AGENTS.md          agent entry: conventions + autolog instruction
 CLAUDE.md          points Claude Code at AGENTS.md
-instructions/      blocks to paste into your harness (orient, S1-inventory, async-1, S2-build, S2-critique, async-2, S3-bridge, no-harness)
+instructions/      blocks to paste into your harness (orient, S1-inventory, async-1, S2-factory, S2-critique, async-2, S3-bridge, no-harness)
 PARTICIPANT_TEMPLATE/  the whole participant folder to copy: inventory.md, kit/, bridges/TEMPLATE.md, LOG.md
 participants/<name>/   one folder per participant, the only place their harness writes (S1–S3)
 facilitator/<name>/    facilitator kits in the same shape, usable as bridge targets
@@ -63,7 +63,7 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#kitcraft**, 
 |---|---|---|---|
 | S1 Kits | Mon Sep 21, 15:30 | 60 min | `participants/<name>/inventory.md` |
 | 1A clinic (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
-| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` |
+| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` as a factory (declared interface) |
 | S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<name>/bridges/<target>.md` |
 | S4 Recap | Tue Sep 22, 20:00 | 60 min | `workshop-dev/transcripts/S4/SYNTHESIS.md` |
 

@@ -5,7 +5,7 @@ Timestamps are minutes from session start. Presenter on each heading (presenter 
 ## Slide 1 — Where we are (00:00) (presenter: Sachin)
 - Recording on; consent as pinned; breakouts off the record
 - S1 awareness check: `<tally from workshop-dev/transcripts/S1/awareness-check.md>` — say whether the expected winner (precommodification) held
-- `<n>` README drafts pushed since S1; `<k>` stubs (content on the owner's machine)
+- `<n>` sources chosen since S1 (`<o>` own kits, `<f>` facilitator kits); `<k>` stubs (content on the owner's machine)
 - Kit time is carnival time: three hours ago these were tasks in your head; tonight they become things a stranger's agent can fail at
 - A kit is what stays after the agent has failed at it once
 > Speaker note: one sentence per bullet; the room has had three hours, not a night. Confirm "Recording on" in #kitcraft first.
@@ -31,22 +31,22 @@ Timestamps are minutes from session start. Presenter on each heading (presenter 
 - Factory: the same kit with an interface someone else's agent can use without you
 - The ladder, ascending effort: README handed to an agent → static page → MCP → API / A2A
 - CMM: Discover → Encode = Kit · Prove = Factory · Harvest = Bridge
-- Every kit in this repo is rung one; the template has an `Interface:` line — write "file handoff"
+- Tonight's deliverable is rung one done properly; the README's `Interface:` line names the rung and how to call it. Rungs 2+ are stretch
 > Speaker note: answers the question that always comes: for a document kit, the README *is* the interface.
 
-## Slide 5 — Build the kit (15:00 → 35:00) (presenter: Rafa; comms layer at 30:00: Sachin)
-- Your harness already has `participants/<you>/kit/README.md` from Async 1; paste `instructions/S2-build.md`'s block to fill the rest
-- `README.md` — job, for whom, inputs, outputs, interface, one example run, not-for
-- `SKILL.md` — `name`, `description` (the trigger line), when to use, steps, constraints, do-nots
-- `examples/` — one input, the output it produced; synthetic or redacted
+## Slide 5 — Convert a kit into a factory (15:00 → 35:00) (presenter: Rafa; comms layer at 30:00: Sachin)
+- Take the kit you chose in Async 1 — your own (`## Kit` task or `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and make it a factory: a kit with a declared interface a stranger's agent can use without talking to you
+- Paste `instructions/S2-factory.md`'s block. Rung 1, done properly: `README.md` with an `Interface:` line (the rung and how to call it) · `SKILL.md` whose `description` triggers · `examples/input.*` + `output.*` produced cold from SKILL.md
+- Facilitator kit: copied into your folder, adapted to your organisation and data (inputs, constraints, do-nots), `Source:` on the README's first line
+- Rungs 2+ (static page, MCP, API/A2A) only after rung 1 works; never claim a rung you did not build
 - **30:00, Sachin — comms layer:** cut what adds nothing · remove the AI tells · rewrite the README by hand
 - Push at 33:00; unfinished is fine, absent is not
-> Speaker note: Rafa calls 5, 10 min; Sachin takes over at 15 for the comms rules, calls "push" at 18. Private kits: content local, stub only.
+> Speaker note: Rafa calls 5, 10 min; Sachin takes over at 15 for the comms rules, calls "push" at 18. Private kits: content local, stub only. Commit is `S2: <name>: factory from <source>`.
 
 ## Slide 6 — Triad critique (35:00 → 48:00, breakouts) (presenter: Sachin)
 - Ring inside each triad, from the pin: A reads B · B reads C · C reads A; a pair reads each other
 - `<triad 1>` in breakout-1, `<triad 2>` in breakout-2, … (the pinned table)
-- Your agent reads the target cold and runs the example; report in ≤5 lines
+- Your agent uses the target factory through its declared interface (README + SKILL.md only) and runs the example cold; report in ≤5 lines where the interface was insufficient
 - Owner logs every failure as a `blocker` line; no explaining out loud until it is in the kit
 - Block: `instructions/S2-critique.md` (pinned as a link); the text is the facilitator
 > Speaker note: `/stop`, post "rooms open", move people. Facilitators split the rooms between them and swap at minute 6. A stub goes to the strongest reader in its triad; an absent member makes a pair.
@@ -65,7 +65,7 @@ Timestamps are minutes from session start. Presenter on each heading (presenter 
 
 ## Slide 9 — Async 2, overnight (56:00) (presenter: Sachin)
 - Fix the failure your triad's agent found: paste `instructions/async-2.md`. Push v2 with a `progress` line saying what changed
-- Anyone async tonight: push your kit; your assigned reader's agent reads it and posts the report in #kitcraft; log the blockers, fix
+- Anyone async tonight: push your factory (`instructions/S2-factory.md`); your assigned reader's agent uses it and posts the report in #kitcraft; log the blockers, fix
 - S3 triads (rotated) posted in #kitcraft at 09:00 UTC; alternative targets in `facilitator/README.md`
 - Tomorrow 15:30 UTC: bridges. Bring the kit you did *not* critique in mind
 > Speaker note: posted verbatim to #kitcraft at 20:58 (the async post in `../discord-pins.md`); `/stop` at 21:00.

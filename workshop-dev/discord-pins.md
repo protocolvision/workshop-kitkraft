@@ -38,7 +38,7 @@ Verbatim: the "Full notice" section of `workshop-dev/sessions/consent-notice.md`
 
 **Triads for tonight, confirmed from the inventories.** Critique ring inside each triad: A reads B, B reads C, C reads A. A pair reads each other.
 <triads: one line per group — **Triad 1 → breakout-1:** @a, @b, @c. a reads b · b reads c · c reads a. Mark stubs: "(stub: report what your agent would need)". Mark anyone absent: "@x async — see the block's ABSENT variant".>
-At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your kit, reads the target cold, gives you a 5-line report to read aloud, then logs the blockers about your own kit when you say "log mine".
+At 20:35 paste `instructions/S2-critique.md` into your harness with your <name> and <target>; say "do this". It pushes your factory, uses the target through its declared interface (README + SKILL.md, example run cold), gives you a 5-line report on where the interface was insufficient to read aloud, then logs the blockers about your own kit when you say "log mine".
 
 ## PIN 4 — triads for S3 (Tue Sep 22, 09:00 UTC)
 
@@ -48,8 +48,8 @@ Anyone may swap to a facilitator target (`facilitator/rafa/kit/`, `facilitator/s
 
 ## Pre-written posts (not pinned)
 
-**Mon 16:32 UTC, after S1 — Async 1:** Recording off. **Async 1, before 20:00 UTC:** open your harness at the clone root, paste the whole of `instructions/async-1.md`, say "do this". It drafts `participants/<you>/kit/README.md` from your inventory and pushes. Then read the Job line and the field it was least sure about, and rewrite those two by hand. That is all. S2 at 20:00 UTC; triads pinned above. 1A now in #kafka for anyone whose push did not work.
+**Mon 16:32 UTC, after S1 — Async 1:** Recording off. **Async 1, before 20:00 UTC:** open your harness at the clone root, paste the whole of `instructions/async-1.md`, say "do this". It asks which kit you will convert into a factory tonight — your own (`## Kit` task or `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and drafts the README's Job and Interface lines. Then rewrite the Job line by hand. That is all. S2 at 20:00 UTC; triads pinned above. 1A now in #kafka for anyone whose push did not work.
 
-**Mon 20:58 UTC, after S2 — Async 2:** Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your triad logged, proposes one fix per blocker, waits for your "go", pushes v2. Async readers: push your kit first (`instructions/S2-build.md` block); your reader's harness posts the report here; run async-2 when it appears. S3 triads pinned at 09:00 UTC.
+**Mon 20:58 UTC, after S2 — Async 2:** Recording off. **Async 2, before 15:30 UTC Tuesday:** paste `instructions/async-2.md` into your harness, say "do this". It reads the blocker lines your triad logged, proposes one fix per blocker, waits for your "go", pushes v2. Async readers: push your factory first (`instructions/S2-factory.md` block); your reader's harness posts the report here; run async-2 when it appears. S3 triads pinned at 09:00 UTC.
 
 **Tue 16:29 UTC, after S3 — Async 3:** Recording off. Finish your bridge log and push by 20:00 UTC. Optional hard mode: rerun the bridge with no human chat and log it as a second section in the same file. S4 at 20:00 UTC: 90 seconds per bridge, then the room's definition against the hypothesis.
