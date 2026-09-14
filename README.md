@@ -20,10 +20,11 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
    ```
    Your harness reads `AGENTS.md` / `CLAUDE.md` on open; they tell it to write only inside `participants/<name>/` and to read anywhere. That is what makes the autolog and the write boundary work. Every later instruction is a file in `instructions/` you paste the same way.
 4. Work only in your own folder, `participants/<name>/` (`<name>` = your GitHub username, lowercase), a copy of `PARTICIPANT_TEMPLATE/`:
-   - `inventory.md` (Session 1)
-   - `kit/` (Session 2)
-   - `bridges/<target>.md` (Session 3) — one file per bridge, written by you
-   - `LOG.md` — the one autolog for everything in the folder
+   - `s1-inventory/inventory.md` (Session 1)
+   - `s2-factory/` (Session 2)
+   - `s3-bridges/<target>.md` (Session 3) — one file per bridge, written by you
+   - `s4-show-and-tell/show-and-tell.md` (Session 4) — what you say in your ninety seconds
+   - `LOG.md` — the one autolog for everything in the folder, at its root
 5. **Everything goes straight to `main`. No branches, no PRs, no force-push.** Your harness commits, pulls with rebase, pushes, and retries if the push is rejected.
 6. Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. Once an exercise begins, do any work you would rather not share in that workspace and put here only what you are comfortable sharing.
 7. Everyone has a harness and a GitHub account. Harness installed but something wrong (auth, wrong clone, wrong branch, push rejected)? Post the exact error in #workshop-kitkraft and come to 1A.
@@ -34,10 +35,10 @@ Workshop page: https://ai.protocolized.dev/kitcraft/
 README.md          this file
 AGENTS.md          agent entry: conventions + autolog instruction
 CLAUDE.md          points Claude Code at AGENTS.md
-instructions/      blocks to paste into your harness (orient, S1-inventory, async-1, S2-factory, S2-critique, async-2, S3-bridge)
-PARTICIPANT_TEMPLATE/  the whole participant folder to copy: inventory.md, kit/, bridges/TEMPLATE.md, LOG.md
-participants/<name>/   one folder per participant, the only place their harness writes (S1–S3)
-facilitator/<name>/    facilitator kits in the same shape, usable as bridge targets
+instructions/      blocks to paste into your harness (orient, S1-inventory, async-1, S2-factory, S2-critique, async-2, S3-bridge, S4-show-and-tell)
+PARTICIPANT_TEMPLATE/  the whole participant folder to copy: LOG.md, s1-inventory/, s2-factory/, s3-bridges/TEMPLATE.md, s4-show-and-tell/
+participants/<name>/   one folder per participant, the only place their harness writes (S1–S4)
+facilitator/<name>/    facilitator factories in the same shape (s2-factory/), usable as bridge targets
 workshop-dev/transcripts/       per session: transcript, summary, awareness-check; S4 also holds SYNTHESIS.md
 workshop-dev/      facilitator material: outline, resources, checklists, session materials
 workshop-dev/site/              the landing page at https://ai.protocolized.dev/kitcraft/ (source + deploy notes)
@@ -61,10 +62,10 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#workshop-kit
 
 | Session | When (UTC) | Length | Artifact |
 |---|---|---|---|
-| S1 Kits | Mon Sep 21, 15:30 | 60 min | `participants/<name>/inventory.md` |
+| S1 Kits | Mon Sep 21, 15:30 | 60 min | `participants/<name>/s1-inventory/inventory.md` |
 | 1A Tech Support (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
-| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` as a factory: it runs without you, fits whoever uses it, and hands off something others can build on — the README declares `Exports:`, `Interface:` and `Adapts to:` |
-| S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<name>/bridges/<target>.md` — one of three configurations to try: across factories, across kits, or kit ↔ factory; the closing paragraph says what a bridge turned out to be |
-| S4 Recap | Tue Sep 22, 20:00 | 60 min | `workshop-dev/transcripts/S4/SYNTHESIS.md` |
+| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/s2-factory/` as a factory: it runs without you, fits whoever uses it, and hands off something others can build on — the README declares `Exports:`, `Interface:` and `Adapts to:` |
+| S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<name>/s3-bridges/<target>.md` — one of three configurations to try: across factories, across kits, or kit ↔ factory; the closing paragraph says what a bridge turned out to be |
+| S4 Recap | Tue Sep 22, 20:00 | 60 min | `participants/<name>/s4-show-and-tell/show-and-tell.md`, prepared in Async 3; the facilitators' `workshop-dev/transcripts/S4/SYNTHESIS.md` |
 
 Berlin is UTC+2, Pacific is UTC−7. Times in all three zones are pinned in #workshop-kitkraft.
