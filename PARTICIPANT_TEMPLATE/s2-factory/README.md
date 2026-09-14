@@ -1,6 +1,6 @@
 # <kit name>
 
-Source: (optional — the kit this was converted from, e.g. `facilitator/rafa/kit/`, adapted; omit for your own kit)
+Source: (optional — the kit this was converted from, e.g. `facilitator/rafa/s2-factory/`, adapted; omit for your own kit)
 Job: one sentence.
 For: who runs it.
 Inputs: what it needs, where it comes from.
