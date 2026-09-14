@@ -8,7 +8,7 @@ Timestamps are minutes from session start. Presenter on each heading (facilitati
 
 ## Thesis
 
-A kit becomes a factory when its author stops being a required input. To get there it has to do three things: run without you, fit whoever uses it, and hand off something other people can build on. Each of those comes from someone different — the steps come from you, the context comes from the person running it, the questions come from the factory itself, and the handoff comes from an output shaped for the next person — and if any one is missing you have something else: a kit that needs you, a widget that fits nobody, a service that needs you on call, or a tool that goes nowhere. None of this is new. The gains from electricity arrived only when factories stopped hanging one big motor on the old shafts and re-laid the floor around a motor per machine, and the gains from any new technology arrive the same way, when someone re-lays the floor around it. Most of us have put AI on the old shafts. Tonight each person re-lays one small floor, and then someone else's assistant finds out whether it holds.
+A kit becomes a factory when its author stops being a required input. What makes something a factory is what it does, not what it is made of: it runs without you, fits whoever uses it, and hands off something other people can build on. The same factory could be a skill someone hands to their assistant, a single file that calls a model through MCP or an API, an app someone installs, or a website running on a machine somewhere; the form is a choice about effort and reach, and those three behaviors hold in every one of them. Each behavior comes from someone different — the steps come from you, the context comes from the person running it, the questions come from the factory itself, and the handoff comes from an output shaped for the next person — and if any one is missing you have something else: a kit that needs you, a widget that fits nobody, a service that needs you on call, or a tool that goes nowhere. None of this is new. The gains from electricity arrived only when factories stopped hanging one big motor on the old shafts and re-laid the floor around a motor per machine, and the gains from any new technology arrive the same way, when someone re-lays the floor around it. Most of us have put AI on the old shafts. Tonight each person re-lays one small floor in the cheapest form there is, a skill, and then someone else's assistant finds out whether it holds.
 
 ## The argument
 
@@ -18,8 +18,9 @@ A kit becomes a factory when its author stops being a required input. To get the
 4. Read those two through four properties and you get the definition: a factory runs without its author, bends to its user, and hands off something others can build on, and each property is supplied by someone different (slide 4).
 5. Take any one away and you have a kit, a widget, a service or a tool instead — which is how you check what you built (slide 4).
 6. The tensions between the properties were reconciled long ago: keep the steps fixed and let the user's context in at the last step, and connect factories by agreeing on an output rather than by making them alike (slide 4).
-7. Getting there is six moves — externalize, split, name the output, declare, test cold, stabilize — and rung one is enough, because closing too early locks in whatever happened to be there (slide 5).
-8. So you build it now, in twenty minutes: a README with three declared lines, a SKILL.md whose steps are the workstations and take the user's context when run, and one example produced cold — then someone else's assistant tests it (slide 6).
+7. None of that depends on form: a skill, a single file that calls a model, an app or a website running on a machine can each be a factory, and the form is a choice about effort and reach, not about what counts (slide 5).
+8. Getting there is six moves — externalize, split, name the output, declare, test cold, stabilize — and the cheapest form, a skill, is enough tonight, because closing too early locks in whatever happened to be there (slide 5).
+9. So you build it now, in twenty minutes: a README with three declared lines, a SKILL.md whose steps are the workstations and take the user's context when run, and one example produced cold — then someone else's assistant tests it (slide 6).
 
 ## Slides at a glance
 
@@ -29,7 +30,7 @@ A kit becomes a factory when its author stops being a required input. To get the
 | 2 | 02 | Sachin | Text only, group drive vs unit drive | Why the gains lag until the floor is re-laid |
 | 3 | 04 | Sachin | Four-property table; brand kit page, then `llms.txt` | Two factories you can check against the properties |
 | 4 | 08 | Sachin | Definition, who supplies what, missing-property table | Define factory; give the room a test for it |
-| 5 | 12 | Sachin | Six moves and the ladder, as tables | The route from kit to factory; why rung one |
+| 5 | 12 | Sachin | Six moves and the forms, as tables | The route from kit to factory; the forms it can take; why a skill tonight |
 | 6 | 15 | Rafa / Sachin | The factory block on screen | Brief the build, start the clock |
 | 7 | 35 | Rafa | The reading ring and the two tests | Send the rooms to test each other cold |
 | 8 | 48 | Rafa | Sentence frame, text only | Collect what the other agent got wrong |
@@ -76,7 +77,7 @@ A kit becomes a factory when its author stops being a required input. To get the
 > Speaker note: Rafa drops the essay link in #workshop-kitkraft; brand kit page 30 s, then `llms.txt`. Do not explain the image models. Leave the "—" in the table empty on purpose.
 
 ## Slide 4 — What a factory is (08:00) (presenter: Sachin)
-**On screen.** Headline "A factory runs without its author, bends to its user, and hands off something others can build on"; four lines, "Reproduction — from the author: the steps, written down" · "Personalization — from the user: their data, constraints and context, when they run it" · "Independence — from the factory: it asks for what it needs" · "Composability — from the output: shaped so another factory can use it"; then the table; footer "Autonomy is a dial: fewer questions, more risk of losing the fit · a job shop, not an assembly line".
+**On screen.** Headline "A factory runs without its author, bends to its user, and hands off something others can build on"; four lines, "Reproduction — from the author: the steps, written down" · "Personalization — from the user: their data, constraints and context, when they run it" · "Independence — from the factory: it asks for what it needs" · "Composability — from the output: shaped so another factory can use it"; then the table; footer "Defined by what it does, not what it is made of · autonomy is a dial: fewer questions, more risk of losing the fit · a job shop, not an assembly line".
 
 | Missing | What you actually have |
 |---|---|
@@ -85,7 +86,7 @@ A kit becomes a factory when its author stops being a required input. To get the
 | Independence from the author | A service. It works, as long as the author is on call. |
 | Intermediates | A tool. Useful, but a dead end nobody can build on. |
 
-**Say.** "Here is the definition: a factory is a kit that runs without its author, bends to its user, and hands off something others can build on. Notice that each part comes from someone different. The steps come from you, written down so they give the same result each time. The context comes from the person running it — their data, their constraints. Not needing you comes from the factory itself asking for what it needs, instead of you explaining. And being buildable-on comes from the output. Take one away and look at the table: you have a kit, a widget, a service or a tool. Use it on your own kit tonight. Two tensions, both solved long ago. Keeping the steps fixed and fitting each user sounds contradictory, but HP built every printer the same and only added the right power supply and manual at the last step. Your SKILL.md steps stay fixed and the user's context comes in when they run it. And there are two ways to build on someone's factory: copy it and bend it, which is what you do tonight, or use its output unchanged, which is tomorrow. Between the steps and the context sits a dial: how much the factory decides by itself. Turn it up and it asks less, but it can stop fitting. And the picture is a job shop, not an assembly line."
+**Say.** "Here is the definition: a factory is a kit that runs without its author, bends to its user, and hands off something others can build on. That describes what it does, not what it is made of; nothing in it says folder, app or website. Notice that each part comes from someone different. The steps come from you, written down so they give the same result each time. The context comes from the person running it — their data, their constraints. Not needing you comes from the factory itself asking for what it needs, instead of you explaining. And being buildable-on comes from the output. Take one away and look at the table: you have a kit, a widget, a service or a tool. Use it on your own kit tonight. Two tensions, both solved long ago. Keeping the steps fixed and fitting each user sounds contradictory, but HP built every printer the same and only added the right power supply and manual at the last step. Your SKILL.md steps stay fixed and the user's context comes in when they run it. And there are two ways to build on someone's factory: copy it and bend it, which is what you do tonight, or use its output unchanged, which is tomorrow. Between the steps and the context sits a dial: how much the factory decides by itself. Turn it up and it asks less, but it can stop fitting. And the picture is a job shop, not an assembly line."
 - Four properties, four suppliers: reproduction (author) · personalization (user) · independence (the factory asks) · composability (the output, or intermediate)
 - Autonomy sits between the steps and the user's context as a dial: more of it means fewer questions and a greater risk of losing the fit
 - Postponement: keep the core standard, push the customization to the last step, supplied at the edge — HP localized identical printers at regional distribution centres. Personalization is reproduction with the differences moved to the end
@@ -95,7 +96,7 @@ A kit becomes a factory when its author stops being a required input. To get the
 > Speaker note: four minutes. The table is the slide; say the definition twice. If time is short, drop the McIlroy quote and the River Rouge line aloud; they stay on the bullets. The question that always comes: for a document kit, the document is the output and the README is the way in.
 
 ## Slide 5 — Six moves, and why rung one (12:00) (presenter: Sachin; hands to Rafa at 15:00)
-**On screen.** Headline "Six moves from kit to factory"; the two tables drawn in the deck; footer "Tonight is rung one, done properly."
+**On screen.** Headline "Six moves from kit to factory"; the two tables drawn in the deck; footer "Same definition in every form. Tonight is the cheapest form, a skill, done properly."
 
 | Move | What you do tonight | Where it comes from |
 |---|---|---|
@@ -106,18 +107,18 @@ A kit becomes a factory when its author stops being a required input. To get the
 | 5 Test cold | someone else's assistant runs it without you | tonight's critique |
 | 6 Stabilize | hold the way in still; keep the inside free to change | Parnas on hiding what may change |
 
-| Rung | The way in | Standard |
+| Rung | Form | How someone else reaches it |
 |---|---|---|
-| 1 | README + SKILL.md handed to an assistant, plus one example | Agent Skills |
-| 2 | A static page saying how to call it | — |
-| 3 | A machine door any assistant can call | MCP |
-| 4 | One factory calling another, nobody in between | A2A |
+| 1 | A skill: a README and SKILL.md an assistant runs, plus one example | hand it to their assistant (Agent Skills) |
+| 2 | A single file that calls a model through MCP or an API | run the file, or call its tool or endpoint (MCP) |
+| 3 | An app someone installs | install it and run it |
+| 4 | A website running on a machine somewhere, with a VM behind it | a URL |
 
-**Say.** "How do you get from kit to factory? Six moves, and every one has a long history. Write down what you actually do, including the bits you do without thinking. Split it into steps, each one a workstation. Name what leaves at the end — that is the thing someone else builds on. Declare it, which just means saying in public what other people can rely on: what it exports, how to call it, and what it adapts to. Then let someone else's assistant run it without you, and after that, hold that front door still while you keep changing the inside. The ladder on the right is how much effort the front door takes, not how good you are. Tonight everyone is on rung one, and that is the right rung: standards that close early lock in whatever happened to be there, which is how we all ended up typing on QWERTY. Declare the smallest way in and keep the inside free. Rafa."
+**Say.** "How do you get from kit to factory? Six moves, and every one has a long history. Write down what you actually do, including the bits you do without thinking. Split it into steps, each one a workstation. Name what leaves at the end — that is the thing someone else builds on. Declare it, which just means saying in public what other people can rely on: what it exports, how to call it, and what it adapts to. Then let someone else's assistant run it without you, and after that, hold that front door still while you keep changing the inside. The ladder on the right is the forms a factory can take, from a skill to a website running on a machine somewhere. Climbing it buys reach and costs effort; it does not make something more of a factory, because the definition is the same on every rung. Tonight everyone is on rung one, and that is the right rung: standards that close early lock in whatever happened to be there, which is how we all ended up typing on QWERTY. Declare the smallest way in and keep the inside free. Rafa."
 - The six moves: externalize · split · name the output · declare · test cold · stabilize; tonight's block follows them in that order
 - Externalize is the hard one: most of what you know you do not know you know
-- Declare = three lines in the README: `Exports:` (the intermediate), `Interface:` (the rung and how to call it), `Adapts to:` (the context the user brings, and where it goes in). The visible rules are few; everything else stays hidden and free to change
-- The ladder is effort, not virtue; never claim a rung you did not build
+- Declare = three lines in the README: `Exports:` (the intermediate), `Interface:` (the form it takes and how someone else reaches it), `Adapts to:` (the context the user brings, and where it goes in). The visible rules are few; everything else stays hidden and free to change
+- The ladder is forms, ordered by effort: skill → single file calling a model through MCP or an API → app → website on a machine. More reach and more effort, same definition; never claim a form you did not build
 - Do not close too early: early standardization locks in what happened to be there. Rung one declares the smallest way in
 **Reference.** Taylor (1911); Polanyi (1966); Nonaka & Takeuchi (1995); Smith (1776); Hounshell (1984); Baldwin & Clark (2000); Parnas (1972); Bijker (1995); David (1985) — `../resources.md` §3a · [Agent Skills specification](https://agentskills.io/specification)
 > Speaker note: name each source in two words at most; the table does the work. Hand to Rafa at 15:00 sharp.
@@ -127,10 +128,10 @@ A kit becomes a factory when its author stops being a required input. To get the
 **Say.** Rafa: "Your turn. Open your harness at the top of the clone, paste the block I am pinning now and say 'do this'. It walks the six moves in order, it will ask which kit you chose in Async 1, and it will not invent answers for you. When I call push, four things have to exist: a README with three lines — what this exports, how to call it, and what it adapts to — a SKILL.md whose numbered steps are the workstations and ask for the user's context instead of assuming yours, one example your assistant produced cold from that SKILL.md alone, and all of it inside `participants/<you>/kit/`. Time calls at five and ten minutes; everything in this repo is public, so keep anything sensitive on your own machine." Sachin at 30:00: "Three rules before you push: cut every sentence that adds nothing, take out the AI tells — the hedges, the triple adjectives, the summary of what you just said — and rewrite the README's Job line in your own words."
 - Take the kit you chose in Async 1 — your own (`## Kit` task or `## Built / use` item) or a facilitator kit (`facilitator/rafa/kit/`, `facilitator/sachin/kit/`) — and make it a factory, inside `participants/<you>/kit/`
 - The block follows the six moves: externalize and split into `SKILL.md` steps (workstations) · name the output · declare it in the README · test cold with the example
-- `README.md`: `Exports:` (the intermediate) · `Interface:` (the rung and how to call it) · `Adapts to:` (the context the person running it brings — data, constraints or setup — and where it goes in)
+- `README.md`: `Exports:` (the intermediate) · `Interface:` (the form, tonight a skill, and how someone else reaches it) · `Adapts to:` (the context the person running it brings — data, constraints or setup — and where it goes in)
 - `SKILL.md`: steps take the user's context at run time rather than hard-coding the author's; `description` makes it trigger
 - Facilitator kit = a fork: copied into your folder, adapted to your organization and data, `Source:` on the README's first line
-- Rungs 2+ only after rung 1 works; **30:00, Sachin — comms layer**; push at 33:00, unfinished is fine, absent is not
+- Other forms (a single file calling a model, an app, a website) only after the skill works; **30:00, Sachin — comms layer**; push at 33:00, unfinished is fine, absent is not
 **Reference.** [Agent Skills specification](https://agentskills.io/specification) · [Chaudhary, "How to Turn Your AI Into a World-Class Designer"](https://lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world)
 > Speaker note: Rafa briefs and calls 5, 10 min; Sachin takes over at 15 for the comms rules; Rafa calls "push" at 18. Commit is `S2: <name>: factory from <source>`.
 
