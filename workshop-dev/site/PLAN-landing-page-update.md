@@ -5,7 +5,7 @@
 | **Page** | https://ai.protocolized.dev/kitcraft/ (source: `workshop-dev/site/index.html`, 614 lines) |
 | **Issue** | protocolvision/workshop-kitkraft#2 · milestone *Workshop ready — Sep 21, 2026* |
 | **Owner / reviewer** | Rafa (decisions + sign-off) · Sachin (theory copy) |
-| **Source of truth** | `workshop-dev/outline.md` (v8) and `README.md` on `main`, merged 2026-09-12 (`b0430ea`) |
+| **Source of truth** | `workshop-dev/planning/outline.md` (v8) and `README.md` on `main`, merged 2026-09-12 (`b0430ea`) |
 | **Status** | **Approved and applied** 2026-09-12 — D1 drop the talk, D2 keep 10–15, D3 publish times, D4 link the repo; C11 skipped (a fifth card breaks the four-column grid) |
 | **Deploy** | here.now slug `bold-steeple-73wb` → mounted at `ai.protocolized.dev/kitcraft` |
 | **Rev 2** | Copy rewritten to put working together at the centre, in plain welcoming sentences (Rafa, 2026-09-12) |
@@ -191,7 +191,7 @@ Add a fifth card for *Have Your Factory Call My Factory*, with a human gloss: "T
 
 ## Acceptance criteria
 
-1. No sentence contradicts `workshop-dev/outline.md` v8 or `README.md` on `main`.
+1. No sentence contradicts `workshop-dev/planning/outline.md` v8 or `README.md` on `main`.
 2. A reader who knows nothing about the Symposium can say, after one pass, what the two days are for and what they will do with other people.
 3. Kit, factory and bridge each appear with a plain-language gloss the first time they are used.
 4. None of these appear anywhere: "disposable app", "context hub", "Kit trade", "Play · Kit · Practice", "60 to 90 minutes", "beginner clinic", "if oversubscribed", "declared interface", "arbitrary agent", "stranger's agent".

@@ -1,6 +1,6 @@
 # Prep checklist
 
-Facilitation split: Rafa runs ops, coordination and the exercises — the first minute of each session, #workshop-kitkraft, pins, breakouts, recorder, repo, checks, async posts, 1A — and Sachin presents the theory, opening the content right after Rafa's first minute; see `outline.md` (Facilitation split) and the Presenter column of each run-of-show in `sessions/`. GitHub account with write access to `protocolvision/`: Rafa `rafaeldavid`, Sachin as listed in the roster (facilitator-only, not in the repo).
+Facilitation split: Rafa runs ops, coordination and the exercises — the first minute of each session, #workshop-kitkraft, pins, breakouts, recorder, repo, checks, async posts, 1A — and Sachin presents the theory, opening the content right after Rafa's first minute; see `outline.md` (Facilitation split) and the Presenter column of each run-of-show in `workshop-dev/sessions/`. GitHub account with write access to `protocolvision/`: Rafa `rafaeldavid`, Sachin as listed in the roster (facilitator-only, not in the repo).
 
 | Date | Task | Owner | Done |
 |---|---|---|---|

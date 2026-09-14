@@ -79,7 +79,7 @@ The bridge essay. Intermediates, not finished artifacts, flow between factories;
 
 ## 3a. From kit to factory — organizational history (new, Sep 14)
 
-The sources behind S2's concept: a factory is a kit that runs without its author, bends to its user, and hands off something others can build on. Cited by author and year in `sessions/S2-slides.md`; full entries in §8. Organized by the six moves, then by the tensions the deck reconciles.
+The sources behind S2's concept: a factory is a kit that runs without its author, bends to its user, and hands off something others can build on. Cited by author and year in `workshop-dev/sessions/S2-slides.md`; full entries in §8. Organized by the six moves, then by the tensions the deck reconciles.
 
 **The six moves**
 1. *Externalize — write down what you actually do.*

@@ -4,7 +4,7 @@ Facilitation split: Rafa — first two minutes (opener, what S2 left in the repo
 
 | Clock (UTC) | Min | Presenter | Rafa (ops) | Sachin (theory) | Participants | Artifact expected | Recorder |
 |---|---|---|---|---|---|---|---|
-| 15:15 | −15 | — | Pulls `main`; picks two blocker lines from `participants/*/LOG.md` for slide 2; posts the S3 groups post (`../breakout-instructions.md`) in #workshop-kitkraft; confirms the rotation against the real S2 critique assignment; has the hypothesis text ready to pin at 16:28, not before | Slides 3–8 ready | — | Pinned rotation + instructions | — |
+| 15:15 | −15 | — | Pulls `main`; picks two blocker lines from `participants/*/LOG.md` for slide 2; posts the S3 groups post (`../planning/breakout-instructions.md`) in #workshop-kitkraft; confirms the rotation against the real S2 critique assignment; has the hypothesis text ready to pin at 16:28, not before | Slides 3–8 ready | — | Pinned rotation + instructions | — |
 | 15:28 | −2 | — | "Recording starts now"; `/record channel:#kafka name:KITCRAFT-S3` | — | — | — | `/record channel:#kafka name:KITCRAFT-S3` |
 | 15:30 | 00 | Rafa | Slide 1 (the question S1 left open); posts session order | Listens | Listen | — | on |
 | 15:31 | 01 | Rafa | Slide 2: shows two anonymised blocker lines; hands to Sachin | — | Listen | — | on |

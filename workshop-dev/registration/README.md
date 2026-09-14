@@ -45,4 +45,4 @@ Options for question 7:
 
 ## Changing the form
 
-Edit it in Google Forms, then update the table above and the snapshot date so this record stays true. If a question is added that affects who gets invited or paired, add a row to `workshop-dev/prep-checklist.md`.
+Edit it in Google Forms, then update the table above and the snapshot date so this record stays true. If a question is added that affects who gets invited or paired, add a row to `workshop-dev/planning/prep-checklist.md`.

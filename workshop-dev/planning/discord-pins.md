@@ -1,6 +1,6 @@
 # Discord — pins and session posts for #workshop-kitkraft
 
-Paste-ready. Each block below is one Discord message, under 1,900 characters (Discord's cap is 2,000); the count after each block is an HTML comment. Pins stay light on purpose: anything that can change lives in the repo, and the pins point there. The three pins are Rafa's text, verbatim as he posted them on Discord (2026-09-12); their facts win over any other file. The session posts go up at the times given (they match the run-of-shows in `sessions/`). Rooms assumed: voice #kafka, voice breakout-1 … breakout-5, text #workshop-kitkraft (this channel, https://discord.com/channels/1082444651946049567/1548286831232032778), text #meeting-notes (existing, shared: https://discord.com/channels/1082444651946049567/1519549380791631903).
+Paste-ready. Each block below is one Discord message, under 1,900 characters (Discord's cap is 2,000); the count after each block is an HTML comment. Pins stay light on purpose: anything that can change lives in the repo, and the pins point there. The three pins are Rafa's text, verbatim as he posted them on Discord (2026-09-12); their facts win over any other file. The session posts go up at the times given (they match the run-of-shows in `workshop-dev/sessions/`). Rooms assumed: voice #kafka, voice breakout-1 … breakout-5, text #workshop-kitkraft (this channel, https://discord.com/channels/1082444651946049567/1548286831232032778), text #meeting-notes (existing, shared: https://discord.com/channels/1082444651946049567/1519549380791631903).
 
 ---
 

@@ -1,7 +1,7 @@
 # AI Kitcraft — Workshop Outline v8
 
 Protocol Symposium 2026 · New Nature · Sep 21–22 (workshop days) · online
-Facilitators: Rafa (lead: ops, coordination, exercises), Sachin Benny (co-facilitator: theory). Rafa opens every session with its first minute (welcome, consent, logistics) and owns #workshop-kitkraft, pins, breakouts, recorder and repo; Sachin opens the content right after and presents every conceptual segment (see Facilitation split below); the run-of-shows in `sessions/` carry a presenter column per slide. Rafa screen-shares throughout; the presenter talks.
+Facilitators: Rafa (lead: ops, coordination, exercises), Sachin Benny (co-facilitator: theory). Rafa opens every session with its first minute (welcome, consent, logistics) and owns #workshop-kitkraft, pins, breakouts, recorder and repo; Sachin opens the content right after and presents every conceptual segment (see Facilitation split below); the run-of-shows in `workshop-dev/sessions/` carry a presenter column per slide. Rafa screen-shares throughout; the presenter talks.
 Format: four sessions of 60 min plus an optional 30-min tech-support slot (1A), async work between sessions. Designed for breakout groups of 2–4, sized by the facilitators from headcount (6 → two groups of 3; 10 → five pairs or two 3s + two 2s; 12 → four 3s or three 4s).
 
 | Session | UTC | Berlin (+2) | Pacific (−7) |
@@ -52,9 +52,9 @@ By the end a participant can:
 
 ## Session 1 — Kits (60 min, Mon 15:30 UTC)
 
-Slides and minute table: `sessions/S1-slides.md`, `sessions/S1-run-of-show.md`.
+Slides and minute table: `workshop-dev/sessions/S1-slides.md`, `workshop-dev/sessions/S1-run-of-show.md`.
 
-**Open and consent (3)** Rafa. One slide of orientation; the consent notice read aloud verbatim (`sessions/consent-notice.md`), ending "Recording starts now".
+**Open and consent (3)** Rafa. One slide of orientation; the consent notice read aloud verbatim (`workshop-dev/sessions/consent-notice.md`), ending "Recording starts now".
 
 **Ice-breaker (9)** Rafa times it. Round-robin at 75 seconds: name, organisation, your AI posture from the survey, one recent surprise or personal protocol for using AI. Facilitators seed (Rafa first with the water-rate rule "the agent never converts units", Sachin second).
 
@@ -95,20 +95,20 @@ This is the one-way version of the Wallfacer rule: no live coordination needed, 
 
 ## Session 1A — Tech Support (optional, Mon 16:30–17:00 UTC, #kafka, not recorded)
 
-Content: `sessions/1A-clinic.md`. Rafa runs it, including the #workshop-kitkraft threads. For anyone whose harness is installed but something is wrong: no pre-work push, wrong account, wrong clone, wrong branch, push rejected, harness opened outside the clone. No installs beyond the setup checklist's verify block. Eight minutes of naming the failed step, then one pasteable block that runs seven checks with a command and a proof each — tools, login as the right account, invite, clone by origin URL, harness at the clone root reading `AGENTS.md`, one log line, one push verified per file. Exit per person: seven PASS lines. A FAIL on the push means the participant retries at the start of S2 with the fix from their thread. The two things no harness can do (installing git/gh, the browser login) are the pre-work's Item 0; 1A checks them, it does not absorb them.
+Content: `workshop-dev/sessions/1A-clinic.md`. Rafa runs it, including the #workshop-kitkraft threads. For anyone whose harness is installed but something is wrong: no pre-work push, wrong account, wrong clone, wrong branch, push rejected, harness opened outside the clone. No installs beyond the setup checklist's verify block. Eight minutes of naming the failed step, then one pasteable block that runs seven checks with a command and a proof each — tools, login as the right account, invite, clone by origin URL, harness at the clone root reading `AGENTS.md`, one log line, one push verified per file. Exit per person: seven PASS lines. A FAIL on the push means the participant retries at the start of S2 with the fix from their thread. The two things no harness can do (installing git/gh, the browser login) are the pre-work's Item 0; 1A checks them, it does not absorb them.
 
 ---
 
 ## Session 2 — Factories (60 min, Mon 20:00 UTC)
 
-Slides and minute table: `sessions/S2-slides.md`, `sessions/S2-run-of-show.md`.
+Slides and minute table: `workshop-dev/sessions/S2-slides.md`, `workshop-dev/sessions/S2-run-of-show.md`.
 
 **Examples (15)**
 - Rafa (1): where we are; recording, consent, the S1 tally, the sources chosen. Sachin (1): the kit you picked works because you are there to bend it; tonight's move is to take the author out as a required input.
 - Sachin (2): **from shafts to wires**. Factories first electrified with one big motor on the old line shafts (group drive) and almost nothing happened; the gains came with a motor per machine (unit drive), because the floor could be laid out by workflow (Devine 1983; David 1990). Most AI use is the big motor on the old shafts; kit → factory is the unit-drive move at the scale of one practice.
 - Sachin (4): **two factories, read through four properties**. Rao → Dixon: Rao's manuscript factory produced intermediates (drafts + metadata), Jenna Dixon's production factory consumed them unchanged through a shared Dropbox folder and a metadata server — it composes through an intermediate and runs without its author; two non-coders, because the scarce thing is coordination, not machinery (Chandler 1977; Hughes 1983 on the reverse salient). The PI brand kit (TITLES → two narrow models → brand kit → Monstrous Times; Jamverse as the fiction-side sibling) is read by an assistant through `llms.txt` → `brand.json` with no human in the loop, and Monstrous Times bends it to a new user by forking. Rao's factory-to-factory link is one observed form of what this workshop calls a bridge; whether it is *the* form is what Tuesday finds out.
-- Sachin (4): **what a factory is**. A factory is a kit that runs without its author, bends to its user, and hands off something others can build on. What makes it a factory is what it does, not what it is made of: a skill, a single file that calls a model through MCP or an API, an app, or a website running on a machine can each be one. Four properties, each supplied by someone different: reproduction from the author (the procedure, written down), personalization from the user (their data, constraints and context, at run time), independence from the factory itself (it asks for what it needs), composability from the intermediate (an output another factory can consume, fork, or slot into something larger). Autonomy is a dial across the middle: more of it, fewer questions, more risk of losing the fit. The missing-property table (kit / widget / service / tool) is on screen as given in `sessions/S2-slides.md` slide 4. Tensions: reproduction vs personalization → postponement (HP's identical printers localized at regional distribution centres; Feitzinger & Lee 1997; Pine 1993) — SKILL.md's steps stay fixed and the user's context enters at run time; composability → fork (copy and bend: tonight) versus compose (consume the intermediate unchanged: S3; Unix pipes agree on one intermediate, McIlroy et al. 1978). The destination is Rao's flexible job shop, not an assembly line (Sabel & Zeitlin 1985).
-- Sachin (3): **six moves, and why rung one**. Externalize (Taylor 1911; Polanyi 1966; Nonaka & Takeuchi 1995) → split (Smith's pin factory) → name the output (Chandler) → declare what others may depend on: `Exports:`, `Interface:`, `Adapts to:` (Hounshell 1984; Baldwin & Clark 2000) → test cold (the critique) → stabilize (Parnas 1972). The ladder is the forms a factory can take, ordered by effort — rung 1 a skill (README + SKILL.md handed to an assistant, plus one worked example) → rung 2 a single file that calls a model through MCP or an API → rung 3 an app → rung 4 a website running on a machine — and climbing it buys reach and costs effort without making anything more of a factory. Do not close too early (Bijker 1995; David 1985 on QWERTY): rung one declares the smallest way in and keeps the inside free. For a document kit, the document is the intermediate and the README is the way in. Sources: `resources.md` §3a.
+- Sachin (4): **what a factory is**. A factory is a kit that runs without its author, bends to its user, and hands off something others can build on. What makes it a factory is what it does, not what it is made of: a skill, a single file that calls a model through MCP or an API, an app, or a website running on a machine can each be one. Four properties, each supplied by someone different: reproduction from the author (the procedure, written down), personalization from the user (their data, constraints and context, at run time), independence from the factory itself (it asks for what it needs), composability from the intermediate (an output another factory can consume, fork, or slot into something larger). Autonomy is a dial across the middle: more of it, fewer questions, more risk of losing the fit. The missing-property table (kit / widget / service / tool) is on screen as given in `workshop-dev/sessions/S2-slides.md` slide 4. Tensions: reproduction vs personalization → postponement (HP's identical printers localized at regional distribution centres; Feitzinger & Lee 1997; Pine 1993) — SKILL.md's steps stay fixed and the user's context enters at run time; composability → fork (copy and bend: tonight) versus compose (consume the intermediate unchanged: S3; Unix pipes agree on one intermediate, McIlroy et al. 1978). The destination is Rao's flexible job shop, not an assembly line (Sabel & Zeitlin 1985).
+- Sachin (3): **six moves, and why rung one**. Externalize (Taylor 1911; Polanyi 1966; Nonaka & Takeuchi 1995) → split (Smith's pin factory) → name the output (Chandler) → declare what others may depend on: `Exports:`, `Interface:`, `Adapts to:` (Hounshell 1984; Baldwin & Clark 2000) → test cold (the critique) → stabilize (Parnas 1972). The ladder is the forms a factory can take, ordered by effort — rung 1 a skill (README + SKILL.md handed to an assistant, plus one worked example) → rung 2 a single file that calls a model through MCP or an API → rung 3 an app → rung 4 a website running on a machine — and climbing it buys reach and costs effort without making anything more of a factory. Do not close too early (Bijker 1995; David 1985 on QWERTY): rung one declares the smallest way in and keeps the inside free. For a document kit, the document is the intermediate and the README is the way in. Sources: `workshop-dev/context-tank/resources.md` §3a.
 
 **Exercise — Convert a kit into a factory (20)** Rafa briefs; Sachin takes the last five minutes for the comms layer.
 Take one of the kits identified in your inventory — your own (the `## Kit` task, or something from `## Built / use`) or a facilitator kit (`facilitator/rafa/s2-factory/`, `facilitator/sachin/s2-factory/`) — and convert it into a factory, inside `participants/<name>/s2-factory/`, by following the six moves: externalize and split (SKILL.md steps as workstations, taking the user's context at run time rather than the author's), name the output, declare, test cold. Paste the block in `instructions/S2-factory.md`. Deliverable: rung 1, a skill, done properly — README with three declared lines, `Exports:` (the intermediate), `Interface:` (the form and how someone else reaches it) and `Adapts to:` (the context the user brings and where it goes in), SKILL.md whose steps are the workstations and whose description triggers correctly, `examples/input.*` + `output.*` (the exported intermediate) produced cold from SKILL.md; the other forms (a single file that calls a model through MCP or an API, an app, a website running on a machine) are optional stretch. Converting a facilitator kit is a fork: copy it into `participants/<name>/s2-factory/`, adapt inputs, constraints and do-nots to your own organisation and data, declare the three lines, credit the source on the README's first line. The harness works from the participant's answers, never inventing. Artifact: `participants/<name>/s2-factory/` as a factory; commit `S2: <name>: factory from <source>`.
@@ -124,7 +124,7 @@ The comms layer, from the anshuc techniques (Sachin, at minute 15 of the build):
 
 ## Session 3 — Bridges (60 min, Tue 15:30 UTC)
 
-Slides and minute table: `sessions/S3-slides.md`, `sessions/S3-run-of-show.md`.
+Slides and minute table: `workshop-dev/sessions/S3-slides.md`, `workshop-dev/sessions/S3-run-of-show.md`.
 
 **Examples (14)**
 - Rafa (1): opener — the question S1 left open: how do two private practices reach each other without a shared app? Output is one file per person, `participants/<you>/s3-bridges/<target>.md`; we do not know yet what it will show.
@@ -147,7 +147,7 @@ One log per bridge, one writer. At minute 30 the harness stops building and writ
 
 ## Session 4 — Recap and showcase (60 min, Tue 20:00 UTC)
 
-Slides, minute table, synthesis procedure, hypothesis rule and awareness tally: `sessions/S4-slides.md`, `sessions/S4-run-of-show.md`.
+Slides, minute table, synthesis procedure, hypothesis rule and awareness tally: `workshop-dev/sessions/S4-slides.md`, `workshop-dev/sessions/S4-run-of-show.md`.
 
 **Open (2)** Rafa. The repo tree on screen: the room's own artifacts are the slides.
 
@@ -240,7 +240,7 @@ Time budget check: S2 20-min build + 13-min critique (room moves inside it) hold
 
 ### 5. Recording — OpenRecapper
 
-Runbook: `sessions/recorder-runbook.md` (operator Rafa, backup Sachin). What it is: self-hosted Discord bot; `/record channel:#kafka name:KITCRAFT-S<n>` and `/stop`; per-user tracks, Deepgram diarized transcript on stop, live transcript streamed to #meeting-notes; optional AI summary via a relay; auto-stop when the channel empties and after 20 min of silence.
+Runbook: `workshop-dev/sessions/recorder-runbook.md` (operator Rafa, backup Sachin). What it is: self-hosted Discord bot; `/record channel:#kafka name:KITCRAFT-S<n>` and `/stop`; per-user tracks, Deepgram diarized transcript on stop, live transcript streamed to #meeting-notes; optional AI summary via a relay; auto-stop when the channel empties and after 20 min of silence.
 
 Constraint that shapes the plan: one bot identity = one voice connection per server, so recording a breakout room needs one extra bot token per room (N+1 apps, Deepgram cost ×N). Default: plenary only, unless extra tokens exist; with one extra token, one sample room per session is recorded. The consent notice already says breakouts may be recorded; the autolog remains the breakout record for the S4 synthesis.
 
@@ -253,7 +253,7 @@ Rules, because of the auto-stop:
 
 Setup checklist (owner: whoever runs PI's OpenRecapper instance): `RECORD_MEETING_NAMES` includes `KITCRAFT-S1..S4` (and the `B` names if needed); `/record-access grant` to both facilitators; live transcript channel = #meeting-notes; manual `/record`, not `/schedule`; relay configured for the summary or the co-facilitator's agent writes `summary.md`; retention: audio pruned after 7 days, text kept.
 
-Consent: the canonical text is `sessions/consent-notice.md` — a 45-second read-aloud at the top of S1 (one sentence at the top of S2–S4) and a full notice covering what is recorded (plenary voice and all text in #workshop-kitkraft; breakouts may be recorded; not 1A), where it goes (live channel, public repo, log lines), retention, removal on request with the git-history caveat, opting out without leaving, personal data, and the after-Tuesday disposition.
+Consent: the canonical text is `workshop-dev/sessions/consent-notice.md` — a 45-second read-aloud at the top of S1 (one sentence at the top of S2–S4) and a full notice covering what is recorded (plenary voice and all text in #workshop-kitkraft; breakouts may be recorded; not 1A), where it goes (live channel, public repo, log lines), retention, removal on request with the git-history caveat, opting out without leaving, personal data, and the after-Tuesday disposition.
 
 ### 6. Prep timeline
 
@@ -311,7 +311,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - Push rule with retry and conflict recipe; NAME = GitHub username; facilitator clause; never-delete-a-line rule, in `AGENTS.md`. (OBS 6, 26; rafa 21, 37; sachin 2, 15, 38)
 - Agent-actionable everything: `instructions/` folder, blocks with settings first, clone recognised by origin URL, check-before-clone, account check, per-file verify, stop-and-ask for the three tasks, one inventory schema. Pre-work email rewritten with Item 0 (human-only installs), subscription line, local-time line, human "main only" line. (OBS 10–21, 23–25; rafa 36–42; sachin 33–37, 40)
 - Recorder: explicit `/stop` before every breakout and re-`/record` at reconvene, a facilitator speaks every ≤15 min, awareness answers saved to `workshop-dev/transcripts/S<n>/awareness-check.md`, same-name re-record tested Sep 17, S4 synthesis from the live channel text with v2 in 48 h. (rafa 22, 23; sachin 12, 13, 14)
-- 1A has content: `sessions/1A-clinic.md`, seven checks with proofs; not recorded. (rafa 29; sachin 29)
+- 1A has content: `workshop-dev/sessions/1A-clinic.md`, seven checks with proofs; not recorded. (rafa 29; sachin 29)
 - Presenter split by expertise, Sachin opens; presenter column in every run-of-show; one screen-sharer. (rafa 12, 34; sachin 28, 32)
 - Every participant has a harness and a GitHub account: the paste-it-and-a-facilitator-pushes path (its instructions file, the email's Block B, the browser-editor mentions) is removed; 1A is for a harness that is installed but not working. (Rafa, Sep 12)
 - Public by default: no per-kit public/private choice, no stub READMEs, no transmittal blocks; a participant who wants privacy works in a private workspace on their own machine and puts in the repo only what they are comfortable sharing. (Rafa, Sep 12)
@@ -319,7 +319,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - S2 theory: factory and F2F defined per "Have Your Factory Call My Factory" — a factory is a flexible job shop producing intermediates; the declared interface is the mechanism by which it exposes one; the S2 exercise is job-shop structure + exported intermediate + declared interface (rung 1 unchanged); the Rao–Dixon case is told in those terms. (Rafa, Sep 12)
 - S1 theory: a kit is defined as pre-consensus technology adaptation (SCOT: interpretive flexibility before closure; Kline & Pinch, Bijker), the folder being the adaptation written down; the movement grid's one-maker × exterior quadrant is the field notebook (Humboldt), exposed kit as the artifact form. (Rafa, Sep 12)
 - Facilitation split redone: Rafa = ops, coordination and exercises (first minute of each session, checks, rooms, recorder, #workshop-kitkraft, async, 1A, S4 debrief/showcase/close); Sachin = every conceptual segment, opening the content right after Rafa's first minute. (Rafa, Sep 12)
-- After Tuesday decided: public repo, synthesis in Discord within 48 h, nothing else; consent notice canonical in `sessions/consent-notice.md`. (rafa 19, 32; sachin 16, 17)
+- After Tuesday decided: public repo, synthesis in Discord within 48 h, nothing else; consent notice canonical in `workshop-dev/sessions/consent-notice.md`. (rafa 19, 32; sachin 16, 17)
 - Awareness-grid axes confirmed: External/Internal × Archive/Live. (rafa 18)
 - Facilitator kits (`rafa`, `sachin`) are the real bridge targets; the S3 target list is trimmed to what exists. (rafa 14; sachin 19)
 - Hypothesis decision rule for S4; `Interface:` line in the kit template; synthetic example inputs allowed. (rafa 26; sachin 25, 26)
@@ -327,7 +327,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - S2 exercise: convert an existing kit (own inventory kit or a facilitator kit) into a factory = kit + declared interface; rung 1 default, rungs 2+ stretch; Async 1 chooses the source and drafts Job/Interface. (Rafa, Sep 12)
 - One folder per participant: `participants/<name>/` (inventory.md, kit/, bridges/<target>.md, LOG.md), copied whole from `PARTICIPANT_TEMPLATE/`; a single write boundary enforced by `AGENTS.md`, and one log per person. (OBS 7, 22, 51, 53; rafa 16; sachin 11)
 
-- S2 concept rebuilt: a factory is a kit that runs without its author, bends to its user, and hands off something others can build on; four properties (reproduction, personalization, independence, composability) with autonomy as a dial; the missing-property table; postponement, fork vs compose, shafts to wires, job shop, rung one; six moves from kit to factory; `Adapts to:` added to the README; the critique tests independence and fit; S1's factory clause replaced; history sources in `resources.md` §3a. (Rafa, Sep 14)
+- S2 concept rebuilt: a factory is a kit that runs without its author, bends to its user, and hands off something others can build on; four properties (reproduction, personalization, independence, composability) with autonomy as a dial; the missing-property table; postponement, fork vs compose, shafts to wires, job shop, rung one; six moves from kit to factory; `Adapts to:` added to the README; the critique tests independence and fit; S1's factory clause replaced; history sources in `workshop-dev/context-tank/resources.md` §3a. (Rafa, Sep 14)
 - Participant folder by session: `LOG.md` at the root, then `s1-inventory/`, `s2-factory/` (was `kit/`), `s3-bridges/` (was `bridges/`), and a new `s4-show-and-tell/show-and-tell.md` filled in Async 3 by `instructions/S4-show-and-tell.md`; facilitator factories move to `facilitator/<name>/s2-factory/`. (Rafa, Sep 14)
 
 ## Changes from v6 (multi-lens review)
