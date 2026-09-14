@@ -1,6 +1,6 @@
 # S1 — Kits. Slide outline, 60 min (Mon Sep 21, 15:30–16:30 UTC)
 
-Facilitation split: Rafa runs the first minute (welcome, consent), the ice-breaker timing, the exercise and both checks, Async 1 and the close (slides 1–3, 12–15); Sachin presents the theory (slides 4–11: what this is not, both grids, CMM, what a kit is, traces, C3PO, the hard problem) and opens the content right after Rafa's first minute. Rafa keeps #workshop-kitkraft, recorder, rooms and repo, and screen-shares; Sachin takes theory questions in voice. Breakout groups per the groups post in #workshop-kitkraft (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Cut from the 90-min outline: ice-breaker 15→9, situating 15→7, theory 20→14, exercise 30→17, close 5→7. Minute marks are from session start.
+Facilitation split: Rafa runs the first minute (welcome, consent), the ice-breaker timing, the exercise and both checks, Async 1 and the close (slides 1–3, 12–15); Sachin presents the theory (slides 4–11: what this is not, both grids, CMM, what a kit is, traces, C3PO, the hard problem) and opens the content right after Rafa's first minute. Rafa keeps #workshop-kitkraft, recorder, rooms and repo, and screen-shares; Sachin takes theory questions in voice. Breakout groups per the groups post in #workshop-kitkraft (`../planning/discord-pins.md`), one per room, breakout-1 … breakout-5. Cut from the 90-min outline: ice-breaker 15→9, situating 15→7, theory 20→14, exercise 30→17, close 5→7. Minute marks are from session start.
 
 ## Lede
 
@@ -79,7 +79,7 @@ Most people using AI well today are doing it privately: a set of prompts, files 
 - Not "adopt a tool": the tools that hide the assembly are the townships
 - It is: notice the protocols being assembled around you, and keep the space to choose
 - You leave with a folder another person's agent can use
-**Reference.** Kline & Pinch, "Users as Agents of Technological Change" (1996) — bibliography entry in `resources.md` §1, no public URL. [Durable AI Adoption, appendix case](https://ai.protocolized.dev/)
+**Reference.** Kline & Pinch, "Users as Agents of Technological Change" (1996) — bibliography entry in `../context-tank/resources.md` §1, no public URL. [Durable AI Adoption, appendix case](https://ai.protocolized.dev/)
 > Note: Sachin, two minutes; the tractor is his thesis. He continues straight into slide 5.
 
 ## Slide 5 — Frame: the Expanded Awareness 2×2 (00:14) (presenter: Sachin)
@@ -144,7 +144,7 @@ Most people using AI well today are doing it privately: a set of prompts, files 
 - What you write down — a folder with a README, a SKILL.md and an example — is that adaptation, in a shape another person's assistant can run. A factory — tonight's topic — is a kit that runs without you, bends to whoever uses it, and hands off something others can build on
 - What goes in the folder: `SKILL.md` for the assistant (name, description, when, steps, constraints, do-nots), `README.md` for humans, `examples/`, `LOG.md` — now an open standard: Agent Skills (Anthropic, Dec 2025) stewarded with AGENTS.md under the Linux Foundation's Agentic AI Foundation. If it does not trigger, the fix is the description
 - Kits now: you work with archival selves of others through a model that changes. Paper fixes words; LLMs fix the archive, roughly, but not the reader
-**Reference.** [Agent Skills specification](https://agentskills.io/specification) · Kline & Pinch (1996), `resources.md` §1 — no public URL
+**Reference.** [Agent Skills specification](https://agentskills.io/specification) · Kline & Pinch (1996), `../context-tank/resources.md` §1 — no public URL
 > Note: Rafa puts `PARTICIPANT_TEMPLATE/` on screen for 20 seconds; that is the whole spec.
 
 ## Slide 9 — Traces (00:27) (presenter: Sachin)

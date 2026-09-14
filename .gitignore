@@ -15,3 +15,7 @@ node_modules/
 *.bak
 *.orig
 *.tmp
+
+# Context tank: local source material not licensed for redistribution
+workshop-dev/context-tank/local/*
+!workshop-dev/context-tank/local/README.md

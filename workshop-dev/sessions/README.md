@@ -1,6 +1,6 @@
 # Sessions — facilitator materials
 
-What the facilitators run from. Participants never need these; the blocks they paste live in `instructions/`, and the pins (`../discord-pins.md`) link there. Schedule and rules: `../outline.md` (v8); the sequence around each breakout: `../breakout-instructions.md`.
+What the facilitators run from. Participants never need these; the blocks they paste live in `instructions/`, and the pins (`../planning/discord-pins.md`) link there. Schedule and rules: `../planning/outline.md` (v8); the sequence around each breakout: `../planning/breakout-instructions.md`.
 
 | File | What it is |
 |---|---|

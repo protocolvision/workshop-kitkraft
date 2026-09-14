@@ -1,6 +1,6 @@
 # Consent notice — AI Kitcraft 2026
 
-Two versions. The short one is read aloud at the top of S1 by Rafa, who opens the room, and repeated in one sentence at the top of S2–S4. The pinned version is Rafa's "Recording Policy FYI" in #workshop-kitkraft (`../discord-pins.md`). Both are on the record; the read-aloud is itself in the S1 transcript.
+Two versions. The short one is read aloud at the top of S1 by Rafa, who opens the room, and repeated in one sentence at the top of S2–S4. The pinned version is Rafa's "Recording Policy FYI" in #workshop-kitkraft (`../planning/discord-pins.md`). Both are on the record; the read-aloud is itself in the S1 transcript.
 
 ## Read aloud (about 45 seconds)
 

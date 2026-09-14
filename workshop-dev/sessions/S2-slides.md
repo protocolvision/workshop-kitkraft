@@ -1,6 +1,6 @@
 # S2 — Factories · slides (60 min, Mon Sep 21, 20:00–21:00 UTC)
 
-Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa — first minute, build briefing, push check, rooms, the round, awareness check, Async 2, close; Sachin — shafts to wires, the two factories, what a factory is, the six moves and rung one, the comms layer). Rafa screen-shares throughout and keeps #workshop-kitkraft, recorder and repo; the presenter talks. Breakout groups per the S2 pin (`../discord-pins.md`), one per room, breakout-1 … breakout-5. Sources for every history claim in this deck: `../resources.md` §3a.
+Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa — first minute, build briefing, push check, rooms, the round, awareness check, Async 2, close; Sachin — shafts to wires, the two factories, what a factory is, the six moves and rung one, the comms layer). Rafa screen-shares throughout and keeps #workshop-kitkraft, recorder and repo; the presenter talks. Breakout groups per the S2 pin (`../planning/discord-pins.md`), one per room, breakout-1 … breakout-5. Sources for every history claim in this deck: `../context-tank/resources.md` §3a.
 
 ## Lede
 
@@ -54,7 +54,7 @@ A kit becomes a factory when its author stops being a required input. What makes
 - Unit drive: a motor per machine, so the floor could follow the workflow rather than the power transmission; that is when the gains came
 - The lag between a new technology and its gains is the time it takes to re-lay the floor
 - AI in an unchanged workflow is the big motor on the old shafts; kit → factory is the unit-drive move for one practice
-**Reference.** Devine (1983); David (1990) — `../resources.md` §3a
+**Reference.** Devine (1983); David (1990) — `../context-tank/resources.md` §3a
 > Speaker note: two minutes, no numbers. The image to leave behind is the shafts coming down.
 
 ## Slide 3 — Two factories, read through four properties (04:00) (presenter: Sachin)
@@ -73,7 +73,7 @@ A kit becomes a factory when its author stops being a required input. What makes
 - Monstrous Times bends the kit to a new user by copying and adapting it: that is forking, and S2's build is a fork
 - The scarce thing is coordination, not machinery: the part holding adoption back is the meeting point between two practices, not model capability — which is why two non-coders pulled it off
 - One observed form of a bridge; whether it is *the* form is what tomorrow finds out
-**Reference.** [Rao, "Have Your Factory Call My Factory"](https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory) · [Protocol Institute Brand Kit](https://npc.here.now/protocolintstitutebrandkit/) · Chandler (1977); Hughes (1983) — `../resources.md` §3a
+**Reference.** [Rao, "Have Your Factory Call My Factory"](https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory) · [Protocol Institute Brand Kit](https://npc.here.now/protocolintstitutebrandkit/) · Chandler (1977); Hughes (1983) — `../context-tank/resources.md` §3a
 > Speaker note: Rafa drops the essay link in #workshop-kitkraft; brand kit page 30 s, then `llms.txt`. Do not explain the image models. Leave the "—" in the table empty on purpose.
 
 ## Slide 4 — What a factory is (08:00) (presenter: Sachin)
@@ -92,7 +92,7 @@ A kit becomes a factory when its author stops being a required input. What makes
 - Postponement: keep the core standard, push the customization to the last step, supplied at the edge — HP localized identical printers at regional distribution centres. Personalization is reproduction with the differences moved to the end
 - Fork vs compose: forking copies and bends (tonight: a facilitator kit adapted to your organization); composing uses the output unchanged (S3). Unix tools compose because they agree on one output, a stream of text, not because they resemble each other — "expect the output of every program to become the input to another, as yet unknown, program"
 - The destination is Rao's flexible job shop; flexible specialization never lost to mass production. Nobody here is building River Rouge
-**Reference.** Feitzinger & Lee (1997); Pine (1993); McIlroy et al. (1978); Sabel & Zeitlin (1985) — `../resources.md` §3a · [Rao, "Have Your Factory Call My Factory"](https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory)
+**Reference.** Feitzinger & Lee (1997); Pine (1993); McIlroy et al. (1978); Sabel & Zeitlin (1985) — `../context-tank/resources.md` §3a · [Rao, "Have Your Factory Call My Factory"](https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory)
 > Speaker note: four minutes. The table is the slide; say the definition twice. If time is short, drop the McIlroy quote and the River Rouge line aloud; they stay on the bullets. The question that always comes: for a document kit, the document is the output and the README is the way in.
 
 ## Slide 5 — Six moves, and why rung one (12:00) (presenter: Sachin; hands to Rafa at 15:00)
@@ -120,7 +120,7 @@ A kit becomes a factory when its author stops being a required input. What makes
 - Declare = three lines in the README: `Exports:` (the intermediate), `Interface:` (the form it takes and how someone else reaches it), `Adapts to:` (the context the user brings, and where it goes in). The visible rules are few; everything else stays hidden and free to change
 - The ladder is forms, ordered by effort: skill → single file calling a model through MCP or an API → app → website on a machine. More reach and more effort, same definition; never claim a form you did not build
 - Do not close too early: early standardization locks in what happened to be there. Rung one declares the smallest way in
-**Reference.** Taylor (1911); Polanyi (1966); Nonaka & Takeuchi (1995); Smith (1776); Hounshell (1984); Baldwin & Clark (2000); Parnas (1972); Bijker (1995); David (1985) — `../resources.md` §3a · [Agent Skills specification](https://agentskills.io/specification)
+**Reference.** Taylor (1911); Polanyi (1966); Nonaka & Takeuchi (1995); Smith (1776); Hounshell (1984); Baldwin & Clark (2000); Parnas (1972); Bijker (1995); David (1985) — `../context-tank/resources.md` §3a · [Agent Skills specification](https://agentskills.io/specification)
 > Speaker note: name each source in two words at most; the table does the work. Hand to Rafa at 15:00 sharp.
 
 ## Slide 6 — Convert a kit into a factory (15:00 → 35:00) (presenter: Rafa; comms layer at 30:00: Sachin)
@@ -176,4 +176,4 @@ A kit becomes a factory when its author stops being a required input. What makes
 - S3 breakout groups (rotated) posted in #workshop-kitkraft at 09:00 UTC; alternative targets in `facilitator/README.md`
 - Tomorrow 15:30 UTC: bridges — composing, not forking. Bring the kit you did *not* critique in mind
 **Reference.** [Rao, "Have Your Factory Call My Factory"](https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory)
-> Speaker note: Rafa posts it verbatim to #workshop-kitkraft at 20:58 (the async post in `../discord-pins.md`); `/stop` at 21:00.
+> Speaker note: Rafa posts it verbatim to #workshop-kitkraft at 20:58 (the async post in `../planning/discord-pins.md`); `/stop` at 21:00.
