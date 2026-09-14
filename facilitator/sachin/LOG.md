@@ -3,3 +3,4 @@
 |---|---|---|---|---|
 | 2026-09-13T10:20:00Z | prep | sachin | decision | kit job chosen: interview transcript → adoption-diagnosis memo; rejected "claim tracing" as too close to a participant's kit |
 | 2026-09-13T10:55:00Z | prep | sachin | progress | README, SKILL.md, synthetic example written; example run checked by hand against the two tests |
+| 2026-09-14T09:00:00Z | prep | sachin | decision | kit README declares Exports and Adapts to, matching the S2 factory definition (runs without its author, bends to its user, hands off something others can build on) |

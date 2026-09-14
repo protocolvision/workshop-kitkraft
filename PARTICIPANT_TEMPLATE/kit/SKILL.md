@@ -15,4 +15,4 @@ description: <one line: what this does and when an agent should use it. This lin
 <formats, sources, checks that must pass, who signs off>
 
 ## Do not
-<what a stranger's agent would get wrong without being told>
+<what someone else's assistant would get wrong without being told>
