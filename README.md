@@ -63,7 +63,7 @@ Discord: https://discord.gg/s2WbZBDqM — voice **#kafka**, text **#workshop-kit
 |---|---|---|---|
 | S1 Kits | Mon Sep 21, 15:30 | 60 min | `participants/<name>/inventory.md` |
 | 1A Tech Support (optional) | Mon Sep 21, 16:30 | 30 min | a first push |
-| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` as a factory: job-shop structure, an exported intermediate, a declared interface |
+| S2 Factories | Mon Sep 21, 20:00 | 60 min | `participants/<name>/kit/` as a factory: it runs without you, fits whoever uses it, and hands off something others can build on — the README declares `Exports:`, `Interface:` and `Adapts to:` |
 | S3 Bridges | Tue Sep 22, 15:30 | 60 min | `participants/<name>/bridges/<target>.md` — one of three configurations to try: across factories, across kits, or kit ↔ factory; the closing paragraph says what a bridge turned out to be |
 | S4 Recap | Tue Sep 22, 20:00 | 60 min | `workshop-dev/transcripts/S4/SYNTHESIS.md` |
 
