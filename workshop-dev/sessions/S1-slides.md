@@ -179,9 +179,9 @@ Most people using AI well today are doing it privately: a set of prompts, files 
 > Note: Sachin's section (precommodification and farmsteading are his essays). End on "public records and interfaces"; hand back to Rafa for the exercise.
 
 ## Slide 12 — Exercise: your inventory (00:35) (presenter: Rafa)
-**On screen.** Headline "Your inventory — 12 minutes"; "Open your harness at the top of the clone" · "Paste Block 1, pinned now, and say 'do this'" · "It writes `participants/<you>/inventory.md`, commits, pushes, reports" · "Everything here is public — put in only what you are happy to share". Visual: Rafa screen-shares Block 1 of `instructions/S1-inventory.md`.
+**On screen.** Headline "Your inventory — 12 minutes"; "Open your harness at the top of the clone" · "Paste Block 1, pinned now, and say 'do this'" · "It writes `participants/<you>/s1-inventory/inventory.md`, commits, pushes, reports" · "Everything here is public — put in only what you are happy to share". Visual: Rafa screen-shares Block 1 of `instructions/S1-inventory.md`.
 **Say.** "Over to you. Open your harness — the coding assistant you installed — at the top of the clone, paste Block 1, which I am pinning right now, and say 'do this'. It will ask you for three things you do regularly; it will not invent them for you. Two things before you start: everything in this repo is public, so keep anything sensitive in a private folder on your own machine, and if a push fails three times, paste the exact error into the channel instead of fighting it."
-- Paste **Block 1** (`instructions/S1-inventory.md`; Rafa pins the link now) into your harness (open at the clone root) and say "do this". It writes `participants/<name>/inventory.md`, commits, pushes, and reports
+- Paste **Block 1** (`instructions/S1-inventory.md`; Rafa pins the link now) into your harness (open at the clone root) and say "do this". It writes `participants/<name>/s1-inventory/inventory.md`, commits, pushes, and reports
 - Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing.
 - 12 minutes. Push failed after three tries? Post the error the harness printed in #workshop-kitkraft; the fix comes back in that thread or at 1A
 - Rule: you read other people's inventories only through your agent, never in the browser

@@ -1,11 +1,11 @@
 # Facilitator kits — bridge targets
 
-Only what exists. Each facilitator has `facilitator/<name>/` in the participant shape (`kit/`, `LOG.md`) so participants' agents read it like any other kit.
+Only what exists. Each facilitator has `facilitator/<name>/` in the participant shape (`s2-factory/`, `LOG.md`) so participants' agents read it like any other kit.
 
 | Target | Interface | Access | Owner |
 |---|---|---|---|
-| Rafa's kit (water-rate PDF → registry row) | `facilitator/rafa/kit/` (file handoff; row shape in `examples/output.csv`) | repo | Rafa |
-| Sachin's kit | `facilitator/sachin/kit/` | repo | Sachin |
+| Rafa's kit (water-rate PDF → registry row) | `facilitator/rafa/s2-factory/` (file handoff; row shape in `examples/output.csv`) | repo | Rafa |
+| Sachin's kit | `facilitator/sachin/s2-factory/` | repo | Sachin |
 | PI brand kit | https://github.com/protocolvision/project-aimarketing (`llms.txt` → `brand.json`) | link, read-only | Rafa |
 
 Theory help, not a target: **C3PO**, the Protocol Institute corpus, MCP `search_corpus` at https://c3po.protocolized.io/mcp (no key; 100 calls/IP/day).

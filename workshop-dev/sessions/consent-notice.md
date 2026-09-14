@@ -15,7 +15,7 @@ Two versions. The short one is read aloud at the top of S1 by Rafa, who opens th
 **Where it goes.**
 - Live: #meeting-notes (https://discord.com/channels/1082444651946049567/1519549380791631903), visible to members of this Discord server; it is a shared, already-active channel, so other meetings' transcripts appear there too and ours are marked by the meeting name `KITCRAFT-S<n>`.
 - After each session: `workshop-dev/transcripts/S<n>/` in https://github.com/protocolvision/workshop-kitkraft — a public repo, readable by anyone, indexable by search engines and by AI crawlers.
-- Your harness's log lines: `participants/<name>/LOG.md`, in the same public repo. Bridge files in `participants/<name>/bridges/` name the people involved.
+- Your harness's log lines: `participants/<name>/LOG.md`, in the same public repo. Bridge files in `participants/<name>/s3-bridges/` name the people involved.
 - After the workshop: the repo stays public; the synthesis (`workshop-dev/transcripts/S4/SYNTHESIS.md`, with the room's awareness profile) is posted in #workshop-kitkraft; and the workshop recordings may be used for broader synthesis for Symposium write-ups and future research. If you would rather opt out of that, tell the facilitators.
 
 **Retention.** Raw audio is pruned by the recorder after 7 days. Transcripts, summaries and log lines are kept indefinitely in the repo unless you ask for removal.

@@ -97,9 +97,9 @@ At 15:45, rooms open for 40 minutes; back in #kafka at 16:25. In your room: open
 
 ### S3 close and Async 3 (Tue Sep 22, 16:29 UTC)
 
-Recording off. Finish your bridge file and push by 20:00 UTC; your harness knows how. S4 at 20:00 UTC in #kafka: 90 seconds per bridge, then what you wrote against one hypothesis.
+Recording off. Async 3, before 20:00 UTC: finish your bridge file in `participants/<you>/s3-bridges/` and push; your harness knows how. Then open your harness at the clone root, paste `instructions/S4-show-and-tell.md`, say "do this": it prepares your 90 seconds in `s4-show-and-tell/show-and-tell.md` and asks you two questions. S4 at 20:00 UTC in #kafka: 90 seconds per bridge, then what you wrote against one hypothesis.
 
-<!-- 179 characters -->
+<!-- 423 characters -->
 
 ### S4 close (Tue Sep 22, 21:00 UTC)
 
