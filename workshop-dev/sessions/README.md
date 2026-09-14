@@ -9,7 +9,7 @@ What the facilitators run from. Participants never need these; the blocks they p
 | `1A-clinic.md` | 1A Tech Support, for a harness that is installed but not working (auth, wrong clone, wrong branch, push rejected), Mon 16:30–17:00 UTC, not recorded: eight minutes of naming the failed step, then one block with seven checks and proofs |
 | `S2-slides.md` · `S2-run-of-show.md` | Factories, Mon 20:00–21:00 UTC: build 20 / critique 13 / close 10 |
 | `S3-slides.md` · `S3-run-of-show.md` | Bridges as the open question the hard problem leaves, Tue 15:30–16:30 UTC: evidence 14, breakout 40, close 5 (the hypothesis is stated once, at the close) |
-| `S3-agent-prompts.md` | facilitator copy of the S3 block (`instructions/S3-bridge.md`) |
+| `S3-agent-prompts.md` | facilitator copy of the S3 block (`instructions/S3-bridge.md`); Async 3 then runs `instructions/S4-show-and-tell.md` (no facilitator copy) |
 | `S4-slides.md` · `S4-run-of-show.md` | Recap and showcase, Tue 20:00–21:00 UTC: debrief, showcase, `SYNTHESIS.md` read-back, hypothesis verdict rule, awareness-profile tally |
 | `consent-notice.md` | the 45-second read-aloud (Rafa, top of S1) and the full pinned notice, with the block for the harness |
 | `setup-checklist.md` | what a participant's machine needs (git, gh, one harness), why, install per system, verify commands, and a "Verify only" harness block |

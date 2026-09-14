@@ -1,7 +1,7 @@
 # Bridge: <you> → <target>
 
 Writer: <you> (only you edit this file)
-Source: participants/<you>/kit/ (<kit|factory>)
+Source: participants/<you>/s2-factory/ (<kit|factory>)
 Target: <path> (<kit|factory>)
 Kind: <factory-factory | kit-kit | kit-factory> (one of three configurations to try; not a verdict on what a bridge turned out to be)
 Interface used: (the target's declared `Interface:` line, or `README handed to an agent` for a kit)

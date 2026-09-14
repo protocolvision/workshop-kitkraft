@@ -39,17 +39,17 @@ We do not have a definition yet, and we are not going to hand you one. The works
 | 11 | 00:58 | Rafa / Sachin | Hypothesis line, text only | Check, hypothesis once, Async 3 |
 
 ## Slide 1 — S3: how do two private practices reach each other? (00:00) (presenter: Rafa)
-**On screen.** Headline "How do two private practices reach each other?" Under it: "Recorder is on — same consent as Monday" · "Your agent uses someone else's kit today" · "Output: `participants/<you>/bridges/<target>.md`". Text only.
+**On screen.** Headline "How do two private practices reach each other?" Under it: "Recorder is on — same consent as Monday" · "Your agent uses someone else's kit today" · "Output: `participants/<you>/s3-bridges/<target>.md`". Text only.
 **Say.** Recording has started, same consent as Monday, and breakouts may be recorded too. Monday's hard problem left one question open, and it is the one on the slide: how do two private practices reach each other without a shared app? Today we try it rather than answer it — your agent uses someone else's kit or factory, and by half past you each have a file that ends in a paragraph on what a bridge turned out to be.
 - Recorder is on; same consent as Monday; breakouts may be recorded
 - Monday's hard problem left one question open: how do two private practices reach each other without a shared app? Today we try it: your agent uses someone else's kit or factory
-- Output: one file per person, `participants/<you>/bridges/<target>.md`, ending in a paragraph on what a bridge turned out to be. We do not know yet what those paragraphs will say
+- Output: one file per person, `participants/<you>/s3-bridges/<target>.md`, ending in a paragraph on what a bridge turned out to be. We do not know yet what those paragraphs will say
 > Note: one minute. Rafa has posted the groups already.
 
 ## Slide 2 — What did S2 leave in the repo? (00:01) (presenter: Rafa)
 **On screen.** Screen share, live: the repo's `participants/` tree, then two anonymised blocker lines from real `participants/*/LOG.md` files, scrolled to. Headline "What S2 left in the repo".
 **Say.** Here is what you built yesterday: one kit per folder, and in every `LOG.md` the failure the critique found. Look at these two lines — I am not saying whose — because almost all of them are description problems, not code problems. That makes them useful today: a failure is a trace, and it tells the next agent exactly where the knowledge was still in somebody's head.
-- One `kit/` per participant folder in `participants/`
+- One `s2-factory/` per participant folder in `participants/`
 - Every kit has a `LOG.md` with the failure the critique found; most are description problems
 - Those failures are traces: they tell the next agent where the tacit knowledge was
 - Kits that landed async overnight count; their bridger is the first cold reader
@@ -79,9 +79,9 @@ We do not have a definition yet, and we are not going to hand you one. The works
 > Note: the ladder is effort, not virtue. Today everyone is on rung one; that is the correct rung.
 
 ## Slide 5 — Example: water-rate PDF → registry row (00:08) (presenter: Sachin)
-**On screen.** Screen share, live: `facilitator/rafa/kit/README.md` with its `Interface:` line highlighted, then `facilitator/rafa/kit/examples/output.csv`. Headline "PDF in, one row per tier out".
+**On screen.** Screen share, live: `facilitator/rafa/s2-factory/README.md` with its `Interface:` line highlighted, then `facilitator/rafa/s2-factory/examples/output.csv`. Headline "PDF in, one row per tier out".
 **Say.** Here is a target that is open to all of you. Rafa's kit takes a utility's rate schedule PDF and produces one CSV row per tier, appended to a registry — and the interface is nothing more exotic than the shape of that row: fixed column order, units copied and never converted, a page reference required. Downstream the registry feeds a public site that never reads a PDF at all. If you want a target today, your agent can ask this one to produce a row from a PDF excerpt in your own domain.
-- `facilitator/rafa/kit/`: a utility's rate schedule PDF in, one CSV row per tier out, appended to a registry
+- `facilitator/rafa/s2-factory/`: a utility's rate schedule PDF in, one CSV row per tier out, appended to a registry
 - The interface is the row shape: fixed column order, units copied not converted, page reference required
 - Downstream, the registry feeds the water data strategy site; the site never reads a PDF
 - A bridge target today: your agent can ask it to produce a row from a PDF excerpt in your own domain
@@ -116,12 +116,12 @@ We do not have a definition yet, and we are not going to hand you one. The works
 > Note: one minute. No hypothesis here; it comes once, at the close, and we say so.
 
 ## Slide 9 — Exercise: can your agent use theirs? (00:14) (presenter: Rafa)
-**On screen.** Screen share, live: the pinned S3 groups post in #workshop-kitkraft, then `instructions/S3-bridge.md` scrolled to the TARGET / TASK settings line, then `PARTICIPANT_TEMPLATE/bridges/TEMPLATE.md`. Headline "Can your agent use theirs? 40 minutes".
+**On screen.** Screen share, live: the pinned S3 groups post in #workshop-kitkraft, then `instructions/S3-bridge.md` scrolled to the TARGET / TASK settings line, then `PARTICIPANT_TEMPLATE/s3-bridges/TEMPLATE.md`. Headline "Can your agent use theirs? 40 minutes".
 **Say.** Your group and your target are in the pinned post; the default is the kit you did not critique, and anyone can swap to a facilitator kit, because nobody critiqued those. Open `instructions/S3-bridge.md`, fill in TARGET and the one thing your kit cannot do alone, paste it and say "do this" — it will refuse to invent the task, so that part is yours. The rule is agent → repo → agent: talk to a human only to unblock, and every unblock becomes one line in your log. At minute 30 stop building and write the two paragraphs; push by 38.
 - Breakout groups of 2–4, one per room. Any kit or factory in the repo is a valid target; the pinned default is the kit you did **not** critique in S2; a pair bridges to the partner's kit or a facilitator kit. Your harness works out which configuration it is (factory-factory / kit-kit / kit-factory) and writes it in the log
 - Targets as pinned in #workshop-kitkraft (the S3 groups post is the only roster).
-- Anyone may swap their target for `facilitator/rafa/kit/` or `facilitator/sachin/kit/`; nobody critiqued those
-- The question: make your agent use the target to do one thing yours cannot; log everything. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/bridges/<target>.md`; you are its only writer
+- Anyone may swap their target for `facilitator/rafa/s2-factory/` or `facilitator/sachin/s2-factory/`; nobody critiqued those
+- The question: make your agent use the target to do one thing yours cannot; log everything. Fill TARGET and TASK in the block in `instructions/S3-bridge.md` (pinned as a link), paste it, say "do this". It opens `participants/<you>/s3-bridges/<target>.md`; you are its only writer
 - Rule: agent → repo → agent. Human chat only to unblock, and every unblock is one `unblock` line in your log
 - At minute 30 of the breakout, stop building; write "Did it work" and "What a bridge turned out to be", one paragraph each, in your own words. Push by minute 38
 > Note: Rafa briefs, one minute; the table is already pinned. He opens the rooms at 00:15 sharp.
@@ -134,10 +134,10 @@ We do not have a definition yet, and we are not going to hand you one. The works
 > Note: three minutes total for six; with ten or more, 15 s each. Cut on time; the paragraph in the log is the long version.
 
 ## Slide 11 — Awareness check, one hypothesis, Async 3 (00:58) (presenter: Rafa; hypothesis: Sachin)
-**On screen.** Headline "One word, one hypothesis, Async 3". The four quadrant names in a row; then the hypothesis sentence, boxed and labelled "hypothesis — to test against your logs"; then "Async 3, by 20:00 UTC: finish the log, push" and "S4 at 20:00 UTC · 22:00 Berlin · 13:00 Pacific". Text only.
-**Say.** One word each: which quadrant did this hour expand? Then Sachin has one sentence, said once — and note that it is a hypothesis we are going to test against your logs tomorrow, not a definition of the thing you just built. Tomorrow we read your paragraphs first and this second, in that order, and if they disagree your paragraphs win. Before 20:00, finish the log and push; the hard-mode rerun is optional and goes in the same file.
+**On screen.** Headline "One word, one hypothesis, Async 3". The four quadrant names in a row; then the hypothesis sentence, boxed and labelled "hypothesis — to test against your logs"; then "Async 3, by 20:00 UTC: finish the bridge log, then paste `instructions/S4-show-and-tell.md`" and "S4 at 20:00 UTC · 22:00 Berlin · 13:00 Pacific". Text only.
+**Say.** One word each: which quadrant did this hour expand? Then Sachin has one sentence, said once — and note that it is a hypothesis we are going to test against your logs tomorrow, not a definition of the thing you just built. Tomorrow we read your paragraphs first and this second, in that order, and if they disagree your paragraphs win. Before 20:00, finish the bridge log, then paste `instructions/S4-show-and-tell.md` so your harness prepares your ninety seconds for S4; the hard-mode rerun is optional and goes in the same file.
 - Which quadrant did this hour expand? One word each
 - Sachin, once, as a hypothesis to test against your logs tomorrow — not a definition: *a protocol between two factories — the smallest thing both sides agree not to change*. Rafa pins it. Tomorrow we read your paragraphs first, then this
-- Async 3 (16:30–20:00 UTC): finish the bridge log, push. Optional hard-mode Wallfacer: redo the bridge agent-only, public record, no human chat; log it as a second section in the same file (`instructions/S3-bridge.md`)
+- Async 3 (16:30–20:00 UTC): finish the bridge log, then paste `instructions/S4-show-and-tell.md` — it writes `participants/<you>/s4-show-and-tell/show-and-tell.md` and pushes. Optional hard-mode Wallfacer: redo the bridge agent-only, public record, no human chat; log it as a second section in the same file (`instructions/S3-bridge.md`)
 - S4 at 20:00 UTC (22:00 Berlin, 13:00 Pacific): 90 seconds per bridge, then your paragraphs against the hypothesis
 > Note: end at 00:59. Rafa `/stop`s.

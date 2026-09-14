@@ -5,3 +5,4 @@
 | 2026-09-11T14:22:00Z | prep | rafa | decision | one row per class × meter × tier (long format) chosen over one row per schedule; rejected pipe-encoded tiers because a stranger's agent cannot validate them |
 | 2026-09-11T14:24:00Z | prep | rafa | question | the live registry at npc.here.now/waterdatastrategy has no published column schema; this kit defines one; confirm with Rafa before S3 |
 | 2026-09-14T09:00:00Z | prep | rafa | decision | kit README declares Exports and Adapts to, matching the S2 factory definition (runs without its author, bends to its user, hands off something others can build on) |
+| 2026-09-14T10:00:00Z | prep | rafa | progress | layout moved to session folders: this kit is now `facilitator/rafa/s2-factory/`, the example inventory `participants/_example/s1-inventory/inventory.md`; earlier lines keep the paths they had when written |

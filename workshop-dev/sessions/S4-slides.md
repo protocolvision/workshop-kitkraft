@@ -1,6 +1,6 @@
 # S4 — Recap and showcase · slides (60 min, Tue Sep 22, 20:00–21:00 UTC)
 
-Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa opens, runs the debrief order and timer, the showcase, the final awareness round and tally, the take-home and close; Sachin recaps Kit → Factory → Bridge, reads the synthesis, states the hypothesis and reads the logs' verdict). Rafa screen-shares throughout and keeps #workshop-kitkraft and the recorder. Anyone async: bridge log and final-round answer read from the repo / #workshop-kitkraft by a group-mate.
+Timestamps are minutes from session start. Presenter on each heading (facilitation split: Rafa opens, runs the debrief order and timer, the showcase, the final awareness round and tally, the take-home and close; Sachin recaps Kit → Factory → Bridge, reads the synthesis, states the hypothesis and reads the logs' verdict). Rafa screen-shares throughout and keeps #workshop-kitkraft and the recorder. Anyone async: their `s4-show-and-tell/show-and-tell.md` (bridge, paragraph, final-round answer) read from the repo by a group-mate, or their note from #workshop-kitkraft.
 
 ## Lede
 
@@ -27,7 +27,7 @@ This hour is the room reading its own record back to itself, in a deliberate ord
 |---|---|---|---|---|
 | 1 | 00:00 | Rafa | Repo tree, live | Consent; your files are the slides |
 | 2 | 02:00 | Sachin | Three files picked at 19:45 | Recap the spine from the record |
-| 3 | 10:00 | Rafa | Each speaker's bridge log | One report per bridge, timed |
+| 3 | 10:00 | Rafa | Each speaker's `show-and-tell.md` | One report per bridge, timed |
 | 4 | 24:00 | Rafa | Three bridge logs in full | Two that worked, one that did not |
 | 5 | 38:00 | Sachin | `SYNTHESIS.md` §1 and §2 | The room's paragraphs, verbatim, first |
 | 6 | 43:00 | Sachin | `SYNTHESIS.md` §3 table | Rule, then evidence, then verdict |
@@ -44,7 +44,7 @@ This hour is the room reading its own record back to itself, in a deliberate ord
 > Speaker note: 90 seconds, then hand to Sachin. Sachin's synthesis agent has been running since 19:30.
 
 ## Slide 2 — Recap in three files (02:00) (presenter: Sachin)
-**On screen.** Screen share, live, three files picked by both facilitators at 19:45 and posted by Rafa in #workshop-kitkraft so people can follow in their own clone: (1) one `participants/<name>/kit/SKILL.md`, v1 beside v2 in a `git diff`, chosen because its `description` line changed; (2) one `participants/<name>/kit/README.md` with its `Interface:` line; (3) one `participants/<name>/LOG.md` scrolled to a single `unblock` line. Headline "Kit → Factory → Bridge, in three files".
+**On screen.** Screen share, live, three files picked by both facilitators at 19:45 and posted by Rafa in #workshop-kitkraft so people can follow in their own clone: (1) one `participants/<name>/s2-factory/SKILL.md`, v1 beside v2 in a `git diff`, chosen because its `description` line changed; (2) one `participants/<name>/s2-factory/README.md` with its `Interface:` line; (3) one `participants/<name>/LOG.md` scrolled to a single `unblock` line. Headline "Kit → Factory → Bridge, in three files".
 **Say.** Three files, one per term. Here is a `SKILL.md` on Monday and the same file after the critique — the change is in the description line, which is where nearly all of them were. Here is a README whose `Interface:` line was the whole interface; every bridge yesterday ran on rung one of the ladder, and that turned out to be enough. And here is one `unblock` line, which I will read out as written, because it names the thing that was not in the repo.
 - Kit: one `SKILL.md` from Monday, v1 next to v2 — what the critique changed (pick one whose `description` line changed)
 - Factory: the README *was* the interface; every bridge used rung one of the ladder
@@ -53,9 +53,9 @@ This hour is the room reading its own record back to itself, in a deliberate ord
 > Speaker note: the two of you pick the three files at 19:45; Rafa posts the paths in #workshop-kitkraft so people follow in their own clone.
 
 ## Slide 3 — Debrief: one speaker per bridge log (10:00) (presenter: Rafa)
-**On screen.** Screen share, live: the speaker's own file, `participants/<speaker>/bridges/<target>.md`, opened by Rafa as each name comes up in the pinned order, scrolled to the four headings they are answering. A four-word prompt strip stays in the deck's corner: target · the one thing · what a human supplied · did it work.
-**Say.** We go group by group in the pinned order, and I will put your file on screen as your name comes up. Ninety seconds each: your target, the one thing you made your agent do, what a person had to supply, and whether it worked. If someone is not here, their group-mate reads their log in sixty. I will be strict with the timer, because Sachin's agent is capturing every one of these into the synthesis as you speak.
-- Group by group, in the pinned order: one speaker per bridge log, 90 s each, so the round takes (number of logs × 1.5 min); an absent member's log is read by a group-mate in 60 s
+**On screen.** Screen share, live: the speaker's own file, `participants/<speaker>/s4-show-and-tell/show-and-tell.md` (prepared in Async 3; it links their bridge log at `participants/<speaker>/s3-bridges/<target>.md`), opened by Rafa as each name comes up in the pinned order, scrolled to the headings they are answering. A four-word prompt strip stays in the deck's corner: target · the one thing · what a human supplied · did it work.
+**Say.** We go group by group in the pinned order, and I will put your file on screen as your name comes up. Ninety seconds each: your target, the one thing you made your agent do, what a person had to supply, and whether it worked. If someone is not here, their group-mate reads their show-and-tell file in sixty. I will be strict with the timer, because Sachin's agent is capturing every one of these into the synthesis as you speak.
+- Group by group, in the pinned order: one speaker per bridge log, 90 s each, so the round takes (number of logs × 1.5 min); an absent member's `show-and-tell.md` is read by a group-mate in 60 s
 - With ten or more people: 60 s per bridge, no questions until the showcase
 - Say: target, the one thing, what a human supplied, did it work
 - Each report goes into the synthesis as you speak
@@ -92,9 +92,9 @@ This hour is the room reading its own record back to itself, in a deliberate ord
 
 ## Slide 7 — Final awareness round (50:00) (presenter: Rafa)
 **On screen.** Screen share, live: `SYNTHESIS.md` §5, the awareness table — quadrants down the side, S1 / S2 / S3 / tonight across the top — filling in as people speak. The four quadrant names stay in the deck above it: Precommodification · Traces · Anchored in reality · Playability.
-**Say.** Last round, and it is the one the whole frame rests on. Monday morning, before any of this: which of the four was your practice blind to? One word for the quadrant and one clause for why, and I will read the answers from the channel for anyone who could not make it. Watch the table fill in — four checks in a row plus tonight is the room's own profile, and we are recording what it actually says, including where it splits.
+**Say.** Last round, and it is the one the whole frame rests on. Monday morning, before any of this: which of the four was your practice blind to? One word for the quadrant and one clause for why, and I will read the answers from their show-and-tell files, or the channel, for anyone who could not make it. Watch the table fill in — four checks in a row plus tonight is the room's own profile, and we are recording what it actually says, including where it splits.
 - Monday morning, which quadrant was your practice blind to? Precommodification · Traces · Anchored in reality · Playability
-- One word and one clause each; an async participant's answer read from #workshop-kitkraft
+- One word and one clause each; an async participant's answer read from their `participants/<name>/s4-show-and-tell/show-and-tell.md` (or #workshop-kitkraft)
 - Tallied into the room's awareness profile: S1–S4 checks in a row, plus this round
 **Reference.** [Expanding Awareness (Michael Ashcroft)](https://expandingawareness.org/)
 > Speaker note: Rafa posts the order and keeps time; Sachin's agent tallies on screen in `SYNTHESIS.md` §5 as people speak.
