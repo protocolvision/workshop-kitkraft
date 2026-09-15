@@ -5,7 +5,7 @@
 ```
 participants/<name>/
   LOG.md                              the one append-only autolog for everything below (stays at the root)
-  s1-inventory/inventory.md           S1 — the three recurring tasks, the kit choice, posture (schema below)
+  s1-inventory/inventory.md           S1 — the AI kits you already use, the one to convert, posture (schema below)
   s2-factory/                         S2 — README.md, SKILL.md, examples/ (the Agent Skills shape; stub README only if private)
   s3-bridges/<target>.md              S3 — one file per bridge, written by you (template in PARTICIPANT_TEMPLATE/s3-bridges/)
   s4-show-and-tell/show-and-tell.md   S4 — what you say in your ninety seconds, prepared in Async 3
@@ -20,19 +20,30 @@ Every `s1-inventory/inventory.md` has exactly these sections, in this order. The
 ```
 # <name>
 
-## Recurring tasks
-1. <task, one line>. Recurring: yes/no. Depends on something I know that a stranger would not: yes/no — <why, one line>.
-2. …
-3. …
+## Kits I use
+### 1. <short name for the kit>
+- What it is: <the tools and pieces it is made of>
+- The job it does: <one sentence>
+- How often I use it: <daily / weekly / monthly / now and then>
+- What I adapted: <what you added, bent or worked around to make it fit your job>
+- Who else uses it: <only me / my team / shared more widely>
+- Where it lives: <where the pieces are kept; name the place, never paste private contents>
 
-## Built / use
-<anything AI-native you built or use that others could use, link or name; or "none">
+### 2. … (optional)
+### 3. … (optional)
 
-## Kit
-<the task that becomes the kit>
+## Kit to convert
+<which kit above becomes a factory in Session 2, and why, in one or two sentences; `undecided` is allowed until Async 1>
 
 ## Posture
 <Partnership / Hypervigilance / Overreliance / Compliance, or "not taken">
 ```
 
-Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. In the inventory that means task names and one-line descriptions; no client names, numbers, credentials, or NDA material. `_example/` is a filled example (`_example/s1-inventory/inventory.md`); folders starting with `_` are not participants.
+**What counts as a kit.** Any AI setup you have tinkered with to do a real job: a saved or reused prompt, a custom GPT or Claude project, a prompt document you copy from, a spreadsheet or document with an AI step, an automation with an AI step, a skill. Small is fine.
+
+Rules:
+- One to three kits. At least one; never pad to three.
+- "How often I use it" shows whether the job recurs; "What I adapted" shows what you know that a stranger would not.
+- The harness asks you about your kits one at a time and records your answers. It never invents a kit, a field, or an example. If you say you have none, it reads you the "what counts" list; if there is still none, it records `none yet` under `## Kits I use`, and Session 1 will help you find one.
+
+Everything in the repo is public. Keep private work in a private workspace on your machine; put in the repo only what you are comfortable sharing. In the inventory that means kit names, the tools they are made of, and one-line descriptions; name where a kit lives, never paste its private contents; no client names, numbers, credentials, or NDA material. `_example/` is a filled example (`_example/s1-inventory/inventory.md`); folders starting with `_` are not participants.
