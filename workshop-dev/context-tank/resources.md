@@ -108,6 +108,28 @@ The sources behind S2's concept: a factory is a kit that runs without its author
 
 ---
 
+## 3b. Reliability — hard worlds (new, Sep 15)
+
+Why a kit that runs more on its own can give less reliable results, and what fixes that. Both essays are **CC BY-SA 4.0**, so they can be quoted and redistributed with credit and share-alike.
+
+**Hard Worlds For Little Guys** ✓ — Jay Springett, Mar 19, 2026.
+https://thejaymo.net/2026/03/19/hard-worlds-for-little-guys/
+Argues that AI agents become reliable not through better instructions, but through "hard worlds" where tools, constraints, state and consequences are built into the environment itself. The single move he names is promoting constraints from advice into physics. Borrows fifty years of interactive-fiction and MUD design (rooms, parsers, exits, gates) as vocabulary for what an agent's environment is. "Hard" does not mean harsh or rigid: it means the world keeps claims about action and state true over time, while staying legible, governable and reversible. The more capable the actor, the more the structure of its world matters.
+- **S2 context slide:** kits vary in how independently they run, and a more independent kit whose rules exist only as written advice gives unreliable outputs. Springett supplies the reason.
+- **S2 "what a factory is":** the autonomy dial. Turning autonomy up is safe only in a harder world: fixed output shape, a worked example, checks the factory runs on itself. A SKILL.md written as prose guidance is a soft world; the facilitator water-rate kit's fixed column order and "units copied, never converted" are small hardness moves.
+- **S3 open question — what makes a combined process reliable?** Springett's answer is a strong candidate to test against the room's logs: build the constraints into the handoff between kits rather than into instructions to the assistant.
+
+**Ontological Hardness** ✓ — Jay Springett, Mar 19, 2026. https://thejaymo.net/2026/03/19/ontological-hardness/
+Companion essay defining hardness itself: how tightly a system binds symbol, action and consequence. The diagnostic vocabulary for judging whether a kit, factory or bridge is hard enough to trust unattended.
+
+**Hard Worlds for Big Organizations** — Rafa, Protocols for Business SIG, Apr 2026. https://sandy-unity-9k7a.here.now/
+Eleven-slide exploration of where Springett's move (promote constraints from prose into physics) resembles the AI CMM's level transitions (design the protocol, specify the handoff), and where the resemblance breaks. Local source copies, including both essays' full text and Springett's YAML knowledge objects, are in Rafa's `Hard-Worlds-Presentation/source-material/`; their licence permits adding them to this folder with credit.
+
+**skill-creator-springett** — bglek. https://github.com/bglek/skill-creator-springett
+Anthropic's skill-creator rewritten through Springett's lens: a working example of hardness applied to the same SKILL.md shape the workshop uses in S2.
+
+---
+
 ## 4. Standards map for the ladder (new section)
 
 Each rung of the S2/S3 interface ladder has an open standard. Name them; do not teach them.
@@ -257,6 +279,10 @@ Rao, Venkatesh, and Protocolized. "Have Your Factory Call My Factory." *Protocol
 Sabel, Charles, and Jonathan Zeitlin. "Historical Alternatives to Mass Production." *Past & Present* 108 (1985): 133–76.
 
 Smith, Adam. *An Inquiry into the Nature and Causes of the Wealth of Nations*. London, 1776. Book I, chapter 1.
+
+Springett, Jay. "Hard Worlds For Little Guys." *thejaymo.net*, March 19, 2026. CC BY-SA 4.0. https://thejaymo.net/2026/03/19/hard-worlds-for-little-guys/.
+
+Springett, Jay. "Ontological Hardness." *thejaymo.net*, March 19, 2026. CC BY-SA 4.0. https://thejaymo.net/2026/03/19/ontological-hardness/.
 
 Taylor, Frederick Winslow. *The Principles of Scientific Management*. New York: Harper & Brothers, 1911.
 

@@ -1,15 +1,16 @@
 # <name>
 
-## Recurring tasks
-1. <task, one line>. Recurring: yes/no. Depends on something I know that a stranger would not: yes/no — <why, one line>.
-2. …
-3. …
+## Kits I use
+### 1. <short name for the kit>
+- What it is:
+- The job it does:
+- How often I use it:
+- What I adapted:
+- Who else uses it:
+- Where it lives:
 
-## Built / use
-<anything AI-native you built or use that others could use, link or name; or "none">
-
-## Kit
-<the task that becomes the kit>
+## Kit to convert
+<which kit above becomes a factory in Session 2, and why; or `undecided`>
 
 ## Posture
 <Partnership / Hypervigilance / Overreliance / Compliance, or "not taken">

@@ -29,8 +29,10 @@ Registration for AI Kitcraft runs through a Google Form owned by the facilitator
 | 3 | Github Account (Please set-up at http://github.com/) | short text | yes | collaborator invite to `workshop-kitkraft`, sent as registrations arrive (from Sep 15); `<name>` for every file; push check (Sep 19) |
 | 4 | Discord Handle (Please visit the Discord) | short text | no | #workshop-kitkraft access, breakout group posts |
 | 5 | Organization and role | short text | yes | S1 ice-breaker, provisional breakout groups |
-| 6 | A recurring task you would build a Kit around | paragraph | yes | seed for `participants/<name>/s1-inventory/inventory.md` (the Discover → Encode gate) |
+| 6 | A recurring task you would build a Kit around | paragraph | yes | provisional breakout groups; a prompt for the inventory conversation only — the inventory lists the AI kits a participant already uses, asked for by their harness, not this task |
 | 7 | Tooling readiness | checkboxes | yes | who goes to Session 1A |
+
+Note: since 2026-09-15 the inventory (`participants/<name>/s1-inventory/inventory.md`) lists the AI kits a participant already uses, not tasks to automate. The Google Form's Q6 still asks for "A recurring task you would build a Kit around"; only Rafa can change the form. Until he does, read a Q6 answer as a hint at a kit the person may already use, never as their inventory.
 
 Options for question 7:
 - I use AI chatbots regularly (e.g. ChatGPT)
