@@ -6,7 +6,7 @@
 - Introduce four things worth noticing, so people can spot them all week.
 - Show the move from private notes to notes written for someone else.
 - Show where most teams are today and what the next step looks like.
-- Define a kit: parts made for tinkering, with no single right way to use them.
+- Define a kit: customizing a new general-purpose technology before it settles into products.
 - Explain how things left in a shared space help others act without meetings.
 - Show one real example of a collection of work with several ways in.
 - Explain why work shaped around one person rarely makes sense to anyone else.
@@ -18,7 +18,7 @@
 ---
 
 - Welcome people back and frame tonight: making a kit work without its author.
-- Remind everyone that the kit they picked still depends on them to run.
+- Show that kits vary in independence, and more independent ones can give unreliable outputs.
 - Get each person to write in the chat one thing their kit needs them for.
 - Explain that electricity paid off only when factories rearranged around it, and AI too.
 - Show two real examples of work that runs without its author and helps others build.

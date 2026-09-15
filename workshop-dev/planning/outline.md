@@ -309,7 +309,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 - No second repo, no portal. (OBS 8; rafa 6, 15; sachin 4, 23, 30)
 - Ruleset on `main`: block force-push and deletion; invites sent as registrations arrive. (OBS 4, 5)
 - Push rule with retry and conflict recipe; NAME = GitHub username; facilitator clause; never-delete-a-line rule, in `AGENTS.md`. (OBS 6, 26; rafa 21, 37; sachin 2, 15, 38)
-- Agent-actionable everything: `instructions/` folder, blocks with settings first, clone recognised by origin URL, check-before-clone, account check, per-file verify, stop-and-ask for the inventory, one inventory schema. Pre-work email rewritten with Item 0 (human-only installs), subscription line, local-time line, human "main only" line. (OBS 10–21, 23–25; rafa 36–42; sachin 33–37, 40)
+- Agent-actionable everything: `instructions/` folder, blocks with settings first, clone recognised by origin URL, check-before-clone, account check, per-file verify, stop-and-ask for the three tasks, one inventory schema. Pre-work email rewritten with Item 0 (human-only installs), subscription line, local-time line, human "main only" line. (OBS 10–21, 23–25; rafa 36–42; sachin 33–37, 40)
 - Recorder: explicit `/stop` before every breakout and re-`/record` at reconvene, a facilitator speaks every ≤15 min, awareness answers saved to `workshop-dev/transcripts/S<n>/awareness-check.md`, same-name re-record tested Sep 17, S4 synthesis from the live channel text with v2 in 48 h. (rafa 22, 23; sachin 12, 13, 14)
 - 1A has content: `workshop-dev/sessions/1A-clinic.md`, seven checks with proofs; not recorded. (rafa 29; sachin 29)
 - Presenter split by expertise, Sachin opens; presenter column in every run-of-show; one screen-sharer. (rafa 12, 34; sachin 28, 32)
@@ -333,7 +333,7 @@ Observation numbers (OBS, rafa, sachin) refer to the rehearsal's three observati
 
 ## Changes from v6 (multi-lens review)
 
-- Participant lens: pre-work now asks for recurring tasks (CMM Discover → Encode gate; replaced by the kits inventory on Sep 15) so non-builders have kit material; inventory rewritten accordingly.
+- Participant lens: pre-work now asks for three recurring tasks (CMM Discover → Encode gate) so non-builders have kit material; inventory rewritten accordingly.
 - Privacy: everything in the repo is public; private work stays in a private workspace on the participant's machine.
 - Ops: harness runs inside the clone; own-folder-only; pull --rebase in `AGENTS.md`; facilitator-time arithmetic added to breakouts.
 - Theorist: CMM ↔ Kit/Factory/Bridge mapping slide; Heylighen's sematectonic vs. marker-based traces added to S1 theory; a bridge hypothesis stated in S3 and tested in S4 instead of a blank.

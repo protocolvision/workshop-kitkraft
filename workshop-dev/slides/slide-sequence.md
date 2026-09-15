@@ -6,7 +6,7 @@
 - Pay attention to four things: common ideas, others' traces, real limits, and room to play.
 - Most of us keep private notes, and today we start writing for others.
 - Most teams are at the kit stage, and the next step is a factory.
-- A kit is a set of parts made for tinkering, with no single right use.
+- A kit customizes a new general-purpose technology before it settles into products.
 - What you leave in a shared space helps others act without a meeting.
 - One collection of work can offer several ways in, and that makes it reachable.
 - Work shaped around you rarely travels, so sharing needs a public record.
@@ -18,7 +18,7 @@
 ---
 
 - Session 2, Factories: tonight your kit learns to run without you.
-- Three hours ago you picked a kit that still needs you to run it.
+- Some kits run more independently than others, and their outputs can be unreliable.
 - In the chat, write one thing your kit still needs you to do.
 - Electricity paid off only when factories rearranged around it, and AI is the same.
 - Two real examples show work that runs without its author and helps others build.
