@@ -1,0 +1,62 @@
+- Welcome everyone and explain that this session is about how each person uses AI.
+- Explain the two days: share how you work with AI, then connect with others.
+- Explain what we record and how anyone can ask to remove something.
+- Get every person to speak once: name, AI habit, and one recent surprise.
+- Show that AI is still early, like farmers adapting cars before tractors existed.
+- Introduce four things worth noticing, so people can spot them all week.
+- Show the move from private notes to notes written for someone else.
+- Show where most teams are today and what the next step looks like.
+- Define a kit in plain terms: your own way of doing a job.
+- Explain how things left in a shared space help others act without meetings.
+- Show one real example of a collection of work with several ways in.
+- Explain why work shaped around one person rarely makes sense to anyone else.
+- Have each person's AI assistant write down three tasks they repeat at work.
+- Have each assistant find the two people whose work sits closest to theirs.
+- Hear one thing each person noticed, so we can see what the room is learning.
+- Point people to Tech Support now and to choosing a task before tonight.
+
+---
+
+- Welcome people back and frame tonight: making a kit work without its author.
+- Remind everyone that the kit they picked still depends on them to run.
+- Get each person to write in the chat one thing their kit needs them for.
+- Explain that electricity paid off only when factories rearranged around it, and AI too.
+- Show two real examples of work that runs without its author and helps others build.
+- Define a factory: it runs without you, fits its user, and hands off useful work.
+- Walk through the steps: write it down, break it up, name the output, test it.
+- Show that a factory can be a guide, a script, an app, or a website.
+- Have each person turn their kit into something another assistant can run unaided.
+- Have partners test each other's factories and note where the assistant got stuck.
+- Hear one thing each partner's assistant could not do without the author.
+- Hear one thing each person noticed, so we can see what the room is learning.
+- Set the overnight task: fix what your partner found and save a new version.
+
+---
+
+- Introduce bridges: getting one AI assistant to use several kits together, reliably.
+- Show that yesterday's factories each work on their own but have never been combined.
+- Get each person to name, in the chat, two kits they would like combined.
+- Define a bridge as a kit between kits that runs them as one process.
+- Show how Rao and Dixon linked their setups by passing drafts, not finished books.
+- Explain why passing half-finished work between kits often beats passing finished results.
+- Show one assistant chaining two kits, using the first kit's draft as the second's input.
+- Explain what makes a combined process reliable enough to run again next week.
+- Remind everyone that using others' instructions means trusting them, so check them first.
+- Have each assistant combine two or more kits into one process that can be repeated.
+- Hear what broke when kits were combined and what made the process repeatable.
+- Hear one thing each person noticed, so we can see what the room is learning.
+- Set tomorrow's open question: what actually makes a combined process reliable?
+- Make sure everyone saves their bridge notes and prepares a short show-and-tell.
+
+---
+
+- Welcome people to the final session, where the slides are the work they made.
+- Show how far the room came, from ideas on Monday to shared, working files.
+- Get each person to describe in one chat word how their bridge went.
+- Retrace the journey from kit to factory to bridge using three real files.
+- Give each person ninety seconds to present their show-and-tell.
+- Look closely at two bridges that worked and one that did not.
+- Read out, word for word, what each person found made their bridge reliable.
+- Agree as a room on what makes a bridge reliable, using everyone's notes.
+- Ask each person what they notice now about their own work that they missed Monday.
+- Explain what happens next: the work stays public and a summary follows within 48 hours.

@@ -12,7 +12,7 @@
 - Work shaped around you rarely travels, so sharing needs a public record.
 - Ask your AI assistant to write down three tasks you repeat at work.
 - Ask it to find the two people whose work sits closest to yours.
-- In one word, which of the four things did this hour help you notice?
+- Share one thing you noticed this hour, and together they show what we are learning.
 - Tech Support starts now, and tonight you bring one task others can run.
 
 ---
@@ -28,25 +28,25 @@
 - Turn your kit into a factory someone else's AI assistant can run without asking you.
 - Swap with a partner and see where their assistant gets stuck or gets it wrong.
 - Share one thing your partner's assistant could not do without you.
-- In one word, which of the four things did this hour help you notice?
+- Share one thing you noticed this hour, and together they show what we are learning.
 - Overnight, fix what your partner found and save the new version.
 
 ---
 
-- Session 3, Bridges: can your AI assistant use someone else's work?
-- Last night every kit found its gaps, and those gaps are clues.
-- In the chat, share one gap your partner's assistant found in your kit.
-- Two people once shared unfinished work between their setups, and it worked.
-- You might connect two factories, two kits, or one of each.
-- One example turns a water price document into rows anyone can reuse.
-- Another example shows what a bigger, more finished version could look like.
-- Using someone's instructions means trusting them, so read them before you rely on them.
-- We have no definition yet, so your notes today will write one.
-- Ask your assistant to use a partner's factory for something yours cannot do.
-- Share what your assistant needed and what it found on its own.
-- In one word, which of the four things did this hour help you notice?
-- Our guess to test tomorrow: a bridge is what both sides agree not to change.
-- Before tonight, finish your bridge notes and prepare your short show-and-tell.
+- Session 3, Bridges: one AI assistant can use several kits together, reliably.
+- Yesterday's factories each work alone, but none of them has been combined yet.
+- In the chat, name two kits in the room you would like to combine.
+- A bridge is a kit between kits, running several of them as one process.
+- Rao and Dixon linked their setups by passing drafts, not finished books.
+- Passing half-finished work between kits often works better than passing finished results.
+- One assistant can chain two kits, feeding the first kit's draft into the second.
+- A combined process is only useful if it runs the same way next week.
+- Using someone's instructions means trusting them, so check them before you rely on them.
+- Ask your assistant to combine two or more kits into one repeatable process.
+- Share what broke when kits were combined and what made the process repeatable.
+- Share one thing you noticed this hour, and together they show what we are learning.
+- Tomorrow's open question: what actually makes a combined process reliable?
+- Before tonight, save your bridge notes and prepare your short show-and-tell.
 
 ---
 
@@ -56,7 +56,7 @@
 - Three real files show the journey from a kit to a factory to a bridge.
 - Each person gets ninety seconds to share their show-and-tell.
 - Two bridges that worked and one that did not teach us the most.
-- Your own descriptions of a bridge come first, read out word for word.
-- We test yesterday's guess against your notes, and your definition wins.
-- Which of the four things was your work blind to on Monday?
+- Your own words on what made your bridge reliable come first, read out verbatim.
+- We agree as a room on what makes a bridge reliable, using your notes.
+- Name what you now notice about your own work that you missed on Monday.
 - The work stays public, and a summary arrives here within 48 hours.
