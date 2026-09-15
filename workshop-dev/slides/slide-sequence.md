@@ -6,14 +6,14 @@
 - Pay attention to four things: common ideas, others' traces, real limits, and room to play.
 - Most of us keep private notes, and today we start writing for others.
 - Most teams are at the kit stage, and the next step is a factory.
-- A kit is your own way of doing a job before any standard exists.
+- A kit is a set of parts made for tinkering, with no single right use.
 - What you leave in a shared space helps others act without a meeting.
 - One collection of work can offer several ways in, and that makes it reachable.
 - Work shaped around you rarely travels, so sharing needs a public record.
-- Ask your AI assistant to write down three tasks you repeat at work.
-- Ask it to find the two people whose work sits closest to yours.
+- Ask your AI assistant to list the AI kits you already use at work.
+- Ask it to find the two people whose kits sit closest to yours.
 - Share one thing you noticed this hour, and together they show what we are learning.
-- Tech Support starts now, and tonight you bring one task others can run.
+- Tech Support starts now, and before tonight you pick one kit to convert.
 
 ---
 

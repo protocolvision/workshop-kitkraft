@@ -6,14 +6,14 @@
 - Introduce four things worth noticing, so people can spot them all week.
 - Show the move from private notes to notes written for someone else.
 - Show where most teams are today and what the next step looks like.
-- Define a kit in plain terms: your own way of doing a job.
+- Define a kit: parts made for tinkering, with no single right way to use them.
 - Explain how things left in a shared space help others act without meetings.
 - Show one real example of a collection of work with several ways in.
 - Explain why work shaped around one person rarely makes sense to anyone else.
-- Have each person's AI assistant write down three tasks they repeat at work.
-- Have each assistant find the two people whose work sits closest to theirs.
+- Have each person's AI assistant list the AI kits they already use at work.
+- Have each assistant find the two people whose kits sit closest to theirs.
 - Hear one thing each person noticed, so we can see what the room is learning.
-- Point people to Tech Support now and to choosing a task before tonight.
+- Point people to Tech Support now and to choosing a kit before tonight.
 
 ---
 
