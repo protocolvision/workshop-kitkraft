@@ -18,7 +18,7 @@
 ---
 
 - Session 2, Factories: tonight your kit learns to run without you.
-- Some kits run more independently than others, and their outputs can be unreliable.
+- Kits running without their author's oversight need hard protocols to stay reliable.
 - In the chat, write one thing your kit still needs you to do.
 - Electricity paid off only when factories rearranged around it, and AI is the same.
 - Two real examples show work that runs without its author and helps others build.

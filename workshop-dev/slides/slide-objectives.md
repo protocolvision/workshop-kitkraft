@@ -18,7 +18,7 @@
 ---
 
 - Welcome people back and frame tonight: making a kit work without its author.
-- Show that kits vary in independence, and more independent ones can give unreliable outputs.
+- Show that kits running without their author's oversight need hard protocols to stay reliable.
 - Get each person to write in the chat one thing their kit needs them for.
 - Explain that electricity paid off only when factories rearranged around it, and AI too.
 - Show two real examples of work that runs without its author and helps others build.
