@@ -4,10 +4,10 @@
 - Explain the workshop's recording policy.
 - Get every person to introduce themselves: name, AI usage example, and one recent surprise.
 - Show that AI is still early, like farmers adapting cars before tractors existed.
-- Introduce four things worth noticing, so people can spot them all week.
+- Introduce the workshop's lens: what's around you (external) or inside you (internal), already there (archive) or happening now (live).
 - Show the move from private notes to notes written for someone else.
 - Show where most teams are today and what the next step looks like.
-- Define a kit: customizing a new general-purpose technology before it settles into products.
+- Define a kit: customizing a new general-purpose technology (internal/live?) before it settles into products (external/archive?)
 - Show real examples of a kits.
 - Explain why work shaped around one person rarely makes sense to anyone else.
 - Explain how things left in a shared space help uncover new products and organizational forms.
