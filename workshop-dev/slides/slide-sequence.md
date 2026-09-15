@@ -1,0 +1,62 @@
+- Session 1, Kits: everyone uses AI their own way, and nobody else can see it.
+- Over two days, you share how you work with AI and connect with others.
+- We record the main room, and you can ask us to remove anything.
+- Tell us your name, how you use AI, and one recent surprise.
+- AI is still early, like farmers adapting cars before anyone built a tractor.
+- Pay attention to four things: common ideas, others' traces, real limits, and room to play.
+- Most of us keep private notes, and today we start writing for others.
+- Most teams are at the kit stage, and the next step is a factory.
+- A kit is your own way of doing a job before any standard exists.
+- What you leave in a shared space helps others act without a meeting.
+- One collection of work can offer several ways in, and that makes it reachable.
+- Work shaped around you rarely travels, so sharing needs a public record.
+- Ask your AI assistant to write down three tasks you repeat at work.
+- Ask it to find the two people whose work sits closest to yours.
+- In one word, which of the four things did this hour help you notice?
+- Tech Support starts now, and tonight you bring one task others can run.
+
+---
+
+- Session 2, Factories: tonight your kit learns to run without you.
+- Three hours ago you picked a kit that still needs you to run it.
+- In the chat, write one thing your kit still needs you to do.
+- Electricity paid off only when factories rearranged around it, and AI is the same.
+- Two real examples show work that runs without its author and helps others build.
+- A factory runs without you, fits whoever uses it, and hands off useful work.
+- Write it down, break it into steps, name what it produces, and let others test.
+- A factory can be a written guide, a script, an app, or a website.
+- Turn your kit into a factory someone else's AI assistant can run without asking you.
+- Swap with a partner and see where their assistant gets stuck or gets it wrong.
+- Share one thing your partner's assistant could not do without you.
+- In one word, which of the four things did this hour help you notice?
+- Overnight, fix what your partner found and save the new version.
+
+---
+
+- Session 3, Bridges: can your AI assistant use someone else's work?
+- Last night every kit found its gaps, and those gaps are clues.
+- In the chat, share one gap your partner's assistant found in your kit.
+- Two people once shared unfinished work between their setups, and it worked.
+- You might connect two factories, two kits, or one of each.
+- One example turns a water price document into rows anyone can reuse.
+- Another example shows what a bigger, more finished version could look like.
+- Using someone's instructions means trusting them, so read them before you rely on them.
+- We have no definition yet, so your notes today will write one.
+- Ask your assistant to use a partner's factory for something yours cannot do.
+- Share what your assistant needed and what it found on its own.
+- In one word, which of the four things did this hour help you notice?
+- Our guess to test tomorrow: a bridge is what both sides agree not to change.
+- Before tonight, finish your bridge notes and prepare your short show-and-tell.
+
+---
+
+- Session 4, Show and tell: tonight the slides are the work you made.
+- Two days ago these were ideas, and now they are files anyone can open.
+- In the chat, describe how your bridge went in one word.
+- Three real files show the journey from a kit to a factory to a bridge.
+- Each person gets ninety seconds to share their show-and-tell.
+- Two bridges that worked and one that did not teach us the most.
+- Your own descriptions of a bridge come first, read out word for word.
+- We test yesterday's guess against your notes, and your definition wins.
+- Which of the four things was your work blind to on Monday?
+- The work stays public, and a summary arrives here within 48 hours.
