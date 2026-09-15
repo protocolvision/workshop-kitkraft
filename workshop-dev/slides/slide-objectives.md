@@ -1,31 +1,32 @@
 - Welcome everyone and explain that this session is about how each person uses AI.
+- Explain Protocol Institute / Protocol Vision / Protocols for Business / Sachin + Rafa backgrounds.
 - Explain the two days: share how you work with AI, then connect with others.
-- Explain what we record and how anyone can ask to remove something.
-- Get every person to speak once: name, AI habit, and one recent surprise.
+- Explain the workshop's recording policy.
+- Get every person to introduce themselves: name, AI usage example, and one recent surprise.
 - Show that AI is still early, like farmers adapting cars before tractors existed.
 - Introduce four things worth noticing, so people can spot them all week.
 - Show the move from private notes to notes written for someone else.
 - Show where most teams are today and what the next step looks like.
 - Define a kit: customizing a new general-purpose technology before it settles into products.
-- Explain how things left in a shared space help others act without meetings.
-- Show one real example of a collection of work with several ways in.
+- Show real examples of a kits.
 - Explain why work shaped around one person rarely makes sense to anyone else.
-- Have each person's AI assistant list the AI kits they already use at work.
-- Have each assistant find the two people whose kits sit closest to theirs.
+- Explain how things left in a shared space help uncover new products and organizational forms.
+- Have each person list AI kits they already use, personally or at work. (wallflower exercise)
+- Have each AI assistant find kits related to each other.
 - Hear one thing each person noticed, so we can see what the room is learning.
 - Point people to Tech Support now and to choosing a kit before tonight.
 
 ---
 
-- Welcome people back and frame tonight: making a kit work without its author.
+- Welcome people back and frame tonight: making a kit work without its author. (externalized memory / context)
 - Show that kits running without their author's oversight need hard protocols to stay reliable.
-- Get each person to write in the chat one thing their kit needs them for.
+- Get each person to write in the chat one thing their kit needs them for. (internal memory / private context)
 - Explain that electricity paid off only when factories rearranged around it, and AI too.
 - Show two real examples of work that runs without its author and helps others build.
 - Define a factory: it runs without you, fits its user, and hands off useful work.
-- Walk through the steps: write it down, break it up, name the output, test it.
+- Walk through the steps to convert a kit into a factory: write it down, break it up, name the output, test it.
 - Show that a factory can be a guide, a script, an app, or a website.
-- Have each person turn their kit into something another assistant can run unaided.
+- Have each person try to turn one kit into something another assistant can run unaided. (i.e. protocolization)
 - Have partners test each other's factories and note where the assistant got stuck.
 - Hear one thing each partner's assistant could not do without the author.
 - Hear one thing each person noticed, so we can see what the room is learning.
@@ -34,11 +35,11 @@
 ---
 
 - Introduce bridges: getting one AI assistant to use several kits together, reliably.
-- Show that yesterday's factories each work on their own but have never been combined.
-- Get each person to name, in the chat, two kits they would like combined.
+- Show that yesterday's factories each work on their own but will eventually be combined in a network.
+- Get each person to name, in the chat, two kits they could combine and why.
 - Define a bridge as a kit between kits that runs them as one process.
 - Show how Rao and Dixon linked their setups by passing drafts, not finished books.
-- Explain why passing half-finished work between kits often beats passing finished results.
+- Explain why passing half-finished work between kits often beats passing finished results. (intermedia, stigmergy)
 - Show one assistant chaining two kits, using the first kit's draft as the second's input.
 - Explain what makes a combined process reliable enough to run again next week.
 - Remind everyone that using others' instructions means trusting them, so check them first.
@@ -52,11 +53,11 @@
 
 - Welcome people to the final session, where the slides are the work they made.
 - Show how far the room came, from ideas on Monday to shared, working files.
-- Get each person to describe in one chat word how their bridge went.
-- Retrace the journey from kit to factory to bridge using three real files.
+- Get each person to describe how their bridge building evolved.
+- Retrace the journey from kit to factory to bridge using an example.
 - Give each person ninety seconds to present their show-and-tell.
-- Look closely at two bridges that worked and one that did not.
-- Read out, word for word, what each person found made their bridge reliable.
+- Look closely at a bridge that worked and one that did not.
+- Discuss what each person found made their bridge reliable.
 - Agree as a room on what makes a bridge reliable, using everyone's notes.
 - Ask each person what they notice now about their own work that they missed Monday.
-- Explain what happens next: the work stays public and a summary follows within 48 hours.
+- Explain what happens next: the work stays public and continued work at Protocol Vision / Protocols for Business.
