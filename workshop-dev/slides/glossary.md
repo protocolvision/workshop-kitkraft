@@ -9,6 +9,12 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 
 **Inference** — One run of the model: text goes in, the model works through it once, and text comes back. Every step your assistant takes is another run, which is why a long job costs more and takes longer.
 
+**Loop** — An assistant working in a cycle: take a step, look at what came back, correct it, and go again until the job is done or it gives up. Most of what an AI assistant does is one loop running for a while.
+*In this workshop:* a kit is usually a single loop. You paste a block and your assistant works through it.
+
+**Graph** — Several steps laid out in a fixed order, saying which one runs next and what it hands on. The graph draws the path; a loop walks each step of it.
+*In this workshop:* a bridge is a small graph. Several kits in an order, each passing half-finished work to the next.
+
 **Context window** — Everything the model can see at once while it answers: your question, the files it has opened, and what has already been said. It has a fixed size, so a long session eventually pushes the earliest material out of view.
 
 **Prompt** — What you type or paste to get the model to do something. A prompt you have saved and reused is already a small kit (see kit).
@@ -118,5 +124,6 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 - [NPC Memo, "Agent-Shaped Problems"](https://npcmemo.substack.com/p/agent-shaped-problems) — agent, protocol
 - [Summer of Protocols](https://summerofprotocols.com/) and the [Protocol Institute](https://protocol-institute.org/) — protocol, standard
 - [Agent Skills specification](https://agentskills.io/specification), [AGENTS.md](https://agents.md/), [MCP](https://modelcontextprotocol.io/specification/2026-07-28), [A2A](https://a2a-protocol.org/latest/specification/) — skill, MCP, standard
+- [Agent harness, loop and graph engineering](https://www.analyticsvidhya.com/blog/2026/08/agent-harness-loop-graph-engineering/) and [Graph engineering vs loop engineering](https://www.aibuilderclub.com/blog/graph-engineering-vs-loop-engineering) — loop, graph
 
 The fuller annotated list, with everything the sessions draw on, is `../context-tank/resources.md`.

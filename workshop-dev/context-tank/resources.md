@@ -130,6 +130,16 @@ Anthropic's skill-creator rewritten through Springett's lens: a working example 
 
 ---
 
+## 3c. Loops and graphs — how practitioners talk about agent shape (new, Sep 16)
+
+Vocabulary that settled during 2026 and that participants will meet outside the workshop. A **loop** is an assistant repeating a step with feedback: run it, check what came back, run again with the error included. A **graph** models execution across steps: which one runs next and what state it receives. They are not rivals — the graph draws the path, the loop walks each node — and the practical advice is to default to one loop and reach for a graph only when one loop stops being enough.
+
+- **S2:** the job-shop structure (steps as workstations, each handing work on) is a graph drawn inside one person's factory; the autonomy dial is how much of that loop the factory runs unattended.
+- **S3:** a bridge is a small graph over several kits, and its reliability question is the one practitioners hit when a single loop stops being enough.
+- Sources: [Agent harness, loop and graph engineering](https://www.analyticsvidhya.com/blog/2026/08/agent-harness-loop-graph-engineering/) (Analytics Vidhya, Aug 2026) · [Graph engineering vs loop engineering](https://www.aibuilderclub.com/blog/graph-engineering-vs-loop-engineering) (AI Builder Club). The term crystallised in public discussion on X in July 2026; Rafa's pointer is https://x.com/AnatoliKopadze/status/2080668775796314331, which is not machine-readable from here, so the wording above comes from the two written write-ups.
+
+---
+
 ## 4. Standards map for the ladder (new section)
 
 Each rung of the S2/S3 interface ladder has an open standard. Name them; do not teach them.
