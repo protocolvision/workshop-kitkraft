@@ -1,88 +1,63 @@
 # Pre-work email — send as registrations arrive, from Tue Sep 15, 2026
 
 To: each registrant (form Q2) · From: Rafa · Cc: Sachin
-Subject: AI Kitcraft — your setup before Monday (10 minutes, plus one paste)
+Subject: AI Kitcraft — 15 minutes of setup before Monday
 
 ---
 
 Hi <first name>,
 
-Thanks for signing up for AI Kitcraft. We're looking forward to working with you on Monday and Tuesday. This email is your pre-work. It's short: one thing to do yourself, one thing to hand to your AI assistant (a.k.a. harness). If anything below doesn't work, 1A Tech Support on Monday exists exactly for that, so please don't spend an evening fighting it.
+Thanks for signing up for AI Kitcraft. Three things before Monday: install a few tools, say hello on Discord, and give your AI assistant one paste. About fifteen minutes in total. If any of it fights you, come to Tech Support on Monday rather than losing an evening to it.
 
-**1. Set up your machine (before Friday, Sep 18)**
+**1. Install three things (by Friday, Sep 18)**
 
-The workshop runs through a coding harness, Claude Code or Codex, working inside a shared GitHub repository. For that to work, your computer needs three things installed: `git`, the GitHub command-line tool `gh`, and the harness itself. These installs need your computer password, which is why a harness can't do them for you. The full checklist, with the command for each system and how to check it worked, is here:
-https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/setup-checklist.md
+The workshop runs through an AI assistant, Claude Code or Codex, working in a shared GitHub repository. So your computer needs:
 
-The short version:
+- **git** and the GitHub tool **gh**. On a Mac: `xcode-select --install`, then `brew install gh`, or the installer at https://cli.github.com/. On Windows: https://git-scm.com/download/win, then the same gh installer.
+- **One AI assistant.** Claude Code needs a paid Claude plan (https://code.claude.com/docs/en/setup); Codex needs a paid ChatGPT plan (https://learn.chatgpt.com/docs/codex/cli). Either is fine.
+- **Your GitHub login on this machine:** `gh auth login`, then `gh auth setup-git`. Use the account you gave us on the form, and accept the repo invitation we sent: https://github.com/protocolvision/workshop-kitkraft
 
-- Install `git` and `gh`. On a Mac, open Terminal and run `xcode-select --install` (a window pops up; accept it and wait), then `brew install gh`, or use the installer at https://cli.github.com/ if you don't have Homebrew. On Windows, install Git for Windows from https://git-scm.com/download/win and then `gh` from https://cli.github.com/.
-- Log in to GitHub from the terminal: `gh auth login` (choose GitHub.com, HTTPS, and log in through the browser), then `gh auth setup-git`. Use the GitHub account you gave us on the form.
-- Install one harness. Claude Code needs a Claude Pro or Max subscription: https://code.claude.com/docs/en/setup. Codex needs a paid ChatGPT plan: https://learn.chatgpt.com/docs/codex/cli. Either is fine; one is enough.
-- Accept the GitHub invitation to https://github.com/protocolvision/workshop-kitkraft. It's in the invite email, or at https://github.com/notifications.
+These need your computer password, which is why your assistant can't do them for you. Commands for every system, and how to check each one worked: https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/sessions/setup-checklist.md
 
-One thing worth knowing for the whole workshop: everything goes straight to the `main` branch. No branches, no pull requests. Your harness has been told this; we'd ask you not to branch by hand either.
+**2. Say hello on Discord**
 
-**Say hello on Discord.** Join the server at https://discord.gg/s2WbZBDqM and post a quick hello in the workshop channel, #workshop-kitkraft: https://discord.com/channels/1082444651946049567/1548286831232032778. That's where the pins, the instructions for each session and the group lists will be. If anything in this email is unclear, or an install won't behave, ask there and tag Rafa (@rafa_0x) or Sachin (@sachbenny); one of us will answer.
+Join at https://discord.gg/s2WbZBDqM and post a hello in #workshop-kitkraft: https://discord.com/channels/1082444651946049567/1548286831232032778. Pins, session instructions and group lists all live there. Stuck on anything, including the step below? Ask there and tag Rafa (@rafa_0x) or Sachin (@sachbenny).
 
-**2. Let your harness do the rest**
+**3. Give your assistant this paste**
 
-Once the installs are done, open your harness, paste the block below in full, and say "do this". It checks your setup, creates your folder in the repo, writes a first version of your inventory, and pushes. It will ask you about the AI setups you already use at work, the prompts, projects and documents you've bent to your own jobs; it shouldn't invent anything. It finishes with a short report and a GitHub link. If it stops with an error, copy the exact text and bring it to 1A. One habit for the whole workshop: read other people's inventories and kits only through your harness, never in the browser; that is what the exercises test.
+Open your AI assistant and paste the block below, then say "do this". It sets up your folder in the repo and asks you about the AI setups you already use at work: the prompts, projects and documents you have bent to your own jobs. Anything counts, however small. It won't invent anything, and it finishes with a link and a short report. If it stops with an error, copy the exact text into Discord or bring it to Tech Support.
 
 ```
-You are the participant's harness for the AI Kitcraft workshop (Sep 21–22, 2026). Do the pre-work below for them. Ask them for anything you cannot find; never guess a name, a kit, or a credential.
-Settings: REPO=https://github.com/protocolvision/workshop-kitkraft  BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
+You are the participant's AI assistant for the AI Kitcraft workshop (Sep 21–22, 2026). Do their pre-work. Never guess a name, a kit, or a credential; ask.
+Settings: REPO=https://github.com/protocolvision/workshop-kitkraft  NAME=<the participant's GitHub username, lowercase; ask if unknown>
 
-Preconditions (check each; if one fails, do the fix and re-check before going on):
-- `git --version` and `gh --version` print versions. If either fails: STOP; the participant must do Item 0 of the email themselves (it needs their computer password). Do not try to install them.
-- `gh api user --jq .login` prints NAME (compare case-insensitively). If it prints another name or fails: STOP; tell the participant "run `gh auth login` as NAME in a terminal, then say continue". When it matches, run `gh auth setup-git` yourself (it asks for nothing).
-- `gh repo view protocolvision/workshop-kitkraft --json name` succeeds. On 404: the invite is not accepted; tell the participant to accept it at https://github.com/notifications, then retry.
-
-Steps:
-1. Are you at the clone root? Yes when `git rev-parse --show-toplevel` succeeds and equals `pwd`, AND `git remote get-url origin` contains `workshop-kitkraft`. Never test the folder name. If the toplevel differs from `pwd`, `cd` to it. If yes, go to step 3.
-2. If not: `find ~ -maxdepth 4 -type d -name workshop-kitkraft`. One result whose remote matches: `cd` into it. None: `gh repo clone protocolvision/workshop-kitkraft` here, then `cd workshop-kitkraft`. Two or more: STOP, list them, and tell the participant to bring it to 1A; never make a second clone. Continue in this same run; do not ask the participant to paste again.
-3. `git checkout BRANCH && git pull --rebase origin BRANCH`. Your folder: if `participants/NAME/` does not exist, `cp -R PARTICIPANT_TEMPLATE participants/NAME`. Stay at the clone root. Read `AGENTS.md`; follow it for everything below: you write only inside `participants/NAME/`, read anywhere. In the report, tell the participant to open the harness at the clone root (the folder that contains `AGENTS.md`) from now on. Artifact: an up-to-date clone and your folder.
-4. If `participants/NAME/s1-inventory/inventory.md` already exists on BRANCH with at least one kit (or `none yet`) under `## Kits I use`: report "already done" with its GitHub link and stop.
-5. The kits they already use, one to three. What counts as a kit: any AI setup you have tinkered with to do a real job — a saved or reused prompt, a custom GPT or Claude project, a prompt document you copy from, a spreadsheet or document with an AI step, an automation with an AI step, a skill. Small is fine. If the participant has not described their kits in this conversation: STOP and ask about them, one at a time. For each kit record, in their words, the fields in `participants/README.md`: a short name, What it is, The job it does, How often I use it, What I adapted, Who else uses it, Where it lives (name the place; never paste private contents). Never invent a kit, a field, or an example. At least one; never pad to three. If they say they have none, read them the "what counts" list; if there is still none, record `none yet` and tell them Session 1 will help.
-6. Write `participants/NAME/s1-inventory/inventory.md` with exactly the sections of `participants/README.md`: line 1 `# NAME`; `## Kits I use` (one to three `### n. <short name>` blocks with their fields, or `none yet`); `## Kit to convert` (`undecided`; chosen in S1 or Async 1); `## Posture` (empty). Then append to `participants/NAME/LOG.md`: `| <ISO-8601 UTC now> | async | NAME | progress | pre-work inventory written by harness |`. Do not create any other file. Artifact: that file, 8–35 lines, and the log line.
-7. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. `git add participants/NAME && git commit -m "async: NAME: pre-work inventory"` (the whole folder, the first time).
-8. `git pull --rebase origin BRANCH && git push origin HEAD:BRANCH`. Verify: `git fetch origin && git log origin/BRANCH --oneline -1 -- participants/NAME/s1-inventory/inventory.md` shows your commit. Artifact: the file on GitHub.
-9. Append further autolog lines as AGENTS.md says if you do anything else in the repo; one extra commit is fine.
-
-Failures:
-- Push asks for a username/password: type nothing. Tell the participant to run `gh auth setup-git` in a terminal, then retry step 8.
-- Push rejected ("fetch first", "non-fast-forward"): `git pull --rebase origin BRANCH`, then push again; up to 3 tries. If a CONFLICT appears, it can only be inside `participants/NAME/`: keep both versions' lines, `git add` it, `git rebase --continue`, push.
-- "Permission denied" / 403: invite not accepted, or the wrong account (`gh api user --jq .login`). STOP and report which.
-- Anything else you cannot fix in two attempts: STOP, report the exact error text, and say "bring this to 1A Tech Support, Mon Sep 21, 16:30 UTC, #kafka".
-
-Do not: create branches, force-push, edit anything outside `participants/NAME/` (`README.md`, `AGENTS.md`, other people's folders), store or print tokens, or put anything into the file the participant would not put on a public website.
-
-Report to the participant in five lines or fewer: the GitHub link of the file, the kits as recorded, the folder to open the harness in from now on, and anything still needed from them.
+1. Find or clone the repo. `find ~ -maxdepth 4 -type d -name workshop-kitkraft`: one result whose `git remote get-url origin` contains `protocolvision/workshop-kitkraft`, `cd` into it; no result, run `gh repo clone protocolvision/workshop-kitkraft` here and `cd` into it; two or more, STOP, list them, and tell the participant to bring it to Tech Support.
+2. Read `instructions/orient.md` and follow the block inside it exactly, in this same run. It checks the setup, makes the participant's folder and makes the first push.
+3. Read `instructions/S1-inventory.md` and follow Block 1 only. It asks the participant about the AI kits they already use and writes their inventory. Ask about one kit at a time, record their words, and invent nothing; if they have none, record `none yet`.
+4. Report in five lines: what step 2 reported, the GitHub link to the inventory, the folder to open your assistant in from now on, and anything still needed from them.
 ```
 
-Everything in the repo is public, including your inventory and, later, your kit. If you'd rather keep some of your work private, that's fine: once an exercise starts, work in a private workspace on your own machine and put into the repo only what you're comfortable sharing. Whatever does go in, treat it like a public website.
+Everything in the repo is public, including your inventory. If you want to keep some work private, keep it on your own machine and put in only what you're comfortable sharing. One habit for the whole workshop: work goes straight to the `main` branch, so please don't create branches by hand.
 
 **When**
 
 | Session | Day | UTC | Berlin | Pacific |
 |---|---|---|---|---|
 | S1 Kits | Mon Sep 21 | 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
-| 1A Tech Support (optional) | Mon Sep 21 | 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
+| Tech Support (optional) | Mon Sep 21 | 16:30–17:00 | 18:30–19:00 | 09:30–10:00 |
 | S2 Factories | Mon Sep 21 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
 | S3 Bridges | Tue Sep 22 | 15:30–16:30 | 17:30–18:30 | 08:30–09:30 |
-| S4 Recap | Tue Sep 22 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
+| S4 Show and tell | Tue Sep 22 | 20:00–21:00 | 22:00–23:00 | 13:00–14:00 |
 
-If you're outside those zones, S1 starts at 15:30 UTC on Monday Sep 21; this converts it for you: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530 (east of UTC+8 that's already Tuesday).
+Elsewhere in the world? S1 starts 15:30 UTC on Monday Sep 21: https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260921T1530 (east of UTC+8 it is already Tuesday). We meet by voice in **#kafka**, break out into **breakout-1** to **breakout-5**, and write everything in **#workshop-kitkraft**.
 
-On Discord: plenary in the voice channel **#kafka**, breakouts in **breakout-1** to **breakout-5**, everything written in **#workshop-kitkraft**. 1A Tech Support is for anyone whose harness is installed but not behaving: 30 minutes, we fix it together.
+**If you have time**
 
-**Before Monday, if you can**
+The AI postures survey takes five minutes and we use it in the first round: https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843. Chapters 1–3 of Durable AI Adoption are the background: https://ai.protocolized.dev/
 
-Take the AI postures survey (about five minutes) and note your result; we use it in the first round: https://www.robertpeake.com/ai/partnership-survey?gid=f416e3efe843. Read chapters 1–3 of Durable AI Adoption: https://ai.protocolized.dev/. If you have time for one more piece, "Have Your Factory Call My Factory" sets up Tuesday: https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory
+**Recording**
 
-**A note on recording**
-
-Plenary audio in #kafka, and everything written in #workshop-kitkraft, is recorded and transcribed with speaker names, and the transcripts go into the public repo. Breakouts may be recorded too; 1A Tech Support is not. Your harness writes short log lines into public files as it works, and everything in the repo is public. If you ever want a line removed, ask either of us and it's done, no reason needed. After the workshop the repo stays public and we post the synthesis in #workshop-kitkraft; the recordings may also be used for broader synthesis for Symposium write-ups and future research. If you'd rather opt out of that, just tell us.
+Plenary audio in #kafka and everything written in #workshop-kitkraft is recorded and transcribed with speaker names, and goes into the public repo. Breakouts may be recorded; Tech Support is not. Your assistant writes short log lines into public files as it works. Want a line removed? Ask either of us, no reason needed. Afterwards the repo stays public, we post a summary in #workshop-kitkraft, and the recordings may feed Symposium write-ups and later research. Tell us if you'd rather opt out.
 
 See you Monday.
 

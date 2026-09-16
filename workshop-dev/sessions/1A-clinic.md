@@ -3,7 +3,7 @@
 Rafa runs 1A and its #workshop-kitkraft threads; Sachin is not needed. Everyone has a harness and a GitHub account; 1A is for a harness that is installed but something is wrong. Expected: anyone without a push by the Sep 19 check, anyone whose harness opened outside the clone (no autolog), wrong account, wrong clone, wrong branch, push rejected, anyone who does not trust the push. Nothing is installed here beyond what the setup checklist's "Verify only" block checks. Exit, per person: the harness reports all seven checks below as passed. Everything after "Before the block" is one pasteable block; the participant pastes it and says "do this", Rafa reads the report.
 
 ## Before the block (human, 00:00–00:08)
-git, `gh` and one harness are already installed (pre-work Item 0; `setup-checklist.md`). If a verify command there fails, the participant runs the checklist's "Verify only" block first; anything it reports as missing is theirs to install, not 1A's.
+git, `gh` and one harness are already installed (pre-work step 1; `setup-checklist.md`). If a verify command there fails, the participant runs the checklist's "Verify only" block first; anything it reports as missing is theirs to install, not 1A's.
 - Say the failed step in one sentence (auth, wrong clone, wrong branch, push rejected, harness opened outside the clone); Rafa opens a #workshop-kitkraft thread per person for pasted errors.
 - Open a terminal in the home folder and start the harness (`claude` or `codex`). Then paste the block. Rafa says commands; participants type. Nobody types on someone else's machine.
 

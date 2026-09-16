@@ -39,7 +39,7 @@ By the end a participant can:
 
 ## Pre-work (email sent as registrations arrive, from Sep 15; text in `pre-work-email.md`)
 
-- Item 0, done by the participant, before Friday: install `git` and `gh`, `gh auth login`, `gh auth setup-git`, install a harness (Claude Code needs a Claude Pro/Max subscription; Codex a ChatGPT plan), accept the repo invite. These need the participant's computer password or a browser login; no harness can do them.
+- Step 1, done by the participant, before Friday: install `git` and `gh`, `gh auth login`, `gh auth setup-git`, install a harness (Claude Code needs a Claude Pro/Max subscription; Codex a ChatGPT plan), accept the repo invite. These need the participant's computer password or a browser login; no harness can do them.
 - Block A, pasted into the harness: checks the tools and the account, clones if needed, asks, one at a time, about the one to three AI kits the participant already uses (never invents a kit; `none yet` allowed), writes `participants/<name>/s1-inventory/inventory.md` in the one schema, pushes, verifies. This is the first push that the Sep 19 push check looks for and the milestone 1A backstops.
 - The one fallback: if the harness is not working by Friday, come to 1A. Every participant has a harness and a GitHub account; there is no path around the harness.
 - Take the symposium AI postures survey (Robert Peake); bring your posture.
