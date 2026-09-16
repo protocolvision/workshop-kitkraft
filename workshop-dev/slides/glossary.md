@@ -3,9 +3,31 @@
 Plain definitions of the words you will hear across the four sessions, written for people who have never installed a developer tool. Look a word up when you meet it; nothing here has to be read in advance.
 If a word is missing, or a definition does not land, ask in **#workshop-kitkraft** on Discord and we will fix it.
 
+## In the chat app
+
+**Chat** — One conversation in an AI app such as ChatGPT, Claude or Gemini, kept in a list so you can go back to it. In a coding assistant the same thing is called a session.
+
+**Message (turn)** — One thing you send, or one reply you get back. A chat is a run of turns, and every new turn is read together with everything said before it (see context window).
+
+**Project** — A space in an AI app that keeps related chats together with shared files and standing instructions, so you do not repeat yourself each time.
+*In this workshop:* a project you set up for one job is already a kit.
+
+**Custom instructions** — Standing instructions the app adds to every chat without you retyping them: how to answer, what to call you, what to avoid. They can apply to your whole account or to one project (see global settings and project instructions).
+
+**Custom GPT (or Gem)** — A saved assistant with its own instructions and files, set up once and reused, often shared with a team. ChatGPT calls these GPTs and Gemini calls them Gems.
+*In this workshop:* one of these is already a kit.
+
+**Connector** — A setting that lets the AI app read from, or act in, another service you use, such as your email, calendar or shared drive. Many are built on MCP (see MCP).
+
+**Canvas (artifact)** — A document, table or small app the AI writes beside the chat rather than inside it, which you can edit and reuse. ChatGPT calls it a canvas and Claude calls it an artifact.
+
+**Thinking mode** — A setting where the model works a problem through before answering. It is slower and uses more of your usage limit, and it is better at hard or many-step questions.
+
 ## The machine
 
 **Model** — The trained program that turns the text you give it into text it gives back, and the thing people usually mean by "the AI". It does not look anything up while it answers unless something in your setup goes and fetches it.
+
+**Model version** — Which release of a model you are using. Companies ship new ones every few months and retire old ones, so a kit that worked last month may behave differently now.
 
 **Inference** — One run of the model: text goes in, the model works through it once, and text comes back. Every step your assistant takes is another run, which is why a long job costs more and takes longer.
 
@@ -37,6 +59,9 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 *In this workshop:* everything you make is made by pasting a block into your assistant and saying "do this".
 
 **Agent** — An AI assistant that has been given a job and left to work at it, deciding its own next step each time, instead of answering one question at a time. A useful shorthand is a model plus a harness plus a loop.
+
+**Automation** — A chain of steps that runs by itself when something happens, such as a new email arriving, built in a tool like Zapier or Make. Many now include an AI step in the middle.
+*In this workshop:* an automation with an AI step counts as a kit.
 
 **Skill** — A folder holding a `SKILL.md` file that tells an assistant how to do one job, along with anything it needs, such as a worked example. Its shape is a published standard (see standard), so a skill you write for one assistant works in another.
 *In this workshop:* the factory you build in Session 2 is a skill.
@@ -144,6 +169,7 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 
 ## Where these come from
 
+- The ChatGPT, Claude and Gemini apps themselves — the words in "In the chat app"
 - [Durable AI Adoption (AI Capability Maturity Model)](https://ai.protocolized.dev/) — maturity model, kit phase, the levels behind kit, factory and bridge
 - [Rao, "Have Your Factory Call My Factory"](https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory) — factory, intermediate, the first bridge case
 - [Benny, "LLMs Pre-Commodify Ideas"](https://summerlightning.substack.com/p/llms-pre-commodify-ideas) — precommodification, provenance
