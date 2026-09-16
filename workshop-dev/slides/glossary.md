@@ -9,6 +9,8 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 
 **Inference** — One run of the model: text goes in, the model works through it once, and text comes back. Every step your assistant takes is another run, which is why a long job costs more and takes longer.
 
+**Token** — The unit a model reads and writes: roughly a short word, or a piece of one. Size limits, speed and price are all counted in tokens rather than in words or pages.
+
 **Loop** — An assistant working in a cycle: take a step, look at what came back, correct it, and go again until the job is done or it gives up. Most of what an AI assistant does is one loop running for a while.
 *In this workshop:* a kit is usually a single loop. You paste a block and your assistant works through it.
 
@@ -23,6 +25,8 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 *In this workshop:* every block you paste tells your assistant to ask you rather than invent an answer.
 
 **Latent space** — A way of talking about everything the model has absorbed and can recombine. The point for us is that the idea you are about to have is probably already in there (see precommodification).
+
+**Data centre** — The building full of computers where the model actually runs. Your assistant sits on your own machine, the thinking happens somewhere else, and that is what a paid plan pays for.
 
 ## What you work with
 
@@ -108,7 +112,7 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 
 **Guardrails** — Limits on what an assistant is allowed to do, set so that a mistake stays cheap and reversible.
 
-**Evaluation (eval)** — A repeatable test of whether a kit or a model actually does the job, run on known cases so you can tell whether a change made things better or worse.
+**Evaluation (evals)** — A repeatable test of whether a kit or a model actually does the job, run on known cases so you can tell whether a change made things better or worse.
 
 **Workflow** — The ordered steps by which a piece of work actually gets done. Dropping AI into an unchanged workflow is the common move, and the one that changes least.
 
