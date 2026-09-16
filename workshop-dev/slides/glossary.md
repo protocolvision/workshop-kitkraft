@@ -7,6 +7,8 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 
 **Model** — The trained program that turns the text you give it into text it gives back, and the thing people usually mean by "the AI". It does not look anything up while it answers unless something in your setup goes and fetches it.
 
+**Inference** — One run of the model: text goes in, the model works through it once, and text comes back. Every step your assistant takes is another run, which is why a long job costs more and takes longer.
+
 **Context window** — Everything the model can see at once while it answers: your question, the files it has opened, and what has already been said. It has a fixed size, so a long session eventually pushes the earliest material out of view.
 
 **Prompt** — What you type or paste to get the model to do something. A prompt you have saved and reused is already a small kit (see kit).
@@ -51,7 +53,7 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 **Factory** — A kit that runs without its author, bends to its user, and hands off something others can build on. It is defined by what it does, not by what it is made of: a skill, a single file that calls a model, an app or a website can each be one.
 
 **Bridge** — One AI assistant using several kits or factories together and making that a reliable process; a kit between kits. What crosses a bridge is usually half-finished work rather than a finished result.
-*In this workshop:* the definition is left open on purpose until Session 4, and the paragraph you write is the evidence.
+*In this workshop:* what stays open is what makes a combination reliable, and the paragraph you write in Session 3 is the evidence Session 4 works from.
 
 **Intermediate** — The half-finished thing one kit hands to the next: a draft, a set of rows, a file with notes attached, rather than a finished product.
 
