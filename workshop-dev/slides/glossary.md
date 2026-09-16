@@ -11,6 +11,9 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 
 **Token** — The unit a model reads and writes: roughly a short word, or a piece of one. Size limits, speed and price are all counted in tokens rather than in words or pages.
 
+**Usage limit** — The cap on how much a paid plan lets you use in a few hours, measured by how much text goes in and out. Long conversations use it up faster, because everything already said is read again at every step.
+*In this workshop:* if you hit it mid-exercise, nothing is broken. It resets, and a group-mate can carry on in the meantime.
+
 **Loop** — An assistant working in a cycle: take a step, look at what came back, correct it, and go again until the job is done or it gives up. Most of what an AI assistant does is one loop running for a while.
 *In this workshop:* a kit is usually a single loop. You paste a block and your assistant works through it.
 
@@ -54,6 +57,27 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 *In this workshop:* we do not use branches. Everything goes straight to `main`.
 
 **Terminal / command line** — The window where you type commands instead of clicking. It is where you start your AI assistant, and that is very nearly all you will use it for.
+
+## How your assistant knows things
+
+**Session** — One conversation with your assistant, from when you open it to when you close it. When it closes, the conversation is gone unless something was saved to a file.
+
+**Memory** — What an assistant carries from one session to the next, which by default is nothing. Anything it seems to remember was written into a file it reads when it starts.
+*In this workshop:* this is why everything goes into the repo. Your log and `AGENTS.md` are your assistant's memory of the workshop.
+
+**Global settings** — Instructions and preferences that apply everywhere your assistant runs, kept in a folder in your home directory. Set something there once and it follows you into every project. Claude Code keeps them in `~/.claude`, Codex in `~/.codex`.
+*In this workshop:* you should not need to touch these.
+
+**Working directory** — The folder your assistant was opened in. It is where it looks first, where its commands run, and roughly where it thinks the job is.
+*In this workshop:* open it at the top of your copy of the repo, the folder that contains `AGENTS.md`.
+
+**Project instructions** — A file in the working directory that your assistant reads as it starts, telling it how to behave in that project. `AGENTS.md` is the shared standard, and Claude Code also reads `CLAUDE.md`.
+*In this workshop:* our `AGENTS.md` is why your assistant knows to write only in your own folder and keep a log.
+
+**Tools** — The actions an assistant can take beyond writing text: reading and editing files, running commands, searching the web, or calling an outside service through MCP. A model on its own can only answer; tools are what let it do things.
+
+**Permissions** — What your assistant may do without asking you first. It usually asks before editing a file or running a command, and you can allow something once or for good.
+*In this workshop:* if you are not sure what it is asking to do, say no and ask in the channel.
 
 ## The workshop's words
 
@@ -128,6 +152,7 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 - [NPC Memo, "Agent-Shaped Problems"](https://npcmemo.substack.com/p/agent-shaped-problems) — agent, protocol
 - [Summer of Protocols](https://summerofprotocols.com/) and the [Protocol Institute](https://protocol-institute.org/) — protocol, standard
 - [Agent Skills specification](https://agentskills.io/specification), [AGENTS.md](https://agents.md/), [MCP](https://modelcontextprotocol.io/specification/2026-07-28), [A2A](https://a2a-protocol.org/latest/specification/) — skill, MCP, standard
+- [Claude Code setup](https://code.claude.com/docs/en/setup) and [Codex CLI](https://learn.chatgpt.com/docs/codex/cli) documentation — session, memory, global settings, working directory, tools, permissions, usage limit
 - [Agent harness, loop and graph engineering](https://www.analyticsvidhya.com/blog/2026/08/agent-harness-loop-graph-engineering/) and [Graph engineering vs loop engineering](https://www.aibuilderclub.com/blog/graph-engineering-vs-loop-engineering) — loop, graph
 
 The fuller annotated list, with everything the sessions draw on, is `../context-tank/resources.md`.
