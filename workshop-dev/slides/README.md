@@ -9,4 +9,6 @@ Two views of the same 53 slides, line for line, each one plain sentence per slid
 - `slide-objectives.md` — what each slide is for.
 - `slide-sequence.md` — what each slide leaves people with.
 
+`glossary.md` — plain definitions of every word the sessions use, written for participants rather than facilitators; link it from #workshop-kitkraft so anyone can look a term up mid-session.
+
 Source material for the slides lives in `../context-tank/`.
