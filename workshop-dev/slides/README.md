@@ -1,16 +1,36 @@
 # Slides
 
-The built workshop slides, one per session, made from the outlines in `../sessions/S1-slides.md` … `S4-slides.md`. Each outline already specifies, per slide, what is on screen, the visual, the sample script and the references.
+The AI Kitcraft deck: 57 slides across four sessions, plus the files it was built from.
 
-**Status:** not built yet. The format is still open (protocolvision/workshop-kitkraft#3): reveal.js HTML styled with the Protocol Institute brand kit, like the June lecture deck, or Google Slides. Once decided, each deck goes here as `s1/`, `s2/`, `s3/`, with `s4/` as a shell, since Session 4's slides are the participants' own files, chosen on the Tuesday.
+## The deck
 
-Two views of the same 53 slides, line for line, each one plain sentence per slide in the same rhythm (title, context, opening exercise, theory, session exercise, closing):
+| File | What it is |
+|---|---|
+| `ai-kitcraft-slides.html` | The deck itself, and the source of truth. One self-contained file: open it in a browser, no server needed. Arrow keys to navigate, `S` for speaker notes, print to PDF. |
+| `ai-kitcraft-slides-editable.pptx` | For editing in Google Slides. Real text boxes on five slide layouts, so copy can be changed and the look adjusted from Edit theme. Visuals are simplified: cards and grids flatten to text. |
+| `speaker-notes.md` | All 57 notes as text, each with its objective and script. |
+| `content-alignment-framework.md` | The eight checks used to review the deck, and what the review changed. |
+| *Image-based `.pptx`* | Looks exactly like the HTML, one image per slide, text not editable. **Not in the repo** because it is 19 MB and everyone clones this. Download it from the [latest release](https://github.com/protocolvision/workshop-kitkraft/releases). |
 
-- `slide-objectives.md` — what each slide is for.
-- `slide-sequence.md` — what each slide leaves people with.
+| Session | Slides |
+|---|---|
+| Opening | 1–2 |
+| 1 — Kits | 3–20 |
+| 2 — Factories | 21–33 |
+| 3 — Bridges | 34–47 |
+| 4 — Show and tell | 48–57 |
 
-`glossary.md` — plain definitions of every word the sessions use, written for participants rather than facilitators; link it from #workshop-kitkraft so anyone can look a term up mid-session.
+Each session runs title → context → opening exercise → theory → session exercise → closing.
 
-Source material for the slides lives in `../context-tank/`.
+**Editing.** Edit the HTML and re-export the PowerPoint files from it, not the other way round. Speaker notes live on each slide in the HTML, so they travel with a slide when it moves. Fonts are Instrument Serif (titles), Lora (body) and Outfit (labels), all on Google Fonts. Colours: paper `#F9F8F5`, ink `#2C2C2A`, secondary `#5F5E5A`, cobalt `#0064FF`, deep green `#085041`, green tint `#E1F5EE`.
 
-`claude-chat-prompt.md` is a ready-to-paste prompt that has Claude Chat build a Google-Slides-safe `.pptx` skeleton from these files.
+**Still to fill.** Four slides carry empty image slots for screenshots not yet taken: the `participants/` tree on slide 33, and three files on slide 49. Drag an image onto a slot in the HTML.
+
+## What the deck was built from
+
+- `slide-sequence.md` — what each slide leaves people with. Slide titles come from here.
+- `slide-objectives.md` — what each slide is for. Speaker notes open with the matching objective.
+- `glossary.md` — plain definitions of every term, for participants.
+- `claude-chat-prompt.md` — a ready-to-paste prompt that rebuilds a Google-Slides-safe skeleton from the two lists above.
+
+Both lists hold the same 53 entries line for line; the deck adds four slides (an opening pair and section breaks). Source material for the slides is in `../context-tank/`.
