@@ -12,3 +12,5 @@ Two views of the same 53 slides, line for line, each one plain sentence per slid
 `glossary.md` — plain definitions of every word the sessions use, written for participants rather than facilitators; link it from #workshop-kitkraft so anyone can look a term up mid-session.
 
 Source material for the slides lives in `../context-tank/`.
+
+`claude-chat-prompt.md` is a ready-to-paste prompt that has Claude Chat build a Google-Slides-safe `.pptx` skeleton from these files.
