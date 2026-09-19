@@ -1,6 +1,6 @@
 # S1 — inventory (two blocks, paste each when the facilitator says so)
 
-Human header: Block 1 writes `participants/<name>/s1-inventory/inventory.md` from your answers and pushes it; Block 2 pulls the others' folders and names the two nearest to yours. Your harness will ask you, one at a time, about the AI kits you already use: any AI setup you have tinkered with to do a real job. It never invents them. The file shape is in `participants/README.md`. Read other people's inventories only through your agent, never in the browser.
+Human header: Block 1 writes `participants/<name>/s1-inventory/inventory.md` from your answers and pushes it; Block 2 pulls the others' folders and names two kits that could complement yours to yours. Your harness will ask you, one at a time, about the AI kits you already use: any AI setup you have tinkered with to do a real job. It never invents them. The file shape is in `participants/README.md`. Read other people's inventories only through your agent, never in the browser.
 
 ## Block 1 — inventory (slide 12)
 
@@ -34,22 +34,23 @@ Do not: create branches, force-push, touch anything outside `participants/NAME/`
 Report in four lines: the absolute path of the folder you wrote in; the GitHub link of `inventory.md`; the kits recorded and the kit to convert (or `undecided`); any error.
 ```
 
-## Block 2 — the two nearest (slide 13)
+## Block 2 — two kits that complement yours (slide 13)
 
 ```
-You are the participant's harness in the AI Kitcraft repo, Session 1, second prompt. Find the two inventories nearest to theirs.
+You are the participant's harness in the AI Kitcraft repo, Session 1, second prompt. Find two kits in the room that could complement theirs.
 Settings: BRANCH=main  NAME=<the participant's GitHub username, lowercase; ask if unknown>
 You write only inside `participants/NAME/`; read anywhere.
 
 Preconditions: at the clone root (`git rev-parse --show-toplevel` equals `pwd`; `git remote get-url origin` contains `protocolvision/workshop-kitkraft`; if not, `cd` to the clone root); never test the folder name; `git branch --show-current` prints BRANCH; run `git pull --rebase origin BRANCH` now — other people's folders arrive only through the pull.
 
 Steps:
-1. List `participants/*/s1-inventory/inventory.md` excluding `participants/NAME/`, every folder whose name starts with `_` (those are examples, not participants), and any file that is still the unfilled template. Work with what is there and tell the participant how many you found. Two or more: continue. Exactly one: name it as the nearest, say so, and skip to step 4. None: report "no other inventories yet", do step 4, and stop.
-2. Read each. Compare the kits under `## Kits I use` against those in `participants/NAME/s1-inventory/inventory.md` on: what they are made of (the tools and pieces: prompts, projects, spreadsheets, automations, skills) and the job they do.
-3. Name the two nearest, one line each: `<name> — <why>`.
+1. List `participants/*/s1-inventory/inventory.md` excluding `participants/NAME/`, every folder whose name starts with `_` (those are examples, not participants), and any file that is still the unfilled template. Work with what is there and tell the participant how many you found. Two or more: continue. Exactly one: name that one, say it is the only other inventory so far, and skip to step 4. None: report "no other inventories yet", do step 4, and stop.
+2. Read each. Compare the kits under `## Kits I use` against those in `participants/NAME/s1-inventory/inventory.md` and look for **complement, not likeness**: a kit whose output could feed one of theirs, or that does a step theirs does not, or that handles the same material for a different purpose. Two kits that do the same job in the same way are not complements.
+3. Pick the two strongest complements, whoever owns them. One line each: `<owner>/<kit name> — <why it complements theirs>`. If only one is a real complement, give one and say so rather than padding.
 4. Confirm `participants/NAME/LOG.md` has at least one line below its header; if not, append `| <ISO-8601 UTC now> | S1 | NAME | progress | inventory written by harness |`.
-5. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. Append `| <ISO-8601 UTC now> | S1 | NAME | memory | nearest: <name1>, <name2> — <why, short> |` to `participants/NAME/LOG.md`. Commit `S1: NAME: nearest two`, `git pull --rebase origin BRANCH`, `git push origin HEAD:BRANCH`; rejected → pull --rebase and push again (3 tries; a conflict is only in your folder: keep both, add, continue). Verify with `git fetch origin && git log origin/BRANCH --oneline -1 -- participants/NAME/LOG.md`.
+5. Append the answer to `participants/NAME/s1-inventory/inventory.md` under `## Related`, adding that heading at the end of the file if it is not there, one line per kit exactly as written in step 3. Do not change anything else in the file.
+6. Conflict check first: `git grep -l '^<<<<<<<' -- participants/NAME` must print nothing; if it does, fix the file before committing. Append `| <ISO-8601 UTC now> | S1 | NAME | memory | related: <kit1>, <kit2> — <why, short> |` to `participants/NAME/LOG.md`. Commit `S1: NAME: related kits`, `git pull --rebase origin BRANCH`, `git push origin HEAD:BRANCH`; rejected → pull --rebase and push again (3 tries; a conflict is only in your folder: keep both, add, continue). Verify with `git fetch origin && git log origin/BRANCH --oneline -1 -- participants/NAME/s1-inventory/inventory.md`.
 
 Do not: edit anything outside `participants/NAME/`; open GitHub in a browser; quote other people's files back at length.
-Report in three lines: the two names with reasons, and whether the log line is on GitHub.
+Report in three lines: the two kits with reasons, and whether the change to your inventory is on GitHub.
 ```

@@ -12,5 +12,8 @@
 ## Kit to convert
 <which kit above becomes a factory in Session 2, and why; or `undecided`>
 
+## Related
+<two kits in the room that could complement yours; written in Session 1's second exercise>
+
 ## Posture
 <Partnership / Hypervigilance / Overreliance / Compliance, or "not taken">

@@ -180,13 +180,13 @@ Over to you. Open your harness — the coding assistant you installed — at the
 
 Source: Time calls at 6 and 10 minutes · if a push fails three times, paste the exact error into #workshop-kitkraft · keep anything sensitive off the repo
 
-## 18 · Ask it to find the two people whose kits sit closest to yours.
+## 18 · Ask it to find two kits in the room that could complement yours.
 
-*Exercise 3 · The two nearest · 5 minutes · same file*
+*Exercise 3 · Two that complement yours · 5 minutes · same file*
 
 Objective: Have each AI assistant find kits related to each other.
 
-Same file, Block 2 this time. Paste it and say “do this”. It pulls everyone's folders, reads the inventories through your assistant rather than through your browser, and tells you the two people whose kits sit nearest to yours. Note those two names down — that is the seed for the groups you will be working in tomorrow.
+Same file, Block 2 this time. Paste it and say “do this”. It pulls everyone's folders, reads the inventories through your assistant rather than through your browser, and tells you which two kits in the room could work with yours, and why. It writes them into your own inventory under Related. Note them down: those are the first candidates for what you combine tomorrow.
 
 **Glossary — Inventory:** Your own list of the AI kits you already use, one to three of them. It is the first thing you put in the repo.
 

@@ -20,7 +20,7 @@ Most people using AI well today are doing it privately: a set of prompts, files 
 6. Anything written down in a shared place leaves a trace, and traces are how people coordinate without meetings, plans, or being online at the same time (slide 9).
 7. One worked example shows the shape: one body of work, three doors onto it, and the doors are what make it reachable (slide 10).
 8. But a practice shaped entirely around you stops making sense to anyone else, so sharing needs public records and interfaces, not shared apps (slide 11).
-9. So the room writes its practice down in public now — your inventory, in the repo, readable by someone else's assistant — and then finds the two people nearest to you (slides 12–13).
+9. So the room writes its practice down in public now — your inventory, in the repo, readable by someone else's assistant — and then finds two kits in the room that could complement yours (slides 12–13).
 
 ## Slides at a glance
 
@@ -38,7 +38,7 @@ Most people using AI well today are doing it privately: a set of prompts, files 
 | 10 | 30 | Sachin | One corpus, three doors, text only | Show a real kit with doors on it |
 | 11 | 32 | Sachin | Four lines of the hard problem | Say why private practice does not travel |
 | 12 | 35 | Rafa | Block 1 on the screen share | Brief the inventory and start the clock |
-| 13 | 48 | Rafa | Block 2 on the screen share | Find the two nearest inventories |
+| 13 | 48 | Rafa | Block 2 on the screen share | Name two kits that complement yours |
 | 14 | 53 | Rafa | The four quadrant names | Take the honest awareness tally |
 | 15 | 56 | Rafa | Times and next steps, text only | Hand over Async 1, 1A and S2 |
 
@@ -188,10 +188,10 @@ Most people using AI well today are doing it privately: a set of prompts, files 
 - At 00:48 I will give the second prompt
 > Note: everyone has a harness; a push that fails is fixed in the #workshop-kitkraft thread or at 1A, never committed for them.
 
-## Slide 13 — Second prompt: the two nearest (00:48) (presenter: Rafa)
-**On screen.** Headline "The two nearest"; "Same file — paste Block 2, say 'do this'" · "It pulls, reads every inventory, names the two nearest yours" · "Write those two names down" · "Through your agent, never in the browser". Visual: Rafa screen-shares Block 2 of `instructions/S1-inventory.md`.
-**Say.** "Same file, Block 2 this time. Paste it and say 'do this'. It pulls everyone's folders, reads the inventories through your assistant rather than through your browser, and tells you the two people whose kits sit nearest to yours. Note those two names down — that is the seed for the groups you will be working in tomorrow."
-- Paste **Block 2** (same file) and say "do this". It pulls, reads every inventory, names the two nearest, and checks your `LOG.md` line
+## Slide 13 — Second prompt: two kits that complement yours (00:48) (presenter: Rafa)
+**On screen.** Headline "Two kits that could complement yours"; "Same file — paste Block 2, say 'do this'" · "It pulls, reads every inventory, names two kits that could complement yours yours" · "Write those two names down" · "Through your agent, never in the browser". Visual: Rafa screen-shares Block 2 of `instructions/S1-inventory.md`.
+**Say.** "Same file, Block 2 this time. Paste it and say 'do this'. It pulls everyone's folders, reads the inventories through your assistant rather than through your browser, and tells you the two people whose kits sit that could complement yours. Note those two names down — that is the seed for the groups you will be working in tomorrow."
+- Paste **Block 2** (same file) and say "do this". It pulls, reads every inventory, names two kits that could complement yours, writes them into your inventory under `## Related`, and checks your `LOG.md` line
 - Note the two names; that is the seed for the breakout groups' work tomorrow
 - If it reports no log line on GitHub, say so in #workshop-kitkraft
 > Note: before Block 2, Rafa posts how many inventories are on `main` so nobody re-pulls needlessly. At 00:52 his agent checks every inventory for a Log line and posts the list; missing lines go to 1A.

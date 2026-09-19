@@ -11,7 +11,7 @@
 - One collection of work can offer several ways in, and that makes it reachable.
 - Work shaped around you rarely travels, so sharing needs a public record.
 - Ask your AI assistant to list the AI kits you already use at work.
-- Ask it to find the two people whose kits sit closest to yours.
+- Ask it to find two kits in the room that could complement yours.
 - Share one thing you noticed this hour, and together they show what we are learning.
 - Tech Support starts now, and before tonight you pick one kit to convert.
 

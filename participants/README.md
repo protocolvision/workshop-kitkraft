@@ -35,6 +35,9 @@ Every `s1-inventory/inventory.md` has exactly these sections, in this order. The
 ## Kit to convert
 <which kit above becomes a factory in Session 2, and why, in one or two sentences; `undecided` is allowed until Async 1>
 
+## Related
+<two kits in the room that could complement yours, one line each: `<owner>/<kit name> — <why>`; your harness appends this in Session 1's second exercise>
+
 ## Posture
 <Partnership / Hypervigilance / Overreliance / Compliance, or "not taken">
 ```
