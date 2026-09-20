@@ -10,6 +10,7 @@ The AI Kitcraft deck: 57 slides across four sessions, plus the files it was buil
 | `ai-kitcraft-slides-editable.pptx` | For editing in Google Slides. Real text boxes on five slide layouts, so copy can be changed and the look adjusted from Edit theme. Visuals are simplified: cards and grids flatten to text. |
 | `speaker-notes.md` | All 57 notes as text, each with its objective and script. |
 | `content-alignment-framework.md` | The eight checks used to review the deck, and what the review changed. |
+| *Earlier versions* | Superseded decks are attached to the [releases](https://github.com/protocolvision/workshop-kitkraft/releases), so the repo carries only the current one. Git history has them too. |
 | *Image-based `.pptx`* | Looks exactly like the HTML, one image per slide, text not editable. **Not in the repo** because it is 19 MB and everyone clones this. Download it from the [latest release](https://github.com/protocolvision/workshop-kitkraft/releases). |
 
 | Session | Slides |
