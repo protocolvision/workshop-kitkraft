@@ -119,7 +119,7 @@ If a word is missing, or a definition does not land, ask in **#workshop-kitkraft
 **Interface** — The way in: what someone else needs to know to use your kit without asking you anything. It can be as plain as the shape of a document or the column order of a row.
 *In this workshop:* the `Interface:` line in your README is the line that turns a kit into a factory.
 
-**Inventory** — Your own list of the AI kits you already use, one to three of them, written in Session 1. It is the first thing you put in the repo.
+**Inventory** — Your own list of three to ten AI tools and kits you use repeatedly, drafted by your harness from its memory and your setup and confirmed by you in Session 1. It is the first thing you put in the repo.
 
 **Log** — The running list of one line notes your assistant writes in `LOG.md` as it works. It only ever grows: earlier lines are never rewritten or deleted.
 

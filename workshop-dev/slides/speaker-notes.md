@@ -174,7 +174,7 @@ Source: Internal/external axis borrowed from Ashcroft, Expanding Awareness · th
 
 Objective: Have each person list AI kits they already use, personally or at work. (wallflower exercise)
 
-Over to you. Open your harness — the coding assistant you installed — at the top of the clone, paste Block 1, which I am pinning right now, and say “do this”. It will ask you to list the AI kits you already use, one at a time; it will not invent them for you. What counts as a kit? Any AI setup you have tinkered with to do a real job: a saved or reused prompt, a custom GPT or Claude project, a prompt document you copy from, a spreadsheet or document with an AI step, an automation with an AI step, a skill. Small is fine. One to three is plenty. Two things before you start: everything in this repo is public, so keep anything sensitive in a private folder on your own machine, and if a push fails three times, paste the exact error into the channel instead of fighting it.
+Over to you. Open your harness — the coding assistant you installed — at the top of the clone, paste Block 1, which I am pinning right now, and say “do this”. It will read its own memory of you and the AI setup on your machine — your skills, saved prompts, commands, project instructions, prompt history — and draft a list of three to ten tools and kits you have used or built for repeated use. It lists only what it finds evidence for, and pushes nothing until you have confirmed, corrected or cut each one. What counts as a kit? Any AI tool or setup you use again and again to do a real job: a skill, a saved or reused prompt, a custom GPT or Claude project, a prompt document you copy from, an MCP server or plugin you rely on, a spreadsheet or document with an AI step, an automation with an AI step. Small is fine; other people's tools count when you reuse them. Two things before you start: everything in this repo is public, so keep anything sensitive in a private folder on your own machine, and if a push fails three times, paste the exact error into the channel instead of fighting it.
 
 **Glossary — AI assistant (harness):** The program you talk to, which runs the model and reads, writes and runs things on your computer. Claude Code and Codex are the two this workshop uses.
 
@@ -188,7 +188,7 @@ Objective: Have each AI assistant find kits related to each other.
 
 Same file, Block 2 this time. Paste it and say “do this”. It pulls everyone's folders, reads the inventories through your assistant rather than through your browser, and tells you which two kits in the room could work with yours, and why. It writes them into your own inventory under Related. Note them down: those are the first candidates for what you combine tomorrow.
 
-**Glossary — Inventory:** Your own list of the AI kits you already use, one to three of them. It is the first thing you put in the repo.
+**Glossary — Inventory:** Your own list of three to ten AI tools and kits you use repeatedly, drafted by your harness from its memory and your setup, confirmed by you. It is the first thing you put in the repo.
 
 Source: Your first trace read by someone else's agent
 
