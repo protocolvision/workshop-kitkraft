@@ -42,7 +42,7 @@
 - Where it lives: a private study folder on my laptop
 
 ## Kit to convert
-undecided
+1. Aesthetic-description-driven development — it is the most distinctive of my kits, and its core is already written down (versioned term definitions with examples and anti-examples, a fixed frame, do-nots, human-only verdicts), so another agent could run it on someone else's aesthetic.
 
 ## Related
 sachben91/Themed discovery agent — turns ✓/✗ verdicts into positive and negative anchors for the next round; my aesthetic kit collects verdicts (tags) but promotes them to examples/anti-examples by hand, so this supplies the missing feedback step.
