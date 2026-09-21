@@ -77,7 +77,8 @@
 Uncertain, but leaning toward Patch Practices, since it seems most refactorable for others to use.
 
 ## Related
-<two kits in the room that could complement yours, one line each: `<owner>/<kit name> — <why>`; your harness appends this in Session 1's second exercise>
+mjmarte/Manuscript production line — its citation-and-claim-verification gate does a step Watermentat's citation-required answers don't: it checks a claim against its source and fails loudly rather than just attaching a citation.
+aguevara92/Bitacora (the journal system) — its frozen-decision, link-backed session log would give Patch Practices a durable "what changed since last time" trace, which today it logs sessions to Notion without building.
 
 ## Posture
 Partnership
