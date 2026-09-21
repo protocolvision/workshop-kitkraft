@@ -5,7 +5,7 @@
 - What it is: coding agents (Claude Code, Hermes Agent) plus a written aesthetic: verbal descriptions, reference sites and typefaces, constraints, and a versioned vocabulary of aesthetic terms with examples and anti-examples.
 - The job it does: turns an aesthetic I describe in words into working code, sites and generative pieces that I judge by eye.
 - How often I use it: weekly
-- What I adapted: plans with options that I answer item by item; small, reversible changes on trial branches; I check in the browser; for art work the definition text *is* the prompt, output is never repaired or cherry-picked, and I keep the verdict (my own tags, not the model's).
+- What I adapted: two ways in: either I state the aesthetic up front (a generative NFT series: Swiss type, black on white, one signal colour, schemes as swappable variables) or I explore through many parallel variants and converge quickly (an interactive token series with a dozen palette variants); plans with options that I answer item by item; small, reversible changes on trial branches; I check in the browser; for art work the definition text *is* the prompt, output is never repaired or cherry-picked, and I keep the verdict (my own tags, not the model's).
 - Who else uses it: only me
 - Where it lives: instruction files, briefs and grammar folders in my project repos
 
