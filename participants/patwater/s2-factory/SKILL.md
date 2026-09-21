@@ -1,29 +1,27 @@
 ---
-name: polymetis-protocol
-description: Runs a structured practice session (reflection, one-question character check-in, or rhetoric writing drill) against the user's own personal knowledge log, pulling a verbatim anchor and logging the result back. Use when the user asks to run a practice, reflection, character check-in, or rhetoric-drill session, or names Polymetis Protocol.
+name: rag-factory
+description: Scaffolds a retrieval-augmented pipeline spec for a given corpus, picking from three RAG typologies (static read-only, simple personal-log retrieval, write-back retrieval where the answer joins the corpus), and hands off a filled spec another agent can implement. Use when someone wants to build a RAG bot, retrieval tool, or citation-grounded Q&A system over their own corpus.
 ---
 
 ## When to use
-When the person wants to run one of three practice sessions — a reflection, a one-question character check-in, or a rhetoric writing drill — against their own personal knowledge log: an append-only, Karpathy-style file of Kindle highlights, journal entries and reflections that they periodically reread and refactor.
+When someone wants to build a retrieval-augmented answering tool over a corpus they already have — documents, a personal log, a research library — and wants a pipeline shape to start from rather than a blank page.
 
 ## Steps
-1. Ask the person which mode to run: practice (reflection), character (one-question check-in), or rhetoric (writing drill). Never choose it for them.
-2. Ask where their personal knowledge log lives (a file, folder, or app) if it is not already known from context, and read it. For rhetoric mode, also ask which writing-craft reference to draw devices from if none is already established.
-3. Search the log (or, for rhetoric mode, the writing-craft reference) for an anchor not used in a recent window. Quote it verbatim — never paraphrase.
-4. Run the chosen mode:
-   - Practice: present a reflection prompt anchored to the quote; wait for the person's answer.
-   - Character: ask one concrete, specific question drawn from the anchor; wait for the person's answer without padding or answering for them.
-   - Rhetoric: deliver a three-part exercise on the picked device — a plain-English summary with an original example, the verbatim excerpt, and a writing prompt — then wait for the person's response.
-5. Append the result to the person's own log, in the log's existing format: the prompt plus the answer, or the question left unanswered if no answer came, or the completed writing sample for rhetoric mode.
+1. Ask about the corpus: what it is, roughly how big, how it's structured (flat files, a database, a single personal log), and whether it stays fixed or grows over time.
+2. Ask the retrieval goal: what kind of question this should answer, and how strict the citation/verification requirement needs to be.
+3. Pick a typology with the person, out loud, before writing anything:
+   - **Type A** if the corpus is large and mostly static, and citation-required answers over it matter most.
+   - **Type B** if it's a single personal log and low overhead matters more than scale.
+   - **Type C** if the interaction itself (the answer, or a completed exercise) should be captured and become part of what future runs retrieve.
+4. Fill in the pipeline spec for the chosen typology: ingestion steps, index/search shape, retrieval steps (including any reranking), the citation rule, and — for Type C only — the write-back step and the recency/dedup window that keeps it from just repeating itself.
+5. Hand off the filled spec as the output. It is a spec precise enough for a coding agent to implement, not working code.
 
 ## Constraints
-- Anchors and reference excerpts are always verbatim, never paraphrased.
-- Never reuse the same quote, device or chapter within a recent window — check the log before picking.
-- Always wait for the person's actual answer; never pad, summarize, or answer on their behalf.
-- Log to the location the person named, in their log's existing format — never assume Notion or any specific app.
+- Always name a citation or verification rule, even a loose one — never "answer freely."
+- For Type C, name the write-back window explicitly (what counts as "already used" so the corpus doesn't collapse into repeats of itself).
+- Never assume a vector store is required — Type B is deliberately simple, by design, not as a placeholder for Type A.
 
 ## Do not
-- Do not pick the mode automatically (by time of day, streaks, etc.) — the person always chooses.
-- Do not invent a quote, reflection or example that is not actually in the person's log or reference material.
-- Do not log an unanswered question as if it were answered.
-- Do not add quantitative modes (Fermi estimation, Project Euler) — out of scope; see README "Future development".
+- Do not write the ingestion, embedding, or reranking code itself — this factory produces a spec, not an implementation.
+- Do not invent corpus details the person did not give you.
+- Do not default to Type A when the person describes a personal log — that is a scale mismatch, not a safer choice.

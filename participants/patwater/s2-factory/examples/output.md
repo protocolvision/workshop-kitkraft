@@ -1,12 +1,22 @@
-Mode: character
+Typology: **Type A — static corpus, read-only retrieval.** The corpus grows by external addition (new minutes filed monthly) but never changes because of the bot's own answers — no write-back — so it stays Type A rather than Type C. Re-ingestion is a scheduled maintenance step, not a per-answer effect.
 
-Anchor (verbatim, 2026-09-20 journal entry): "Noticed I explain my reasoning to Claude more carefully than I do to actual colleagues."
+## Pipeline spec
 
-Question: What would it take to give a colleague the same care in your explanation that you just gave the model?
+**Ingestion** (run once, then re-run monthly on new files only):
+1. Crawl the minutes folder; skip PDFs already ingested (track by filename + hash).
+2. Extract text per PDF, preserving page/agenda-item boundaries where the PDF has them.
+3. Chunk by agenda item where detectable, else by page, with document name + date + page/item as metadata on every chunk.
+4. Embed chunks into a vector store; store the metadata alongside each vector.
 
-[waiting for answer]
+**Retrieval** (per question):
+1. Expand the query against a small glossary of the district's recurring terms (project names, committee names) so "reservoir rehab" also matches however the minutes phrase it.
+2. Semantic search the vector store for top-K chunks.
+3. Rerank by recency (favor the most recent discussion of the same topic, since board decisions supersede earlier ones) — no authority weighting needed here, since every document is the same authoritative minutes.
 
----
+**Answer generation:**
+- Citation rule: strict. The answer must name the specific minutes document (by date/filename) and, where the chunk metadata has it, the agenda item — never just "the board discussed this at some point."
+- If no chunk clears a relevance threshold, say so plainly rather than answering from general knowledge.
 
-Logged entry appended to personal log:
-- 2026-09-21 — Character check-in — anchor: "Noticed I explain my reasoning to Claude more carefully than I do to actual colleagues." (2026-09-20 journal) — Q: What would it take to give a colleague the same care in your explanation that you just gave the model? — A: [pending, unanswered]
+**Write-back:** none — this is Type A. New minutes are added to the corpus by the monthly re-ingestion step, not by anything the retrieval/answer step does.
+
+**Open item for this run:** agenda-item boundaries won't be detectable in every PDF (some are scanned images with no structure) — chunking falls back to page-level for those, which weakens citation precision. Flagged, not solved, by this spec.
