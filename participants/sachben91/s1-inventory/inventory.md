@@ -22,3 +22,12 @@ Session rituals. It is the one I use daily, it is already written as files anoth
 
 ## Posture
 Partnership
+
+## Revised for S2 (2026-09-21)
+The line above stands as written. On inventorying the Monstrous Times repo, a
+third kit surfaced that the S1 pass missed: keeping a story's canonical Markdown
+and its Substack mirror in step, on a platform with no write API. It beats
+session rituals on the S2 test — it is an adaptation made because no product
+exists, it is recurring (66 stories, repeatedly), and the knowledge in it was
+paid for (two posts corrupted before the rules were found). Session rituals stays
+as the fallback and is still the daily one. Converted kit: `../s2-factory/`.
