@@ -13,7 +13,8 @@
 Policy research kit. The policy and political intelligence I need moves quickly every day, and my process is useful but only in my head. I want to write it down so I get the most out of it, and so my team can draw on the same intel and have discussions grounded in what's happening in real time. It is specific to me and my team, so I am not sure how others will benefit; it is the kind of analysis you might pay a political analysis firm for, now available daily for the cost of a subscription.
 
 ## Related
-<two kits in the room that could complement yours; written in Session 1's second exercise>
+sachben91/Session rituals (start-up / close-out) — carries what was open and what got done from one session to the next, which would give my daily policy briefing a written "what changed since last time" baseline instead of living only in my head
+mjmarte/Manuscript production line — its claim and citation verification gate is the step I do by hand today when I check the AI's view against my own knowledge, so it is a model for making that check explicit and repeatable
 
 ## Posture
 not taken
