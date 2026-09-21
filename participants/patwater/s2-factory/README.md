@@ -19,6 +19,25 @@ Two types, generalized from kits already in this repo — not invented from scra
 
 A third candidate was raised and could not be confirmed: a "Sachin RAG skill" was mentioned as a source to generalize from, but nothing in this repo shows a retrieval/vector pipeline from Sachin — only `facilitator/sachin/s2-factory/` (adoption-diagnosis), which requires citing a transcript line per claim but has no corpus, index, or retrieval step. If that citation-required-without-retrieval shape belongs here at all, that's one of the open questions below rather than something built in yet.
 
+## Ingestion pipeline approaches (generalized)
+
+Ingestion is the same job under either typology — read-only vs. read-write only changes what happens *after* retrieval. These general approaches, drawn from generalizing this author's own real ingestion build, apply regardless of which typology SKILL.md picks:
+
+- **Break ingestion into independently-runnable, resumable stages** (list → fetch → extract → enrich → chunk → spot-check), each reading/writing a shared data directory and skipping items it's already processed on rerun. No stage should have to redo the whole corpus because a later stage failed.
+- **Derive a stable ID for each item from something that won't change** (a canonical URL/slug, a content hash) — not from a filename, page number, or download URL, any of which can shift between runs. Every stage joins on this ID.
+- **Verify assumptions against the real source before writing the crawler**, not from a flattened/cached view of it — undocumented APIs, hidden pagination limits, and metadata that looks per-item but is actually a sitewide filter widget are all common surprises. Budget time for this before Stage 1, not after Stage 1 breaks.
+- **Classify sources by expected access tier up front** (e.g. directly fetchable / open-but-external / likely gated) and skip the tier you already know won't work, logging it as a deliberate skip rather than an error — don't spend retries on failures you can predict.
+- **Log structured, one-line-per-item status** (a status field plus the item ID) at every stage, not just print statements — so failure rates are queryable after the fact instead of requiring a rerun to see them again. Wrap per-item work so one bad item logs and continues rather than crashing the stage.
+- **Defer expensive or slow enrichment (OCR, re-embedding, deep re-processing) as an explicit, named "not yet" rather than silently skipping it** — a stub file and a README TODO line are enough; don't let it block the stages that don't need it.
+- **Be a polite, identifiable fetcher**: rate-limit deliberately, identify the crawler honestly, and for a large one-time pull against someone else's site, consider whether reaching out for a bulk export first is the better move — that's a judgment call for the person running it, not something to auto-decide.
+- **Prefix chunks with title/summary context before embedding**, not just the raw body text — retrieval measurably improves when a key term lives in the title or summary but isn't repeated in the body.
+- **Attach a stable citation reference to every chunk, separate from wherever the content was actually fetched from** — a download URL can rot or redirect; the canonical page/citation reference should be what the answer points back to.
+- **Reconcile the plan against what the pipeline actually produced before building on top of it.** A pre-build design is a hypothesis about field availability, error rates, and corpus shape — write down what actually came out (completion rate, which fields turned out populated vs. not) and update the next stage's design against that, rather than assuming the first draft was right.
+- **Load a small test batch before committing to the full corpus** when standing up an index/store — cheap to redo at 100–200 items, expensive to redo at the full scale.
+- **Keep authority/quality weighting and recency weighting as separate multipliers**, not one blended score — they answer different questions ("how authoritative is this" vs. "how current is this"), and a query can reasonably want them weighted differently (a historical question shouldn't penalize old documents at all).
+- **Build glossary/acronym expansion from whatever curated vocabulary the source already has**, if one exists, rather than deriving it computationally from scratch — reuse structure that's already there for free.
+- **When a bad answer shows up, diagnose retrieval vs. synthesis separately before changing anything** — wrong or missing chunks retrieved is a different bug than right chunks badly used, and fixing the wrong one first is the most common way to waste a debugging pass.
+
 ## Open questions to refine later
 - Does read-write need its own reranking rule once the corpus mixes original material and past answers — should past answers be weighted differently from source entries?
 - Where's the real line between "small enough for direct search" and "needs a vector store" — corpus size, query volume, something else? Right now that's left to judgment at step 1, not specified.

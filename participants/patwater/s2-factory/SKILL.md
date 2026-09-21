@@ -13,7 +13,7 @@ When someone wants to build a retrieval-augmented answering tool over a corpus t
    - **Read-only** if nothing about running the pipeline should change what it can retrieve later.
    - **Read-write** if the interaction itself (the answer, or a completed exercise) should be captured and become part of what future runs retrieve.
    Corpus size and structure (a crawled document set vs. a single flat file) decide the index/search shape within whichever typology is picked — they are not a third typology.
-4. Fill in the pipeline spec for the chosen typology: ingestion steps, index/search shape (vector store vs. direct search, sized to the corpus), retrieval steps (including any reranking), the citation rule, and — for read-write only — the write-back step and the recency/dedup window that keeps it from just repeating itself.
+4. Fill in the pipeline spec for the chosen typology: ingestion steps (drawing on README's "Ingestion pipeline approaches" — stable IDs, resumable stages, structured per-item logging, access-tier classification, and the rest — the same list applies regardless of typology), index/search shape (vector store vs. direct search, sized to the corpus), retrieval steps (including any reranking), the citation rule, and — for read-write only — the write-back step and the recency/dedup window that keeps it from just repeating itself.
 5. Hand off the filled spec as the output. It is a spec precise enough for a coding agent to implement, not working code.
 
 ## Constraints
