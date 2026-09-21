@@ -29,7 +29,8 @@
 theme_marte. It is already close to the shape Session 2 asks for — a SKILL.md plus worked examples — so the work is declaring its interface and what it adapts to, and it carries nothing I would not publish.
 
 ## Related
-<two kits in the room that could complement yours; written in Session 1's second exercise>
+sachben91/Session rituals — my two provider rule files were copied rather than linked and have drifted 49 lines apart; theirs symlinks a project's instruction file to one shared source and makes a devlog the single source of truth, committed together with its rendered page.
+rafaeldavid/here.now publishing — my manuscript line and my figure kit both end at a verified file on disk with no way in; this turns that output into a live URL, with a passcode for private drafts and stable slugs so a shared link keeps working.
 
 ## Posture
 not taken
