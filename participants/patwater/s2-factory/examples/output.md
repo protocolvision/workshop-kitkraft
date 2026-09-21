@@ -1,4 +1,4 @@
-Typology: **Type A — static corpus, read-only retrieval.** The corpus grows by external addition (new minutes filed monthly) but never changes because of the bot's own answers — no write-back — so it stays Type A rather than Type C. Re-ingestion is a scheduled maintenance step, not a per-answer effect.
+Typology: **Read-only retrieval.** The corpus grows by external addition (new minutes filed monthly) but never changes because of the bot's own answers — no write-back. Re-ingestion is a scheduled maintenance step, not a per-answer effect.
 
 ## Pipeline spec
 
@@ -17,6 +17,6 @@ Typology: **Type A — static corpus, read-only retrieval.** The corpus grows by
 - Citation rule: strict. The answer must name the specific minutes document (by date/filename) and, where the chunk metadata has it, the agenda item — never just "the board discussed this at some point."
 - If no chunk clears a relevance threshold, say so plainly rather than answering from general knowledge.
 
-**Write-back:** none — this is Type A. New minutes are added to the corpus by the monthly re-ingestion step, not by anything the retrieval/answer step does.
+**Write-back:** none — this is read-only. New minutes are added to the corpus by the monthly re-ingestion step, not by anything the retrieval/answer step does.
 
 **Open item for this run:** agenda-item boundaries won't be detectable in every PDF (some are scanned images with no structure) — chunking falls back to page-level for those, which weakens citation precision. Flagged, not solved, by this spec.
