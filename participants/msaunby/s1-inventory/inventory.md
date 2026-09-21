@@ -21,7 +21,8 @@
 VS Code Copilot — it's what I'm using most right now.
 
 ## Related
-<two kits in the room that could complement yours; written in Session 1's second exercise>
+mjmarte/Anonymised client-codebase protocol — its shared handoff document tracking repository, branch, deploy and verification state would formalize what I do by eye before pushing changes to the BeagleBone over SSH.
+sachben91/Session rituals (start-up / close-out) — its commit-and-push close-out ritual would give my Copilot deploys a durable trace to check against AWS Q's log diagnostics.
 
 ## Posture
 Hypervigilance
