@@ -1,7 +1,7 @@
 # <kit name>
 
 Source: (optional — the kit this was converted from, e.g. `facilitator/rafa/s2-factory/`, adapted; omit for your own kit)
-Job: get up to speed on a policy or regulation topic and what has changed, from public government documents, news pieces and company announcements, and give a view on whether a suggested course of action would work.
+Job: Gives me a daily, sourced read on what's changed in a policy area, and a view on whether a proposed course of action would work.
 For: who runs it.
 Inputs: what it needs, where it comes from.
 Outputs: what it produces, where it goes.
