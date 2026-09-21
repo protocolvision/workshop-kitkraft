@@ -25,6 +25,22 @@
 - Who else uses it: only me
 - Where it lives: agent memory files and persona settings on my machines
 
+### 4. Legacy-to-structured migration
+- What it is: a coding agent with background subagents, scraping scripts, and data-driven templates in a static site generator.
+- The job it does: moves content out of an old system (a CMS, a spreadsheet) into structured files and templates I control.
+- How often I use it: now and then
+- What I adapted: naming and slugs fixed up front before import; a strategy agreed first for data-shaped content; bulk imports fanned out to subagents; I correct facts as results come back; generated files kept out of the repo.
+- Who else uses it: only me
+- Where it lives: import scripts and templates in my site repo
+
+### 5. Self-study tutor contract
+- What it is: a coding agent plus an instruction file and a dependency-ordered curriculum of module docs in org-mode, with runnable Python blocks.
+- The job it does: teaches me the maths and philosophy behind my art/theory project, one module per session.
+- How often I use it: now and then
+- What I adapted: my starting level written down; code first, no proofs, notation only when needed; direct criticism, no praise; change approach after two failed tries; every module tied back to the project.
+- Who else uses it: only me
+- Where it lives: a private study folder on my laptop
+
 ## Kit to convert
 undecided
 
