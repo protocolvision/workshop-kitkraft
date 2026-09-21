@@ -1,12 +1,12 @@
-# <kit name>
+# mirror-sync
 
-Source: (optional — the kit this was converted from, e.g. `facilitator/rafa/s2-factory/`, adapted; omit for your own kit)
-Job: one sentence.
-For: who runs it.
-Inputs: what it needs, where it comes from.
-Outputs: what it produces, where it goes.
-Exports: (required) the intermediate this factory produces for someone else's factory — work-in-progress another agent can consume (a row, a draft plus metadata, a structured file).
-Interface: (required) the form it takes and how someone else reaches it — rung 1: a skill, hand this folder to an assistant and run SKILL.md on examples/input.* · rung 2: a single file that calls a model through MCP or an API <command or endpoint> · rung 3: an app <how to install and run> · rung 4: a website running on a machine <url>.
-Adapts to: (required) the context the person running this brings — their data, constraints, or setup — and where it goes in.
-Example run: see `examples/`.
-Not for: what is out of scope.
+Job: keep a piece's canonical Markdown and its published mirror on a platform with no write API in step — say which side changed, push the repo's version into the live post, or pull a platform-side edit back as a reviewable diff.
+For: anyone who publishes from a repo and mirrors to a publication — and then edits in whichever of the two they happen to have open. Written for the editor of a magazine; it fits a newsletter, a docs site with a Medium mirror, or a team blog cross-posted to LinkedIn.
+Inputs: a repo where Markdown is the source of truth, a built copy of the site, a publication with a public read endpoint, and a post id recorded per piece. Adapted from Monstrous Times (`monstroustimes.com` → `monstroustimes.substack.com`), where 66 stories are mirrored.
+Outputs: a drift report (one row per piece); on `push`, a verified update to the live post and a new hash in `data/mirror-sync.json`; on `pull`, a diff for a human to approve before anything lands in the repo.
+Exports: the drift report — `slug · post id · state · what differs`, where state is one of in sync / site ahead / platform ahead / both ahead. It is a structured intermediate, not just a log: another factory can take it as a work queue (a changelog kit, an editorial-review kit, a "what shipped this week" digest) without knowing anything about this one.
+Interface: file handoff (rung one). Hand this folder to your agent, point it at a repo and a publication, and run `SKILL.md` on `examples/input.md`. `check` needs nothing but HTTP, so it can be lifted to rung two — a single script — without touching the method; `push` needs a browser session because the platform has no write API, which is the whole reason this kit exists.
+Adapts to: the runner's own field-owner map (which fields the repo owns and which the platform owns — decided once, before the first run), their canonical article path, and their platform's read endpoint and editor document model. The method is fixed; the publication changes every run.
+Example run: see `examples/` — `input.md` (three pieces in three different drift states) → `output.md` (the report, one verified push, one refusal). **Synthetic**: the stories, post ids and hashes are invented. The platform behaviour and the failure signals it encodes are real, from the Monstrous Times migration.
+Not for: platforms that have a write API — use it. Not for a first import or a bulk migration (that is an importer's job; this maintains a mirror that already exists). Not for bylines, sections, cover images or publish dates: those belong to the platform and the kit refuses them by design.
+Owner: Sachin (`sachben91`). Bridge target for S3 — the drift report is the surface to bridge on.

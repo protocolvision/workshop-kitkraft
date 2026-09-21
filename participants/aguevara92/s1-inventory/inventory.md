@@ -17,13 +17,13 @@
 - Who else uses it: Only me
 - Where it lives: The AI Motor workspace, as an automations folder plus a skill, with the data in my own Supabase project.
 
-### 3. Ad spy
-- What it is: A script that pulls ads from the Meta Ad Library API into my Supabase, plus a digest and a brief generator on top of it.
-- The job it does: Gives me competitor and industry ad intelligence for Enganyo without paying for a tool.
-- How often I use it: Weekly
-- What I adapted: I built it to replace a paid tool at roughly zero cost, kept it dependency free, and added the digest and brief steps so it hands me something to act on instead of a list of ads.
+### 3. Bitacora (the journal system)
+- What it is: A contract written into my workspace rules plus a plugin: MOCs as topic hubs, one file per session, daily notes, frozen decisions, and living logbooks per topic, with link-back rules the agent has to follow.
+- The job it does: Makes every working session with Claude leave a trace the next session can pick up, so I never explain my own context twice.
+- How often I use it: Daily. It runs on every session; there are around 800 session files across my two workspaces.
+- What I adapted: I fixed the seven document types and the link-back rule myself after losing work, made the daily notes append-only because several sessions run at once, and packaged the whole thing as a plugin so it travels to other workspaces.
 - Who else uses it: Only me
-- Where it lives: The Enganyo workspace on my machine, with the data in my own Supabase project.
+- Where it lives: In my workspace rules and journal folders, with the canonical source as a plugin in The AI Motor workspace.
 
 ## Kit to convert
 undecided
