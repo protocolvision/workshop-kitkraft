@@ -49,4 +49,4 @@ sachben91/Themed discovery agent — turns ✓/✗ verdicts into positive and ne
 aguevara92/Bitacora (the journal system) — frozen decisions and per-topic logbooks with link-back rules; my spec-first and think-aloud kits pile state into one instruction file and reverse decisions freely, so this gives them a durable decision record.
 
 ## Posture
-not taken
+Partnership ⇄ Comfort zone
