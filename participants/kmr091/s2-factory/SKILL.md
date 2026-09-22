@@ -8,12 +8,12 @@ When I need a scheduled or event-triggered update on a policy area — either a 
 
 ## Steps
 1. Ask the person running it for: their policy area, the sub-topic for this run (a country, tool, or development), and the baseline (the date last checked, or a triggering event).
-2. Search current public sources (government documents, news pieces, company announcements) for what has changed on that sub-topic since the baseline. Accept a pasted document in place of, or alongside, the search.
+2. Search current public sources (government documents, news pieces, company announcements) for what has changed on that sub-topic since the baseline. Accept a pasted document in place of, or alongside, the search. If search is not available, or turns up thin on a niche topic, ask the person running it for what they already have (a document, a link, a summary of what they know) and say plainly in the briefing that coverage is partial and why.
 3. If a development or proposal was given, assess it against the policy area: pros and cons, what stakeholders have said, and what the next steps would be. Use only the development or proposal and the policy area as context — no extra framing beyond that, except, optionally if asked, "what would a given stakeholder think."
 4. Draft the briefing: key headlines on the issue, each with its source named next to it, ending with the implications for real-time policy decisions.
 
 ## Constraints
-Every headline is sourced, with the source named next to it. A view on a development or proposal is flagged as a first take, not a conclusion. The briefing is dated.
+Every headline is sourced, with the source named next to it. A view on a development or proposal is flagged as a first take, not a conclusion. The briefing is dated. "Current" means since the baseline; anything older is background only, and say so if it's included. Weigh a government or company source over secondary news commentary on the same point. Stop searching once new results repeat what's already found, or after a reasonable number of searches for the topic's coverage — do not keep searching past that just to pad the briefing.
 
 ## Do not
 Do not present a view on a development or proposal as settled, as a recommendation, or as a substitute for the team's own judgment. Do not invent sources.
