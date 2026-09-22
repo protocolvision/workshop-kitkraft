@@ -723,6 +723,20 @@
     if (n) { n.textContent = value; }
   }
 
+  /* Every place that empties a container before re-rendering it. A removed or
+     renamed element used to throw here, and because it threw during boot the
+     whole page went inert before a single listener was attached. Now it says
+     precisely which id is missing and carries on, so one dead reference costs
+     one section rather than the entire page. check-ids.js is the real gate;
+     this is the seatbelt. */
+  function byId(id) {
+    var n = document.getElementById(id);
+    if (!n && window.console && console.error) {
+      console.error('sprungbrett: missing element #' + id + ' (see: node check-ids.js)');
+    }
+    return n;
+  }
+
   /* Re-labels the whole interface in place. State is untouched, so switching
      language never loses an answer or a result. */
   function applyLanguage(code) {
@@ -948,7 +962,8 @@
 
   function renderLangMenu() {
     setText('lang-menu-title', t('languageMenuTitle'));
-    var host = document.getElementById('lang-menu-items');
+    var host = byId('lang-menu-items');
+    if (!host) { return; }
     host.textContent = '';
     for (var i = 0; i < STRINGS.languages.length; i++) {
       (function (lang) {
@@ -1134,7 +1149,8 @@
   }
 
   function renderAccounts() {
-    var list = document.getElementById('account-list');
+    var list = byId('account-list');
+    if (!list) { return; }
     list.textContent = '';
     for (var i = 0; i < PROFILES.length; i++) {
       (function (p) {
@@ -1223,7 +1239,8 @@
   }
 
   function renderQuestions() {
-    var row = document.getElementById('qgrid');
+    var row = byId('qgrid');
+    if (!row) { return; }
     row.textContent = '';
     var sectorKeys = [];
     for (var s = 0; s < SECTORS.length; s++) { sectorKeys.push(SECTORS[s].key); }
@@ -1236,7 +1253,8 @@
       legend.textContent = t('otherLanguages') + ' ';
       legend.appendChild(el('span', 'optional', t('optional')));
     }
-    var langs = document.getElementById('langrow');
+    var langs = byId('langrow');
+    if (!langs) { return; }
     langs.textContent = '';
     for (var i = 0; i < LANGUAGE_OPTIONS.length; i++) {
       (function (name) {
@@ -1327,7 +1345,8 @@
   }
 
   function renderResult(fresh) {
-    var body = document.getElementById('result-body');
+    var body = byId('result-body');
+    if (!body) { return; }
     body.textContent = '';
     var above = 0;
     for (var i = 0; i < STATE.scored.length; i++) { if (STATE.scored[i].shortlisted) { above++; } }
@@ -1369,14 +1388,14 @@
 
     var who = shortName(STATE.profile).toLowerCase() + ' in ' + STATE.fields.city +
       ' at German ' + STATE.fields.german_level;
-    document.getElementById('result-caption').textContent = above === 0
+    setText('result-caption', above === 0
       ? 'No roles above the line for a ' + who
-      : (above === 1 ? '1 role for a ' + who : above + ' roles for a ' + who);
-    document.getElementById('result-count').textContent = above === 0
+      : (above === 1 ? '1 role for a ' + who : above + ' roles for a ' + who));
+    setText('result-count', above === 0
       ? 'Nothing cleared the line for this combination. Try another city or sector, or a higher German ' +
         'level. All ' + STATE.scored.length + ' scored rows are still in shortlist.csv, with a reason on each.'
       : above + ' above the line, ' + (STATE.scored.length - above) + ' below. The German level shown is ' +
-        'read off the advert’s wording, which has no CEFR definition.';
+        'read off the advert’s wording, which has no CEFR definition.');
   }
 
   /* One row anatomy everywhere: primary line, secondary line, one meta.
@@ -1420,7 +1439,8 @@
   }
 
   function renderGaps() {
-    var host = document.getElementById('gaps-panel');
+    var host = byId('gaps-panel');
+    if (!host) { return; }
     host.textContent = '';
     var list = archetypesFor(STATE.profile);
 
@@ -1455,7 +1475,8 @@
   }
 
   function renderOutreach() {
-    var host = document.getElementById('outreach-panel');
+    var host = byId('outreach-panel');
+    if (!host) { return; }
     host.textContent = '';
     var list = archetypesFor(STATE.profile);
 
@@ -1491,7 +1512,8 @@
   /* ---------------- tell us more ------------------------------------------ */
 
   function renderQA() {
-    var host = document.getElementById('qa-rows');
+    var host = byId('qa-rows');
+    if (!host) { return; }
     host.textContent = '';
     for (var i = 0; i < QUESTIONS.length; i++) {
       (function (q) {
@@ -1522,7 +1544,8 @@
   }
 
   function renderChips() {
-    var host = document.getElementById('chips');
+    var host = byId('chips');
+    if (!host) { return; }
     host.textContent = '';
     for (var i = 0; i < STATE.notes.length; i++) {
       (function (note, index) {
@@ -1681,7 +1704,8 @@
   var openStep = 0;
 
   function renderSteps() {
-    var host = document.getElementById('steps');
+    var host = byId('steps');
+    if (!host) { return; }
     host.textContent = '';
     var defs = stepDefinitions();
 
@@ -1756,12 +1780,12 @@
   }
 
   function renderExports() {
-    document.getElementById('shape-shortlist').textContent = wrapColumns(SHORTLIST_COLUMNS);
-    document.getElementById('shape-gaps').textContent = wrapColumns(GAPS_COLUMNS);
-    document.getElementById('shape-outreach').textContent = wrapColumns(OUTREACH_COLUMNS);
-    document.getElementById('head-shortlist').textContent = firstLines(shortlistCsv(STATE), 2);
-    document.getElementById('head-gaps').textContent = firstLines(gapsCsv(STATE), 2);
-    document.getElementById('head-outreach').textContent = firstLines(outreachCsv(STATE), 2);
+    setText('shape-shortlist', wrapColumns(SHORTLIST_COLUMNS));
+    setText('shape-gaps', wrapColumns(GAPS_COLUMNS));
+    setText('shape-outreach', wrapColumns(OUTREACH_COLUMNS));
+    setText('head-shortlist', firstLines(shortlistCsv(STATE), 2));
+    setText('head-gaps', firstLines(gapsCsv(STATE), 2));
+    setText('head-outreach', firstLines(outreachCsv(STATE), 2));
   }
 
   /* ---------------- boot ---------------------------------------------------- */
