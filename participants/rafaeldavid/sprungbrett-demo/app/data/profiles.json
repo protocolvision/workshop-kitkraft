@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "note": "Invented profiles. Described by profession, qualification and years only: no names, no ages, no countries. Origin appears only as 'qualified outside the EU', and country never affects a score. Languages are a skill, listed as languages, and are never used to infer an origin.",
+  "profiles": [
+    {
+      "profile_id": "p-nurse",
+      "profession_key": "nurse-general-care",
+      "profession": "Registered nurse, general care",
+      "qualification": "Three-year nursing diploma, qualified outside the EU",
+      "years_experience": 12,
+      "roles_count": 6,
+      "languages_count": 2,
+      "languages": [
+        "German",
+        "English"
+      ],
+      "seniority_band": "senior",
+      "recognition_status": "not_started",
+      "held_credential_ids": [
+        "cert-first-aid-de"
+      ],
+      "archetype_ids": [
+        "a-nurse-ward",
+        "a-nurse-recognition-post",
+        "a-care-coordination"
+      ],
+      "defaults": {
+        "city": "Berlin",
+        "german_level": "B1",
+        "sector": "health"
+      },
+      "synthetic": true
+    },
+    {
+      "profile_id": "p-engineer",
+      "profession_key": "mechanical-engineering",
+      "profession": "Mechanical engineer, machine building",
+      "qualification": "Four-year engineering degree, qualified outside the EU",
+      "years_experience": 8,
+      "roles_count": 4,
+      "languages_count": 3,
+      "languages": [
+        "German",
+        "English",
+        "Russian"
+      ],
+      "seniority_band": "mid",
+      "recognition_status": "not_started",
+      "held_credential_ids": [
+        "cert-fuehrerschein-umschreibung"
+      ],
+      "archetype_ids": [
+        "a-mech-design",
+        "a-mfg-process",
+        "a-tech-service"
+      ],
+      "defaults": {
+        "city": "Leipzig",
+        "german_level": "B2",
+        "sector": "engineering"
+      },
+      "synthetic": true
+    },
+    {
+      "profile_id": "p-developer",
+      "profession_key": "software-development",
+      "profession": "Software developer, backend and data",
+      "qualification": "Computer science degree, qualified outside the EU",
+      "years_experience": 5,
+      "roles_count": 3,
+      "languages_count": 2,
+      "languages": [
+        "German",
+        "English"
+      ],
+      "seniority_band": "mid",
+      "recognition_status": "not_started",
+      "held_credential_ids": [
+        "course-sql-modelling"
+      ],
+      "archetype_ids": [
+        "a-backend-dev",
+        "a-data-eng",
+        "a-it-ops"
+      ],
+      "defaults": {
+        "city": "Berlin",
+        "german_level": "A2",
+        "sector": "it"
+      },
+      "synthetic": true
+    }
+  ]
+}
