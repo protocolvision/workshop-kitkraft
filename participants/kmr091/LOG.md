@@ -15,3 +15,6 @@
 | 2026-09-22T09:15:00Z | async | kmr091 | progress | v2: SKILL.md Constraints now defines "current" against the baseline, weighs government/company sources over secondary commentary, and gives a stopping signal for search (fixes: "Current public sources" isn't defined) |
 | 2026-09-22T09:15:00Z | async | kmr091 | progress | v2: README Adapts to: now states the process holds for any policy area and names what changes on a slower-moving or sparser topic (fixes: Adapts to: doesn't say what to supply for a policy area unlike the example) |
 | 2026-09-22T09:15:00Z | async | kmr091 | memory | the participant knew the kit should still work on a niche or slow-moving topic and with search unavailable; the kit did not say so until v2 |
+| 2026-09-22T16:04:20Z | S3 | kmr091 | progress | bridge to patwater: read RAG Factory README + SKILL.md + examples; kind confirmed factory-factory |
+| 2026-09-22T16:10:07Z | S3 | kmr091 | unblock | corpus size/structure supplied by kmr091: small fixed core (gov.uk AI pages, UK Parliament/Hansard, EUR-Lex/EC digital strategy, AI-related only) plus open-ended per-run news/company search with no fixed list |
+| 2026-09-22T16:10:27Z | S3 | kmr091 | progress | bridge to patwater: ran RAG Factory steps 1-5 on my corpus/goal; typology read-only; filled pipeline spec (hybrid indexed core + live-search layer) |
