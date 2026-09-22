@@ -4,19 +4,35 @@ The demo used to wear the Protocol Institute's colours. It should not: it is a s
 
 ## The rule
 
-> The brand is the first seed, counting from 1, whose palette passes every contrast pair the app actually uses at WCAG AA.
+> The brand is the first seed, counting from 1, whose palette
+> **(a)** passes every contrast pair the app actually uses at WCAG AA, **and**
+> **(b)** puts the supporting hue between 95° and 165°.
 
-That is the whole rule. It is written down so the palette is reproducible and so nobody has to defend a taste decision they cannot justify. Running `node contrast-check.js --find` applies it from scratch.
+Clause (b) was added after the fact, and the reason is worth recording. Seed 789 passed every
+contrast pair comfortably and still produced a dark rust, `#6D2A22`, for the fit indicator — so
+a "strong fit" read as a warning. Contrast is not the only thing a colour says. The fix was to
+put the constraint in the rule and re-run it, not to edit the generated value.
 
-**The seed is 789.** 788 seeds were rejected before it:
+95–165° is green through to blue-green. It excludes the yellow-greens below it, which read as
+caution rather than good.
+
+Running `node contrast-check.js --find` applies both clauses from scratch.
+
+**The seed is 1412.** 1411 seeds were rejected before it:
 
 | rejected by | count |
 |---|---|
-| white on primary | 571 |
-| secondary on band | 214 |
-| primary on band | 3 |
+| white on primary | 601 |
+| support hue out of positive range | 544 |
+| secondary on band | 245 |
+| primary on band | 21 |
 
-The first pair does most of the rejecting, which is the point: a primary light enough to look friendly is a primary that white text cannot sit on.
+**A note for whoever picks this up.** Adding clause (b) moved the *primary* as well, from the
+teal `#13799A` of seed 789 to `#7D20AC`, because the rule selects a whole palette and not one
+colour. That was not the intent of the change — the intent was only to stop the support colour
+reading as a warning — and it is flagged here rather than quietly kept. To go back to the teal,
+`node generate-brand.js 789` reverts every generated file, at the cost of the rust fit colour
+returning. Both seeds are recorded so either is one command away.
 
 ## What the seed decides
 
@@ -36,37 +52,54 @@ It does **not** decide the typeface. Inter is already chosen and licensed; the s
 
 | token | value | used for |
 |---|---|---|
-| `--primary` | `#13799A` | the single primary action, links, focus rings |
-| `--primary-pressed` | `#0F5C76` | the pressed and hover state |
-| `--primary-tint` | `#E7F8FE` | the highlight that shows what just changed |
-| `--support` | `#6D2A22` | fit, and nothing else |
-| `--ink` | `#262A2B` | body text |
-| `--secondary` | `#676D6F` | secondary lines, captions, labels |
+| `--primary` | `#7D20AC` | the single primary action, links, focus rings |
+| `--primary-pressed` | `#64198A` | the pressed and hover state |
+| `--primary-tint` | `#F6E8FD` | the highlight that shows what just changed |
+| `--support` | `#3E6C1E` | fit, and nothing else |
+| `--ink` | `#2F2B31` | body text |
+| `--secondary` | `#6A646D` | secondary lines, captions, labels |
 | `--page` | `#FFFFFF` | the page |
-| `--band` | `#F9FBFB` | full-width bands that separate sections |
-| `--hairline` | `rgba(38,42,43,0.07)` | every separator on the page |
-| `--radius` / `--radius-control` | `14px` / `12px` | the few surfaces that need one |
-| `--motion` | `180ms` | every transition |
-| `--wordmark-weight` / `--wordmark-tracking` | `700` / `-0.02em` | the wordmark |
+| `--band` | `#FAF9FB` | full-width bands that separate sections |
+| `--hairline` | `rgba(47,43,49,0.1)` | every separator on the page |
+| `--radius` / `--radius-control` | `10px` / `8px` | the few surfaces that need one |
+| `--motion` | `250ms` | every transition |
+| `--wordmark-weight` / `--wordmark-tracking` | `700` / `-0.015em` | the wordmark |
 
 ## Contrast table
 
 ```
-seed 789  PASS
+seed 1412  PASS
+  support hue 95 deg  (95-165 required)  pass
   pair                    fg        bg        ratio   min   
-  body on page            #262A2B   #FFFFFF   14.50   4.5   pass
-  secondary on page       #676D6F   #FFFFFF    5.26   4.5   pass
-  body on band            #262A2B   #F9FBFB   13.96   4.5   pass
-  secondary on band       #676D6F   #F9FBFB    5.06   4.5   pass
-  white on primary        #FFFFFF   #13799A    4.97   4.5   pass
-  white on pressed        #FFFFFF   #0F5C76    7.47   4.5   pass
-  primary on page         #13799A   #FFFFFF    4.97   4.5   pass
-  primary on band         #13799A   #F9FBFB    4.78   4.5   pass
-  fit colour on page      #6D2A22   #FFFFFF   10.48   3.0   pass
-  fit colour on band      #6D2A22   #F9FBFB   10.09   3.0   pass
+  body on page            #2F2B31   #FFFFFF   13.90   4.5   pass
+  secondary on page       #6A646D   #FFFFFF    5.74   4.5   pass
+  body on band            #2F2B31   #FAF9FB   13.24   4.5   pass
+  secondary on band       #6A646D   #FAF9FB    5.47   4.5   pass
+  white on primary        #FFFFFF   #7D20AC    7.85   4.5   pass
+  white on pressed        #FFFFFF   #64198A   10.25   4.5   pass
+  primary on page         #7D20AC   #FFFFFF    7.85   4.5   pass
+  primary on band         #7D20AC   #FAF9FB    7.48   4.5   pass
+  fit colour on page      #3E6C1E   #FFFFFF    6.23   3.0   pass
+  fit colour on band      #3E6C1E   #FAF9FB    5.94   3.0   pass
 ```
 
 Re-run with `node contrast-check.js`. It exits non-zero if the recorded seed stops passing.
+
+## What else the seed produces
+
+`node generate-brand.js <seed>` writes five things, all from the one integer:
+
+- `brand/brand.json` — the tokens, with the seed recorded in the file
+- `app/brand.css` — the same tokens as custom properties, which is all the app reads
+- `brand/favicon.svg` and `brand/favicon-datauri.txt` — a board-and-arc mark in `--primary`
+- `app/banner.svg` — the hero banner, abstract arcs in the primary and the two tints
+- and it rewrites the `<link rel="icon">` and `<meta name="theme-color">` in `app/index.html`,
+  because those two cannot read a CSS custom property and would otherwise go stale on a reseed
+
+The banner keeps its left 78% as flat `--band` with nothing drawn on it, which is where the
+hero text sits, and the image is anchored `object-position: left center` so that edge survives
+the `object-fit: cover` crop. Measured on the rendered pixels rather than assumed: the
+headline, the greeting and the lede each sit on exactly one colour, `#FAF9FB`, at **13.24:1**.
 
 ## The wordmark
 

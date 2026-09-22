@@ -145,7 +145,92 @@ function css(brand) {
     '}\n';
 }
 
-module.exports = { generate: generate, css: css, hslToRgb: hslToRgb, hex: hex };
+
+/* The banner, from the same seed as the palette, so it is on-brand by
+   construction rather than by eye. Abstract and calm: broad overlapping arcs
+   echoing the springboard, warm rather than corporate-cold.
+ *
+ * The left 62% is deliberately left as flat --band with nothing drawn over it,
+ * because that is where the hero text sits. Contrast there is therefore exactly
+ * ink-on-band, which is a known quantity rather than an assumed average — and
+ * it is checked against the rendered pixels as well, see brand/README.md. */
+function banner(brand) {
+  var rnd = lcg(brand.seed + 7777);
+  var c = brand.color;
+  var W = 1600, H = 500;
+  /* The left fraction kept completely clear. It is deliberately generous:
+     object-fit: cover crops the sides when the hero is taller than 500/1600,
+     so the quiet zone has to survive that crop at any sensible viewport. Paired
+     with object-position: left center, which anchors this edge. */
+  var QUIET = 0.78;
+
+  var parts = [];
+  parts.push('<rect width="' + W + '" height="' + H + '" fill="' + c.band + '"/>');
+
+  /* Soft fields, all starting beyond the quiet zone. */
+  for (var i = 0; i < 5; i++) {
+    var cx = Math.round(W * (QUIET + 0.06 + rnd() * 0.42));
+    var cy = Math.round(H * (0.1 + rnd() * 0.8));
+    var r  = Math.round(H * (0.35 + rnd() * 0.55));
+    var fill = i % 2 === 0 ? c.primaryTint : c.supportTint;
+    parts.push('<circle cx="' + cx + '" cy="' + cy + '" r="' + r +
+               '" fill="' + fill + '" opacity="' + (0.5 + rnd() * 0.3).toFixed(2) + '"/>');
+  }
+
+  /* Three broad arcs: the springboard motif, thrown to the right. */
+  for (var a = 0; a < 3; a++) {
+    var y0 = Math.round(H * (0.72 + a * 0.06));
+    var lift = Math.round(H * (0.30 + rnd() * 0.28));
+    var x0 = Math.round(W * (QUIET - 0.04));
+    parts.push('<path d="M' + x0 + ' ' + y0 +
+               ' C' + Math.round(W * 0.78) + ' ' + (y0 - lift) +
+               ' ' + Math.round(W * 0.9) + ' ' + (y0 - lift) +
+               ' ' + W + ' ' + Math.round(y0 - lift * 0.55) + '"' +
+               ' stroke="' + c.primary + '" stroke-width="' + (10 + a * 6) +
+               '" fill="none" stroke-linecap="round" opacity="' + (0.16 + a * 0.06).toFixed(2) + '"/>');
+  }
+
+  /* A single confident arc, the one thing that reads at a glance. */
+  parts.push('<path d="M' + Math.round(W * (QUIET - 0.02)) + ' ' + Math.round(H * 0.86) +
+             ' C' + Math.round(W * 0.8) + ' ' + Math.round(H * 0.2) +
+             ' ' + Math.round(W * 0.88) + ' ' + Math.round(H * 0.12) +
+             ' ' + Math.round(W * 0.99) + ' ' + Math.round(H * 0.22) + '"' +
+             ' stroke="' + c.primary + '" stroke-width="16" fill="none"' +
+             ' stroke-linecap="round" opacity="0.5"/>');
+
+  /* And the board it springs from. */
+  parts.push('<path d="M' + Math.round(W * (QUIET - 0.02)) + ' ' + Math.round(H * 0.86) +
+             ' L' + Math.round(W * 0.78) + ' ' + Math.round(H * 0.86) + '"' +
+             ' stroke="' + c.primary + '" stroke-width="16" fill="none"' +
+             ' stroke-linecap="round" opacity="0.28"/>');
+
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + W + ' ' + H + '" ' +
+         'width="' + W + '" height="' + H + '" role="presentation">' +
+         parts.join('') + '</svg>';
+}
+
+/* The mark: Sprungbrett means springboard, so the mark is a board and the arc
+   coming off it. One shape, no text, no gradient, and it has to survive being
+   16px, which is why the strokes are heavy and there is exactly one of them. */
+function favicon(brand) {
+  var c = brand.color.primary;
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+    '<path d="M4 25h14" stroke="' + c + '" stroke-width="4" stroke-linecap="round" fill="none"/>' +
+    '<path d="M6 19C12 7 22 5 28 7" stroke="' + c + '" stroke-width="4" ' +
+    'stroke-linecap="round" fill="none"/>' +
+    '</svg>';
+}
+
+/* Inlined as a data URI in <link rel="icon">, so it survives file:// and costs
+   no request. Only # needs escaping for a URI-encoded SVG. */
+function faviconDataUri(brand) {
+  return 'data:image/svg+xml,' + favicon(brand).split('#').join('%23').split('"').join("'");
+}
+
+module.exports = {
+  generate: generate, css: css, hslToRgb: hslToRgb, hex: hex,
+  favicon: favicon, faviconDataUri: faviconDataUri, banner: banner
+};
 
 if (require.main === module) {
   var seed = parseInt(process.argv[2], 10);
@@ -156,7 +241,29 @@ if (require.main === module) {
   fs.writeFileSync(path.join(brandDir, 'brand.json'), JSON.stringify(brand, null, 2) + '\n');
   var full = generate(seed);
   fs.writeFileSync(path.join(brandDir, '..', 'app', 'brand.css'), css(full));
+  fs.writeFileSync(path.join(brandDir, 'favicon.svg'), favicon(full) + '\n');
+  fs.writeFileSync(path.join(brandDir, 'favicon-datauri.txt'), faviconDataUri(full) + '\n');
+  fs.writeFileSync(path.join(brandDir, '..', 'app', 'banner.svg'), banner(full) + '\n');
+
+  /* The two places a brand colour has to appear as a literal rather than as a
+     custom property: the favicon data URI and the theme-color meta. Neither can
+     read CSS, so the generator writes them into index.html itself. That keeps
+     the single source of truth and means a reseed cannot leave them stale. */
+  var indexPath = path.join(brandDir, '..', 'app', 'index.html');
+  var html = fs.readFileSync(indexPath, 'utf8');
+  var before = html;
+  html = html.replace(/<link rel="icon" href="[^"]*">/,
+    '<link rel="icon" href="' + faviconDataUri(full) + '">');
+  html = html.replace(/<meta name="theme-color" content="[^"]*">/,
+    '<meta name="theme-color" content="' + full.color.primary + '">');
+  if (html !== before) {
+    fs.writeFileSync(indexPath, html);
+    console.log('  index.html favicon and theme-color updated to match the seed');
+  } else {
+    console.log('  index.html favicon and theme-color already current');
+  }
   console.log('brand: seed ' + seed + ' -> brand.json and app/brand.css');
   console.log('  primary ' + full.color.primary + '  support ' + full.color.support +
               '  ink ' + full.color.ink + '  band ' + full.color.band);
+  console.log('  favicon.svg, favicon-datauri.txt and app/banner.svg written');
 }

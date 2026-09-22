@@ -37,6 +37,7 @@ window.STRINGS = {
   t: {
     en: {
       greeting: 'Welcome',
+      optional: '(optional)',
       changeLanguage: 'Change language',
       headline: 'Find roles that match your qualifications, not only your German.',
       lede: 'Import a profile and see which roles it already reaches, what stands between you and the rest, and who to approach.',
@@ -78,6 +79,7 @@ window.STRINGS = {
 
     de: {
       greeting: 'Willkommen',
+      optional: '(optional)',
       changeLanguage: 'Sprache ändern',
       headline: 'Finden Sie Stellen, die zu Ihrer Qualifikation passen – nicht nur zu Ihrem Deutsch.',
       lede: 'Profil importieren und sehen, welche Stellen schon erreichbar sind, was noch fehlt und wen Sie ansprechen können.',
@@ -119,6 +121,7 @@ window.STRINGS = {
 
     uk: {
       greeting: 'Ласкаво просимо',
+      optional: '(необов’язково)',
       changeLanguage: 'Змінити мову',
       headline: 'Знайдіть посади, які відповідають вашій кваліфікації, а не лише вашій німецькій.',
       lede: 'Імпортуйте профіль і подивіться, які посади вже доступні, чого бракує та до кого звернутися.',
@@ -160,6 +163,7 @@ window.STRINGS = {
 
     tr: {
       greeting: 'Hoş geldiniz',
+      optional: '(isteğe bağlı)',
       changeLanguage: 'Dili değiştir',
       headline: 'Yalnızca Almancanıza değil, niteliklerinize uyan işleri bulun.',
       lede: 'Bir profil içe aktarın; hangi pozisyonlara şimdiden ulaştığınızı, geriye ne kaldığını ve kime başvuracağınızı görün.',
@@ -201,6 +205,7 @@ window.STRINGS = {
 
     ar: {
       greeting: 'أهلاً وسهلاً',
+      optional: '(اختياري)',
       changeLanguage: 'تغيير اللغة',
       headline: 'اعثر على وظائف تناسب مؤهلاتك، لا لغتك الألمانية وحدها.',
       lede: 'استورد ملفًا شخصيًا وانظر أي الوظائف في متناولك الآن، وما الذي ينقصك، وبمن تتصل.',
@@ -242,6 +247,7 @@ window.STRINGS = {
 
     es: {
       greeting: 'Te damos la bienvenida',
+      optional: '(opcional)',
       changeLanguage: 'Cambiar idioma',
       headline: 'Encuentra puestos que coincidan con tu cualificación, no solo con tu alemán.',
       lede: 'Importa un perfil y mira a qué puestos ya llegas, qué te falta y a quién dirigirte.',

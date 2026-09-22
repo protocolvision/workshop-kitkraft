@@ -3,10 +3,15 @@
  *   node contrast-check.js            test the seed recorded in brand.json
  *   node contrast-check.js --find     apply the rule: first passing seed from 1
  *
- * The rule: the brand is the first seed, counting from 1, whose palette passes
- * every contrast pair the app actually uses at WCAG AA. Nothing is hand-tuned;
- * if a palette shouts or a pair fails, the seed is rejected and the next one
- * is tried.
+ * The rule has two clauses. The brand is the first seed, counting from 1, whose
+ * palette (a) passes every contrast pair the app actually uses at WCAG AA, and
+ * (b) puts the supporting hue in a positive range.
+ *
+ * Clause (b) was added after seed 789 produced a dark rust for the fit
+ * indicator. It passed every contrast pair comfortably and still read as a
+ * warning, because contrast is not the only thing a colour says. A "strong fit"
+ * signal has to look like a good outcome, so the rule now tests hue as well —
+ * in the rule, not by editing the generated value.
  *
  * Pairs tested, all of which appear on screen:
  *   body on page, secondary on page, body on band, white on primary,
@@ -16,7 +21,18 @@
 var gen = require('./generate-brand.js');
 
 var AA_NORMAL = 4.5;   /* body text and anything small */
-var AA_LARGE  = 3.0;   /* the fit dots are a graphic, held to the 3:1 bar */
+var AA_LARGE  = 3.0;   /* the fit meter is a graphic, held to the 3:1 bar */
+
+/* Clause (b): the supporting hue carries positive signals, so it has to sit in
+   the green band. 95-165 degrees is green through to blue-green, and excludes
+   the yellow-greens below it, which read as caution rather than good. */
+var SUPPORT_HUE_MIN = 95;
+var SUPPORT_HUE_MAX = 165;
+
+function supportHueOk(brand) {
+  var h = brand.hues.support;
+  return h >= SUPPORT_HUE_MIN && h <= SUPPORT_HUE_MAX;
+}
 
 function srgbToLinear(v) {
   v = v / 255;
@@ -60,11 +76,18 @@ function evaluate(seed) {
     return { name: p.name, fg: p.fg, bg: p.bg, min: p.min, ratio: r, pass: r >= p.min };
   });
   var failed = rows.filter(function (r) { return !r.pass; });
-  return { seed: seed, brand: brand, rows: rows, pass: failed.length === 0, firstFail: failed[0] };
+  var hueOk = supportHueOk(brand);
+  return {
+    seed: seed, brand: brand, rows: rows, hueOk: hueOk,
+    pass: failed.length === 0 && hueOk,
+    firstFail: failed[0] || (hueOk ? undefined : { name: 'support hue out of positive range' })
+  };
 }
 
 function table(result) {
   console.log('seed ' + result.seed + (result.pass ? '  PASS' : '  FAIL'));
+  console.log('  support hue ' + result.brand.hues.support + ' deg  (' +
+    SUPPORT_HUE_MIN + '-' + SUPPORT_HUE_MAX + ' required)  ' + (result.hueOk ? 'pass' : 'FAIL'));
   console.log('  pair                    fg        bg        ratio   min   ');
   result.rows.forEach(function (r) {
     console.log('  ' + r.name.padEnd(22) + '  ' + r.fg + '   ' + r.bg + '   ' +
@@ -79,6 +102,8 @@ if (require.main === module) {
       var res = evaluate(seed);
       if (res.pass) {
         console.log('rule: first seed from 1 that passes every pair at AA');
+        console.log('      and whose supporting hue lands between ' +
+          SUPPORT_HUE_MIN + ' and ' + SUPPORT_HUE_MAX + ' degrees');
         console.log('rejected ' + rejected.length + ' seed(s) before this one');
         var why = {};
         rejected.forEach(function (r) { why[r.pair] = (why[r.pair] || 0) + 1; });

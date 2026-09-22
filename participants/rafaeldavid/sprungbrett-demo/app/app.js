@@ -737,7 +737,7 @@
     setText('chooser-h', t('chooserTitle'));
     setText('s-questions-title', t('questionsTitle'));
     setText('s-questions-lede', t('questionsLede'));
-    setText('s-otherlangs', t('otherLanguages'));
+
     setText('find', t('findRoles'));
     setText('s-col-role', t('colRole'));
     setText('s-col-employer', t('colEmployer'));
@@ -746,7 +746,11 @@
     setText('s-col-fit', t('colFit'));
     setText('s-tellmore-title', t('tellMoreTitle'));
     setText('s-tellmore-lede', t('tellMoreLede'));
-    setText('s-note-label', t('noteLabel'));
+    var noteLabel = document.getElementById('s-note-label');
+    if (noteLabel) {
+      noteLabel.textContent = t('noteLabel') + ' ';
+      noteLabel.appendChild(el('span', 'optional', t('optional')));
+    }
     setText('add-note', t('addNote'));
     setText('s-missing-title', t('missingTitle'));
     setText('s-missing-lede', t('missingLede'));
@@ -1010,6 +1014,11 @@
     row.appendChild(selectFor('german_level', t('germanLevel'), LEVEL_CHOICES, STATE.fields.german_level, function (v) { return v; }));
     row.appendChild(selectFor('sector', t('sector'), sectorKeys, STATE.fields.sector, sectorLabel));
 
+    var legend = document.getElementById('s-otherlangs');
+    if (legend) {
+      legend.textContent = t('otherLanguages') + ' ';
+      legend.appendChild(el('span', 'optional', t('optional')));
+    }
     var langs = document.getElementById('langrow');
     langs.textContent = '';
     for (var i = 0; i < LANGUAGE_OPTIONS.length; i++) {
@@ -1079,16 +1088,23 @@
     if (flash) { highlight('results'); highlight('gaps'); highlight('outreach'); }
   }
 
-  function dotsFor(total) {
-    var filled = total >= 0.86 ? 3 : (total >= 0.72 ? 2 : 1);
-    var word = filled === 3 ? t('fitStrong') : (filled === 2 ? t('fitGood') : t('fitPossible'));
-    var wrap = el('div');
-    var dots = el('span', 'dots');
-    for (var i = 1; i <= 3; i++) {
-      dots.appendChild(el('span', i <= filled ? null : 'off', '●'));
-    }
-    dots.setAttribute('aria-hidden', 'true');
-    wrap.appendChild(dots);
+  /* Native <meter>: the correct role and min/max semantics for free, and the
+     browser fills it from the inline start, so it mirrors in Arabic without the
+     hand-rolled percentage div that would have filled from the wrong edge.
+     The word stays beside it, so fit is never carried by colour alone. */
+  function fitFor(total) {
+    var word = total >= 0.86 ? t('fitStrong') : (total >= 0.72 ? t('fitGood') : t('fitPossible'));
+    var wrap = el('div', 'fit');
+    var m = document.createElement('meter');
+    m.min = 0;
+    m.max = 1;
+    m.low = 0.72;
+    m.high = 0.86;
+    m.optimum = 1;
+    m.value = total;
+    m.setAttribute('aria-label', t('colFit') + ': ' + word);
+    m.textContent = word;
+    wrap.appendChild(m);
     wrap.appendChild(el('span', 'fitword', word));
     return wrap;
   }
@@ -1115,7 +1131,7 @@
         ? 'none stated'
         : r.listing.german_level_mapped));
       var tdFit = el('td', 'num');
-      tdFit.appendChild(dotsFor(r.total));
+      tdFit.appendChild(fitFor(r.total));
       tr.appendChild(tdFit);
       body.appendChild(tr);
     }

@@ -1,28 +1,28 @@
 /* GENERATED FILE - do not edit by hand.
- * node brand/generate-brand.js 789
+ * node brand/generate-brand.js 1412
  *
- * Sprungbrett's own palette, derived from seed 789. The seed was
+ * Sprungbrett's own palette, derived from seed 1412. The seed was
  * chosen by rule, not by taste: see brand/README.md. The app reads these
  * custom properties and never a hex value. */
 
 :root {
-  --brand-seed: 789;
+  --brand-seed: 1412;
 
-  --primary:         #13799A;
-  --primary-pressed: #0F5C76;
-  --primary-tint:    #E7F8FE;
-  --support:         #6D2A22;
-  --support-tint:    #FAE7E5;
-  --ink:             #262A2B;
-  --secondary:       #676D6F;
+  --primary:         #7D20AC;
+  --primary-pressed: #64198A;
+  --primary-tint:    #F6E8FD;
+  --support:         #3E6C1E;
+  --support-tint:    #EEFBE5;
+  --ink:             #2F2B31;
+  --secondary:       #6A646D;
   --page:            #FFFFFF;
-  --band:            #F9FBFB;
-  --hairline:        rgba(38, 42, 43, 0.07);
+  --band:            #FAF9FB;
+  --hairline:        rgba(47, 43, 49, 0.1);
 
-  --radius:          14px;
-  --radius-control:  12px;
-  --motion:          180ms;
+  --radius:          10px;
+  --radius-control:  8px;
+  --motion:          250ms;
 
   --wordmark-weight:   700;
-  --wordmark-tracking: -0.02em;
+  --wordmark-tracking: -0.015em;
 }
