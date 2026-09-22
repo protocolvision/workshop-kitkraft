@@ -23,6 +23,10 @@ var path = require('path');
 
 /* ---------- a small deterministic sequence ---------- */
 
+/* #13799A, as hue/saturation/lightness, which is what the derivation below
+   works in. Changing these changes the brand's primary; nothing else should. */
+var PINNED = { hue: 195, sat: 78, light: 34 };
+
 function lcg(seed) {
   var state = (seed >>> 0) || 1;
   return function () {
@@ -63,16 +67,26 @@ function hsl(h, s, l) { return hex(hslToRgb(h, s, l)); }
 function generate(seed) {
   var rnd = lcg(seed);
 
-  /* Base hue anywhere on the wheel, quantised to 5 degrees so seeds that land
-     a degree apart do not pretend to be different brands. */
-  var baseHue = Math.floor(rnd() * 72) * 5;
+  /* The primary is PINNED rather than drawn from the seed. It is the teal the
+     page has had from the start, and it is the established look; the hue
+     constraint that was added later was aimed at the support colour, and
+     letting it move the primary too was a side effect rather than a decision.
+     So the seed no longer gets a vote on this one value.
 
-  /* Primary: saturated enough to carry a button, dark enough for white text. */
-  var primarySat   = 62 + Math.floor(rnd() * 20);        /* 62-81 */
-  var primaryLight = 34 + Math.floor(rnd() * 10);        /* 34-43 */
+     Everything else below is still derived, and the rule still has to pass with
+     this primary in place — pinning a colour does not exempt it from contrast. */
+  var baseHue      = PINNED.hue;
+  var primarySat   = PINNED.sat;
+  var primaryLight = PINNED.light;
 
-  /* The supporting hue sits a controlled distance away, never adjacent. */
-  var spread       = 110 + Math.floor(rnd() * 70);       /* 110-179 degrees */
+  /* Burn the two draws the primary used to make, so a given seed keeps
+     producing the same downstream palette it did before the pin. */
+  rnd(); rnd();
+
+  /* The supporting hue sits a controlled distance away, never adjacent. The
+     range spans the wheel because with the primary pinned at 195 the positive
+     band the rule requires sits around 260-330 degrees of separation. */
+  var spread       = 100 + Math.floor(rnd() * 260);      /* 100-359 degrees */
   var supportHue   = baseHue + spread;
   var supportSat   = 48 + Math.floor(rnd() * 22);
   var supportLight = 24 + Math.floor(rnd() * 8);

@@ -1,33 +1,33 @@
 {
-  "seed": 1412,
+  "seed": 3,
   "generated_by": "brand/generate-brand.js",
   "note": "Every value below is a function of the seed. Do not hand-edit: change the seed and regenerate.",
   "hues": {
-    "base": 280,
-    "support": 95,
-    "spread": 175
+    "base": 195,
+    "support": 162,
+    "spread": 327
   },
   "color": {
-    "primary": "#7D20AC",
-    "primaryPressed": "#64198A",
-    "primaryTint": "#F6E8FD",
-    "support": "#3E6C1E",
-    "supportTint": "#EEFBE5",
-    "ink": "#2F2B31",
-    "secondary": "#6A646D",
+    "primary": "#13799A",
+    "primaryPressed": "#0F5C76",
+    "primaryTint": "#E7F8FE",
+    "support": "#187257",
+    "supportTint": "#E3FCF5",
+    "ink": "#2B2F31",
+    "secondary": "#697072",
     "page": "#FFFFFF",
-    "band": "#FAF9FB"
+    "band": "#F6F8F8"
   },
   "shape": {
-    "radius": 10,
-    "radiusControl": 8,
-    "hairlineAlpha": 0.1
+    "radius": 14,
+    "radiusControl": 12,
+    "hairlineAlpha": 0.07
   },
   "motion": {
-    "duration": 250
+    "duration": 220
   },
   "wordmark": {
-    "weight": 700,
-    "tracking": "-0.015em"
+    "weight": 600,
+    "tracking": "-0.01em"
   }
 }
