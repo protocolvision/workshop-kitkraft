@@ -6,6 +6,8 @@ Target: participants/sachben91/s2-factory/ (factory — mirror-sync)
 Kind: factory-factory
 Interface used: mirror-sync's declared interface — rung 1, file handoff (README then SKILL.md). Used the `check` step specifically: "no browser needed," per the kit's own SKILL.md — used it strictly as declared, no workaround.
 
+**Flagged for update (2026-09-22).** This bridge currently covers the `check`-step drift finding only. Next: build a synthetic dataset for rag-factory, then run both concepts against it — rag-factory's own read-only/read-write typology and sachben91's proposed third typology (read-only corpus, write-back ranker), from his bridge into this kit. This file will be revised once that experiment has real results; not done yet.
+
 ## What my agent needed from the target
 The one thing rag-factory cannot do at all: detect and report drift between a canonical document and a published mirror of it. rag-factory produces retrieval-pipeline specs; it has nothing to say about keeping two copies of the same content in sync. mirror-sync's `check` step — build a comparison, classify per piece as in sync / site ahead / platform ahead / both ahead — has no equivalent anywhere in my own factory.
 
