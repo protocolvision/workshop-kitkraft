@@ -1,12 +1,11 @@
-# <kit name>
+# fair-price-justification
 
-Source: (optional — the kit this was converted from, e.g. `facilitator/rafa/s2-factory/`, adapted; omit for your own kit)
-Job: one sentence.
-For: who runs it.
-Inputs: what it needs, where it comes from.
-Outputs: what it produces, where it goes.
-Exports: (required) the intermediate this factory produces for someone else's factory — work-in-progress another agent can consume (a row, a draft plus metadata, a structured file).
-Interface: (required) the form it takes and how someone else reaches it — rung 1: a skill, hand this folder to an assistant and run SKILL.md on examples/input.* · rung 2: a single file that calls a model through MCP or an API <command or endpoint> · rung 3: an app <how to install and run> · rung 4: a website running on a machine <url>.
-Adapts to: (required) the context the person running this brings — their data, constraints, or setup — and where it goes in.
-Example run: see `examples/`.
-Not for: what is out of scope.
+Job: turn a Canadian federal procurement decision (what's being bought, from whom, at what price) into a citation-traceable DRAFT "fair and reasonable price" justification, grounded only in a verified policy-source register and, where relevant, public contract-award data.
+For: anyone who has to write the price-support section of a contract file, an approval memo, or a sole-source justification, and needs it to survive an audit.
+Inputs: the requirement and price to justify — organization and governing instrument, what's being bought, the price and its basis, whatever price evidence the requester has, and who the decision-maker is. All asked for explicitly, never assumed. Comes with its own verified register of policy citations (`sources/register.csv`) and, optionally, public Canadian federal contract-award data.
+Outputs: a DRAFT justification document, citing only register entries and dated sources, ending with a "Gaps and assumptions" list, marked for a named decision-maker to review and sign. Never a final or approved document.
+Exports: the DRAFT justification itself — a structured intermediate (restated requirement, cited provisions, a price-analysis table with sources and arithmetic shown, a conclusion, a gaps/assumptions list) that a human reviewer, or another factory (a contract-file assembler, an approval-routing kit), can consume without redoing the citation work.
+Interface: rung 1, a skill. This factory depends on its parent repository, `fair-price-kit` (https://github.com/Andre-Comeau/fair-price-kit) — clone it as a sibling folder, hand both to your agent, and run `fair-price-kit/SKILL.md` on `examples/input.md` here (or on your own procurement decision). This folder holds the declared factory contract and a worked example; the register, gates, tools and templates it depends on live in the parent repo, not duplicated here.
+Adapts to: the organization and its governing procurement instrument, the specific requirement and price, and whatever price evidence the user brings — asked for explicitly at the first step, never assumed. The kit's worked example throughout is a public Canadian federal Crown corporation's procurement data; swap in your own organization's register and instrument before using it for anything real (see `fair-price-kit/OPEN-QUESTIONS.md`).
+Example run: see `examples/` — `input.md` is a synthetic procurement decision for an invented Crown corporation; `output.md` is the DRAFT justification it produces. No real project, decision or organization is represented.
+Not for: giving legal advice, or approving anything — it only drafts, a named decision-maker signs. Not for use before its companion sensitive-information gate has cleared the inputs (`fair-price-kit/gates/sensitive-info-gate.md`). A separate, larger part of the parent repo (`fair-price-kit/ingestion/`) turns real project documents into a sanitized knowledge base this factory can optionally cite from — that pipeline is a candidate for its own, separate factory conversion, not converted here.
