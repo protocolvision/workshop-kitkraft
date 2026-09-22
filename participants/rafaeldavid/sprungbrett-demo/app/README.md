@@ -1,18 +1,40 @@
 # app
 
-The page lives here. Not built yet; `../spec_rafa_v2.md` is the build brief.
+The page. Open `index.html` from a file path in a desktop browser; there is no build step and no server.
 
 ```
-index.html              one screen: cards, five station tiles, shortlist table
-app.js                  scoring and rendering; no Math.random, no Date.now
-data.js                 window.DATA = { profiles, listings, credentialMap }
+index.html              one screen, three states: sign in, questions, results
+app.js                  scoring, gaps, outreach, rendering; no Math.random, no Date.now
+data.js                 GENERATED. window.DATA = { profiles, listings, archetypes, credentialMap }
+build-data.js           node only: regenerates data.js from data/*.json, byte-stable
 data/*.json             the same data, readable; never fetched
-shortlist.schema.json   the export's column order and version
+shortlist.schema.json   every listing scored, rejects included
+gaps.schema.json        one row per missing item
+outreach.schema.json    roles and organisation types, no people
 ```
 
-Constraints that are easy to break:
+Regenerate the data with `node build-data.js` after editing anything in `data/`. Never edit `data.js` by hand: it is generated, and the script is byte-stable so the readable copy and the loaded copy cannot drift.
+
+Exports: `shortlist.csv`, `gaps.csv` and `outreach.csv`, all schema v1, plus the four JSON intermediates `profile.json`, `credentials.json`, `archetypes.json` and `scored.json`. Every step hands over its own file, from the disclosure at the bottom of the page.
+
+## What is invented, and what is precomputed
+
+The interface carries no disclaimer copy — that was a decision, and the spec records it under "No disclaimers on the page". This file is where the full account lives.
+
+**Invented.** All three profiles. All 41 listings, their titles, their advert wording and their employers: every employer is a made-up compound with a legal form and carries `(fictional)` inside the string, on screen and in the CSV. The archetypes and their stated requirements. Everything generated from these carries `synthetic: true`, and all three CSVs carry a `synthetic` column.
+
+**Real, and described factually.** The recognition procedures in `data/credential-map.json`: whether a profession is regulated, the German reference occupation, that the competent authority varies by Land, and the `source_url` links to anerkennung-in-deutschland.de. The certificates and courses named in `data/archetypes.json` — telc and Goethe language certificates, the Kenntnisprüfung and the Anpassungslehrgang, chamber registration for a protected engineering title, REFA, LPIC. None of these is invented. No prices are stated anywhere, durations are always hedged ranges, and nothing promises an outcome. The file never states a verdict on equivalence: it carries `equivalence_verdict: "not assessed here"`.
+
+**Precomputed, not computed.** Steps 1 to 3 — reading the profile, checking credentials, deriving archetypes — are judgement written down in advance in the JSON, which the page looks up. Nothing is inferred and no model runs.
+
+**Computed in the browser, at run time.** Steps 4 to 6. Scoring all 41 listings on four components, comparing the profile against each archetype's requirements to produce the gaps, and assembling the three CSVs. These react to the four fields, which is why changing one changes the answer while the recorded steps stay put.
+
+**The sign-in is a mock.** "Continue with LinkedIn" opens an inline chooser headed "Choose a demo account". There is no logo, no LinkedIn colour, no imitation of anyone's sign-in screen, no credential field anywhere on the page, and nothing is fetched.
+
+## Constraints that are easy to break
 
 - It must open from a file path. A page on `file://` cannot `fetch()` its own JSON and cannot use ES modules, so the data arrives through a plain `<script src="data.js">`.
-- No network at all: no CDN, no web fonts, no analytics.
-- Deterministic: the same card and fields give the same rows every time.
-- Desktop only, about 1100px wide, body 16pt and table 20pt, nothing on hover alone.
+- No network at all: no CDN, no web fonts, no analytics. The only URLs in the whole app are the anerkennung-in-deutschland.de links in the credential data.
+- Deterministic: the same account and the same four fields give the same rows every time. No `Math.random`, no `Date.now`, no `new Date`.
+- Desktop only, about 1040px wide, body 16px and table text a notch larger, nothing on hover alone.
+- Brand kit colours only: paper `#F9F8F5`, ink `#2C2C2A`, secondary `#5F5E5A`, cobalt `#0064FF`, deep green `#085041`, green tint `#E1F5EE`.

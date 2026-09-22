@@ -14,79 +14,96 @@ No branding, no objectives, no metrics, no roadmap, no accounts, no backend.
 
 **Interface reference:** whatwatercosts.org. It opens with filters already set and thousands of rows already on screen. Data first, interaction second, no marketing copy.
 
-## The input
+## The flow: three states
 
-The input is a LinkedIn profile. In the demo it is one of three invented profiles, chosen from cards that are visible on load.
+The page has three states, one after another, in one column. Never more than one of them is asking for attention.
 
-The paste field is present and disabled, so the real input is visible without pretending. Beside it, verbatim:
+**1. Sign in.** The page opens nearly empty: the product line, one sentence, and one button, **Continue with LinkedIn**. Clicking it opens an inline chooser listing three demo accounts by profession and years — "Registered nurse, general care · qualified outside the EU · 12 years". Choosing one imports that profile.
 
-> This page makes no network requests and does not read LinkedIn. Anything you paste is ignored: the demo loads one of three invented profiles.
+The chooser is plain HTML in the page, not a popup and not a second screen. It is a mock: no logo, no LinkedIn colours, no imitation of anybody's sign-in screen, no fake linkedin.com chrome, and no field that asks for an email or a password — the page has no credential input anywhere, and nothing is fetched. The chooser's own heading is "Choose a demo account", so the button cannot be mistaken for a real connection. That heading is the one honesty left standing at the front of the flow, and it stays, because a sign-in that lies about what it does is the one thing on this page a visitor could be fooled by.
 
-The three small fields, city, German level and sector, sit on the chosen card as read-only text with a **change** link. Clicking it reveals them as inputs. The default path needs no form filling; changing a field re-runs the computed stations in front of you, which is the only honest way to show that the thing adapts to its user.
+**2. A few questions.** The sign-in area collapses to one quiet line naming who is signed in, with a **switch** link. Four fields appear, prefilled from the profile and all editable: city, German level, other languages, and target sector. One primary button under them, **Find roles**, and nothing else competing with it.
 
-## The page on load
+Other languages does real work rather than decorating the form. A listing carries a `working_language`, so an English-only post scores well for somebody who works in English and badly for somebody who does not, and a German-and-English team forgives part of a German shortfall. The languages ride along into `profile.json` so the intermediate stays truthful.
 
-Nothing is blank. A profile is preselected, its stations are already run, and the shortlist is already on screen. Pressing **Run** on another card replays the chain.
+**3. Results.** The questions collapse into one summary line — city · level · languages · sector, with **change** — and the results take the page: the roles table, what you're missing, who to approach, then the closed disclosure holding the steps and the downloads. Changing anything re-runs in place; the recorded steps do not move.
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│ A factory is a kit that runs without its author.             │
-│ This page runs one, on invented data, and shows its working. │
-├──────────────────────────────────────────────────────────────┤
-│ [ paste a LinkedIn URL — disabled ]   honesty line           │
-│ ( card 1 • selected )  ( card 2 )  ( card 3 )    [ Run ]     │
-├──────────────────────────────────────────────────────────────┤
-│ [ st.1 ] [ st.2 ] [ st.3 ] [ st.4 ] [ st.5 ]   ← five tiles  │
-├──────────────────────────────────────────────────────────────┤
-│ shortlist table (5 columns, 8 rows)                          │
-│ the row shape, printed  ·  download CSV  ·  copy CSV         │
-└──────────────────────────────────────────────────────────────┘
+state 1                     state 2                       state 3
+┌──────────────────────┐   ┌──────────────────────────┐   ┌──────────────────────────┐
+│ Find roles that      │   │ Find roles that ...      │   │ Find roles that ...      │
+│ match your quals...  │   │ Signed in as nurse,      │   │ Signed in as nurse  switch│
+│                      │   │   12 years.     switch   │   │ Berlin · B1 · English ·  │
+│ [Continue with       │   │                          │   │   Pflege        change   │
+│  LinkedIn]           │   │ City ▾  German ▾         │   ├──────────────────────────┤
+│                      │   │ Other languages ☑ ☐ ☐    │   │ 8 roles for a registered │
+│ Choose a demo account│   │ Target sector ▾          │   │ roles table   ← the hero │
+│  nurse · 12 years    │   │                          │   │ above the fold           │
+│  engineer · 8 years  │   │ [Find roles]             │   ├──────────────────────────┤
+│  developer · 5 years │   │                          │   │ What you're missing      │
+│                      │   │                          │   │ Who to approach          │
+│                      │   │                          │   │ + How this was worked out│
+└──────────────────────┘   └──────────────────────────┘   └──────────────────────────┘
 ```
 
-Page max width about 1100px. Body text 16pt, table text 20pt, nothing on hover only, because the back row cannot see a cursor. Running scrolls to the result so nobody scrolls live.
+Page max width about 1040px, one column, left aligned. Body text 16px, table text a notch larger for projection, nothing on hover only, because the back row cannot see a cursor. On a 1280×800 desktop the first three rows of the table are visible without scrolling.
 
-## The five stations
+## The interface, in three layers
 
-Tiles in a row, not stacked. Each carries one sentence with counts, a monospace chip naming what it hands on, and a badge saying **recorded** or **computed**. They reveal about 400ms apart, under 2.5s in total.
+1. **The answer, immediately.** In state 3 the roles table is the hero and it is above the fold. The setup above it is two quiet lines, not a block of cards.
+2. **The reasoning, one click away.** Under each role, the archetype and a one-line reason as secondary text. What you're missing and who to approach follow as their own quiet sections: headings only, no card chrome.
+3. **The working, tucked away.** The six steps collapse into one closed disclosure at the bottom, "How this was worked out", holding the steps with their counts and every download. A presenter opens it on stage; a first-time reader is never blocked by it.
 
-| # | Station | Badge | Hands on |
+Borders are a last resort: sections are separated by whitespace and type weight. One accent, cobalt, for the single primary action and the focus rings. Green carries fit and nothing else. Three type sizes, two weights, one spacing scale in multiples of 8. Fit is three dots plus a word, never colour alone. Motion is one 250ms highlight on what just changed, and it honours `prefers-reduced-motion`.
+
+
+## The six steps
+
+Numbered rows inside the **How this was worked out** disclosure, which is closed on load. Each carries one sentence with counts, the name of the file it produces, and a download and a copy for that file.
+
+| # | Step | Kind | Produces |
 |---|---|---|---|
 | 1 | Read profile — 6 roles, 12 years, 2 languages | recorded | `profile.json` |
 | 2 | Check credentials — regulated profession, next step named | recorded | `credentials.json` |
 | 3 | Derive archetypes — 3 roles this person could plausibly land | recorded | `archetypes.json` |
-| 4 | Score listings — 41 listings scored on 4 components | computed | `scored.json` |
-| 5 | Assemble shortlist — 8 above the line, 33 below, with reasons | computed | `shortlist.csv` |
+| 4 | Score listings — 41 listings scored on 4 components, for a city and a level | computed | `scored.json` |
+| 5 | Find gaps — what the profile is missing, per archetype | computed | `gaps.csv` |
+| 6 | Assemble outputs — 8 above the line, 33 below, three files out | computed | `shortlist.csv` |
 
-The badges are the honest line. Stations 1 to 3 are judgment somebody wrote down in advance; the page looks them up. Stations 4 and 5 are arithmetic the page actually does at run time, from the fields on the card, which is why changing a field changes the answer while you watch.
+Steps 1 to 3 are judgment somebody wrote down in advance; the page looks them up. Steps 4 to 6 are arithmetic the page actually does at run time, from the three fields, which is why changing a field changes the answer while you watch. Step 4 prints the city and the level it used, so you can see it move.
 
-Above the tiles, verbatim:
+The kind column lives in this spec, not on the page: the recorded and computed badges were cut with the rest of the explanatory chrome.
 
-> No model runs here. The judgement in the first three steps was written by hand in advance; the page looks it up. The last two steps are arithmetic, and they run when you press Run.
+**Step 5, find gaps.** For each archetype, compare the profile against that archetype's stated requirements and produce what is missing: a German level short of what the role asks, a recognition step not started, and one or two certifications or courses. Each gap carries what it is, why it matters for that archetype, roughly how long it takes, and a next step. Durations are ranges, always hedged with *typically*. Real certificates and procedures are named factually — a telc or Goethe B2 certificate, a Kenntnisprüfung or an Anpassungslehrgang, chamber registration for a protected title — because naming what exists is useful. Nothing invents a certificate, states a price, or promises an outcome.
 
-**Reveal.** Clicking a tile shows a key-and-value table or three to five rows, never raw JSON. Station 3 is open by default, so the room sees what a reveal gives without anyone clicking.
+**Step 6, assemble outputs.** The roles table, the gaps, the outreach list, and the three CSVs.
 
-## Station 2, the one that can be wrong
+**Working.** Each step can show its working as a key-and-value table of three to eight rows, never raw JSON. All of it starts closed: a presenter opens it on stage, and a first-time reader is never blocked by it.
+
+## Step 2, the one that can be wrong
 
 Recognition in Germany does not have one path per profession, and a demo that implies otherwise is telling people something false about their lives.
 
 The first branch is whether the profession is regulated. You may work in a non-regulated profession without recognition. A ZAB Statement of Comparability is generally not required to work, is explicitly not recognition, and never substitutes for it in a regulated profession. Recognition is assessed against a German reference occupation by an authority that varies by Bundesland.
 
-So `credential-map.json` carries, per profession: `regulated` true or false, `reference_occupation`, `authority: "varies by Land"`, one `next_step`, and a real `source_url`. The station never emits a verdict about equivalence. On the tile, verbatim:
-
-> Not legal or recognition advice. Free official counselling: anerkennung-in-deutschland.de
+So `credential-map.json` carries, per profession: `regulated` true or false, `reference_occupation`, `authority: "varies by Land"`, one `next_step`, and a real `source_url`. The step never emits a verdict about equivalence: it carries `equivalence_verdict: "not assessed here"` and says so in its working. The not-advice line that used to sit on this tile went with the other disclaimers; the `source_url` stayed, because a link to free official counselling is useful rather than defensive.
 
 ## The result
 
-On screen: five columns, at most eight rows, sorted by fit.
+On screen: five columns, at most eight rows, sorted by fit. The table is the hero and it is above the fold.
 
 | Role | Employer | City | German needed | Fit |
 |---|---|---|---|---|
 
-The archetype and the one-line reason sit under the role as secondary text rather than as columns. Fit shows as three filled dots, not a number and not colour alone. Under the table, the full row shape is printed in a fixed block: that block is the interface. The first two lines of the CSV render inline, because nobody at a podium opens a downloaded file. There is a download and a copy-to-clipboard fallback.
+The one-line reason sits under the role as secondary text rather than as columns, and it names the archetype. Fit shows as three filled dots plus a word, never colour alone. When nothing clears the line the table says so and suggests a different city, sector or level, rather than showing an empty box.
+
+Under the disclosure, the full row shape of each CSV is printed in a fixed block: that block is the interface. The first two lines of each CSV render inline, because nobody at a podium opens a downloaded file. There is a download and a copy-to-clipboard fallback for each.
 
 ## What it exports
 
-The file is work in progress, not a finished answer, so it carries the rejects too and keeps the score in parts rather than blending it away.
+Three CSVs and four JSON intermediates, and every one of them is reachable from the page. A downstream factory usually wants the profile or the scored set, not the finished shortlist: the last file is the least reusable thing in the chain, because somebody else's weights are baked into it. So each step hands over its own output, and the shortlist is only the one that happens to be last.
+
+The files are work in progress, not finished answers, so they carry the rejects too and keep the score in parts rather than blending it away.
 
 `shortlist.csv`, schema version 1, one row per listing scored:
 
@@ -99,13 +116,49 @@ score_city_fit, score_seniority_fit, shortlisted, reason, synthetic
 
 Four score components stay separate so a downstream factory can re-rank under its own weights. `archetype_id` and `credential_path_id` point back at the intermediates that produced the row. `shortlisted` is true for the eight above the line and false for the rest, each with a `reason`.
 
-The schema ships as `app/shortlist.schema.json` with its version, so the interface is a file rather than a paragraph on a page.
+`gaps.csv`, schema version 1, one row per missing item:
+
+```
+archetype_id, gap_type, item, why, typical_duration, next_step, synthetic
+```
+
+`gap_type` is one of language, recognition, certification, course or document. It is computed, not looked up: change the German level and the language rows and their durations change with it.
+
+`outreach.csv`, schema version 1, one row per thing worth approaching:
+
+```
+archetype_id, target_type, target, organisation, why, synthetic
+```
+
+`target_type` is one of role, body, chamber or network. For a shortlisted employer it is the role to approach, never a person: no names, no individual titles, no contact details. For everything else it is a category of organisation, except where naming the real kind is a plain fact, such as a chamber of commerce existing in every German city.
+
+The schemas ship as `app/shortlist.schema.json`, `app/gaps.schema.json` and `app/outreach.schema.json`, each with its version, so the interface is a file rather than a paragraph on a page.
+
+## No disclaimers on the page
+
+Four warnings were specified as fixed wording, written, and then cut. The decision: this is a demo of an app shown in a workshop, and the visible product should look like a product, so the interface carries no disclaimer copy and no explanation of itself. That is a deliberate call about a room, not a claim that the caveats do not matter, and it only holds because the demo is shown by a presenter and lives in a repo rather than being a public tool. If it ever ships to the public, the warnings come back first.
+
+What carries the markers instead:
+
+- **The data.** `synthetic: true` on every profile, listing and generated row, and `(fictional)` inside every employer string.
+- **The exports.** A `synthetic` column in all three CSVs.
+- **The HTML.** A comment at the top of `index.html` and of `data.js` saying the data is invented, that nothing is fetched from LinkedIn, and that no model runs.
+- **Title and metadata.** `<title>Sprungbrett — demo (synthetic data)</title>` and a meta description saying the same. Tab and metadata only, nothing rendered.
+- **`app/README.md`,** which keeps the full account of what is invented and what is precomputed.
+
+Three things stayed visible, because removing them would make the page mislead rather than merely look clean:
+
+1. **The sign-in chooser says "Choose a demo account".** A sign-in that implies it read your real profile is the one thing here a visitor could be fooled by.
+2. **`(fictional)` stays inside the employer string,** on screen as well as in the CSV. A job advert that reads as real is the one thing on this page somebody could act on.
+3. **One line under "What you're missing"** saying the requirements are set by the competent authority, vary by Bundesland, and can be checked free at anerkennung-in-deutschland.de. That panel tells somebody what they are missing in a regulated profession, which is the claim in this domain most likely to mislead a person about their own case.
+
+None of the three reads as a disclaimer block. They are one heading, one parenthesis and one line of small text.
 
 ## The demo's declared lines
 
-- **Exports:** `shortlist.csv`, schema v1, every listing scored, rejects included.
-- **Interface:** a static page. Open `app/index.html` in a desktop browser; the export is a file handoff in the column order above.
-- **Adapts to:** the city, German level and sector on the card. Not the profile: the three profiles are fixtures, and the page says so.
+- **Exports:** `shortlist.csv`, `gaps.csv` and `outreach.csv`, all schema v1, plus the four JSON intermediates `profile.json`, `credentials.json`, `archetypes.json` and `scored.json`. Every listing scored, rejects included.
+- **Interface:** a static page. Open `app/index.html` in a desktop browser; the exports are file handoffs in the column orders above.
+- **Adapts to:** the city, German level and sector. Not the profile: the three profiles are fixtures.
 
 ## Invented data
 
@@ -115,11 +168,9 @@ Three files, all marked.
 - `listings.json` — about forty listings. Each carries `language_requirement_text` in the phrasing German ads actually use, such as *verhandlungssicher*, *fließend*, *gute Deutschkenntnisse*, or English-only, plus `german_level_mapped`, which is labelled on screen as the demo's own guess rather than a fact, because those terms have no CEFR definition. Openness is two checkable fields, `working_language` and `visa_sponsorship_stated`, instead of a judgement like "immigrant friendly". Every row has `synthetic: true`, and `(fictional)` sits inside the employer string so it survives into the CSV.
 - `credential-map.json` — as described above.
 
-Employer names are invented compounds with a legal form, each web-searched once for collisions. Hand-check that every profile yields at least eight matches after filtering, or cut to two cities.
+Employer names are invented compounds with a legal form. Hand-check that every profile yields at least eight matches after filtering, or cut to two cities.
 
-Above the result, verbatim:
-
-> Invented listings at invented employers. Nothing here is a real opening: do not apply to anything on this page.
+Every employer string keeps `(fictional)` inside it, on screen and in the CSV. The line that used to sit above the result went with the other disclaimers; the marker inside the string did not, because a job advert that reads as real is the one thing on this page somebody could act on.
 
 ## How it is built
 
@@ -131,10 +182,15 @@ The trap: a page opened over `file://` cannot `fetch()` its own JSON, and ES mod
 app/
   index.html
   app.js
-  data.js                 window.DATA = { profiles, listings, credentialMap }
-  data/                   the same data as readable JSON, not fetched
+  data.js                 window.DATA = { profiles, listings, archetypes, credentialMap }
+  build-data.js           node only: regenerates data.js from data/*.json
+  data/                   the same data as readable JSON, never fetched
   shortlist.schema.json
+  gaps.schema.json
+  outreach.schema.json
 ```
+
+`data.js` is generated, never hand-edited. `node app/build-data.js` rebuilds it from `data/*.json` and is byte-stable, so the readable copy and the loaded copy cannot drift.
 
 ## Not in scope
 
@@ -152,8 +208,9 @@ Three reviews: first-run usability, fidelity to the workshop's definition, and f
 - **Half the stations now compute.** Everything was precomputed, which made "the same input gives the same output" true for an empty reason, and made the claim to adapt to its user false. Scoring is arithmetic, so it runs live, and every station says which kind it is.
 - **The export became an intermediate.** It was an ordered, blended, finished answer. It now carries rejects, keeps score components separate, points back at the intermediates, and has a versioned schema file.
 - **Station 2 stopped implying one path per profession,** which is the claim in this domain most likely to mislead somebody about their own case.
-- **Four warnings are now fixed wording** at the place they belong, rather than "a visible line says so".
+- **The four fixed warnings were written, then cut.** See "No disclaimers on the page" below: the decision reversed late, and what replaced them is markers in the data rather than copy in the interface.
 - **It cannot be built as originally described:** `file://` blocks fetching local JSON, so the data ships as a script.
+- **The interface carries none of the workshop's vocabulary.** No factory, kit, bridge, station or intermediate anywhere a visitor can see. The demo has to stand on its own for somebody who has never heard of the workshop, and the framing stays in these documents, where it belongs. Stations became steps; the badges went; the page reads as a product.
 
 Three places the reviews disagreed, and what I chose:
 
