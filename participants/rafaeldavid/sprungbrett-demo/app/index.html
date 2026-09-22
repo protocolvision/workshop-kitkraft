@@ -61,7 +61,7 @@
 
     --container: 1120px;
     --gutter:    32px;
-    --measure:   720px;
+    --measure:   65ch;   /* prose: ~660-700px at 17px, inside the 50-75 band */
     --header-h:  56px;
     /* One height for every interactive box, so a fixed-height button and a
        padding-sized input cannot drift apart. 44px is also the WCAG 2.2
@@ -70,6 +70,10 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
+
+  /* An author display rule beats the UA rule for [hidden], so a flex or grid
+     container stays on screen while claiming to be hidden. Guard it once. */
+  [hidden] { display: none !important; }
 
   /* ---------- Arabic: its own family, its own step, its own leading ----------
      Matches the root when the page is Arabic, and matches a single element
@@ -96,7 +100,13 @@
      Arabic characters. Set the Arabic measure in em instead. */
   html:lang(ar) .measure { max-inline-size: 40em; }
 
-  html { background: var(--page); scroll-behavior: smooth; }
+  html {
+    background: var(--page);
+    scroll-behavior: smooth;
+    /* Focus Not Obscured (AA). Without this every anchor jump and every Tab
+       into a section lands underneath the sticky header. */
+    scroll-padding-block-start: calc(var(--header-h) + var(--s5));
+  }
   body {
     margin: 0;
     background: var(--page);
@@ -114,7 +124,7 @@
     margin: 0 auto;
     padding-inline: var(--gutter);
   }
-  .measure { max-width: var(--measure); }
+  .measure { max-inline-size: var(--measure); }
 
   /* ---------- the slim header, barely there ---------- */
 
@@ -157,15 +167,25 @@
 
   /* ---------- rhythm: space separates sections, not borders ---------- */
 
-  .band-section { padding-top: var(--s9); padding-bottom: var(--s9); }
+  /* Proximity, 2x at each step: 24 inside a group, 48 between blocks,
+     96 between sections. This is what lets a long scroll read without borders. */
+  .band-section { padding-block: var(--s9); }
+  .stack-5 > * + * { margin-top: var(--s5); }
   .band { background: var(--band); }
   .stack-5 > * + * { margin-top: var(--s5); }
   .stack-6 > * + * { margin-top: var(--s6); }
 
-  .hero { padding-top: var(--s10); padding-bottom: var(--s9); text-align: center; }
-  .hero .inner { max-width: var(--measure); margin: 0 auto; }
-  .hero h1 + p { margin-top: var(--s5); }
-  .hero .cta { margin-top: var(--s7); }
+  /* Everything on one left edge. Centring the hero left the eye nothing to
+     return to and put the primary action three-quarters down the fold. */
+  .hero { padding-block: var(--s8) var(--s9); text-align: start; }
+  .hero .inner { max-inline-size: var(--measure); }
+  .hero h1 {
+    /* balance spreads the last line rather than orphaning one word on it */
+    text-wrap: balance;
+    max-inline-size: 18ch;
+  }
+  .hero .lede { margin-top: var(--s5); }
+  .hero .cta { margin-top: var(--s6); }
 
   /* ---------- controls ---------- */
 
@@ -192,7 +212,7 @@
   .chooser {
     margin-block: var(--s6) 0; margin-inline: auto; background: var(--page); border-radius: var(--radius);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.07);
-    max-width: 560px; padding-block: var(--s3); padding-inline: var(--s5); text-align: start;
+    max-inline-size: 560px; padding-block: var(--s3); padding-inline: var(--s5); text-align: start;
   }
   .chooser h2 { font-size: var(--t-secondary); font-weight: 600; letter-spacing: 0; padding: var(--s4) 0 var(--s2); }
   ul.accounts { list-style: none; margin: 0; padding: 0; }
@@ -375,7 +395,7 @@
   .langstrip { margin-bottom: var(--s6); }
   .langstrip-row {
     display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: var(--s2); padding-block: var(--s3);
+    gap: var(--s2); padding-block: var(--s3); max-inline-size: var(--container);
   }
 
   /* ---------- tell us more ---------- */

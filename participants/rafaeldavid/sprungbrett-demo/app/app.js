@@ -1552,7 +1552,12 @@
       }
       if (!best && links.length) { best = links[0]; }
       for (var k = 0; k < links.length; k++) {
-        links[k].className = links[k] === best ? 'current' : '';
+        var on = links[k] === best;
+        links[k].className = on ? 'current' : '';
+        /* location, not aria-selected: this says where you are in the page,
+           it is not a tab or an option in a listbox. */
+        if (on) { links[k].setAttribute('aria-current', 'location'); }
+        else { links[k].removeAttribute('aria-current'); }
       }
     }
     window.addEventListener('scroll', function () {
