@@ -1,0 +1,7 @@
+Governance Without a Center: Distributed Authority in Practice
+Author: [the person whose Downloads this is]
+
+Draft v3. Full rewrite from v1 — reframed around three case studies
+(water districts, open-source maintainer teams, HOAs) rather than the
+original precedent/mechanism/case-study structure. Includes a new
+literature review section and a methods appendix.

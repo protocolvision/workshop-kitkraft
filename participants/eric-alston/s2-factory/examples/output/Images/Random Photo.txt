@@ -1,0 +1,2 @@
+[stand-in for a photo file — e.g. Random Photo.jpg — not real image
+data, so this example stays plain text throughout]
