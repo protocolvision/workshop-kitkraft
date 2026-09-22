@@ -47,3 +47,6 @@ Ingestion is the same job under either typology — read-only vs. read-write onl
 
 ## Future development
 Rungs 2+ (a single file calling a model via API/MCP, an app, a hosted site) are unbuilt. This factory currently produces a spec, not a runnable pipeline; turning a read-only spec into an actual ingestion+retrieval script (as Watermentat already is, informally) would be the natural rung-2 stretch.
+
+## Experiments
+`experiments/corpus/stockton-chronicles/vince-vr-world/` — a 32-file synthetic narrative corpus (fictional VR co-op world-bibles, NPC profiles, session logs, and deliberately unreliable rumor fragments), purpose-built as a test fixture for this factory: known canon-tiering (1–4), deliberate Tier-1/Tier-2 contradictions planted in Tier-4 rumor fragments to test whether an authority+recency reranker suppresses them, and one line (Water Explorer) with real, live-fetched citations (whatwatercosts.org, City of Stockton's published rate schedule) alongside clearly speculative, disclaimed projections — a stress test of the citation-required rule against real-vs-invented content in the same corpus. Not yet run through an actual ingestion/retrieval pipeline; this is the fixture, not the result.
