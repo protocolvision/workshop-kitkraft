@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--
+  Sprungbrett - workshop demo. Read this before reading anything on the page.
+
+  * Every profile, listing and employer in this page is INVENTED for a workshop
+    demo. None of the openings is real and none of the employers exists.
+  * Nothing is fetched from LinkedIn. Nothing is fetched at all: the page makes
+    no network requests of any kind and works from a file:// path.
+  * No model runs here. Steps 1 to 3 are judgement written down by hand in
+    advance and looked up; steps 4 to 6 are arithmetic done in the browser.
+  * The recognition and credential content describes real procedures, but the
+    comparison against a profile is illustrative. What any procedure actually
+    requires is set by the competent authority and varies by Bundesland.
+
+  Full account of what is invented and what is precomputed: app/README.md
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sprungbrett — demo (synthetic data)</title>
+<meta name="description" content="Workshop demo running on synthetic data. Every profile, listing and employer is invented; nothing is read from LinkedIn; no model runs.">
+<meta name="viewport" content="width=1100">
+<style>
+  /* Protocol Institute brand kit. These six values are the whole palette.
+     System fonts only: no web fonts, no CDN, no network of any kind. */
+  :root {
+    --paper:      #F9F8F5;
+    --ink:        #2C2C2A;
+    --secondary:  #5F5E5A;
+    --cobalt:     #0064FF;   /* the one primary action, and focus rings */
+    --deep-green: #085041;   /* fit, and nothing else */
+    --green-tint: #E1F5EE;   /* the change highlight */
+
+    /* Three sizes, two weights. */
+    --t-title: 1.75rem;
+    --t-head:  1.0625rem;
+    --t-body:  1rem;
+    --t-table: 1.1875rem;
+    --t-small: 0.9375rem;
+
+    /* One spacing scale, multiples of 8. */
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s6: 48px; --s8: 64px;
+
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: var(--t-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 1040px; margin: 0 auto; padding: var(--s4) var(--s3) var(--s8); }
+
+  h1 {
+    font-size: var(--t-title); font-weight: 700; line-height: 1.2;
+    letter-spacing: -0.015em; margin: 0 0 var(--s3); max-width: 26ch;
+  }
+  h2 { font-size: var(--t-head); font-weight: 700; margin: 0 0 var(--s1); }
+  p { margin: 0 0 var(--s1); }
+
+  .note { font-size: var(--t-small); color: var(--secondary); max-width: 76ch; }
+  .note a { color: var(--ink); }
+
+  /* ---------- level 1: the answer, immediately ---------- */
+
+  .qrow label { display: block; font-size: var(--t-small); color: var(--secondary); margin-bottom: 2px; }
+  .qrow select {
+    font-family: var(--font); font-size: var(--t-body); color: var(--ink);
+    background: var(--paper); border: none; border-bottom: 1px solid var(--secondary);
+    padding: 2px 0; min-width: 168px;
+  }
+  button.primary {
+    background: var(--cobalt); color: #FFFFFF; border: 1px solid var(--cobalt);
+    font-family: var(--font); font-size: var(--t-body); font-weight: 700;
+    padding: var(--s1) var(--s3); cursor: pointer;
+  }
+  /* State 1: sign in. A plain button naming a service, and an inline list of
+     demo accounts. No service branding, no service colours, no imitation of
+     anyone's sign-in screen, and never a field asking for a credential. */
+  .lead { font-size: var(--t-body); color: var(--secondary); margin-bottom: var(--s3); max-width: 60ch; }
+  .chooser { margin-top: var(--s3); }
+  .chooser h2 { margin-bottom: var(--s1); }
+  ul.accounts { list-style: none; margin: 0; padding: 0; max-width: 60ch; }
+  ul.accounts li { border-top: 1px solid rgba(95, 94, 90, 0.22); }
+  ul.accounts button {
+    display: block; width: 100%; text-align: left; background: none; border: none;
+    font-family: var(--font); font-size: var(--t-body); color: var(--ink);
+    padding: var(--s2) 0; cursor: pointer;
+  }
+  ul.accounts .who { font-weight: 700; }
+  ul.accounts .meta { color: var(--secondary); }
+
+  /* The quiet line that survives into the later states. */
+  .whoami { font-size: var(--t-small); color: var(--secondary); margin-bottom: var(--s3); }
+
+  /* State 2: the questions. */
+  .questions { margin-bottom: var(--s3); }
+  .qrow { display: flex; gap: var(--s3); align-items: flex-end; flex-wrap: wrap; margin-bottom: var(--s3); }
+  fieldset.langs { border: none; margin: 0; padding: 0; }
+  fieldset.langs legend { font-size: var(--t-small); color: var(--secondary); padding: 0; margin-bottom: 2px; }
+  .langrow { display: flex; gap: var(--s2); flex-wrap: wrap; }
+  .langrow label { display: inline-flex; align-items: center; gap: 4px; font-size: var(--t-body); color: var(--ink); margin: 0; }
+
+  /* State 3: the summary line the questions collapse into. */
+  .summary { font-size: var(--t-small); color: var(--secondary); margin-bottom: var(--s3); }
+  .summary strong { color: var(--ink); font-weight: 700; }
+
+  :focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+
+  section { margin-bottom: var(--s6); }
+
+  table.roles { border-collapse: collapse; width: 100%; font-size: var(--t-table); }
+  table.roles caption {
+    text-align: left; font-size: var(--t-head); font-weight: 700;
+    margin-bottom: var(--s1); color: var(--ink);
+  }
+  table.roles th {
+    text-align: left; font-size: var(--t-small); font-weight: 400; color: var(--secondary);
+    padding: 0 var(--s2) var(--s1) 0; border-bottom: 1px solid var(--secondary);
+  }
+  table.roles td { padding: var(--s2) var(--s2) var(--s2) 0; vertical-align: top; }
+  table.roles tbody tr + tr td { border-top: 1px solid rgba(95, 94, 90, 0.22); }
+  table.roles .role { font-weight: 700; display: block; }
+  table.roles .why { display: block; font-size: var(--t-small); color: var(--secondary); margin-top: 4px; max-width: 62ch; }
+  .dots { color: var(--deep-green); letter-spacing: 2px; white-space: nowrap; }
+  .dots .off { color: rgba(95, 94, 90, 0.35); }
+  .fitword { display: block; font-size: var(--t-small); color: var(--secondary); letter-spacing: 0; }
+
+  /* ---------- level 2: the reasoning, quiet sections ---------- */
+
+  .group { margin-bottom: var(--s3); }
+  .group h3 { font-size: var(--t-body); font-weight: 700; margin: 0 0 2px; }
+  .group .ask { font-size: var(--t-small); color: var(--secondary); margin-bottom: var(--s1); }
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li { margin-bottom: var(--s1); max-width: 88ch; }
+  ul.items .what { font-weight: 700; }
+  ul.items .dur, ul.items .org { color: var(--secondary); }
+  ul.items .why { display: block; font-size: var(--t-small); color: var(--secondary); }
+
+  /* ---------- level 3: the working, tucked away ---------- */
+
+  details.working { border-top: 1px solid rgba(95, 94, 90, 0.3); padding-top: var(--s2); }
+  details.working > summary {
+    cursor: pointer; font-size: var(--t-head); font-weight: 700; list-style: none;
+    display: flex; align-items: baseline; gap: var(--s1);
+  }
+  details.working > summary::-webkit-details-marker { display: none; }
+  details.working > summary::before { content: "+"; font-weight: 400; color: var(--secondary); }
+  details.working[open] > summary::before { content: "\2013"; }
+  .workbody { padding-top: var(--s3); }
+
+  .step { display: flex; gap: var(--s2); padding: var(--s2) 0; border-top: 1px solid rgba(95, 94, 90, 0.18); }
+  .step.first { border-top: none; padding-top: 0; }
+  .stepnum { color: var(--secondary); font-variant-numeric: tabular-nums; min-width: 1.5em; }
+  .stepbody { flex: 1 1 auto; }
+  .stepname { font-weight: 700; }
+  .stepsay { color: var(--secondary); }
+  .acts { margin-top: 4px; display: flex; gap: var(--s2); align-items: baseline; flex-wrap: wrap; font-size: var(--t-small); }
+  code, .file { font-family: var(--mono); font-size: var(--t-small); color: var(--secondary); }
+  button.quiet {
+    background: none; border: none; padding: 0; font-family: var(--font); font-size: var(--t-small);
+    color: var(--ink); text-decoration: underline; cursor: pointer;
+  }
+  .work { margin: var(--s1) 0 0; }
+  .work div { display: flex; gap: var(--s2); padding: 4px 0; font-size: var(--t-small); }
+  .work .k { color: var(--secondary); flex: 0 0 210px; }
+  .work .v { flex: 1 1 auto; max-width: 72ch; }
+
+  .dl { margin-top: var(--s4); }
+  .dl h3 { font-size: var(--t-body); font-weight: 700; margin: var(--s3) 0 2px; }
+  pre.cols {
+    font-family: var(--mono); font-size: 0.8125rem; line-height: 1.5; color: var(--secondary);
+    margin: 0 0 var(--s1); overflow-x: auto; white-space: pre;
+  }
+  textarea.fallback {
+    width: 100%; height: 120px; font-family: var(--mono); font-size: 0.8125rem;
+    border: 1px solid var(--secondary); padding: var(--s1); box-sizing: border-box;
+    background: var(--paper); color: var(--ink); margin-top: var(--s1);
+  }
+  .status { font-size: var(--t-small); color: var(--deep-green); min-height: 1.4em; margin-top: var(--s1); }
+
+  /* One highlight, to show what just changed. */
+  .changed { animation: settle 250ms ease-out; }
+  @keyframes settle { from { background: var(--green-tint); } to { background: transparent; } }
+  @media (prefers-reduced-motion: reduce) {
+    .changed { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Find roles that match your qualifications, not only your German.</h1>
+
+  <!-- State 1 -->
+  <section id="state-signin">
+    <p class="lead">Import a profile and see which roles it already reaches.</p>
+    <button class="primary" id="signin-btn" aria-expanded="false" aria-controls="chooser">Continue with LinkedIn</button>
+    <div class="chooser" id="chooser" hidden>
+      <h2 id="chooser-h">Choose a demo account</h2>
+      <ul class="accounts" id="account-list" aria-labelledby="chooser-h"></ul>
+    </div>
+  </section>
+
+  <!-- Survives into states 2 and 3 -->
+  <p class="whoami" id="whoami" hidden></p>
+
+  <!-- State 2 -->
+  <section id="state-questions" hidden>
+    <div class="questions">
+      <div class="qrow" id="qrow"></div>
+      <fieldset class="langs" id="langs-field">
+        <legend>Other languages</legend>
+        <div class="langrow" id="langrow"></div>
+      </fieldset>
+    </div>
+    <button class="primary" id="find">Find roles</button>
+  </section>
+
+  <!-- State 3 -->
+  <p class="summary" id="summary" hidden></p>
+  <div id="state-results" hidden>
+
+  <section id="results">
+    <table class="roles">
+      <caption id="result-caption">Roles above the line, sorted by fit</caption>
+      <thead>
+        <tr>
+          <th scope="col">Role</th>
+          <th scope="col">Employer</th>
+          <th scope="col">City</th>
+          <th scope="col">German needed</th>
+          <th scope="col">Fit</th>
+        </tr>
+      </thead>
+      <tbody id="result-body"></tbody>
+    </table>
+    <p class="note" id="result-count"></p>
+  </section>
+
+  <section id="gaps">
+    <h2>What you're missing</h2>
+    <p class="note">Illustrative. Requirements are set by the competent authority and vary by Bundesland — check your own case, free of charge, at <a href="https://www.anerkennung-in-deutschland.de/" rel="noreferrer">anerkennung-in-deutschland.de</a>.</p>
+    <div id="gaps-panel"></div>
+  </section>
+
+  <section id="outreach">
+    <h2>Who to approach</h2>
+    <p class="note">Roles and kinds of organisation, not contacts.</p>
+    <div id="outreach-panel"></div>
+  </section>
+
+  <details class="working" id="working">
+    <summary>How this was worked out</summary>
+    <div class="workbody">
+      <div id="steps"></div>
+
+      <div class="dl">
+        <h3>shortlist.csv</h3>
+        <p class="note">Every listing scored, the ones below the line included.</p>
+        <pre class="cols" id="shape-shortlist"></pre>
+        <pre class="cols" id="head-shortlist"></pre>
+        <p><button class="quiet" data-download="shortlist.csv">Download shortlist.csv</button>
+           &nbsp; <button class="quiet" data-copy="shortlist.csv">Copy to clipboard</button></p>
+
+        <h3>gaps.csv</h3>
+        <p class="note">One row per missing item.</p>
+        <pre class="cols" id="shape-gaps"></pre>
+        <pre class="cols" id="head-gaps"></pre>
+        <p><button class="quiet" data-download="gaps.csv">Download gaps.csv</button>
+           &nbsp; <button class="quiet" data-copy="gaps.csv">Copy to clipboard</button></p>
+
+        <h3>outreach.csv</h3>
+        <p class="note">Roles and organisation types, no people.</p>
+        <pre class="cols" id="shape-outreach"></pre>
+        <pre class="cols" id="head-outreach"></pre>
+        <p><button class="quiet" data-download="outreach.csv">Download outreach.csv</button>
+           &nbsp; <button class="quiet" data-copy="outreach.csv">Copy to clipboard</button></p>
+
+        <div class="status" id="export-status" role="status"></div>
+        <div id="fallback-wrap" hidden>
+          <p class="note" id="fallback-label"></p>
+          <textarea class="fallback" id="fallback" readonly></textarea>
+        </div>
+        <p class="note">Column order and types are fixed in shortlist.schema.json, gaps.schema.json and outreach.schema.json.</p>
+      </div>
+    </div>
+  </details>
+
+  </div><!-- /state-results -->
+
+</div>
+
+<!-- Data arrives as a plain script setting window.DATA. A page opened from a
+     file path cannot fetch its own JSON, and ES modules fail the same way.
+     Regenerate data.js from data/*.json with: node build-data.js -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

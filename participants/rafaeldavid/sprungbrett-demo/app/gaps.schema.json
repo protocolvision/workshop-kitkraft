@@ -1,0 +1,25 @@
+{
+  "file": "gaps.csv",
+  "schema_version": 1,
+  "produced_by": "Sprungbrett factory demo, station 5",
+  "description": "One row per missing item, grouped by archetype. Computed at run time by comparing the profile against each archetype's stated requirements, so changing the German level on the card changes these rows. Illustrative only: it is not advice, it states no verdict on equivalence, and it names no prices and promises no outcomes.",
+  "row_shape": [
+    "archetype_id",
+    "gap_type",
+    "item",
+    "why",
+    "typical_duration",
+    "next_step",
+    "synthetic"
+  ],
+  "columns": {
+    "archetype_id": { "type": "string", "note": "Key into archetypes.json." },
+    "gap_type": { "type": "string", "enum": ["language", "recognition", "certification", "course", "document"] },
+    "item": { "type": "string", "note": "What is missing. Real certificates and procedures may be named factually; none of them is invented." },
+    "why": { "type": "string", "note": "Why it matters for that archetype, not in general." },
+    "typical_duration": { "type": "string", "note": "A range, always hedged with 'typically'. Never a promise." },
+    "next_step": { "type": "string", "note": "One step. Where an authority decides, the step is to ask the authority." },
+    "synthetic": { "type": "boolean", "const": true, "note": "The comparison is invented demo data. The procedures named in it are not." }
+  },
+  "standing_caveat": "Illustrative only. Requirements are set by the competent authority and vary by Bundesland: check your own case at anerkennung-in-deutschland.de."
+}
