@@ -58,6 +58,6 @@ Yes. The declared interface (rung 1, file handoff) was enough — the target's R
 
 ## What a bridge turned out to be (one paragraph, in your words — this is the data S4 reads first)
 
-Forced prevision on my kit. I never had to define whether my sources were a fixed list or open search. Using the factory made me answer that more specifically with the language behind it (simple I know, but useful for me personally) and I realised my corpus is actually two different things 1) a small fixed core plus 2) open search.
+Forced precision on my kit. I never had to define whether my sources were a fixed list or open search. Using the factory made me answer that more specifically with the language behind it (simple I know, but useful for me personally) and I realised my corpus is actually two different things 1) a small fixed core plus 2) open search.
 
 Log lines for this bridge go to `../LOG.md` (session S3, type progress / unblock / blocker / decision).
