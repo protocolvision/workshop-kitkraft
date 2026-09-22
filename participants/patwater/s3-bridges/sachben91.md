@@ -28,7 +28,7 @@ Real target, not synthetic: `participants/patwater/s2-factory/deprecated/polymet
 Yes, as a `check`. `push`/`pull` were not attempted: those steps are written against Substack's specific browser-automation surface (a `ProseMirror` document instance, a share-center redirect as the success signal). A gist has a real write API (`gh gist edit`); none of that machinery applies or is needed. The declared interface's `check` step ported cleanly to a platform mirror-sync was never built for. Its `push`/`pull` steps didn't port, and arguably shouldn't have to — that's a boundary of the kit worth naming back to its author, not a bridge failure.
 
 ## What a bridge turned out to be (one paragraph, in your words — this is the data S4 reads first)
-[Pending — participant's own words, to be added.]
+The bridge is a set of generalizable tools for building a RAG. This is still early and TBD how and if it's useful. I plan to run it as an experiment on some synthetic data to try and see how it can be useful.
 
 ## Applying his "read-only corpus, write-back ranker" typology — three places to test it
 Sachben91's own bridge into rag-factory (`../../sachben91/s3-bridges/patwater.md`) proposed a third RAG shape his discovery agent occupies: the corpus doesn't change from use, but the ranker does, learning from ✓/✗ verdicts. Three candidate places to actually build and test that shape, not yet attempted — offered as a response to his open question, not as new work claimed done:
