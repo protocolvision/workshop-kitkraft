@@ -18,3 +18,4 @@
 | 2026-09-22T16:04:20Z | S3 | kmr091 | progress | bridge to patwater: read RAG Factory README + SKILL.md + examples; kind confirmed factory-factory |
 | 2026-09-22T16:10:07Z | S3 | kmr091 | unblock | corpus size/structure supplied by kmr091: small fixed core (gov.uk AI pages, UK Parliament/Hansard, EUR-Lex/EC digital strategy, AI-related only) plus open-ended per-run news/company search with no fixed list |
 | 2026-09-22T16:10:27Z | S3 | kmr091 | progress | bridge to patwater: ran RAG Factory steps 1-5 on my corpus/goal; typology read-only; filled pipeline spec (hybrid indexed core + live-search layer) |
+| 2026-09-22T17:01:58Z | async | kmr091 | progress | S4 show-and-tell written from LOG, factory README, bridge log |
