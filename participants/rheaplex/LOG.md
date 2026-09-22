@@ -13,3 +13,5 @@
 | 2026-09-21T19:11:21Z | S1 | rheaplex | decision | kit to convert: aesthetic-description-driven development; rejected spec-first (closer to common practice), tutor (one module of evidence), think-aloud (hard to reduce to steps) |
 | 2026-09-21T19:15:13Z | S1 | rheaplex | memory | aesthetic kit has two entry modes: stated aesthetic first vs exploratory variants that converge; both need supporting in the S2 factory |
 | 2026-09-21T19:35:17Z | S1 | rheaplex | memory | S2 factory design: pitch as 2-4 references joined by 'plus', each owning one layer (structure / density / mood), same term-composition grammar as the art grammar; pitch is compiled into tokens, tokens become the touchstones, references only revisited on drift |
+| 2026-09-22T20:25:49Z | S2 | rheaplex | progress | factory from inventory: rung 1; SKILL, example |
+| 2026-09-22T20:25:49Z | S2 | rheaplex | memory | three cold runs by fresh agents found: no output skeleton, no first-run rules, motion token with no layer row, duplicate version keys; fixed in SKILL/README, not in the example |

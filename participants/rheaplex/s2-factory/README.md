@@ -1,12 +1,11 @@
-# <kit name>
+# Aesthetic spec from a pitch
 
-Source: (optional — the kit this was converted from, e.g. `facilitator/rafa/s2-factory/`, adapted; omit for your own kit)
-Job: one sentence.
-For: who runs it.
-Inputs: what it needs, where it comes from.
-Outputs: what it produces, where it goes.
-Exports: (required) the intermediate this factory produces for someone else's factory — work-in-progress another agent can consume (a row, a draft plus metadata, a structured file).
-Interface: (required) the form it takes and how someone else reaches it — rung 1: a skill, hand this folder to an assistant and run SKILL.md on examples/input.* · rung 2: a single file that calls a model through MCP or an API <command or endpoint> · rung 3: an app <how to install and run> · rung 4: a website running on a machine <url>.
-Adapts to: (required) the context the person running this brings — their data, constraints, or setup — and where it goes in.
-Example run: see `examples/`.
-Not for: what is out of scope.
+Job: turns a two-to-four-reference pitch into a versioned aesthetic spec — layer table, named tokens, terms with examples and anti-examples — that an agent can build from and a person can judge against.
+For: anyone who can say what a thing should feel like but not yet what its type, colour or motion should be: artists, designers, people briefing an agent to build a site, a deck or a generative piece.
+Inputs: two to four references joined by "plus" and a "not a copy" clause, or one axis to explore variants along; the medium (web page, generative piece, deck, print); any hard constraints (no build step, palette limits, accessibility); where the spec file should go.
+Outputs: `aesthetic-spec.md` at the path the person names (a demonstration run writes it beside the skill instead), version 1 on first run, bumped on every later change. Before a review its token values are provisional: the shape is right, the numbers are a starting point.
+Exports: `aesthetic-spec.md` — pitch, layer table (which reference owns which layer, what to take, what to leave), named tokens, do-nots, and, for generative or repeated work, terms with examples and anti-examples. Another factory reads the tokens to build, and reads the terms as prompts.
+Interface: rung 1, a skill (a folder of instructions, not a program) — hand this folder to your assistant and run SKILL.md on examples/input.md.
+Adapts to: your references and "not a copy" clause, your medium and your constraints, given when SKILL.md step 1 asks or read from a brief you point it at; then your verdicts on the first slice, given when step 7 asks.
+Example run: see `examples/` — input.md is synthetic, output.md was produced from it cold by an agent given only this README and SKILL.md.
+Not for: choosing an aesthetic for you, judging output, or copying a named designer's or artist's work. It records the aesthetic you state and keeps the verdicts with you.
