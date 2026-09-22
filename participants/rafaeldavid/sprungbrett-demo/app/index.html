@@ -38,7 +38,16 @@
        seed by brand/generate-brand.js. No hex value appears in this file. */
 
     /* Type. Two weights, five sizes. */
-    --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    /* Latin/Cyrillic. Declared in full rather than trailing off into a bare
+       sans-serif, so the fallback is a choice and not an accident: Inter is not
+       in the repo yet (see build-fonts.js), and until it is, this is what runs. */
+    --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            "Helvetica Neue", Arial, sans-serif;
+    /* Inter contains no Arabic glyphs at all. Without this the whole Arabic
+       mode falls through to an undeclared system font at Latin leading, which
+       clips the diacritics — text a reader cannot read, in the language of the
+       people this page exists for. */
+    --font-ar: "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
     --t-display:   52px;  --lh-display:   1.05;
     --t-greeting:  34px;
     --t-section:   28px;  --lh-section:   1.2;
@@ -61,6 +70,31 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
+
+  /* ---------- Arabic: its own family, its own step, its own leading ----------
+     Matches the root when the page is Arabic, and matches a single element
+     carrying lang="ar" when the page is not — which is what the rotating
+     greeting needs. */
+  :lang(ar) {
+    font-family: var(--font-ar);
+    /* Arabic letters join; tracking pulls them apart. Never track Arabic. */
+    letter-spacing: 0;
+    /* Underlines collide with the dots below the letterforms. */
+    text-decoration-skip-ink: all;
+    /* Breaking a word breaks the joins. */
+    word-break: normal;
+  }
+  html:lang(ar) body {
+    /* A step up, because Naskh runs visually smaller than Inter at the same px,
+       and 1.75 leading so the kasra below the line is not clipped. */
+    font-size: calc(var(--t-body) * 1.0625);
+    line-height: 1.75;
+  }
+  html:lang(ar) h1, html:lang(ar) h2, html:lang(ar) h3 { line-height: 1.4; letter-spacing: 0; }
+  html:lang(ar) .greeting { line-height: 1.6; letter-spacing: 0; }
+  /* ch is the advance of "0" in the current font, so a 65ch measure is not 65
+     Arabic characters. Set the Arabic measure in em instead. */
+  html:lang(ar) .measure { max-inline-size: 40em; }
 
   html { background: var(--page); scroll-behavior: smooth; }
   body {
@@ -321,6 +355,9 @@
     font-family: inherit; font-size: var(--t-greeting); line-height: 1.2;
     font-weight: 400; font-style: italic; letter-spacing: -0.01em; color: var(--ink);
     border-radius: var(--radius-control); margin-block: var(--s4) var(--s5);
+    /* The rotation swaps Latin for Cyrillic for Arabic, all with different
+       metrics. A floor on the box keeps it from jumping the layout. */
+    min-block-size: calc(var(--t-greeting) * 1.6);
   }
   /* Arabic has no italic form. A browser fakes one by slanting the glyphs, and
      slanted Arabic reads as broken, so it stays upright and lets size carry it. */
@@ -409,6 +446,9 @@
   @keyframes settle { from { background: var(--primary-tint); } to { background: transparent; } }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+    /* The greeting stops rotating (handled in app.js) but stays a working
+       button: no animation rule here may make it unclickable. */
+    .greeting { pointer-events: auto; }
     .reveal, .reveal.in { opacity: 1; transform: none; transition: none; }
     .changed, .chip, .chip.going, tr.fresh, .topbar .who { animation: none; }
     .greeting #greeting-text, .greeting .chev, .opt, .btn-primary, .btn-text, .delta span,
