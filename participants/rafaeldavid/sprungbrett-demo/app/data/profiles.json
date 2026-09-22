@@ -47,9 +47,7 @@
       ],
       "seniority_band": "mid",
       "recognition_status": "not_started",
-      "held_credential_ids": [
-        "cert-fuehrerschein-umschreibung"
-      ],
+      "held_credential_ids": [],
       "archetype_ids": [
         "a-mech-design",
         "a-mfg-process",

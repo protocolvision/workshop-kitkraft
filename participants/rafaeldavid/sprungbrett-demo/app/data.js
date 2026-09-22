@@ -63,9 +63,7 @@ window.DATA = {
         ],
         "seniority_band": "mid",
         "recognition_status": "not_started",
-        "held_credential_ids": [
-          "cert-fuehrerschein-umschreibung"
-        ],
+        "held_credential_ids": [],
         "archetype_ids": [
           "a-mech-design",
           "a-mfg-process",
@@ -112,7 +110,7 @@ window.DATA = {
   "listings": {
     "schema_version": 1,
     "synthetic": true,
-    "note": "Invented listings at invented employers. german_level_mapped is this demo's own guess at what the advert's phrasing means: the German terms have no CEFR definition. Openness is two checkable fields, working_language and visa_sponsorship_stated, not a judgement.",
+    "note": "Invented listings at invented employers. german_level_mapped is this demo's own guess at what the advert's phrasing means: the German terms have no CEFR definition. Openness is two checkable fields, working_language and visa_sponsorship_stated, not a judgement. The context flags (shift work, licence, contract type, part time, remote) are what the Tell-us-more answers are matched against.",
     "cities": [
       "Berlin",
       "Leipzig",
@@ -149,6 +147,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -163,6 +166,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -177,6 +185,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -191,6 +204,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": true,
+        "requires_licence": true,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -205,6 +223,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -219,6 +242,11 @@ window.DATA = {
         "german_level_mapped": "A2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -233,6 +261,11 @@ window.DATA = {
         "german_level_mapped": "A2",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": true,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -247,6 +280,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "fixed_term",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -261,6 +299,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": true,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -275,6 +318,11 @@ window.DATA = {
         "german_level_mapped": "C1",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -289,6 +337,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -303,6 +356,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": true,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -317,6 +375,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German and English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "fixed_term",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -331,6 +394,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -345,6 +413,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German and English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -359,6 +432,11 @@ window.DATA = {
         "german_level_mapped": "C1",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -373,6 +451,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -387,6 +470,11 @@ window.DATA = {
         "german_level_mapped": "none",
         "working_language": "English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -401,6 +489,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -415,6 +508,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -429,6 +527,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -443,6 +546,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -457,6 +565,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": false,
+        "requires_licence": true,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -471,6 +584,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German and English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": true,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -485,6 +603,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -499,6 +622,11 @@ window.DATA = {
         "german_level_mapped": "A2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -513,6 +641,11 @@ window.DATA = {
         "german_level_mapped": "none",
         "working_language": "English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": true,
         "synthetic": true
       },
       {
@@ -527,6 +660,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German and English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -541,6 +679,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -555,6 +698,11 @@ window.DATA = {
         "german_level_mapped": "none",
         "working_language": "English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "fixed_term",
+        "part_time_possible": false,
+        "remote_possible": true,
         "synthetic": true
       },
       {
@@ -569,6 +717,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": true,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -583,6 +736,11 @@ window.DATA = {
         "german_level_mapped": "none",
         "working_language": "English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": true,
         "synthetic": true
       },
       {
@@ -597,6 +755,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -611,6 +774,11 @@ window.DATA = {
         "german_level_mapped": "B1",
         "working_language": "German and English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -625,6 +793,11 @@ window.DATA = {
         "german_level_mapped": "none",
         "working_language": "English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": true,
         "synthetic": true
       },
       {
@@ -639,6 +812,11 @@ window.DATA = {
         "german_level_mapped": "C1",
         "working_language": "German",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -653,6 +831,11 @@ window.DATA = {
         "german_level_mapped": "A2",
         "working_language": "German and English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -667,6 +850,11 @@ window.DATA = {
         "german_level_mapped": "none",
         "working_language": "English",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": true,
         "synthetic": true
       },
       {
@@ -681,6 +869,11 @@ window.DATA = {
         "german_level_mapped": "B2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -695,6 +888,11 @@ window.DATA = {
         "german_level_mapped": "A2",
         "working_language": "German",
         "visa_sponsorship_stated": true,
+        "requires_shift_work": true,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       },
       {
@@ -709,6 +907,11 @@ window.DATA = {
         "german_level_mapped": "C1",
         "working_language": "German and English",
         "visa_sponsorship_stated": false,
+        "requires_shift_work": false,
+        "requires_licence": false,
+        "contract_type": "permanent",
+        "part_time_possible": false,
+        "remote_possible": false,
         "synthetic": true
       }
     ]
@@ -1277,6 +1480,98 @@ window.DATA = {
         "zab_note": "A ZAB Statement of Comparability is generally not required to work and is explicitly not recognition.",
         "source_url": "https://www.anerkennung-in-deutschland.de/en/interest/recognition/non-regulated-professions"
       }
+    }
+  },
+  "contextMap": {
+    "schema_version": 1,
+    "synthetic": true,
+    "note": "What the page asks back, and the keyword map it uses to read a free-text note. Matching is literal substring matching on a lower-cased string: no model, no randomness, no inference. A phrase that matches nothing is still recorded and the page does not claim it changed anything.",
+    "questions": [
+      {
+        "question_id": "shift_work",
+        "text": "Can you work shifts, including nights?",
+        "fact": "shift_work"
+      },
+      {
+        "question_id": "mobility",
+        "text": "Would you move to another city for the right role?",
+        "fact": "mobility"
+      },
+      {
+        "question_id": "licence",
+        "text": "Do you hold a driving licence?",
+        "fact": "licence"
+      },
+      {
+        "question_id": "fixed_term",
+        "text": "Are you open to a fixed-term contract to start?",
+        "fact": "fixed_term"
+      }
+    ],
+    "keywords": [
+      {
+        "fact": "shift_work",
+        "value": true,
+        "match": [
+          "night",
+          "nights",
+          "shift",
+          "shifts",
+          "nachtdienst",
+          "schicht"
+        ]
+      },
+      {
+        "fact": "mobility",
+        "value": true,
+        "match": [
+          "relocate",
+          "relocation",
+          "move city",
+          "willing to move",
+          "umzug",
+          "mobil"
+        ]
+      },
+      {
+        "fact": "licence",
+        "value": true,
+        "match": [
+          "driving licence",
+          "driving license",
+          "driver's licence",
+          "fuhrerschein",
+          "fuehrerschein",
+          "klasse b"
+        ]
+      },
+      {
+        "fact": "part_time",
+        "value": true,
+        "match": [
+          "part-time",
+          "part time",
+          "teilzeit"
+        ]
+      },
+      {
+        "fact": "remote",
+        "value": true,
+        "match": [
+          "remote",
+          "home office",
+          "homeoffice",
+          "hybrid"
+        ]
+      }
+    ],
+    "effects": {
+      "shift_work": "Listings flagged requires_shift_work score full context fit when yes, little when no, and sit at 0.6 while unanswered.",
+      "mobility": "Raises the floor on city fit from 0.4 to 0.8, so another city stops being a penalty.",
+      "licence": "Listings flagged requires_licence behave as above, and yes also closes the driving-licence gap.",
+      "fixed_term": "Listings whose contract_type is fixed_term behave as above.",
+      "part_time": "Only affects listings flagged part_time_possible.",
+      "remote": "Only affects listings flagged remote_possible."
     }
   }
 };

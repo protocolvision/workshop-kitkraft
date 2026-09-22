@@ -25,7 +25,8 @@ var DATA = {
   profiles: read('profiles.json'),
   listings: read('listings.json'),
   archetypes: read('archetypes.json'),
-  credentialMap: read('credential-map.json')
+  credentialMap: read('credential-map.json'),
+  contextMap: read('context-map.json')
 };
 
 var out =

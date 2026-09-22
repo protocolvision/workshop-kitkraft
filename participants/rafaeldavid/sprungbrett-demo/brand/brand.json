@@ -1,0 +1,33 @@
+{
+  "seed": 789,
+  "generated_by": "brand/generate-brand.js",
+  "note": "Every value below is a function of the seed. Do not hand-edit: change the seed and regenerate.",
+  "hues": {
+    "base": 195,
+    "support": 6,
+    "spread": 171
+  },
+  "color": {
+    "primary": "#13799A",
+    "primaryPressed": "#0F5C76",
+    "primaryTint": "#E7F8FE",
+    "support": "#6D2A22",
+    "supportTint": "#FAE7E5",
+    "ink": "#262A2B",
+    "secondary": "#676D6F",
+    "page": "#FFFFFF",
+    "band": "#F9FBFB"
+  },
+  "shape": {
+    "radius": 14,
+    "radiusControl": 12,
+    "hairlineAlpha": 0.07
+  },
+  "motion": {
+    "duration": 180
+  },
+  "wordmark": {
+    "weight": 700,
+    "tracking": "-0.02em"
+  }
+}
