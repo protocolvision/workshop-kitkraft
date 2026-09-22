@@ -20,5 +20,9 @@
 ## Kit to convert
 undecided — both are good, but both are mostly custom scripts AI wrote for me to do something repeatable rather than custom prompts, so I am not sure either is properly in the vein of a kit.
 
+## Related
+zakhap/worldview-generator — it takes a corpus of imported documents and crystallizes it into a commonplace book and a character sheet; my notes-processing captures and gardens notes but stops at connections and new ideas, so this is the distillation step mine does not have, running on exactly what my capture produces.
+rafaeldavid/here.now publishing — both my kits end at files in a private repo (processed notes, markdown with inlined photos); this turns an agent's output folder into a live URL with passcodes for private pages, which is the missing last step for sharing a chat artifact with the people in the chat, and closer to the hosted UI I want for capture.
+
 ## Posture
 Partnership
