@@ -37,6 +37,7 @@ window.STRINGS = {
   t: {
     en: {
       greeting: 'Welcome',
+      languageMenuTitle: 'Choose your language',
       resultsNotice: 'Invented listings at invented employers. Nothing here is a real opening.',
       optional: '(optional)',
       changeLanguage: 'Change language',
@@ -80,6 +81,7 @@ window.STRINGS = {
 
     de: {
       greeting: 'Willkommen',
+      languageMenuTitle: 'Sprache wählen',
       resultsNotice: 'Erfundene Stellenanzeigen bei erfundenen Arbeitgebern. Nichts davon ist eine echte Stelle.',
       optional: '(optional)',
       changeLanguage: 'Sprache ändern',
@@ -123,6 +125,7 @@ window.STRINGS = {
 
     uk: {
       greeting: 'Ласкаво просимо',
+      languageMenuTitle: 'Оберіть мову',
       resultsNotice: 'Вигадані вакансії у вигаданих роботодавців. Жодна з них не є справжньою.',
       optional: '(необов’язково)',
       changeLanguage: 'Змінити мову',
@@ -166,6 +169,7 @@ window.STRINGS = {
 
     tr: {
       greeting: 'Hoş geldiniz',
+      languageMenuTitle: 'Dilinizi seçin',
       resultsNotice: 'Uydurma işverenlerde uydurma ilanlar. Buradaki hiçbir ilan gerçek değil.',
       optional: '(isteğe bağlı)',
       changeLanguage: 'Dili değiştir',
@@ -209,6 +213,7 @@ window.STRINGS = {
 
     ar: {
       greeting: 'أهلاً وسهلاً',
+      languageMenuTitle: 'اختر لغتك',
       resultsNotice: 'إعلانات وظائف مُختلقة لدى جهات عمل مُختلقة. لا توجد هنا وظيفة حقيقية.',
       optional: '(اختياري)',
       changeLanguage: 'تغيير اللغة',
@@ -252,6 +257,7 @@ window.STRINGS = {
 
     es: {
       greeting: 'Te damos la bienvenida',
+      languageMenuTitle: 'Elige tu idioma',
       resultsNotice: 'Ofertas inventadas en empleadores inventados. Ninguna de ellas es una vacante real.',
       optional: '(opcional)',
       changeLanguage: 'Cambiar idioma',

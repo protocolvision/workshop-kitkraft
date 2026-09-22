@@ -761,11 +761,10 @@
     setText('s-spy-roles', t('spyRoles'));
     setText('s-spy-missing', t('spyMissing'));
     setText('s-spy-outreach', t('spyOutreach'));
+    renderSpyChips();
     setText('change-lang', t('changeLanguage'));
-    var strip = document.getElementById('lang-strip');
-    if (strip && !strip.hidden) { renderLangStrip(); }
-    var sel = document.getElementById('lang');
-    if (sel) { sel.value = LANG; }
+    renderLangTrigger();
+    if (!document.getElementById('lang-menu').hidden) { renderLangMenu(); }
 
     renderAccounts();
     renderGreeting();
@@ -783,72 +782,273 @@
     }
   }
 
-  /* First visit gets the strip; a returning visitor gets the compact control. */
-  function renderLangStrip() {
-    var host = document.getElementById('lang-strip-row');
+  /* ---------------- overlays: drawer on a phone, in place on a desktop ------
+     One code path for every overlay on the page. Below the breakpoint it is a
+     bottom sheet; above it, the language menu is a dropdown anchored to its
+     trigger and the account chooser stays the inline panel it always was. */
+
+  var overlayPanel = null, overlayTrigger = null, overlayScrollY = 0;
+
+  function isNarrow() {
+    return window.matchMedia && window.matchMedia('(max-width: 767px)').matches;
+  }
+
+  function lockScroll() {
+    overlayScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    document.body.style.top = (-overlayScrollY) + 'px';
+    document.body.className += ' scroll-locked';
+  }
+
+  function unlockScroll() {
+    document.body.className = document.body.className.split(' scroll-locked').join('');
+    document.body.style.top = '';
+    /* Restore on the next frame. While the body is fixed the document is only
+       as tall as the viewport, so scrolling before the layout has been
+       recalculated clamps to a few pixels and the page comes back at the top.
+       Instantly, too: the page sets scroll-behavior: smooth, and nobody wants
+       to watch the page travel back to where they already were. */
+    var y = overlayScrollY;
+    var restore = function () {
+      try { window.scrollTo({ top: y, left: 0, behavior: 'instant' }); }
+      catch (e) { window.scrollTo(0, y); }
+    };
+    restore();
+    window.requestAnimationFrame(restore);
+  }
+
+  function focusables(panel) {
+    var all = panel.querySelectorAll('button, [href], select, input, textarea, [tabindex]');
+    var out = [];
+    for (var i = 0; i < all.length; i++) {
+      if (!all[i].disabled && all[i].getAttribute('tabindex') !== '-1') { out.push(all[i]); }
+      else if (all[i].className.indexOf('langopt') !== -1) { out.push(all[i]); }
+    }
+    return out;
+  }
+
+  function openOverlay(panel, trigger, opts) {
+    opts = opts || {};
+    overlayPanel = panel;
+    overlayTrigger = trigger || null;
+    var sheet = isNarrow();
+
+    /* Lock before the panel is shown. Showing it first lets the page reflow
+       once while still scrollable, which moves the offset we are about to
+       record and leaves the restore a few pixels out. */
+    if (sheet) { lockScroll(); }
+    show(panel.id, true);
+    if (sheet) {
+      panel.className += ' sheet';
+      panel.setAttribute('data-entering', 'true');
+      panel.setAttribute('aria-modal', 'true');
+      panel.setAttribute('role', panel.getAttribute('role') || 'dialog');
+      show('overlay-scrim', true);
+      /* One frame at the closed position, then let the transform run. */
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () { panel.removeAttribute('data-entering'); });
+      });
+    } else if (opts.anchorTo) {
+      show('overlay-scrim', true);
+      anchorPanel(panel, opts.anchorTo);
+    }
+
+    if (trigger) { trigger.setAttribute('aria-expanded', 'true'); }
+    var first = opts.focusFirst && opts.focusFirst();
+    if (!first) { first = focusables(panel)[0]; }
+    if (first) { first.focus(); }
+  }
+
+  function closeOverlay(restoreFocus) {
+    var panel = overlayPanel;
+    if (!panel) { return; }
+    var wasSheet = panel.className.indexOf('sheet') !== -1;
+    show(panel.id, false);
+    panel.className = panel.className.split(' sheet').join('');
+    panel.removeAttribute('data-entering');
+    panel.removeAttribute('aria-modal');
+    panel.style.top = '';
+    panel.style.left = '';
+    panel.style.transform = '';
+    show('overlay-scrim', false);
+    if (wasSheet) { unlockScroll(); }
+
+    var triggers = document.querySelectorAll('[aria-expanded="true"]');
+    for (var i = 0; i < triggers.length; i++) { triggers[i].setAttribute('aria-expanded', 'false'); }
+    if (restoreFocus && overlayTrigger) { overlayTrigger.focus(); }
+    overlayPanel = null;
+    overlayTrigger = null;
+  }
+
+  function overlayIsOpen(panel) {
+    return overlayPanel === panel && !panel.hidden;
+  }
+
+  function anchorPanel(panel, trigger) {
+    var r = trigger.getBoundingClientRect();
+    var width = panel.offsetWidth;
+    var rtl = document.documentElement.getAttribute('dir') === 'rtl';
+    var left = rtl ? r.right + window.pageXOffset - width : r.left + window.pageXOffset;
+    left = Math.max(8, Math.min(left, window.innerWidth - width - 8));
+    panel.style.top = (r.bottom + window.pageYOffset + 8) + 'px';
+    panel.style.left = left + 'px';
+  }
+
+  function initOverlays() {
+    document.getElementById('overlay-scrim').addEventListener('click', function () {
+      closeOverlay(true);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!overlayPanel) { return; }
+      if (e.key === 'Escape') { e.preventDefault(); closeOverlay(true); return; }
+      if (e.key === 'Tab') {
+        var items = focusables(overlayPanel);
+        if (!items.length) { return; }
+        e.preventDefault();
+        var index = 0;
+        for (var i = 0; i < items.length; i++) { if (items[i] === document.activeElement) { index = i; } }
+        items[(index + (e.shiftKey ? -1 : 1) + items.length) % items.length].focus();
+      }
+    });
+
+    /* Swipe down to dismiss. A nice-to-have on top of the scrim and Escape. */
+    var startY = 0, dragging = false;
+    document.addEventListener('touchstart', function (e) {
+      if (!overlayPanel || overlayPanel.className.indexOf('sheet') === -1) { return; }
+      if (overlayPanel.scrollTop > 0) { return; }
+      startY = e.touches[0].clientY;
+      dragging = true;
+    }, { passive: true });
+    document.addEventListener('touchmove', function (e) {
+      if (!dragging || !overlayPanel) { return; }
+      var dy = e.touches[0].clientY - startY;
+      if (dy > 0) { overlayPanel.style.transform = 'translateY(' + dy + 'px)'; }
+    }, { passive: true });
+    document.addEventListener('touchend', function (e) {
+      if (!dragging || !overlayPanel) { return; }
+      dragging = false;
+      var dy = (e.changedTouches[0].clientY - startY);
+      overlayPanel.style.transform = '';
+      if (dy > 60) { closeOverlay(true); }
+    });
+  }
+
+  /* ---------------- the language menu --------------------------------------
+     One component, three triggers: the greeting, the header control and the
+     footer link. A menu is strictly less discoverable than six visible chips,
+     which is what the triggers are for — in particular the header control is a
+     labelled button showing the current language, not a bare icon, so somebody
+     who reads no English can still recognise what it is. */
+
+  var menuOpener = null;
+
+  function menuItems() {
+    return document.querySelectorAll('#lang-menu-items .langopt');
+  }
+
+  function renderLangMenu() {
+    setText('lang-menu-title', t('languageMenuTitle'));
+    var host = document.getElementById('lang-menu-items');
     host.textContent = '';
     for (var i = 0; i < STRINGS.languages.length; i++) {
       (function (lang) {
         var b = el('button', 'langopt');
         b.type = 'button';
-        b.setAttribute('aria-pressed', lang.code === LANG ? 'true' : 'false');
+        b.setAttribute('role', 'menuitemradio');
+        b.setAttribute('aria-checked', lang.code === LANG ? 'true' : 'false');
         b.setAttribute('lang', lang.code);
+        b.setAttribute('dir', lang.dir);
         b.setAttribute('aria-label', lang.autonym + ' (' + lang.english + ')');
-        var auto = el('span', 'auto',
-          (STRINGS.config && STRINGS.config.showFlags ? lang.flag + ' ' : '') + lang.autonym);
-        b.appendChild(auto);
+        b.setAttribute('data-code', lang.code);
+        b.tabIndex = -1;
+        b.appendChild(el('span', 'auto',
+          (STRINGS.config && STRINGS.config.showFlags ? lang.flag + ' ' : '') + lang.autonym));
         b.appendChild(el('span', 'eng', lang.english));
-        b.addEventListener('click', function () {
-          langChosen = true;
-          applyLanguage(lang.code);
-          rememberLang(lang.code);
-          collapseStrip();
-        });
+        b.addEventListener('click', function () { chooseLanguage(lang.code); });
         host.appendChild(b);
       })(STRINGS.languages[i]);
     }
   }
 
-  function collapseStrip() {
-    show('lang-strip', false);
-    show('lang', true);
-    document.getElementById('lang').value = LANG;
-    document.getElementById('greeting').setAttribute('aria-expanded', 'false');
+  function chooseLanguage(code) {
+    langChosen = true;
+    applyLanguage(code);
+    rememberLang(code);
+    closeLangMenu(true);
   }
 
-  function toggleStrip() {
-    var strip = document.getElementById('lang-strip');
-    if (strip.hidden) { openStrip(); } else { closeStrip(); }
-  }
-
-  function closeStrip() {
-    show('lang-strip', false);
-    document.getElementById('greeting').setAttribute('aria-expanded', 'false');
-  }
-
-  function openStrip() {
-    renderLangStrip();
-    show('lang-strip', true);
-    document.getElementById('greeting').setAttribute('aria-expanded', 'true');
-    var first = document.querySelector('#lang-strip-row button[aria-pressed="true"]')
-      || document.querySelector('#lang-strip-row button');
-    if (first) { first.focus(); }
-  }
-
-  function renderLangSelect() {
-    var sel = document.getElementById('lang');
-    sel.textContent = '';
-    for (var i = 0; i < STRINGS.languages.length; i++) {
-      var o = el('option', null, STRINGS.languages[i].autonym);
-      o.value = STRINGS.languages[i].code;
-      if (STRINGS.languages[i].code === LANG) { o.selected = true; }
-      sel.appendChild(o);
-    }
-    sel.addEventListener('change', function () {
-      langChosen = true;
-      applyLanguage(sel.value);
-      rememberLang(sel.value);
+  function openLangMenu(trigger) {
+    menuOpener = trigger;
+    renderLangMenu();
+    var menu = document.getElementById('lang-menu');
+    openOverlay(menu, trigger, {
+      anchorTo: trigger,
+      focusFirst: function () {
+        return document.querySelector('#lang-menu-items .langopt[aria-checked="true"]')
+          || menuItems()[0];
+      }
     });
+  }
+
+  function closeLangMenu(restoreFocus) {
+    closeOverlay(restoreFocus);
+    menuOpener = null;
+  }
+
+  function menuIsOpen() { return !document.getElementById('lang-menu').hidden; }
+
+  function focusItem(node) {
+    if (!node) { return; }
+    var items = menuItems();
+    for (var i = 0; i < items.length; i++) { items[i].tabIndex = -1; }
+    node.tabIndex = 0;
+    node.focus();
+  }
+
+  function moveFocus(delta) {
+    var items = menuItems();
+    var current = document.activeElement;
+    var index = 0;
+    for (var i = 0; i < items.length; i++) { if (items[i] === current) { index = i; } }
+    var next = (index + delta + items.length) % items.length;
+    focusItem(items[next]);
+  }
+
+  function initLangMenu() {
+    var menu = document.getElementById('lang-menu');
+
+    menu.addEventListener('keydown', function (e) {
+      var items = menuItems();
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); moveFocus(1); return; }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); moveFocus(-1); return; }
+      if (e.key === 'Home') { e.preventDefault(); focusItem(items[0]); return; }
+      if (e.key === 'End') { e.preventDefault(); focusItem(items[items.length - 1]); return; }
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        var code = document.activeElement.getAttribute('data-code');
+        if (code) { chooseLanguage(code); }
+        return;
+      }
+    });
+
+    function trigger(node) {
+      if (!node) { return; }
+      node.addEventListener('click', function () {
+        if (menuIsOpen() && menuOpener === node) { closeLangMenu(true); }
+        else { openLangMenu(node); }
+      });
+    }
+    trigger(document.getElementById('greeting'));
+    trigger(document.getElementById('lang-trigger'));
+  }
+
+  function renderLangTrigger() {
+    setText('lang-trigger-label', langMeta(LANG).autonym);
+    var node = document.getElementById('lang-trigger');
+    if (node) {
+      node.setAttribute('aria-label', t('changeLanguage') + ': ' + langMeta(LANG).autonym);
+      node.setAttribute('lang', LANG);
+    }
   }
 
   /* The greeting rotates; the headline does not. The only motion on the page
@@ -901,7 +1101,9 @@
   function goTo(name) {
     STATE_NAME = name;
     show('whoami', name !== 'signin');
+    show('whoami-inline', name !== 'signin');
     show('spy', name === 'results');
+    show('spy-chips', name === 'results');
     show('state-questions', name === 'questions' || name === 'results');
     show('state-results', name === 'results');
     reveal();
@@ -965,29 +1167,43 @@
       sector: profile.defaults.sector,
       languages: otherLanguages(profile)
     };
+    /* Close it as an overlay, not by hiding the panel: hiding it on its own
+       would leave the body scroll-locked and the sheet class attached. */
+    if (overlayPanel === document.getElementById('chooser')) { closeOverlay(false); }
+    else { show('chooser', false); }
+    document.getElementById('signin-btn').setAttribute('aria-expanded', 'false');
+
     renderWhoami();
     renderQuestions();
     renderQA();
     renderChips();
     goTo('questions');
     scrollTo('state-questions');
-    document.getElementById('signin-btn').setAttribute('aria-expanded', 'false');
-    show('chooser', false);
   }
 
+  /* Written into two slots: the header, which is where it sits on a wide
+     screen, and an inline one above the questions, which is where it sits on a
+     phone once the header is down to the wordmark and the language control.
+     CSS shows exactly one of them, so only one is ever in the a11y tree. */
   function renderWhoami() {
-    var who = document.getElementById('whoami');
     if (!STATE.profile) { return; }
-    who.textContent = '';
-    who.appendChild(el('span', null,
-      STATE.profile.profession + ', ' + STATE.profile.years_experience + ' ' + t('years')));
-    var sw = el('button', 'btn-text quiet', t('switchAccount'));
-    sw.type = 'button';
-    sw.addEventListener('click', signOut);
-    who.appendChild(sw);
+    var slots = [document.getElementById('whoami'), document.getElementById('whoami-inline')];
+    for (var i = 0; i < slots.length; i++) {
+      (function (who) {
+        if (!who) { return; }
+        who.textContent = '';
+        who.appendChild(el('span', null,
+          STATE.profile.profession + ', ' + STATE.profile.years_experience + ' ' + t('years')));
+        var sw = el('button', 'btn-text quiet', t('switchAccount'));
+        sw.type = 'button';
+        sw.addEventListener('click', signOut);
+        who.appendChild(sw);
+      })(slots[i]);
+    }
   }
 
   function signOut() {
+    if (overlayPanel) { closeOverlay(false); }
     STATE.profile = null;
     STATE.fields = null;
     STATE.scored = [];
@@ -1122,16 +1338,30 @@
       if (!r.shortlisted) { continue; }
       shown++;
       var tr = el('tr', fresh && fresh[r.listing.listing_id] ? 'fresh' : null);
-      var tdRole = el('td');
+
+      var tdRole = el('td', 'role-cell');
       tdRole.appendChild(el('span', 'role', r.listing.title));
       tdRole.appendChild(el('span', 'why', r.reason));
       tr.appendChild(tdRole);
-      tr.appendChild(el('td', null, r.listing.employer));
-      tr.appendChild(el('td', null, r.listing.city));
-      tr.appendChild(el('td', null, r.listing.german_level_mapped === 'none'
-        ? 'none stated'
-        : r.listing.german_level_mapped));
+
+      tr.appendChild(el('td', 'employer-cell', r.listing.employer));
+
+      /* Below the breakpoint these three stack into a labelled group, so each
+         carries its own label. It is hidden on wide screens, where the column
+         headers already say what the value is. */
+      var tdCity = el('td', 'city-cell');
+      tdCity.appendChild(el('span', 'celllabel', t('colCity')));
+      tdCity.appendChild(el('span', null, r.listing.city));
+      tr.appendChild(tdCity);
+
+      var tdGerman = el('td', 'german-cell');
+      tdGerman.appendChild(el('span', 'celllabel', t('colGerman')));
+      tdGerman.appendChild(el('span', null, r.listing.german_level_mapped === 'none'
+        ? 'none stated' : r.listing.german_level_mapped));
+      tr.appendChild(tdGerman);
+
       var tdFit = el('td', 'num');
+      tdFit.appendChild(el('span', 'celllabel', t('colFit')));
       tdFit.appendChild(fitFor(r.total));
       tr.appendChild(tdFit);
       body.appendChild(tr);
@@ -1469,17 +1699,17 @@
 
         var acts = el('div', 'acts');
         acts.appendChild(el('span', 'file', d.file));
-        var dl = el('button', 'quiet', 'Download');
+        var dl = el('button', 'btn-text quiet', 'Download');
         dl.type = 'button';
         dl.setAttribute('aria-label', 'Download ' + d.file);
         dl.addEventListener('click', function () { downloadFile(d.file); });
         acts.appendChild(dl);
-        var cp = el('button', 'quiet', 'Copy');
+        var cp = el('button', 'btn-text quiet', 'Copy');
         cp.type = 'button';
         cp.setAttribute('aria-label', 'Copy ' + d.file);
         cp.addEventListener('click', function () { copyFile(d.file); });
         acts.appendChild(cp);
-        var sw = el('button', 'quiet', openStep === d.n ? 'Hide working' : 'Show working');
+        var sw = el('button', 'btn-text quiet', openStep === d.n ? 'Hide working' : 'Show working');
         sw.type = 'button';
         sw.setAttribute('aria-expanded', openStep === d.n ? 'true' : 'false');
         sw.addEventListener('click', function () {
@@ -1554,11 +1784,26 @@
 
   /* ---------------- scroll-spy -------------------------------------------- */
 
+  function renderSpyChips() {
+    var host = document.getElementById('spy-chips');
+    if (!host) { return; }
+    host.textContent = '';
+    var src = document.querySelectorAll('#spy a');
+    for (var i = 0; i < src.length; i++) {
+      var a = el('a', null, src[i].textContent);
+      a.href = src[i].getAttribute('href');
+      host.appendChild(a);
+    }
+  }
+
   function initSpy() {
-    var links = document.querySelectorAll('#spy a');
+    renderSpyChips();
     var ticking = false;
     function mark() {
       ticking = false;
+      /* Re-queried every time: the chip row is rebuilt whenever the language
+         changes, so a list captured once here would go stale. */
+      var links = document.querySelectorAll('#spy a, #spy-chips a');
       var best = null, bestTop = -Infinity;
       for (var i = 0; i < links.length; i++) {
         var id = links[i].getAttribute('href').slice(1);
@@ -1569,7 +1814,7 @@
       }
       if (!best && links.length) { best = links[0]; }
       for (var k = 0; k < links.length; k++) {
-        var on = links[k] === best;
+        var on = links[k].getAttribute('href') === (best && best.getAttribute('href'));
         links[k].className = on ? 'current' : '';
         /* location, not aria-selected: this says where you are in the page,
            it is not a tab or an option in a listbox. */
@@ -1588,22 +1833,15 @@
   var chosen = recallLang();
   langChosen = !!chosen;
   applyLanguage(chosen || browserLang());
-  renderLangSelect();
-  renderLangStrip();
-  if (chosen) {
-    collapseStrip();
-  } else {
-    show('lang-strip', true);
-    show('lang', false);
-  }
+  renderLangTrigger();
+  initOverlays();
+  initLangMenu();
   document.getElementById('change-lang').addEventListener('click', function () {
-    openStrip();
-    document.getElementById('greeting').scrollIntoView({ block: 'center' });
+    openLangMenu(document.getElementById('change-lang'));
   });
   initSpy();
 
   var greet = document.getElementById('greeting');
-  greet.addEventListener('click', toggleStrip);
   greet.addEventListener('mouseenter', function () { greetPaused = true; });
   greet.addEventListener('mouseleave', function () { greetPaused = false; });
   greet.addEventListener('focusin',  function () { greetPaused = true; });
@@ -1624,10 +1862,11 @@
   }
 
   document.getElementById('signin-btn').addEventListener('click', function () {
-    var open = document.getElementById('chooser').hidden;
-    show('chooser', open);
-    this.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (open) { document.querySelector('#account-list button').focus(); }
+    var chooser = document.getElementById('chooser');
+    if (!chooser.hidden) { closeOverlay(true); return; }
+    openOverlay(chooser, this, {
+      focusFirst: function () { return document.querySelector('#account-list button'); }
+    });
   });
 
   document.getElementById('find').addEventListener('click', function () {

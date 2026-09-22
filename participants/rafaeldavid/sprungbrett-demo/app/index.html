@@ -19,7 +19,7 @@
 <meta charset="utf-8">
 <title>Sprungbrett — demo (synthetic data)</title>
 <meta name="description" content="Workshop demo running on synthetic data. Every profile, listing and employer is invented; nothing is read from LinkedIn; no model runs.">
-<meta name="viewport" content="width=1120">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Inline SVG data URI, so the mark survives file:// and costs no request.
      Regenerate with: node brand/generate-brand.js <seed> -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M4 25h14' stroke='%2313799A' stroke-width='4' stroke-linecap='round' fill='none'/><path d='M6 19C12 7 22 5 28 7' stroke='%2313799A' stroke-width='4' stroke-linecap='round' fill='none'/></svg>">
@@ -51,9 +51,9 @@
        Noto Naskh Arabic is embedded in fonts.css alongside Inter; the system
        faces behind it are the fallback if that file is ever missing. */
     --font-ar: "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
-    --t-display:   52px;  --lh-display:   1.05;
-    --t-greeting:  34px;
-    --t-section:   28px;  --lh-section:   1.2;
+    --t-display:   clamp(32px, 6.4vw, 52px);  --lh-display: 1.08;
+    --t-greeting:  clamp(24px, 4.6vw, 34px);
+    --t-section:   clamp(22px, 3.4vw, 28px);  --lh-section: 1.25;
     --t-body:      17px;  --lh-body:      1.55;
     --t-secondary: 15px;
     --t-caption:   13px;
@@ -63,14 +63,14 @@
     --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px; --s10: 128px;
 
     --container: 1120px;
-    --gutter:    32px;
+    --gutter:    clamp(16px, 4vw, 32px);   /* never below a 16px side gutter */
     --measure:   65ch;   /* prose: ~660-700px at 17px, inside the 50-75 band */
     --header-h:  56px;
     /* One height for every interactive box, so a fixed-height button and a
        padding-sized input cannot drift apart. 44px is also the WCAG 2.2
        target size, which is why both land on it. */
     --control-h: 44px;   /* every interactive box; also the WCAG 2.2 target size */
-    --band-h:    160px;  /* the paper band at the top of the page */
+    --band-h:    clamp(88px, 12vw, 160px);  /* the paper band at the top of the page */
     /* Where the crop sits inside the band image. The shipped file is already
        cut to the band's own 9:1, so this only bites when the viewport makes the
        band proportionally shorter or taller than that. Set to 40% rather than
@@ -395,14 +395,105 @@
 
   .pagefoot { border-top: 1px solid var(--hairline); padding-block: var(--s7); }
 
-  /* ---------- the language selector, and the greeting ---------- */
 
-  .langpick { display: flex; align-items: center; }
-  .langpick select {
-    font-family: inherit; font-size: var(--t-caption); color: var(--ink);
-    background: transparent; border: none; padding: var(--s1) var(--s2);
-    border-radius: var(--s2); cursor: pointer;
+  /* ---------- the language menu ---------- */
+
+  .langtrigger {
+    display: inline-flex; align-items: center; gap: var(--s2);
+    min-block-size: var(--control-h); padding-inline: var(--s3);
+    background: none; border: 1px solid var(--hairline); border-radius: var(--radius-control);
+    font-family: inherit; font-size: var(--t-secondary); color: var(--ink); cursor: pointer;
   }
+  .langtrigger:hover { background: var(--band); }
+  .langtrigger .chev {
+    inline-size: 0.45em; block-size: 0.45em;
+    border-inline-end: 2px solid var(--secondary); border-block-end: 2px solid var(--secondary);
+    transform: rotate(45deg); margin-block-end: 0.2em;
+  }
+
+  .scrim { position: fixed; inset: 0; z-index: 40; background: transparent; }
+
+  .langmenu {
+    position: absolute; z-index: 41;
+    inline-size: 320px; max-inline-size: calc(100vw - 2 * var(--gutter));
+    background: var(--page); border: 1px solid var(--hairline); border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.12);
+    padding: var(--s2);
+  }
+  .langmenu-title {
+    font-size: var(--t-caption); color: var(--secondary); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    padding: var(--s2) var(--s3) var(--s2);
+  }
+  .langopt {
+    display: flex; flex-direction: column; gap: 2px;
+    inline-size: 100%; min-block-size: var(--control-h);
+    padding: var(--s2) var(--s3); text-align: start;
+    background: none; border: none; border-radius: var(--s2);
+    color: var(--ink); cursor: pointer; font-family: inherit;
+  }
+  .langopt:hover { background: var(--band); }
+  .langopt .auto { font-size: var(--t-body); font-weight: 600; }
+  .langopt .eng  { font-size: var(--t-caption); color: var(--secondary); }
+  .langopt[aria-checked="true"] { background: var(--primary); }
+  .langopt[aria-checked="true"] .auto,
+  .langopt[aria-checked="true"] .eng { color: var(--page); }
+  .langopt[aria-checked="true"] .eng { opacity: 0.85; }
+
+  @media (max-width: 767px) {
+    .langopt { min-block-size: 56px; }
+    /* Inline panels that become drawers get their box reset by .sheet. */
+    .chooser.sheet { box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.18); }
+  }
+
+
+  /* ---------- the drawer ----------------------------------------------------
+     On a phone anything that would be a popup, a modal or a dropdown is a
+     bottom sheet instead: reachable by thumb, it does not swallow the screen,
+     and it dismisses the way people expect. No centred modal dialogs. */
+
+  .sheet-handle {
+    display: none; inline-size: 36px; block-size: 4px; border-radius: 999px;
+    background: var(--hairline); margin: var(--s1) auto var(--s3);
+  }
+
+  @media (max-width: 767px) {
+    .scrim { background: rgba(0, 0, 0, 0.32); }
+
+    .sheet {
+      position: fixed; inset-block-end: 0; inset-inline: 0; z-index: 41;
+      inline-size: auto; max-inline-size: none; margin: 0;
+      /* dvh, not vh: vh ignores the retracting address bar, which is how a
+         bottom sheet ends up cut off or jumping on a phone. */
+      max-block-size: 85dvh;
+      overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
+      background: var(--page);
+      border: 1px solid var(--hairline); border-block-end: none;
+      border-radius: var(--radius) var(--radius) 0 0;
+      box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.18);
+      /* the safe-area pad is the single most common way a bottom sheet ships
+         broken: without it the last option sits under the home indicator. */
+      padding-block: var(--s2) calc(var(--s6) + env(safe-area-inset-bottom, 0px));
+      padding-inline: var(--s3);
+      transform: translateY(0);
+      transition: transform var(--motion) ease-out;
+    }
+    /* Travel comes from a transform, never from animating height or top. */
+    .sheet[data-entering="true"] { transform: translateY(100%); }
+    .sheet .sheet-handle { display: block; }
+  }
+
+  /* Still a drawer for anyone who asked for less motion, just without travel. */
+  @media (prefers-reduced-motion: reduce) {
+    .sheet { transition: none; }
+    .sheet[data-entering="true"] { transform: none; }
+  }
+
+  /* The page behind must not scroll while a drawer is open. */
+  body.scroll-locked { position: fixed; inline-size: 100%; overflow: hidden; }
+
+  /* ---------- the greeting ---------- */
+
   /* The greeting is the biggest thing on the page, and it is the language
      control: the thing that catches the eye is the thing that solves the
      problem. A button, not a div with a handler. */
@@ -504,6 +595,128 @@
   .topbar .who { animation: fadein var(--motion) ease-out; }
   @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
 
+
+  /* The per-value labels exist only for the card layout below the breakpoint.
+     Declared before the media query so the media query wins on source order. */
+  .celllabel { display: none; color: var(--secondary); font-size: var(--t-caption); }
+
+  /* ===================================================================
+     Phone and small tablet. Single column, nothing hidden behind a menu.
+
+     No hamburger, deliberately. The header holds four things, and the one
+     this audience needs most is the language control — the whole build moved
+     it out of a corner dropdown into a visible strip because people could not
+     find it. Putting it back behind a menu hides it again, a tap deeper than
+     where it started. Three short section links are also well below the point
+     where hiding navigation pays for itself, so they become a scrollable chip
+     row instead.
+     =================================================================== */
+  @media (max-width: 767px) {
+
+    /* Header: wordmark left, language right, and nothing else in the bar. */
+    .topbar .spy { display: none; }
+    .topbar .who { display: none; }
+    .topbar .container { gap: var(--s3); }
+    .langtrigger { min-block-size: var(--control-h); }
+    /* The Switch control sits inline in prose on mobile, so give it the target
+       size rather than leaving it at its text height. */
+    .whoami-inline .btn-text {
+      display: inline-flex; align-items: center; min-block-size: var(--control-h);
+    }
+
+    /* The section links, as chips under the header. Only rendered once there
+       are results, which is already the rule on desktop. */
+    .spy-chips {
+      position: sticky; top: var(--header-h); z-index: 9;
+      display: flex; gap: var(--s2);
+      padding: var(--s2) var(--gutter);
+      background: var(--page); border-block-end: 1px solid var(--hairline);
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .spy-chips::-webkit-scrollbar { display: none; }
+    .spy-chips a {
+      flex: 0 0 auto; display: inline-flex; align-items: center;
+      min-block-size: var(--control-h); padding-inline: var(--s4);
+      border: 1px solid var(--hairline); border-radius: 999px;
+      font-size: var(--t-secondary); color: var(--secondary); text-decoration: none;
+      white-space: nowrap;
+    }
+    .spy-chips a[aria-current="location"] {
+      color: var(--page); background: var(--primary); border-color: var(--primary);
+    }
+
+    /* The account line sits above the questions instead of in the bar. */
+    .whoami-inline { display: block; }
+
+    .hero { padding-block: var(--s6) var(--s7); }
+    .band-section { padding-block: var(--s7); }
+
+    /* One column, and every control full width and thumb-sized. */
+    .qgrid { flex-direction: column; gap: var(--s5); }
+    .qgrid .field, .field select { inline-size: 100%; }
+    .noteform { flex-direction: column; align-items: stretch; gap: var(--s3); }
+    .noteform .field, .noteform .btn-primary { inline-size: 100%; }
+    .btn-primary { inline-size: 100%; }
+    .chooser { max-inline-size: none; }
+
+    /* Tell us more: the question, then the three options across a full row,
+       each at the target size rather than squeezed beside the text. */
+    .rows.qa li { flex-direction: column; align-items: stretch; gap: var(--s3); }
+    .qa .opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s2); }
+    .opt { inline-size: 100%; }
+
+    /* The roles table stops being a table. Five columns at 375 is not
+       salvageable by scrolling, so each role becomes a stacked card and the
+       three short values become a small labelled group. The markup stays a
+       real table; only the presentation changes. */
+    table.roles, table.roles tbody, table.roles tr, table.roles td { display: block; inline-size: 100%; }
+    table.roles thead {
+      position: absolute; inline-size: 1px; block-size: 1px;
+      overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+    }
+    /* A table-caption inside a display:block table shrink-to-fits, which wraps
+       the heading one word per line. Make it a block. */
+    table.roles caption { display: block; inline-size: 100%; margin-bottom: var(--s4); }
+    table.roles tbody tr {
+      border: 1px solid var(--hairline); border-radius: var(--radius);
+      padding: var(--s4); margin-block-end: var(--s4);
+    }
+    table.roles td { block-size: auto; padding: 0; border: none; }
+    table.roles td.role-cell { margin-block-end: var(--s2); }
+    /* employer, then city / German / fit inline as a labelled group */
+    table.roles td.employer-cell { color: var(--secondary); font-size: var(--t-secondary); }
+    table.roles td.facts-cell {
+      display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5);
+      align-items: baseline; margin-block-start: var(--s3);
+      padding-block-start: var(--s3); border-block-start: 1px solid var(--hairline);
+    }
+    table.roles td.city-cell, table.roles td.german-cell, table.roles td.num {
+      display: inline-flex; align-items: baseline; gap: var(--s2);
+      text-align: start; padding: 0;
+    }
+    .celllabel { display: inline; }
+    .fit { flex-direction: row; align-items: center; gap: var(--s2); }
+
+    /* Prose can use the full column on a phone. */
+    .measure, .hero .inner > *, ul.items, .rows .sub { max-inline-size: none; }
+    .rows li { flex-wrap: wrap; }
+    /* The meta sits under the row on a phone rather than competing for width. */
+    .rows .meta { flex: 1 0 100%; max-inline-size: 100%; text-align: start; }
+    /* Text buttons are real targets here, not inline links in prose. */
+    .btn-text { display: inline-flex; align-items: center; min-block-size: var(--control-h); }
+
+    .work div { flex-direction: column; gap: var(--s1); }
+    .work .k { flex: none; }
+    pre.cols, .dl .cols, .dl .head { font-size: 11px; }
+  }
+
+
+  /* Nothing may scroll the page sideways. Containers that must scroll do it
+     inside themselves. */
+  html, body { overflow-x: hidden; }
+  .dl .cols, .dl .head, .work { max-inline-size: 100%; overflow-x: auto; }
+
   /* ---------- one entrance, and one highlight ---------- */
 
   .reveal { opacity: 0; transform: translateY(8px); }
@@ -534,12 +747,15 @@
       <a href="#outreach" id="s-spy-outreach"></a>
     </nav>
     <span class="who" id="whoami" hidden></span>
-    <span class="langpick">
-      <label class="visually-hidden" for="lang">Language</label>
-      <select id="lang"></select>
-    </span>
+    <button class="langtrigger" id="lang-trigger" aria-haspopup="true"
+            aria-expanded="false" aria-controls="lang-menu">
+      <span id="lang-trigger-label">English</span>
+      <span class="chev" aria-hidden="true"></span>
+    </button>
   </div>
 </header>
+
+<nav class="spy-chips" id="spy-chips" hidden aria-label="Sections"></nav>
 
 <main>
 
@@ -567,14 +783,12 @@
       <button class="greeting" id="greeting" aria-expanded="false" aria-controls="lang-strip">
         <span id="greeting-text"></span><span class="chev" aria-hidden="true"></span>
       </button>
-      <div class="langstrip" id="lang-strip" hidden>
-        <div class="langstrip-row" id="lang-strip-row" role="group" aria-label="Choose your language"></div>
-      </div>
       <p class="lede" id="s-lede"></p>
       <div class="cta">
         <button class="btn-primary" id="signin-btn" aria-expanded="false" aria-controls="chooser"></button>
       </div>
-      <div class="chooser" id="chooser" hidden>
+      <div class="chooser" id="chooser" hidden aria-labelledby="chooser-h">
+        <span class="sheet-handle" aria-hidden="true"></span>
         <h2 id="chooser-h"></h2>
         <ul class="accounts" id="account-list" aria-labelledby="chooser-h"></ul>
       </div>
@@ -584,6 +798,7 @@
   <!-- 2. The questions, on the paper band -->
   <section id="state-questions" class="band band-section reveal" hidden>
     <div class="container stack-6">
+      <p class="whoami whoami-inline" id="whoami-inline" hidden></p>
       <div class="measure stack-5">
         <h2 id="s-questions-title"></h2>
         <p class="secondary" id="s-questions-lede"></p>
@@ -714,6 +929,17 @@
     <button class="btn-text" id="change-lang"></button>
   </div>
 </footer>
+
+<!-- One language menu, two triggers: the greeting and the header control.
+     Below the breakpoint it comes up as a full-width sheet rather than a
+     cramped dropdown, because six languages in two scripts need room and
+     shrinking the type to fit a 200px panel is the one thing to avoid. -->
+<div class="scrim" id="overlay-scrim" hidden></div>
+<div class="langmenu" id="lang-menu" role="menu" aria-labelledby="lang-menu-title" hidden>
+  <span class="sheet-handle" aria-hidden="true"></span>
+  <p class="langmenu-title" id="lang-menu-title"></p>
+  <div id="lang-menu-items"></div>
+</div>
 
 <!-- Data arrives as a plain script setting window.DATA. A page opened from a
      file path cannot fetch its own JSON, and ES modules fail the same way.
