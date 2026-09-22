@@ -54,6 +54,10 @@
     --gutter:    32px;
     --measure:   720px;
     --header-h:  56px;
+    /* One height for every interactive box, so a fixed-height button and a
+       padding-sized input cannot drift apart. 44px is also the WCAG 2.2
+       target size, which is why both land on it. */
+    --control-h: 44px;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
@@ -133,7 +137,7 @@
 
   button { font-family: inherit; }
   .btn-primary {
-    height: 44px; padding-block: 0; padding-inline: var(--s5); border: none; border-radius: var(--radius-control);
+    height: var(--control-h); padding-block: 0; padding-inline: var(--s5); border: none; border-radius: var(--radius-control);
     background: var(--primary); color: var(--page);
     font-size: var(--t-body); font-weight: 600; cursor: pointer;
   }
@@ -175,9 +179,10 @@
     margin-bottom: var(--s2); padding: 0;
   }
   .field select {
-    width: 100%; font-family: inherit; font-size: var(--t-body); color: var(--ink);
-    background: transparent; border: none; border-bottom: 1px solid var(--hairline);
-    border-radius: 0; padding: var(--s2) 0; cursor: pointer;
+    width: 100%; height: var(--control-h); font-family: inherit; font-size: var(--t-body);
+    color: var(--ink); background: transparent; border: none;
+    border-bottom: 1px solid var(--hairline); border-radius: 0;
+    padding-block: 0; padding-inline: 0; cursor: pointer;
   }
   .field select:focus { border-bottom-color: var(--primary); outline: none; }
   .field select:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
@@ -284,7 +289,7 @@
      own script will look ---------- */
 
   .langopt {
-    min-height: 44px;
+    min-height: var(--control-h);
     background: none; border: 1px solid transparent; border-radius: var(--radius-control);
     padding: var(--s2) var(--s4); cursor: pointer; text-align: start;
     color: var(--ink); transition: background-color var(--motion) ease-out, border-color var(--motion) ease-out;
@@ -341,8 +346,9 @@
   .qa .primary { font-weight: 400; }
   .qa .opts { display: flex; gap: var(--s2); flex: 0 0 auto; }
   .opt {
-    background: none; border: 1px solid var(--hairline); border-radius: var(--radius-control);
-    padding: var(--s2) var(--s4); font-size: var(--t-secondary); color: var(--ink);
+    height: var(--control-h); background: none; border: 1px solid var(--hairline);
+    border-radius: var(--radius-control);
+    padding-block: 0; padding-inline: var(--s4); font-size: var(--t-secondary); color: var(--ink);
     cursor: pointer; transition: background-color var(--motion) ease-out, border-color 150ms ease-out,
       color 150ms ease-out, transform 150ms ease-out;
   }
@@ -355,9 +361,10 @@
   .noteform { display: flex; gap: var(--s4); align-items: flex-end; margin-top: var(--s6); }
   .noteform .field { flex: 1 1 auto; max-width: var(--measure); }
   .noteform input {
-    width: 100%; font-family: inherit; font-size: var(--t-body); color: var(--ink);
-    background: transparent; border: none; border-bottom: 1px solid var(--hairline);
-    padding: var(--s2) 0; transition: border-color var(--motion) ease-out;
+    width: 100%; height: var(--control-h); font-family: inherit; font-size: var(--t-body);
+    color: var(--ink); background: transparent; border: none;
+    border-bottom: 1px solid var(--hairline);
+    padding-block: 0; padding-inline: 0; transition: border-color var(--motion) ease-out;
   }
   .noteform input:focus { border-bottom-color: var(--primary); outline: none; }
   .chips { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s4); }
