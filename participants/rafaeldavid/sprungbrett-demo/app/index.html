@@ -71,10 +71,12 @@
        target size, which is why both land on it. */
     --control-h: 44px;   /* every interactive box; also the WCAG 2.2 target size */
     --band-h:    160px;  /* the paper band at the top of the page */
-    /* Where the crop sits inside the band image. Centred suits an all-over
-       pattern; a skyline wants its horizon placed deliberately, so this is the
-       one value to change when the image is swapped. */
-    --band-focus: center center;
+    /* Where the crop sits inside the band image. The shipped file is already
+       cut to the band's own 9:1, so this only bites when the viewport makes the
+       band proportionally shorter or taller than that. Set to 40% rather than
+       centred so a wide screen keeps the roofline and the bridge arches instead
+       of drifting down into open water. */
+    --band-focus: center 40%;
     --row-h:     56px;   /* every row in the three result sections */
   }
 
@@ -532,11 +534,14 @@
 
 <main>
 
-  <!-- A shallow band, not a hero background: the marbling is dense edge to
-       edge, and any scrim strong enough to make text legible over it would turn
-       the paper to mud. Nothing sits on top of it, so there is no contrast
-       problem to manage. It reads as a book endpaper, which is the right
-       register for a service about credentials.
+  <!-- A shallow band, not a hero background. Nothing sits on top of it, so
+       there is no contrast problem to manage: it is decoration at the top edge
+       of the page, the way a book's endpaper sits before the title page, which
+       is the right register for a service about credentials.
+       Dresden, the Elbe and the Altstadt, c. 1890-1905, public domain. The crop
+       is deliberate: roofline along the top, the Augustusbrucke arches, and the
+       Elbe filling the lower half in the blue-green the brand teal came from.
+       No sky, which would read as an empty wash. Provenance in app/CREDITS.md.
        alt="" — decorative, it carries nothing a reader needs.
        Swapping the image is two lines: the src here, and --band-focus in the
        tokens, which places the crop. An all-over pattern is happy centred; a
