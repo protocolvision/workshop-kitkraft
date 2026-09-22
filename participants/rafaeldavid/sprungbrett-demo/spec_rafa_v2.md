@@ -154,9 +154,53 @@ Three things stayed visible, because removing them would make the page mislead r
 
 None of the three reads as a disclaimer block. They are one heading, one parenthesis and one line of small text.
 
+## Tell us more
+
+A section under the roles table. Four questions the page asks back — shifts including nights, moving city, a driving licence, a fixed-term contract to start — each answerable Yes, No or Skip, and a free-text box. Answering re-runs the scoring immediately and a quiet line above the table reports the delta for two seconds: "+3 roles · 1 requirement met". Rows that have just joined get a brief accent edge.
+
+The free text is read by a literal keyword map in `data/context-map.json`: night or shift, relocate or umzug, driving licence, Teilzeit, remote. No model, no randomness, no inference. A phrase matching nothing is still recorded and shown back as a chip that says so, because claiming to have understood something is worse than saying you did not.
+
+**It has to move the numbers, or it is theatre.** The answers feed a fifth score component, `score_context_fit`, weighted at 0.17, which reads listing fields that exist for the purpose: `requires_shift_work`, `requires_licence`, `contract_type`, `part_time_possible`, `remote_possible`. Unanswered is 0.6 on a constrained listing, because not knowing is not the same as a no; the binding constraint wins, so the component is a minimum rather than an average. Willingness to move raises the floor on city fit from 0.4 to 0.8 instead. A yes to the driving licence closes the licence gap in "What you're missing". Where an answer would do nothing for a profile, it does nothing.
+
+The answers, the notes and the derived facts all go into `profile.json`, and the fifth component into `scored.json` and `shortlist.csv`, so the downloads keep telling the truth about what produced the result.
+
+## Languages
+
+Six interface languages, offered as autonyms — the language written in itself — with the English name beneath: Deutsch, English, Українська, Türkçe, العربية, Español. Strings live in `app/strings.js`, loaded with a plain script tag like the data.
+
+Interface strings only. Listing text, employer names, credential procedures and gap content stay in their source language, because those are real German-language sources and translating them here would be inventing a translation nobody checked. A section whose content stays German still gets a translated heading.
+
+**Not flags.** A flag is a country, not a language: German needs three, Spanish twenty-odd, Arabic more than twenty. The failure mode is not neutral either — a Russian flag shown to a Ukrainian speaker is the worst possible opening for exactly the people this page is for. `showFlags` sits in `strings.js`, default `false`, so the question can be looked at rather than argued about; switched on it renders an emoji, never an image, so nothing loads either way.
+
+**The chooser.** On a first visit, a row of six large targets under the headline, preselected from `navigator.language` on the primary subtag and falling back to English. After a choice it collapses into a compact control in the header, remembered in `localStorage` inside a try/catch, with a "change language" link in the footer as a second route. The greeting under the headline is itself the control: italic, lighter and smaller than the headline, clickable, opening the chooser in place.
+
+**Arabic mirrors completely.** `dir` is set on the root and the CSS uses logical properties throughout, so the header, the table, the right-hand meta column and the scroll-spy underline all turn round together. Arabic renders upright in the greeting: it has no italic form, and a browser faking one by slanting the glyphs reads as broken. Each greeting carries its own `lang` while it is shown, so a screen reader pronounces it correctly. The rotation stops once a language is chosen, because cycling to Ukrainian while the English chip is marked current contradicts the selection.
+
+## The brand
+
+The demo had been wearing the Protocol Institute's colours. It should not: it is a standalone product inside the demo, and the workshop's palette carries meaning it has no business borrowing.
+
+So Sprungbrett has its own, and it is generated rather than chosen. `brand/generate-brand.js` derives a palette, a radius step, a hairline alpha, a motion duration and the wordmark's weight and tracking from one integer seed, deterministically. The seed is picked by a rule written down in `brand/README.md`: the first seed from 1 whose palette passes every contrast pair the app actually uses at WCAG AA. That is **789**, after 788 rejections, 571 of them on white-on-primary alone.
+
+The app reads custom properties from `app/brand.css` and contains no hex value of its own, so reseeding is one command. The seed does not pick the typeface: Inter is already chosen and licensed, and the wordmark is the name set plainly, nothing more. Sprungbrett means springboard, which is the whole idea.
+
+Honest limit, recorded in the brand README: the rule tests contrast and nothing else, and at 789 the supporting hue landed a warm rust rather than the green a "fit" colour is usually expected to be. The fix for that is a hue constraint added to the rule, not a hand-edited value.
+
+## What the programmes are, and are not
+
+"What you're missing" names real programmes, link-checked on 2026-09-22; every row carries its `url`, its `url_status` and the date it was checked.
+
+The rule from step 2 applies to all of it: **never imply one path per profession.** So where an entry is one chamber's course, one Land's procedure, a statute rather than a course, or a private vendor certificate, the row says so in its own words.
+
+- **Engineering has no single recognition procedure.** Sixteen Land acts govern the title *Ingenieur*, working as an engineer is generally unrestricted, and for most employers the practical gap is a ZAB comparability statement plus an anabin lookup rather than a recognition decision. One Land chamber is cited, and reads as an example.
+- **Nursing has no national programme.** The authority and the shape of the compensation measure, adaptation course or knowledge examination, are set per Bundesland, which is why those rows point at the Anerkennungs-Finder and the counselling search rather than a named course.
+- The §71 SGB XI row is the statute, not a course. The Elektrofachkraft and IHK Externenprüfung rows are each one chamber's page.
+- The two AWS certificates are a private vendor signal, listed only because no public body certifies those roles.
+- Durations that could not be stood behind were dropped rather than invented, and no fee is recorded anywhere.
+
 ## The demo's declared lines
 
-- **Exports:** `shortlist.csv`, `gaps.csv` and `outreach.csv`, all schema v1, plus the four JSON intermediates `profile.json`, `credentials.json`, `archetypes.json` and `scored.json`. Every listing scored, rejects included.
+- **Exports:** `shortlist.csv` (schema v1, plus `score_context_fit`), `gaps.csv` (schema v2) and `outreach.csv` (schema v1), plus the four JSON intermediates `profile.json`, `credentials.json`, `archetypes.json` and `scored.json`. Every listing scored, rejects included.
 - **Interface:** a static page. Open `app/index.html` in a desktop browser; the exports are file handoffs in the column orders above.
 - **Adapts to:** the city, German level and sector. Not the profile: the three profiles are fixtures.
 
