@@ -15,3 +15,5 @@
 | 2026-09-21T19:35:17Z | S1 | rheaplex | memory | S2 factory design: pitch as 2-4 references joined by 'plus', each owning one layer (structure / density / mood), same term-composition grammar as the art grammar; pitch is compiled into tokens, tokens become the touchstones, references only revisited on drift |
 | 2026-09-22T20:25:49Z | S2 | rheaplex | progress | factory from inventory: rung 1; SKILL, example |
 | 2026-09-22T20:25:49Z | S2 | rheaplex | memory | three cold runs by fresh agents found: no output skeleton, no first-run rules, motion token with no layer row, duplicate version keys; fixed in SKILL/README, not in the example |
+| 2026-09-22T20:43:34Z | S2 | rheaplex | progress | factory v1.1: layout step (specified or discovered), medium-derived token categories, second cold example on a generative brief |
+| 2026-09-22T20:43:34Z | S2 | rheaplex | memory | cold run on a non-web medium showed the token list was web-shaped (type and motion had no referent); categories are now named from the medium |
