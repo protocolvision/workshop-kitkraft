@@ -90,9 +90,7 @@ window.DATA = {
         ],
         "seniority_band": "mid",
         "recognition_status": "not_started",
-        "held_credential_ids": [
-          "course-sql-modelling"
-        ],
+        "held_credential_ids": [],
         "archetype_ids": [
           "a-backend-dev",
           "a-data-eng",
@@ -919,7 +917,7 @@ window.DATA = {
   "archetypes": {
     "schema_version": 1,
     "synthetic": true,
-    "note": "Archetypes are judgement written down in advance: three roles each invented profile could plausibly land. Requirements are illustrative only. Outreach targets are roles and organisation types, never people.",
+    "note": "Archetypes are judgement written down in advance: three roles each invented profile could plausibly land. The programmes attached to them are real and were checked on 2026-09-22; each carries its url_status. Where an entry is one chamber’s offer, one Land’s procedure or a statute rather than a course, it says so in its own words: there is never one path per profession. Outreach targets are roles and organisation types, never people.",
     "archetypes": [
       {
         "archetype_id": "a-nurse-ward",
@@ -943,22 +941,67 @@ window.DATA = {
           },
           "credentials": [
             {
-              "credential_id": "cert-telc-b2-pflege",
-              "gap_type": "certification",
-              "item": "telc Deutsch B2-C1 Beruf Pflege certificate",
-              "why": "Several Länder and many hospital employers ask for a nursing-specific language certificate rather than a general B2.",
-              "typical_duration": "typically 4-8 months of course time, depending on the level you start from",
-              "next_step": "Ask the competent body which certificate it accepts before booking a course."
+              "credential_id": "anerkennungs-finder",
+              "gap_type": "recognition",
+              "item": "Anerkennungs-Finder",
+              "provider": "Bundesinstitut für Berufsbildung (BIBB) / Anerkennung in Deutschland",
+              "why": "The federal portal's step-by-step tool that identifies which authority handles a given profession in a given Bundesland and what the recognition application requires.",
+              "who_it_is_for": "The portal addresses people with a vocational qualification obtained abroad who want to know whether and where a recognition procedure applies to them.",
+              "typical_duration": "",
+              "caveat": "There is no national programme here: the authority and the shape of the compensation measure are set per Bundesland. This tool tells you which applies to you.",
+              "next_step": "Start with free counselling: the authority, and what it will ask for, depends on your Bundesland.",
+              "url": "https://www.anerkennung-in-deutschland.de/de/interest/finder/profession",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             },
             {
-              "credential_id": "course-anpassung-or-kenntnis",
-              "gap_type": "course",
-              "item": "Anpassungslehrgang or preparation for the Kenntnisprufung, whichever the authority sets",
-              "why": "Where the authority finds substantial differences, one of these two is the route named in its decision. Which one applies is not decided here.",
-              "typical_duration": "typically 6-12 months for an Anpassungslehrgang; typically 3-6 months of preparation for a Kenntnisprufung",
-              "next_step": "Wait for the authority's written decision, which names the route that applies to your case."
+              "credential_id": "counselling-search-beratungssuche",
+              "gap_type": "recognition",
+              "item": "Counselling search (Beratungssuche)",
+              "provider": "Anerkennung in Deutschland (BIBB) / IQ Netzwerk counselling centres",
+              "why": "A directory of free counselling offices, largely run through the IQ Netzwerk, that advise on recognition procedures and on what documents an application needs.",
+              "who_it_is_for": "The portal presents it for people who want advice on recognising a qualification obtained abroad before or during an application.",
+              "typical_duration": "",
+              "next_step": "Start with free counselling: the authority, and what it will ask for, depends on your Bundesland.",
+              "url": "https://www.anerkennung-in-deutschland.de/html/en/counselling-search.php",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "en",
+              "real": true
+            },
+            {
+              "credential_id": "financial-support-for-recognition-incl-the-anerk",
+              "gap_type": "funding",
+              "item": "Financial support for recognition, incl. the Anerkennungszuschuss",
+              "provider": "Bundesministerium für Bildung und Forschung (BMBF) via Anerkennung in Deutschland",
+              "why": "The federal overview page of grants that reimburse recognition-procedure costs such as translations, certifications and travel, with the Anerkennungszuschuss as the main federal scheme.",
+              "who_it_is_for": "In the programme's own framing: people with a qualification obtained abroad, resident in Germany, whose income falls under stated limits; the page states that funding must be applied for before the recognition application is submitted.",
+              "typical_duration": "",
+              "next_step": "Ask the listed body whether your case qualifies; eligibility is decided case by case.",
+              "url": "https://www.anerkennung-in-deutschland.de/html/de/finanzielle-foerderung.php",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             }
-          ]
+          ],
+          "language_programme": {
+            "credential_id": "telc-deutsch-b1-b2-pflege",
+            "gap_type": "language",
+            "item": "telc Deutsch B1·B2 Pflege",
+            "provider": "telc gGmbH",
+            "why": "A German language certificate examination whose reading, listening, writing and speaking tasks are built around nursing work situations, reported at either B1 or B2.",
+            "who_it_is_for": "telc describes it as the German examination for nursing professionals who need to show German language competence for their profession.",
+            "typical_duration": "typically about 115 minutes written plus an oral part of about 16 minutes, per telc's stated exam structure",
+            "next_step": "Check the level the employer asks for before booking, and whether a funded course covers it.",
+            "url": "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b1-b2-nursing/",
+            "url_status": 200,
+            "url_checked_on": "2026-09-22",
+            "page_language": "en",
+            "real": true
+          }
         },
         "outreach": [
           {
@@ -1003,22 +1046,67 @@ window.DATA = {
           },
           "credentials": [
             {
-              "credential_id": "course-pflegebasis",
-              "gap_type": "course",
-              "item": "Basiskurs Pflege or an equivalent care-assistant qualification from a recognised provider",
-              "why": "Assistant posts outside the recognition procedure usually ask for a short German care qualification.",
-              "typical_duration": "typically 2-4 months part time",
-              "next_step": "Ask the employer whether the Anerkennungspraktikum route makes this course unnecessary in your case."
+              "credential_id": "types-of-recognition-procedure-anpassungslehrgan",
+              "gap_type": "recognition",
+              "item": "Types of recognition procedure (Anpassungslehrgang and Kenntnisprüfung)",
+              "provider": "Anerkennung in Deutschland (BIBB)",
+              "why": "An explanation of the procedure routes, including the compensation measures — an adaptation course or a knowledge examination — that are set when substantial differences are found.",
+              "who_it_is_for": "Written for applicants and advisers who need to understand which procedure type applies to a regulated profession.",
+              "typical_duration": "",
+              "caveat": "Which route applies — adaptation course or knowledge examination — is set by the authority in your Bundesland, not here.",
+              "next_step": "Start with free counselling: the authority, and what it will ask for, depends on your Bundesland.",
+              "url": "https://www.anerkennung-in-deutschland.de/html/en/pro/types-of-procedure.php",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "en",
+              "real": true
             },
             {
-              "credential_id": "cert-first-aid-de",
-              "gap_type": "certification",
-              "item": "Erste-Hilfe-Kurs certificate to German standards",
-              "why": "Routinely asked for at the start of a care post.",
-              "typical_duration": "typically one day",
-              "next_step": "Book with a recognised provider."
+              "credential_id": "after-the-notice-nach-dem-bescheid",
+              "gap_type": "recognition",
+              "item": "After the notice (Nach dem Bescheid)",
+              "provider": "Anerkennung in Deutschland (BIBB)",
+              "why": "Guidance on what the recognition decision means in practice, including what a partial-recognition notice obliges the holder to do next.",
+              "who_it_is_for": "Aimed at applicants who have received a decision and need to work out the next step.",
+              "typical_duration": "",
+              "next_step": "Start with free counselling: the authority, and what it will ask for, depends on your Bundesland.",
+              "url": "https://www.anerkennung-in-deutschland.de/html/en/after-the-notice.php",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "en",
+              "real": true
+            },
+            {
+              "credential_id": "bildungsgutschein",
+              "gap_type": "funding",
+              "item": "Bildungsgutschein",
+              "provider": "Bundesagentur für Arbeit",
+              "why": "A voucher through which the employment agency or jobcentre takes on the cost of an approved continuing-training measure, which can include adaptation courses.",
+              "who_it_is_for": "In the agency's own framing: people whose training is needed to end unemployment or avert impending unemployment; the page states that a personal advisory meeting decides the individual case and that the provider and the course must be approved by a competent body.",
+              "typical_duration": "",
+              "next_step": "Ask the listed body whether your case qualifies; eligibility is decided case by case.",
+              "url": "https://www.arbeitsagentur.de/karriere-und-weiterbildung/bildungsgutschein",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             }
-          ]
+          ],
+          "language_programme": {
+            "credential_id": "berufssprachkurse-zur-anerkennung-beruflicher-ab",
+            "gap_type": "language",
+            "item": "Berufssprachkurse zur Anerkennung beruflicher Abschlüsse im Gesundheitswesen",
+            "provider": "Bundesamt für Migration und Flüchtlinge (BAMF)",
+            "why": "Federally funded vocational German courses that teach the profession-specific language used in wards, care homes and outpatient care alongside the recognition procedure.",
+            "who_it_is_for": "BAMF names two target groups: academic health professions at target level C1, and Gesundheitsfachberufe including nurses and midwives at target level B2.",
+            "typical_duration": "typically 600 teaching units, the figure BAMF states for both course strands",
+            "next_step": "Check the level the employer asks for before booking, and whether a funded course covers it.",
+            "url": "https://www.bamf.de/DE/Themen/Integration/ZugewanderteTeilnehmende/AnerkennungsBSK/anerkennungsbsk-node.html",
+            "url_status": 200,
+            "url_checked_on": "2026-09-22",
+            "page_language": "de",
+            "real": true
+          }
         },
         "outreach": [
           {
@@ -1058,30 +1146,67 @@ window.DATA = {
           },
           "credentials": [
             {
-              "credential_id": "course-qm-gesundheit",
-              "gap_type": "course",
-              "item": "Short course in Qualitatsmanagement im Gesundheitswesen",
-              "why": "Quality and coordination ads in this group name a QM qualification more often than they name recognition.",
-              "typical_duration": "typically 2-5 months part time",
-              "next_step": "Compare providers through the Land's further-training database."
-            },
-            {
-              "credential_id": "cert-goethe-telc-b2",
+              "credential_id": "dgcc-zertifizierte-case-management-weiterbildung",
               "gap_type": "certification",
-              "item": "General B2 certificate, for example Goethe-Zertifikat B2 or telc Deutsch B2",
-              "why": "Non-regulated posts accept a general certificate, so the nursing-specific one is not needed for this route.",
-              "typical_duration": "typically 3-6 months of course time from B1",
-              "next_step": "Book the exam once a placement test puts you at B2."
+              "item": "DGCC-zertifizierte Case-Management-Weiterbildung",
+              "provider": "Deutsche Gesellschaft für Care und Case Management (DGCC)",
+              "why": "A certified case-management qualification delivered by institutes the DGCC recognises, covering case-management method, supervision and practice work.",
+              "who_it_is_for": "The DGCC addresses practitioners in health and social services — nursing, social work, disability services, insurance and employment integration — seeking a formal case-management qualification.",
+              "typical_duration": "typically 210 continuing-education hours across modules, the scope DGCC states",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://www.dgcc.de/cm-weiterbildung/weiterbildungsangebote/",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             },
             {
-              "credential_id": "doc-zab-statement",
-              "gap_type": "document",
-              "item": "ZAB Statement of Comparability for the foreign degree",
-              "why": "Not recognition, and generally not required to work. Some employers and visa procedures ask for it as a document about the qualification.",
-              "typical_duration": "typically 3 months for the Zentralstelle to issue it",
-              "next_step": "Ask the employer whether they need it at all before applying for one."
+              "credential_id": "71-sgb-xi-verantwortliche-pflegefachkraft-legal-",
+              "gap_type": "certification",
+              "item": "§ 71 SGB XI — verantwortliche Pflegefachkraft (legal text)",
+              "provider": "Bundesministerium der Justiz / Bundesamt für Justiz (gesetze-im-internet.de)",
+              "why": "The statutory text that requires a care service to be led by a responsible nursing professional holding a management qualification of at least 460 hours; it is the legal basis, not a course.",
+              "who_it_is_for": "It applies to nursing services and to the person named as the responsible nursing professional.",
+              "typical_duration": "the statute names a qualification measure of at least 460 hours",
+              "caveat": "This is the statute itself, not a course. The 460-hour qualification it names is delivered by many providers, and the conditions are set in Land law.",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://www.gesetze-im-internet.de/sgb_11/__71.html",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
+            },
+            {
+              "credential_id": "aufstiegs-baf-g-afbg",
+              "gap_type": "funding",
+              "item": "Aufstiegs-BAföG (AFBG)",
+              "provider": "Bundesministerium für Bildung und Forschung (BMBF)",
+              "why": "A federal scheme of grants and loans towards the cost of vocational advancement qualifications (Fortbildungsabschlüsse) and, in some cases, living costs during them.",
+              "who_it_is_for": "In the scheme's own framing: people pursuing a vocational advancement qualification; the site's 'Wer wird gefördert?' section sets out the conditions.",
+              "typical_duration": "",
+              "next_step": "Ask the listed body whether your case qualifies; eligibility is decided case by case.",
+              "url": "https://www.aufstiegs-bafoeg.de/aufstiegsbafoeg/de/home/home_node.html",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             }
-          ]
+          ],
+          "language_programme": {
+            "credential_id": "telc-deutsch-b2-c1-beruf",
+            "gap_type": "language",
+            "item": "telc Deutsch B2·C1 Beruf",
+            "provider": "telc gGmbH",
+            "why": "A workplace German examination reported at either B2 or C1, testing communication in written and spoken work situations.",
+            "who_it_is_for": "telc frames it for people who need to show work-related German across two levels in one examination.",
+            "typical_duration": "",
+            "next_step": "Check the level the employer asks for before booking, and whether a funded course covers it.",
+            "url": "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2c1-business/",
+            "url_status": 200,
+            "url_checked_on": "2026-09-22",
+            "page_language": "en",
+            "real": true
+          }
         },
         "outreach": [
           {
@@ -1120,28 +1245,74 @@ window.DATA = {
             "required": true,
             "gap_type": "recognition",
             "item": "Permission to use the protected title Ingenieur has not been applied for",
-            "why": "Where the post carries the title Ingenieur, the Ingenieurkammer of the Land must permit it. Work under another job title often does not need it.",
-            "typical_duration": "typically 2-4 months for the chamber to decide",
-            "next_step": "Ask the Ingenieurkammer of the Land whether the posts you want require the title, then apply if they do."
+            "why": "Working as an engineer is generally not restricted in Germany; only the title Ingenieur is. There is no single national procedure: sixteen Land engineering acts govern it, and the competent body is a Land chamber or a district government, sometimes both. For most employers the practical gap is a ZAB comparability statement and an anabin entry rather than a recognition decision.",
+            "typical_duration": "varies by Land; one chamber currently states around three months",
+            "next_step": "Check whether the posts you want actually carry the title. If they do, ask the Ingenieurkammer of your own Bundesland, not the one cited as an example below."
           },
           "credentials": [
             {
-              "credential_id": "cert-cad-vendor",
-              "gap_type": "certification",
-              "item": "Vendor certification for the CAD system the employer uses",
-              "why": "Ads in this group name a specific CAD system, and a vendor certificate is the shortest way to evidence it.",
-              "typical_duration": "typically 1-3 months of part-time preparation",
-              "next_step": "Read the ads first and certify on the system they actually name."
+              "credential_id": "statement-of-comparability-for-foreign-higher-ed",
+              "gap_type": "recognition",
+              "item": "Statement of Comparability for foreign higher education qualifications",
+              "provider": "Zentralstelle für ausländisches Bildungswesen (ZAB), KMK",
+              "why": "An official certificate that describes a foreign university degree and states which German qualification it compares to.",
+              "who_it_is_for": "ZAB presents it as proof of a qualification towards German authorities, embassies and employers, including for visa and EU Blue Card applications; ZAB states it does not entitle the holder to work in a regulated profession and does not convert grades.",
+              "typical_duration": "",
+              "next_step": "Start with free counselling: the authority, and what it will ask for, depends on your Bundesland.",
+              "url": "https://zab.kmk.org/en/statement-comparability",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "en",
+              "real": true
             },
             {
-              "credential_id": "course-din-iso-gps",
-              "gap_type": "course",
-              "item": "Refresher on German and ISO drawing standards, for example geometrical product specification",
-              "why": "Tolerancing conventions differ, and this group's work is checked against those standards.",
-              "typical_duration": "typically 2-5 days",
-              "next_step": "Chambers and technical academies run these as short seminars."
+              "credential_id": "berufsbezeichnung-ingenieur-with-a-degree-obtain",
+              "gap_type": "recognition",
+              "item": "Berufsbezeichnung Ingenieur with a degree obtained abroad",
+              "provider": "Ingenieurkammer Niedersachsen (example of a Land chamber)",
+              "why": "The chamber procedure that checks whether a degree obtained abroad is equivalent for the purpose of using the protected title Ingenieurin/Ingenieur; the chamber notes compensation measures where substantial differences are found.",
+              "who_it_is_for": "The chamber addresses holders of engineering degrees obtained abroad who want to use the professional title; the title is governed by sixteen separate Land engineering acts, so the competent body differs by Bundesland.",
+              "typical_duration": "typically around three months, the processing time this chamber currently states",
+              "caveat": "One Land chamber, cited as an example. The title is governed by sixteen separate Land engineering acts, and the competent body where you live may be a different chamber or a district government.",
+              "next_step": "Start with free counselling: the authority, and what it will ask for, depends on your Bundesland.",
+              "url": "https://www.ingenieurkammer.de/das-koennen-wir-fuer-sie-tun/berufsbezeichnung-ingenieur-und-berufsanerkennung/abschluss-im-ausland",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
+            },
+            {
+              "credential_id": "weiterbildung-entwicklung-konstruktion",
+              "gap_type": "certification",
+              "item": "Weiterbildung Entwicklung & Konstruktion",
+              "provider": "VDI Wissensforum (Verein Deutscher Ingenieure)",
+              "why": "The engineering association's seminar and certificate-course programme for design and development work, covering current standards such as ISO GPS, dimensional and geometrical tolerancing, and development methods.",
+              "who_it_is_for": "VDI addresses engineers and technical designers working in development and design who want training on these standards and methods.",
+              "typical_duration": "",
+              "caveat": "A seminar programme rather than a single qualification; the individual seminars come and go.",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://www.vdi-wissensforum.de/weiterbildung-maschinenbau/entwicklung-konstruktion/",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             }
-          ]
+          ],
+          "language_programme": {
+            "credential_id": "telc-deutsch-b2-c1-beruf",
+            "gap_type": "language",
+            "item": "telc Deutsch B2·C1 Beruf",
+            "provider": "telc gGmbH",
+            "why": "A workplace German examination reported at either B2 or C1, testing communication in written and spoken work situations.",
+            "who_it_is_for": "telc frames it for people who need to show work-related German across two levels in one examination.",
+            "typical_duration": "",
+            "next_step": "Check the level the employer asks for before booking, and whether a funded course covers it.",
+            "url": "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2c1-business/",
+            "url_status": 200,
+            "url_checked_on": "2026-09-22",
+            "page_language": "en",
+            "real": true
+          }
         },
         "outreach": [
           {
@@ -1181,28 +1352,65 @@ window.DATA = {
           },
           "credentials": [
             {
-              "credential_id": "course-six-sigma-green",
-              "gap_type": "course",
-              "item": "Six Sigma Green Belt training",
-              "why": "Process improvement posts in this group name it often enough that its absence is noticed.",
-              "typical_duration": "typically 1-3 months part time",
-              "next_step": "Check whether the employer runs its own in-house programme first."
-            },
-            {
-              "credential_id": "cert-refa-grundschein",
+              "credential_id": "refa-grundausbildung-4-0-arbeitsorganisation",
               "gap_type": "certification",
-              "item": "REFA Grundschein in work organisation, or a comparable Arbeitsvorbereitung qualification",
-              "why": "German manufacturing planning has its own method vocabulary, and this is the usual evidence of it.",
-              "typical_duration": "typically 2-4 months part time",
-              "next_step": "Ask the employer which of the two they recognise."
+              "item": "REFA-Grundausbildung 4.0 Arbeitsorganisation",
+              "provider": "REFA AG",
+              "why": "A modular work-organisation qualification covering process analysis, time studies, work design and planning, closing with REFA examinations and a REFA certificate.",
+              "who_it_is_for": "REFA names specialists and managers, industrial and craft masters, technicians and staff from assembly and production planning.",
+              "typical_duration": "",
+              "duration_note": "REFA lists the full Grundausbildung across four parts; the 4.0 variants split it differently, so treat any single figure with care.",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://refa.de/ausbildungen/refa-grundausbildung",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             },
             {
-              "credential_id": "doc-zab-statement",
-              "gap_type": "document",
-              "item": "ZAB Statement of Comparability for the foreign degree",
-              "why": "Not recognition, and generally not required to work. Useful only where an employer or a visa procedure asks for a document about the degree.",
-              "typical_duration": "typically 3 months for the Zentralstelle to issue it",
-              "next_step": "Ask whether it is needed before applying for one."
+              "credential_id": "dgq-lean-six-sigma-certification-path-yellow-gre",
+              "gap_type": "certification",
+              "item": "DGQ Lean Six Sigma certification path (Yellow / Green / Black Belt)",
+              "provider": "Deutsche Gesellschaft für Qualität (DGQ)",
+              "why": "The quality association's certification route for Six Sigma and Lean process-improvement roles, built on the DMAIC model with an examination and a practice project.",
+              "who_it_is_for": "DGQ addresses staff and managers in production and service companies who run process-improvement projects in their own area.",
+              "typical_duration": "typically 8 course days for the Green Belt, including the examination day, per DGQ's course description",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://dgq.de/ihr-weg-zum-zertifikat/six-sigma/",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
+            },
+            {
+              "credential_id": "anabin-database-of-foreign-education-institution",
+              "gap_type": "recognition",
+              "item": "anabin — database of foreign education institutions and degrees",
+              "provider": "Zentralstelle für ausländisches Bildungswesen (ZAB), KMK",
+              "why": "The public ZAB database that records how foreign higher-education institutions and degrees are classified in Germany, which employers and authorities consult directly.",
+              "who_it_is_for": "Open to anyone needing to look up how an institution or degree is classified; it is a database entry, not a certificate.",
+              "typical_duration": "",
+              "next_step": "Start with free counselling: the authority, and what it will ask for, depends on your Bundesland.",
+              "url": "https://anabin.kmk.org/db/institutionen",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
+            },
+            {
+              "credential_id": "aufstiegs-baf-g-afbg",
+              "gap_type": "funding",
+              "item": "Aufstiegs-BAföG (AFBG)",
+              "provider": "Bundesministerium für Bildung und Forschung (BMBF)",
+              "why": "A federal scheme of grants and loans towards the cost of vocational advancement qualifications (Fortbildungsabschlüsse) and, in some cases, living costs during them.",
+              "who_it_is_for": "In the scheme's own framing: people pursuing a vocational advancement qualification; the site's 'Wer wird gefördert?' section sets out the conditions.",
+              "typical_duration": "",
+              "next_step": "Ask the listed body whether your case qualifies; eligibility is decided case by case.",
+              "url": "https://www.aufstiegs-bafoeg.de/aufstiegsbafoeg/de/home/home_node.html",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             }
           ]
         },
@@ -1244,22 +1452,83 @@ window.DATA = {
           },
           "credentials": [
             {
+              "credential_id": "elektrofachkraft-f-r-festgelegte-t-tigkeiten-ihk",
+              "gap_type": "certification",
+              "item": "Elektrofachkraft für festgelegte Tätigkeiten (IHK) nach DGUV Vorschrift 3",
+              "provider": "IHK Würzburg-Schweinfurt (one of many IHKs offering this course)",
+              "why": "A certificate course under DGUV Vorschrift 3 and DGUV-Grundsatz 303-001 that authorises named electrical tasks on installations and machines for people who did not train as electricians.",
+              "who_it_is_for": "The IHK names skilled workers from all commercial-technical non-electrical trades.",
+              "typical_duration": "typically 120 teaching units in this IHK's listing; DGUV sets a minimum of 80 teaching units, and other IHKs schedule differently",
+              "caveat": "One chamber’s course, cited as an example. Every IHK runs its own version with its own dates, scope and admission handling.",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://www.wuerzburg.ihk.de/weiterbildungsprogramm/elektrofachkraft-fuer-festgelegte-taetigkeiten-ihk-nach-dguv-vorschrift-3-127465",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
+            },
+            {
+              "credential_id": "statement-of-comparability-for-foreign-higher-ed",
+              "gap_type": "recognition",
+              "item": "Statement of Comparability for foreign higher education qualifications",
+              "provider": "Zentralstelle für ausländisches Bildungswesen (ZAB), KMK",
+              "why": "An official certificate that describes a foreign university degree and states which German qualification it compares to.",
+              "who_it_is_for": "ZAB presents it as proof of a qualification towards German authorities, embassies and employers, including for visa and EU Blue Card applications; ZAB states it does not entitle the holder to work in a regulated profession.",
+              "typical_duration": "",
+              "next_step": "Start with free counselling: the authority, and what it will ask for, depends on your Bundesland.",
+              "url": "https://zab.kmk.org/en/statement-comparability",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "en",
+              "real": true
+            },
+            {
+              "credential_id": "f-rderung-von-weiterbildung-besch-ftigter-employ",
+              "gap_type": "funding",
+              "item": "Förderung von Weiterbildung Beschäftigter (employer route)",
+              "provider": "Bundesagentur für Arbeit",
+              "why": "The employment agency's route by which an employer applies for subsidies towards course costs and, in some cases, wages while an employee trains.",
+              "who_it_is_for": "In the agency's own framing: companies wanting to qualify their existing staff; the application runs through the employer, and the local agency assesses each case.",
+              "typical_duration": "",
+              "next_step": "Ask the listed body whether your case qualifies; eligibility is decided case by case.",
+              "url": "https://www.arbeitsagentur.de/unternehmen/finanziell/foerderung-von-weiterbildung",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
+            },
+            {
               "credential_id": "cert-fuehrerschein-umschreibung",
               "gap_type": "certification",
               "item": "German driving licence, or conversion (Umschreibung) of a non-EU licence",
-              "why": "Field service ads in this group ask for Fuhrerschein Klasse B as a condition of the post.",
+              "provider": "Fahrerlaubnisbehörde of the city you live in",
+              "why": "Field-service adverts in this group ask for Fuhrerschein Klasse B as a condition of the post.",
+              "who_it_is_for": "Anyone holding a licence issued outside the EU or EEA who intends to keep driving after the first six months.",
               "typical_duration": "typically 2-6 months, depending on whether a test is required",
-              "next_step": "Check the conversion rules with the Fuhrerscheinstelle of the city."
-            },
-            {
-              "credential_id": "course-efft",
-              "gap_type": "course",
-              "item": "Elektrofachkraft fur festgelegte Tatigkeiten, where the post includes electrical work",
-              "why": "Commissioning posts that touch electrical systems require a German qualification for those tasks.",
-              "typical_duration": "typically 1-3 weeks",
-              "next_step": "Ask the employer whether the post's tasks fall under it."
+              "caveat": "No programme link: conversion is handled by the licensing office of your city, and the rules depend on the issuing country.",
+              "next_step": "Ask the Fahrerlaubnisbehörde of your city which rules apply to your licence.",
+              "url": "",
+              "url_status": "",
+              "url_checked_on": "",
+              "page_language": "",
+              "real": true
             }
-          ]
+          ],
+          "language_programme": {
+            "credential_id": "berufssprachkurse-vocational-german-courses",
+            "gap_type": "language",
+            "item": "Berufssprachkurse (vocational German courses)",
+            "provider": "Bundesamt für Migration und Flüchtlinge (BAMF)",
+            "why": "The federal system of vocational German courses, with basic courses at target levels B2 and C1 and special courses for particular occupational fields, ending in a Deutsch-Test für den Beruf.",
+            "who_it_is_for": "BAMF frames them for immigrants who need work-related German; courses run full time or part time, at a provider or with an employer.",
+            "typical_duration": "",
+            "next_step": "Check the level the employer asks for before booking, and whether a funded course covers it.",
+            "url": "https://www.bamf.de/EN/Themen/Integration/ZugewanderteTeilnehmende/DeutschBeruf/deutsch-beruf-node.html",
+            "url_status": 200,
+            "url_checked_on": "2026-09-22",
+            "page_language": "en",
+            "real": true
+          }
         },
         "outreach": [
           {
@@ -1299,22 +1568,52 @@ window.DATA = {
           },
           "credentials": [
             {
-              "credential_id": "cert-cloud-dev-associate",
+              "credential_id": "aws-certified-developer-associate",
               "gap_type": "certification",
-              "item": "Associate-level developer certification for the cloud platform the employer uses",
-              "why": "The ads in this group name a platform, and an associate certificate is the cheapest signal for a candidate without a German work history.",
-              "typical_duration": "typically 2-4 months of part-time preparation",
-              "next_step": "Pick the platform from the shortlist rather than in advance."
+              "item": "AWS Certified Developer – Associate",
+              "provider": "Amazon Web Services (private vendor)",
+              "why": "A vendor examination on developing, deploying and debugging applications on AWS.",
+              "who_it_is_for": "AWS frames it for people with development experience on its platform; there is no German public body that certifies backend developers, so vendor certificates are what job ads name.",
+              "typical_duration": "",
+              "caveat": "A private vendor certificate, not a German qualification. It is listed only because no public body certifies this role.",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://aws.amazon.com/certification/certified-developer-associate/",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "en",
+              "real": true
             },
             {
-              "credential_id": "doc-zab-statement",
-              "gap_type": "document",
-              "item": "ZAB Statement of Comparability for the degree",
-              "why": "Not recognition, and not required to work in this non-regulated field. It appears here only because visa procedures sometimes ask for it.",
-              "typical_duration": "typically 3 months for the Zentralstelle to issue it",
-              "next_step": "Ask whether the specific procedure needs it before applying."
+              "credential_id": "weiterbildungssuche-national-course-database",
+              "gap_type": "funding",
+              "item": "Weiterbildungssuche (national course database)",
+              "provider": "Bundesagentur für Arbeit / mein NOW",
+              "why": "The public search over continuing-training courses in Germany, marking which courses and providers are approved for public funding.",
+              "who_it_is_for": "Open to anyone; it shows which courses a Bildungsgutschein or other public funding could be used for, without deciding any individual case.",
+              "typical_duration": "",
+              "next_step": "Ask the listed body whether your case qualifies; eligibility is decided case by case.",
+              "url": "https://mein-now.de/weiterbildungssuche/",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             }
-          ]
+          ],
+          "language_programme": {
+            "credential_id": "berufssprachkurse-vocational-german-courses",
+            "gap_type": "language",
+            "item": "Berufssprachkurse (vocational German courses)",
+            "provider": "Bundesamt für Migration und Flüchtlinge (BAMF)",
+            "why": "The federal system of vocational German courses, with basic courses at target levels B2 and C1, available full time or part time including evening classes.",
+            "who_it_is_for": "BAMF frames them for immigrants who need work-related German; courses can be run at a provider or directly with an employer.",
+            "typical_duration": "",
+            "next_step": "Check the level the employer asks for before booking, and whether a funded course covers it.",
+            "url": "https://www.bamf.de/EN/Themen/Integration/ZugewanderteTeilnehmende/DeutschBeruf/deutsch-beruf-node.html",
+            "url_status": 200,
+            "url_checked_on": "2026-09-22",
+            "page_language": "en",
+            "real": true
+          }
         },
         "outreach": [
           {
@@ -1354,22 +1653,52 @@ window.DATA = {
           },
           "credentials": [
             {
-              "credential_id": "cert-cloud-data-associate",
+              "credential_id": "aws-certified-data-engineer-associate",
               "gap_type": "certification",
-              "item": "Associate-level data engineering certification for the employer's cloud platform",
-              "why": "Pipeline posts in this group screen on platform experience first.",
-              "typical_duration": "typically 2-4 months of part-time preparation",
-              "next_step": "Match the platform to the shortlisted employers before booking."
+              "item": "AWS Certified Data Engineer – Associate",
+              "provider": "Amazon Web Services (private vendor)",
+              "why": "A vendor examination on building and operating data pipelines, storage and transformation on AWS.",
+              "who_it_is_for": "AWS frames it for people with data-engineering experience on its platform; no German public body certifies data engineers, so vendor certificates are what job ads name.",
+              "typical_duration": "",
+              "caveat": "A private vendor certificate, not a German qualification. It is listed only because no public body certifies this role.",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://aws.amazon.com/certification/certified-data-engineer-associate/",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "en",
+              "real": true
             },
             {
-              "credential_id": "course-sql-modelling",
-              "gap_type": "course",
-              "item": "Dimensional modelling and advanced SQL course",
-              "why": "Warehouse posts ask for modelling, not only pipelines.",
-              "typical_duration": "typically 1-2 months part time",
-              "next_step": "Any structured course is enough; the portfolio matters more."
+              "credential_id": "bildungsgutschein",
+              "gap_type": "funding",
+              "item": "Bildungsgutschein",
+              "provider": "Bundesagentur für Arbeit",
+              "why": "A voucher through which the employment agency or jobcentre takes on the cost of an approved continuing-training measure.",
+              "who_it_is_for": "In the agency's own framing: people whose training is needed to end unemployment or avert impending unemployment; a personal advisory meeting decides the individual case, and both provider and course must be approved by a competent body.",
+              "typical_duration": "",
+              "next_step": "Ask the listed body whether your case qualifies; eligibility is decided case by case.",
+              "url": "https://www.arbeitsagentur.de/karriere-und-weiterbildung/bildungsgutschein",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             }
-          ]
+          ],
+          "language_programme": {
+            "credential_id": "telc-deutsch-b2-c1-beruf",
+            "gap_type": "language",
+            "item": "telc Deutsch B2·C1 Beruf",
+            "provider": "telc gGmbH",
+            "why": "A workplace German examination reported at either B2 or C1, testing communication in written and spoken work situations.",
+            "who_it_is_for": "telc frames it for people who need to show work-related German across two levels in one examination.",
+            "typical_duration": "",
+            "next_step": "Check the level the employer asks for before booking, and whether a funded course covers it.",
+            "url": "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2c1-business/",
+            "url_status": 200,
+            "url_checked_on": "2026-09-22",
+            "page_language": "en",
+            "real": true
+          }
         },
         "outreach": [
           {
@@ -1409,14 +1738,67 @@ window.DATA = {
           },
           "credentials": [
             {
-              "credential_id": "cert-lpic1",
+              "credential_id": "lpic-1-linux-administrator",
               "gap_type": "certification",
-              "item": "Linux administration certification, for example LPIC-1",
-              "why": "Administration posts screen on a Linux certificate where there is no German work history to read.",
-              "typical_duration": "typically 2-4 months of part-time preparation",
-              "next_step": "Two exams; book them separately."
+              "item": "LPIC-1 Linux Administrator",
+              "provider": "Linux Professional Institute (LPI, vendor-neutral non-profit)",
+              "why": "A vendor-neutral certification, taken as two examinations, on installing, configuring and maintaining Linux systems and command-line administration.",
+              "who_it_is_for": "LPI frames it as its entry-level professional certification for Linux system administration.",
+              "typical_duration": "",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://www.lpi.org/our-certifications/lpic-1-overview/",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "en",
+              "real": true
+            },
+            {
+              "credential_id": "externenpr-fung-ihk-final-examination-without-an",
+              "gap_type": "certification",
+              "item": "Externenprüfung — IHK final examination without an apprenticeship",
+              "provider": "IHK Berlin (one of many IHKs; rules and contact differ by chamber district)",
+              "why": "Admission to the IHK final examination in a recognised training occupation such as Fachinformatiker on the basis of work experience rather than a completed apprenticeship, under §§ 46 and 62 BBiG.",
+              "who_it_is_for": "In the IHK's words: experienced practitioners whose work has covered the essential requirements of the target occupation, normally evidenced by one and a half times the usual training duration; applicants apply to the IHK for the district where they live.",
+              "typical_duration": "the IHK states a practical-experience requirement of about 4.5 years for a three-year occupation",
+              "caveat": "One chamber’s rules, cited as an example. Admission is handled per chamber district and differs between them.",
+              "next_step": "Check with the provider which variant applies to you before booking anything.",
+              "url": "https://www.ihk.de/berlin/pruefungen-lehrgaenge/pruefungen/ausbildungspruefungen/termine-in-der-aus-und-weiterbildung/voraussetzungen-zur-pruefungszulassung/externenpruefung-2262828",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
+            },
+            {
+              "credential_id": "bildungsgutschein",
+              "gap_type": "funding",
+              "item": "Bildungsgutschein",
+              "provider": "Bundesagentur für Arbeit",
+              "why": "A voucher through which the employment agency or jobcentre takes on the cost of an approved continuing-training measure, including retraining and partial qualifications.",
+              "who_it_is_for": "In the agency's own framing: people whose training is needed to end unemployment or avert impending unemployment; a personal advisory meeting decides the individual case, and both provider and course must be approved by a competent body.",
+              "typical_duration": "",
+              "next_step": "Ask the listed body whether your case qualifies; eligibility is decided case by case.",
+              "url": "https://www.arbeitsagentur.de/karriere-und-weiterbildung/bildungsgutschein",
+              "url_status": 200,
+              "url_checked_on": "2026-09-22",
+              "page_language": "de",
+              "real": true
             }
-          ]
+          ],
+          "language_programme": {
+            "credential_id": "berufssprachkurse-vocational-german-courses",
+            "gap_type": "language",
+            "item": "Berufssprachkurse (vocational German courses)",
+            "provider": "Bundesamt für Migration und Flüchtlinge (BAMF)",
+            "why": "The federal system of vocational German courses, with basic courses at target levels B2 and C1 and special courses for particular occupational fields.",
+            "who_it_is_for": "BAMF frames them for immigrants who need work-related German; courses run full time or part time, at a provider or with an employer.",
+            "typical_duration": "",
+            "next_step": "Check the level the employer asks for before booking, and whether a funded course covers it.",
+            "url": "https://www.bamf.de/DE/Themen/Integration/ZugewanderteTeilnehmende/DeutschBeruf/deutsch-beruf-node.html",
+            "url_status": 200,
+            "url_checked_on": "2026-09-22",
+            "page_language": "de",
+            "real": true
+          }
         },
         "outreach": [
           {
@@ -1439,7 +1821,12 @@ window.DATA = {
           }
         ]
       }
-    ]
+    ],
+    "programmes_source": {
+      "checked_on": "2026-09-22",
+      "entries": 35,
+      "note": "Merged from a link-checked programme survey. Fee information was deliberately not recorded, and nothing here states that any particular person qualifies for anything."
+    }
   },
   "credentialMap": {
     "schema_version": 1,

@@ -279,14 +279,20 @@
       var need = levelIndex(req.german_level_required);
       var have = levelIndex(fields.german_level);
       if (have < need) {
+        var lp = req.language_programme;
         rows.push({
           archetype_id: arch.archetype_id,
           archetype_label: arch.label,
           gap_type: 'language',
-          item: 'German ' + req.german_level_required + ' — the card currently says ' + fields.german_level,
-          why: req.german_why,
+          item: 'German ' + req.german_level_required + ' — you have ' + fields.german_level +
+                (lp ? '. Route: ' + lp.item : ''),
+          provider: lp ? lp.provider : '',
+          why: req.german_why + (lp ? ' ' + lp.why : ''),
+          caveat: lp && lp.caveat ? lp.caveat : '',
           typical_duration: languageDuration(need - have),
-          next_step: 'Take a placement test at a Volkshochschule or another licensed provider, then book the level it puts you in.'
+          next_step: lp ? lp.next_step : 'Take a placement test at a licensed provider and book the level it puts you in.',
+          url: lp ? lp.url : '',
+          url_checked_on: lp ? lp.url_checked_on : ''
         });
       }
 
@@ -310,9 +316,13 @@
           archetype_label: arch.label,
           gap_type: cred.gap_type,
           item: cred.item,
+          provider: cred.provider || '',
           why: cred.why,
-          typical_duration: cred.typical_duration,
-          next_step: cred.next_step
+          caveat: (cred.caveat || '') + (cred.duration_note ? ' ' + cred.duration_note : ''),
+          typical_duration: cred.typical_duration || '',
+          next_step: cred.next_step,
+          url: cred.url || '',
+          url_checked_on: cred.url_checked_on || ''
         });
       }
     }
@@ -367,7 +377,8 @@
     'score_city_fit', 'score_seniority_fit', 'score_context_fit', 'shortlisted',
     'reason', 'synthetic'
   ];
-  var GAPS_COLUMNS = ['archetype_id', 'gap_type', 'item', 'why', 'typical_duration', 'next_step', 'synthetic'];
+  var GAPS_COLUMNS = ['archetype_id', 'gap_type', 'item', 'provider', 'why', 'caveat',
+    'typical_duration', 'next_step', 'url', 'url_checked_on', 'synthetic'];
   var OUTREACH_COLUMNS = ['archetype_id', 'target_type', 'target', 'organisation', 'why', 'synthetic'];
 
   function csvCell(value) {
@@ -413,8 +424,10 @@
     for (var i = 0; i < state.gaps.length; i++) {
       var g = state.gaps[i];
       records.push({
-        archetype_id: g.archetype_id, gap_type: g.gap_type, item: g.item, why: g.why,
-        typical_duration: g.typical_duration, next_step: g.next_step, synthetic: true
+        archetype_id: g.archetype_id, gap_type: g.gap_type, item: g.item,
+        provider: g.provider || '', why: g.why, caveat: g.caveat || '',
+        typical_duration: g.typical_duration || '', next_step: g.next_step,
+        url: g.url || '', url_checked_on: g.url_checked_on || '', synthetic: true
       });
     }
     return csvFrom(GAPS_COLUMNS, records);
@@ -679,6 +692,21 @@
     return STRINGS.languages[0];
   }
 
+  /* What the browser says, matched on the primary subtag only. This preselects
+     and nothing else: no redirect, no silent content change. */
+  function browserLang() {
+    var nav = (window.navigator && (navigator.language || navigator.userLanguage)) || '';
+    var primary = String(nav).toLowerCase().split('-')[0];
+    for (var i = 0; i < STRINGS.languages.length; i++) {
+      if (STRINGS.languages[i].code === primary) { return STRINGS.languages[i].code; }
+    }
+    return STRINGS.fallback;
+  }
+
+  function hasChosenLang() {
+    try { return !!window.localStorage.getItem(STORE_KEY); } catch (e) { return false; }
+  }
+
   function rememberLang(code) {
     try { window.localStorage.setItem(STORE_KEY, code); } catch (e) { /* private mode: fine */ }
   }
@@ -728,6 +756,11 @@
     setText('s-spy-roles', t('spyRoles'));
     setText('s-spy-missing', t('spyMissing'));
     setText('s-spy-outreach', t('spyOutreach'));
+    setText('change-lang', t('changeLanguage'));
+    var strip = document.getElementById('lang-strip');
+    if (strip && !strip.hidden) { renderLangStrip(); }
+    var sel = document.getElementById('lang');
+    if (sel) { sel.value = LANG; }
 
     renderAccounts();
     renderGreeting();
@@ -745,6 +778,58 @@
     }
   }
 
+  /* First visit gets the strip; a returning visitor gets the compact control. */
+  function renderLangStrip() {
+    var host = document.getElementById('lang-strip-row');
+    host.textContent = '';
+    for (var i = 0; i < STRINGS.languages.length; i++) {
+      (function (lang) {
+        var b = el('button', 'langopt');
+        b.type = 'button';
+        b.setAttribute('aria-pressed', lang.code === LANG ? 'true' : 'false');
+        b.setAttribute('lang', lang.code);
+        b.setAttribute('aria-label', lang.autonym + ' (' + lang.english + ')');
+        var auto = el('span', 'auto',
+          (STRINGS.config && STRINGS.config.showFlags ? lang.flag + ' ' : '') + lang.autonym);
+        b.appendChild(auto);
+        b.appendChild(el('span', 'eng', lang.english));
+        b.addEventListener('click', function () {
+          langChosen = true;
+          applyLanguage(lang.code);
+          rememberLang(lang.code);
+          collapseStrip();
+        });
+        host.appendChild(b);
+      })(STRINGS.languages[i]);
+    }
+  }
+
+  function collapseStrip() {
+    show('lang-strip', false);
+    show('lang', true);
+    document.getElementById('lang').value = LANG;
+    document.getElementById('greeting').setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleStrip() {
+    var strip = document.getElementById('lang-strip');
+    if (strip.hidden) { openStrip(); } else { closeStrip(); }
+  }
+
+  function closeStrip() {
+    show('lang-strip', false);
+    document.getElementById('greeting').setAttribute('aria-expanded', 'false');
+  }
+
+  function openStrip() {
+    renderLangStrip();
+    show('lang-strip', true);
+    document.getElementById('greeting').setAttribute('aria-expanded', 'true');
+    var first = document.querySelector('#lang-strip-row button[aria-pressed="true"]')
+      || document.querySelector('#lang-strip-row button');
+    if (first) { first.focus(); }
+  }
+
   function renderLangSelect() {
     var sel = document.getElementById('lang');
     sel.textContent = '';
@@ -755,6 +840,7 @@
       sel.appendChild(o);
     }
     sel.addEventListener('change', function () {
+      langChosen = true;
       applyLanguage(sel.value);
       rememberLang(sel.value);
     });
@@ -763,24 +849,36 @@
   /* The greeting rotates; the headline does not. The only motion on the page
      that runs without the user doing anything, and it stops for anyone who
      asked for less of it. */
-  var greetTimer = null, greetIndex = 0, greetPaused = false;
+  var greetTimer = null, greetIndex = 0, greetPaused = false, langChosen = false;
+
+  /* Each greeting carries its own lang, and Arabic its own dir, so a screen
+     reader pronounces it correctly even when the page is in another language. */
+  function paintGreeting(meta) {
+    var node = document.getElementById('greeting-text');
+    node.textContent = STRINGS.t[meta.code].greeting;
+    node.setAttribute('lang', meta.code);
+    node.setAttribute('dir', meta.dir);
+    document.getElementById('greeting').setAttribute('aria-label', t('changeLanguage'));
+  }
 
   function renderGreeting() {
-    var node = document.getElementById('greeting-text');
     var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (greetTimer) { clearInterval(greetTimer); greetTimer = null; }
-    if (reduced) {
-      node.textContent = t('greeting');
+    /* Once a language is chosen the rotation stops: an animation that cycles to
+       Ukrainian while the English chip is marked current contradicts itself. */
+    if (reduced || langChosen) {
+      paintGreeting(langMeta(LANG));
       return;
     }
+    var node = document.getElementById('greeting-text');
     greetIndex = 0;
-    node.textContent = STRINGS.t[STRINGS.languages[0].code].greeting;
+    paintGreeting(STRINGS.languages[0]);
     greetTimer = setInterval(function () {
       if (greetPaused) { return; }
       node.className = 'out';
       setTimeout(function () {
         greetIndex = (greetIndex + 1) % STRINGS.languages.length;
-        node.textContent = STRINGS.t[STRINGS.languages[greetIndex].code].greeting;
+        paintGreeting(STRINGS.languages[greetIndex]);
         node.className = '';
       }, 250);
     }, 2500);
@@ -1089,10 +1187,13 @@
         var gap = STATE.gaps[g];
         if (gap.archetype_id !== arch.archetype_id) { continue; }
         var sub = document.createDocumentFragment();
-        sub.appendChild(document.createTextNode(gap.why + ' ' + gap.next_step + ' '));
-        if (gap.gap_type === 'recognition' || gap.gap_type === 'document') {
-          var link = el('a', null, 'anerkennung-in-deutschland.de');
-          link.href = 'https://www.anerkennung-in-deutschland.de/';
+        if (gap.provider) { sub.appendChild(document.createTextNode(gap.provider + '. ')); }
+        sub.appendChild(document.createTextNode(gap.why + ' '));
+        if (gap.caveat) { sub.appendChild(document.createTextNode(gap.caveat + ' ')); }
+        sub.appendChild(document.createTextNode(gap.next_step + ' '));
+        if (gap.url) {
+          var link = el('a', null, gap.url.replace(/^https?:\/\//, '').split('/')[0]);
+          link.href = gap.url;
           link.setAttribute('rel', 'noreferrer');
           sub.appendChild(link);
         }
@@ -1237,7 +1338,100 @@
     deltaTimer = setTimeout(function () { node.className = ''; }, 2000);
   }
 
-  var openStep = 0;  var openStep = 0;
+  var openStep = 0;  function stepDefinitions() {
+    var p = STATE.profile;
+    var entry = CREDENTIAL_MAP[p.profession_key];
+    var above = 0;
+    for (var i = 0; i < STATE.scored.length; i++) { if (STATE.scored[i].shortlisted) { above++; } }
+    var below = STATE.scored.length - above;
+    var archCount = p.archetype_ids.length;
+    var list = archetypesFor(p);
+
+    return [
+      {
+        n: 1, name: 'Read profile', file: 'profile.json',
+        say: p.roles_count + ' roles, ' + p.years_experience + ' years, ' + p.languages_count + ' languages.',
+        rows: [
+          ['Profession', p.profession],
+          ['Qualification', p.qualification],
+          ['Years of experience', String(p.years_experience)],
+          ['Roles recorded', String(p.roles_count)],
+          ['Languages', String(p.languages_count)],
+          ['Seniority band', p.seniority_band],
+          ['Recognition status', p.recognition_status.split('_').join(' ')],
+          ['Not recorded', 'No name, no age, no country of origin, no employer history. Origin appears only as "qualified outside the EU", and it never touches a score.']
+        ]
+      },
+      {
+        n: 2, name: 'Check credentials', file: 'credentials.json',
+        say: (entry.regulated ? 'Regulated profession' : 'Not a regulated profession') + ', next step named.',
+        rows: [
+          ['Regulated', entry.regulated ? 'true' : 'false'],
+          ['What that means', entry.regulated_note],
+          ['Reference occupation', entry.reference_occupation],
+          ['Authority', entry.authority],
+          ['Next step', entry.next_step],
+          ['Verdict on equivalence', entry.equivalence_verdict],
+          ['On the ZAB statement', entry.zab_note],
+          ['Source', entry.source_url]
+        ]
+      },
+      {
+        n: 3, name: 'Derive archetypes', file: 'archetypes.json',
+        say: archCount + ' roles this person could plausibly land.',
+        rows: (function () {
+          var out = [];
+          for (var a = 0; a < list.length; a++) { out.push([list[a].label, list[a].reason]); }
+          return out;
+        })()
+      },
+      {
+        n: 4, name: 'Score listings', file: 'scored.json',
+        say: STATE.scored.length + ' listings scored on 4 components.',
+        rows: [
+          ['Components', 'level fit, sector fit, city fit, seniority fit — kept apart, never blended away'],
+          ['Weights', 'level ' + WEIGHTS.level + ', sector ' + WEIGHTS.sector + ', city ' + WEIGHTS.city + ', seniority ' + WEIGHTS.seniority],
+          ['Threshold', THRESHOLD.toFixed(2) + ', at most ' + MAX_ROWS + ' rows shown'],
+          ['Fields used', STATE.fields.city + ', German ' + STATE.fields.german_level + ', ' + sectorLabel(STATE.fields.sector)],
+          ['Top row', STATE.scored.length ? STATE.scored[0].listing.title + ' at ' + STATE.scored[0].total.toFixed(2) : '—']
+        ]
+      },
+      {
+        n: 5, name: 'Find gaps', file: 'gaps.csv',
+        say: STATE.gaps.length + ' missing items across ' + archCount + ' archetypes.',
+        rows: (function () {
+          var out = [];
+          for (var a = 0; a < list.length; a++) {
+            var counts = {}, order = [];
+            for (var g = 0; g < STATE.gaps.length; g++) {
+              if (STATE.gaps[g].archetype_id !== list[a].archetype_id) { continue; }
+              var t = STATE.gaps[g].gap_type;
+              if (!counts[t]) { counts[t] = 0; order.push(t); }
+              counts[t]++;
+            }
+            var parts = [];
+            for (var o = 0; o < order.length; o++) { parts.push(counts[order[o]] + ' ' + order[o]); }
+            out.push([list[a].label, parts.length ? parts.join(', ') : 'nothing missing against the stated requirements']);
+          }
+          out.push(['How it is computed', 'The profile is compared against each archetype’s stated requirements: German level, whether a recognition step has been started, and the certificates and courses that archetype names.']);
+          return out;
+        })()
+      },
+      {
+        n: 6, name: 'Assemble outputs', file: 'shortlist.csv',
+        say: above + ' above the line, ' + below + ' below, three files out.',
+        rows: [
+          ['shortlist.csv', STATE.scored.length + ' rows, including the ones below the line, four score components kept apart'],
+          ['gaps.csv', STATE.gaps.length + ' rows, grouped by archetype'],
+          ['outreach.csv', STATE.outreach.length + ' rows: roles and organisation types, no people'],
+          ['Schemas', 'shortlist.schema.json, gaps.schema.json, outreach.schema.json'],
+          ['Also downloadable', 'the JSON behind steps 1 to 4']
+        ]
+      }
+    ];
+  }
+
+  var openStep = 0;
 
   function renderSteps() {
     var host = document.getElementById('steps');
@@ -1369,11 +1563,25 @@
 
   /* ---------------- boot --------------------------------------------------- */
 
-  applyLanguage(recallLang() || STRINGS.fallback);
+  var chosen = recallLang();
+  langChosen = !!chosen;
+  applyLanguage(chosen || browserLang());
   renderLangSelect();
+  renderLangStrip();
+  if (chosen) {
+    collapseStrip();
+  } else {
+    show('lang-strip', true);
+    show('lang', false);
+  }
+  document.getElementById('change-lang').addEventListener('click', function () {
+    openStrip();
+    document.getElementById('greeting').scrollIntoView({ block: 'center' });
+  });
   initSpy();
 
   var greet = document.getElementById('greeting');
+  greet.addEventListener('click', toggleStrip);
   greet.addEventListener('mouseenter', function () { greetPaused = true; });
   greet.addEventListener('mouseleave', function () { greetPaused = false; });
   greet.addEventListener('focusin',  function () { greetPaused = true; });

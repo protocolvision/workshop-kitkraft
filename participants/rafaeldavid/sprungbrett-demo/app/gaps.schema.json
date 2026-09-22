@@ -1,25 +1,74 @@
 {
   "file": "gaps.csv",
-  "schema_version": 1,
+  "schema_version": 2,
   "produced_by": "Sprungbrett factory demo, station 5",
-  "description": "One row per missing item, grouped by archetype. Computed at run time by comparing the profile against each archetype's stated requirements, so changing the German level on the card changes these rows. Illustrative only: it is not advice, it states no verdict on equivalence, and it names no prices and promises no outcomes.",
+  "description": "One row per missing item, grouped by archetype. Computed at run time by comparing the profile against each archetype's stated requirements, so changing the German level or answering a question changes these rows. The programmes named are real and were link-checked on 2026-09-22; each row carries the url and the date it was checked. Illustrative only: it is not advice, it states no verdict on equivalence, it names no prices and promises no outcomes.",
   "row_shape": [
     "archetype_id",
     "gap_type",
     "item",
+    "provider",
     "why",
+    "caveat",
     "typical_duration",
     "next_step",
+    "url",
+    "url_checked_on",
     "synthetic"
   ],
   "columns": {
-    "archetype_id": { "type": "string", "note": "Key into archetypes.json." },
-    "gap_type": { "type": "string", "enum": ["language", "recognition", "certification", "course", "document"] },
-    "item": { "type": "string", "note": "What is missing. Real certificates and procedures may be named factually; none of them is invented." },
-    "why": { "type": "string", "note": "Why it matters for that archetype, not in general." },
-    "typical_duration": { "type": "string", "note": "A range, always hedged with 'typically'. Never a promise." },
-    "next_step": { "type": "string", "note": "One step. Where an authority decides, the step is to ask the authority." },
-    "synthetic": { "type": "boolean", "const": true, "note": "The comparison is invented demo data. The procedures named in it are not." }
+    "archetype_id": {
+      "type": "string",
+      "note": "Key into archetypes.json."
+    },
+    "gap_type": {
+      "type": "string",
+      "enum": [
+        "language",
+        "recognition",
+        "certification",
+        "course",
+        "document",
+        "funding"
+      ]
+    },
+    "item": {
+      "type": "string",
+      "note": "What is missing. Real certificates and procedures may be named factually; none of them is invented."
+    },
+    "why": {
+      "type": "string",
+      "note": "Why it matters for that archetype, not in general."
+    },
+    "typical_duration": {
+      "type": "string",
+      "note": "A range, hedged. Empty where the provider states none or where no figure can be stood behind."
+    },
+    "next_step": {
+      "type": "string",
+      "note": "One step. Where an authority decides, the step is to ask the authority."
+    },
+    "synthetic": {
+      "type": "boolean",
+      "const": true,
+      "note": "The comparison is invented demo data. The procedures named in it are not."
+    },
+    "provider": {
+      "type": "string",
+      "note": "The body or company that actually runs it. Empty where the row names no programme."
+    },
+    "caveat": {
+      "type": "string",
+      "note": "Where an entry is one chamber's offer, one Land's procedure, a statute rather than a course, or a private vendor certificate, it says so here. Never imply one path per profession."
+    },
+    "url": {
+      "type": "string",
+      "note": "The programme page. Empty where no link applies, as with a licence conversion handled by a local office."
+    },
+    "url_checked_on": {
+      "type": "string",
+      "note": "The date the url was fetched and returned 200."
+    }
   },
-  "standing_caveat": "Illustrative only. Requirements are set by the competent authority and vary by Bundesland: check your own case at anerkennung-in-deutschland.de."
+  "standing_caveat": "Illustrative only. Requirements are set by the competent authority and vary by Bundesland: check your own case at anerkennung-in-deutschland.de. Nothing here states that any particular person qualifies for anything, and no fees are recorded."
 }

@@ -15,19 +15,29 @@ window.STRINGS = {
 
   /* Order here is the order in the selector. */
   languages: [
-    { code: 'de', autonym: 'Deutsch',    dir: 'ltr' },
-    { code: 'en', autonym: 'English',    dir: 'ltr' },
-    { code: 'uk', autonym: 'Українська', dir: 'ltr' },
-    { code: 'tr', autonym: 'Türkçe',     dir: 'ltr' },
-    { code: 'ar', autonym: 'العربية',     dir: 'rtl' },
-    { code: 'es', autonym: 'Español',    dir: 'ltr' }
+    { code: 'de', autonym: 'Deutsch',    english: 'German',    dir: 'ltr', flag: '\uD83C\uDDE9\uD83C\uDDEA' },
+    { code: 'en', autonym: 'English',    english: 'English',   dir: 'ltr', flag: '\uD83C\uDDEC\uD83C\uDDE7' },
+    { code: 'uk', autonym: 'Українська', english: 'Ukrainian', dir: 'ltr', flag: '\uD83C\uDDFA\uD83C\uDDE6' },
+    { code: 'tr', autonym: 'Türkçe',     english: 'Turkish',   dir: 'ltr', flag: '\uD83C\uDDF9\uD83C\uDDF7' },
+    { code: 'ar', autonym: 'العربية',     english: 'Arabic',    dir: 'rtl', flag: '\uD83C\uDF10' },
+    { code: 'es', autonym: 'Español',    english: 'Spanish',   dir: 'ltr', flag: '\uD83C\uDDEA\uD83C\uDDF8' }
   ],
+
+  /* One switch, so the flag question can be seen rather than argued.
+     Default off. A flag is a country, not a language: German would need three,
+     Spanish twenty-odd, and Arabic more than twenty — which is why the entry
+     above carries a globe rather than a country. Showing a Russian flag to a
+     Ukrainian speaker, or a Saudi flag to a Syrian one, is the worst possible
+     first impression for this audience. Emoji only, never an image file, so
+     nothing has to load even when it is switched on. */
+  config: { showFlags: false },
 
   fallback: 'en',
 
   t: {
     en: {
       greeting: 'Welcome',
+      changeLanguage: 'Change language',
       headline: 'Find roles that match your qualifications, not only your German.',
       lede: 'Import a profile and see which roles it already reaches, what stands between you and the rest, and who to approach.',
       signin: 'Continue with LinkedIn',
@@ -68,6 +78,7 @@ window.STRINGS = {
 
     de: {
       greeting: 'Willkommen',
+      changeLanguage: 'Sprache ändern',
       headline: 'Finden Sie Stellen, die zu Ihrer Qualifikation passen – nicht nur zu Ihrem Deutsch.',
       lede: 'Profil importieren und sehen, welche Stellen schon erreichbar sind, was noch fehlt und wen Sie ansprechen können.',
       signin: 'Weiter mit LinkedIn',
@@ -108,6 +119,7 @@ window.STRINGS = {
 
     uk: {
       greeting: 'Ласкаво просимо',
+      changeLanguage: 'Змінити мову',
       headline: 'Знайдіть посади, які відповідають вашій кваліфікації, а не лише вашій німецькій.',
       lede: 'Імпортуйте профіль і подивіться, які посади вже доступні, чого бракує та до кого звернутися.',
       signin: 'Продовжити з LinkedIn',
@@ -148,6 +160,7 @@ window.STRINGS = {
 
     tr: {
       greeting: 'Hoş geldiniz',
+      changeLanguage: 'Dili değiştir',
       headline: 'Yalnızca Almancanıza değil, niteliklerinize uyan işleri bulun.',
       lede: 'Bir profil içe aktarın; hangi pozisyonlara şimdiden ulaştığınızı, geriye ne kaldığını ve kime başvuracağınızı görün.',
       signin: 'LinkedIn ile devam et',
@@ -188,6 +201,7 @@ window.STRINGS = {
 
     ar: {
       greeting: 'أهلاً وسهلاً',
+      changeLanguage: 'تغيير اللغة',
       headline: 'اعثر على وظائف تناسب مؤهلاتك، لا لغتك الألمانية وحدها.',
       lede: 'استورد ملفًا شخصيًا وانظر أي الوظائف في متناولك الآن، وما الذي ينقصك، وبمن تتصل.',
       signin: 'المتابعة عبر LinkedIn',
@@ -228,6 +242,7 @@ window.STRINGS = {
 
     es: {
       greeting: 'Te damos la bienvenida',
+      changeLanguage: 'Cambiar idioma',
       headline: 'Encuentra puestos que coincidan con tu cualificación, no solo con tu alemán.',
       lede: 'Importa un perfil y mira a qué puestos ya llegas, qué te falta y a quién dirigirte.',
       signin: 'Continuar con LinkedIn',

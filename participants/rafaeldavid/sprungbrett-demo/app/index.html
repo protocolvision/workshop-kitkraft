@@ -40,6 +40,7 @@
     /* Type. Two weights, five sizes. */
     --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --t-display:   52px;  --lh-display:   1.05;
+    --t-greeting:  34px;
     --t-section:   28px;  --lh-section:   1.2;
     --t-body:      17px;  --lh-body:      1.55;
     --t-secondary: 15px;
@@ -278,6 +279,26 @@
     background: var(--band); color: var(--ink); resize: vertical;
   }
 
+  /* ---------- the language strip: the first interactive thing on the page,
+     because a dropdown in a header is not where somebody scanning for their
+     own script will look ---------- */
+
+  .langopt {
+    min-height: 44px;
+    background: none; border: 1px solid transparent; border-radius: var(--radius-control);
+    padding: var(--s2) var(--s4); cursor: pointer; text-align: start;
+    color: var(--ink); transition: background-color var(--motion) ease-out, border-color var(--motion) ease-out;
+  }
+  .langopt:hover { background: var(--band); }
+  .langopt[aria-pressed="true"] {
+    background: var(--primary); border-color: var(--primary); color: var(--page);
+  }
+  .langopt[aria-pressed="true"] .eng { color: var(--page); opacity: 0.8; }
+  .langopt .auto { display: block; font-size: var(--t-body); font-weight: 600; text-align: center; }
+  .langopt .eng  { display: block; font-size: var(--t-caption); color: var(--secondary); text-align: center; }
+
+  .pagefoot { border-top: 1px solid var(--hairline); padding-block: var(--s7); }
+
   /* ---------- the language selector, and the greeting ---------- */
 
   .langpick { display: flex; align-items: center; }
@@ -286,12 +307,34 @@
     background: transparent; border: none; padding: var(--s1) var(--s2);
     border-radius: var(--s2); cursor: pointer;
   }
+  /* The greeting is the biggest thing on the page, and it is the language
+     control: the thing that catches the eye is the thing that solves the
+     problem. A button, not a div with a handler. */
   .greeting {
-    font-size: var(--t-secondary); color: var(--secondary); height: 1.5em;
-    margin-bottom: var(--s4);
+    display: inline-flex; align-items: baseline; gap: var(--s3);
+    background: none; border: none; padding: var(--s2) var(--s3); cursor: pointer;
+    font-family: inherit; font-size: var(--t-greeting); line-height: 1.2;
+    font-weight: 400; font-style: italic; letter-spacing: -0.01em; color: var(--ink);
+    border-radius: var(--radius-control); margin-block: var(--s4) var(--s5);
   }
-  .greeting span { transition: opacity var(--motion) ease-in-out; }
-  .greeting span.out { opacity: 0; }
+  /* Arabic has no italic form. A browser fakes one by slanting the glyphs, and
+     slanted Arabic reads as broken, so it stays upright and lets size carry it. */
+  .greeting #greeting-text[lang="ar"] { font-style: normal; }
+  .greeting #greeting-text { transition: opacity var(--motion) ease-in-out; }
+  .greeting #greeting-text.out { opacity: 0; }
+  .greeting .chev {
+    width: 0.5em; height: 0.5em; border-inline-end: 2px solid var(--secondary);
+    border-block-end: 2px solid var(--secondary); transform: rotate(45deg);
+    align-self: center; transition: transform var(--motion) ease-out;
+  }
+  .greeting:hover #greeting-text { text-decoration: underline; text-underline-offset: 6px; }
+  .greeting[aria-expanded="true"] .chev { transform: rotate(225deg); }
+
+  .langstrip { margin-bottom: var(--s6); }
+  .langstrip-row {
+    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--s2); padding-block: var(--s3);
+  }
 
   /* ---------- tell us more ---------- */
 
@@ -361,7 +404,7 @@
     html { scroll-behavior: auto; }
     .reveal, .reveal.in { opacity: 1; transform: none; transition: none; }
     .changed, .chip, .chip.going, tr.fresh, .topbar .who { animation: none; }
-    .greeting span, .opt, .btn-primary, .btn-text, .delta span,
+    .greeting #greeting-text, .greeting .chev, .opt, .btn-primary, .btn-text, .delta span,
     ul.accounts button, .noteform input, .rows li.answered { transition: none; }
     .btn-primary:active, .opt:active { transform: none; }
   }
@@ -390,8 +433,13 @@
   <!-- 1. Sign in -->
   <section id="state-signin" class="hero container">
     <div class="inner">
-      <p class="greeting" id="greeting" aria-live="off"><span id="greeting-text"></span></p>
       <h1 id="s-headline"></h1>
+      <button class="greeting" id="greeting" aria-expanded="false" aria-controls="lang-strip">
+        <span id="greeting-text"></span><span class="chev" aria-hidden="true"></span>
+      </button>
+      <div class="langstrip" id="lang-strip" hidden>
+        <div class="langstrip-row" id="lang-strip-row" role="group" aria-label="Choose your language"></div>
+      </div>
       <p class="lede" id="s-lede"></p>
       <div class="cta">
         <button class="btn-primary" id="signin-btn" aria-expanded="false" aria-controls="chooser"></button>
@@ -529,6 +577,12 @@
 
   </div>
 </main>
+
+<footer class="pagefoot">
+  <div class="container">
+    <button class="btn-text" id="change-lang"></button>
+  </div>
+</footer>
 
 <!-- Data arrives as a plain script setting window.DATA. A page opened from a
      file path cannot fetch its own JSON, and ES modules fail the same way.

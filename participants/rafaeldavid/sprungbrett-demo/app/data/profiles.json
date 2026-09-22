@@ -74,9 +74,7 @@
       ],
       "seniority_band": "mid",
       "recognition_status": "not_started",
-      "held_credential_ids": [
-        "course-sql-modelling"
-      ],
+      "held_credential_ids": [],
       "archetype_ids": [
         "a-backend-dev",
         "a-data-eng",
