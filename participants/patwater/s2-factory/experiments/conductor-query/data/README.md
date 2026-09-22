@@ -1,0 +1,1 @@
+`verdicts.json` shape: `{"<doc_id>": {"weight": <float>, "verdicts": [{"mark": "up"|"down", "at": "<ISO-8601>"}]}}`. Written and read only by `../SKILL.md` steps 1 and 6. Starts empty (`{}`) — every doc is neutral (weight 1.0) until a verdict is recorded against it.

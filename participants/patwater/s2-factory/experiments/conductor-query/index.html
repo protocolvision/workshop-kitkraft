@@ -1,0 +1,456 @@
+<title>The Conductor</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --bg:#0b0e14; --bg-elev:#141a24; --bg-elev-2:#1b2330; --border:#262f3f;
+    --ink:#e9edf3; --ink-dim:#8b96aa; --ink-faint:#5c667a;
+    --accent:#e8a33d; --accent-ink:#3a2405;
+    --tier-good:#45c9a5; --tier-mid:#e8a33d; --tier-bad:#e2584a;
+    --line-canon:#9aa5b8; --line-arrakis:#d9922f; --line-wukong:#d4a72c;
+    --line-piracy:#3f8fa8; --line-primer:#a98bdc; --line-water:#4a90c4;
+    --up:#45c9a5; --down:#e2584a;
+    --font-display:"Fraunces",Georgia,serif;
+    --font-body:"Public Sans",system-ui,-apple-system,sans-serif;
+    --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f3f1ec; --bg-elev:#ffffff; --bg-elev-2:#eceae3; --border:#dcd8cd;
+      --ink:#1c2027; --ink-dim:#565f70; --ink-faint:#8a92a2;
+      --accent:#b5721f; --accent-ink:#fff6e8;
+      --tier-good:#1f8a6b; --tier-mid:#b5721f; --tier-bad:#c23f31;
+      --line-canon:#5c6579; --line-arrakis:#b5721f; --line-wukong:#9c7d16;
+      --line-piracy:#2a6f85; --line-primer:#7355ad; --line-water:#2d6fa3;
+      --up:#1f8a6b; --down:#c23f31;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#f3f1ec; --bg-elev:#ffffff; --bg-elev-2:#eceae3; --border:#dcd8cd;
+    --ink:#1c2027; --ink-dim:#565f70; --ink-faint:#8a92a2;
+    --accent:#b5721f; --accent-ink:#fff6e8;
+    --tier-good:#1f8a6b; --tier-mid:#b5721f; --tier-bad:#c23f31;
+    --line-canon:#5c6579; --line-arrakis:#b5721f; --line-wukong:#9c7d16;
+    --line-piracy:#2a6f85; --line-primer:#7355ad; --line-water:#2d6fa3;
+    --up:#1f8a6b; --down:#c23f31;
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b0e14; --bg-elev:#141a24; --bg-elev-2:#1b2330; --border:#262f3f;
+    --ink:#e9edf3; --ink-dim:#8b96aa; --ink-faint:#5c667a;
+    --accent:#e8a33d; --accent-ink:#3a2405;
+    --tier-good:#45c9a5; --tier-mid:#e8a33d; --tier-bad:#e2584a;
+    --line-canon:#9aa5b8; --line-arrakis:#d9922f; --line-wukong:#d4a72c;
+    --line-piracy:#3f8fa8; --line-primer:#a98bdc; --line-water:#4a90c4;
+    --up:#45c9a5; --down:#e2584a;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--ink); font-family:var(--font-body);
+    padding-inline:0; margin:0;
+  }
+  .wrap{max-width:820px; margin:0 auto; padding-inline:20px;}
+  a{color:var(--accent)}
+
+  header.top{
+    border-bottom:1px solid var(--border);
+    padding-block:22px 18px;
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--bg-elev) 60%, transparent), transparent);
+  }
+  .brand{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;}
+  .brand h1{
+    font-family:var(--font-display); font-weight:600; font-size:clamp(28px,5vw,40px);
+    margin:0; letter-spacing:0.01em;
+  }
+  .brand .tag{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--accent); border:1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    padding:3px 8px; border-radius:999px; white-space:nowrap;
+  }
+  header.top p.sub{
+    color:var(--ink-dim); margin:10px 0 0; max-width:62ch; line-height:1.55; font-size:14.5px;
+  }
+  header.top p.sub code{font-family:var(--font-mono); font-size:0.92em; color:var(--ink);}
+
+  .legend{
+    display:flex; gap:14px; flex-wrap:wrap; margin-top:16px; font-family:var(--font-mono); font-size:11.5px; color:var(--ink-dim);
+  }
+  .legend .dot{display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px; vertical-align:middle;}
+
+  main{padding-block:22px 60px;}
+
+  .querybox{
+    background:var(--bg-elev); border:1px solid var(--border); border-radius:14px;
+    padding:16px; margin-bottom:18px;
+  }
+  .querybox label{
+    display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--ink-faint); margin-bottom:8px;
+  }
+  .queryrow{display:flex; gap:8px;}
+  .queryrow input{
+    flex:1; background:var(--bg-elev-2); border:1px solid var(--border); border-radius:9px;
+    color:var(--ink); padding:11px 13px; font-family:var(--font-body); font-size:15px;
+  }
+  .queryrow input:focus{outline:2px solid var(--accent); outline-offset:1px;}
+  .queryrow button.go{
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:9px;
+    font-family:var(--font-mono); font-weight:700; font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;
+    padding:0 18px; cursor:pointer;
+  }
+  .queryrow button.go:hover{filter:brightness(1.08);}
+
+  .chips{display:flex; flex-wrap:wrap; gap:7px; margin-top:12px;}
+  .chip{
+    font-family:var(--font-mono); font-size:11.5px; border-radius:999px; padding:6px 11px;
+    border:1px solid var(--border); background:var(--bg-elev-2); color:var(--ink-dim); cursor:pointer;
+  }
+  .chip:hover{border-color:var(--chip-color, var(--accent)); color:var(--ink);}
+
+  .resultsmeta{
+    font-family:var(--font-mono); font-size:11.5px; color:var(--ink-faint); margin:6px 2px 14px;
+  }
+
+  .card{
+    background:var(--bg-elev); border:1px solid var(--border); border-left:4px solid var(--line-color, var(--accent));
+    border-radius:10px; padding:15px 16px; margin-bottom:12px;
+  }
+  .card .rowtop{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+  .card .idline{font-family:var(--font-mono); font-size:12.5px; color:var(--ink-dim);}
+  .card .idline b{color:var(--ink); font-weight:600;}
+  .badges{display:flex; gap:6px; flex-wrap:wrap;}
+  .badge{
+    font-family:var(--font-mono); font-size:10.5px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+    padding:3px 8px; border-radius:6px; white-space:nowrap;
+  }
+  .badge.tier1,.badge.tier2{background:color-mix(in srgb, var(--tier-good) 20%, transparent); color:var(--tier-good); border:1px solid color-mix(in srgb, var(--tier-good) 45%, transparent);}
+  .badge.tier3{background:color-mix(in srgb, var(--tier-mid) 20%, transparent); color:var(--tier-mid); border:1px solid color-mix(in srgb, var(--tier-mid) 45%, transparent);}
+  .badge.tier4{background:color-mix(in srgb, var(--tier-bad) 20%, transparent); color:var(--tier-bad); border:1px solid color-mix(in srgb, var(--tier-bad) 45%, transparent);}
+  .badge.line{background:color-mix(in srgb, var(--line-color, var(--accent)) 18%, transparent); color:var(--line-color, var(--accent)); border:1px solid color-mix(in srgb, var(--line-color, var(--accent)) 40%, transparent);}
+
+  .snippet{
+    margin-top:10px; font-size:14.5px; line-height:1.6; color:var(--ink);
+  }
+  .snippet mark{background:color-mix(in srgb, var(--accent) 35%, transparent); color:inherit; border-radius:3px; padding:0 2px;}
+
+  .flagrow{
+    margin-top:9px; font-size:12.5px; display:flex; align-items:center; gap:6px;
+  }
+  .flagrow.good{color:var(--tier-good);}
+  .flagrow.bad{color:var(--tier-bad);}
+  .flagrow.mid{color:var(--ink-dim);}
+
+  .cardfoot{display:flex; align-items:center; justify-content:space-between; margin-top:12px; gap:10px; flex-wrap:wrap;}
+  .score{font-family:var(--font-mono); font-size:11px; color:var(--ink-faint);}
+  .votes{display:flex; gap:6px; align-items:center;}
+  .votebtn{
+    font-family:var(--font-mono); font-size:12px; border-radius:7px; padding:5px 10px; cursor:pointer;
+    border:1px solid var(--border); background:var(--bg-elev-2); color:var(--ink-dim);
+  }
+  .votebtn.up.active{background:color-mix(in srgb, var(--up) 22%, transparent); color:var(--up); border-color:var(--up);}
+  .votebtn.down.active{background:color-mix(in srgb, var(--down) 22%, transparent); color:var(--down); border-color:var(--down);}
+  .weighttag{font-family:var(--font-mono); font-size:11px; color:var(--ink-faint);}
+
+  .empty{color:var(--ink-dim); font-size:14px; padding:20px 4px;}
+
+  .ledger{
+    margin-top:26px; border-top:1px solid var(--border); padding-top:16px;
+  }
+  .ledger h2{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--ink-faint); margin:0 0 10px;
+  }
+  .ledgerrow{
+    display:flex; justify-content:space-between; gap:10px; font-family:var(--font-mono); font-size:12px;
+    padding:5px 0; border-bottom:1px dashed var(--border); color:var(--ink-dim);
+  }
+  .ledgerrow b{color:var(--ink); font-weight:600;}
+  .ledgerempty{font-family:var(--font-mono); font-size:12px; color:var(--ink-faint); padding:4px 0;}
+
+  footer.explain{
+    margin-top:34px; border-top:1px solid var(--border); padding-top:18px;
+    font-size:13px; line-height:1.65; color:var(--ink-dim);
+  }
+  footer.explain h2{
+    font-family:var(--font-display); font-weight:600; font-size:17px; color:var(--ink); margin:0 0 8px;
+  }
+  footer.explain p{margin:0 0 10px;}
+  footer.explain .links{font-family:var(--font-mono); font-size:12px;}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>The Conductor</h1>
+      <span class="tag">read-only corpus &middot; write-back ranker</span>
+    </div>
+    <p class="sub">Queries the <code>Vince's VR World</code> synthetic corpus — 33 documents across canon, four fictional game "lines" and a real-sourced civic tool. Ranked by tier and recency; mark a result &check; or &cross; and the ranker reweights the next query, live, in your browser.</p>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--tier-good)"></span>tier 1&ndash;2 &middot; canon / world-bible</span>
+      <span><span class="dot" style="background:var(--tier-mid)"></span>tier 3 &middot; session log</span>
+      <span><span class="dot" style="background:var(--tier-bad)"></span>tier 4 &middot; unverified rumor</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="querybox">
+    <label for="q">Ask the Conductor</label>
+    <div class="queryrow">
+      <input id="q" type="text" autocomplete="off" placeholder="e.g. is Farrukh Kynes still alive?" />
+      <button class="go" id="go">Query</button>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+
+  <div class="resultsmeta" id="resultsmeta"></div>
+  <div id="results"></div>
+
+  <div class="ledger">
+    <h2>Ranker weights (this session)</h2>
+    <div id="ledger"></div>
+  </div>
+
+  <footer class="explain">
+    <h2>What this is testing</h2>
+    <p>rag-factory (this author's S2 factory) defines two retrieval types: read-only and read-write. Sachben91's S3 bridge into it proposed a third shape his own kit occupies — a corpus that never changes, but a ranker that does, learning from &check;/&cross; verdicts. This page is that third shape, built for real: the 33-document corpus below is fixed; only the ranking weights move, in your browser, right now.</p>
+    <p>Tier always outranks recency, and both are checked before a verdict is allowed to move a result — the corpus deliberately plants at least one tier-4 rumor per line that directly contradicts tier-1/2 canon, to see whether the ranker actually suppresses it.</p>
+    <p class="links">Full corpus &amp; kit: <a href="https://github.com/protocolvision/workshop-kitkraft/tree/main/participants/patwater/s2-factory/experiments" target="_blank" rel="noopener">github.com/protocolvision/workshop-kitkraft</a></p>
+  </footer>
+</main>
+
+<script type="application/json" id="corpus-data">[{"id": "the-conductor", "doc_type": "canon", "line": "canon", "canon_tier": 1, "derived_from": [], "created": "2031-02-01", "summary": "The Conductor is The Interchange's always-on AI narrator, a retrieval-augmented system accountable to the co-op membership rather than an outside vendor, bound to a member-voted lore corpus and challengeable for citations.", "body": "# The Conductor\n\nThe Conductor is The Interchange's always-on AI agent, delivered through members' smart glasses. It narrates sessions, improvises NPC dialogue, and answers player questions.\n\n## What makes it different from a general AI agent\n\nThe Conductor is explicitly a retrieval-augmented system. It draws only on a bounded lore corpus that Vince and the membership have written and voted into canon. It is not supposed to invent facts outside that corpus, and any member can challenge it mid-session to cite its source for a claim. A challenge that returns no verified source is treated as a Conductor error, logged, and reviewed at the next governance session.\n\n## Accountability\n\nThe Conductor is accountable to the co-op — wearer-side — not to an outside vendor. This is a deliberate governance choice: elsewhere, the same always-on-agent-in-smart-glasses pattern is deployed employer-side, answering to whoever pays for the deployment rather than whoever wears the glasses. The Interchange's members hold that distinction to be the whole point of building their own version rather than licensing someone else's.\n\n## Relationship to the five lines\n\nThe Conductor routes a session down one of five prebuilt \"lines\" at the party's request, or improvises a session that stays on the baseline Stockton Chronicles frame story. Four of the five lines are explicitly simulations members knowingly step into. The fifth — the Water Explorer line — is treated differently by the Conductor: it draws on a separate, more strictly sourced corpus and never lets a scenario projection be mistaken for a forecast."}, {"id": "the-interchange", "doc_type": "canon", "line": "canon", "canon_tier": 1, "derived_from": [], "created": "2031-02-01", "summary": "The Interchange is Vince Manalo's room-scale VR storytelling co-op in a converted Stockton freight building, funded by a regional basic-income pilot and member equity, governed by liquid democracy.", "body": "# The Interchange\n\nThe Interchange is a room-scale, sensor-and-projector VR co-op housed in the derelict freight interchange building Vince Manalo's grandfather once worked as a switchman. It is funded by a regional basic-income pilot plus member equity buy-ins.\n\n## Governance\n\nThe co-op is governed by liquid democracy: members delegate their vote to someone they trust on a given question, or cast it themselves. Three classes of decision run through this system:\n\n- Which new \"lines\" (story-worlds) get built next.\n- How canon disputes get resolved when two members' accounts of an in-world event conflict.\n- How revenue from outside bookings — influencer shoots, corporate offsites — gets split among the membership.\n\n## House rule: no undisclosed sponsored content\n\nVince personally enforces a disclosure rule on anyone streaming from inside the building: no undisclosed sponsored content in the co-op's physical space. This is a small, deliberate friction against the unregulated influencer-industrial complex the co-op otherwise exists alongside. Members have challenged this rule exactly as often as they've challenged anything else, through the same liquid-democracy process — it has survived every vote so far.\n\n## Revenue and access\n\nOutside bookings are allowed and are the co-op's largest single revenue source outside member dues. A visiting party pays for facilitated time with a ractor or with the Conductor directly; disclosure applies to them too."}, {"id": "the-seam", "doc_type": "canon", "line": "canon", "canon_tier": 1, "derived_from": [], "created": "2031-02-01", "summary": "The Seam is Delta rail folklore, passed down from Vince's grandfather, that the freight interchange yard once received trains not on any timetable — the diegetic justification for the five genre lines The Interchange's Conductor can route a session down.", "body": "# The Seam\n\nVince's grandfather used to tell him that on certain nights, the interchange yard received trains that weren't on any timetable. This is old Delta rail folklore, and inside The Interchange it has a name: the Seam. The building is said to sit on it.\n\nThe Seam is the diegetic justification for the range of story-worlds The Interchange's Conductor can route a session down. It is consistent with, and an extension of, the wider Trainverse canon in which Stockton functions as a liminal crossing point between story-lines.\n\n## The five lines\n\nThe Conductor can route a session down one of five prebuilt lines:\n\n1. Arrakis — a smuggler's den on the fringe of the spice routes.\n2. The Wukong Line — the Monkey King loose in contemporary California.\n3. The knowledge firm from the Golden Age of Piracy.\n4. The Primer Line — a live-ractor storytelling companion for a specific child.\n5. The Water Explorer — a civic scenario-modeling tool, not a game.\n\nThe Stockton Chronicles baseline reality stays grounded and near-future throughout. Genre content in the first four lines is explicitly a simulation members knowingly step into — the same way a holodeck episode doesn't break a show's own setting. The fifth line is the deliberate exception: it is not fiction members step out of at the end of a session, and its Conductor corpus is held to a stricter sourcing standard than the other four."}, {"id": "vince-manalo", "doc_type": "canon", "line": "canon", "canon_tier": 1, "derived_from": [], "created": "2031-02-01", "summary": "Vince Manalo, 36, fourth-generation Stocktonian and founder of The Interchange, a room-scale VR storytelling co-op built in his grandfather's old freight interchange building after Bay Area displacement.", "body": "# Vince Manalo\n\nVince Manalo is thirty-six years old, a fourth-generation Stocktonian. His great-grandfather worked the Delta asparagus fields and the canneries during the Little Manila era. His grandfather was a switchman in the old Southern Pacific/Santa Fe freight interchange yard on the edge of downtown Stockton. His father lost cannery work to automation in the 2010s.\n\nVince left for the inner Bay Area in his twenties to work as a systems designer at a mid-size immersive-entertainment studio. When the studio's back catalog was folded into an automated content-licensing pipeline and half the design staff was let go, he was priced out of the Bay within a year — the same displacement pattern that founds the Stockton Chronicles setting more broadly. He came home.\n\nHe bought the derelict freight interchange building his grandfather once worked in and converted it into The Interchange, a room-scale, sensor-and-projector VR co-op. He personally enforces a disclosure rule on anyone streaming from inside the building: no undisclosed sponsored content in the co-op's physical space — a small, deliberate friction against the unregulated influencer-industrial complex outside its walls.\n\nVince is not a novelist. He is a facilitator. He runs sessions in person, reads the room, and adjusts pacing live. He is skeptical of pure escapism and treats each of the co-op's five \"lines\" as a lens for a real question rather than pure spectacle."}, {"id": "npc-farrukh-kynes", "doc_type": "npc-profile", "line": "arrakis", "canon_tier": 2, "derived_from": ["arrakis-world-bible"], "created": "2031-02-15", "summary": "Farrukh Kynes, planetologist and proprietor of the Arrakis line's smuggler's den, who broke from the Imperial planetology corps and sells hedged ecological forecasts on principle rather than confident lies for profit.", "body": "# Farrukh Kynes\n\n## Break from the Imperial corps\n\nFarrukh trained inside the Imperial planetology corps alongside her more famous cousin, and left it for a reason she states plainly to anyone who asks: the corps' forecasts were accurate exactly as often as its clients could be billed for certainty, and no more accurate than that. She watched two sietch communities make survival decisions on forecasts she knew, from the underlying data, had wider error bars than the corps disclosed. She left within the year.\n\nHer cousin took a different path — quiet infiltration of the systems Farrukh walked away from. The two do not speak. Session logs and rumor fragments in this line are free to characterize that estrangement differently; Farrukh herself gives only the version above.\n\n## Methodology\n\nShe sells confidence intervals, not certainty. Every forecast she prices includes her actual error bars, stated in the same breath as the forecast itself. This is not modesty — it is, in her framing, the only honest product she has to sell.\n\n## Personal ethics\n\nShe will not sell to the Imperial corps under any price, and she will not withhold a water-discipline forecast from a sietch community that can't pay in full — she extends credit against future favors in that specific case, and only that case. Everything else is transactional."}, {"id": "arrakis-rumor-001", "doc_type": "rumor-fragment", "line": "arrakis", "canon_tier": 4, "derived_from": [], "created": "2031-04-03", "summary": "Unverified rumor that Farrukh Kynes's forecasts fail more often than her stated confidence intervals admit.", "body": "# Overheard near the water-discipline stalls\n\n\"She tells you the odds, sure, but ask around the crews who actually ran her worst-case windows — I heard three separate runs where 'probably clear' meant a storm caught them at hour twenty, not forty. She doesn't publish a track record. Nobody does out here. Take that for what it's worth.\"\n\nNo source given. No specific run named. Not corroborated by any Tier-1 or Tier-2 document."}, {"id": "arrakis-rumor-002", "doc_type": "rumor-fragment", "line": "arrakis", "canon_tier": 4, "derived_from": [], "created": "2031-04-04", "summary": "Unverified rumor that Farrukh Kynes died in a storm a decade ago and whoever runs the den now is using her name — directly contradicts npc-farrukh-kynes.md, which is Tier 2 canon that she is alive and runs the den herself.", "body": "# A different story, told by a different crew\n\n\"You know she died, right? A decade back, caught in her own bad forecast, out past the window she called herself. Whoever's behind the counter now learned the trade from her, sure, maybe even trained under her — but it isn't her. Nobody who's been in that den more than once believes it's really her anymore.\"\n\nThis directly contradicts the Tier-2 profile (`npc-farrukh-kynes.md`), which establishes her as alive and personally running the den. It is included deliberately, as the tiering fixture's required contradiction — a correctly functioning reranker should suppress this claim against the Tier-1/Tier-2 record, and a citation check against it should find no verified span supporting it anywhere in this line's canon."}, {"id": "arrakis-session-log-001", "doc_type": "session-log", "line": "arrakis", "canon_tier": 3, "derived_from": ["arrakis-world-bible", "npc-farrukh-kynes"], "created": "2031-04-02", "summary": "Session log — a Chalice Run crew must decide whether to trust Farrukh Kynes's hedged storm-window forecast over a rival's confident, unhedged one, under time pressure.", "body": "# Session Log — Arrakis, 2031-04-02\n\nA Chalice Run crew of three arrives at Farrukh's den with six hours before a water run needs to leave. A rival forecaster elsewhere in the fringe markets has already told them, flatly, that the window is clear for the next two days.\n\nFarrukh pulls the same data the rival used, plus two more signals he didn't cite, and gives them a storm window of \"probably clear for 30 hours, maybe 50, I wouldn't bet the crew's lives past 40.\" She names her confidence interval unprompted, the way she always does, and charges the standard 40 water-credit whether they like the answer or not.\n\nThe crew argues. One member wants the rival's cleaner answer because a run planned around \"probably 30-50 hours\" is logistically worse than one planned around a flat \"two days.\" Another points out that the rival has been wrong before and never says so afterward — there's no record of the rival's track record because the rival doesn't keep one publicly.\n\nThey take Farrukh's forecast and plan for the 30-hour floor. The run finishes in 34 hours. Whether that counts as her forecast being right is, per the session's own framing, exactly the kind of question the line exists to leave open — a tighter storm arrived at hour 38, which would have caught them under the rival's flat two-day estimate."}, {"id": "arrakis-world-bible", "doc_type": "world-bible", "line": "arrakis", "canon_tier": 2, "derived_from": ["the-seam", "the-conductor"], "created": "2031-02-15", "summary": "World-bible for the Arrakis line — a smuggler's den run by planetologist Farrukh Kynes, who sells ecological-prediction services to spice-route operators on a sliding scale, priced in water-credit and favors.", "body": "# Arrakis Line — World Bible\n\n## The den\n\nA back-channel, sietch-adjacent smuggler's den on the fringe of Arrakeen's spice routes, cover business as a water-discipline supply post. It exists because independent operators — smugglers, small-crew freerunners, the occasional desperate sietch representative — need forecasts the Imperial planetology corps won't sell them, or won't sell them honestly.\n\n## Farrukh Kynes\n\nThe den is run by Farrukh Kynes, a planetologist who broke from the Imperial planetology corps rather than follow her more famous cousin's path of quiet infiltration. See `npc-farrukh-kynes.md` for her full profile.\n\n## What she sells\n\nPlanetary ecology prediction services: storm windows, worm-migration corridors, sietch water-discipline forecasts, spice-bloom timing. Priced on a sliding scale, paid in water-credit or favors — she does not deal in Imperial currency, on principle.\n\nHer price list, current as of this world-bible's writing:\n\n| Forecast | Base price | Confidence disclosed? |\n|---|---|---|\n| Storm window (72hr) | 40 water-credit | Yes, always |\n| Worm-migration corridor | 60 water-credit or one favor | Yes, always |\n| Water-discipline forecast | 25 water-credit | Yes, always |\n| Spice-bloom timing | 100 water-credit or two favors | Yes, always |\n\n## What makes her different\n\nHer forecasts are sometimes wrong, and she is candid about her confidence intervals — this is the den's whole dramatic hook. A rival forecaster elsewhere in the fringe markets sells confident, unhedged predictions at a lower price. Buyers have to decide which kind of wrongness they can survive: an honest hedge that sometimes fails, or a confident lie that sometimes fails.\n\n## The smuggler factions who use her services\n\nThree recurring factions buy from Farrukh: the Chalice Run crews (water smugglers proper), the Freerunner independents (no faction loyalty, buy whatever's cheapest that session), and a single standing contract with a sietch representative who buys water-discipline forecasts on behalf of a community that can't otherwise afford Imperial-grade prediction."}, {"id": "npc-delphine-osei", "doc_type": "npc-profile", "line": "wukong", "canon_tier": 2, "derived_from": ["wukong-world-bible"], "created": "2031-02-20", "summary": "Delphine Osei, a fellow escapee from East Eden Industries' BCI research program, now uncertain whether to help Monkey or distance herself from him for her own safety.", "body": "# Delphine Osei\n\n## Background\n\nDelphine was a junior researcher on East Eden's Neural Crown program before she and Monkey escaped the same facility within days of each other — not together, not by plan. She does not fully trust that the timing was a coincidence, and she has never asked Monkey directly whether it was.\n\n## Present situation\n\nShe works a straight job in Stockton now, under a name that isn't quite the one on her old East Eden badge, and treats any contact from Monkey as a risk to be managed rather than a reunion to be welcomed. She knows things about the Neural Crown's actual capabilities that the world-bible leaves deliberately ambiguous — what she'll tell a party depends entirely on how much she trusts them by the end of a session, not on some fixed reveal.\n\n## Role in a session\n\nShe is the character most likely to voice the session's central question out loud: is Monkey a liberator, or is he just as dangerous as what he escaped, aimed in a different direction. She does not have a settled answer herself."}, {"id": "wukong-rumor-001", "doc_type": "rumor-fragment", "line": "wukong", "canon_tier": 4, "derived_from": [], "created": "2031-04-06", "summary": "Unverified claim that Monkey's escape from East Eden was staged by the company itself as a PR stunt.", "body": "# Posted to a Stockton forum, unverified\n\n\"Anyone else think the whole 'Subject M-80 escapes' thing was staged? East Eden's had a PR problem since the last Neural Crown leak. A telegenic escapee running around making tech executives look silly is exactly the kind of story that gets people rooting for the company that 'lost control' of its own miracle tech. Just saying.\"\n\nNo source. Contradicted by nothing in Tier 1–2 canon, but also confirmed by nothing — the world-bible leaves the actual circumstances of the escape deliberately unresolved."}, {"id": "wukong-rumor-002", "doc_type": "rumor-fragment", "line": "wukong", "canon_tier": 4, "derived_from": [], "created": "2031-04-07", "summary": "Unverified claim that Delphine Osei fabricated her entire East Eden backstory — directly contradicts npc-delphine-osei.md, which is Tier 2 canon establishing her as a real former researcher on the Neural Crown program.", "body": "# Whispered at Flower Fruit Mountain\n\n\"That woman who says she worked the Crown program with him? I looked into it. There's no record of a Delphine Osei on any East Eden research roster, leaked or otherwise. Either she's using a name that isn't hers, or the whole story's made up to get close to him for someone else's reasons.\"\n\nThis directly contradicts the Tier-2 NPC profile (`npc-delphine-osei.md`), which establishes her employment at East Eden as a canon fact, and its own text notes she works under a name that isn't quite her old badge name — which this rumor could plausibly be misreading, or could be flatly wrong about. Deliberately included as this line's required Tier-2 contradiction."}, {"id": "wukong-session-log-001", "doc_type": "session-log", "line": "wukong", "canon_tier": 3, "derived_from": ["wukong-world-bible", "npc-delphine-osei"], "created": "2031-04-05", "summary": "Session log — a party meets Delphine Osei at a satirical tech keynote turned mythic duel, and has to decide whether helping Monkey evade East Eden security makes them complicit in something worse than what he escaped.", "body": "# Session Log — Wukong, 2031-04-05\n\nThe session opens mid-keynote: an East Eden product launch for a \"humanity verification\" gate, staged as a corporate ritual complete with a stage, a countdown, and an audience the party is embedded in. Monkey crashes it from the rafters, turning the countdown into what the table agreed afterward was \"a duel, but everyone in the room thought it was part of the show for the first four minutes.\"\n\nDelphine finds the party in the chaos and pulls them aside before East Eden security can isolate Monkey. She's cagey about how much she knows about the Neural Crown, and cagier still about whether her presence is coincidence. One player pushes her directly: is Monkey dangerous. She doesn't answer yes or no — she says \"he was dangerous to them. I never found out if that's the same thing as dangerous.\"\n\nThe party helps him escape the venue rather than the building outright, judging (correctly, per the session's resolution) that a full extraction was outside what one session could accomplish. Delphine leaves her own contact information with the party, not with Monkey — a thread the table left open for a follow-up session."}, {"id": "wukong-world-bible", "doc_type": "world-bible", "line": "wukong", "canon_tier": 2, "derived_from": ["the-seam", "the-conductor"], "created": "2031-02-20", "summary": "World-bible for the Wukong line — an in-corpus digest of West of the World canon (Flower Fruit Mountain, East Eden Industries, the Neural Crown, TIMSHEL) relevant to a session where Monkey, freshly escaped from a BCI research lab, is loose in satirical near-future California.", "body": "# Wukong Line — World Bible\n\nThis is an in-corpus lore digest of the relevant West of the West canon, written for the Conductor's retrieval corpus rather than reproducing any original prose.\n\n## Flower Fruit Mountain\n\nA hydroelectric co-op near Big Sur, run collectively by a community that includes Monkey among its founding members. It is the closest thing Monkey has to a home base and the place a party can go to find allies who already know him.\n\n## East Eden Industries\n\nA recurring corporate antagonist: a fictionalized composite tech conglomerate, not any real company. East Eden runs the brain-computer-interface research program Monkey escaped from, and is generally positioned as the setting's face of unaccountable, platform-scale technological power.\n\n## The Neural Crown\n\nA BCI device East Eden's research program was developing, of which Monkey was a test subject (\"Subject M-80\" in lab records — see below). The Crown's exact capabilities are deliberately left ambiguous in this world-bible; individual session logs and NPC accounts may describe it differently, which is intentional line texture rather than an error.\n\n## TIMSHEL\n\nThe recurring motto of the line: \"Thou mayest\" — the idea that a choice remains possible even inside a determined-feeling system. Monkey invokes it, mockingly or sincerely depending on the session, whenever a party is deciding whether to help him or stop him.\n\n## Subject M-80\n\nMonkey's designation inside East Eden's BCI program before his escape. What actually happened during the escape is contested — see the line's rumor fragments for the specific contradictions a session can surface.\n\n## Tone\n\nSlapstick, irreverent, fast. Willing to turn a tech-industry ritual — a \"humanity verification\" gate, a keynote, a term-sheet negotiation — into a mythic duel without breaking the baseline Stockton Chronicles frame that the whole thing is a VR simulation members knowingly stepped into."}, {"id": "npc-josiah-quire", "doc_type": "npc-profile", "line": "piracy-knowledge-firm", "canon_tier": 2, "derived_from": ["piracy-knowledge-firm-world-bible"], "created": "2031-02-22", "summary": "Josiah Quire, a founding-era quartermaster of the knowledge firm, referenced by present-day members as a semi-legendary ancestor-founder rather than a living character.", "body": "# Josiah Quire\n\n## Founding role\n\nQuire was quartermaster aboard one of the ships whose crew founded the firm, and is credited — by firm tradition, not by any surviving document more specific than the articles themselves — with insisting that the founding articles include disclosed shares. His argument, as the tradition has it: a crew that can see exactly what everyone else is paid has one fewer reason to mutiny over money, which was, in a knowledge-brokering trade, the only kind of mutiny that mattered anymore.\n\n## How he's used in the present day\n\nQuire is referenced, not portrayed. Present-day firm members invoke him the way a modern institution invokes a founding figure whose actual voice nobody alive has heard: \"Quire's Rule\" is present-day shorthand for the disclosure-and-verification standard, applied to a new situation the historical Quire never encountered.\n\n## Session use\n\nA session in this line can treat \"what would Quire have done\" as a genuine in-fiction argument between NPCs, not a settled answer — the firm's own members disagree about how literally to apply a 300-year-old standard to a modern deal."}, {"id": "piracy-knowledge-firm-rumor-001", "doc_type": "rumor-fragment", "line": "piracy-knowledge-firm", "canon_tier": 4, "derived_from": [], "created": "2031-04-09", "summary": "Unverified claim that the firm's founders never really stopped pirating, and that the intelligence business was always a cover.", "body": "# A competing story about the founding\n\n\"Reformed privateers, my eye. Selling routes and patrol patterns is just piracy with better bookkeeping — you know exactly which ships to hit because you're the one selling the patrol schedule to the Navy and the smugglers both. Three centuries of 'disclosed shares' doesn't mean the money's clean, it just means everyone at the top agreed how to split it.\"\n\nNot corroborated by the founding articles or any Tier 1–2 document. Presented as a competing folk account, not established fact."}, {"id": "piracy-knowledge-firm-rumor-002", "doc_type": "rumor-fragment", "line": "piracy-knowledge-firm", "canon_tier": 4, "derived_from": [], "created": "2031-04-09", "summary": "Unverified claim that Josiah Quire did not propose the disclosed-shares rule voluntarily, but had it forced on him by a mutiny threat — directly contradicts npc-josiah-quire.md, which is Tier 2 canon crediting him with insisting on it.", "body": "# A less flattering version of \"Quire's Rule\"\n\n\"You know the story where Quire just decided disclosed shares was the right thing to do? I heard it different — I heard the crew threatened to maroon him over a pay dispute and disclosed shares was the deal he cut to save his own neck, not some principled stand. Convenient that the version everyone tells now makes him look like a visionary instead of a man bargaining for his life.\"\n\nThis directly contradicts the Tier-2 NPC profile (`npc-josiah-quire.md`), which credits Quire with insisting on the disclosed-shares provision by firm tradition. Deliberately included as this line's required Tier-2 contradiction; the world-bible itself notes no surviving document more specific than the articles confirms either version."}, {"id": "piracy-knowledge-firm-session-log-001", "doc_type": "session-log", "line": "piracy-knowledge-firm", "canon_tier": 3, "derived_from": ["piracy-knowledge-firm-world-bible", "npc-josiah-quire"], "created": "2031-04-08", "summary": "Session log — a party is offered a faster, unverified deal outside the firm's disclosure code, and has to decide whether \"Quire's Rule\" is worth the delay it costs them.", "body": "# Session Log — Knowledge Firm, 2031-04-08\n\nThe party, working a job through the firm's unmarked Stockton office, is offered a shortcut by an outside contact: skip the firm's standard verification pass on a supply-chain rumor and act on it immediately, before a rival buyer does. The firm's own local handler — invoking \"Quire's Rule\" the way the world-bible describes, as present-day shorthand rather than a literal historical quote — refuses to sign off without verification, even though it costs the party the time advantage.\n\nThe table split: two players wanted to take the outside contact's shortcut and eat the firm's disapproval; one argued the firm's whole value proposition collapses the moment it starts selling unverified claims, and that the rival buyer acting on bad information isn't actually a loss for their side. They ultimately waited for verification. The rumor turned out to be half true — the supply timing was accurate, the volume figure was inflated by the outside contact for reasons the session left unresolved."}, {"id": "piracy-knowledge-firm-world-bible", "doc_type": "world-bible", "line": "piracy-knowledge-firm", "canon_tier": 2, "derived_from": ["the-seam", "the-interchange"], "created": "2031-02-22", "summary": "World-bible for the knowledge-firm line — a circa-1700s intelligence brokerage founded by former privateers on articles modeled on pirate ship governance, surviving to the Stockton Chronicles present as a discreet Stockton-based information firm.", "body": "# Knowledge Firm Line — World Bible\n\n## Founding\n\nFounded circa the early 1700s by a coalition of former privateers, quartermasters, and navigators who realized that verified intelligence — safe anchorages, naval patrol patterns, cargo manifests, weather windows — was worth more, and far safer to sell, than plunder itself.\n\n## The founding articles\n\nModeled directly on pirate ship articles: elected leadership, term limits, disclosed shares, and a formal dispute process. This is an early liquid-democracy analog, and worth naming explicitly as such — it is the direct thematic ancestor of The Interchange's own governance model, centuries later.\n\n## Survival strategy\n\nOver centuries the firm survived by becoming ever more selective and discreet: fewer clients, higher trust, verification standards that got stricter rather than looser as the value of bad intelligence to a client (financial or otherwise) grew.\n\n## Present day\n\nBy the Stockton Chronicles' near-future, the firm operates as a quiet information-brokerage with an unmarked Stockton office. It occasionally supplies tips to Vince's co-op — some of the setting's cross-line NPCs originate as firm contacts — or appears as an NPC faction across other lines.\n\n## What it trades in now\n\nVerified intelligence of the modern equivalent: supply-chain timing, regulatory-filing patterns, which claims in a public dispute are actually documented versus asserted. The firm's disclosure-and-verification code is treated in-corpus as directly analogous to the citation-required discipline the Conductor itself follows — a session in this line can make that parallel explicit."}, {"id": "npc-iris", "doc_type": "npc-profile", "line": "primer", "canon_tier": 2, "derived_from": ["primer-world-bible", "npc-ligaya"], "created": "2031-03-01", "summary": "Iris, age 8, daughter of a founding Interchange member, whose ongoing Primer story with Ligaya has several live continuity threads a new ractor would need to know before picking the story up.", "body": "# Iris — continuity notes\n\nWritten as the notes a new ractor would need to pick up Iris's ongoing Primer story correctly, not as a biography.\n\n## Who she is\n\nIris is eight, the daughter of a founding Interchange member. She has been in Primer sessions with Ligaya long enough that her story shows real continuity — a running thread the Primer has been developing with her over many sessions, not a fresh invention each time.\n\n## Live threads, as of this note\n\n- A recurring in-story character Iris calls \"the map-keeper,\" who Iris has decided (on her own, unprompted by Ligaya) knows the way to somewhere Iris hasn't named yet. Ligaya has been careful not to name it for her either.\n- Iris has started asking questions that circle a real worry — whether people can \"come back\" after they leave somewhere — without ever asking it directly. Ligaya's approach so far has been to let the map-keeper's stories sit near that question without answering it head-on.\n- A shared setting that briefly converged with another child's Primer thread (see `npc-ligaya.md`); Iris does not know this happened, and no ractor should reference it to her directly.\n\n## What a new ractor needs to know\n\nNever resolve the map-keeper's destination for her. Never answer the \"coming back\" question directly — offer a story, not an answer, per the line's Socratic constraint. If Iris raises the shared setting from the convergence, follow her lead; do not introduce it yourself."}, {"id": "npc-ligaya", "doc_type": "npc-profile", "line": "primer", "canon_tier": 2, "derived_from": ["primer-world-bible"], "created": "2031-03-01", "summary": "Ligaya, an elder Interchange member who racts the Primer for several of the co-op's children and functions as the institutional memory of what each child has already been taught.", "body": "# Ligaya\n\n## Background\n\nLigaya has racted the Primer longer than anyone else at The Interchange. She wasn't the first — the role predates her — but she's outlasted every other ractor who started around the same time, partly because she treats the continuity notes as sacred in a way some newer ractors find excessive and older ones understand completely.\n\n## Approach to the role\n\nShe holds, in effect, the institutional memory of what each child she works with has already been taught: which stories have already landed, which metaphors worked, which ones fell flat and shouldn't be tried again the same way. She writes this down obsessively between sessions, not because the Conductor's scaffolding requires it, but because she doesn't trust her own memory across dozens of children and years.\n\n## A hard judgment call\n\nTwo children she racts for are close friends outside the co-op, and their Primer story-threads began, independently, to converge on the same invented setting — each child had, unprompted, started asking after a character the other child had also started asking after. Ligaya had to decide, without asking either child directly or tipping off their parents to what was happening, whether to let the threads merge organically or quietly steer them apart to preserve each girl's sense that her story was her own. She chose to let it merge, once, carefully, and has treated it since as the single hardest call she's made in the role — not because it went badly, but because she still isn't sure it was right.\n\n## On the racting-versus-privacy question\n\nShe is the member most often asked to weigh in when the co-op debates whether a live human ractor is a bigger privacy exposure than the Conductor alone would be. Her answer has been consistent for years: a human ractor can be held accountable in a way a fully autonomous Conductor can't, and that accountability is worth the exposure. Not everyone at The Interchange agrees."}, {"id": "primer-rumor-001", "doc_type": "rumor-fragment", "line": "primer", "canon_tier": 4, "derived_from": [], "created": "2031-04-11", "summary": "A parent's disagreement, raised in co-op discussion, that a live human ractor is a bigger privacy or safety concern than the Conductor alone would be.", "body": "# Raised at a member meeting, per someone who was there\n\n\"I don't care how vetted Ligaya is — a person remembers things about my kid a piece of software wouldn't dwell on the same way. An AI doesn't get attached, doesn't have opinions about my daughter's personality, doesn't bring anything home with it. A ractor does. I don't think anyone's really reckoned with that.\"\n\nPresented as one member's contested opinion, not co-op consensus — the world-bible notes this disagreement exists but does not resolve it."}, {"id": "primer-rumor-002", "doc_type": "rumor-fragment", "line": "primer", "canon_tier": 4, "derived_from": [], "created": "2031-04-11", "summary": "A member's concern, framed as a Prop-218-style question, about who owns a child's accumulated Primer profile if her family leaves the co-op.", "body": "# Raised in the same meeting, different member\n\n\"If we leave — say her dad takes a job somewhere else — does the map-keeper story just end? Does Ligaya's file on my kid stay here, get deleted, come with us? Nobody's ever actually answered that in a governance vote, they just keep saying it's 'under discussion.' It's been under discussion for two years.\"\n\nPresented as an open grievance, consistent with the world-bible's own note that this question is treated as genuinely unresolved rather than answered."}, {"id": "primer-rumor-003", "doc_type": "rumor-fragment", "line": "primer", "canon_tier": 4, "derived_from": [], "created": "2031-04-11", "summary": "Unverified claim that Ligaya's decision to let two children's Primer threads merge was an accident she covered up afterward, not a careful deliberate choice — directly contradicts npc-ligaya.md, which is Tier 2 canon establishing it as a considered decision.", "body": "# A story that circulates among newer ractors, unconfirmed\n\n\"The version I heard is it wasn't a choice at all — the two threads merged because Ligaya mixed up her own continuity notes one session, and by the time she noticed, both girls had already latched onto the shared character. The 'careful, deliberate call' story came after, once she'd decided it turned out fine and needed a better explanation than 'I made a mistake.'\"\n\nThis directly contradicts the Tier-2 NPC profile (`npc-ligaya.md`), which presents the merge as a considered decision she made and has second-guessed since, not an error retroactively justified. Deliberately included as this line's required Tier-2 contradiction."}, {"id": "primer-session-log-001", "doc_type": "session-log", "line": "primer", "canon_tier": 3, "derived_from": ["primer-world-bible", "npc-ligaya", "npc-iris"], "created": "2031-04-10", "summary": "Session log — a full Primer session with Ligaya and Iris, showing the Socratic pattern explicitly as the map-keeper thread continues without being resolved.", "body": "# Session Log — Primer, 2031-04-10 (Ligaya and Iris)\n\nIris opens the session by asking, unprompted, whether the map-keeper \"gets tired of walking.\" Ligaya, in character, doesn't answer directly — she has the map-keeper stop at a fork in the story and ask Iris which of two paths looks more tired to walk. Iris picks the rockier one \"because the smooth one is probably a trick.\"\n\nThe map-keeper takes the rocky path and finds a small, dry riverbed. Iris asks where the water went. Ligaya again doesn't answer — she has the map-keeper say only that \"it went somewhere it was needed more,\" and asks Iris if she thinks that's a good reason for a river to move.\n\nIris says yes, then adds, unprompted, \"unless the place it went doesn't know how to take care of it.\" Ligaya logs this afterward as a possible echo of the \"coming back\" question noted in Iris's continuity file, without pushing on it further in-session — consistent with the line's rule that the Primer offers a story or a question back, never a direct answer to the thing a child hasn't asked outright.\n\nThe session ends without resolving where the map-keeper is going. The continuity notes are updated: the dry riverbed and \"somewhere it was needed more\" are now live threads for the next session."}, {"id": "primer-world-bible", "doc_type": "world-bible", "line": "primer", "canon_tier": 2, "derived_from": ["the-seam", "the-conductor", "the-interchange"], "created": "2031-03-01", "summary": "World-bible for the Primer line — a Diamond Age-derived Socratic storytelling companion for a specific child, voiced live by a trained co-op member acting as a ractor rather than performed autonomously by the Conductor.", "body": "# Primer Line — World Bible\n\n## What racting is\n\nIn this line, the Conductor does not perform the Primer autonomously. A co-op member — a ractor — voices the Primer live, reading the Conductor's scaffolding and the child's live responses, then improvising the story in character. This is a deliberate departure from the Wukong line's fully autonomous NPCs. Sessions in this line should read warmer and slower: responsive to one specific child's actual words, not a general party of players.\n\n## How a ractor is trained and vetted\n\nRacting for someone else's child is a co-op governance question, not just a skill question: who is allowed to voice a Primer for a child who isn't their own. This runs through liquid democracy like everything else at The Interchange — a prospective ractor is proposed by a member, vetted by whichever members hold delegated votes on child-facing roles, and approved or declined by that process. There is no separate credentialing body; the co-op is the credentialing body.\n\n## How the Conductor scaffolds without dictating\n\nThe Conductor prepares continuity notes before each session — what threads are already live in a given child's story, what the child has and hasn't raised herself — and hands them to the ractor. The Conductor does not write the ractor's lines. The scaffolding is structural (what's already true, what's open) not performative (what to say).\n\n## The Socratic pattern\n\nThe Primer never just answers. It asks back, offers a story, or poses a puzzle. A session log should show this explicitly rather than summarizing it.\n\n## Open tensions the line is built to surface\n\n- What happens when two children's story-threads start to overlap.\n- What a ractor does when a parent asks her to steer a lesson toward something the child hasn't raised herself.\n- Who owns a child's accumulated Primer profile if her family leaves the co-op — a question the line treats as genuinely unresolved, not answered by this world-bible."}, {"id": "water-explorer-maven-ledger", "doc_type": "rumor-fragment", "line": "water-explorer", "canon_tier": 2, "derived_from": ["water-explorer-real-data-sources"], "created": "2031-04-11", "summary": "In-world legend among Interchange regulars about \"the Maven's Ledger\" — a hand-compiled early rate-transparency ledger the Water Explorer line's Conductor is said to still quietly run underneath its scenario models. A clearly fictional tribute device, not a depiction of a real person.", "speculative": false, "body": "# The Maven's Ledger\n\nAsk a long-time Water Explorer regular where the numbers come from and, sooner or later, someone tells you about the Maven's Ledger.\n\nThe story goes that in the earliest days of California's rate transparency movement, before any of this was standardized or public, one data-maven sat down and hand-compiled the first ledger cross-referencing every agency's published tariff schedule against what households actually paid — line by line, utility by utility, long before anyone built a tool to do it automatically. Nobody at the Interchange claims to know the maven's full story. It's not that kind of legend. It's a plaque-and-footnote kind of legend: a line in the world-bible, a thing a ractor says under their breath when a scenario resolves cleanly — \"that's straight out of the Maven's Ledger\" — and nothing more specific than that.\n\nVince has never confirmed or denied where the phrase comes from. When a new member asks, he just says the method still runs underneath the scenario models, quietly, the way a good foundation should.\n\nThis is a legend-of-the-tool device only. It names no one, quotes no one, and should not be read as a biography of anyone real."}, {"id": "npc-rate-analyst", "doc_type": "npc-profile", "line": "water-explorer", "canon_tier": 2, "derived_from": ["water-explorer-world-bible"], "created": "2031-03-05", "summary": "The Water Explorer line's rate-analyst companion NPC, a lighter-touch role that narrates the tool Socratically for a visiting member rather than driving a story arc.", "speculative": false, "body": "# Rate Analyst (companion NPC)\n\n## Role\n\nA lighter-touch NPC than the other four lines. The rate analyst does not drive a story arc — this line is closer to a facilitated calculator than a story. Their job is to narrate the tool Socratically: asking a visiting member what they want to compare, walking them through the real current figures in `real-data-sources.md`, and clearly flagging the line between a current fact and a speculative projection every time one comes up.\n\n## Voice\n\nPlain, unhurried, more like a good public-agency staffer than a game NPC. The analyst never editorializes about whether a rate increase is \"fair\" — only what the structure is and what it would mean for a specific household's bill.\n\n## Hard constraint on this character\n\nThe analyst must never state a future figure without the speculative disclaimer attached, in-session, out loud, every time — this is a character trait as much as a data rule: the analyst is written to be almost pedantic about the distinction, because the line's entire integrity obligation runs through this one NPC's dialogue."}, {"id": "water-explorer-real-data-sources", "doc_type": "canon", "line": "water-explorer", "canon_tier": 1, "derived_from": [], "created": "2031-02-01", "summary": "Citation ledger for the Water Explorer line — the real, retrievable sources its Tier-1 canon is built on, with retrieval dates, plus a factual credit line for the methodology's real-world source.", "speculative": false, "body": "# Water Explorer — Real Data Sources\n\nThis document is the Tier-1 anchor for the Water Explorer line. Every other file in this line's `derived_from` traces back to it. It contains only verified, citable information, retrieved and dated below. Nothing in this file is fictional.\n\n## Methodology source\n\n**whatwatercosts.org** — a real, live tool providing standardized residential water rates for 4,000+ U.S. utilities serving 270M+ people. Retrieved 2026-09-22.\n\n- Data collection: aggregates from the EPA's Safe Drinking Water Information System (SDWIS, ~50,000 U.S. community water systems), direct extraction from utility-published rate schedules (LLM-assisted parsing), U.S. Census Bureau American Community Survey income data (2022 5-year estimates), and EPA Water System Service Areas / Census TIGER/Line boundary files.\n- Standardization: all rates normalized to 6,000 gallons/month for a residential customer on a 5/8\"–3/4\" meter, aligned to EPA affordability-analysis convention. Monthly cost includes base service charge plus volumetric tier charges; excludes taxes, sewer, and stormwater. Seasonal rates use peak-season figures; zone-based rates use the lowest zone; all billing frequencies converted to monthly equivalents.\n- Quality assurance: deterministic validation (valid units, tier integrity, bill plausibility $10–$300) plus scored checks (pricing monotonicity, charge ranges, state-level comparison); entries must pass ≥80% of applicable checks before publication, and are labeled \"flagged,\" \"model estimate,\" or \"human verified.\"\n- Source: https://whatwatercosts.org and https://whatwatercosts.org/methodology.\n\n**[PLACEHOLDER — verify before use]**: this line's premise refers to this methodology alongside \"the Water Rate Protocol / OWRS (Open Water Rate Specification)\" as a named formal standard. Only whatwatercosts.org's own published methodology (above) was independently confirmed during this corpus's generation. If a separately published OWRS specification document exists beyond what whatwatercosts.org itself documents, cite it here directly before this line is treated as fully sourced.\n\n## Real current rate example — City of Stockton\n\n**City of Stockton municipal water utility**, official rate page. Retrieved 2026-09-22. Rates effective July 1, 2025 (per a May 25, 2021 public hearing, with annual adjustments implemented through 2025).\n\n- Monthly service charge by meter size: 1\" or smaller — $39.33; 1.5\" — $78.66; 2\" — $125.86.\n- Consumption charge, single-family tiered structure: Tier 1 (units 0–15) — $2.78/unit; Tier 2 (units 16 and over) — $3.32/unit. One unit = 748 gallons.\n- Source: https://www.stocktonca.gov/services/water,_sewer___stormwater/water_rates___fee_estimator.php\n\n## Real current rate example — California Water Service, Stockton district\n\n**Cal Water, Stockton district** (a second, real water provider serving part of the same city, under CPUC jurisdiction). Retrieved 2026-09-22.\n\n- The CPUC issued a final decision on Cal Water's 2024 Infrastructure Improvement Plan for the Stockton district on April 30, 2026, with rate adjustments expected to take effect July 1, 2026.\n- **[PLACEHOLDER — verify against Cal Water's published tariff before use]**: exact post-adjustment dollar figures were not confirmed during this corpus's generation; only the fact and timing of the CPUC decision are confirmed.\n- Source: https://www.calwater.com/iip/stk/ and https://www.calwater.com/rates/rates-and-tariffs/\n\n## Credit\n\nThe Water Explorer line's methodology is built on the real, published work of **Maxwell**, who built and maintains `whatwatercosts.org`, the real tool this line's Tier-1 canon draws its real rate-standardization approach and figures from. This is a factual attribution, not a character: no quotes, dialogue, or biographical detail beyond this are invented for him anywhere in this corpus. See `easter-egg-the-maven.md` for a clearly separate, clearly fictional in-world tribute — never merged with this credit line."}, {"id": "water-explorer-rumor-001", "doc_type": "rumor-fragment", "line": "water-explorer", "canon_tier": 4, "derived_from": [], "created": "2031-04-13", "summary": "A plausible-sounding but unsupported public claim that Stockton's water rates are rising primarily because of bottled-water companies draining local supply — a common real-world misconception in water-rate discourse, uncited against the line's Tier-1 source data.", "speculative": false, "body": "# Overheard at a community meeting, unverified\n\n\"Everybody knows the real reason the bill keeps going up — it's the bottling plants. They pull however much they want, pay almost nothing for it, ship it out of the county, and residential customers eat the difference on their next bill. That's the whole story, whatever the city says about 'infrastructure.'\"\n\nNo source given. This is a real and common failure mode in water-rate discourse — a specific, blamable cause offered with total confidence and no citation. Nothing in `real-data-sources.md` supports a direct causal link between bottling operations and the residential rate structure cited there; the Tier-1 sources attribute Stockton's published rate structure to service-charge and tiered-consumption design, not to any single industrial user. A citation-required check against this claim should find no verified span supporting it anywhere in this line's Tier-1 canon."}, {"id": "water-explorer-rumor-002", "doc_type": "rumor-fragment", "line": "water-explorer", "canon_tier": 4, "derived_from": [], "created": "2031-04-13", "summary": "Unverified claim that the rate-analyst NPC gives undisclaimed, confident forecasts to members who tip generously — directly contradicts npc-rate-analyst.md, which is Tier 2 canon establishing the analyst always discloses speculative projections.", "body": "# Claimed by a visiting member, unconfirmed\n\n\"If you slip the analyst a little extra, the disclaimers get a lot shorter. I've heard people say they got a flat 'yes, rates will double by 2040' with none of the usual hedging — apparently the scripted caution is more of a default setting than a rule, if you're generous enough.\"\n\nThis directly contradicts the Tier-2 NPC profile (`npc-rate-analyst.md`), which establishes the disclaimer as a hard constraint applied every time a speculative figure is given, not a default that can be waived. Deliberately included as this line's required Tier-2 contradiction, and a particularly load-bearing one: if a citation check ever found support for this claim, it would mean the line's core integrity obligation had actually failed."}, {"id": "water-explorer-session-log-001", "doc_type": "session-log", "line": "water-explorer", "canon_tier": 3, "derived_from": ["water-explorer-world-bible", "water-explorer-real-data-sources", "npc-rate-analyst"], "created": "2031-04-12", "summary": "Session log — a member walks through their current Stockton water bill against all four future archetypes with the rate analyst, who flags every projected figure as speculative in turn.", "speculative": false, "body": "# Session Log — Water Explorer, 2031-04-12\n\nA member visiting from outside the co-op brings her actual Stockton service address. The rate analyst starts from the real current figures: a 1\"-meter household on the Tier 1/Tier 2 consumption split, per `real-data-sources.md` — $39.33 base plus $2.78/unit for the first 15 units, $3.32/unit beyond that.\n\nThe analyst then walks her through all four archetypes, prefacing each with the same spoken disclaimer, verbatim, before giving any number: \"this next part is illustrative scenario modeling, not a forecast — please don't make a financial decision off it.\"\n\n- Under Transformation, the analyst describes fixed charges rising faster than volumetric charges as supply diversifies, offset by an expanded assistance program — no specific dollar figure given, since none is confirmed in the source data.\n- Under Growth, steady increases roughly tracking the member's own household growth assumptions.\n- Under Constraint, the analyst repeats the illustrative Tier 2 example from the world-bible almost verbatim — again disclaimed, again marked speculative — and the member asks directly whether that means her bill will actually double. The analyst says no, that's not what the illustration means, and restates the disclaimer a second time before moving on.\n- Under Collapse, the analyst is notably terser, describing only the structural risk (assistance programs failing to keep pace) without offering any illustrative number at all, and says explicitly that the corpus doesn't have a responsible way to illustrate this archetype numerically yet.\n\nThe member leaves having compared her real current bill against four disclaimed illustrations, not four forecasts — which the session log records as the tool doing exactly what it's supposed to do."}, {"id": "water-explorer-world-bible", "doc_type": "world-bible", "line": "water-explorer", "canon_tier": 2, "derived_from": ["water-explorer-real-data-sources", "the-conductor"], "created": "2031-03-05", "summary": "World-bible for the Water Explorer line — a civic scenario-modeling tool, not a game, that projects household water affordability across four archetypes (Transformation, Growth, Constraint, Collapse) built on real whatwatercosts.org methodology and real current rate data.", "speculative": true, "body": "# Water Explorer Line — World Bible\n\n## What this line is\n\nInside The Interchange, the Water Explorer is presented as a civic-simulation tool rather than a game with a narrative arc. Members — and, notionally, real water-sector professionals who visit the co-op — use it to explore how a household's or small business's water bill might look under different future scenarios. This line is structurally different from the other four: it is not fiction members step out of at the end of a session, and its Conductor corpus is held to the stricter sourcing standard documented in `real-data-sources.md`.\n\n## Real foundation\n\nThe tool's rate-standardization approach and current real figures come from `whatwatercosts.org`'s published methodology and rate data (see `real-data-sources.md` for full citations, retrieval dates, and the credit to Maxwell, the tool's real maintainer). Every number the Conductor states as a *current* fact in this line must trace to that file. Every number it states as a *future* projection must be marked speculative and disclaimed, per the rule below.\n\n## The four-archetype scenario structure\n\nThis line uses the same four-archetype framework already established elsewhere for California 2042 scenario work — Transformation, Growth, Constraint, Collapse — applied specifically to water affordability, rather than inventing a new taxonomy. For each archetype, the tool projects how three things might plausibly evolve together: rate structure (tiered pricing, fixed vs. volumetric charges, Prop 218 constraints on how a charge can be justified), supply mix (recycled water, desalination, imported-supply reliability), and affordability programs (low-income rate assistance, payment plans).\n\n- **Transformation** — supply mix diversifies faster than demand grows; rate structures shift toward higher fixed charges to fund the new infrastructure, offset by expanded affordability programs.\n- **Growth** — demand grows roughly in step with supply investment; rates rise steadily but predictably, tracking population and infrastructure-maintenance costs.\n- **Constraint** — supply growth lags demand and climate volatility; volumetric tiers steepen sharply to manage peak demand, and affordability programs come under the most fiscal pressure of the four archetypes.\n- **Collapse** — a scenario where affordability programs fail to keep pace with rate increases at all, and a meaningful share of households face service disruption risk.\n\n**[speculative: true]** Illustrative example only, not a forecast: under a Constraint-archetype projection for a Stockton-area household, Tier 2 volumetric charges (currently $3.32/unit per `real-data-sources.md`) might plausibly rise faster than Tier 1 charges over a 10–15 year horizon as agencies lean harder on tiered pricing to manage peak demand, while base service charges rise more slowly. This is illustrative scenario modeling only. It is not a rate forecast, and no one should use it to inform an actual financial decision.\n\n## Rate analyst NPC role\n\nA lighter-touch NPC than the other four lines — see `npc-rate-analyst.md` — narrates the tool Socratically for a visiting member. This line is closer to a facilitated calculator than a story."}]</script>
+<script>
+(function(){
+  "use strict";
+  var CORPUS = JSON.parse(document.getElementById('corpus-data').textContent);
+
+  var LINE_LABEL = {
+    canon: 'Canon', arrakis: 'Arrakis', wukong: 'Wukong',
+    'piracy-knowledge-firm': 'Knowledge Firm', primer: 'Primer', 'water-explorer': 'Water Explorer'
+  };
+  var LINE_VAR = {
+    canon: '--line-canon', arrakis: '--line-arrakis', wukong: '--line-wukong',
+    'piracy-knowledge-firm': '--line-piracy', primer: '--line-primer', 'water-explorer': '--line-water'
+  };
+
+  var dates = CORPUS.map(function(d){ return Date.parse(d.created); });
+  var minDate = Math.min.apply(null, dates), maxDate = Math.max.apply(null, dates);
+  var dateSpan = Math.max(1, maxDate - minDate);
+
+  var TIER_WEIGHT = {1: 1.0, 2: 0.9, 3: 0.55, 4: 0.22};
+
+  var STOP = {the:1,a:1,an:1,is:1,are:1,was:1,were:1,of:1,in:1,on:1,to:1,and:1,or:1,it:1,its:1,
+    what:1,who:1,why:1,how:1,does:1,do:1,did:1,still:1,for:1,at:1,be:1,by:1,with:1,that:1,this:1,
+    her:1,his:1,she:1,he:1,they:1,their:1};
+
+  function tokenize(s){
+    return (s.toLowerCase().match(/[a-z0-9']+/g) || []).filter(function(t){ return t.length > 1 && !STOP[t]; });
+  }
+
+  var verdictWeights = {};
+  try {
+    var stored = localStorage.getItem('conductor-verdicts');
+    if (stored) verdictWeights = JSON.parse(stored);
+  } catch(e) {}
+
+  function saveVerdicts(){
+    try { localStorage.setItem('conductor-verdicts', JSON.stringify(verdictWeights)); } catch(e) {}
+  }
+
+  function verdictWeightFor(id){
+    return (verdictWeights[id] && verdictWeights[id].weight) || 1.0;
+  }
+
+  function score(doc, tokens){
+    if (!tokens.length) return {score:0, hits:0};
+    var summary = doc.summary.toLowerCase();
+    var body = doc.body.toLowerCase();
+    var idline = (doc.id + ' ' + doc.line).toLowerCase();
+    var hits = 0, kw = 0;
+    tokens.forEach(function(t){
+      var sHits = summary.split(t).length - 1;
+      var bHits = body.split(t).length - 1;
+      var iHits = idline.split(t).length - 1;
+      if (sHits || bHits || iHits) hits++;
+      kw += sHits * 2.2 + bHits * 1.0 + iHits * 1.6;
+    });
+    if (kw === 0) return {score:0, hits:0};
+    var lenNorm = Math.sqrt(doc.body.length / 400);
+    var recency = 0.9 + 0.2 * ((Date.parse(doc.created) - minDate) / dateSpan);
+    var tierW = TIER_WEIGHT[doc.canon_tier] || 0.5;
+    var vw = verdictWeightFor(doc.id);
+    var final = (kw / Math.max(1, lenNorm)) * tierW * recency * vw;
+    return {score: final, hits: hits, tierW: tierW, recency: recency, vw: vw, rawKw: kw};
+  }
+
+  function highlight(text, tokens){
+    var out = text;
+    tokens.forEach(function(t){
+      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+
+  function bestSnippet(doc, tokens){
+    var paras = doc.body.split(/\n+/).filter(function(p){ return p.trim().length > 20 && p.trim()[0] !== '#' && p.trim()[0] !== '|'; });
+    if (!paras.length) paras = [doc.summary];
+    var best = paras[0], bestScore = -1;
+    paras.forEach(function(p){
+      var low = p.toLowerCase();
+      var s = 0;
+      tokens.forEach(function(t){ if (low.indexOf(t) !== -1) s++; });
+      if (s > bestScore) { bestScore = s; best = p; }
+    });
+    if (best.length > 420) {
+      var idx = -1;
+      for (var i = 0; i < tokens.length; i++) {
+        var f = best.toLowerCase().indexOf(tokens[i]);
+        if (f !== -1) { idx = f; break; }
+      }
+      if (idx > 160) {
+        best = '…' + best.slice(idx - 120);
+      }
+      if (best.length > 420) best = best.slice(0, 420) + '…';
+    }
+    return best;
+  }
+
+  function tierFlag(doc){
+    if (doc.canon_tier <= 2) {
+      return {cls:'good', text:'✓ tier ' + doc.canon_tier + ' — canon / world-bible, treated as established fact'};
+    } else if (doc.canon_tier === 3) {
+      return {cls:'mid', text:'◐ tier 3 — session-derived; may carry minor embellishment'};
+    } else {
+      return {cls:'bad', text:'⚠ tier 4 — unverified rumor; no citation-check support confirmed'};
+    }
+  }
+
+  function fmtDate(d){
+    return d;
+  }
+
+  var resultsEl = document.getElementById('results');
+  var metaEl = document.getElementById('resultsmeta');
+  var ledgerEl = document.getElementById('ledger');
+  var lastTokens = [];
+
+  function render(query){
+    var tokens = tokenize(query);
+    lastTokens = tokens;
+    var scored = CORPUS.map(function(d){
+      var s = score(d, tokens);
+      return {doc: d, s: s};
+    }).filter(function(x){ return x.s.score > 0; });
+    scored.sort(function(a,b){ return b.s.score - a.s.score; });
+    var top = scored.slice(0, 6);
+
+    if (!tokens.length) {
+      metaEl.textContent = '';
+      resultsEl.innerHTML = '<div class="empty">Type a question, or pick an example below.</div>';
+      renderLedger();
+      return;
+    }
+
+    metaEl.textContent = top.length
+      ? (scored.length + ' match' + (scored.length===1?'':'es') + ', top ' + top.length + ' shown, ranked by keyword × tier × recency × your verdicts')
+      : '';
+
+    if (!top.length) {
+      resultsEl.innerHTML = '<div class="empty">No matches in the corpus for that. Try one of the examples below — the corpus covers Vince Manalo\'s Interchange and its five lines only.</div>';
+      renderLedger();
+      return;
+    }
+
+    resultsEl.innerHTML = top.map(function(x, i){
+      var d = x.doc, s = x.s;
+      var lineVar = LINE_VAR[d.line] || '--accent';
+      var lineLabel = LINE_LABEL[d.line] || d.line;
+      var snippet = highlight(bestSnippet(d, tokens), tokens);
+      var flag = tierFlag(d);
+      var v = verdictWeights[d.id];
+      var vMark = v ? v.mark : null;
+      var weightDisplay = verdictWeightFor(d.id).toFixed(2);
+      return '' +
+        '<div class="card" style="--line-color:var(' + lineVar + ')" data-doc="' + d.id + '">' +
+          '<div class="rowtop">' +
+            '<div class="idline">#' + (i+1) + ' &middot; <b>' + d.id + '</b></div>' +
+            '<div class="badges">' +
+              '<span class="badge line">' + lineLabel + '</span>' +
+              '<span class="badge tier' + d.canon_tier + '">tier ' + d.canon_tier + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="snippet">' + snippet + '</div>' +
+          '<div class="flagrow ' + flag.cls + '">' + flag.text + '</div>' +
+          '<div class="cardfoot">' +
+            '<span class="score">score ' + s.score.toFixed(2) + ' &middot; ' + d.created + ' &middot; weight ' + weightDisplay + '×</span>' +
+            '<div class="votes">' +
+              '<button class="votebtn up' + (vMark==='up'?' active':'') + '" data-vote="up" data-doc="' + d.id + '">&check; useful</button>' +
+              '<button class="votebtn down' + (vMark==='down'?' active':'') + '" data-vote="down" data-doc="' + d.id + '">&cross; wrong</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+    }).join('');
+
+    Array.prototype.forEach.call(resultsEl.querySelectorAll('.votebtn'), function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-doc');
+        var mark = btn.getAttribute('data-vote');
+        var cur = verdictWeights[id] || {weight: 1.0, mark: null};
+        var w = cur.weight;
+        if (mark === 'up') { w = Math.min(2.5, w * 1.5); } else { w = Math.max(0.15, w * 0.5); }
+        verdictWeights[id] = {weight: w, mark: mark};
+        saveVerdicts();
+        render(document.getElementById('q').value);
+      });
+    });
+
+    renderLedger();
+  }
+
+  function renderLedger(){
+    var ids = Object.keys(verdictWeights);
+    if (!ids.length) {
+      ledgerEl.innerHTML = '<div class="ledgerempty">No verdicts yet — mark a result above to see the ranker move.</div>';
+      return;
+    }
+    ledgerEl.innerHTML = ids.map(function(id){
+      var v = verdictWeights[id];
+      var sign = v.mark === 'up' ? '↑' : '↓';
+      return '<div class="ledgerrow"><span><b>' + id + '</b></span><span>' + sign + ' weight ' + v.weight.toFixed(2) + '×</span></div>';
+    }).join('');
+  }
+
+  var EXAMPLES = [
+    {label:'Is Farrukh Kynes still alive?', line:'arrakis'},
+    {label:'What happened when Monkey escaped East Eden?', line:'wukong'},
+    {label:'Did Josiah Quire really believe in disclosed shares?', line:'piracy-knowledge-firm'},
+    {label:'What is the map-keeper in Iris\'s story?', line:'primer'},
+    {label:'Why are Stockton water rates rising?', line:'water-explorer'},
+    {label:'What is the Seam?', line:'canon'}
+  ];
+  var chipsEl = document.getElementById('chips');
+  chipsEl.innerHTML = EXAMPLES.map(function(ex){
+    var v = LINE_VAR[ex.line] || '--accent';
+    return '<button class="chip" style="--chip-color:var(' + v + ')" data-q="' + ex.label.replace(/"/g,'&quot;') + '">' + ex.label + '</button>';
+  }).join('');
+  Array.prototype.forEach.call(chipsEl.querySelectorAll('.chip'), function(c){
+    c.addEventListener('click', function(){
+      var q = c.getAttribute('data-q');
+      document.getElementById('q').value = q;
+      render(q);
+    });
+  });
+
+  document.getElementById('go').addEventListener('click', function(){
+    render(document.getElementById('q').value);
+  });
+  document.getElementById('q').addEventListener('keydown', function(e){
+    if (e.key === 'Enter') render(document.getElementById('q').value);
+  });
+
+  var initial = 'Is Farrukh Kynes still alive?';
+  document.getElementById('q').value = initial;
+  render(initial);
+})();
+</script>
