@@ -474,6 +474,15 @@
   @keyframes chipin  { from { transform: scale(0.96); opacity: 0; } to { transform: none; opacity: 1; } }
   @keyframes chipout { from { transform: none; opacity: 1; max-width: 400px; } to { transform: scale(0.96); opacity: 0; max-width: 0; padding: 0; margin: 0; } }
 
+  /* A statement of fact in the page's own voice, not an alert: no yellow, no
+     icon, no box. It sits above the roles so somebody who lands here cold and
+     scrolls to the table reads it before they read a job title. */
+  .notice {
+    font-size: var(--t-secondary); color: var(--secondary);
+    max-inline-size: var(--measure);
+    padding-inline-start: var(--s4);
+    border-inline-start: 2px solid var(--hairline);
+  }
   .delta { font-size: var(--t-secondary); color: var(--secondary); min-height: 1.5em; }
   .delta span { opacity: 0; transition: opacity var(--motion) ease-out; }
   .delta span.on { opacity: 1; }
@@ -593,6 +602,7 @@
 
     <section id="results" class="band-section reveal">
       <div class="container stack-6">
+        <p class="notice" id="s-results-notice"></p>
         <p class="delta" id="delta"><span id="delta-text"></span></p>
         <table class="roles">
           <caption><h2 id="result-caption"></h2></caption>

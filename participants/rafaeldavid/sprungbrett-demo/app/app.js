@@ -752,6 +752,7 @@
       noteLabel.appendChild(el('span', 'optional', t('optional')));
     }
     setText('add-note', t('addNote'));
+    setText('s-results-notice', t('resultsNotice'));
     setText('s-missing-title', t('missingTitle'));
     setText('s-missing-lede', t('missingLede'));
     setText('s-outreach-title', t('outreachTitle'));

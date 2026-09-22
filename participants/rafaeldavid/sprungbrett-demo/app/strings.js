@@ -37,6 +37,7 @@ window.STRINGS = {
   t: {
     en: {
       greeting: 'Welcome',
+      resultsNotice: 'Invented listings at invented employers. Nothing here is a real opening.',
       optional: '(optional)',
       changeLanguage: 'Change language',
       headline: 'Find roles that match your qualifications, not only your German.',
@@ -79,6 +80,7 @@ window.STRINGS = {
 
     de: {
       greeting: 'Willkommen',
+      resultsNotice: 'Erfundene Stellenanzeigen bei erfundenen Arbeitgebern. Nichts davon ist eine echte Stelle.',
       optional: '(optional)',
       changeLanguage: 'Sprache ändern',
       headline: 'Finden Sie Stellen, die zu Ihrer Qualifikation passen – nicht nur zu Ihrem Deutsch.',
@@ -121,6 +123,7 @@ window.STRINGS = {
 
     uk: {
       greeting: 'Ласкаво просимо',
+      resultsNotice: 'Вигадані вакансії у вигаданих роботодавців. Жодна з них не є справжньою.',
       optional: '(необов’язково)',
       changeLanguage: 'Змінити мову',
       headline: 'Знайдіть посади, які відповідають вашій кваліфікації, а не лише вашій німецькій.',
@@ -163,6 +166,7 @@ window.STRINGS = {
 
     tr: {
       greeting: 'Hoş geldiniz',
+      resultsNotice: 'Uydurma işverenlerde uydurma ilanlar. Buradaki hiçbir ilan gerçek değil.',
       optional: '(isteğe bağlı)',
       changeLanguage: 'Dili değiştir',
       headline: 'Yalnızca Almancanıza değil, niteliklerinize uyan işleri bulun.',
@@ -205,6 +209,7 @@ window.STRINGS = {
 
     ar: {
       greeting: 'أهلاً وسهلاً',
+      resultsNotice: 'إعلانات وظائف مُختلقة لدى جهات عمل مُختلقة. لا توجد هنا وظيفة حقيقية.',
       optional: '(اختياري)',
       changeLanguage: 'تغيير اللغة',
       headline: 'اعثر على وظائف تناسب مؤهلاتك، لا لغتك الألمانية وحدها.',
@@ -247,6 +252,7 @@ window.STRINGS = {
 
     es: {
       greeting: 'Te damos la bienvenida',
+      resultsNotice: 'Ofertas inventadas en empleadores inventados. Ninguna de ellas es una vacante real.',
       optional: '(opcional)',
       changeLanguage: 'Cambiar idioma',
       headline: 'Encuentra puestos que coincidan con tu cualificación, no solo con tu alemán.',

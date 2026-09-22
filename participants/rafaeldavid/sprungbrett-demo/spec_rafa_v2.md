@@ -154,6 +154,29 @@ Three things stayed visible, because removing them would make the page mislead r
 
 None of the three reads as a disclaimer block. They are one heading, one parenthesis and one line of small text.
 
+### The condition was met, on 2026-09-22
+
+The paragraph above says the decision only holds because the demo is presenter-led and lives in
+a repo, and that if it ever ships to the public the warnings come back first. That happened: the
+page was published to `npc.here.now/workshopgigidemo` to be shared during a workshop session.
+
+So the rule was applied rather than quietly dropped. The form it took is **one line above the
+results**, in all six interface languages:
+
+> Invented listings at invented employers. Nothing here is a real opening.
+
+One line rather than four, because three of the original four are already covered by the markers
+that stayed visible — the demo-account chooser, `(fictional)` inside every employer string, and
+the authority line under "What you're missing" — and the fourth, about no model running, is not
+what a stranger following a link is at risk from. What they are at risk from is taking an
+invented vacancy seriously, and that is the one this line addresses. It is styled as a statement
+of fact in the page's own voice, not as an alert.
+
+It lives in `strings.js` with every other interface string, because a warning that appears only
+in English on a page built for six languages reaches exactly the readers least likely to need it.
+
+**If the URL comes down, whether the line stays is a fresh decision, not an automatic revert.**
+
 ## Tell us more
 
 A section under the roles table. Four questions the page asks back — shifts including nights, moving city, a driving licence, a fixed-term contract to start — each answerable Yes, No or Skip, and a free-text box. Answering re-runs the scoring immediately and a quiet line above the table reports the delta for two seconds: "+3 roles · 1 requirement met". Rows that have just joined get a brief accent edge.
