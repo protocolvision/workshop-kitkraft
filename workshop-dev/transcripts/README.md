@@ -55,11 +55,13 @@ otherwise.
 | Session | When (UTC) | Captured |
 |---|---|---|
 | 1 — kits, the inventory exercise | Mon 21 Sep, 15:30 | Full plenary |
-| 2 — factories | Mon 21 Sep, 20:00 | One breakout only; no plenary |
+| 2 — factories | Mon 21 Sep, 20:00 | One breakout only; no plenary recording found |
 | 3 — factories and shared language | Tue 22 Sep, 15:30 | Full plenary |
 | 4 — show and tell | Tue 22 Sep, 20:00 | Not recorded |
 
-Session 4 was not recorded, and a recorder was only running in one breakout room.
+Session 4 was not recorded, no recording of session 2's plenary has been found, and
+a recorder was only running in one breakout room. Recording was started and stopped by
+hand; `workshop-dev/feedback/2026-09-facilitator-retro.md` sets out why that failed.
 Of the breakouts, only the job-search one survives. Placing it in session 2 is an
 inference, not a timestamp: session 1's recording contains no breakout, and session
 3 refers back to the previous day's breakouts as the ones spent imagining new kits

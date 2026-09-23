@@ -4,8 +4,8 @@ A breakout from session 2, working one idea end to end: what an AI "factory" for
 job searching would actually look like. This is the conversation the Sprungbrett
 demo later came out of.
 
-It is the only breakout from the whole workshop that was recorded. Session 2's
-plenary was not captured, so this is the sole record of that session.
+It is the only breakout from the whole workshop that was recorded. No recording of
+session 2's plenary has been found, so this is the only record of that session.
 
 ## The shape of the problem
 

@@ -80,16 +80,72 @@ history to surface what the person has already built or already depends on. Dire
 user input is not useless, but the whole point is to make the harness do the heavy
 lifting. The instructions need rewriting so that cannot happen.
 
-### Capture failed in several places
+### Recording was a manual trigger, and half the sessions are missing
 
-- The final session discussion was not recorded at all.
-- OpenRecapper was not set up per breakout room, so only one breakout was captured.
-- Discord recordings do not reach the repository on their own. They have to be fished
-  out of Discord by hand, mixed in with unrelated files.
+*Corrected 2026-09-23. The dictated retro counted one missed session. Checking the
+recordings we have against the runbook shows two.*
 
-Every room needs a recorder, set up before the session rather than during it. Getting
-Discord recordings to stream or upload into the repo automatically would remove the
-whole problem.
+| Session | Captured |
+|---|---|
+| 1 | Full plenary |
+| 2 | One breakout only. No plenary recording found |
+| 3 | Full plenary |
+| 4 | Nothing |
+
+This was the design, not bad luck. The recorder runbook
+(`workshop-dev/sessions/recorder-runbook.md`) had recording started and stopped by
+hand with typed `/record` and `/stop` commands, and the operator was the lead
+facilitator, who had the most to do at exactly the moments those commands were due.
+
+Three things in that design made misses close to certain:
+
+- **More manual commands were due exactly when attention was busiest.** Sessions 2
+  and 3 each needed four manual commands because of their breakouts, and the
+  procedure around a breakout was six steps long, carried out while moving people
+  between rooms. No plenary recording has been found for session 2, the first session
+  that needed it.
+- **The bot stops itself when the plenary channel empties**, and a breakout always
+  empties it. So every breakout guaranteed a stop, and recovery depended on someone
+  remembering to restart on reconvene.
+- **Nothing flagged a missing recording.** The runbook's checks were a person looking
+  for live transcript lines within thirty seconds, and a "Recording on" line posted to
+  the channel. If that line never appears, nothing prompts anyone, and nobody was
+  assigned to watch for it.
+
+Session 4 needed a single start command and no breakout procedure, and was missed
+anyway, at the end of a long second day. That is the other half of the lesson: however
+simple a manual step is, if it depends on the lead facilitator remembering it
+mid-session, it will eventually get dropped.
+
+Breakouts made it worse. Recording a breakout room needs a separate bot token per
+room, so the plan defaulted to plenary only, with at most one sample room. That is why
+exactly one breakout survives.
+
+And what was captured did not reach the repository on its own. It had to be dug out
+of Discord by hand, mixed in with unrelated files.
+
+**Before treating session 2 as lost:** the runbook sends live transcript lines to
+#meeting-notes under the meeting name `KITCRAFT-S2`. Search there before concluding it
+was never recorded.
+
+**What the next run should do**
+
+- **Take capture off the lead facilitator entirely.** In the three-facilitator shape
+  proposed below, one of the two practitioner facilitators owns recording and nothing
+  else during transitions.
+- **Record by default rather than on command.** Start it automatically at session
+  start, or at the least from a checklist the capture owner runs before anyone speaks.
+- **Never let the plenary empty.** Keep the bot, and a person, in the main room
+  through every breakout, so the auto-stop never fires.
+- **Make a missing recording obvious.** A second person confirms "Recording on" within
+  the first minute of every session and every reconvene.
+- **Decide breakout recording in advance and provision for it**, one token per room,
+  rather than recording whichever room happens to be possible.
+- **Route recordings straight into the repository**, so nothing has to be dug out by
+  hand.
+
+The open decision is issue #6, which still describes plenary-only recording started by
+hand as the plan. Revisit it with this in mind.
 
 ### Nobody explored the repository
 
