@@ -47,6 +47,28 @@ If anything here misrepresents you, or you would rather not be named at all, say
 and it comes out. No justification needed and no discussion required. That was the
 promise made when the sessions were recorded, and it does not expire.
 
+## What was and was not recorded
+
+The record is incomplete, and it is better to say so than to let the files imply
+otherwise.
+
+| Session | When (UTC) | Captured |
+|---|---|---|
+| 1 — kits, the inventory exercise | Mon 21 Sep, 15:30 | Full plenary |
+| 2 — factories | Mon 21 Sep, 20:00 | One breakout only; no plenary |
+| 3 — factories and shared language | Tue 22 Sep, 15:30 | Full plenary |
+| 4 — show and tell | Tue 22 Sep, 20:00 | Not recorded |
+
+Session 4 was not recorded, and a recorder was only running in one breakout room.
+Of the breakouts, only the job-search one survives. Placing it in session 2 is an
+inference, not a timestamp: session 1's recording contains no breakout, and session
+3 refers back to the previous day's breakouts as the ones spent imagining new kits
+and factories, which was session 2's theme.
+
+What was built in sessions 2 and 4 is still in the repository: participants' own
+folders and logs under `participants/`. For those sessions, the logs are the
+record.
+
 ## Contents
 
 | File | Session |

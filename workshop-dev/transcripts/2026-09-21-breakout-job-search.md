@@ -1,8 +1,11 @@
 # 2026-09-21 — Breakout: designing a job-search factory
 
-A small breakout off session 1, working one idea end to end: what an AI "factory"
-for job searching would actually look like. This is the conversation the Sprungbrett
+A breakout from session 2, working one idea end to end: what an AI "factory" for
+job searching would actually look like. This is the conversation the Sprungbrett
 demo later came out of.
+
+It is the only breakout from the whole workshop that was recorded. Session 2's
+plenary was not captured, so this is the sole record of that session.
 
 ## The shape of the problem
 
