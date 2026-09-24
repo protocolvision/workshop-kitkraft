@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "note": "What the page asks back, and the keyword map it uses to read a free-text note. Matching is literal substring matching on a lower-cased string: no model, no randomness, no inference. A phrase that matches nothing is still recorded and the page does not claim it changed anything.",
+  "questions": [
+    { "question_id": "shift_work", "text": "Can you work shifts, including nights?", "fact": "shift_work" },
+    { "question_id": "mobility", "text": "Would you move to another city for the right role?", "fact": "mobility" },
+    { "question_id": "licence", "text": "Do you hold a driving licence?", "fact": "licence" },
+    { "question_id": "fixed_term", "text": "Are you open to a fixed-term contract to start?", "fact": "fixed_term" }
+  ],
+  "keywords": [
+    { "fact": "shift_work", "value": true, "match": ["night", "nights", "shift", "shifts", "nachtdienst", "schicht"] },
+    { "fact": "mobility", "value": true, "match": ["relocate", "relocation", "move city", "willing to move", "umzug", "mobil"] },
+    { "fact": "licence", "value": true, "match": ["driving licence", "driving license", "driver's licence", "fuhrerschein", "fuehrerschein", "klasse b"] },
+    { "fact": "part_time", "value": true, "match": ["part-time", "part time", "teilzeit"] },
+    { "fact": "remote", "value": true, "match": ["remote", "home office", "homeoffice", "hybrid"] }
+  ],
+  "effects": {
+    "shift_work": "Listings flagged requires_shift_work score full context fit when yes, little when no, and sit at 0.6 while unanswered.",
+    "mobility": "Raises the floor on city fit from 0.4 to 0.8, so another city stops being a penalty.",
+    "licence": "Listings flagged requires_licence behave as above, and yes also closes the driving-licence gap.",
+    "fixed_term": "Listings whose contract_type is fixed_term behave as above.",
+    "part_time": "Only affects listings flagged part_time_possible.",
+    "remote": "Only affects listings flagged remote_possible."
+  }
+}

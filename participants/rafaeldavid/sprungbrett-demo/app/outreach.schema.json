@@ -1,0 +1,23 @@
+{
+  "file": "outreach.csv",
+  "schema_version": 1,
+  "produced_by": "Sprungbrett factory demo, station 6",
+  "description": "Who to approach, by role and by organisation type. Computed at run time from the shortlisted rows and the archetypes, so changing the city or the sector changes it. It contains no people: no names, no individual titles, no contact details, and nothing here should be used to contact anyone.",
+  "row_shape": [
+    "archetype_id",
+    "target_type",
+    "target",
+    "organisation",
+    "why",
+    "synthetic"
+  ],
+  "columns": {
+    "archetype_id": { "type": "string", "note": "Key into archetypes.json." },
+    "target_type": { "type": "string", "enum": ["role", "body", "chamber", "network"] },
+    "target": { "type": "string", "note": "A role or an organisation category. Never a person." },
+    "organisation": { "type": "string", "note": "For target_type 'role', a shortlisted employer, which carries the marker (fictional). Otherwise a category of organisation, or a real kind of body such as a chamber of commerce, which exists in every German city." },
+    "why": { "type": "string" },
+    "synthetic": { "type": "boolean", "const": true }
+  },
+  "standing_caveat": "Invented examples of who to approach, not real contacts. Nothing here should be used to contact anyone."
+}

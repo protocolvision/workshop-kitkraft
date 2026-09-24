@@ -1,0 +1,28 @@
+/* GENERATED FILE - do not edit by hand.
+ * node brand/generate-brand.js 3
+ *
+ * Sprungbrett's own palette, derived from seed 3. The seed was
+ * chosen by rule, not by taste: see brand/README.md. The app reads these
+ * custom properties and never a hex value. */
+
+:root {
+  --brand-seed: 3;
+
+  --primary:         #13799A;
+  --primary-pressed: #0F5C76;
+  --primary-tint:    #E7F8FE;
+  --support:         #187257;
+  --support-tint:    #E3FCF5;
+  --ink:             #2B2F31;
+  --secondary:       #697072;
+  --page:            #FFFFFF;
+  --band:            #F6F8F8;
+  --hairline:        rgba(43, 47, 49, 0.07);
+
+  --radius:          14px;
+  --radius-control:  12px;
+  --motion:          220ms;
+
+  --wordmark-weight:   600;
+  --wordmark-tracking: -0.01em;
+}
