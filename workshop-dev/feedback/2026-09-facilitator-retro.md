@@ -209,3 +209,203 @@ theory, talks, lectures and essays rather than assembled ad hoc.
 Articulating what a kit is, well enough that a participant can recognise one of their
 own within the first hour. The pre-product framing is part of the answer but not the
 whole of it.
+
+---
+
+## Sachin's notes
+
+*Added 2026-09-24. Sachin's own post-workshop notes, kept separate from Rafa's
+dictated retro above.*
+
+The main lesson from the workshop is that there are currently too many concepts competing for attention. The underlying ideas are strong, but the workshop asks participants to absorb too much new vocabulary before they can start working with the material. The next version should therefore be less about introducing a complete conceptual system and more about finding one strong frame through which the other ideas become intuitive.
+
+### 1. Reduce the number of concepts
+
+The workshop currently contains too many conceptual objects at once: factories, bridges, engineered arguments, records, supervision, data aging, intelligence, and so on.
+
+“Bridges” in particular may have been one metaphor too many. Even if it is conceptually useful, introducing another named object increases the amount of internal vocabulary participants have to remember.
+
+The next version should probably have:
+
+* one dominant metaphor;
+* a very small number of supporting concepts;
+* ordinary language wherever a specialized term is not doing necessary work.
+
+A useful test is whether participants can explain the workshop afterward without having to reproduce our vocabulary. If they understand the phenomenon but describe it in their own words, that is probably a success.
+
+### 2. Keep the factory idea, but improve the metaphor
+
+“Factory” seems to be a productive metaphor because it immediately suggests work, production, division of labor, inputs and outputs.
+
+The problem is that people already have a very specific image of a factory: an industrial building containing machines, workers, assembly lines, raw materials, and standardized products. That imagery can push people toward thinking about AI primarily as automation.
+
+What we actually want is closer to a factory for information.
+
+The central question might be:
+
+**What does an organization look like when intelligence itself becomes information-producing work?**
+
+The metaphor needs to accommodate:
+
+* records;
+* supervision;
+* information production;
+* information passing between people and machines;
+* data becoming stale or losing value over time;
+* checking and verification;
+* accumulated organizational knowledge;
+* different kinds of human and machine competence.
+
+The emphasis should therefore move away from “AI is a machine in the factory” and toward the organization itself becoming an information-production system.
+
+The factory metaphor could potentially become something closer to a **records factory**, **information works**, or **intelligence works**: a place where information is produced, transformed, checked, stored, supervised, and eventually becomes obsolete.
+
+### 3. Make records central
+
+One promising way of tying several ideas together is through the concept of the record.
+
+AI work constantly produces records: drafts, summaries, analyses, decisions, prompts, evaluations, tickets, documents, conversations, code, and database entries.
+
+These records then become inputs into future work.
+
+That gives us a relatively concrete cycle:
+
+**work → record → reuse → supervision → aging**
+
+A record is produced through some act of intelligence. Someone else—or an AI system—later encounters that record and has to decide whether it can be trusted, whether it remains current, and what can be done with it.
+
+This might give us a much cleaner way of introducing ideas like memory, provenance, verification, supervision, and data aging without treating each as a separate concept.
+
+### 4. Treat intelligence as information-producing work
+
+Another useful simplification is to describe intelligence operationally rather than philosophically.
+
+For the purposes of the workshop, intelligence can simply mean something like:
+
+**work that produces useful information for subsequent action.**
+
+That immediately makes human and machine work comparable without claiming that they are identical.
+
+A researcher produces information.
+A manager produces information.
+A salesperson produces information.
+A model produces information.
+
+The interesting organizational question then becomes what happens to those outputs:
+
+Who uses them?
+Who checks them?
+How long do they remain useful?
+What records are created?
+Which outputs require human judgment?
+Which can safely become inputs into another automated process?
+
+This seems much closer to the practical problem the workshop is trying to illuminate.
+
+### 5. Start from clearly defined competencies
+
+The exercises work better when participants understand what each person or agent in the scenario is actually capable of doing.
+
+Rather than beginning with an abstract system and asking people to invent roles inside it, give them a setting in which the competencies are already legible.
+
+For example:
+
+* this person can make a particular kind of judgment;
+* this model can classify or generate a particular kind of information;
+* this database contains a particular set of records;
+* this supervisor can verify certain outputs but not others.
+
+Once competencies are explicit, participants can reason about coordination.
+
+This also makes failures more interesting. The problem is no longer vaguely “AI made a mistake.” It becomes a question of whether a task was assigned to an agent without the competence, information, authority, or supervision required to perform it.
+
+That should make the workshop feel much less abstract.
+
+### 6. Supervision should be built into the model
+
+Supervision should probably be presented as an ordinary part of information production rather than as a special “AI safety” layer added afterward.
+
+Organizations already contain supervisory relationships because information-producing work has uncertain quality.
+
+AI increases the amount of information that can be produced, which means that the scarce resource may increasingly become the ability to:
+
+* inspect;
+* verify;
+* contextualize;
+* authorize;
+* correct;
+* decide when something no longer deserves trust.
+
+In that sense, supervision becomes a central production function.
+
+This may also provide a natural bridge into questions of AI safety without requiring participants to first adopt a large theoretical framework.
+
+### 7. Develop the data-aging idea
+
+The idea that information ages seems particularly useful.
+
+Not every record remains equally valuable indefinitely.
+
+Some information:
+
+* expires quickly;
+* becomes less reliable as the surrounding world changes;
+* remains historically useful but ceases to be operationally useful;
+* requires periodic verification;
+* gains authority simply because it has been repeatedly copied.
+
+AI systems make this particularly important because old records can continue circulating and producing new records.
+
+The workshop could ask participants to distinguish between:
+
+* fresh information;
+* verified information;
+* stale information;
+* inherited information;
+* information whose provenance is unclear.
+
+This gives the workshop a temporal dimension and connects naturally to records and supervision.
+
+### 8. Add an explicit safety component
+
+There should be some kind of safety audio or short safety module.
+
+Part of this is substantive, but it is also important for making the workshop legible and marketable to a broader audience.
+
+People encountering an AI workshop will reasonably want to know where questions of risk, oversight, responsibility, and failure enter the picture.
+
+Rather than making safety an entirely separate theoretical framework, the safety component could connect directly to the workshop's central mechanics:
+
+**What information are you willing to let this system produce? Who checks it? What happens if it is wrong? How long does that information persist? What decisions can subsequently be made from it?**
+
+That would make safety feel native to the workshop rather than appended to it.
+
+### 9. Make the workshop outward-facing
+
+A larger positioning lesson is that the workshop should make sense to people who have never encountered our existing vocabulary.
+
+The goal should not be to teach participants our conceptual language. The goal should be to give them a useful way of seeing something happening inside their own organizations.
+
+That means moving from:
+
+**“Here is our framework; learn its concepts.”**
+
+toward:
+
+**“Here is a problem you already have. Let's give you a way of seeing it.”**
+
+Our vocabulary can remain useful internally for developing the workshop, but much of it may not need to appear in the workshop itself.
+
+The strongest version will probably feel obvious in retrospect: participants recognize records, supervision, aging information, differing competencies, and information-producing work because these are already features of their organizations.
+
+The workshop provides the structure that lets them see how AI changes the relationships between them.
+
+### Emerging direction
+
+The next iteration could potentially be organized around one basic proposition:
+
+**An organization is an information-production system. AI changes who can produce information, how much can be produced, and therefore what kinds of records, supervision, and coordination the organization needs.**
+
+From there, most of the other ideas can become consequences rather than independent concepts.
+
+That feels like a simpler and more outward-facing foundation for the workshop.
